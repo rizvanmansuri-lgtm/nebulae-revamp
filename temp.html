@@ -1211,521 +1211,85 @@ body { padding-top: 100px !important; }
 </nav>
 </div><!-- /.atl-sticky-header -->
 
-<!-- ════════════════════════════════════════════════
-     SECTION 1 — HOME HERO (light gradient style — matches screenshot)
-════════════════════════════════════════════════ -->
-<section class="atl-home-hero" id="home">
-
-  <!-- ── Animated background gradient ── -->
-  <div class="atl-hero-bg-gradient" aria-hidden="true"></div>
-  <!-- ── Floating blob orbs ── -->
-  <div class="atl-hero-blob atl-hero-blob--1" aria-hidden="true"></div>
-  <div class="atl-hero-blob atl-hero-blob--2" aria-hidden="true"></div>
-  <div class="atl-hero-blob atl-hero-blob--3" aria-hidden="true"></div>
-  <div class="atl-hero-blob atl-hero-blob--4" aria-hidden="true"></div>
-
-  <div class="container atl-hero-content" style="position:relative;z-index:3;">
-    <div class="row align-items-center g-5">
-
-      <!-- LEFT: headline + CTAs + stats -->
-      <div class="col-12 col-lg-6">
-        <span class="atl-hero-eyebrow">
-          <span class="atl-hero-eyebrow__dot"></span>
-          NABL ACCREDITED · ANAND, GUJARAT
-        </span>
-        <h1 class="atl-home-hero__title">
-          Precision Testing,<br>
-          <em>Certified Results.</em>
-        </h1>
-        <p class="atl-home-hero__desc">
-          RF, EMI/EMC, Electrical Safety &amp; Environmental testing for wireless, medical, industrial &amp; IoT products. BIS &amp; WPC recognised.
-        </p>
-        <div class="atl-hero-btns-stats-wrap">
-        <div class="atl-home-hero__btns">
-          <a href="products.html" class="atl-btn-primary">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-            Explore Products
-          </a>
-          <a href="services-page.html" class="atl-btn-outline" id="viewAllServicesBtn">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
-            View All Services
-          </a>
-        </div>
-
-        <!-- Stats row -->
-        <div class="atl-home-hero__stats-card">
-        <div class="atl-home-hero__stats">
-          <div class="atl-home-stat">
-            <span class="atl-home-stat__num">200+</span>
-            <span class="atl-home-stat__lbl">PRODUCTS TESTED</span>
-          </div>
-          <div class="atl-home-stat__div"></div>
-          <div class="atl-home-stat">
-            <span class="atl-home-stat__num">40+</span>
-            <span class="atl-home-stat__lbl">COUNTRIES SERVED</span>
-          </div>
-          <div class="atl-home-stat__div"></div>
-          <div class="atl-home-stat">
-            <span class="atl-home-stat__num">NABL</span>
-            <span class="atl-home-stat__lbl">CERTIFIED LAB</span>
-          </div>
-        </div>
-        </div>
-        </div><!-- end atl-hero-btns-stats-wrap -->
-      </div>
-
-      <!-- RIGHT: service cards grid (matches screenshot) -->
-      <div class="col-12 col-lg-6">
-        <div class="atl-hero-cards">
-
-          <!-- Featured card — RF & OTA (large) -->
-          <div class="atl-hero-card atl-hero-card--featured" style="cursor:pointer;" onclick="window.location.href='services-page.html?cat=rf'">
-            <div class="atl-hero-card__icon-wrap atl-hero-card__icon-wrap--blue">
-              <!-- Solid filled wifi icon -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M1 9l2 2c5.07-5.07 11.42-5.07 17.5 0l1.5-2C15.65 3.24 8.35 3.24 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
-            </div>
-            <div class="atl-hero-card__body">
-              <span class="atl-hero-card__badge">CORE SERVICE</span>
-              <h3 class="atl-hero-card__name">RF &amp; OTA Testing</h3>
-              <p class="atl-hero-card__desc">Antenna Pattern · TRP/TIS · VSWR · Pre-compliance · WPC &amp; BIS Type Approval</p>
-              <div class="atl-hero-card__meta">
-                <div>
-                  <span class="atl-hero-card__meta-val">370 MHz – 6 GHz</span>
-                  <span class="atl-hero-card__meta-lbl">FREQUENCY RANGE</span>
-                </div>
-                <div>
-                  <span class="atl-hero-card__meta-val">3–7 Days</span>
-                  <span class="atl-hero-card__meta-lbl">TURNAROUND</span>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-
-          <!-- Small cards grid -->
-          <div class="atl-hero-cards__grid">
-            <a href="services-page.html?cat=emi" class="atl-hero-card atl-hero-card--small atl-hero-card--accent-red">
-              <div class="atl-hero-card__icon-wrap atl-hero-card__icon-wrap--red">
-                <!-- Solid filled lightning bolt -->
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg>
-              </div>
-              <span class="atl-hero-card__small-name">EMI/EMC</span>
-              <span class="atl-hero-card__small-sub">3 Services</span>
-            </a>
-            <a href="services-page.html?cat=environmental" class="atl-hero-card atl-hero-card--small atl-hero-card--accent-teal">
-              <div class="atl-hero-card__icon-wrap atl-hero-card__icon-wrap--teal">
-                <!-- Solid filled water drop -->
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C12 2 4 10.5 4 15a8 8 0 0016 0C20 10.5 12 2 12 2z"/></svg>
-              </div>
-              <span class="atl-hero-card__small-name">Environmental</span>
-              <span class="atl-hero-card__small-sub">IEC 60068</span>
-            </a>
-            <a href="services-page.html?cat=consultancy" class="atl-hero-card atl-hero-card--small atl-hero-card--accent-orange">
-              <div class="atl-hero-card__icon-wrap atl-hero-card__icon-wrap--orange">
-                <!-- Filled star -->
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              </div>
-              <span class="atl-hero-card__small-name">Consultancy</span>
-              <span class="atl-hero-card__small-sub">WPC · BIS · FCC</span>
-            </a>
-            <a href="products.html" class="atl-hero-card atl-hero-card--small atl-hero-card--accent-purple">
-              <div class="atl-hero-card__icon-wrap atl-hero-card__icon-wrap--purple">
-                <!-- Solid filled monitor -->
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 3H4a2 2 0 00-2 2v11a2 2 0 002 2h6v2H8v2h8v-2h-2v-2h6a2 2 0 002-2V5a2 2 0 00-2-2zm0 13H4V5h16v11z"/></svg>
-              </div>
-              <span class="atl-hero-card__small-name">Products</span>
-              <span class="atl-hero-card__small-sub">RF Filters</span>
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
+<!-- ═══════════════════════════════════════════════
+     COMING SOON SECTION
+═══════════════════════════════════════════════ -->
+<style>
+  .atl-coming-soon{
+    position:relative;
+    min-height:calc(100vh - 100px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:6rem 1.5rem;
+    background:radial-gradient(circle at 20% 20%, rgba(0,102,204,.12), transparent 60%),
+               radial-gradient(circle at 80% 80%, rgba(0,180,216,.12), transparent 60%),
+               #f6f9fc;
+    overflow:hidden;
+  }
+  .atl-coming-soon__inner{
+    text-align:center;
+    max-width:720px;
+  }
+  .atl-coming-soon__eyebrow{
+    display:inline-block;
+    font-size:.75rem;
+    font-weight:600;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#0066cc;
+    background:rgba(0,102,204,.1);
+    padding:.4rem .9rem;
+    border-radius:999px;
+    margin-bottom:1.25rem;
+  }
+  .atl-coming-soon__title{
+    font-size:clamp(2.25rem, 5vw, 3.75rem);
+    font-weight:800;
+    line-height:1.1;
+    color:#0a2540;
+    margin:0 0 1rem;
+    background:linear-gradient(90deg,#0a2540,#0066cc);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .atl-coming-soon__lede{
+    font-size:1.125rem;
+    line-height:1.6;
+    color:#475569;
+    margin:0 auto 2rem;
+    max-width:560px;
+  }
+  .atl-coming-soon__cta{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    background:#0066cc;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    padding:.85rem 1.6rem;
+    border-radius:10px;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+    box-shadow:0 8px 20px rgba(0,102,204,.25);
+  }
+  .atl-coming-soon__cta:hover{
+    background:#004f9e;
+    transform:translateY(-2px);
+    box-shadow:0 12px 28px rgba(0,102,204,.35);
+    color:#fff;
+  }
+</style>
+<section class="atl-coming-soon" aria-labelledby="comingSoonTitle">
+  <div class="atl-coming-soon__inner">
+    <span class="atl-coming-soon__eyebrow">Stay Tuned</span>
+    <h1 id="comingSoonTitle" class="atl-coming-soon__title">Coming Soon</h1>
+    <p class="atl-coming-soon__lede">We're crafting something exciting. This page is under construction and will be live shortly. In the meantime, feel free to explore the rest of our site.</p>
+    <a href="index.html" class="atl-coming-soon__cta">Back to Home →</a>
   </div>
 </section>
 
-
-
-<!-- ════════════════════════════════════════════════
-     SECTION 1B — RELIABLE & CERTIFIED
-════════════════════════════════════════════════ -->
-<section class="atl-reliable" id="reliable">
-  <div class="container">
-    <div class="row align-items-center g-5">
-
-      <!-- LEFT: giant stat number with image overlay -->
-      <div class="col-12 col-lg-5 d-flex flex-column align-items-center">
-        <div class="atl-rel-stat-wrap">
-          <!-- Big number with city-image clipping effect -->
-          <div class="atl-rel-bignum">
-            <span class="atl-rel-bignum__num">10</span>
-            <span class="atl-rel-bignum__plus">+</span>
-          </div>
-          <!-- Overlay decorative cross / plus -->
-          <div class="atl-rel-plus" aria-hidden="true">
-            <div class="atl-rel-plus__v"></div>
-            <div class="atl-rel-plus__h"></div>
-          </div>
-        </div>
-        <p class="atl-rel-caption">
-          Years Of Experience With <strong class="atl-rel-caption__bold">Expert Team</strong>
-        </p>
-      </div>
-
-      <!-- RIGHT: headline + blockquote + desc + CTA -->
-      <div class="col-12 col-lg-6 offset-lg-1">
-        <span class="atl-rel-eyebrow">Trusted by Manufacturers Nationwide</span>
-        <h2 class="atl-rel-title">
-          Our Testing Is Reliable<br>And Certified.
-        </h2>
-        <blockquote class="atl-rel-quote">
-          We are here to help you every step of the way. We offer complete support to achieve your compliance goals — from pre-design through final NABL certification.
-        </blockquote>
-        <p class="atl-rel-desc">
-          Discover all our NABL-accredited, BIS &amp; WPC-recognised testing services built on proven laboratory technology. Find out how we can help you get certified faster, reduce rework, and enter new markets with confidence.
-        </p>
-        <a href="#contact" class="atl-rel-cta" onclick="return navClick('contact')">
-          Get In Touch &nbsp;→
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════
-     SECTION 2 — ABOUT US
-════════════════════════════════════════════════ -->
-<section class="atl-section" id="about">
-
-  <!-- Page hero strip -->
-  <div class="atl-page-hero">
-    <div class="container">
-      <h2 class="atl-page-hero__title">About Us</h2>
-      <p class="atl-page-hero__sub">A trusted name in RF, EMI/EMC and environmental testing and certification for over a decade.</p>
-    </div>
-  </div>
-
-  <!-- Our Story + Stats -->
-  <div class="atl-section-body">
-    <div class="container">
-      <div class="row g-5 align-items-start">
-
-        <!-- Story -->
-        <div class="col-12 col-lg-6">
-          <span class="atl-eyebrow">Our Story</span>
-          <h3 class="atl-section-h3 mt-2 mb-4">Excellence in Testing Since 2015</h3>
-          <p class="atl-body-text">Avartanam Test Labs was founded with a clear mission: to provide world-class RF, EMI/EMC, and environmental testing services that help manufacturers bring compliant wireless and IoT-based products to market efficiently and on time.</p>
-          <p class="atl-body-text">Over the past decade, we have grown from a focused pre-compliance facility into a NABL-accredited testing laboratory serving clients across India and internationally. Our anechoic chambers, reverberation chambers, and RF shielded rooms are staffed by experienced engineers dedicated to precision and integrity.</p>
-          <p class="atl-body-text">We maintain NABL accreditation and work with leading national and international certification bodies — BIS, WPC, FCC, CE, SRRC — to support your global market access needs.</p>
-        </div>
-
-        <!-- Stats grid -->
-        <div class="col-12 col-lg-6">
-          <div class="row g-3">
-            <div class="col-6"><div class="au-stat-card" data-anim="scale-up"><span class="au-stat-card__num" data-target="10" data-suffix="+">10+</span><span class="au-stat-card__label">Years of Experience</span></div></div>
-            <div class="col-6"><div class="au-stat-card" data-anim="scale-up"><span class="au-stat-card__num" data-target="200" data-suffix="+">200+</span><span class="au-stat-card__label">Products Tested</span></div></div>
-            <div class="col-6"><div class="au-stat-card" data-anim="scale-up"><span class="au-stat-card__num" data-target="15" data-suffix="+">15+</span><span class="au-stat-card__label">Expert Engineers</span></div></div>
-            <div class="col-6"><div class="au-stat-card au-stat-card--red"><span class="au-stat-card__num" data-target="99" data-suffix="%">99%</span><span class="au-stat-card__label">Client Satisfaction</span></div></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Vision & Mission -->
-  <div class="container pb-5">
-    <div class="row g-4">
-
-      <div class="col-12 col-md-6">
-        <div class="au-vm-card au-vm-card--dark h-100">
-          <div class="au-vm-icon au-vm-icon--red">
-            <svg width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M12 4C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 12.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-          </div>
-          <h4 class="au-vm-card__title mt-4">Our Vision</h4>
-          <p class="au-vm-card__body mt-2">To be the leading pre-compliance and accredited testing laboratory in India — empowering innovators to bring safe, compliant wireless and IoT products to global markets with confidence and cost efficiency.</p>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6">
-        <div class="au-vm-card au-vm-card--light h-100">
-          <div class="au-vm-icon au-vm-icon--navy">
-            <svg width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-12c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
-          </div>
-          <h4 class="au-vm-card__title au-vm-card__title--dark mt-4">Our Mission</h4>
-          <p class="au-vm-card__body au-vm-card__body--dark mt-2">To deliver accurate, reliable, and timely RF, EMI/EMC, and environmental testing that help our clients achieve regulatory compliance, reduce costly redesigns, and succeed in domestic and international markets.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Quality Policy -->
-  <div class="container pb-5">
-    <div class="au-quality-card">
-      <h4 class="au-quality-card__title">Quality Policy</h4>
-      <p class="au-quality-card__body">Avartanam Test Labs is committed to maintaining the highest standards of technical integrity and impartiality in all testing and calibration activities. Our quality management system ensures:</p>
-      <div class="row g-2 mt-3">
-        <div class="col-12 col-sm-6 col-lg-3"><div class="au-quality-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="#b91c1c"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Accurate test results</span></div></div>
-        <div class="col-12 col-sm-6 col-lg-3"><div class="au-quality-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="#b91c1c"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Impartial assessment</span></div></div>
-        <div class="col-12 col-sm-6 col-lg-3"><div class="au-quality-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="#b91c1c"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zM10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg><span>Confidentiality</span></div></div>
-        <div class="col-12 col-sm-6 col-lg-3"><div class="au-quality-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="#b91c1c"><path d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg><span>Continuous improvement</span></div></div>
-        <div class="col-12 col-sm-6 col-lg-3"><div class="au-quality-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="#b91c1c"><path d="M12 1l3.09 6.26L22 8.27l-5 4.87 1.18 6.88L12 16.77l-6.18 3.25L7 13.14 2 8.27l6.91-1.01L12 1z"/></svg><span>NABL compliance</span></div></div>
-        <div class="col-12 col-sm-6 col-lg-3"><div class="au-quality-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="#b91c1c"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg><span>Measurement traceability</span></div></div>
-        <div class="col-12 col-sm-6 col-lg-3"><div class="au-quality-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="#b91c1c"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zm-2 9l-4-4 1.41-1.41L10 17.17l6.59-6.59L18 12l-8 8z"/></svg><span>Regulatory compliance</span></div></div>
-        <div class="col-12 col-sm-6 col-lg-3"><div class="au-quality-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="#b91c1c"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg><span>On-time delivery</span></div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════
-       HOW WE WORK — 4 step process
-  ═══════════════════════════════════════════════ -->
-  <div class="atl-hww-section">
-    <div class="container">
-      <div class="text-center mb-5">
-        <span class="atl-eyebrow" style="color:rgba(255,255,255,.65);">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:5px;"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-          OUR PROCESS
-        </span>
-        <h2 class="atl-hww-title">How We Work</h2>
-        <p class="atl-hww-sub">A streamlined testing process designed for efficiency and accuracy.</p>
-      </div>
-
-      <div class="atl-hww-steps">
-
-        <!-- Step 01 -->
-        <div class="atl-hww-step">
-          <div class="atl-hww-step__circle">
-            <span class="atl-hww-step__num">01</span>
-          </div>
-          <div class="atl-hww-step__connector" aria-hidden="true"></div>
-          <h4 class="atl-hww-step__title">Submit Request</h4>
-          <p class="atl-hww-step__desc">Send your product details and testing requirements through our quote form.</p>
-        </div>
-
-        <!-- Step 02 -->
-        <div class="atl-hww-step">
-          <div class="atl-hww-step__circle">
-            <span class="atl-hww-step__num">02</span>
-          </div>
-          <div class="atl-hww-step__connector" aria-hidden="true"></div>
-          <h4 class="atl-hww-step__title">Receive Quote</h4>
-          <p class="atl-hww-step__desc">Our engineers review and provide a detailed quote promptly.</p>
-        </div>
-
-        <!-- Step 03 -->
-        <div class="atl-hww-step">
-          <div class="atl-hww-step__circle">
-            <span class="atl-hww-step__num">03</span>
-          </div>
-          <div class="atl-hww-step__connector" aria-hidden="true"></div>
-          <h4 class="atl-hww-step__title">Testing Phase</h4>
-          <p class="atl-hww-step__desc">Your product undergoes rigorous testing in our accredited labs.</p>
-        </div>
-
-        <!-- Step 04 -->
-        <div class="atl-hww-step atl-hww-step--last">
-          <div class="atl-hww-step__circle">
-            <span class="atl-hww-step__num">04</span>
-          </div>
-          <h4 class="atl-hww-step__title">Get Certified</h4>
-          <p class="atl-hww-step__desc">Receive your test report and certification documentation.</p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Certifications -->
-  <div class="atl-certs-strip">
-    <div class="container">
-      <div class="text-center mb-4">
-        <span class="atl-eyebrow">Accreditations &amp; Certifications</span>
-        <h3 class="atl-section-h3 mt-1">Recognised by leading bodies</h3>
-      </div>
-      <div class="row g-3 justify-content-center">
-        <div class="col-6 col-sm-4 col-md-2"><div class="au-cert-badge"><span class="au-cert-badge__abbr">NABL</span><span class="au-cert-badge__lbl">Accredited Lab</span></div></div>
-        <div class="col-6 col-sm-4 col-md-2"><div class="au-cert-badge"><span class="au-cert-badge__abbr">BIS</span><span class="au-cert-badge__lbl">Recognised</span></div></div>
-        <div class="col-6 col-sm-4 col-md-2"><div class="au-cert-badge"><span class="au-cert-badge__abbr">WPC</span><span class="au-cert-badge__lbl">Approved</span></div></div>
-        <div class="col-6 col-sm-4 col-md-2"><div class="au-cert-badge au-cert-badge--red"><span class="au-cert-badge__abbr">DPIIT</span><span class="au-cert-badge__lbl">Startup India</span></div></div>
-        <div class="col-6 col-sm-4 col-md-2"><div class="au-cert-badge"><span class="au-cert-badge__abbr">ISO</span><span class="au-cert-badge__lbl">17025:2017</span></div></div>
-      </div>
-    </div>
-  </div>
-
-
-</section>
-
-</section>
-
-</section>
-
-<!-- ════════════════════════════════════════════════
-     SECTION 4 — CONTACT US
-════════════════════════════════════════════════ -->
-<section class="atl-section" id="contact">
-
-  <!-- Page hero strip -->
-  <div class="atl-page-hero">
-    <div class="container">
-      <h2 class="atl-page-hero__title">Contact Us</h2>
-      <p class="atl-page-hero__sub">Have a testing requirement? Get in touch and our engineering team will respond promptly.</p>
-    </div>
-  </div>
-
-  <div class="atl-section-body">
-    <div class="container">
-      <div class="row g-5 align-items-start">
-
-        <div class="col-12 col-lg-7">
-          <h3 class="cu-form-title" data-anim="slide-left">Request a Quote</h3>
-
-          <form id="atlContactForm" novalidate>
-
-            <div class="row g-3 mb-3">
-              <div class="col-12 col-sm-6">
-                <input type="text" class="cu-input" id="cuFirst" placeholder="First Name *">
-                <div class="cu-err" id="cuErrFirst" style="display:none;">Please enter your first name.</div>
-              </div>
-              <div class="col-12 col-sm-6">
-                <input type="text" class="cu-input" id="cuLast" placeholder="Last Name *">
-                <div class="cu-err" id="cuErrLast" style="display:none;">Please enter your last name.</div>
-              </div>
-            </div>
-
-            <div class="row g-3 mb-3">
-              <div class="col-12 col-sm-6">
-                <input type="email" class="cu-input" id="cuEmail" placeholder="Email *">
-                <div class="cu-err" id="cuErrEmail" style="display:none;">Please enter a valid email address.</div>
-              </div>
-              <div class="col-12 col-sm-6">
-                <input type="tel" class="cu-input" id="cuPhone" placeholder="Phone *">
-                <div class="cu-err" id="cuErrPhone" style="display:none;">Please enter a valid 10-digit phone number.</div>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <select class="cu-input cu-select" id="cuService">
-                <option value="" disabled selected>Service Required *</option>
-                <option>RF Testing (BIS / WPC)</option>
-                <option>EMI / EMC Testing</option>
-                <option>Environmental Testing</option>
-                <option>Pre-compliance Testing</option>
-                <option>Electrical Safety Testing</option>
-                <option>Calibration Services</option>
-                <option>Consultancy</option>
-                <option>Other</option>
-              </select>
-              <div class="cu-err" id="cuErrService" style="display:none;">Please select a service.</div>
-            </div>
-
-            <div class="mb-3">
-              <input type="text" class="cu-input" id="cuCompany" placeholder="Company / Organisation *">
-              <div class="cu-err" id="cuErrCompany" style="display:none;">Please enter your company name.</div>
-            </div>
-
-            <div class="mb-4">
-              <textarea class="cu-input cu-textarea" id="cuDetails" rows="5" placeholder="Project Details — product, standard, quantity, urgency..."></textarea>
-            </div>
-
-            <button type="submit" class="cu-submit-btn" id="cuSubmitBtn">SUBMIT REQUEST</button>
-
-          </form>
-        </div>
-
-        <!-- RIGHT: Contact Info Card -->
-        <div class="col-12 col-lg-5">
-          <div class="cu-info-card" data-anim="slide-right">
-            <h3 class="cu-info-card__title">Contact Information</h3>
-            <div class="cu-info-card__hr"></div>
-
-            <div class="cu-info-row">
-              <div class="cu-info-icon"><svg width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
-              <div class="cu-info-content"><span class="cu-info-label">Address</span><span class="cu-info-value">Avartanam Test Labs LLP<br>Industrial Area, Phase 2<br>Anand, Gujarat 388001</span></div>
-            </div>
-
-            <div class="cu-info-row">
-              <div class="cu-info-icon"><svg width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z"/></svg></div>
-              <div class="cu-info-content"><span class="cu-info-label">Phone</span><a href="tel:+917486031238" class="cu-info-value cu-info-link">+91 74860 31238</a><a href="tel:+912692232501" class="cu-info-value cu-info-link">+91 (2692) 232501</a></div>
-            </div>
-
-            <div class="cu-info-row">
-              <div class="cu-info-icon"><svg width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
-              <div class="cu-info-content"><span class="cu-info-label">Email</span><a href="/cdn-cgi/l/email-protection#c2b1a3aea7b182a3b4a3b0b6a3aca3afaea3a0b1eca1adaf" class="cu-info-value cu-info-link"><span class="__cf_email__" data-cfemail="6d1e0c01081e2d0c1b0c1f190c030c00010c0f1e430e0200">[email&#160;protected]</span></a></div>
-            </div>
-
-            <div class="cu-info-row cu-info-row--last">
-              <div class="cu-info-icon"><svg width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z"/></svg></div>
-              <div class="cu-info-content"><span class="cu-info-label">Hours</span><span class="cu-info-value">Mon – Fri: 9:00 AM – 6:00 PM</span><span class="cu-info-value">Sat: 10:00 AM – 2:00 PM</span></div>
-            </div>
-          </div>
-
-          <!-- Quick contact strip -->
-          <div class="cu-quick-strip mt-4">
-            <a href="tel:+917486031238" class="cu-quick-btn cu-quick-btn--red">
-              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-              Call Now
-            </a>
-            <a href="/cdn-cgi/l/email-protection#6615070a03152607100714120708070b0a0704154805090b" class="cu-quick-btn cu-quick-btn--outline">
-              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              Send Email
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════
-     BUY / QUOTE MODAL
-════════════════════════════════════════════════ -->
-<div class="modal fade" id="buyModal" tabindex="-1" aria-labelledby="buyModalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content atl-modal">
-      <div class="atl-modal__head">
-        <div>
-          <h5 class="atl-modal__title" id="buyModalTitle">Request Sample / Quote</h5>
-          <p class="atl-modal__sub">Pre-filled with your selected service. Complete and submit below.</p>
-        </div>
-        <button class="atl-modal__x" data-bs-dismiss="modal" aria-label="Close">
-          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-      </div>
-      <div class="atl-modal__strip">
-        <div class="atl-modal__strip-item"><span class="atl-modal__strip-lbl">Selected Service</span><span class="atl-modal__strip-val" id="mProductName">—</span></div>
-        <div class="atl-modal__strip-item"><span class="atl-modal__strip-lbl">Part / Service No.</span><code class="atl-modal__strip-code" id="mPartNo">—</code></div>
-        <div class="atl-modal__strip-item"><span class="atl-modal__strip-lbl">Standard</span><span class="atl-modal__strip-val" id="mStandard">—</span></div>
-      </div>
-      <div class="atl-modal__body">
-        <form id="buyForm" novalidate>
-          <div class="row g-3">
-            <div class="col-12 col-sm-6"><input type="text" class="cu-input" id="fFirst" placeholder="First Name *" required><div class="cu-err">Required</div></div>
-            <div class="col-12 col-sm-6"><input type="text" class="cu-input" id="fLast" placeholder="Last Name *" required><div class="cu-err">Required</div></div>
-            <div class="col-12 col-sm-6"><input type="text" class="cu-input" id="fCompany" placeholder="Company *" required><div class="cu-err">Required</div></div>
-            <div class="col-12 col-sm-6"><input type="email" class="cu-input" id="fEmail" placeholder="Email *" required><div class="cu-err">Valid email required</div></div>
-            <div class="col-12 col-sm-6"><input type="tel" class="cu-input" id="fPhone" placeholder="Phone * (10-digit)" required><div class="cu-err" style="display:none;font-size:.72rem;color:#B00000;margin-top:.2rem;">Please enter a valid 10-digit phone number.</div></div>
-            <div class="col-12 col-sm-6"><select class="cu-input cu-select" id="fType"><option value="quote">Request Quote</option><option value="sample">Sample Testing</option><option value="schedule">Schedule Lab Visit</option><option value="precomp">Pre-compliance Consultation</option><option value="urgent">Urgent Testing</option></select></div>
-            <div class="col-12"><textarea class="cu-input cu-textarea" id="fDetails" rows="4" placeholder="Describe your product, testing urgency, quantity, applicable market and any special requirements..."></textarea></div>
-          </div>
-          <div class="d-flex gap-2 justify-content-end mt-4">
-            <button type="button" class="atl-modal__cancel" data-bs-dismiss="modal">Cancel</button>
-            <button type="submit" class="cu-submit-btn px-4" id="buySubmit">Submit Request</button>
-          </div>
-          <div class="cu-success" id="buySuccess"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Request submitted! Our team will connect you soon.</div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ════════════════════════════════════════════════
-     FOOTER
-════════════════════════════════════════════════ -->
 <footer class="atl-footer">
   <div class="container">
     <div class="row g-4 align-items-start">
