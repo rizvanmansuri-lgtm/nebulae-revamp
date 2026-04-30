@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: #f5f6f8;
+    color: #222;
+  }
+
+  .section-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+  }
+
+  /* ── Heading ── */
+  .section-heading {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 40px;
+    letter-spacing: -0.3px;
+  }
+
+  /* ── Tabs ── */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 40px;
+  }
+
+  .tab {
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+    white-space: nowrap;
+    border: none;
+    background: none;
+  }
+
+  .tab.active {
+    color: #5B4FD9;
+  }
+
+  .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0; right: 0;
+    height: 2px;
+    background: #5B4FD9;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .tab:hover:not(.active) { color: #333; }
+
+  /* ── Main card ── */
+  .card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+    display: flex;
+    gap: 0;
+    min-height: 540px;
+  }
+
+  /* ── Left image ── */
+  .card-image {
+    width: 320px;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* ── Right content ── */
+  .card-content {
+    flex: 1;
+    padding: 40px 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .card-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #F5622E;
+    letter-spacing: -0.4px;
+  }
+
+  .card-desc {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #444;
+    font-weight: 500;
+  }
+
+  /* ── Key Features ── */
+  .features-label {
+    font-size: 15px;
+    font-weight: 800;
+    color: #F5622E;
+    margin-bottom: 4px;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .feature-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+
+  .feature-card:hover {
+    border-color: #d0cbf5;
+    box-shadow: 0 4px 16px rgba(91,79,217,0.08);
+  }
+
+  .feature-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+  }
+
+  .feature-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: #333;
+    fill: none;
+    stroke-width: 1.6;
+  }
+
+  .feature-text h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 4px;
+  }
+
+  .feature-text p {
+    font-size: 11.5px;
+    color: #666;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  /* ── Solution ── */
+  .solution-label {
+    font-size: 15px;
+    font-weight: 800;
+    color: #F5622E;
+    margin-bottom: 10px;
+  }
+
+  .solution-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 16px;
+    margin-bottom: 16px;
+  }
+
+  .solution-item {
+    font-size: 12px;
+    color: #333;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .solution-item::before {
+    content: '✓';
+    color: #F5622E;
+    font-weight: 800;
+    font-size: 13px;
+  }
+
+  /* ── Device strip ── */
+  .device-strip {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .device-strip::-webkit-scrollbar { display: none; }
+
+  .device-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    background: #f5f6f8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+
+  .device-icon:hover { background: #ede9ff; }
+
+  .device-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: #555;
+    fill: none;
+    stroke-width: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<div class="section-wrapper">
+
+  <h2 class="section-heading">One Tuya IoT system for 20+ business scenarios</h2>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active">Residential</button>
+    <button class="tab">Hotel</button>
+    <button class="tab">Retail</button>
+    <button class="tab">Building</button>
+    <button class="tab">Industrial</button>
+    <button class="tab">Elderly Care</button>
+    <button class="tab">Agriculture</button>
+    <button class="tab">More</button>
+  </div>
+
+  <!-- Card -->
+  <div class="card">
+
+    <!-- Left Image -->
+    <div class="card-image">
+      <img
+        src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80"
+        alt="Smart Residential Home"
+      />
+    </div>
+
+    <!-- Right Content -->
+    <div class="card-content">
+
+      <div>
+        <div class="card-title">Smart Residential</div>
+        <p class="card-desc" style="margin-top:12px;">
+          Transforming properties across multifamily, build-to-rent, short-stay, and beyond, Tuya Smart Residential enables the growth of holistically smarter living spaces worldwide, empowering managers, residents, and support staff to deliver more efficient and attractive properties by utilizing a wide range of seamlessly integrated IoT hardware and software tools.
+        </p>
+      </div>
+
+      <!-- Key Features -->
+      <div>
+        <div class="features-label">Key Features</div>
+        <div class="features-grid">
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Centralized Property Management</h4>
+              <p>Achieve online batch management of properties, units, personnel, and devices; reduce risk of damage with various smart sensors.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1" fill="#333" stroke="none"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Smart Access Control</h4>
+              <p>Enable managers and tenants to better control access to units and common areas; realize functions such as temporary access code issuance and facial recognition.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Smart Home Experience</h4>
+              <p>Redefine industry standards by allowing tenants to move into 'ready made' smart homes; tenants can use the app to explore, create, and personalize their smart living experience.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Smart Energy Savings</h4>
+              <p>Enable greener properties through automated energy saving capabilities for both common areas and units to cut down unnecessary expenditure for tenants and managers alike.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Solution -->
+      <div>
+        <div class="solution-label">Solution</div>
+        <div class="solution-grid">
+          <div class="solution-item">Web management platform for property managers</div>
+          <div class="solution-item">Smart Residence app for residents</div>
+          <div class="solution-item">'Powered by Tuya' Hardware Ecosystem</div>
+          <div class="solution-item">Smart Construction app for construction and maintenance staff</div>
+        </div>
+
+        <!-- Device icons strip -->
+        <div class="device-strip">
+          <!-- Gateway -->
+          <div class="device-icon" title="Gateway">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M6.3 6.3a8 8 0 0 0 0 11.4M17.7 6.3a8 8 0 0 1 0 11.4M3.5 3.5a13 13 0 0 0 0 17M20.5 3.5a13 13 0 0 1 0 17"/></svg>
+          </div>
+          <!-- Camera -->
+          <div class="device-icon" title="Camera">
+            <svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          </div>
+          <!-- Smart Plug -->
+          <div class="device-icon" title="Smart Plug">
+            <svg viewBox="0 0 24 24"><path d="M12 2v4M8 6h8M7 10v4a5 5 0 0 0 10 0v-4"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+          </div>
+          <!-- Thermostat -->
+          <div class="device-icon" title="Thermostat">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <!-- Smart Panel -->
+          <div class="device-icon" title="Smart Panel">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <!-- Smart Bulb -->
+          <div class="device-icon" title="Smart Bulb">
+            <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.4-1.2 4.5-3 5.7V17a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2.3C6.2 13.5 5 11.4 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/></svg>
+          </div>
+          <!-- Speaker -->
+          <div class="device-icon" title="Smart Speaker">
+            <svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="6"/><circle cx="12" cy="18" r="1.5" fill="#555" stroke="none"/><circle cx="12" cy="7" r="3"/></svg>
+          </div>
+          <!-- Router -->
+          <div class="device-icon" title="Router">
+            <svg viewBox="0 0 24 24"><rect x="2" y="14" width="20" height="6" rx="2"/><path d="M6 14V9M12 14V7M18 14V11"/></svg>
+          </div>
+          <!-- Sensor -->
+          <div class="device-icon" title="Sensor">
+            <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/></svg>
+          </div>
+          <!-- Smart Lock -->
+          <div class="device-icon" title="Smart Lock">
+            <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  // Tab switching
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

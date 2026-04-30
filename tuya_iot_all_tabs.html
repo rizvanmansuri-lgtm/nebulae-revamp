@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',sans-serif;background:#f5f6f8;color:#222}
+  .section-wrapper{max-width:1200px;margin:0 auto;padding:48px 24px 64px}
+  .section-heading{text-align:center;font-size:28px;font-weight:800;color:#111;margin-bottom:40px;letter-spacing:-0.3px}
+  .tabs{display:flex;justify-content:center;border-bottom:2px solid #e0e0e0;margin-bottom:40px;flex-wrap:wrap}
+  .tab{padding:10px 22px;font-size:14px;font-weight:600;color:#555;cursor:pointer;position:relative;transition:color .2s;white-space:nowrap;border:none;background:none;font-family:'Manrope',sans-serif}
+  .tab.active{color:#5B4FD9}
+  .tab.active::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:#5B4FD9;border-radius:2px 2px 0 0}
+  .tab:hover:not(.active){color:#333}
+  .tab-panel{display:none}
+  .tab-panel.active{display:block}
+  .card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,.07);display:flex;min-height:540px}
+  .card-image{width:300px;flex-shrink:0;overflow:hidden}
+  .card-image img{width:100%;height:100%;object-fit:cover;display:block}
+  .card-content{flex:1;padding:36px 40px;display:flex;flex-direction:column;gap:20px}
+  .card-title{font-size:26px;font-weight:800;color:#F5622E;letter-spacing:-0.4px}
+  .card-desc{font-size:13px;line-height:1.7;color:#444;font-weight:500;margin-top:10px}
+  .label{font-size:15px;font-weight:800;color:#F5622E;margin-bottom:8px}
+  .features-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .feature-card{border:1px solid #eee;border-radius:12px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;transition:box-shadow .2s,border-color .2s}
+  .feature-card:hover{border-color:#d0cbf5;box-shadow:0 4px 16px rgba(91,79,217,.08)}
+  .feature-icon{width:34px;height:34px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+  .feature-icon svg{width:22px;height:22px;stroke:#333;fill:none;stroke-width:1.6}
+  .feature-text h4{font-size:12.5px;font-weight:700;color:#111;margin-bottom:3px}
+  .feature-text p{font-size:11px;color:#666;line-height:1.6;font-weight:500}
+  .solution-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px 16px;margin-bottom:14px}
+  .solution-item{font-size:11.5px;color:#333;font-weight:500;display:flex;align-items:flex-start;gap:6px}
+  .solution-item::before{content:'✓';color:#F5622E;font-weight:800;font-size:12px;flex-shrink:0;margin-top:1px}
+  .device-strip{border:1px solid #eee;border-radius:12px;padding:12px 18px;display:flex;align-items:center;gap:14px;overflow-x:auto;scrollbar-width:none}
+  .device-strip::-webkit-scrollbar{display:none}
+  .device-icon{width:48px;height:48px;flex-shrink:0;background:#f5f6f8;border-radius:10px;display:flex;align-items:center;justify-content:center;transition:background .2s;cursor:pointer}
+  .device-icon:hover{background:#F5622E;   transition: all 0.3s ease;}
+
+  .device-icon:hover.device-icon svg{stroke: white;}
+  .device-icon svg{width:26px;height:26px;stroke:#555;fill:none;stroke-width:1.5}
+
+  @media (max-width:419px){
+    .card{
+      flex-wrap:wrap;
+    }
+    .card-image,.card-content{
+        width: 100%;
+    }
+     
+    .features-grid{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .solution-grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+    @media (min-width:420px) and (max-width:767px){
+    .card{
+      flex-wrap:wrap;
+    }
+    .card-image,.card-content{
+        width: 100%;
+    }
+     
+    .features-grid{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .solution-grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  @media (min-width:768px) and (max-width:920px){
+    .card{
+      flex-wrap:wrap;
+    }
+     .card-image,.card-content{
+        width: 100%;
+    }
+    .device-strip{
+      justify-content: space-between;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="section-wrapper">
+  <h2 class="section-heading">One Tuya IoT system for 20+ business scenarios</h2>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="residential">Residential</button>
+    <button class="tab" data-tab="hotel">Hotel</button>
+    <button class="tab" data-tab="retail">Retail</button>
+    <button class="tab" data-tab="building">Building</button>
+    <button class="tab" data-tab="industrial">Industrial</button>
+    <button class="tab" data-tab="elderly">Elderly Care</button>
+    <button class="tab" data-tab="agriculture">Agriculture</button>
+    <button class="tab" data-tab="more">More</button>
+  </div>
+
+  <!-- RESIDENTIAL -->
+  <div class="tab-panel active" id="tab-residential">
+    <div class="card">
+      <div class="card-image"><img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80" alt="Residential"/></div>
+      <div class="card-content">
+        <div><div class="card-title">Smart Residential</div>
+          <p class="card-desc">Transforming properties across multifamily, build-to-rent, short-stay, and beyond, Tuya Smart Residential enables the growth of holistically smarter living spaces worldwide, empowering managers, residents, and support staff to deliver more efficient and attractive properties by utilizing a wide range of seamlessly integrated IoT hardware and software tools.</p>
+        </div>
+        <div><div class="label">Key Features</div>
+          <div class="features-grid">
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="10" r="3"/></svg></div><div class="feature-text"><h4>Centralized Property Management</h4><p>Achieve online batch management of properties, units, personnel, and devices; reduce risk of damage with various smart sensors.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1" fill="#333" stroke="none"/></svg></div><div class="feature-text"><h4>Smart Access Control</h4><p>Enable managers and tenants to better control access to units and common areas; realize facial recognition and temporary access codes.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="feature-text"><h4>Smart Home Experience</h4><p>Allow tenants to move into 'ready made' smart homes and personalize their living experience with personal devices.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="feature-text"><h4>Smart Energy Savings</h4><p>Enable greener properties through automated energy saving capabilities for both common areas and individual units.</p></div></div>
+          </div>
+        </div>
+        <div><div class="label">Solution</div>
+          <div class="solution-grid">
+            <div class="solution-item">Web management platform for property managers</div>
+            <div class="solution-item">Smart Residence app for residents</div>
+            <div class="solution-item">'Powered by Tuya' Hardware Ecosystem</div>
+            <div class="solution-item">Smart Construction app for maintenance staff</div>
+          </div>
+          <div class="device-strip">
+            <div class="device-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M6.3 6.3a8 8 0 0 0 0 11.4M17.7 6.3a8 8 0 0 1 0 11.4"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.4-1.2 4.5-3 5.7V17a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2.3C6.2 13.5 5 11.4 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="2" y="14" width="20" height="6" rx="2"/><path d="M6 14V9M12 14V7M18 14V11"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOTEL -->
+  <div class="tab-panel" id="tab-hotel">
+    <div class="card">
+      <div class="card-image"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Hotel"/></div>
+      <div class="card-content">
+        <div><div class="card-title">Smart Hotel</div>
+          <p class="card-desc">Tuya's Smart Hotel solution empowers hospitality operators to elevate guest experiences and streamline operations. From contactless check-in to fully automated room environments, the platform integrates seamlessly with PMS systems to deliver a modern, memorable, and energy-efficient hotel stay.</p>
+        </div>
+        <div><div class="label">Key Features</div>
+          <div class="features-grid">
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div><div class="feature-text"><h4>Contactless Check-In</h4><p>Enable guests to check in via mobile app or kiosk, receive digital room keys, and access all services without front desk interaction.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="feature-text"><h4>Smart Room Control</h4><p>Let guests control lighting, temperature, curtains, and entertainment from a single app or in-room panel for a personalized stay.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="feature-text"><h4>PMS Integration</h4><p>Seamlessly integrate with leading property management systems to automate room assignments, billing, and housekeeping workflows.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="feature-text"><h4>Energy Management</h4><p>Automatically adjust room climate and lighting based on occupancy, reducing energy waste significantly across all rooms.</p></div></div>
+          </div>
+        </div>
+        <div><div class="label">Solution</div>
+          <div class="solution-grid">
+            <div class="solution-item">Hotel management dashboard for operators</div>
+            <div class="solution-item">Guest mobile app for room control</div>
+            <div class="solution-item">PMS & OTA platform integrations</div>
+            <div class="solution-item">Smart housekeeping & maintenance app</div>
+          </div>
+          <div class="device-strip">
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.4-1.2 4.5-3 5.7V17a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2.3C6.2 13.5 5 11.4 5 9a7 7 0 0 1 7-7z"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="6"/><circle cx="12" cy="18" r="1.5" fill="#555" stroke="none"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RETAIL -->
+  <div class="tab-panel" id="tab-retail">
+    <div class="card">
+      <div class="card-image"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" alt="Retail"/></div>
+      <div class="card-content">
+        <div><div class="card-title">Smart Retail</div>
+          <p class="card-desc">Tuya's Smart Retail solution transforms brick-and-mortar stores into intelligent, data-driven environments. Leverage real-time customer insights, smart lighting, automated inventory management, and seamless POS integrations to drive sales, enhance customer experience, and reduce operational overhead.</p>
+        </div>
+        <div><div class="label">Key Features</div>
+          <div class="features-grid">
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="feature-text"><h4>Customer Analytics</h4><p>Track foot traffic, dwell time, and customer journeys using AI-powered cameras and sensors to optimize store layout.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.4-1.2 4.5-3 5.7V17a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2.3C6.2 13.5 5 11.4 5 9a7 7 0 0 1 7-7z"/></svg></div><div class="feature-text"><h4>Intelligent Lighting</h4><p>Dynamically adjust store lighting scenes to highlight products, reduce energy consumption, and create engaging atmospheres.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div><div class="feature-text"><h4>Smart Inventory</h4><p>Monitor shelf stock levels in real-time with smart sensors and automate replenishment alerts to prevent stockouts.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div class="feature-text"><h4>Secure Store Access</h4><p>Manage employee access, after-hours entry, and fitting room availability through centralized smart access control.</p></div></div>
+          </div>
+        </div>
+        <div><div class="label">Solution</div>
+          <div class="solution-grid">
+            <div class="solution-item">Retail management web dashboard</div>
+            <div class="solution-item">Smart store analytics platform</div>
+            <div class="solution-item">POS & ERP system integrations</div>
+            <div class="solution-item">Staff operations mobile app</div>
+          </div>
+          <div class="device-strip">
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.4-1.2 4.5-3 5.7V17a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2.3C6.2 13.5 5 11.4 5 9a7 7 0 0 1 7-7z"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="2" y="14" width="20" height="6" rx="2"/><path d="M6 14V9M12 14V7M18 14V11"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="9" y1="7" x2="15" y2="7"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUILDING -->
+  <div class="tab-panel" id="tab-building">
+    <div class="card">
+      <div class="card-image"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Building"/></div>
+      <div class="card-content">
+        <div><div class="card-title">Smart Building</div>
+          <p class="card-desc">Tuya's Smart Building solution provides commercial property owners and facility managers with a unified platform to manage all building systems — from HVAC and lighting to security and access — resulting in improved operational efficiency, occupant comfort, and significant cost savings at scale.</p>
+        </div>
+        <div><div class="label">Key Features</div>
+          <div class="features-grid">
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="feature-text"><h4>Unified BMS Platform</h4><p>Integrate all building systems — HVAC, lighting, elevators, and fire safety — into a single intelligent management console.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="feature-text"><h4>Advanced Security</h4><p>Deploy multi-layer security including AI cameras, perimeter alerts, visitor management, and 24/7 monitoring dashboards.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="feature-text"><h4>Carbon Footprint Reduction</h4><p>Use real-time energy dashboards and AI-driven automation to cut energy consumption and meet sustainability targets.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="feature-text"><h4>Predictive Maintenance</h4><p>Use sensor data and AI insights to predict equipment failures before they occur, minimizing costly downtime.</p></div></div>
+          </div>
+        </div>
+        <div><div class="label">Solution</div>
+          <div class="solution-grid">
+            <div class="solution-item">Building management system (BMS) dashboard</div>
+            <div class="solution-item">Facility operations mobile app</div>
+            <div class="solution-item">Energy monitoring & reporting tools</div>
+            <div class="solution-item">Visitor & tenant management portal</div>
+          </div>
+          <div class="device-strip">
+            <div class="device-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M6.3 6.3a8 8 0 0 0 0 11.4M17.7 6.3a8 8 0 0 1 0 11.4"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="2" y="14" width="20" height="6" rx="2"/><path d="M6 14V9M12 14V7M18 14V11"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDUSTRIAL -->
+  <div class="tab-panel" id="tab-industrial">
+    <div class="card">
+      <div class="card-image"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="Industrial"/></div>
+      <div class="card-content">
+        <div><div class="card-title">Smart Industrial</div>
+          <p class="card-desc">Tuya's Smart Industrial solution brings IoT intelligence to factories, warehouses, and production facilities. Monitor equipment health, automate safety protocols, track assets in real-time, and optimize energy usage across your entire industrial operation from a centralized cloud platform.</p>
+        </div>
+        <div><div class="label">Key Features</div>
+          <div class="features-grid">
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="feature-text"><h4>Real-Time Equipment Monitoring</h4><p>Track machine performance, uptime, and health metrics in real-time to prevent failures and optimize productivity.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="feature-text"><h4>Automated Safety Alerts</h4><p>Deploy gas sensors, smoke detectors, and motion sensors that trigger instant alerts and automatic shutdown protocols.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div><div class="feature-text"><h4>Asset Tracking</h4><p>Locate and monitor high-value assets, vehicles, and personnel across large industrial sites using IoT beacons and GPS.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="feature-text"><h4>Industrial Energy Optimization</h4><p>Identify energy-intensive processes and automate load balancing to significantly reduce operational energy costs.</p></div></div>
+          </div>
+        </div>
+        <div><div class="label">Solution</div>
+          <div class="solution-grid">
+            <div class="solution-item">Industrial IoT monitoring dashboard</div>
+            <div class="solution-item">Equipment maintenance management app</div>
+            <div class="solution-item">Safety & compliance reporting system</div>
+            <div class="solution-item">Asset & workforce tracking platform</div>
+          </div>
+          <div class="device-strip">
+            <div class="device-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="2" y="14" width="20" height="6" rx="2"/><path d="M6 14V9M12 14V7M18 14V11"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="9" y1="7" x2="15" y2="7"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ELDERLY CARE -->
+  <div class="tab-panel" id="tab-elderly">
+    <div class="card">
+      <div class="card-image"><img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&q=80" alt="Elderly Care"/></div>
+      <div class="card-content">
+        <div><div class="card-title">Smart Elderly Care</div>
+          <p class="card-desc">Tuya's Smart Elderly Care solution empowers care facilities and families to deliver safer, more compassionate care for seniors. Combining health monitoring, emergency response, and activity tracking, the platform gives caregivers real-time visibility and peace of mind while preserving residents' dignity and independence.</p>
+        </div>
+        <div><div class="label">Key Features</div>
+          <div class="features-grid">
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="feature-text"><h4>Health Monitoring</h4><p>Continuously track vital signs including heart rate, blood pressure, and SpO2 via wearable devices with instant alerts.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class="feature-text"><h4>Emergency SOS</h4><p>One-touch SOS buttons and fall detection sensors that immediately alert caregivers, family, and emergency services.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="feature-text"><h4>Caregiver Coordination</h4><p>Manage staff schedules, care plans, and task assignments digitally to ensure consistent and timely resident care.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="feature-text"><h4>Safe Environment Control</h4><p>Automate lighting, temperature, and medication reminders to create a comfortable and safe living environment for seniors.</p></div></div>
+          </div>
+        </div>
+        <div><div class="label">Solution</div>
+          <div class="solution-grid">
+            <div class="solution-item">Care facility management platform</div>
+            <div class="solution-item">Family monitoring mobile app</div>
+            <div class="solution-item">Wearable health device ecosystem</div>
+            <div class="solution-item">Emergency response integration system</div>
+          </div>
+          <div class="device-strip">
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="9" y1="7" x2="15" y2="7"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.4-1.2 4.5-3 5.7V17a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2.3C6.2 13.5 5 11.4 5 9a7 7 0 0 1 7-7z"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M6.3 6.3a8 8 0 0 0 0 11.4M17.7 6.3a8 8 0 0 1 0 11.4"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGRICULTURE -->
+  <div class="tab-panel" id="tab-agriculture">
+    <div class="card">
+      <div class="card-image"><img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=600&q=80" alt="Agriculture"/></div>
+      <div class="card-content">
+        <div><div class="card-title">Smart Agriculture</div>
+          <p class="card-desc">Tuya's Smart Agriculture solution equips modern farms with precision IoT tools to maximize yields, conserve resources, and reduce manual labor. From greenhouse climate control to soil monitoring and automated irrigation, the platform helps farmers make data-driven decisions for sustainable, high-output agriculture.</p>
+        </div>
+        <div><div class="label">Key Features</div>
+          <div class="features-grid">
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 22V12M12 12C12 12 7 9 7 4a5 5 0 0 1 10 0c0 5-5 8-5 8z"/></svg></div><div class="feature-text"><h4>Soil & Crop Monitoring</h4><p>Deploy soil moisture, pH, and nutrient sensors across fields to get real-time data and optimize planting decisions.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2v4M6.3 6.3l-2.8-2.8M4 12H0M6.3 17.7l-2.8 2.8M12 20v2M17.7 17.7l2.8 2.8M20 12h2M17.7 6.3l2.8-2.8"/><circle cx="12" cy="12" r="4"/></svg></div><div class="feature-text"><h4>Smart Irrigation Control</h4><p>Automatically trigger irrigation based on soil moisture and weather forecasts, conserving water while maximizing crop yield.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="feature-text"><h4>Greenhouse Automation</h4><p>Control temperature, humidity, CO₂ levels, and ventilation automatically to create the optimal growth environment year-round.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="feature-text"><h4>Livestock & Asset Tracking</h4><p>Monitor livestock health and location with smart tags, and track farm equipment usage and maintenance schedules.</p></div></div>
+          </div>
+        </div>
+        <div><div class="label">Solution</div>
+          <div class="solution-grid">
+            <div class="solution-item">Farm management web dashboard</div>
+            <div class="solution-item">Field worker mobile app</div>
+            <div class="solution-item">Sensor & drone data integration</div>
+            <div class="solution-item">Weather & crop analytics platform</div>
+          </div>
+          <div class="device-strip">
+            <div class="device-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M6.3 6.3a8 8 0 0 0 0 11.4M17.7 6.3a8 8 0 0 1 0 11.4"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M12 2v4M6.3 6.3l-2.8-2.8M4 12H0M6.3 17.7l-2.8 2.8M12 20v2M17.7 17.7l2.8 2.8M20 12h2M17.7 6.3l2.8-2.8"/><circle cx="12" cy="12" r="4"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="2" y="14" width="20" height="6" rx="2"/><path d="M6 14V9M12 14V7M18 14V11"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="9" y1="7" x2="15" y2="7"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MORE -->
+  <div class="tab-panel" id="tab-more">
+    <div class="card">
+      <div class="card-image"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="More"/></div>
+      <div class="card-content">
+        <div><div class="card-title">More Scenarios</div>
+          <p class="card-desc">Beyond the featured verticals, Tuya's IoT platform extends into education, healthcare, logistics, smart cities, and more. With a flexible open API, rich device ecosystem, and industry-specific SDKs, Tuya empowers developers and enterprises to build custom smart solutions for virtually any industry or use case.</p>
+        </div>
+        <div><div class="label">Key Features</div>
+          <div class="features-grid">
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M6.3 6.3a8 8 0 0 0 0 11.4M17.7 6.3a8 8 0 0 1 0 11.4"/></svg></div><div class="feature-text"><h4>Open IoT Platform</h4><p>Access 400,000+ SKUs of smart hardware and open APIs to build custom solutions for any vertical, from education to healthcare.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="feature-text"><h4>Industry SDKs & APIs</h4><p>Rapidly develop custom apps and integrations using Tuya's industry-specific SDKs, extensive documentation, and developer tools.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="feature-text"><h4>Global Cloud Infrastructure</h4><p>Deploy with confidence using Tuya's multi-region cloud that serves 700,000+ developers across 200+ countries with 99.9% uptime.</p></div></div>
+            <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="feature-text"><h4>Partner Ecosystem</h4><p>Collaborate with Tuya's global network of solution providers, hardware manufacturers, and system integrators for turnkey deployments.</p></div></div>
+          </div>
+        </div>
+        <div><div class="label">Solution</div>
+          <div class="solution-grid">
+            <div class="solution-item">Open IoT development platform</div>
+            <div class="solution-item">Custom white-label app builder</div>
+            <div class="solution-item">Smart city & public infrastructure tools</div>
+            <div class="solution-item">Healthcare & education IoT modules</div>
+          </div>
+          <div class="device-strip">
+            <div class="device-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M6.3 6.3a8 8 0 0 0 0 11.4M17.7 6.3a8 8 0 0 1 0 11.4"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.4-1.2 4.5-3 5.7V17a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2.3C6.2 13.5 5 11.4 5 9a7 7 0 0 1 7-7z"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="2" y="14" width="20" height="6" rx="2"/><path d="M6 14V9M12 14V7M18 14V11"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="device-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
