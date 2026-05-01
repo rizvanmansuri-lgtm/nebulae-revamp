@@ -33,10 +33,11 @@
   .solution-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px 16px;margin-bottom:14px}
   .solution-item{font-size:11.5px;color:#333;font-weight:500;display:flex;align-items:flex-start;gap:6px}
   .solution-item::before{content:'✓';color:#F5622E;font-weight:800;font-size:12px;flex-shrink:0;margin-top:1px}
-  .device-strip{border:1px solid #eee;border-radius:12px;padding:12px 18px;display:flex;align-items:center;gap:14px;overflow-x:auto;scrollbar-width:none}
+  .device-strip{border:1px solid #eee;border-radius:12px;padding:12px 18px;display:flex;align-items:center;gap:14px;overflow-x:auto;scrollbar-width:none;justify-content: space-between;}
+  
   .device-strip::-webkit-scrollbar{display:none}
-  .device-icon{width:48px;height:48px;flex-shrink:0;background:#f5f6f8;border-radius:10px;display:flex;align-items:center;justify-content:center;transition:background .2s;cursor:pointer}
-  .device-icon:hover{background:#F5622E;   transition: all 0.3s ease;}
+  .device-icon{width:48px;height:48px;flex-shrink:0;background:#f5f6f8;border-radius:10px;display:flex;align-items:center;justify-content:center;transition:background .2s;cursor:pointer;border :1px solid #d0cbf5;box-shadow:0 4px 16px rgba(91,79,217,.08);}
+  .device-icon:hover{background:#F5622E;   transition: all 0.3s ease; border-color: white;}
 
   .device-icon:hover.device-icon svg{stroke: white;}
   .device-icon svg{width:26px;height:26px;stroke:#555;fill:none;stroke-width:1.5}
