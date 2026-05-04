@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VerdeMobility — Something's Coming · May 8</title>
+<meta name="description" content="A new era for EV charging infrastructure is arriving May 8. Be the first to know.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --verde: #00C76A;
+  --verde-dark: #009E52;
+  --verde-pale: #E6FAF1;
+
+  /* Light mode */
+  --bg: #F7F8F6;
+  --bg2: #FFFFFF;
+  --bg3: #EFF2EE;
+  --text-primary: #0D1A0F;
+  --text-secondary: #4A5C4D;
+  --text-muted: #8A9E8D;
+  --border: rgba(0,0,0,0.08);
+  --border-verde: rgba(0,199,106,0.2);
+  --grid-line: rgba(0,199,106,0.06);
+  --charger-tint: rgba(0,199,106,0.08);
+  --scan-color: rgba(0,199,106,0.9);
+  --badge-bg: #E6FAF1;
+  --badge-text: #007A40;
+  --redacted-bg: #1A1A1A;
+  --redacted-text: #1A1A1A;
+  --toggle-bg: #E2E8E3;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+}
+
+[data-theme="dark"] {
+  --bg: #070A08;
+  --bg2: #0E1510;
+  --bg3: #131A14;
+  --text-primary: #F0F5F1;
+  --text-secondary: #8AAE90;
+  --text-muted: #4A6450;
+  --border: rgba(255,255,255,0.07);
+  --border-verde: rgba(0,199,106,0.2);
+  --grid-line: rgba(0,199,106,0.04);
+  --charger-tint: rgba(0,199,106,0.06);
+  --scan-color: rgba(0,199,106,0.8);
+  --badge-bg: rgba(0,199,106,0.12);
+  --badge-text: #00C76A;
+  --redacted-bg: #F0F5F1;
+  --redacted-text: #F0F5F1;
+  --toggle-bg: #1E2D21;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.35s ease, color 0.35s ease;
+  overflow-x: hidden;
+}
+
+/* Grid background */
+.page-grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none;
+  z-index: 0;
+  transition: background-image 0.35s;
+}
+
+/* ─── THEME TOGGLE ─── */
+.theme-toggle {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 100;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 40px;
+  padding: 6px 14px 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover { border-color: var(--verde); }
+
+.toggle-track {
+  width: 34px;
+  height: 18px;
+  background: var(--toggle-bg);
+  border-radius: 9px;
+  position: relative;
+  transition: background 0.3s;
+}
+
+[data-theme="dark"] .toggle-track { background: var(--verde); }
+
+.toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+[data-theme="dark"] .toggle-thumb { transform: translateX(16px); }
+
+.toggle-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color 0.3s;
+  min-width: 28px;
+}
+
+/* ─── MAIN WRAPPER ─── */
+.teaser-wrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* ─── SECTION: HERO ─── */
+.section-hero {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 48px 80px;
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 64px;
+  align-items: center;
+  min-height: 88vh;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--verde);
+  flex-shrink: 0;
+  animation: dot-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes dot-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(0,199,106,0.4); }
+  50% { opacity: 0.6; transform: scale(0.75); box-shadow: 0 0 0 6px rgba(0,199,106,0); }
+}
+
+.eyebrow-text {
+  font-size: 11px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--verde);
+  font-weight: 500;
+}
+
+.hero-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(72px, 8vw, 108px);
+  line-height: 0.9;
+  letter-spacing: 2px;
+  margin-bottom: 28px;
+}
+
+.hero-heading .l1 { color: var(--text-muted); display: block; }
+.hero-heading .l2 { color: var(--text-secondary); display: block; }
+.hero-heading .l3 { color: var(--text-primary); display: block; }
+.hero-heading .l4 { color: var(--verde); display: block; }
+
+.hero-sub {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 400px;
+  margin-bottom: 44px;
+}
+
+/* Email form */
+.notify-form { max-width: 440px; }
+
+.notify-row {
+  display: flex;
+  border: 1px solid var(--border-verde);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--bg2);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.notify-row:focus-within {
+  border-color: var(--verde);
+  box-shadow: 0 0 0 3px rgba(0,199,106,0.1);
+}
+
+.notify-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  padding: 14px 18px;
+  outline: none;
+}
+
+.notify-input::placeholder { color: var(--text-muted); }
+
+.notify-btn {
+  background: var(--verde);
+  color: #fff;
+  border: none;
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 14px 22px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.notify-btn:hover { background: var(--verde-dark); }
+.notify-btn:active { transform: scale(0.97); }
+
+.form-hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 10px;
+  letter-spacing: 0.3px;
+}
+
+.success-state {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background: var(--badge-bg);
+  border: 1px solid var(--border-verde);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--badge-text);
+  animation: fadein 0.4s ease;
+}
+
+.success-state.show { display: flex; }
+
+@keyframes fadein { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+
+.success-icon {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--verde);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.success-icon svg { width: 11px; height: 11px; }
+
+/* ─── SUBSCRIBER COUNT ─── */
+.sub-count {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.sub-avatars {
+  display: flex;
+}
+
+.sub-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+  margin-left: -8px;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: border-color 0.3s;
+}
+
+.sub-avatar:first-child { margin-left: 0; }
+.av1 { background: #2D6A4F; }
+.av2 { background: #40916C; }
+.av3 { background: #52B788; }
+.av4 { background: #74C69D; }
+
+.sub-text {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.sub-text strong {
+  color: var(--verde);
+  font-weight: 700;
+}
+
+/* Hero right — silhouette */
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.charger-scene {
+  position: relative;
+  width: 280px;
+  height: 420px;
+}
+
+.glow-bg {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px; height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,199,106,0.12) 0%, transparent 65%);
+  animation: glow-breathe 3.5s ease-in-out infinite;
+}
+
+@keyframes glow-breathe {
+  0%, 100% { opacity: 0.6; transform: translate(-50%,-50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%,-50%) scale(1.1); }
+}
+
+.charger-figure {
+  position: relative;
+  z-index: 2;
+}
+
+[data-theme="light"] .charger-figure {
+  filter: blur(2.5px) brightness(0.55) sepia(0.2);
+}
+
+[data-theme="dark"] .charger-figure {
+  filter: blur(2.5px) brightness(0.35);
+}
+
+.scan-line {
+  position: absolute;
+  left: 10%; right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--scan-color), transparent);
+  top: 0;
+  animation: scan 4s ease-in-out infinite;
+  z-index: 3;
+}
+
+@keyframes scan {
+  0% { top: 5%; opacity: 0; }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { top: 95%; opacity: 0; }
+}
+
+.classified-tag {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--verde);
+  border: 1px solid var(--border-verde);
+  padding: 5px 18px;
+  white-space: nowrap;
+  z-index: 4;
+  background: var(--bg);
+  transition: background 0.35s;
+}
+
+/* Corner decorations */
+.corner {
+  position: absolute;
+  width: 16px; height: 16px;
+  border-color: var(--verde);
+  border-style: solid;
+  opacity: 0.4;
+}
+
+.corner-tl { top: 12px; left: 12px; border-width: 2px 0 0 2px; }
+.corner-tr { top: 12px; right: 12px; border-width: 2px 2px 0 0; }
+.corner-bl { bottom: 12px; left: 12px; border-width: 0 0 2px 2px; }
+.corner-br { bottom: 12px; right: 12px; border-width: 0 2px 2px 0; }
+
+/* ─── SECTION: COUNTDOWN ─── */
+.section-countdown {
+  width: 100%;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background-image: linear-gradient(-190deg, #02ddb7 15%, #03d077 50%);
+  transition: background 0.35s, border-color 0.35s;
+}
+
+.countdown-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-label {
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 36px;
+}
+
+.countdown-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.cd-unit-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 32px;
+  position: relative;
+}
+
+.cd-unit-block:not(:last-child)::after {
+  content: ':';
+  position: absolute;
+  right: -6px;
+  top: 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 56px;
+ color: rgba(255, 255, 255, 0.45);
+  opacity: 0.4;
+  line-height: 1;
+  animation: colon-blink 1s step-end infinite;
+}
+
+@keyframes colon-blink {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.1; }
+}
+
+.cd-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  line-height: 1;
+  letter-spacing: 2px;
+   color: #ffffff;
+  min-width: 100px;
+  text-align: center;
+  transition: color 0.15s;
+}
+
+.cd-label {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+  margin-top: 10px;
+}
+
+.countdown-date-note {
+  margin-top: 28px;
+  font-size: 12px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.countdown-date-note span {
+ color: #ffffff; 
+  font-weight: 500;
+}
+
+/* Add to calendar */
+.cal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 11px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  background:  rgba(255, 255, 255, 0.15);
+   color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  text-decoration: none;
+}
+
+.cal-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+  border-color: #ffffff;
+}
+.cal-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+/* ─── SECTION: HINT / CLUE ─── */
+.section-hint {
+  width: 100%;
+  background: var(--bg);
+  transition: background 0.35s;
+}
+
+.hint-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.hint-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.35s, border-color 0.2s, transform 0.2s;
+}
+
+.hint-card:hover {
+  border-color: var(--border-verde);
+  transform: translateY(-2px);
+}
+
+.hint-card-label {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--verde);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hint-card-label::before {
+  content: '';
+  width: 16px;
+  height: 1px;
+  background: var(--verde);
+  display: inline-block;
+}
+
+.hint-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.hint-body {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Redacted text effect */
+.redacted {
+  display: inline-block;
+  background: var(--redacted-bg);
+  color: transparent;
+  border-radius: 2px;
+  padding: 0 4px;
+  user-select: none;
+  transition: background 0.3s, color 0.3s;
+  cursor: default;
+  position: relative;
+}
+
+.hint-card:hover .redacted,
+.hint-card .redacted:hover {
+  background: var(--verde);
+  color: #fff;
+}
+
+/* ─── SECTION: REDACTED SPEC ─── */
+.section-spec {
+  width: 100%;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.35s, border-color 0.35s;
+}
+
+.spec-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.spec-heading-block {}
+
+.spec-eyebrow {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--verde);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.spec-eyebrow::after {
+  content: '';
+  flex: 1;
+  max-width: 48px;
+  height: 1px;
+  background: var(--verde);
+  opacity: 0.4;
+}
+
+.spec-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 52px;
+  line-height: 0.95;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.spec-desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+/* Spec sheet */
+.spec-sheet {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background 0.35s, border-color 0.35s;
+}
+
+.spec-sheet-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spec-sheet-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.spec-confidential {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--verde);
+  background: var(--badge-bg);
+  padding: 4px 10px;
+  border-radius: 2px;
+  border: 1px solid var(--border-verde);
+}
+
+.spec-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.spec-row:last-child { border-bottom: none; }
+.spec-row:hover { background: var(--charger-tint); }
+
+.spec-key {
+  font-size: 12px;
+  color: var(--text-secondary);
+  letter-spacing: 0.3px;
+}
+
+.spec-val {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-family: 'Syne', sans-serif;
+}
+
+.spec-val .redacted {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+}
+
+/* ─── SECTION: CITY MAP ─── */
+.section-cities {
+  width: 100%;
+  background: var(--bg);
+  transition: background 0.35s;
+}
+
+.cities-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 48px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.section-eyebrow {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--verde);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 44px;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+}
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.city-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  transition: border-color 0.2s, transform 0.2s, background 0.35s;
+  position: relative;
+  overflow: hidden;
+}
+
+.city-card.active {
+  border-color: var(--border-verde);
+}
+
+.city-card.active::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--verde);
+}
+
+.city-card:hover { transform: translateY(-2px); border-color: var(--verde); }
+
+.city-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--verde);
+  position: relative;
+}
+
+.city-card.active .city-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid var(--verde);
+  opacity: 0.4;
+  animation: city-ping 2s ease-out infinite;
+}
+
+@keyframes city-ping {
+  0% { transform: scale(0.5); opacity: 0.6; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.city-card.coming-soon .city-dot {
+  background: var(--text-muted);
+  opacity: 0.4;
+}
+
+.city-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.city-card.coming-soon .city-name { color: var(--text-muted); }
+
+.city-status {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.city-card.active .city-status { color: var(--verde); }
+.city-card.coming-soon .city-status { color: var(--text-muted); }
+
+/* ─── SECTION: SOCIAL SHARE ─── */
+.section-share {
+  width: 100%;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  transition: background 0.35s, border-color 0.35s;
+}
+
+.share-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.share-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+}
+
+.share-sub {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.share-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.share-btn:hover {
+  border-color: var(--verde);
+  color: var(--verde);
+  background: var(--badge-bg);
+}
+
+.share-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .section-hero {
+    grid-template-columns: 1fr;
+    padding: 48px 24px 60px;
+    gap: 48px;
+    min-height: unset;
+  }
+
+  .hero-visual { order: -1; }
+  .charger-scene { width: 200px; height: 300px; }
+
+  .hint-inner {
+    grid-template-columns: 1fr;
+    padding: 48px 24px;
+  }
+
+  .spec-inner {
+    grid-template-columns: 1fr;
+    padding: 48px 24px;
+    gap: 40px;
+  }
+
+  .countdown-inner { padding: 48px 24px; }
+  .cd-number { font-size: 52px; min-width: 64px; }
+  .cd-unit-block { padding: 0 16px; }
+
+  .cities-inner { padding: 48px 24px; }
+  .share-inner { padding: 48px 24px; }
+
+  .theme-toggle { top: 16px; right: 16px; }
+}
+
+@media (max-width: 480px) {
+  .hero-heading { font-size: 60px; }
+  .cd-number { font-size: 40px; }
+  .cd-unit-block { padding: 0 10px; }
+  .countdown-row { gap: 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- Grid bg -->
+<div class="page-grid"></div>
+
+<!-- Theme toggle -->
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+  <div class="toggle-track"><div class="toggle-thumb"></div></div>
+  <span class="toggle-label" id="toggle-lbl">Dark</span>
+</button>
+
+<div class="teaser-wrap">
+
+  <!-- ════ SECTION 1: HERO ════ -->
+  <section class="section-hero">
+    <div class="hero-left">
+
+      <div class="hero-eyebrow">
+        <div class="eyebrow-dot"></div>
+        <span class="eyebrow-text">Product Reveal · May 8, 2025</span>
+      </div>
+
+      <h1 class="hero-heading">
+        <span class="l1">The</span>
+        <span class="l2">Future of</span>
+        <span class="l3">Charging</span>
+        <span class="l4">Is Here.</span>
+      </h1>
+
+      <p class="hero-sub">Something extraordinary is powering up. A new era for EV infrastructure — engineered for what's next. Be the first to experience it.</p>
+
+      <!-- Email form -->
+      <div class="notify-form">
+        <div class="notify-row" id="formRow">
+          <input type="email" class="notify-input" id="emailInput" placeholder="Enter your email address" />
+          <button class="notify-btn" onclick="handleNotify()">Notify Me</button>
+        </div>
+        <div class="form-hint" id="formHint">No spam — just the big reveal on May 8th at midnight IST.</div>
+
+        <div class="success-state" id="successState">
+          <div class="success-icon">
+            <svg viewBox="0 0 12 12" fill="none">
+              <path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          You're on the list. See you May 8 at midnight IST.
+        </div>
+      </div>
+
+      <!-- Subscriber count -->
+      <div class="sub-count" id="subCount">
+        <div class="sub-avatars">
+          <div class="sub-avatar av1">RK</div>
+          <div class="sub-avatar av2">SP</div>
+          <div class="sub-avatar av3">AM</div>
+          <div class="sub-avatar av4">+</div>
+        </div>
+        <div class="sub-text"><strong id="subNumber">2,418</strong> people already waiting</div>
+      </div>
+
+    </div>
+
+    <!-- Charger silhouette -->
+    <div class="hero-visual">
+      <div class="charger-scene">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+        <div class="glow-bg"></div>
+        <div class="scan-line"></div>
+
+        <svg class="charger-figure" width="280" height="400" viewBox="0 0 280 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Post -->
+          <rect x="105" y="44" width="70" height="288" rx="10" fill="currentColor" opacity="0.9"/>
+          <!-- Top cap -->
+          <rect x="88" y="30" width="104" height="24" rx="7" fill="currentColor"/>
+          <!-- Screen -->
+          <rect x="116" y="72" width="48" height="64" rx="5" fill="#00C76A" opacity="0.7"/>
+          <!-- Lightning bolt -->
+          <polygon points="142,82 130,104 139,104 128,128 152,100 143,100 155,82" fill="#fff" opacity="0.9"/>
+          <!-- Status strip -->
+          <rect x="108" y="152" width="7" height="44" rx="3" fill="#00C76A" opacity="0.95"/>
+          <!-- Connector holster -->
+          <rect x="120" y="158" width="40" height="22" rx="4" fill="currentColor" opacity="0.7"/>
+          <!-- Cable -->
+          <path d="M160 169 Q200 169 200 196 Q200 230 176 248 L170 266" stroke="currentColor" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.85"/>
+          <!-- Plug -->
+          <rect x="158" y="264" width="24" height="36" rx="5" fill="currentColor"/>
+          <rect x="164" y="271" width="10" height="7" rx="1.5" fill="#00C76A" opacity="0.6"/>
+          <rect x="164" y="284" width="10" height="7" rx="1.5" fill="#00C76A" opacity="0.6"/>
+          <!-- Ground pin -->
+          <rect x="167" y="294" width="6" height="4" rx="1" fill="#00C76A" opacity="0.4"/>
+          <!-- Base plate -->
+          <rect x="78" y="325" width="124" height="14" rx="5" fill="currentColor" opacity="0.95"/>
+          <rect x="66" y="334" width="148" height="10" rx="4" fill="currentColor" opacity="0.5"/>
+          <!-- Top vent slots -->
+          <rect x="118" y="40" width="20" height="3" rx="1" fill="#00C76A" opacity="0.3"/>
+          <rect x="142" y="40" width="20" height="3" rx="1" fill="#00C76A" opacity="0.3"/>
+        </svg>
+
+        <div class="classified-tag">Identity Classified</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ SECTION 2: COUNTDOWN ════ -->
+  <section class="section-countdown">
+    <div class="countdown-inner">
+      <div class="countdown-label">Launching in</div>
+      <div class="countdown-row">
+        <div class="cd-unit-block">
+          <div class="cd-number" id="cd-days">00</div>
+          <div class="cd-label">Days</div>
+        </div>
+        <div class="cd-unit-block">
+          <div class="cd-number" id="cd-hours">00</div>
+          <div class="cd-label">Hours</div>
+        </div>
+        <div class="cd-unit-block">
+          <div class="cd-number" id="cd-mins">00</div>
+          <div class="cd-label">Minutes</div>
+        </div>
+        <div class="cd-unit-block">
+          <div class="cd-number" id="cd-secs">00</div>
+          <div class="cd-label">Seconds</div>
+        </div>
+      </div>
+      <div class="countdown-date-note">Reveal at <span>12:00 AM IST · Thursday, May 8, 2025</span></div>
+      <a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=VerdeMobility+Product+Launch&dates=20250507T183000Z/20250507T193000Z&details=VerdeMobility+EV+Charger+Launch+Reveal&location=verdemobility.com" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="3" width="12" height="12" rx="2"/>
+          <path d="M5 1v3M11 1v3M2 7h12"/>
+        </svg>
+        Add to Calendar
+      </a>
+    </div>
+  </section>
+
+  <!-- ════ SECTION 3: HINT CARDS ════ -->
+  <section class="section-hint">
+    <div class="hint-inner">
+
+      <div class="hint-card">
+        <div class="hint-card-label">Hint 01</div>
+        <div class="hint-title">Engineered for speed</div>
+        <div class="hint-body">
+          Delivering up to <span class="redacted">——— kW</span> of power — enough to add <span class="redacted">—— km</span> of range in under 15 minutes. Hover to reveal.
+        </div>
+      </div>
+
+      <div class="hint-card">
+        <div class="hint-card-label">Hint 02</div>
+        <div class="hint-title">Built for every EV</div>
+        <div class="hint-body">
+          Compatible with <span class="redacted">CCS2 · CHAdeMO · Type 2</span> connectors. Whether you drive a <span class="redacted">Tata · MG · Ola</span> — it just works.
+        </div>
+      </div>
+
+      <div class="hint-card">
+        <div class="hint-card-label">Hint 03</div>
+        <div class="hint-title">Smart by design</div>
+        <div class="hint-body">
+          Integrated <span class="redacted">OTA updates</span>, real-time diagnostics, and <span class="redacted">dynamic load balancing</span>. A charger that gets smarter over time.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════ SECTION 4: REDACTED SPEC SHEET ════ -->
+  <section class="section-spec">
+    <div class="spec-inner">
+
+      <div class="spec-heading-block">
+        <div class="spec-eyebrow">Spec Preview</div>
+        <div class="spec-title">What we<br>can tell you.</div>
+        <p class="spec-desc">Some details are still under wraps. But we're giving you just enough to know — this is unlike anything currently in the market.</p>
+      </div>
+
+      <div class="spec-sheet">
+        <div class="spec-sheet-header">
+          <div class="spec-sheet-title">Technical Datasheet</div>
+          <div class="spec-confidential">Confidential</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Charging Standard</div>
+          <div class="spec-val">DC Fast Charging</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Max Output Power</div>
+          <div class="spec-val"><span class="redacted">XXX kW</span></div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Connector Types</div>
+          <div class="spec-val"><span class="redacted">Classified</span></div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">IP Rating</div>
+          <div class="spec-val"><span class="redacted">IP —</span></div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Operating Temp.</div>
+          <div class="spec-val">-20°C to 55°C</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Connectivity</div>
+          <div class="spec-val"><span class="redacted">4G · Wi-Fi · OCPP</span></div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Display</div>
+          <div class="spec-val"><span class="redacted">X" Touchscreen</span></div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">Certifications</div>
+          <div class="spec-val">BIS · <span class="redacted">ISO XXXX</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════ SECTION 5: CITIES ════ -->
+  <section class="section-cities">
+    <div class="cities-inner">
+      <div class="section-header">
+        <div class="section-eyebrow">Rollout Plan</div>
+        <div class="section-title">Where We're Charging First</div>
+      </div>
+      <div class="cities-grid">
+        <div class="city-card active">
+          <div class="city-dot"></div>
+          <div class="city-name">Mumbai</div>
+          <div class="city-status">Launch City</div>
+        </div>
+        <div class="city-card active">
+          <div class="city-dot"></div>
+          <div class="city-name">Delhi NCR</div>
+          <div class="city-status">Launch City</div>
+        </div>
+        <div class="city-card active">
+          <div class="city-dot"></div>
+          <div class="city-name">Bengaluru</div>
+          <div class="city-status">Launch City</div>
+        </div>
+        <div class="city-card active">
+          <div class="city-dot"></div>
+          <div class="city-name">Pune</div>
+          <div class="city-status">Launch City</div>
+        </div>
+        <div class="city-card coming-soon">
+          <div class="city-dot"></div>
+          <div class="city-name">Hyderabad</div>
+          <div class="city-status">Coming Soon</div>
+        </div>
+        <div class="city-card coming-soon">
+          <div class="city-dot"></div>
+          <div class="city-name">Chennai</div>
+          <div class="city-status">Coming Soon</div>
+        </div>
+        <div class="city-card coming-soon">
+          <div class="city-dot"></div>
+          <div class="city-name">Ahmedabad</div>
+          <div class="city-status">Coming Soon</div>
+        </div>
+        <div class="city-card coming-soon">
+          <div class="city-dot"></div>
+          <div class="city-name">Kolkata</div>
+          <div class="city-status">Coming Soon</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ SECTION 6: SOCIAL SHARE ════ -->
+  <section class="section-share">
+    <div class="share-inner">
+      <div class="share-title">Spread the Charge</div>
+      <p class="share-sub">Share the news — every share moves you up the early access list.</p>
+      <div class="share-btns">
+        <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://verdemobility.com" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          Share on LinkedIn
+        </a>
+        <a class="share-btn" href="https://twitter.com/intent/tweet?text=Something+big+is+coming+from+%40VerdeMobility+on+May+8.+EV+charging+will+never+be+the+same.&url=https://verdemobility.com" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Share on X
+        </a>
+        <a class="share-btn" href="https://wa.me/?text=Something+big+is+coming+from+VerdeMobility+on+May+8.+EV+charging+will+never+be+the+same.+https://verdemobility.com" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.855L0 24l6.335-1.502A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 01-5.012-1.374l-.36-.213-3.762.892.944-3.653-.234-.376A9.786 9.786 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+          Share on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function updateCountdown() {
+    const target = new Date('2025-05-08T00:00:00+05:30');
+    const now = new Date();
+    const diff = target - now;
+
+    if (diff <= 0) {
+      ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id => {
+        document.getElementById(id).textContent = '00';
+      });
+      return;
+    }
+
+    const days  = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins  = Math.floor((diff % 3600000) / 60000);
+    const secs  = Math.floor((diff % 60000) / 1000);
+
+    document.getElementById('cd-days').textContent  = pad(days);
+    document.getElementById('cd-hours').textContent = pad(hours);
+    document.getElementById('cd-mins').textContent  = pad(mins);
+    document.getElementById('cd-secs').textContent  = pad(secs);
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  function handleNotify() {
+    const input = document.getElementById('emailInput');
+    const val = input.value.trim();
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRe.test(val)) {
+      document.getElementById('formRow').style.boxShadow = '0 0 0 3px rgba(220,50,50,0.15)';
+      document.getElementById('formRow').style.borderColor = 'rgba(220,50,50,0.4)';
+      input.focus();
+      setTimeout(() => {
+        document.getElementById('formRow').style.boxShadow = '';
+        document.getElementById('formRow').style.borderColor = '';
+      }, 1800);
+      return;
+    }
+
+    document.getElementById('formRow').style.display = 'none';
+    document.getElementById('formHint').style.display = 'none';
+    document.getElementById('successState').classList.add('show');
+
+    const numEl = document.getElementById('subNumber');
+    const current = parseInt(numEl.textContent.replace(/,/g, ''));
+    const target = current + 1;
+    numEl.textContent = target.toLocaleString('en-IN');
+  }
+
+  function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    document.getElementById('toggle-lbl').textContent = isDark ? 'Dark' : 'Light';
+  }
+
+  document.getElementById('emailInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') handleNotify();
+  });
+</script>
+</body>
+</html>
