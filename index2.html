@@ -1278,7 +1278,7 @@ img { max-width:100%; padding:5px; border:5px solid #fff; box-sizing:border-box;
   }
   /* Remove white space above header on mobile */
   body > *:first-child { margin-top: 0 !important; }
-}
+  
 
 /* ── Back to Home button (products & services pages) ── */
 .atl-btn-back-home {
@@ -2955,7 +2955,7 @@ nav#atlNav {
 </style>
 <style>
 html,body{margin:0!important;}
-body{padding-top:100px!important;}
+/* body{padding-top:100px!important;} */
 @media(max-width:767.98px){body{padding-top:64px!important;}}
 .atl-hero-slide{transition:opacity 1.4s cubic-bezier(0.4,0,0.2,1)!important;}
 @keyframes cuModalPop{from{opacity:0;transform:scale(.88) translateY(18px)}to{opacity:1;transform:scale(1) translateY(0)}}
@@ -3185,7 +3185,7 @@ body{padding-top:100px!important;}
   .nbl-newsletter-form{justify-content:center;max-width:100%;}
   .nbl-sample-wrap{flex-direction:column;text-align:center;}
   .nbl-sample-btns{margin:0 auto;}
-  .nbl-sticky-cta{bottom:1rem;right:1rem;}
+  .nbl-sticky-cta{ display: none ; }
 }
 
 </style>
@@ -4109,7 +4109,26 @@ img:not([loading=lazy]){opacity:1;}
   </div>
 </section>
 
+<!-- ═══ 3. KEY TECHNOLOGIES (NEW) ═══ -->
+<section class="nbl-tech-section" id="technologies">
+  <div class="container">
+    <div class="nbl-section-header nbl-section-header--center" data-anim="slide-up">
+      <span class="nbl-section-eyebrow">Core Technologies</span>
+      <h2 class="nbl-section-title">Six Protocols. One Ecosystem.</h2>
+      <p class="nbl-section-desc">Nebulae's complete wireless connectivity portfolio spans every use-case — from kilometre-range low-power IoT to high-throughput industrial automation.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="1"><div class="nbl-tech-card nbl-tech-card--lora h-100"><div class="nbl-tech-card__icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div><h3 class="nbl-tech-card__title">LoRa / LoRaWAN</h3><span class="nbl-tech-card__badge">Long Range · LPWAN</span><p class="nbl-tech-card__desc">Ultra-long range (up to 15km), ultra-low power wireless communication ideal for smart metering, asset tracking, and large-scale IoT deployments.</p><a href="products/lora-module.html" class="nbl-tech-card__link">View LoRa Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a></div></div>
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="2"><div class="nbl-tech-card nbl-tech-card--wisun h-100"><div class="nbl-tech-card__icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div><h3 class="nbl-tech-card__title">Wi-SUN</h3><span class="nbl-tech-card__badge">Smart Utility Network</span><p class="nbl-tech-card__desc">IEEE 802.15.4g-based mesh networking standard purpose-built for smart grids, electric meters, and large-scale smart city utility deployments.</p><a href="products/wisun-module.html" class="nbl-tech-card__link">View Wi-SUN Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a></div></div>
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="3"><div class="nbl-tech-card nbl-tech-card--zigbee h-100"><div class="nbl-tech-card__icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3 class="nbl-tech-card__title">Zigbee</h3><span class="nbl-tech-card__badge">Mesh Networking · Home IoT</span><p class="nbl-tech-card__desc">IEEE 802.15.4 mesh protocol offering reliable, self-healing networks for smart home, building automation, and industrial sensor networks.</p><a href="products/zigbee-module.html" class="nbl-tech-card__link">View Zigbee Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a></div></div>
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="1"><div class="nbl-tech-card nbl-tech-card--wifi h-100"><div class="nbl-tech-card__icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div><h3 class="nbl-tech-card__title">Wi-Fi</h3><span class="nbl-tech-card__badge">Wireless LAN · High Throughput</span><p class="nbl-tech-card__desc">High-bandwidth 2.4GHz/5GHz modules for IoT gateways, edge devices, and applications requiring rich data throughput and cloud connectivity.</p><a href="products/wifi-module.html" class="nbl-tech-card__link">View Wi-Fi Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a></div></div>
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="2"><div class="nbl-tech-card nbl-tech-card--gsm h-100"><div class="nbl-tech-card__icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><h3 class="nbl-tech-card__title">GSM / Cellular</h3><span class="nbl-tech-card__badge">2G · 4G LTE · NB-IoT</span><p class="nbl-tech-card__desc">Cellular IoT modules spanning 2G to 4G LTE and NB-IoT — enabling remote deployments with wide area network coverage and reliable uplinks.</p><a href="products/gsm-module.html" class="nbl-tech-card__link">View GSM Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a></div></div>
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="3"><div class="nbl-tech-card nbl-tech-card--ble h-100"><div class="nbl-tech-card__icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></div><h3 class="nbl-tech-card__title">BLE</h3><span class="nbl-tech-card__badge">Bluetooth 5.x · Ultra-Low Power</span><p class="nbl-tech-card__desc">Bluetooth Low Energy 5.x modules for proximity sensing, asset tracking, wearables, and consumer IoT with coin-cell battery lifespans.</p><a href="products/ble-module.html" class="nbl-tech-card__link">View BLE Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a></div></div>
+    </div>
+  </div>
+</section>
  
+
 
 <!-- ═══ 7. NEBULAE SOLUTIONS (formerly Tuya) ═══ -->
 <section style="background:linear-gradient(180deg,#f5f7ff 0%,#fff 100%);padding:0 0 0;">
@@ -4641,6 +4660,71 @@ img:not([loading=lazy]){opacity:1;}
  
 
  
+<!-- ═══ FAQ ACCORDION ═══ -->
+<section class="nbl-faq-section" id="faq">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-4" data-anim="slide-left">
+        <div class="nbl-section-header">
+          <span class="nbl-section-eyebrow">FAQ</span>
+          <h2 class="nbl-section-title">Frequently Asked Questions</h2>
+          <p class="nbl-section-desc">Have a question about our products, certifications, or services? We've answered the most common ones here.</p>
+          <a href="contact.html" style="display:inline-flex;align-items:center;gap:.45rem;margin-top:1rem;padding:.7rem 1.5rem;border-radius:10px;background:#4f46e5;color:#fff;font-size:.85rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;">Ask Our Engineers →</a>
+        </div>
+      </div>
+      <div class="col-lg-8" data-anim="slide-right">
+        <div class="nbl-faq-item" onclick="toggleFAQ(this)">
+          <button class="nbl-faq-question">What wireless protocols do Nebulae products support?<div class="nbl-faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="nbl-faq-answer"><div class="nbl-faq-answer-inner">Nebulae supports six major IoT protocols: LoRa/LoRaWAN, Wi-SUN, Zigbee, Wi-Fi (2.4GHz &amp; 5GHz), GSM/4G LTE/NB-IoT, and Bluetooth Low Energy (BLE 5.x). Each protocol is available across module, gateway, filter, EVK, concentrator, and node form factors.</div></div>
+        </div>
+        <div class="nbl-faq-item" onclick="toggleFAQ(this)">
+          <button class="nbl-faq-question">Are your products certified for use in India?<div class="nbl-faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="nbl-faq-answer"><div class="nbl-faq-answer-inner">Yes. All wireless products carry WPC (Wireless Planning &amp; Coordination) approval from India's Department of Telecommunications. Applicable products also hold BIS certification and international certifications including CE and FCC, enabling global deployment.</div></div>
+        </div>
+        <div class="nbl-faq-item" onclick="toggleFAQ(this)">
+          <button class="nbl-faq-question">Do you offer Evaluation Kits (EVKs) for prototyping?<div class="nbl-faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="nbl-faq-answer"><div class="nbl-faq-answer-inner">Yes. We offer complete EVKs for all major protocols — LoRa, Wi-SUN, and Zigbee. Each EVK includes the development board, antenna, USB cable, firmware source code, schematics, and detailed documentation to get you running within hours of unboxing.</div></div>
+        </div>
+        <div class="nbl-faq-item" onclick="toggleFAQ(this)">
+          <button class="nbl-faq-question">Can Nebulae develop a custom IoT product end-to-end?<div class="nbl-faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="nbl-faq-answer"><div class="nbl-faq-answer-inner">Absolutely. Our services cover the full stack: PCB design, embedded hardware design, firmware development, IoT cloud integration, mobile app development, and production support. We take projects from concept to mass production under one roof in Gujarat, India.</div></div>
+        </div>
+        <div class="nbl-faq-item" onclick="toggleFAQ(this)">
+          <button class="nbl-faq-question">What is the minimum order quantity for modules?<div class="nbl-faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="nbl-faq-answer"><div class="nbl-faq-answer-inner">We cater to orders of all sizes — from single-unit samples for engineers and researchers to large-volume production orders for utilities and smart city projects. Contact our sales team for pricing tiers and volume discounts.</div></div>
+        </div>
+        <div class="nbl-faq-item" onclick="toggleFAQ(this)">
+          <button class="nbl-faq-question">Which cloud platforms do your gateways integrate with?<div class="nbl-faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="nbl-faq-answer"><div class="nbl-faq-answer-inner">Our LoRaWAN gateways are compatible with The Things Network (TTN), Chirpstack, AWS IoT Core, Azure IoT Hub, and Tuya Cloud. Wi-SUN and Zigbee gateways support MQTT and REST API connectivity for custom integration with any cloud platform.</div></div>
+        </div>
+        <div class="nbl-faq-item" onclick="toggleFAQ(this)">
+          <button class="nbl-faq-question">Do you provide technical support after purchase?<div class="nbl-faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="nbl-faq-answer"><div class="nbl-faq-answer-inner">Yes. All products come with dedicated engineering support including documentation, datasheets, application notes, and direct access to our hardware and firmware engineers. Enterprise customers receive priority SLA-based support with dedicated account management.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 9. CTA SECTION (NEW) ═══ -->
+<section class="nbl-cta-section" id="cta">
+  <div class="container">
+    <div class="nbl-cta-wrap" data-anim="scale-up">
+      <h2 class="nbl-cta-title">Ready to Build Your<br><span>IoT Solution?</span></h2>
+      <p class="nbl-cta-desc">Talk to our engineers today. Whether you need a single module or a complete end-to-end IoT deployment — we've got you covered.</p>
+      <div class="nbl-cta-btns">
+        <a href="contact.html" class="nbl-cta-btn-primary"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>Talk to an Engineer</a>
+        <a href="products.html" class="nbl-cta-btn-outline">Browse All Products</a>
+      </div>
+      <div class="nbl-cta-contact-strip">
+        <a href="tel:+9102692232501" class="nbl-cta-contact-item"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>+91-02692-232501</a>
+        <a href="mailto:sales@nebulae.io" class="nbl-cta-contact-item"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>sales@nebulae.io</a>
+        <a href="about.html" class="nbl-cta-contact-item"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Anand, Gujarat, India</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
  
@@ -5495,9 +5579,9 @@ img:not([loading=lazy]){opacity:1;}
     if (el && window.bootstrap) bsModal = new bootstrap.Modal(el);
 
     initNav();
-    initScrollSpy();
-    initReveal();
-    initCounters();
+    //initScrollSpy();
+    //initReveal();
+    //initCounters();
 
     if (window.ATL_PRODUCTS) {
       renderGrid();
@@ -5773,7 +5857,7 @@ window.calcROI=function(){
   document.getElementById('roiEnergySaving').textContent=fmt(energySaving);
   document.getElementById('roiTotal').textContent=fmt(total);
 };
-calcROI();
+// calcROI();
 
 /* ══ Newsletter ══ */
 window.subscribeNewsletter=function(){
@@ -5875,13 +5959,35 @@ window.subscribeNewsletter=function(){
 })();
 
 /* ─ Back to top ─ */
-(function(){
-  var btn=document.getElementById('nblBackTop');
-  if(!btn)return;
-  window.addEventListener('scroll',function(){
-    btn.classList.toggle('visible',window.scrollY>500);
-  },{passive:true});
-  btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+(function () {
+  var btn = document.getElementById('nblBackTop');
+  if (!btn) return;
+
+  // Show/hide on scroll
+  window.addEventListener('scroll', function () {
+    btn.classList.toggle('visible', window.scrollY > 500);
+  }, { passive: true });
+
+  // Smooth eased scroll to top
+  btn.addEventListener('click', function () {
+    var startPosition = window.scrollY;
+    var duration = 1200;
+    var startTime = null;
+
+    function easeInOutCubic(t) {
+      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function animate(currentTime) {
+      if (!startTime) startTime = currentTime;
+      var elapsed = currentTime - startTime;
+      var progress = Math.min(elapsed / duration, 1);
+      window.scrollTo(0, startPosition * (1 - easeInOutCubic(progress)));
+      if (progress < 1) requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  });
 })();
 
 /* ─ Custom cursor ─ */
@@ -6059,6 +6165,17 @@ document.querySelectorAll('.tab').forEach(function(tab){
     if(panel) panel.classList.add('active');
   });
 });
+
+const header = document.querySelector('.atl-nav');
+const body = document.querySelector('.nbl-hero');
+ 
+function setOffset() {
+  const headerHeight = header.offsetHeight;
+  body.style.marginTop = headerHeight + 'px';
+}
+ 
+window.addEventListener('load', setOffset);
+window.addEventListener('resize', setOffset);
 
 </script>
 </body>
