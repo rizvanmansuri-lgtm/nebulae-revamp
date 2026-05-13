@@ -597,7 +597,9 @@ img { max-width:100%; padding:5px; border:5px solid #fff; box-sizing:border-box;
 .atl-nav__item--mega.mega-open .atl-mega__col:nth-child(4) {
   opacity: 1; transform: translateY(0); transition-delay: 0.27s;
 }
-
+.atl-nav__item--mega.mega-open .atl-mega__col:nth-child(5) {
+  opacity: 1; transform: translateY(0); transition-delay: 0.27s;
+}
 /* Product cards — same downward stagger */
 .atl-mega__prod-card {
   opacity: 0;
@@ -613,7 +615,9 @@ img { max-width:100%; padding:5px; border:5px solid #fff; box-sizing:border-box;
 .atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(3) {
   opacity: 1; transform: translateY(0); transition-delay: 0.14s;
 }
-
+.atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(4) {
+  opacity: 1; transform: translateY(0); transition-delay: 0.14s;
+}
 /* ═══════════════════════════════════════════════════
    MOBILE NAV — ACCORDION (Services / Products)
 ═══════════════════════════════════════════════════ */
@@ -3431,11 +3435,12 @@ img:not([loading=lazy]){opacity:1;}
   .nbl-exp-row{flex-direction:column;gap:12px;}
   .nbl-exp-card,.nbl-exp-card.nbl-exp-active,
   .nbl-exp-row:has(.nbl-exp-card:hover) .nbl-exp-card.nbl-exp-active,
-  .nbl-exp-row:has(.nbl-exp-card:hover) .nbl-exp-card:hover{flex:none!important;width:100%!important;min-height:160px;box-shadow:none!important;transition:background .35s ease,min-height .4s ease!important;}
+  .nbl-exp-row:has(.nbl-exp-card:hover) .nbl-exp-card:hover{flex-direction: column-reverse;
+    width:100%!important;min-height:300px;box-shadow:none!important;transition:background .35s ease,min-height .4s ease!important;}
   .nbl-exp-card.nbl-exp-active{background:linear-gradient(135deg,#313185,#4f46e5)!important;box-shadow:0 12px 36px rgba(49,49,133,.28)!important;min-height:200px!important;}
   .nbl-exp-row:has(.nbl-exp-card:hover) .nbl-exp-card:hover{background:linear-gradient(135deg,#313185,#4f46e5)!important;min-height:200px!important;}
   .nbl-exp-body{flex:1;width:auto;min-width:0;padding:22px 18px;}
-  .nbl-exp-img{flex:0 0 130px;width:130px;margin:12px 12px 12px 0;}
+  .nbl-exp-img{flex:1;margin:15px ;}
   .nbl-exp-card.nbl-exp-active .nbl-exp-img img,
   .nbl-exp-row:has(.nbl-exp-card:hover) .nbl-exp-card:hover .nbl-exp-img img{opacity:1!important;transform:scale(1)!important;}
   .nbl-exp-card:not(.nbl-exp-active) .nbl-exp-img img{opacity:0!important;transform:scale(1.06)!important;}
@@ -4647,8 +4652,8 @@ img:not([loading=lazy]){opacity:1;}
 
 
  
-
-
+<!-- 
+<iframe src="https://forms2fill.com/vm/index.php?module=ext/public/form&id=23" width="100%" height="800"  frameborder="0" scrolling="auto" onLoad="window.scrollTo(0, 0)"></iframe> -->
  
 
 <!-- ═══ 10. FOOTER (EXISTING — DO NOT MODIFY) ═══ -->
