@@ -618,6 +618,7 @@ img { max-width:100%; padding:5px; border:5px solid #fff; box-sizing:border-box;
 .atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(4) {
   opacity: 1; transform: translateY(0); transition-delay: 0.14s;
 }
+
 /* ═══════════════════════════════════════════════════
    MOBILE NAV — ACCORDION (Services / Products)
 ═══════════════════════════════════════════════════ */
@@ -1278,7 +1279,7 @@ img { max-width:100%; padding:5px; border:5px solid #fff; box-sizing:border-box;
   }
   /* Remove white space above header on mobile */
   body > *:first-child { margin-top: 0 !important; }
-  
+}
 
 /* ── Back to Home button (products & services pages) ── */
 .atl-btn-back-home {
@@ -2171,6 +2172,7 @@ a.atl-btn-back-home-nav:active,
 .atl-nav__item--mega.mega-open .atl-mega__col:nth-child(2) .atl-mega__col-head { transition-delay: 0.26s !important; }
 .atl-nav__item--mega.mega-open .atl-mega__col:nth-child(3) .atl-mega__col-head { transition-delay: 0.36s !important; }
 .atl-nav__item--mega.mega-open .atl-mega__col:nth-child(4) .atl-mega__col-head { transition-delay: 0.30s !important; }
+.atl-nav__item--mega.mega-open .atl-mega__col:nth-child(5) .atl-mega__col-head { transition-delay: 0.30s !important; }
 
 /* Column head items transition duration */
 .atl-mega__col-head {
@@ -2202,6 +2204,8 @@ a.atl-btn-back-home-nav:active,
 .atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(1) { transition-delay: 0.20s !important; }
 .atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(2) { transition-delay: 0.28s !important; }
 .atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(3) { transition-delay: 0.36s !important; }
+
+.atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(4) { transition-delay: 0.36s !important; }
 
 /* Chevron arrow on nav link — fast spin */
 .atl-nav__link--has-mega svg,
@@ -2956,7 +2960,7 @@ nav#atlNav {
 <style>
 html,body{margin:0!important;}
 /* body{padding-top:100px!important;} */
-@media(max-width:767.98px){body{padding-top:64px!important;}}
+/* @media(max-width:767.98px){body{padding-top:64px!important;}} */
 .atl-hero-slide{transition:opacity 1.4s cubic-bezier(0.4,0,0.2,1)!important;}
 @keyframes cuModalPop{from{opacity:0;transform:scale(.88) translateY(18px)}to{opacity:1;transform:scale(1) translateY(0)}}
 .cu-err{font-size:.73rem;color:#B00000;margin-top:.26rem;font-weight:500;}
@@ -3185,7 +3189,7 @@ html,body{margin:0!important;}
   .nbl-newsletter-form{justify-content:center;max-width:100%;}
   .nbl-sample-wrap{flex-direction:column;text-align:center;}
   .nbl-sample-btns{margin:0 auto;}
-  .nbl-sticky-cta .nbl-sticky-btn:nth-child(2){ display: none ; }
+  .nbl-sticky-cta{bottom:1rem;right:1rem;}
 }
 
 </style>
@@ -3449,9 +3453,10 @@ img:not([loading=lazy]){opacity:1;}
 </style>
 </head>
 <body>
-<!-- <a class="nbl-skip-link" href="#nbl-hero">Skip to content</a> -->
+<a class="nbl-skip-link" href="#nbl-hero">Skip to content</a>
 <div id="nblProgressBar" role="progressbar" aria-label="Page scroll progress"></div>
- 
+<!-- <div id="nblCursor" aria-hidden="true"></div>
+<div id="nblCursorRing" aria-hidden="true"></div> -->
 <button id="nblThemeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode"></button>
 <button id="nblBackTop" aria-label="Back to top" title="Back to top">
   <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
@@ -4127,7 +4132,7 @@ img:not([loading=lazy]){opacity:1;}
     </div>
   </div>
 </section>
- 
+
 
 <!-- ═══ PROTOCOL COMPARISON ═══ -->
 <section class="nbl-compare-section" id="compare">
@@ -4188,6 +4193,320 @@ img:not([loading=lazy]){opacity:1;}
     </div>
   </div>
 </section>
+
+
+<!-- ═══ USE-CASE SELECTOR ═══ -->
+<section class="nbl-usecase-section" id="use-cases">
+  <div class="container">
+    <div class="nbl-section-header nbl-section-header--center" data-anim="slide-up">
+      <span class="nbl-section-eyebrow">Find Your Solution</span>
+      <h2 class="nbl-section-title">I Need IoT For…</h2>
+      <p class="nbl-section-desc">Select your industry or use-case and we'll show you exactly which Nebulae products and protocols fit your needs.</p>
+    </div>
+    <div class="nbl-uc-tabs">
+      <button class="nbl-uc-tab active" data-uc="metering"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Smart Metering</button>
+      <button class="nbl-uc-tab" data-uc="city"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Smart City</button>
+      <button class="nbl-uc-tab" data-uc="agri"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22V12M12 12C12 12 7 9 7 4a5 5 0 0110 0c0 5-5 8-5 8z"/></svg>Agriculture</button>
+      <button class="nbl-uc-tab" data-uc="industrial"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>Industrial IoT</button>
+      <button class="nbl-uc-tab" data-uc="home"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Smart Home</button>
+      <button class="nbl-uc-tab" data-uc="health"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Healthcare</button>
+      <button class="nbl-uc-tab" data-uc="tracking"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>Asset Tracking</button>
+    </div>
+
+    <!-- METERING -->
+    <div class="nbl-uc-panel active" id="uc-metering">
+      <div class="nbl-uc-result">
+        <div class="row align-items-start g-4">
+          <div class="col-lg-6">
+            <div class="nbl-uc-result__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <h3 class="nbl-uc-result__title">Smart Metering Solutions</h3>
+            <p class="nbl-uc-result__desc">Deploy AMI and AMR systems for water, electricity, and gas metering across large utility networks. Nebulae's LoRa and Wi-SUN solutions are purpose-built for India's smart meter rollout under RDSS and AMISP programs.</p>
+            <div class="nbl-uc-result__proto"><span class="nbl-uc-proto-tag">LoRa / LoRaWAN</span><span class="nbl-uc-proto-tag">Wi-SUN FAN</span><span class="nbl-uc-proto-tag">Zigbee</span></div>
+          </div>
+          <div class="col-lg-6">
+            <p style="font-size:.78rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.85rem;">Recommended Products</p>
+            <div class="nbl-uc-result__products">
+              <a href="products/lora-module.html" class="nbl-uc-product"><span class="nbl-uc-product__name">LoRa Module</span><span class="nbl-uc-product__sub">Long range endpoint</span></a>
+              <a href="products/wisun-module.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Wi-SUN Module</span><span class="nbl-uc-product__sub">Grid-grade mesh</span></a>
+              <a href="products/lora-concentrator.html" class="nbl-uc-product"><span class="nbl-uc-product__name">LoRa Concentrator</span><span class="nbl-uc-product__sub">Data aggregation</span></a>
+              <a href="products/wisun-gateway.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Wi-SUN Gateway</span><span class="nbl-uc-product__sub">Network head-end</span></a>
+              <a href="solutions/smart-electric-meter.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Electric Meter Sol.</span><span class="nbl-uc-product__sub">End-to-end system</span></a>
+              <a href="solutions/smart-water-meter.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Water Meter Sol.</span><span class="nbl-uc-product__sub">AMR ready</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SMART CITY -->
+    <div class="nbl-uc-panel" id="uc-city">
+      <div class="nbl-uc-result">
+        <div class="row align-items-start g-4">
+          <div class="col-lg-6">
+            <div class="nbl-uc-result__icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+            <h3 class="nbl-uc-result__title">Smart City Solutions</h3>
+            <p class="nbl-uc-result__desc">Power intelligent street lighting, parking, waste management, and environmental monitoring. Connect thousands of city nodes on a single LoRa or Wi-SUN network with centralized cloud management.</p>
+            <div class="nbl-uc-result__proto"><span class="nbl-uc-proto-tag">LoRa / LoRaWAN</span><span class="nbl-uc-proto-tag">Wi-SUN</span><span class="nbl-uc-proto-tag">GSM</span></div>
+          </div>
+          <div class="col-lg-6">
+            <p style="font-size:.78rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.85rem;">Recommended Products</p>
+            <div class="nbl-uc-result__products">
+              <a href="products/lora-gateway.html" class="nbl-uc-product"><span class="nbl-uc-product__name">LoRa Gateway</span><span class="nbl-uc-product__sub">City-wide coverage</span></a>
+              <a href="products/lora-node.html" class="nbl-uc-product"><span class="nbl-uc-product__name">LoRa Node</span><span class="nbl-uc-product__sub">Street sensor</span></a>
+              <a href="solutions/smart-street-light.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Street Light Sol.</span><span class="nbl-uc-product__sub">SCADA ready</span></a>
+              <a href="solutions/transformer-monitoring.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Transformer Mon.</span><span class="nbl-uc-product__sub">Grid protection</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AGRICULTURE -->
+    <div class="nbl-uc-panel" id="uc-agri">
+      <div class="nbl-uc-result">
+        <div class="row align-items-start g-4">
+          <div class="col-lg-6">
+            <div class="nbl-uc-result__icon" style="background:rgba(16,185,129,.1);color:#059669;"><svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22V12M12 12C12 12 7 9 7 4a5 5 0 0110 0c0 5-5 8-5 8z"/></svg></div>
+            <h3 class="nbl-uc-result__title">Smart Agriculture</h3>
+            <p class="nbl-uc-result__desc">Deploy precision soil monitoring, automated irrigation, greenhouse climate control, and livestock tracking across large farms using battery-powered LoRa sensors with years of battery life.</p>
+            <div class="nbl-uc-result__proto"><span class="nbl-uc-proto-tag">LoRa / LoRaWAN</span><span class="nbl-uc-proto-tag">Zigbee</span><span class="nbl-uc-proto-tag">GSM/NB-IoT</span></div>
+          </div>
+          <div class="col-lg-6">
+            <p style="font-size:.78rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.85rem;">Recommended Products</p>
+            <div class="nbl-uc-result__products">
+              <a href="products/lora-node.html" class="nbl-uc-product"><span class="nbl-uc-product__name">LoRa Node</span><span class="nbl-uc-product__sub">Soil / field sensor</span></a>
+              <a href="products/lora-gateway.html" class="nbl-uc-product"><span class="nbl-uc-product__name">LoRa Gateway</span><span class="nbl-uc-product__sub">Farm-wide network</span></a>
+              <a href="products/lora-evk.html" class="nbl-uc-product"><span class="nbl-uc-product__name">LoRa EVK</span><span class="nbl-uc-product__sub">Fast prototyping</span></a>
+              <a href="products/gsm-module.html" class="nbl-uc-product"><span class="nbl-uc-product__name">GSM Module</span><span class="nbl-uc-product__sub">Remote uplink</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INDUSTRIAL -->
+    <div class="nbl-uc-panel" id="uc-industrial">
+      <div class="nbl-uc-result">
+        <div class="row align-items-start g-4">
+          <div class="col-lg-6">
+            <div class="nbl-uc-result__icon" style="background:rgba(234,88,12,.1);color:#ea580c;"><svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
+            <h3 class="nbl-uc-result__title">Industrial IoT</h3>
+            <p class="nbl-uc-result__desc">Monitor equipment health, automate safety alerts, and track assets across factories and warehouses with robust industrial-grade modules designed for harsh environments.</p>
+            <div class="nbl-uc-result__proto"><span class="nbl-uc-proto-tag">Wi-SUN</span><span class="nbl-uc-proto-tag">Zigbee</span><span class="nbl-uc-proto-tag">LoRa</span><span class="nbl-uc-proto-tag">Wi-Fi</span></div>
+          </div>
+          <div class="col-lg-6">
+            <p style="font-size:.78rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.85rem;">Recommended Products</p>
+            <div class="nbl-uc-result__products">
+              <a href="products/wisun-module.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Wi-SUN Module</span><span class="nbl-uc-product__sub">Factory mesh</span></a>
+              <a href="products/zigbee-module.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Zigbee Module</span><span class="nbl-uc-product__sub">Sensor mesh</span></a>
+              <a href="products/wifi-gateway.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Wi-Fi Gateway</span><span class="nbl-uc-product__sub">Cloud bridge</span></a>
+              <a href="products/lora-concentrator.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Concentrator</span><span class="nbl-uc-product__sub">Data aggregation</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SMART HOME -->
+    <div class="nbl-uc-panel" id="uc-home">
+      <div class="nbl-uc-result">
+        <div class="row align-items-start g-4">
+          <div class="col-lg-6">
+            <div class="nbl-uc-result__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <h3 class="nbl-uc-result__title">Smart Home &amp; Building</h3>
+            <p class="nbl-uc-result__desc">Enable intelligent lighting, climate control, security, and energy management in homes and commercial buildings using Zigbee or BLE mesh networks with Tuya cloud integration.</p>
+            <div class="nbl-uc-result__proto"><span class="nbl-uc-proto-tag">Zigbee</span><span class="nbl-uc-proto-tag">BLE</span><span class="nbl-uc-proto-tag">Wi-Fi</span></div>
+          </div>
+          <div class="col-lg-6">
+            <p style="font-size:.78rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.85rem;">Recommended Products</p>
+            <div class="nbl-uc-result__products">
+              <a href="products/zigbee-module.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Zigbee Module</span><span class="nbl-uc-product__sub">Home mesh</span></a>
+              <a href="products/ble-module.html" class="nbl-uc-product"><span class="nbl-uc-product__name">BLE Module</span><span class="nbl-uc-product__sub">Proximity &amp; control</span></a>
+              <a href="products/wifi-module.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Wi-Fi Module</span><span class="nbl-uc-product__sub">Cloud bridge</span></a>
+              <a href="products/zigbee-gateway.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Zigbee Gateway</span><span class="nbl-uc-product__sub">Hub controller</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEALTHCARE -->
+    <div class="nbl-uc-panel" id="uc-health">
+      <div class="nbl-uc-result">
+        <div class="row align-items-start g-4">
+          <div class="col-lg-6">
+            <div class="nbl-uc-result__icon" style="background:rgba(220,38,38,.1);color:#dc2626;"><svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <h3 class="nbl-uc-result__title">Healthcare IoT</h3>
+            <p class="nbl-uc-result__desc">Connect patient monitoring, emergency SOS, medication dispensing, and staff tracking in hospitals and care facilities using ultra-low power BLE and Zigbee modules.</p>
+            <div class="nbl-uc-result__proto"><span class="nbl-uc-proto-tag">BLE 5.x</span><span class="nbl-uc-proto-tag">Zigbee</span><span class="nbl-uc-proto-tag">Wi-Fi</span></div>
+          </div>
+          <div class="col-lg-6">
+            <p style="font-size:.78rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.85rem;">Recommended Products</p>
+            <div class="nbl-uc-result__products">
+              <a href="products/ble-module.html" class="nbl-uc-product"><span class="nbl-uc-product__name">BLE Module</span><span class="nbl-uc-product__sub">Wearable device</span></a>
+              <a href="products/zigbee-module.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Zigbee Module</span><span class="nbl-uc-product__sub">Room mesh</span></a>
+              <a href="products/wifi-gateway.html" class="nbl-uc-product"><span class="nbl-uc-product__name">Wi-Fi Gateway</span><span class="nbl-uc-product__sub">Hospital uplink</span></a>
+              <a href="products/ble-evk.html" class="nbl-uc-product"><span class="nbl-uc-product__name">BLE EVK</span><span class="nbl-uc-product__sub">Prototype kit</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRACKING -->
+    <div class="nbl-uc-panel" id="uc-tracking">
+      <div class="nbl-uc-result">
+        <div class="row align-items-start g-4">
+          <div class="col-lg-6">
+            <div class="nbl-uc-result__icon" style="background:rgba(124,58,237,.1);color:#7c3aed;"><svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <h3 class="nbl-uc-result__title">Asset Tracking &amp; Logistics</h3>
+            <p class="nbl-uc-result__desc">Track vehicles, equipment, and shipments with centimetre-to-kilometre precision using LoRa for wide-area coverage or BLE for indoor positioning in warehouses and logistics hubs.</p>
+            <div class="nbl-uc-result__proto"><span class="nbl-uc-proto-tag">LoRa / LoRaWAN</span><span class="nbl-uc-proto-tag">BLE</span><span class="nbl-uc-proto-tag">GSM/LTE</span></div>
+          </div>
+          <div class="col-lg-6">
+            <p style="font-size:.78rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.85rem;">Recommended Products</p>
+            <div class="nbl-uc-result__products">
+              <a href="products/lora-node.html" class="nbl-uc-product"><span class="nbl-uc-product__name">LoRa Node</span><span class="nbl-uc-product__sub">Wide-area tracker</span></a>
+              <a href="products/ble-module.html" class="nbl-uc-product"><span class="nbl-uc-product__name">BLE Module</span><span class="nbl-uc-product__sub">Indoor beacon</span></a>
+              <a href="products/gsm-module.html" class="nbl-uc-product"><span class="nbl-uc-product__name">GSM Module</span><span class="nbl-uc-product__sub">Vehicle tracker</span></a>
+              <a href="products/lora-gateway.html" class="nbl-uc-product"><span class="nbl-uc-product__name">LoRa Gateway</span><span class="nbl-uc-product__sub">Depot network</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ INDUSTRIES QUICK LINKS ═══ -->
+<section class="nbl-industries-section" id="industries">
+  <div class="container">
+    <div class="nbl-section-header nbl-section-header--center nbl-dark" data-anim="slide-up">
+      <span class="nbl-section-eyebrow">Industries We Serve</span>
+      <h2 class="nbl-section-title">IoT Solutions Across Every Sector</h2>
+      <p class="nbl-section-desc">Nebulae's wireless technology powers innovation across 20+ industry verticals — from smart cities to precision agriculture.</p>
+    </div>
+    <div class="row g-3">
+      <div class="col-6 col-md-4 col-lg-3" data-anim="slide-up" data-anim-delay="1"><a href="industries/smart-city-solutions.html" class="nbl-ind-card" style="--accent:#06b6d4"><div class="nbl-ind-card__icon" style="background:rgba(6,182,212,.2);color:#06b6d4;"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><h4 class="nbl-ind-card__title">Smart City</h4><p class="nbl-ind-card__desc">Lighting, parking, waste, environment</p><span class="nbl-ind-card__arrow">Explore →</span></a></div>
+      <div class="col-6 col-md-4 col-lg-3" data-anim="slide-up" data-anim-delay="2"><a href="industries/iot-energy-utilities.html" class="nbl-ind-card"><div class="nbl-ind-card__icon" style="background:rgba(251,191,36,.2);color:#fbbf24;"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h4 class="nbl-ind-card__title">Energy &amp; Utilities</h4><p class="nbl-ind-card__desc">Smart metering, grid automation</p><span class="nbl-ind-card__arrow">Explore →</span></a></div>
+      <div class="col-6 col-md-4 col-lg-3" data-anim="slide-up" data-anim-delay="3"><a href="industries/smart-agriculture.html" class="nbl-ind-card"><div class="nbl-ind-card__icon" style="background:rgba(16,185,129,.2);color:#10b981;"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22V12M12 12C12 12 7 9 7 4a5 5 0 0110 0c0 5-5 8-5 8z"/></svg></div><h4 class="nbl-ind-card__title">Agriculture</h4><p class="nbl-ind-card__desc">Precision farming, irrigation, livestock</p><span class="nbl-ind-card__arrow">Explore →</span></a></div>
+      <div class="col-6 col-md-4 col-lg-3" data-anim="slide-up" data-anim-delay="4"><a href="industries/industrial-iot.html" class="nbl-ind-card"><div class="nbl-ind-card__icon" style="background:rgba(234,88,12,.2);color:#ea580c;"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div><h4 class="nbl-ind-card__title">Industrial IoT</h4><p class="nbl-ind-card__desc">Factory monitoring, automation</p><span class="nbl-ind-card__arrow">Explore →</span></a></div>
+      <div class="col-6 col-md-4 col-lg-3" data-anim="slide-up" data-anim-delay="1"><a href="industries/iot-healthcare.html" class="nbl-ind-card"><div class="nbl-ind-card__icon" style="background:rgba(220,38,38,.2);color:#f87171;"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h4 class="nbl-ind-card__title">Healthcare</h4><p class="nbl-ind-card__desc">Patient monitoring, SOS, tracking</p><span class="nbl-ind-card__arrow">Explore →</span></a></div>
+      <div class="col-6 col-md-4 col-lg-3" data-anim="slide-up" data-anim-delay="2"><a href="industries/home-security-automation.html" class="nbl-ind-card"><div class="nbl-ind-card__icon" style="background:rgba(79,70,229,.2);color:#818cf8;"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h4 class="nbl-ind-card__title">Smart Home</h4><p class="nbl-ind-card__desc">Automation, security, BMS</p><span class="nbl-ind-card__arrow">Explore →</span></a></div>
+      <div class="col-6 col-md-4 col-lg-3" data-anim="slide-up" data-anim-delay="3"><a href="industries/iot-logistics.html" class="nbl-ind-card"><div class="nbl-ind-card__icon" style="background:rgba(6,182,212,.2);color:#2dd4bf;"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div><h4 class="nbl-ind-card__title">Logistics</h4><p class="nbl-ind-card__desc">Fleet, asset tracking, cold chain</p><span class="nbl-ind-card__arrow">Explore →</span></a></div>
+      <div class="col-6 col-md-4 col-lg-3" data-anim="slide-up" data-anim-delay="4"><a href="industries/building-management-system.html" class="nbl-ind-card"><div class="nbl-ind-card__icon" style="background:rgba(124,58,237,.2);color:#c4b5fd;"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div><h4 class="nbl-ind-card__title">Building Mgmt</h4><p class="nbl-ind-card__desc">HVAC, access, energy, security</p><span class="nbl-ind-card__arrow">Explore →</span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 5. UPDATES & LATEST HAPPENINGS (NEW — REQUIRED) ═══ -->
+<section class="nbl-updates-section" id="updates">
+  <div class="container">
+    <div class="nbl-section-header nbl-section-header--center" data-anim="slide-up">
+      <span class="nbl-section-eyebrow">Updates &amp; Latest Happenings</span>
+      <h2 class="nbl-section-title">What's New at Nebulae</h2>
+      <p class="nbl-section-desc">Stay current with our latest product launches, partnership announcements, and technology milestones.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-anim="slide-up" data-anim-delay="1"><div class="nbl-news-card h-100"><div class="nbl-news-card__header"><span class="nbl-news-card__cat nbl-news-card__cat--new">New Launch</span><span class="nbl-news-card__date">May 2025</span></div><div class="nbl-news-card__body"><h3 class="nbl-news-card__title">Wi-SUN FAN 1.1 Module — Gen-3 Released</h3><p class="nbl-news-card__desc">Our next-generation Wi-SUN Field Area Network module delivers 40% better range and enhanced security with WPA3, enabling India's smart metering rollout at scale.</p><a href="news.html" class="nbl-news-card__link">Read More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a></div></div></div>
+      <div class="col-md-4" data-anim="slide-up" data-anim-delay="2"><div class="nbl-news-card h-100"><div class="nbl-news-card__header"><span class="nbl-news-card__cat nbl-news-card__cat--partner">Partnership</span><span class="nbl-news-card__date">Apr 2025</span></div><div class="nbl-news-card__body"><h3 class="nbl-news-card__title">Nebulae Joins Tuya IoT Developer Partner Program</h3><p class="nbl-news-card__desc">Officially authorized as a Tuya solution partner, enabling clients to leverage Tuya's cloud platform with Nebulae's hardware across 20+ business scenarios.</p><a href="news.html" class="nbl-news-card__link">Read More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a></div></div></div>
+      <div class="col-md-4" data-anim="slide-up" data-anim-delay="3"><div class="nbl-news-card h-100"><div class="nbl-news-card__header"><span class="nbl-news-card__cat nbl-news-card__cat--launch">Product Update</span><span class="nbl-news-card__date">Mar 2025</span></div><div class="nbl-news-card__body"><h3 class="nbl-news-card__title">LoRaWAN Multi-Channel Concentrator Now Available</h3><p class="nbl-news-card__desc">8-channel industrial LoRaWAN concentrator with dual-band support, built-in GPS, and cellular backhaul — shipping across India with full SDK support.</p><a href="news.html" class="nbl-news-card__link">Read More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a></div></div></div>
+    </div>
+    <div class="nbl-updates-cta" data-anim="slide-up"><a href="news.html">View All News &amp; Updates →</a></div>
+  </div>
+</section>
+
+
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="nbl-testi-section" id="testimonials">
+  <div class="container">
+    <div class="nbl-section-header nbl-section-header--center" data-anim="slide-up">
+      <span class="nbl-section-eyebrow">Client Testimonials</span>
+      <h2 class="nbl-section-title">Trusted by Engineers Across India</h2>
+    </div>
+  </div>
+  <div class="nbl-testi-track-outer">
+    <div class="nbl-testi-track" id="testiTrack">
+      <!-- Set 1 -->
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Nebulae's LoRa modules integrated seamlessly into our smart water metering project. The technical support was exceptional — our team had the entire network live in under 3 weeks."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#4f46e5,#06b6d4);">RS</div><div><div class="nbl-testi-name">Rajesh Sharma</div><div class="nbl-testi-role">CTO, SmartGrid Solutions Pvt Ltd</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"The Wi-SUN modules performed flawlessly in our AMI deployment across 50,000 meters. Nebulae delivered on time and the hardware quality exceeded our specifications."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#0d9488,#2dd4bf);">AP</div><div><div class="nbl-testi-name">Anita Patel</div><div class="nbl-testi-role">Project Manager, Utility Corp</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"We evaluated 5 IoT module vendors. Nebulae won on documentation quality, certification coverage, and post-sales engineering support. Our prototype was done in days."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#ea580c,#fb923c);">MK</div><div><div class="nbl-testi-name">Mohit Kumar</div><div class="nbl-testi-role">Hardware Lead, AgriTech Startup</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Nebulae's Zigbee modules power our building automation across 200+ commercial properties. The mesh reliability and 5-year battery performance have been outstanding."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#7c3aed,#c4b5fd);">SG</div><div><div class="nbl-testi-name">Sneha Gupta</div><div class="nbl-testi-role">CEO, BuildSmart Technologies</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"From EVK to production in 4 months — Nebulae's evaluation kit got our team up to speed instantly. The LoRaWAN gateway handles 10,000 endpoints without a hiccup."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#dc2626,#f87171);">VR</div><div><div class="nbl-testi-name">Vikram Rao</div><div class="nbl-testi-role">IoT Architect, Industrial Systems</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Excellent product range and the team really understands India's regulatory landscape. WPC-approved modules saved us months of certification hassle."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#0891b2,#06b6d4);">NK</div><div><div class="nbl-testi-name">Nikhil Krishnan</div><div class="nbl-testi-role">R&amp;D Director, Defence Electronics</div></div></div></div>
+      <!-- Duplicate set for seamless loop -->
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Nebulae's LoRa modules integrated seamlessly into our smart water metering project. The technical support was exceptional — our team had the entire network live in under 3 weeks."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#4f46e5,#06b6d4);">RS</div><div><div class="nbl-testi-name">Rajesh Sharma</div><div class="nbl-testi-role">CTO, SmartGrid Solutions Pvt Ltd</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"The Wi-SUN modules performed flawlessly in our AMI deployment across 50,000 meters. Nebulae delivered on time and the hardware quality exceeded our specifications."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#0d9488,#2dd4bf);">AP</div><div><div class="nbl-testi-name">Anita Patel</div><div class="nbl-testi-role">Project Manager, Utility Corp</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"We evaluated 5 IoT module vendors. Nebulae won on documentation quality, certification coverage, and post-sales engineering support. Our prototype was done in days."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#ea580c,#fb923c);">MK</div><div><div class="nbl-testi-name">Mohit Kumar</div><div class="nbl-testi-role">Hardware Lead, AgriTech Startup</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Nebulae's Zigbee modules power our building automation across 200+ commercial properties. The mesh reliability and 5-year battery performance have been outstanding."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#7c3aed,#c4b5fd);">SG</div><div><div class="nbl-testi-name">Sneha Gupta</div><div class="nbl-testi-role">CEO, BuildSmart Technologies</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"From EVK to production in 4 months — Nebulae's evaluation kit got our team up to speed instantly. The LoRaWAN gateway handles 10,000 endpoints without a hiccup."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#dc2626,#f87171);">VR</div><div><div class="nbl-testi-name">Vikram Rao</div><div class="nbl-testi-role">IoT Architect, Industrial Systems</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Excellent product range and the team really understands India's regulatory landscape. WPC-approved modules saved us months of certification hassle."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#0891b2,#06b6d4);">NK</div><div><div class="nbl-testi-name">Nikhil Krishnan</div><div class="nbl-testi-role">R&amp;D Director, Defence Electronics</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ CASE STUDY HIGHLIGHTS ═══ -->
+<section class="nbl-cases-section" id="case-studies">
+  <div class="container">
+    <div class="nbl-section-header nbl-section-header--center" data-anim="slide-up">
+      <span class="nbl-section-eyebrow">Case Studies</span>
+      <h2 class="nbl-section-title">Real Deployments. Proven Results.</h2>
+      <p class="nbl-section-desc">See how Nebulae's IoT solutions have transformed operations for utility companies, municipalities, and enterprises across India.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="1">
+        <div class="nbl-case-card">
+          <div class="nbl-case-card__header">
+            <span class="nbl-case-card__tag" style="background:rgba(37,99,235,.1);color:#2563eb;">Smart Metering</span>
+            <h3 class="nbl-case-card__title">LoRaWAN AMI for Municipal Water Utility</h3>
+            <p class="nbl-case-card__desc">Deployed 12,000 LoRa-enabled smart water meters across a mid-sized municipality, replacing manual meter reading and enabling real-time leak detection.</p>
+          </div>
+          <div class="nbl-case-metrics">
+            <div class="nbl-case-metric"><span class="nbl-case-metric__val">12K</span><span class="nbl-case-metric__label">Meters</span></div>
+            <div class="nbl-case-metric"><span class="nbl-case-metric__val">35%</span><span class="nbl-case-metric__label">Water Saved</span></div>
+            <div class="nbl-case-metric"><span class="nbl-case-metric__val">8 wk</span><span class="nbl-case-metric__label">Deployment</span></div>
+          </div>
+          <div class="nbl-case-card__footer"><a href="contact.html" class="nbl-case-card__link">Read Case Study <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="2">
+        <div class="nbl-case-card">
+          <div class="nbl-case-card__header">
+            <span class="nbl-case-card__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Smart City</span>
+            <h3 class="nbl-case-card__title">Wi-SUN Smart Street Lighting Rollout</h3>
+            <p class="nbl-case-card__desc">Automated 8,000 street lights across 3 cities using Wi-SUN mesh modules with centralized SCADA control, dimming, and fault alerting.</p>
+          </div>
+          <div class="nbl-case-metrics">
+            <div class="nbl-case-metric"><span class="nbl-case-metric__val">8K</span><span class="nbl-case-metric__label">Streetlights</span></div>
+            <div class="nbl-case-metric"><span class="nbl-case-metric__val">42%</span><span class="nbl-case-metric__label">Energy Saved</span></div>
+            <div class="nbl-case-metric"><span class="nbl-case-metric__val">3</span><span class="nbl-case-metric__label">Cities</span></div>
+          </div>
+          <div class="nbl-case-card__footer"><a href="contact.html" class="nbl-case-card__link">Read Case Study <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="3">
+        <div class="nbl-case-card">
+          <div class="nbl-case-card__header">
+            <span class="nbl-case-card__tag" style="background:rgba(16,185,129,.1);color:#059669;">Agriculture</span>
+            <h3 class="nbl-case-card__title">Precision Irrigation for 5,000-Acre Farm</h3>
+            <p class="nbl-case-card__desc">Installed LoRa soil moisture sensors and automated drip irrigation controllers across large farms, driven by real-time data and weather API integration.</p>
+          </div>
+          <div class="nbl-case-metrics">
+            <div class="nbl-case-metric"><span class="nbl-case-metric__val">5K</span><span class="nbl-case-metric__label">Acres</span></div>
+            <div class="nbl-case-metric"><span class="nbl-case-metric__val">28%</span><span class="nbl-case-metric__label">Yield Increase</span></div>
+            <div class="nbl-case-metric"><span class="nbl-case-metric__val">40%</span><span class="nbl-case-metric__label">Water Reduced</span></div>
+          </div>
+          <div class="nbl-case-card__footer"><a href="contact.html" class="nbl-case-card__link">Read Case Study <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
 
 <!-- ═══ 7. NEBULAE SOLUTIONS (formerly Tuya) ═══ -->
 <section style="background:linear-gradient(180deg,#f5f7ff 0%,#fff 100%);padding:0 0 0;">
@@ -4615,6 +4934,9 @@ img:not([loading=lazy]){opacity:1;}
   </div>
 </section>
 
+
+
+<!-- EXPERTISE ACCORDION SECTION -->
 <section class="nbl-exp-section" id="expertise">
   <div class="container">
     <div style="text-align:center;position:relative;">
@@ -4716,9 +5038,108 @@ img:not([loading=lazy]){opacity:1;}
   </div>
 </section>
 
- 
 
- 
+<!-- ═══ 8. WHY CHOOSE NEBULAE (NEW) ═══ -->
+<section class="nbl-why-section" id="why-nebulae">
+  <div class="container">
+    <div class="nbl-section-header nbl-section-header--center nbl-dark" data-anim="slide-up">
+      <span class="nbl-section-eyebrow">Why Nebulae</span>
+      <h2 class="nbl-section-title">Built Different. Proven in the Field.</h2>
+      <p class="nbl-section-desc">We don't just sell wireless modules — we deliver complete IoT ecosystems backed by deep engineering expertise and end-to-end support.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="1"><div class="nbl-why-card"><span class="nbl-why-card__num">01</span><div class="nbl-why-card__icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 class="nbl-why-card__title">Certified &amp; Compliant</h3><p class="nbl-why-card__desc">All products carry relevant regulatory certifications — WPC, BIS, CE, FCC — ensuring seamless deployment across India and global markets.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="2"><div class="nbl-why-card"><span class="nbl-why-card__num">02</span><div class="nbl-why-card__icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div><h3 class="nbl-why-card__title">End-to-End Engineering</h3><p class="nbl-why-card__desc">From PCB design and embedded firmware to cloud integration and mobile apps — complete IoT product development under one roof.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="3"><div class="nbl-why-card"><span class="nbl-why-card__num">03</span><div class="nbl-why-card__icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h.01M10 11h.01"/><circle cx="17" cy="11" r="1" fill="currentColor"/></svg></div><h3 class="nbl-why-card__title">Multi-Protocol Portfolio</h3><p class="nbl-why-card__desc">LoRa, Wi-SUN, Zigbee, Wi-Fi, GSM, and BLE — six protocols, one trusted supplier, eliminating vendor fragmentation across your IoT stack.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="1"><div class="nbl-why-card"><span class="nbl-why-card__num">04</span><div class="nbl-why-card__icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3 class="nbl-why-card__title">Rapid Deployment Ready</h3><p class="nbl-why-card__desc">Evaluation kits, reference designs, and pre-integrated cloud connectors cut time-to-market from months to weeks for your IoT project.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="2"><div class="nbl-why-card"><span class="nbl-why-card__num">05</span><div class="nbl-why-card__icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 class="nbl-why-card__title">Dedicated Support Team</h3><p class="nbl-why-card__desc">Our engineers work alongside yours — from architecture review and protocol selection through field commissioning and ongoing optimization.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-anim="slide-up" data-anim-delay="3"><div class="nbl-why-card"><span class="nbl-why-card__num">06</span><div class="nbl-why-card__icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><h3 class="nbl-why-card__title">Made in India. Built for the World.</h3><p class="nbl-why-card__desc">Proudly designed and manufactured in India with global-standard quality, supporting India's smart city and Digital India initiatives.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ ROI CALCULATOR ═══ -->
+<section class="nbl-roi-section" id="roi-calculator">
+  <div class="container">
+    <div class="nbl-section-header nbl-section-header--center" data-anim="slide-up">
+      <span class="nbl-section-eyebrow">ROI Calculator</span>
+      <h2 class="nbl-section-title">Estimate Your IoT Savings</h2>
+      <p class="nbl-section-desc">See how much Nebulae's smart metering and IoT solutions can save your organisation annually.</p>
+    </div>
+    <div class="nbl-roi-wrap" data-anim="slide-up">
+      <div class="row g-0">
+        <div class="col-lg-6">
+          <div class="nbl-roi-inputs">
+            <h4 style="font-family:'Outfit',sans-serif;font-weight:800;color:#111827;margin-bottom:1.5rem;font-size:1.1rem;">Your Project Parameters</h4>
+            <label class="nbl-roi-label">Number of IoT Endpoints / Meters</label>
+            <input type="number" class="nbl-roi-input" id="roiEndpoints" value="1000" min="100" max="1000000" oninput="calcROI()">
+            <label class="nbl-roi-label">Current Manual Operation Cost (₹ per endpoint/year)</label>
+            <input type="number" class="nbl-roi-input" id="roiManualCost" value="500" min="100" oninput="calcROI()">
+            <label class="nbl-roi-label">Energy / Resource Wastage Reduction (%)</label>
+            <input type="range" class="nbl-roi-range" id="roiWastage" min="10" max="60" value="30" oninput="calcROI();document.getElementById('roiWastageVal').textContent=this.value+'%'">
+            <div style="display:flex;justify-content:space-between;margin-top:-.75rem;margin-bottom:1.25rem;font-size:.78rem;color:#9ca3af;"><span>10%</span><span id="roiWastageVal" style="font-weight:700;color:#4f46e5;">30%</span><span>60%</span></div>
+            <label class="nbl-roi-label">Annual Energy / Resource Spend (₹ Lakhs)</label>
+            <input type="number" class="nbl-roi-input" id="roiEnergySpend" value="50" min="1" oninput="calcROI()">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="nbl-roi-results">
+            <h4 style="font-family:'Outfit',sans-serif;font-weight:800;color:#fff;margin-bottom:1.5rem;font-size:1.1rem;">Your Estimated Annual Savings</h4>
+            <div class="nbl-roi-result-card">
+              <div class="nbl-roi-result-label">Operations Cost Saved</div>
+              <div class="nbl-roi-result-val" id="roiOpsSaving">₹4,50,000</div>
+              <div class="nbl-roi-result-sub">vs manual operations annually</div>
+            </div>
+            <div class="nbl-roi-result-card">
+              <div class="nbl-roi-result-label">Resource / Energy Savings</div>
+              <div class="nbl-roi-result-val" id="roiEnergySaving">₹15,00,000</div>
+              <div class="nbl-roi-result-sub">through IoT-driven optimisation</div>
+            </div>
+            <div class="nbl-roi-result-card" style="border-color:rgba(6,182,212,.3);">
+              <div class="nbl-roi-result-label">Total Estimated Annual Saving</div>
+              <div class="nbl-roi-result-val" id="roiTotal">₹19,50,000</div>
+              <div class="nbl-roi-result-sub">Typical payback period: 12–18 months</div>
+            </div>
+            <p class="nbl-roi-disclaimer">* Estimates based on industry averages. Actual savings vary by project scale and implementation. Contact us for a detailed ROI analysis.</p>
+            <a href="contact.html" style="display:inline-flex;align-items:center;gap:.45rem;margin-top:1rem;padding:.7rem 1.5rem;border-radius:10px;background:linear-gradient(135deg,#06b6d4,#4f46e5);color:#fff;font-size:.85rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;transition:transform .25s;">Get Detailed Analysis →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ PRESS MENTIONS & AWARDS ═══ -->
+<section class="nbl-press-section" id="press">
+  <div class="container">
+    <div class="nbl-section-header nbl-section-header--center" data-anim="slide-up">
+      <span class="nbl-section-eyebrow">Recognition</span>
+      <h2 class="nbl-section-title">Press &amp; Awards</h2>
+      <p class="nbl-section-desc">Nebulae's innovation in IoT connectivity has been recognised by leading industry bodies and media.</p>
+    </div>
+    <p style="font-size:.78rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.12em;text-align:center;margin-bottom:1rem;">As Featured In</p>
+    <div class="nbl-press-grid" data-anim="slide-up">
+      <div class="nbl-press-card"><span>Economic Times</span></div>
+      <div class="nbl-press-card"><span>YourStory</span></div>
+      <div class="nbl-press-card"><span>Electronics For You</span></div>
+      <div class="nbl-press-card"><span>Digit Business</span></div>
+      <div class="nbl-press-card"><span>IoT Analytics</span></div>
+      <div class="nbl-press-card"><span>StartupIndia</span></div>
+    </div>
+    <p style="font-size:.78rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.12em;text-align:center;margin-bottom:1rem;margin-top:2rem;">Awards &amp; Recognition</p>
+    <div class="nbl-award-strip" data-anim="slide-up">
+      <div class="nbl-award-item"><div class="nbl-award-icon">🏆</div><span class="nbl-award-text">Best IoT Hardware Company 2024</span></div>
+      <div class="nbl-award-item"><div class="nbl-award-icon">🥇</div><span class="nbl-award-text">MSME Innovation Award</span></div>
+      <div class="nbl-award-item"><div class="nbl-award-icon">⭐</div><span class="nbl-award-text">Digital India Champion</span></div>
+      <div class="nbl-award-item"><div class="nbl-award-icon">🏅</div><span class="nbl-award-text">LoRa Alliance Partner 2023</span></div>
+      <div class="nbl-award-item"><div class="nbl-award-icon">🎖️</div><span class="nbl-award-text">Top Smart City Vendor</span></div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ═══ FAQ ACCORDION ═══ -->
 <section class="nbl-faq-section" id="faq">
   <div class="container">
@@ -4786,18 +5207,44 @@ img:not([loading=lazy]){opacity:1;}
 
 
 
- 
+<!-- ═══ NEWSLETTER SIGNUP ═══ -->
+<section class="nbl-newsletter-section">
+  <div class="container">
+    <div class="nbl-newsletter-inner">
+      <div class="nbl-newsletter-text">
+        <h3>Stay Ahead in IoT</h3>
+        <p>Product launches, tech insights, and smart connectivity news — delivered monthly.</p>
+      </div>
+      <div class="nbl-newsletter-form">
+        <input type="email" class="nbl-newsletter-input" placeholder="Your work email address" id="newsletterEmail">
+        <button class="nbl-newsletter-btn" onclick="subscribeNewsletter()">Subscribe →</button>
+      </div>
+    </div>
+  </div>
+</section>
 
- 
 
- 
-
-
-
- 
-<!-- 
-<iframe src="https://forms2fill.com/vm/index.php?module=ext/public/form&id=23" width="100%" height="800"  frameborder="0" scrolling="auto" onLoad="window.scrollTo(0, 0)"></iframe> -->
- 
+<!-- ═══ SAMPLE / FREE EVK REQUEST ═══ -->
+<section class="nbl-sample-section">
+  <div class="container">
+    <div class="nbl-sample-wrap">
+      <div class="nbl-sample-icon">
+        <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      </div>
+      <div class="nbl-sample-text">
+        <h3>Request a Free Sample or Evaluation Kit</h3>
+        <p>Try before you buy. Qualified engineers and enterprises can request sample modules or full EVKs for evaluation — no commitment required.</p>
+      </div>
+      <div class="nbl-sample-btns">
+        <a href="contact.html" class="nbl-sample-btn nbl-sample-btn--primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          Request Free Sample
+        </a>
+        <a href="products/lora-evk.html" class="nbl-sample-btn nbl-sample-btn--outline">Browse EVKs →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ═══ 10. FOOTER (EXISTING — DO NOT MODIFY) ═══ -->
 <footer class="atl-footer">
@@ -5638,9 +6085,9 @@ img:not([loading=lazy]){opacity:1;}
     if (el && window.bootstrap) bsModal = new bootstrap.Modal(el);
 
     initNav();
-    //initScrollSpy();
-    //initReveal();
-    //initCounters();
+    initScrollSpy();
+    initReveal();
+    initCounters();
 
     if (window.ATL_PRODUCTS) {
       renderGrid();
@@ -5916,7 +6363,7 @@ window.calcROI=function(){
   document.getElementById('roiEnergySaving').textContent=fmt(energySaving);
   document.getElementById('roiTotal').textContent=fmt(total);
 };
-// calcROI();
+calcROI();
 
 /* ══ Newsletter ══ */
 window.subscribeNewsletter=function(){
@@ -6048,6 +6495,7 @@ window.subscribeNewsletter=function(){
     requestAnimationFrame(animate);
   });
 })();
+
 
 /* ─ Custom cursor ─ */
 (function(){
@@ -6225,7 +6673,7 @@ document.querySelectorAll('.tab').forEach(function(tab){
   });
 });
 
-const header = document.querySelector('.atl-nav');
+const header = document.querySelector('.atl-sticky-header');
 const body = document.querySelector('.nbl-hero');
  
 function setOffset() {
@@ -6235,7 +6683,6 @@ function setOffset() {
  
 window.addEventListener('load', setOffset);
 window.addEventListener('resize', setOffset);
-
 </script>
 </body>
 </html>
