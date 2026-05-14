@@ -2227,7 +2227,7 @@ function trackDownloadById(id) {
   const urlParams = new URLSearchParams(window.location.search);
 
   const source =
-    urlParams.get('utm_source') || document.referrer || 'direct';
+    urlParams.get('resource_download') || document.referrer || 'direct';
 
   gtag('event', 'file_download', {
     document_id: doc.id,
