@@ -2806,7 +2806,7 @@ nav#atlNav {
 *,*::before,*::after{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:var(--font);color:var(--ink);background:#fff;
-  -webkit-font-smoothing:antialiased;margin:0;padding-top:100px!important;}
+  -webkit-font-smoothing:antialiased;margin:0; }
 @media(max-width:767.98px){body{padding-top:64px!important;}}
 a{text-decoration:none;}
 img{max-width:100%;}
@@ -3177,7 +3177,7 @@ body.dark-mode .nbl-roi-input{background:#0f0f28;border-color:rgba(255,255,255,.
     <div class="atl-nav__inner">
 
       <!-- Logo -->
-      <a href="#home" class="atl-nav__logo" onclick="return navClick('home')">
+      <a href="/" class="atl-nav__logo" onclick="return navClick('home')">
       <img loading="lazy" src="./images/LogoBlue.png" alt="Nebulae" class="atl-nav__logo-img">
     </a>
       <!-- Desktop nav -->
@@ -3591,7 +3591,7 @@ body.dark-mode .nbl-roi-input{background:#0f0f28;border-color:rgba(255,255,255,.
       </button>
       </div>
 
-       <a class="atl-nav__mlink" href="#home" onclick="return mobileNavClick('home')">Home</a>
+       <a class="atl-nav__mlink" href="/" onclick="return mobileNavClick('home')">Home</a>
 
       <div class="atl-nav__macc">
         <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Products<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
@@ -4263,7 +4263,7 @@ body.dark-mode .nbl-roi-input{background:#0f0f28;border-color:rgba(255,255,255,.
       <div class="col-6 col-md-2">
         <h6 class="atl-footer__heading">Navigate</h6>
         <ul class="atl-footer__list">
-          <li><a href="#home" onclick="return navClick('home')">Home</a></li>
+          <li><a href="/" onclick="return navClick('home')">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="products.html">Products</a></li>
@@ -4441,6 +4441,17 @@ window.mobileNavClick=function(id){
   btn.addEventListener('click',function(){apply(!document.body.classList.contains('dark-mode'));});
 })();
 
+
+const header = document.querySelector('.atl-sticky-header');
+const hero  = document.querySelector('.ab-hero');
+ 
+function setOffset() {
+  const headerHeight = header.offsetHeight;
+  hero .style.marginTop = headerHeight + 'px';
+}
+ 
+window.addEventListener('load', setOffset);
+window.addEventListener('resize', setOffset);
 </script>
 </body>
 </html>
