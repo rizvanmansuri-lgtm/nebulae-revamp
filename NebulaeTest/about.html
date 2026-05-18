@@ -3177,10 +3177,9 @@ body.dark-mode .nbl-roi-input{background:#0f0f28;border-color:rgba(255,255,255,.
     <div class="atl-nav__inner">
 
       <!-- Logo -->
-      <a href="#home" class="atl-nav__logo">
-        <img src="./images/LogoBlue.png" alt="Nebulae" class="atl-nav__logo-img">
-      </a>
-
+      <a href="#home" class="atl-nav__logo" onclick="return navClick('home')">
+      <img loading="lazy" src="./images/LogoBlue.png" alt="Nebulae" class="atl-nav__logo-img">
+    </a>
       <!-- Desktop nav -->
       <ul class="atl-nav__links" id="navLinks">
 
@@ -3586,12 +3585,13 @@ body.dark-mode .nbl-roi-input{background:#0f0f28;border-color:rgba(255,255,255,.
     <div class="atl-nav__mobile" id="navMobile">
       <div class="atl-nav__mobile-header">
         <span class="atl-nav__mobile-title">Menu</span>
-        <button class="atl-nav__mobile-close" id="navMobileClose" aria-label="Close menu">
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
+       <button class="atl-nav__mobile-close" id="navMobileClose" aria-label="Close menu"
+        onclick="(function(){var m=document.getElementById('navMobile'),b=document.getElementById('navBurger');if(m)m.classList.remove('open');if(b){b.classList.remove('open');b.setAttribute('aria-expanded','false');}})()">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
       </div>
 
-      <a class="atl-nav__mlink" href="#home">Home</a>
+       <a class="atl-nav__mlink" href="#home" onclick="return mobileNavClick('home')">Home</a>
 
       <div class="atl-nav__macc">
         <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Products<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
@@ -3854,8 +3854,8 @@ body.dark-mode .nbl-roi-input{background:#0f0f28;border-color:rgba(255,255,255,.
       <h2 class="ab-section-title">Mission, Vision &amp; Values</h2>
       <p class="ab-section-desc" style="margin:0 auto;">The principles that guide every product decision, every engineering choice, and every customer interaction at Nebulae.</p>
     </div>
-    <div class="row g-4">
-      <div class="col-md-4" data-ab="up" data-ab-delay="1">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-4 " data-ab="up" data-ab-delay="1">
         <div class="ab-mvv-card ab-mvv-card--mission h-100">
           <div class="ab-mvv-icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg></div>
           <div class="ab-mvv-label">Our Mission</div>
@@ -3864,7 +3864,7 @@ body.dark-mode .nbl-roi-input{background:#0f0f28;border-color:rgba(255,255,255,.
           <p class="ab-mvv-desc">A protocol-agnostic platform that unifies every device, network, and cloud — removing barriers between LoRa, Wi-SUN, Zigbee, BLE, Wi-Fi, and GSM under one integrated stack.</p>
         </div>
       </div>
-      <div class="col-md-4" data-ab="up" data-ab-delay="2">
+      <div class="col-md-6 col-lg-4" data-ab="up" data-ab-delay="2">
         <div class="ab-mvv-card ab-mvv-card--vision h-100">
           <div class="ab-mvv-icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
           <div class="ab-mvv-label">Our Vision</div>
@@ -3873,7 +3873,7 @@ body.dark-mode .nbl-roi-input{background:#0f0f28;border-color:rgba(255,255,255,.
           <p class="ab-mvv-desc">A unified future where every sensor, gateway, and cloud service speaks the same language — regardless of manufacturer, protocol, or geography.</p>
         </div>
       </div>
-      <div class="col-md-4" data-ab="up" data-ab-delay="3">
+      <div class="col-md-6 col-lg-4" data-ab="up" data-ab-delay="3">
         <div class="ab-mvv-card ab-mvv-card--values h-100">
           <div class="ab-mvv-icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
           <div class="ab-mvv-label">Our Values</div>
