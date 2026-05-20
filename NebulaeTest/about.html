@@ -2739,7 +2739,7 @@ nav#atlNav {
 html{scroll-behavior:smooth;}
 body{font-family:var(--font);color:var(--ink);background:#fff;
   -webkit-font-smoothing:antialiased;margin:0; }
-@media(max-width:767.98px){body{padding-top:64px!important;}}
+
 a{text-decoration:none;}
 img{max-width:100%;}
 
@@ -3034,6 +3034,104 @@ img{max-width:100%;}
   .ab-story-img img{height:280px;}
   .ab-cta-btns{flex-direction:column;}
   .ab-cta-btn{width:100%;justify-content:center;}
+}
+
+/* ═══════════════════════════════════════════════════
+   §  HORIZONTAL SCROLL FIX — below 420px
+   Root causes fixed:
+   1. html/body: clip any overflow-x globally
+   2. Bootstrap g-5 gutters create negative margins
+   3. ab-tl-dot: left:-2.1rem bleeds outside container
+   4. ab-hero__chips: chips wrap but min-width causes push
+   5. ab-cta-wrap: 3rem side padding too wide
+   6. ab-section padding too wide
+   7. ab-pillar, ab-mvv-card, ab-cert-item: padding
+   8. ab-partner-track: width:max-content needs parent clip
+   9. ab-hero__orbs: large fixed widths (clipped by overflow)
+   10. ab-stat-num: large clamp font size
+═══════════════════════════════════════════════════ */
+
+/* 1. Global clip — prevents ANY element from causing horizontal scroll */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 420px) {
+
+  /* 2. Bootstrap row gutters — negative margins cause bleed */
+  .row { --bs-gutter-x: 1rem; }
+
+  /* 3. Timeline dot sits at left:-2.1rem — clip the container */
+  .ab-timeline {
+    padding-left: 1.25rem;
+    overflow: hidden;
+  }
+  .ab-tl-dot {
+    left: -1.75rem;
+  }
+  .ab-tl-item {
+    padding-left: 1.4rem;
+  }
+
+  /* 4. Hero chips — prevent overflow */
+  .ab-hero__chips {
+    gap: .4rem;
+  }
+  .ab-hero__chip {
+    font-size: .7rem;
+    padding: .3rem .7rem;
+  }
+
+  /* 5. CTA wrap — reduce side padding */
+  .ab-cta-wrap {
+    padding: 2rem 1.1rem !important;
+    border-radius: 18px;
+  }
+
+  /* 6. Section padding — tighter on tiny screens */
+  .ab-section { padding: 2.5rem 0; }
+  .ab-section .container { padding-left: .85rem; padding-right: .85rem; }
+
+  /* 7. Cards — reduce padding */
+  .ab-mvv-card  { padding: 1.5rem 1.1rem; }
+  .ab-pillar    { padding: 1.25rem 1rem; }
+  .ab-cert-item { padding: 1.1rem .9rem; }
+  .ab-team-body { padding: 1.1rem .9rem 1.3rem; }
+
+  /* 8. Partner track — parent already has overflow:hidden, reinforce */
+  .ab-partner-track-wrap { overflow: hidden; max-width: 100%; }
+
+  /* 9. Hero orbs — already clipped by .ab-hero{overflow:hidden}, no action needed */
+
+  /* 10. Stat numbers — slightly smaller on tiny screens */
+  .ab-stat-num { font-size: 2rem; }
+
+  /* Hero title */
+  .ab-hero__title { font-size: 1.85rem; }
+  .ab-hero__desc  { font-size: .88rem; }
+
+  /* Stats bar */
+  .ab-stats-bar { padding: 1.75rem 0; }
+
+  /* Timeline text */
+  .ab-tl-title { font-size: .95rem; }
+  .ab-tl-desc  { font-size: .82rem; }
+
+  /* Section titles */
+  .ab-section-title { font-size: 1.5rem; }
+
+  /* CTA buttons */
+  .ab-cta-btn { padding: .8rem 1.25rem; font-size: .85rem; }
+
+  /* Cert grid — single column */
+  .ab-cert-grid { grid-template-columns: 1fr; }
+
+  /* Team card image height */
+  .ab-team-img-wrap { height: 180px; }
+
+  /* Blockquote padding */
+  .ab-story-blockquote { padding: 1.1rem 1.25rem; }
 }
 /* ─ Dark/Light mode toggle ─ */
 #nblThemeToggle{position:fixed;top:110px;right:1rem;z-index:8880;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.9);border:1.5px solid #e5e7eb;box-shadow:0 4px 14px rgba(0,0,0,.1);display:flex;align-items:center;justify-content:center;cursor:pointer!important;transition:all .3s;backdrop-filter:blur(8px);}

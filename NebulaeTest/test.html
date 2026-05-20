@@ -20,7 +20,7 @@
    Bootstrap Studio: Design > CSS > + New File
 ===================================================== */
 
-/* Fonts loaded via <link> in <head> */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 /* ── Tokens ──────────────────────────────────────── */
 :root {
@@ -46,9 +46,6 @@
   --fmono:   'IBM Plex Mono', monospace;
   --r:       10px;
   --sh:      0 4px 24px rgba(0,0,0,.07);
-  /* Extra tokens from landing sections */
-  --cyan:    #06b6d4;
-  --electric:#4f46e5;
 }
 *,*::before,*::after { box-sizing:border-box; }
 html { scroll-behavior:smooth; margin:0; padding:0; }
@@ -190,7 +187,10 @@ img { max-width:100%; padding:5px; border:5px solid #fff; box-sizing:border-box;
   display:none; flex-direction:column; gap:4px;
   background:none; border:none; padding:4px; cursor:pointer;
 }
-/* burger span styles and open-state defined below in mobile drawer section */
+.atl-nav__burger span { display:block; width:22px; height:2px; background:#1e1e3c; border-radius:2px; transition:all .3s; }
+.atl-nav__burger.open span:nth-child(1) { transform:rotate(45deg) translate(4px,4px); }
+.atl-nav__burger.open span:nth-child(2) { opacity:0; }
+.atl-nav__burger.open span:nth-child(3) { transform:rotate(-45deg) translate(4px,-4px); }
 
 /* ── LOGO sub-text ──────────────────────────────── */
 .atl-nav__logo-text { display:flex; flex-direction:column; line-height:1.1; }
@@ -421,8 +421,10 @@ img { max-width:100%; padding:5px; border:5px solid #fff; box-sizing:border-box;
   transform: translateY(10px);
   transition: opacity 0.3s ease, transform 0.3s ease, background .2s, border-color .2s;
 }
-.atl-nav__item--mega.mega-open .atl-mega__prod-card { opacity: 1; transform: translateY(0); }
-/* nth-child stagger delays defined in the animation block below */
+.atl-nav__item--mega.mega-open .atl-mega__prod-card       { opacity: 1; transform: translateY(0); }
+.atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(1) { transition-delay: 0.12s; }
+.atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(2) { transition-delay: 0.12s; }
+.atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(3) { transition-delay: 0.26s; }
 .atl-mega__prod-card:hover {
   background: var(--surf); border-color: rgba(3,24,133,.08);
   transform: translateX(4px);
@@ -460,7 +462,11 @@ img { max-width:100%; padding:5px; border:5px solid #fff; box-sizing:border-box;
 .atl-mega__prod-cta-note { font-size: .72rem; color: var(--inks); margin: 0; }
 
 /* Mobile drawer */
-/* .atl-nav__mobile styles defined in mobile drawer section below */
+.atl-nav__mobile { display:none; padding:.5rem 1.25rem 1rem; border-top:1px solid #d1d5db; background:#fff; }
+.atl-nav__mobile.open { display:block; }
+.atl-nav__mlink { display:block; padding:.65rem 0; font-size:.92rem; font-weight:600; color:#374151; border-bottom:1px solid #f3f4f6; transition:color .2s; text-decoration:none; }
+.atl-nav__mlink:last-child { border-bottom:none; }
+.atl-nav__mlink:hover { color:var(--navy); }
 
 /* ═══════════════════════════════════════════════════
    HOME HERO  (dark electronics style — screenshot 1)
@@ -613,7 +619,68 @@ img { max-width:100%; padding:5px; border:5px solid #fff; box-sizing:border-box;
   opacity: 1; transform: translateY(0); transition-delay: 0.14s;
 }
 
-/* Mobile accordion styles defined in mobile drawer section below */
+/* ═══════════════════════════════════════════════════
+   MOBILE NAV — ACCORDION (Services / Products)
+═══════════════════════════════════════════════════ */
+.atl-nav__macc {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.atl-nav__macc-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.atl-nav__macc-btn svg {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.atl-nav__macc-btn.open svg {
+  transform: rotate(180deg);
+}
+
+.atl-nav__macc-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  background: #f8faff;
+  border-radius: 0 0 8px 8px;
+}
+.atl-nav__macc-body.open {
+  max-height: 800px;
+}
+
+.atl-nav__macc-section {
+  padding: .5rem 1.25rem .25rem;
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--navy);
+  opacity: .55;
+  margin-top: .25rem;
+}
+
+.atl-nav__msublink {
+  display: block;
+  padding: .45rem 1.25rem .45rem 1.5rem;
+  font-size: .82rem;
+  color: #374151;
+  text-decoration: none;
+  transition: color .15s, background .15s;
+  border-left: 2px solid transparent;
+}
+.atl-nav__msublink:hover {
+  color: var(--navy);
+  background: rgba(3,24,133,.04);
+  border-left-color: var(--navy);
+}
 
 /* ═══════════════════════════════════════════════════
    RESPONSIVE IMPROVEMENTS
@@ -2727,14 +2794,11 @@ nav#atlNav {
     }
   }
  
+</style>
+<style>
 
-
-/* ═══════════════════════════════════════════════════
-   §  NEW LANDING SECTIONS — Hero, Tech, News
-   (Moved from separate <style> block)
-═══════════════════════════════════════════════════ */
 /* ═══════════════ NEW LANDING SECTIONS ══════════════ */
-
+:root{--cyan:#06b6d4;--electric:#4f46e5;}
 
 /* ─ NEBULAE HERO ─ */
 .nbl-hero{min-height:100vh;background:linear-gradient(135deg,#03031a 0%,#070726 40%,#0c0c38 70%,#06061f 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:5rem 0 4rem;}
@@ -2888,13 +2952,45 @@ nav#atlNav {
 .nbl-cta-contact-item{display:flex;align-items:center;gap:.6rem;font-size:.88rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s;}
 .nbl-cta-contact-item:hover{color:rgba(255,255,255,.9);}
 
+.nbl-cta-subscribe-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 46px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nbl-cta-subscribe-pill input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 0 1rem;
+  width: 210px;
+}
+
+.nbl-cta-subscribe-pill input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.nbl-cta-subscribe-pill button { 
+  height: 100%;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+.nbl-cta-subscribe-pill button{
+  transform: none !important;
+}
 /* ─ RESPONSIVE ─ */
 @media(max-width:991.98px){.nbl-hero{min-height:auto;padding:4rem 0 3rem;}.nbl-hero__visual{margin-top:2.5rem;}.nbl-hero__stats{gap:1.25rem;}.nbl-hero__stat-divider{display:none;}.nbl-cta-wrap{padding:3rem 1.5rem;}}
 @media(max-width:767.98px){.nbl-hero{padding:3rem 0 2.5rem;}.nbl-hero__btns,.nbl-cta-btns{flex-direction:column;}.nbl-btn-primary,.nbl-btn-outline,.nbl-cta-btn-primary,.nbl-cta-btn-outline{width:100%;justify-content:center;}.nbl-tech-section,.nbl-products-section,.nbl-updates-section,.nbl-why-section,.nbl-cta-section{padding:3.5rem 0;}.nbl-hero__stats{justify-content:center;}.nbl-cta-contact-strip{gap:1.25rem;}}
 
-/* ═══════════════════════════════════════════════════
-   §  ADDITIONAL LANDING — Modals, Contact, Transitions
-═══════════════════════════════════════════════════ */
+</style>
+<style>
 html,body{margin:0!important;}
 /* body{padding-top:100px!important;} */
 /* @media(max-width:767.98px){body{padding-top:64px!important;}} */
@@ -2921,6 +3017,76 @@ html,body{margin:0!important;}
 .nbl-logo-item{display:flex;align-items:center;justify-content:center;padding:.5rem 1.5rem;background:#f8f9ff;border:1.5px solid #e8eaf6;border-radius:10px;min-width:130px;height:52px;transition:border-color .25s,background .25s,transform .25s;flex-shrink:0;}
 .nbl-logo-item:hover{border-color:#4f46e5;background:#fff;transform:translateY(-2px);box-shadow:0 6px 20px rgba(79,70,229,.1);}
 .nbl-logo-item span{font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:800;color:#374151;letter-spacing:.02em;}
+
+.nbl-logos-label {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: #999;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 1.5rem;
+    }
+
+    .nbl-logos-strip {
+      overflow: hidden;
+      border-top: 0.5px solid #e8e8e8;
+      border-bottom: 0.5px solid #e8e8e8;
+      background: #fff;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+    }
+
+    .nbl-logos-track {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      animation: marquee 32s linear infinite;
+    }
+
+    .nbl-logos-track:hover { animation-play-state: paused; }
+
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .nbl-logo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 2.8rem;
+      height: 80px;
+      flex-shrink: 0;
+      gap: 6px;
+      border-right: 0.5px solid #efefef;
+      cursor: default;
+      transition: background 0.2s;
+    }
+
+    .nbl-logo-item:hover { background: #f9f9f9; }
+
+    .nbl-logo-item svg {
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .nbl-logo-item:hover svg { opacity: 1 !important; }
+
+    .nbl-logo-name {
+      font-size: 10px;
+      font-weight: 500;
+      color: #bbb;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+
+    .nbl-logo-item:hover .nbl-logo-name { color: #888; }
+
+
+
 
 /* ─ STATS COUNTER ─ */
 .nbl-stats-section{background:linear-gradient(135deg,#0a0a2e 0%,#1a1a6e 60%,#0a0a2e 100%);padding:4.5rem 0;position:relative;overflow:hidden;}
@@ -3070,18 +3236,7 @@ html,body{margin:0!important;}
 .nbl-award-icon{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#fbbf24,#f59e0b);display:flex;align-items:center;justify-content:center;font-size:.8rem;}
 .nbl-award-text{font-size:.82rem;font-weight:700;color:#374151;}
 
-/* ─ FAQ ─ */
-.nbl-faq-section{background:#f5f7ff;padding:5.5rem 0;}
-.nbl-faq-item{background:#fff;border:1.5px solid #e5e7eb;border-radius:14px;margin-bottom:.75rem;overflow:hidden;transition:border-color .25s;}
-.nbl-faq-item.open{border-color:#4f46e5;}
-.nbl-faq-question{width:100%;background:none;border:none;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer;font-size:.95rem;font-weight:700;color:#111827;font-family:'Poppins',sans-serif;text-align:left;transition:color .2s;}
-.nbl-faq-question:hover{color:#4f46e5;}
-.nbl-faq-item.open .nbl-faq-question{color:#4f46e5;}
-.nbl-faq-icon{width:28px;height:28px;border-radius:50%;background:#f0f3ff;border:1.5px solid #e0e7ff;display:flex;align-items:center;justify-content:center;color:#4f46e5;flex-shrink:0;transition:transform .3s,background .25s;}
-.nbl-faq-item.open .nbl-faq-icon{transform:rotate(45deg);background:#4f46e5;color:#fff;border-color:#4f46e5;}
-.nbl-faq-answer{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.22,1,.36,1);}
-.nbl-faq-item.open .nbl-faq-answer{max-height:300px;}
-.nbl-faq-answer-inner{padding:0 1.5rem 1.25rem;font-size:.9rem;color:#6b7280;line-height:1.75;border-top:1px solid #f0f3ff;}
+ 
 
 /* ─ NEWSLETTER ─ */
 .nbl-newsletter-section{background:linear-gradient(135deg,#0a0a2e,#1a1a6e);padding:4rem 0;}
@@ -3118,6 +3273,38 @@ html,body{margin:0!important;}
 .nbl-sample-btn--outline{background:#fff;color:#4f46e5;border:1.5px solid #c7d2fe;}
 .nbl-sample-btn--outline:hover{border-color:#4f46e5;background:#f0f3ff;}
 
+/**modal */
+
+
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;z-index:1000;opacity:0;pointer-events:none;transition:opacity 0.2s}
+.modal-bg.open{opacity:1;pointer-events:all}
+
+.nbl-modal{background:#fff;border-radius:14px;padding:2rem;width:100%;max-width:480px;position:relative;transform:translateY(16px);transition:transform 0.22s}
+.modal-bg.open .nbl-modal{transform:translateY(0)}
+.nbl-modal-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:#aaa;line-height:1}
+.nbl-modal-close:hover{color:#333}
+.nbl-modal h2{font-size:17px;font-weight:700;color:#111;margin-bottom:4px}
+.nbl-modal .sub{font-size:13px;color:#888;margin-bottom:1.5rem}
+
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.form-row.full{grid-template-columns:1fr}
+.fld label{display:block;font-size:11px;font-weight:600;color:#555;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em}
+.fld input,.fld select,.fld textarea{width:100%;padding:9px 12px;border:0.5px solid #ddd;border-radius:8px;font-size:13px;color:#111;background:#fff;outline:none;transition:border-color 0.15s;font-family:inherit}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:#2563eb}
+.fld textarea{resize:vertical;min-height:72px}
+
+.modal-footer{display:flex;justify-content:flex-end;gap:10px;margin-top:1.25rem}
+.btn-cancel{padding:9px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:0.5px solid #ddd;background:#fff;color:#555}
+.btn-cancel:hover{background:#f5f5f5}
+.btn-submit{padding:9px 22px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:none;background:#2563eb;color:#fff}
+.btn-submit:hover{background:#1d4ed8}
+
+.success-msg{text-align:center;padding:1.5rem 0}
+.success-msg .check{width:52px;height:52px;border-radius:50%;background:#ecfdf5;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:24px;color:#16a34a}
+.success-msg h3{font-size:16px;font-weight:700;color:#111;margin-bottom:6px}
+.success-msg p{font-size:13px;color:#666}
+
+
 @media(max-width:767.98px){
   .nbl-stat-card+.nbl-stat-card::before{display:none;}
   .nbl-roi-inputs{border-right:none;border-bottom:1.5px solid #f0f0f8;padding:1.75rem;}
@@ -3129,10 +3316,78 @@ html,body{margin:0!important;}
   .nbl-sticky-cta{bottom:1rem;right:1rem;}
 }
 
-/* ═══════════════════════════════════════════════════
-   §  VISUAL POLISH — Progress bar, Back-to-top, Cursor,
-      Cookie, Float form, Sticky CTA
-═══════════════════════════════════════════════════ */
+</style>
+
+  <!-- SEO: Canonical & Language -->
+  <link rel="canonical" href="https://www.nebulae.io/" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#313185" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nebulae | IoT, LoRa, Wi-SUN &amp; Smart Connectivity Solutions" />
+  <meta property="og:description" content="India's premier IoT hardware manufacturer — LoRa, Wi-SUN, Zigbee, BLE, Wi-Fi, GSM modules &amp; gateways for smart metering, smart cities, and industrial IoT." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.nebulae.io/" />
+  <meta property="og:image" content="https://www.nebulae.io/images/og-nebulae.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Nebulae IoT Solutions" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nebulae | IoT &amp; Smart Connectivity Solutions" />
+  <meta name="twitter:description" content="LoRa, Wi-SUN, Zigbee, GSM &amp; BLE modules built for India's smart infrastructure." />
+  <meta name="twitter:image" content="https://www.nebulae.io/images/og-nebulae.jpg" />
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Nebulae",
+    "url": "https://www.nebulae.io",
+    "logo": "https://www.nebulae.io/images/LogoBlue.png",
+    "description": "India's premier IoT hardware manufacturer specialising in LoRa, Wi-SUN, Zigbee, Wi-Fi, GSM and BLE wireless modules, gateways and smart connectivity solutions.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Anand",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN"
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+91-02692-232501",
+      "contactType": "sales",
+      "email": "sales@nebulae.io",
+      "areaServed": "IN"
+    }],
+    "sameAs": [
+      "https://www.linkedin.com/company/nebulae-iot",
+      "https://twitter.com/nebulaeiot"
+    ]
+  }
+  </script>
+
+ 
+
+  <!-- JSON-LD: WebSite with SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Nebulae IoT Solutions",
+    "url": "https://www.nebulae.io",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.nebulae.io/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+<style>
+
 /* ══════════════════════════════════════════════
    VISUAL POLISH + UX + PERFORMANCE CSS
 ══════════════════════════════════════════════ */
@@ -3159,8 +3414,8 @@ html,body{margin:0!important;}
 #nblThemeToggle:hover{background:#4f46e5;border-color:#4f46e5;color:#fff;box-shadow:0 6px 20px rgba(79,70,229,.3);}
 body.dark-mode{background:#0a0a1e!important;color:#e2e8f0!important;}
 body.dark-mode .atl-nav,body.dark-mode .atl-util-bar{background:#0d0d2b!important;}
-body.dark-mode .nbl-tech-section,body.dark-mode .nbl-compare-section,body.dark-mode .nbl-usecase-section,body.dark-mode .nbl-cases-section,body.dark-mode .nbl-certs-section,body.dark-mode .nbl-roi-section,body.dark-mode .nbl-faq-section,body.dark-mode .nbl-sample-section,body.dark-mode .nbl-press-section,body.dark-mode .nbl-updates-section,body.dark-mode .atl-section{background:#0f0f28!important;}
-body.dark-mode .nbl-tech-card,body.dark-mode .nbl-news-card,body.dark-mode .nbl-faq-item,body.dark-mode .nbl-case-card,body.dark-mode .nbl-cert-card,body.dark-mode .nbl-roi-wrap,body.dark-mode .nbl-sample-wrap,body.dark-mode .nbl-press-card,body.dark-mode .card{background:#1a1a3e!important;border-color:rgba(255,255,255,.08)!important;}
+body.dark-mode .nbl-tech-section,body.dark-mode .nbl-compare-section,body.dark-mode .nbl-usecase-section,body.dark-mode .nbl-cases-section,body.dark-mode .nbl-certs-section,body.dark-mode .nbl-roi-section, body.dark-mode .nbl-sample-section,body.dark-mode .nbl-press-section,body.dark-mode .nbl-updates-section,body.dark-mode .atl-section{background:#0f0f28!important;}
+body.dark-mode .nbl-tech-card,body.dark-mode .nbl-news-card, body.dark-mode .nbl-case-card,body.dark-mode .nbl-cert-card,body.dark-mode .nbl-roi-wrap,body.dark-mode .nbl-sample-wrap,body.dark-mode .nbl-press-card,body.dark-mode .card{background:#1a1a3e!important;border-color:rgba(255,255,255,.08)!important;}
 body.dark-mode .nbl-section-title,body.dark-mode .nbl-tech-card__title,body.dark-mode h1,body.dark-mode h2,body.dark-mode h3,body.dark-mode h4{color:#f1f5f9!important;}
 body.dark-mode .nbl-section-desc,body.dark-mode .nbl-tech-card__desc,body.dark-mode p,body.dark-mode .card-desc{color:rgba(255,255,255,.55)!important;}
 body.dark-mode .atl-nav__link,body.dark-mode .atl-nav__logo-name{color:#e2e8f0!important;}
@@ -3218,9 +3473,9 @@ img:not([loading=lazy]){opacity:1;}
 .tuya-section-wrap{background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);}
 
 /* ─ Floating contact form ─ */
-#nblFloatForm{position:fixed;right:-340px;top:50%;transform:translateY(-50%);z-index:8879;width:320px;background:#fff;border-radius:16px 0 0 16px;box-shadow:-8px 0 40px rgba(79,70,229,.15);border:1.5px solid #e5e7eb;border-right:none;transition:right .4s cubic-bezier(.22,1,.36,1);}
+#nblFloatForm{position:fixed;right:-330px;top:50%;transform:translateY(-50%);z-index:8879;width:320px;background:#fff;border-radius:16px 0 0 16px;box-shadow:-8px 0 40px rgba(79,70,229,.15);border:1.5px solid #e5e7eb;border-right:none;transition:right .4s cubic-bezier(.22,1,.36,1);}
 #nblFloatForm.open{right:0;}
-.nbl-float-tab{position:absolute;left:-42px;top:50%;transform:translateY(-50%);background:#4f46e5;color:#fff;width:42px;height:90px;border-radius:10px 0 0 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer!important;font-size:.58rem;font-weight:700;font-family:'Outfit',sans-serif;letter-spacing:.05em;text-transform:uppercase;writing-mode:initial;box-shadow:-4px 0 16px rgba(79,70,229,.25);}
+.nbl-float-tab{position:absolute;left:-42px;top:50%;transform:translateY(-50%);background:#4f46e5;color:#fff;width:42px;height:90px;border-radius:10px 0 0 10px;display:flex;flex-direction:row;align-items:flex-end;justify-content:center;gap:4px;cursor:pointer!important;font-size:.58rem;font-weight:700;font-family:'Outfit',sans-serif;letter-spacing:.05em;text-transform:uppercase;writing-mode:initial;box-shadow:-4px 0 16px rgba(79,70,229,.25);  writing-mode: vertical-rl; }
 .nbl-float-tab svg{flex-shrink:0;}
 .nbl-float-form-inner{padding:1.5rem;}
 .nbl-float-form-inner h4{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:800;color:#111827;margin-bottom:1rem;}
@@ -3230,9 +3485,9 @@ img:not([loading=lazy]){opacity:1;}
 .nbl-float-submit:hover{opacity:.9;}
 @media(max-width:767.98px){#nblFloatForm{display:none;}}
 
-/* ═══════════════════════════════════════════════════
-   §  EXPERTISE ACCORDION
-═══════════════════════════════════════════════════ */
+</style>
+<style>
+
 /* ════════════════════════════════════════════
    EXPERTISE ACCORDION SECTION
 ════════════════════════════════════════════ */
@@ -3307,99 +3562,7 @@ img:not([loading=lazy]){opacity:1;}
   .nbl-exp-card:not(.nbl-exp-active) .nbl-exp-img img{opacity:0!important;transform:scale(1.06)!important;}
 }
 
-.nbl-compare-table.table-striped tbody tr:nth-child(even) {
-  background-color: #f8fafc; /* light gray */
-}
-
-.nbl-compare-table.table-striped tbody tr:nth-child(odd) {
-  background-color: #CBCBE8  ; /* white */
-}
-
 </style>
-
-
-
-  <!-- SEO: Canonical & Language -->
-  <link rel="canonical" href="https://www.nebulae.io/" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="theme-color" content="#313185" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Nebulae | IoT, LoRa, Wi-SUN &amp; Smart Connectivity Solutions" />
-  <meta property="og:description" content="India's premier IoT hardware manufacturer — LoRa, Wi-SUN, Zigbee, BLE, Wi-Fi, GSM modules &amp; gateways for smart metering, smart cities, and industrial IoT." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.nebulae.io/" />
-  <meta property="og:image" content="https://www.nebulae.io/images/og-nebulae.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:site_name" content="Nebulae IoT Solutions" />
-  <meta property="og:locale" content="en_IN" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Nebulae | IoT &amp; Smart Connectivity Solutions" />
-  <meta name="twitter:description" content="LoRa, Wi-SUN, Zigbee, GSM &amp; BLE modules built for India's smart infrastructure." />
-  <meta name="twitter:image" content="https://www.nebulae.io/images/og-nebulae.jpg" />
-
-  <!-- JSON-LD: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Nebulae",
-    "url": "https://www.nebulae.io",
-    "logo": "https://www.nebulae.io/images/LogoBlue.png",
-    "description": "India's premier IoT hardware manufacturer specialising in LoRa, Wi-SUN, Zigbee, Wi-Fi, GSM and BLE wireless modules, gateways and smart connectivity solutions.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Anand",
-      "addressRegion": "Gujarat",
-      "addressCountry": "IN"
-    },
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "telephone": "+91-02692-232501",
-      "contactType": "sales",
-      "email": "sales@nebulae.io",
-      "areaServed": "IN"
-    }],
-    "sameAs": [
-      "https://www.linkedin.com/company/nebulae-iot",
-      "https://twitter.com/nebulaeiot"
-    ]
-  }
-  </script>
-
-  <!-- JSON-LD: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"What wireless protocols do Nebulae products support?","acceptedAnswer":{"@type":"Answer","text":"Nebulae supports LoRa/LoRaWAN, Wi-SUN, Zigbee, Wi-Fi, GSM/4G LTE/NB-IoT, and Bluetooth Low Energy (BLE 5.x)."}},
-      {"@type":"Question","name":"Are Nebulae products certified for use in India?","acceptedAnswer":{"@type":"Answer","text":"Yes. All wireless products carry WPC approval, BIS certification, and international CE/FCC certifications."}},
-      {"@type":"Question","name":"Do you offer Evaluation Kits for prototyping?","acceptedAnswer":{"@type":"Answer","text":"Yes, complete EVKs are available for LoRa, Wi-SUN, and Zigbee with firmware, schematics, and documentation."}},
-      {"@type":"Question","name":"Can Nebulae develop a custom IoT product end-to-end?","acceptedAnswer":{"@type":"Answer","text":"Yes. Services cover PCB design, firmware, cloud integration, mobile app, and production support."}}
-    ]
-  }
-  </script>
-
-  <!-- JSON-LD: WebSite with SearchAction -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Nebulae IoT Solutions",
-    "url": "https://www.nebulae.io",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.nebulae.io/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
-
 </head>
 <body>
 <a class="nbl-skip-link" href="#nbl-hero">Skip to content</a>
@@ -3419,15 +3582,19 @@ img:not([loading=lazy]){opacity:1;}
   <div class="atl-util-bar">
     <div class="atl-util-bar__inner">
       <div class="atl-util-bar__left">
-        <span class="atl-util-link">
+        <!-- <span class="atl-util-link">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
           India · IoT Solutions Provider
-        </span>
+        </span> -->
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 9898042339 
+        </a>
       </div>
       <div class="atl-util-bar__right">
         <a href="tel:+917486031238" class="atl-util-link">
           <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-          +91-02692-232501 / 232502
+          +91-02692-232501/02
         </a>
         <a href="mailto:sales@nebulae.io" class="atl-util-link">
           <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -3442,9 +3609,9 @@ img:not([loading=lazy]){opacity:1;}
     <div class="atl-nav__inner">
 
       <!-- Logo -->
-     <a href="/" class="atl-nav__logo" onclick="return navClick('home')">
-      <img loading="lazy" src="./images/LogoBlue.png" alt="Nebulae" class="atl-nav__logo-img">
-    </a>
+      <a href="#home" class="atl-nav__logo">
+        <img src="./images/LogoBlue.png" alt="Nebulae" class="atl-nav__logo-img">
+      </a>
 
       <!-- Desktop nav -->
       <ul class="atl-nav__links" id="navLinks">
@@ -3490,6 +3657,11 @@ img:not([loading=lazy]){opacity:1;}
                   <button class="atl-prod-rail__item" data-prod="evk">
                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
                     EVK
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="dataconnector">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h7"/><circle cx="17" cy="18" r="3"/><path d="M17 15v-1.5M17 21v1.5M14.2 16.5l-1.3-.75M20.1 19.25l1.3.75M14.2 19.25l-1.3.75M20.1 16.5l1.3-.75"/></svg>
+                    Data Connector
                     <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
                   </button>
                 </div>
@@ -3563,6 +3735,18 @@ img:not([loading=lazy]){opacity:1;}
                       <a href="products/wifi-node.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
                       <a href="products/gsm-node.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
                       <a href="products/ble-node.html" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></span><span class="atl-prod-card__name">BLE</span><span class="atl-prod-card__desc">Bluetooth Low Energy</span></a>
+                    </div>
+                  </div>
+                  <!-- Add to Panels section (after EVK panel) -->
+                  <div class="atl-prod-panel__body" data-panel="dataconnector">
+                    <p class="atl-prod-panel__label">Data Connector — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-dataconnector.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">RS485 LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products/wisun-dataconnector.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">RS485 Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products/zigbee-dataconnector.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">RS485 Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products/wifi-dataconnector.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">RS485 Wireless LAN</span></a>
+                      <a href="products/gsm-dataconnector.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">RS485 GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                    
                     </div>
                   </div>
                 </div><!-- /atl-prod-panel -->
@@ -3670,6 +3854,9 @@ img:not([loading=lazy]){opacity:1;}
           </div>
         </li>
 
+          <li class="atl-nav__item">
+          <a class="atl-nav__link" href="resources.html">Resources</a>
+        </li>
         <!-- 4. INDUSTRIES -->
         <li class="atl-nav__item atl-nav__item--mega" id="megaIndustries">
           <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaIndustries')">Industries<svg
@@ -3838,8 +4025,12 @@ img:not([loading=lazy]){opacity:1;}
             Company Profile <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left:4px"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="atl-brochure-menu" id="brochureMenu">
-            <a href="/resource.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Resources</a>
+            <a href="resource.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Resources</a>
+            <a href="about.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Who We Are</a>
+            <a href="team.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Leadership Team</a>
+            <a href="awards.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Awards & Recognition</a>
           </div>
+          
         </div>
         <button class="atl-nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -3851,13 +4042,12 @@ img:not([loading=lazy]){opacity:1;}
     <div class="atl-nav__mobile" id="navMobile">
       <div class="atl-nav__mobile-header">
         <span class="atl-nav__mobile-title">Menu</span>
-        <button class="atl-nav__mobile-close" id="navMobileClose" aria-label="Close menu"
-        onclick="(function(){var m=document.getElementById('navMobile'),b=document.getElementById('navBurger');if(m)m.classList.remove('open');if(b){b.classList.remove('open');b.setAttribute('aria-expanded','false');}})()">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
+        <button class="atl-nav__mobile-close" id="navMobileClose" aria-label="Close menu">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
       </div>
 
-       <a class="atl-nav__mlink" href="#home" onclick="return mobileNavClick('home')">Home</a>
+      <a class="atl-nav__mlink" href="#home">Home</a>
 
       <div class="atl-nav__macc">
         <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Products<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
@@ -3961,7 +4151,11 @@ img:not([loading=lazy]){opacity:1;}
         <p class="nbl-hero__desc">From LoRa modules to Wi-SUN gateways — Nebulae delivers battle-tested wireless connectivity solutions for smart cities, industrial automation, and utility-grade deployments.</p>
         <div class="nbl-hero__btns">
           <a href="products.html" class="nbl-btn-primary"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Explore Products</a>
-          <a href="contact.html" class="nbl-btn-outline">Talk to Our Engineers →</a>
+         
+          <a href="solutions.html" class="nbl-btn-primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          Explore Solutions
+        </a>
         </div>
         <div class="nbl-hero__stats">
           <div class="nbl-hero__stat-item"><span class="nbl-hero__stat-num">6+</span><span class="nbl-hero__stat-label">Protocols</span></div>
@@ -3994,35 +4188,178 @@ img:not([loading=lazy]){opacity:1;}
 <section class="nbl-logos-section">
   <div class="container">
     <p class="nbl-logos-label">Trusted by leading enterprises &amp; certified by global authorities</p>
-    <div class="nbl-logos-track-wrap">
-      <div class="nbl-logos-track" id="logosTrack">
-        <!-- Original set -->
-        <div class="nbl-logo-item"><span>Tuya IoT</span></div>
-        <div class="nbl-logo-item"><span>Semtech</span></div>
-        <div class="nbl-logo-item"><span>Silicon Labs</span></div>
-        <div class="nbl-logo-item"><span>Texas Instruments</span></div>
-        <div class="nbl-logo-item"><span>LoRa Alliance</span></div>
-        <div class="nbl-logo-item"><span>Wi-SUN Alliance</span></div>
-        <div class="nbl-logo-item"><span>Zigbee Alliance</span></div>
-        <div class="nbl-logo-item"><span>NIELIT</span></div>
-        <div class="nbl-logo-item"><span>BIS Certified</span></div>
-        <div class="nbl-logo-item"><span>WPC Licensed</span></div>
-        <div class="nbl-logo-item"><span>MSME India</span></div>
-        <div class="nbl-logo-item"><span>AWS IoT</span></div>
-        <!-- Duplicate for seamless loop -->
-        <div class="nbl-logo-item"><span>Tuya IoT</span></div>
-        <div class="nbl-logo-item"><span>Semtech</span></div>
-        <div class="nbl-logo-item"><span>Silicon Labs</span></div>
-        <div class="nbl-logo-item"><span>Texas Instruments</span></div>
-        <div class="nbl-logo-item"><span>LoRa Alliance</span></div>
-        <div class="nbl-logo-item"><span>Wi-SUN Alliance</span></div>
-        <div class="nbl-logo-item"><span>Zigbee Alliance</span></div>
-        <div class="nbl-logo-item"><span>NIELIT</span></div>
-        <div class="nbl-logo-item"><span>BIS Certified</span></div>
-        <div class="nbl-logo-item"><span>WPC Licensed</span></div>
-        <div class="nbl-logo-item"><span>MSME India</span></div>
-        <div class="nbl-logo-item"><span>AWS IoT</span></div>
+  </div>
+  <div class="nbl-logos-strip">
+    <div class="nbl-logos-track">
+
+      <!-- ===== ORIGINAL SET ===== -->
+
+      <!-- Semtech -->
+      <div class="nbl-logo-item" title="Semtech Partner">
+        <svg width="100" height="28" viewBox="0 0 190 40" xmlns="http://www.w3.org/2000/svg" style="opacity:0.7">
+          <rect x="0" y="6" width="28" height="28" rx="4" fill="#E8401C"/>
+          <rect x="6" y="0" width="28" height="28" rx="4" fill="#E8401C" opacity="0.35"/>
+          <text x="40" y="28" font-family="Arial,sans-serif" font-weight="800" font-size="22" fill="#1a1a1a" letter-spacing="1">SEMTECH</text>
+        </svg>
+        <span class="nbl-logo-name">Semtech Partner</span>
       </div>
+
+      <!-- Silicon Labs -->
+      <div class="nbl-logo-item" title="Silicon Labs">
+        <svg width="110" height="28" viewBox="0 0 230 44" xmlns="http://www.w3.org/2000/svg" style="opacity:0.7">
+          <circle cx="22" cy="22" r="20" fill="#0066CC"/>
+          <circle cx="22" cy="22" r="13" fill="white"/>
+          <circle cx="22" cy="22" r="6"  fill="#0066CC"/>
+          <circle cx="22" cy="10" r="3"  fill="#0066CC"/>
+          <circle cx="22" cy="34" r="3"  fill="#0066CC"/>
+          <circle cx="10" cy="22" r="3"  fill="#0066CC"/>
+          <circle cx="34" cy="22" r="3"  fill="#0066CC"/>
+          <text x="52" y="30" font-family="Arial,sans-serif" font-weight="700" font-size="20" fill="#1a1a1a" letter-spacing="0.5">Silicon Labs</text>
+        </svg>
+        <span class="nbl-logo-name">Silicon Labs</span>
+      </div>
+
+      <!-- Texas Instruments -->
+      <div class="nbl-logo-item" title="Texas Instruments">
+        <svg width="72" height="30" viewBox="0 0 72 30" xmlns="http://www.w3.org/2000/svg" style="opacity:0.88">
+          <rect width="72" height="30" rx="3" fill="#C8102E"/>
+          <text x="36" y="13" font-family="Arial,sans-serif" font-weight="900" font-size="13" fill="white" text-anchor="middle">TEXAS</text>
+          <text x="36" y="26" font-family="Arial,sans-serif" font-weight="900" font-size="9.5" fill="white" text-anchor="middle" letter-spacing="0.8">INSTRUMENTS</text>
+        </svg>
+        <span class="nbl-logo-name">Texas Instruments</span>
+      </div>
+
+      <!-- LoRa Alliance -->
+      <div class="nbl-logo-item" title="LoRa Alliance">
+        <svg width="118" height="28" viewBox="0 0 245 50" xmlns="http://www.w3.org/2000/svg" style="opacity:0.78">
+          <path d="M5,25 C5,14 14,5 25,5 C36,5 45,14 45,25 C45,36 36,45 25,45 C14,45 5,36 5,25Z" fill="none" stroke="#5A2D82" stroke-width="4"/>
+          <path d="M12,25 C12,17 18,11 25,11 C32,11 38,17 38,25 C38,33 32,39 25,39 C18,39 12,33 12,25Z" fill="none" stroke="#5A2D82" stroke-width="3.5"/>
+          <circle cx="25" cy="25" r="6" fill="#5A2D82"/>
+          <text x="56" y="33" font-family="Arial,sans-serif" font-weight="700" font-size="22" fill="#5A2D82" letter-spacing="0.3">LoRa Alliance</text>
+        </svg>
+        <span class="nbl-logo-name">LoRa Alliance</span>
+      </div>
+
+      <!-- Wi-SUN Alliance -->
+      <div class="nbl-logo-item" title="Wi-SUN Alliance">
+        <svg width="132" height="28" viewBox="0 0 265 50" xmlns="http://www.w3.org/2000/svg" style="opacity:0.75">
+          <path d="M4,38 Q12,14 20,38 Q28,14 36,38" fill="none" stroke="#00A651" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10,44 Q18,24 26,44 Q34,24 42,44" fill="none" stroke="#00A651" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+          <text x="54" y="34" font-family="Arial,sans-serif" font-weight="700" font-size="20" fill="#1a1a1a" letter-spacing="0.3">Wi-SUN Alliance</text>
+        </svg>
+        <span class="nbl-logo-name">Wi-SUN Alliance</span>
+      </div>
+
+      <!-- NIELIT -->
+      <div class="nbl-logo-item" title="NIELIT">
+        <svg width="104" height="28" viewBox="0 0 210 44" xmlns="http://www.w3.org/2000/svg" style="opacity:0.82">
+          <rect x="0" y="2" width="40" height="40" rx="4" fill="#003580"/>
+          <text x="20" y="16" font-family="Arial,sans-serif" font-weight="900" font-size="10" fill="#F5A623" text-anchor="middle">GOVT.</text>
+          <text x="20" y="31" font-family="Arial,sans-serif" font-weight="900" font-size="11" fill="white" text-anchor="middle">INDIA</text>
+          <text x="52" y="30" font-family="Arial,sans-serif" font-weight="800" font-size="24" fill="#1a1a1a" letter-spacing="1">NIELIT</text>
+        </svg>
+        <span class="nbl-logo-name">NIELIT</span>
+      </div>
+
+      <!-- BIS Certified -->
+      <div class="nbl-logo-item" title="BIS Certified">
+        <svg width="105" height="32" viewBox="0 0 205 54" xmlns="http://www.w3.org/2000/svg" style="opacity:0.82">
+          <polygon points="27,2 50,14 50,40 27,52 4,40 4,14" fill="#FF6600" opacity="0.1"/>
+          <polygon points="27,2 50,14 50,40 27,52 4,40 4,14" fill="none" stroke="#FF6600" stroke-width="3"/>
+          <text x="27" y="24" font-family="Arial,sans-serif" font-weight="900" font-size="11" fill="#FF6600" text-anchor="middle">BIS</text>
+          <text x="27" y="38" font-family="Arial,sans-serif" font-size="8" fill="#FF6600" text-anchor="middle">INDIA</text>
+          <text x="62" y="26" font-family="Arial,sans-serif" font-weight="800" font-size="20" fill="#1a1a1a">BIS</text>
+          <text x="62" y="42" font-family="Arial,sans-serif" font-size="14" fill="#888">Certified</text>
+        </svg>
+        <span class="nbl-logo-name">BIS Certified</span>
+      </div>
+
+      <!-- AWS IoT -->
+      <div class="nbl-logo-item" title="AWS IoT">
+        <svg width="96" height="32" viewBox="0 0 185 54" xmlns="http://www.w3.org/2000/svg" style="opacity:0.88">
+          <path d="M12,42 Q28,8 44,42"  fill="none" stroke="#FF9900" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M20,42 Q28,20 36,42" fill="none" stroke="#FF9900" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M6,48 Q28,60 50,48"  fill="none" stroke="#FF9900" stroke-width="3"   stroke-linecap="round"/>
+          <text x="62" y="26" font-family="Arial,sans-serif" font-weight="900" font-size="20" fill="#FF9900" letter-spacing="1">AWS</text>
+          <text x="62" y="44" font-family="Arial,sans-serif" font-size="14" fill="#888" letter-spacing="0.4">IoT Core</text>
+        </svg>
+        <span class="nbl-logo-name">AWS IoT Core</span>
+      </div>
+
+      <!-- ===== DUPLICATE SET (seamless loop) ===== -->
+
+      <div class="nbl-logo-item" title="Semtech Partner" aria-hidden="true">
+        <svg width="100" height="28" viewBox="0 0 190 40" xmlns="http://www.w3.org/2000/svg" style="opacity:0.7">
+          <rect x="0" y="6" width="28" height="28" rx="4" fill="#E8401C"/>
+          <rect x="6" y="0" width="28" height="28" rx="4" fill="#E8401C" opacity="0.35"/>
+          <text x="40" y="28" font-family="Arial,sans-serif" font-weight="800" font-size="22" fill="#1a1a1a" letter-spacing="1">SEMTECH</text>
+        </svg>
+        <span class="nbl-logo-name">Semtech Partner</span>
+      </div>
+      <div class="nbl-logo-item" title="Silicon Labs" aria-hidden="true">
+        <svg width="110" height="28" viewBox="0 0 230 44" xmlns="http://www.w3.org/2000/svg" style="opacity:0.7">
+          <circle cx="22" cy="22" r="20" fill="#0066CC"/><circle cx="22" cy="22" r="13" fill="white"/><circle cx="22" cy="22" r="6" fill="#0066CC"/>
+          <circle cx="22" cy="10" r="3" fill="#0066CC"/><circle cx="22" cy="34" r="3" fill="#0066CC"/><circle cx="10" cy="22" r="3" fill="#0066CC"/><circle cx="34" cy="22" r="3" fill="#0066CC"/>
+          <text x="52" y="30" font-family="Arial,sans-serif" font-weight="700" font-size="20" fill="#1a1a1a" letter-spacing="0.5">Silicon Labs</text>
+        </svg>
+        <span class="nbl-logo-name">Silicon Labs</span>
+      </div>
+      <div class="nbl-logo-item" title="Texas Instruments" aria-hidden="true">
+        <svg width="72" height="30" viewBox="0 0 72 30" xmlns="http://www.w3.org/2000/svg" style="opacity:0.88">
+          <rect width="72" height="30" rx="3" fill="#C8102E"/>
+          <text x="36" y="13" font-family="Arial,sans-serif" font-weight="900" font-size="13" fill="white" text-anchor="middle">TEXAS</text>
+          <text x="36" y="26" font-family="Arial,sans-serif" font-weight="900" font-size="9.5" fill="white" text-anchor="middle" letter-spacing="0.8">INSTRUMENTS</text>
+        </svg>
+        <span class="nbl-logo-name">Texas Instruments</span>
+      </div>
+      <div class="nbl-logo-item" title="LoRa Alliance" aria-hidden="true">
+        <svg width="118" height="28" viewBox="0 0 245 50" xmlns="http://www.w3.org/2000/svg" style="opacity:0.78">
+          <path d="M5,25 C5,14 14,5 25,5 C36,5 45,14 45,25 C45,36 36,45 25,45 C14,45 5,36 5,25Z" fill="none" stroke="#5A2D82" stroke-width="4"/>
+          <path d="M12,25 C12,17 18,11 25,11 C32,11 38,17 38,25 C38,33 32,39 25,39 C18,39 12,33 12,25Z" fill="none" stroke="#5A2D82" stroke-width="3.5"/>
+          <circle cx="25" cy="25" r="6" fill="#5A2D82"/>
+          <text x="56" y="33" font-family="Arial,sans-serif" font-weight="700" font-size="22" fill="#5A2D82" letter-spacing="0.3">LoRa Alliance</text>
+        </svg>
+        <span class="nbl-logo-name">LoRa Alliance</span>
+      </div>
+      <div class="nbl-logo-item" title="Wi-SUN Alliance" aria-hidden="true">
+        <svg width="132" height="28" viewBox="0 0 265 50" xmlns="http://www.w3.org/2000/svg" style="opacity:0.75">
+          <path d="M4,38 Q12,14 20,38 Q28,14 36,38" fill="none" stroke="#00A651" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10,44 Q18,24 26,44 Q34,24 42,44" fill="none" stroke="#00A651" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+          <text x="54" y="34" font-family="Arial,sans-serif" font-weight="700" font-size="20" fill="#1a1a1a" letter-spacing="0.3">Wi-SUN Alliance</text>
+        </svg>
+        <span class="nbl-logo-name">Wi-SUN Alliance</span>
+      </div>
+      <div class="nbl-logo-item" title="NIELIT" aria-hidden="true">
+        <svg width="104" height="28" viewBox="0 0 210 44" xmlns="http://www.w3.org/2000/svg" style="opacity:0.82">
+          <rect x="0" y="2" width="40" height="40" rx="4" fill="#003580"/>
+          <text x="20" y="16" font-family="Arial,sans-serif" font-weight="900" font-size="10" fill="#F5A623" text-anchor="middle">GOVT.</text>
+          <text x="20" y="31" font-family="Arial,sans-serif" font-weight="900" font-size="11" fill="white" text-anchor="middle">INDIA</text>
+          <text x="52" y="30" font-family="Arial,sans-serif" font-weight="800" font-size="24" fill="#1a1a1a" letter-spacing="1">NIELIT</text>
+        </svg>
+        <span class="nbl-logo-name">NIELIT</span>
+      </div>
+      <div class="nbl-logo-item" title="BIS Certified" aria-hidden="true">
+        <svg width="105" height="32" viewBox="0 0 205 54" xmlns="http://www.w3.org/2000/svg" style="opacity:0.82">
+          <polygon points="27,2 50,14 50,40 27,52 4,40 4,14" fill="#FF6600" opacity="0.1"/>
+          <polygon points="27,2 50,14 50,40 27,52 4,40 4,14" fill="none" stroke="#FF6600" stroke-width="3"/>
+          <text x="27" y="24" font-family="Arial,sans-serif" font-weight="900" font-size="11" fill="#FF6600" text-anchor="middle">BIS</text>
+          <text x="27" y="38" font-family="Arial,sans-serif" font-size="8" fill="#FF6600" text-anchor="middle">INDIA</text>
+          <text x="62" y="26" font-family="Arial,sans-serif" font-weight="800" font-size="20" fill="#1a1a1a">BIS</text>
+          <text x="62" y="42" font-family="Arial,sans-serif" font-size="14" fill="#888">Certified</text>
+        </svg>
+        <span class="nbl-logo-name">BIS Certified</span>
+      </div>
+      <div class="nbl-logo-item" title="AWS IoT" aria-hidden="true">
+        <svg width="96" height="32" viewBox="0 0 185 54" xmlns="http://www.w3.org/2000/svg" style="opacity:0.88">
+          <path d="M12,42 Q28,8 44,42"  fill="none" stroke="#FF9900" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M20,42 Q28,20 36,42" fill="none" stroke="#FF9900" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M6,48 Q28,60 50,48"  fill="none" stroke="#FF9900" stroke-width="3"   stroke-linecap="round"/>
+          <text x="62" y="26" font-family="Arial,sans-serif" font-weight="900" font-size="20" fill="#FF9900" letter-spacing="1">AWS</text>
+          <text x="62" y="44" font-family="Arial,sans-serif" font-size="14" fill="#888" letter-spacing="0.4">IoT Core</text>
+        </svg>
+        <span class="nbl-logo-name">AWS IoT Core</span>
+      </div>
+
     </div>
   </div>
 </section>
@@ -4093,7 +4430,7 @@ img:not([loading=lazy]){opacity:1;}
       <p class="nbl-section-desc">Compare all six wireless protocols side-by-side across the metrics that matter most for your IoT deployment.</p>
     </div>
     <div class="nbl-compare-table-wrap" data-anim="slide-up">
-      <table class="nbl-compare-table table-striped">
+      <table class="nbl-compare-table">
         <thead>
           <tr>
             <th style="width:160px">Specification</th>
@@ -4367,37 +4704,6 @@ img:not([loading=lazy]){opacity:1;}
   </div>
 </section>
 
-
-
-<!-- ═══ TESTIMONIALS ═══ -->
-<section class="nbl-testi-section" id="testimonials">
-  <div class="container">
-    <div class="nbl-section-header nbl-section-header--center" data-anim="slide-up">
-      <span class="nbl-section-eyebrow">Client Testimonials</span>
-      <h2 class="nbl-section-title">Trusted by Engineers Across India</h2>
-    </div>
-  </div>
-  <div class="nbl-testi-track-outer">
-    <div class="nbl-testi-track" id="testiTrack">
-      <!-- Set 1 -->
-      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Nebulae's LoRa modules integrated seamlessly into our smart water metering project. The technical support was exceptional — our team had the entire network live in under 3 weeks."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#4f46e5,#06b6d4);">RS</div><div><div class="nbl-testi-name">Rajesh Sharma</div><div class="nbl-testi-role">CTO, SmartGrid Solutions Pvt Ltd</div></div></div></div>
-      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"The Wi-SUN modules performed flawlessly in our AMI deployment across 50,000 meters. Nebulae delivered on time and the hardware quality exceeded our specifications."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#0d9488,#2dd4bf);">AP</div><div><div class="nbl-testi-name">Anita Patel</div><div class="nbl-testi-role">Project Manager, Utility Corp</div></div></div></div>
-      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"We evaluated 5 IoT module vendors. Nebulae won on documentation quality, certification coverage, and post-sales engineering support. Our prototype was done in days."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#ea580c,#fb923c);">MK</div><div><div class="nbl-testi-name">Mohit Kumar</div><div class="nbl-testi-role">Hardware Lead, AgriTech Startup</div></div></div></div>
-      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Nebulae's Zigbee modules power our building automation across 200+ commercial properties. The mesh reliability and 5-year battery performance have been outstanding."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#7c3aed,#c4b5fd);">SG</div><div><div class="nbl-testi-name">Sneha Gupta</div><div class="nbl-testi-role">CEO, BuildSmart Technologies</div></div></div></div>
-      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"From EVK to production in 4 months — Nebulae's evaluation kit got our team up to speed instantly. The LoRaWAN gateway handles 10,000 endpoints without a hiccup."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#dc2626,#f87171);">VR</div><div><div class="nbl-testi-name">Vikram Rao</div><div class="nbl-testi-role">IoT Architect, Industrial Systems</div></div></div></div>
-      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Excellent product range and the team really understands India's regulatory landscape. WPC-approved modules saved us months of certification hassle."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#0891b2,#06b6d4);">NK</div><div><div class="nbl-testi-name">Nikhil Krishnan</div><div class="nbl-testi-role">R&amp;D Director, Defence Electronics</div></div></div></div>
-      <!-- Duplicate set for seamless loop -->
-      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Nebulae's LoRa modules integrated seamlessly into our smart water metering project. The technical support was exceptional — our team had the entire network live in under 3 weeks."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#4f46e5,#06b6d4);">RS</div><div><div class="nbl-testi-name">Rajesh Sharma</div><div class="nbl-testi-role">CTO, SmartGrid Solutions Pvt Ltd</div></div></div></div>
-      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"The Wi-SUN modules performed flawlessly in our AMI deployment across 50,000 meters. Nebulae delivered on time and the hardware quality exceeded our specifications."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#0d9488,#2dd4bf);">AP</div><div><div class="nbl-testi-name">Anita Patel</div><div class="nbl-testi-role">Project Manager, Utility Corp</div></div></div></div>
-      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"We evaluated 5 IoT module vendors. Nebulae won on documentation quality, certification coverage, and post-sales engineering support. Our prototype was done in days."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#ea580c,#fb923c);">MK</div><div><div class="nbl-testi-name">Mohit Kumar</div><div class="nbl-testi-role">Hardware Lead, AgriTech Startup</div></div></div></div>
-      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Nebulae's Zigbee modules power our building automation across 200+ commercial properties. The mesh reliability and 5-year battery performance have been outstanding."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#7c3aed,#c4b5fd);">SG</div><div><div class="nbl-testi-name">Sneha Gupta</div><div class="nbl-testi-role">CEO, BuildSmart Technologies</div></div></div></div>
-      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"From EVK to production in 4 months — Nebulae's evaluation kit got our team up to speed instantly. The LoRaWAN gateway handles 10,000 endpoints without a hiccup."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#dc2626,#f87171);">VR</div><div><div class="nbl-testi-name">Vikram Rao</div><div class="nbl-testi-role">IoT Architect, Industrial Systems</div></div></div></div>
-      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Excellent product range and the team really understands India's regulatory landscape. WPC-approved modules saved us months of certification hassle."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#0891b2,#06b6d4);">NK</div><div><div class="nbl-testi-name">Nikhil Krishnan</div><div class="nbl-testi-role">R&amp;D Director, Defence Electronics</div></div></div></div>
-    </div>
-  </div>
-</section>
-
-
 <!-- ═══ CASE STUDY HIGHLIGHTS ═══ -->
 <section class="nbl-cases-section" id="case-studies">
   <div class="container">
@@ -4455,6 +4761,37 @@ img:not([loading=lazy]){opacity:1;}
     </div>
   </div>
 </section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="nbl-testi-section" id="testimonials">
+  <div class="container">
+    <div class="nbl-section-header nbl-section-header--center" data-anim="slide-up">
+      <span class="nbl-section-eyebrow">Client Testimonials</span>
+      <h2 class="nbl-section-title">Trusted by Engineers Across India</h2>
+    </div>
+  </div>
+  <div class="nbl-testi-track-outer">
+    <div class="nbl-testi-track" id="testiTrack">
+      <!-- Set 1 -->
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Nebulae's LoRa modules integrated seamlessly into our smart water metering project. The technical support was exceptional — our team had the entire network live in under 3 weeks."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#4f46e5,#06b6d4);">RS</div><div><div class="nbl-testi-name">Rajesh Sharma</div><div class="nbl-testi-role">CTO, SmartGrid Solutions Pvt Ltd</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"The Wi-SUN modules performed flawlessly in our AMI deployment across 50,000 meters. Nebulae delivered on time and the hardware quality exceeded our specifications."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#0d9488,#2dd4bf);">AP</div><div><div class="nbl-testi-name">Anita Patel</div><div class="nbl-testi-role">Project Manager, Utility Corp</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"We evaluated 5 IoT module vendors. Nebulae won on documentation quality, certification coverage, and post-sales engineering support. Our prototype was done in days."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#ea580c,#fb923c);">MK</div><div><div class="nbl-testi-name">Mohit Kumar</div><div class="nbl-testi-role">Hardware Lead, AgriTech Startup</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Nebulae's Zigbee modules power our building automation across 200+ commercial properties. The mesh reliability and 5-year battery performance have been outstanding."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#7c3aed,#c4b5fd);">SG</div><div><div class="nbl-testi-name">Sneha Gupta</div><div class="nbl-testi-role">CEO, BuildSmart Technologies</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"From EVK to production in 4 months — Nebulae's evaluation kit got our team up to speed instantly. The LoRaWAN gateway handles 10,000 endpoints without a hiccup."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#dc2626,#f87171);">VR</div><div><div class="nbl-testi-name">Vikram Rao</div><div class="nbl-testi-role">IoT Architect, Industrial Systems</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Excellent product range and the team really understands India's regulatory landscape. WPC-approved modules saved us months of certification hassle."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#0891b2,#06b6d4);">NK</div><div><div class="nbl-testi-name">Nikhil Krishnan</div><div class="nbl-testi-role">R&amp;D Director, Defence Electronics</div></div></div></div>
+      <!-- Duplicate set for seamless loop -->
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Nebulae's LoRa modules integrated seamlessly into our smart water metering project. The technical support was exceptional — our team had the entire network live in under 3 weeks."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#4f46e5,#06b6d4);">RS</div><div><div class="nbl-testi-name">Rajesh Sharma</div><div class="nbl-testi-role">CTO, SmartGrid Solutions Pvt Ltd</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"The Wi-SUN modules performed flawlessly in our AMI deployment across 50,000 meters. Nebulae delivered on time and the hardware quality exceeded our specifications."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#0d9488,#2dd4bf);">AP</div><div><div class="nbl-testi-name">Anita Patel</div><div class="nbl-testi-role">Project Manager, Utility Corp</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"We evaluated 5 IoT module vendors. Nebulae won on documentation quality, certification coverage, and post-sales engineering support. Our prototype was done in days."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#ea580c,#fb923c);">MK</div><div><div class="nbl-testi-name">Mohit Kumar</div><div class="nbl-testi-role">Hardware Lead, AgriTech Startup</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Nebulae's Zigbee modules power our building automation across 200+ commercial properties. The mesh reliability and 5-year battery performance have been outstanding."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#7c3aed,#c4b5fd);">SG</div><div><div class="nbl-testi-name">Sneha Gupta</div><div class="nbl-testi-role">CEO, BuildSmart Technologies</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"From EVK to production in 4 months — Nebulae's evaluation kit got our team up to speed instantly. The LoRaWAN gateway handles 10,000 endpoints without a hiccup."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#dc2626,#f87171);">VR</div><div><div class="nbl-testi-name">Vikram Rao</div><div class="nbl-testi-role">IoT Architect, Industrial Systems</div></div></div></div>
+      <div class="nbl-testi-card"><div class="nbl-testi-stars">★★★★★</div><p class="nbl-testi-quote">"Excellent product range and the team really understands India's regulatory landscape. WPC-approved modules saved us months of certification hassle."</p><div class="nbl-testi-author"><div class="nbl-testi-avatar" style="background:linear-gradient(135deg,#0891b2,#06b6d4);">NK</div><div><div class="nbl-testi-name">Nikhil Krishnan</div><div class="nbl-testi-role">R&amp;D Director, Defence Electronics</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+
+
 
  
 
@@ -5090,51 +5427,8 @@ img:not([loading=lazy]){opacity:1;}
 </section>
 
 
-<!-- ═══ FAQ ACCORDION ═══ -->
-<section class="nbl-faq-section" id="faq">
-  <div class="container">
-    <div class="row g-5 align-items-start">
-      <div class="col-lg-4" data-anim="slide-left">
-        <div class="nbl-section-header">
-          <span class="nbl-section-eyebrow">FAQ</span>
-          <h2 class="nbl-section-title">Frequently Asked Questions</h2>
-          <p class="nbl-section-desc">Have a question about our products, certifications, or services? We've answered the most common ones here.</p>
-          <a href="contact.html" style="display:inline-flex;align-items:center;gap:.45rem;margin-top:1rem;padding:.7rem 1.5rem;border-radius:10px;background:#4f46e5;color:#fff;font-size:.85rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;">Ask Our Engineers →</a>
-        </div>
-      </div>
-      <div class="col-lg-8" data-anim="slide-right">
-        <div class="nbl-faq-item" onclick="toggleFAQ(this)">
-          <button class="nbl-faq-question">What wireless protocols do Nebulae products support?<div class="nbl-faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
-          <div class="nbl-faq-answer"><div class="nbl-faq-answer-inner">Nebulae supports six major IoT protocols: LoRa/LoRaWAN, Wi-SUN, Zigbee, Wi-Fi (2.4GHz &amp; 5GHz), GSM/4G LTE/NB-IoT, and Bluetooth Low Energy (BLE 5.x). Each protocol is available across module, gateway, filter, EVK, concentrator, and node form factors.</div></div>
-        </div>
-        <div class="nbl-faq-item" onclick="toggleFAQ(this)">
-          <button class="nbl-faq-question">Are your products certified for use in India?<div class="nbl-faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
-          <div class="nbl-faq-answer"><div class="nbl-faq-answer-inner">Yes. All wireless products carry WPC (Wireless Planning &amp; Coordination) approval from India's Department of Telecommunications. Applicable products also hold BIS certification and international certifications including CE and FCC, enabling global deployment.</div></div>
-        </div>
-        <div class="nbl-faq-item" onclick="toggleFAQ(this)">
-          <button class="nbl-faq-question">Do you offer Evaluation Kits (EVKs) for prototyping?<div class="nbl-faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
-          <div class="nbl-faq-answer"><div class="nbl-faq-answer-inner">Yes. We offer complete EVKs for all major protocols — LoRa, Wi-SUN, and Zigbee. Each EVK includes the development board, antenna, USB cable, firmware source code, schematics, and detailed documentation to get you running within hours of unboxing.</div></div>
-        </div>
-        <div class="nbl-faq-item" onclick="toggleFAQ(this)">
-          <button class="nbl-faq-question">Can Nebulae develop a custom IoT product end-to-end?<div class="nbl-faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
-          <div class="nbl-faq-answer"><div class="nbl-faq-answer-inner">Absolutely. Our services cover the full stack: PCB design, embedded hardware design, firmware development, IoT cloud integration, mobile app development, and production support. We take projects from concept to mass production under one roof in Gujarat, India.</div></div>
-        </div>
-        <div class="nbl-faq-item" onclick="toggleFAQ(this)">
-          <button class="nbl-faq-question">What is the minimum order quantity for modules?<div class="nbl-faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
-          <div class="nbl-faq-answer"><div class="nbl-faq-answer-inner">We cater to orders of all sizes — from single-unit samples for engineers and researchers to large-volume production orders for utilities and smart city projects. Contact our sales team for pricing tiers and volume discounts.</div></div>
-        </div>
-        <div class="nbl-faq-item" onclick="toggleFAQ(this)">
-          <button class="nbl-faq-question">Which cloud platforms do your gateways integrate with?<div class="nbl-faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
-          <div class="nbl-faq-answer"><div class="nbl-faq-answer-inner">Our LoRaWAN gateways are compatible with The Things Network (TTN), Chirpstack, AWS IoT Core, Azure IoT Hub, and Tuya Cloud. Wi-SUN and Zigbee gateways support MQTT and REST API connectivity for custom integration with any cloud platform.</div></div>
-        </div>
-        <div class="nbl-faq-item" onclick="toggleFAQ(this)">
-          <button class="nbl-faq-question">Do you provide technical support after purchase?<div class="nbl-faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
-          <div class="nbl-faq-answer"><div class="nbl-faq-answer-inner">Yes. All products come with dedicated engineering support including documentation, datasheets, application notes, and direct access to our hardware and firmware engineers. Enterprise customers receive priority SLA-based support with dedicated account management.</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+ 
+ 
 
 <!-- ═══ 9. CTA SECTION (NEW) ═══ -->
 <section class="nbl-cta-section" id="cta">
@@ -5143,9 +5437,15 @@ img:not([loading=lazy]){opacity:1;}
       <h2 class="nbl-cta-title">Ready to Build Your<br><span>IoT Solution?</span></h2>
       <p class="nbl-cta-desc">Talk to our engineers today. Whether you need a single module or a complete end-to-end IoT deployment — we've got you covered.</p>
       <div class="nbl-cta-btns">
-        <a href="contact.html" class="nbl-cta-btn-primary"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>Talk to an Engineer</a>
-        <a href="products.html" class="nbl-cta-btn-outline">Browse All Products</a>
-      </div>
+  <a href="contact.html" class="nbl-cta-btn-primary">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    Talk to an Engineer
+  </a>
+  <div class="nbl-cta-subscribe-pill">
+    <input type="email" placeholder="Enter your email address" />
+    <button type="submit" class="nbl-cta-btn-primary">Subscribe</button>
+  </div>
+</div>
       <div class="nbl-cta-contact-strip">
         <a href="tel:+9102692232501" class="nbl-cta-contact-item"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>+91-02692-232501</a>
         <a href="mailto:sales@nebulae.io" class="nbl-cta-contact-item"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>sales@nebulae.io</a>
@@ -5174,28 +5474,91 @@ img:not([loading=lazy]){opacity:1;}
 </section>
 
 
-<!-- ═══ SAMPLE / FREE EVK REQUEST ═══ -->
+<!-- ═══ SAMPLE /  EVK REQUEST ═══ -->
 <section class="nbl-sample-section">
   <div class="container">
-    <div class="nbl-sample-wrap">
-      <div class="nbl-sample-icon">
-        <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      <div class="nbl-sample-wrap">
+    
+    <div class="nbl-sample-text">
+      <h3>Request a Sample or Evaluation Kit</h3>
+      <p>Try before you buy. Qualified engineers and enterprises can request sample modules or full EVKs for evaluation — no commitment required.</p>
+    </div>
+    <div>
+      <button class="nbl-sample-btn" onclick="openModal()">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        Request Sample
+      </button>
+    </div>
+  </div>
+  </div>
+</section>
+<div class="modal-bg" id="modalBg" onclick="handleBgClick(event)">
+<div class="nbl-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+    <button class="nbl-modal-close" onclick="closeModal()" aria-label="Close">&#x2715;</button>
+
+
+    <div id="formView">
+      <h2 id="modalTitle">Request a Sample / EVK</h2>
+      <p class="sub">Fill in your details and we'll get back to you within 1–2 business days.</p>
+
+      <div class="form-row">
+        <div class="fld"><label>First name</label><input type="text" placeholder="Rizvan" id="fname"/></div>
+        <div class="fld"><label>Last name</label><input type="text" placeholder="Shah" id="lname"/></div>
       </div>
-      <div class="nbl-sample-text">
-        <h3>Request a Free Sample or Evaluation Kit</h3>
-        <p>Try before you buy. Qualified engineers and enterprises can request sample modules or full EVKs for evaluation — no commitment required.</p>
+      <div class="form-row">
+        <div class="fld"><label>Work email</label><input type="email" placeholder="you@company.com" id="email"/></div>
+        <div class="fld"><label>Phone</label><input type="tel" placeholder="+91 98765 43210" id="phone"/></div>
       </div>
-      <div class="nbl-sample-btns">
-        <a href="contact.html" class="nbl-sample-btn nbl-sample-btn--primary">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-          Request Free Sample
-        </a>
-        <a href="products/lora-evk.html" class="nbl-sample-btn nbl-sample-btn--outline">Browse EVKs →</a>
+      <div class="form-row">
+        <div class="fld"><label>Company</label><input type="text" placeholder="Nebulae" id="company"/></div>
+        <div class="fld"><label>Request type</label>
+          <select id="reqtype">
+            <option value="">Select…</option>
+            <option>Sample Module</option>
+            <option>Evaluation Kit (EVK)</option>
+            <option>Both</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row full">
+        <div class="fld"><label>Product / protocol of interest</label>
+          <select id="product">
+            <option value="">Select…</option>
+            <option>LoRaWAN Gateway</option>
+            <option>LoRaWAN Node</option>
+            <option>Wi-SUN Module</option>
+            <option>G3-PLC Module</option>
+            <option>6LoWPAN Node</option>
+            <option>ZigBee Module</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row full">
+        <div class="fld"><label>Message (optional)</label>
+          <textarea placeholder="Describe your use case or any specific requirements…" id="msg"></textarea>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+        <button class="btn-submit" onclick="submitForm()">Submit Request</button>
+      </div>
+    </div>
+
+    <div id="successView" style="display:none">
+      <div class="success-msg">
+        <div class="check">✓</div>
+        <h3>Request submitted!</h3>
+        <p>Thanks! Our team will review your request and reach out within 1–2 business days.</p>
+        <div style="margin-top:1.5rem">
+          <button class="btn-submit" onclick="closeModal()">Done</button>
+        </div>
       </div>
     </div>
   </div>
-</section>
-
+</div>
 <!-- ═══ 10. FOOTER (EXISTING — DO NOT MODIFY) ═══ -->
 <footer class="atl-footer">
   <div class="container">
@@ -5319,8 +5682,6 @@ img:not([loading=lazy]){opacity:1;}
         var open = mobile.classList.toggle("open");
         burger.classList.toggle("open", open);
         burger.setAttribute("aria-expanded", open);
-        /* Scroll-lock body while drawer is open */
-        document.body.style.overflow = open ? 'hidden' : '';
       });
     }
 
@@ -5400,10 +5761,7 @@ img:not([loading=lazy]){opacity:1;}
     $$(".atl-nav__item--mega").forEach(function (item) {
 
       /* ── Open on hover over the nav button ──────────── */
-      item.addEventListener("mouseenter", function () {
-        if (item._justClosed) return; /* skip if just closed by click */
-        openItem(item);
-      });
+      item.addEventListener("mouseenter", function () { openItem(item); });
 
       /* ── mousemove on the full-screen overlay backdrop ──
          When the mega is open, the backdrop (pointer-events:all)
@@ -5538,14 +5896,7 @@ img:not([loading=lazy]){opacity:1;}
     window.toggleMega = function(itemId) {
       var item = document.getElementById(itemId);
       if (!item) return;
-      if (item.classList.contains('mega-open')) {
-        closeItem(item);
-        /* Prevent the simultaneous mouseenter from immediately re-opening */
-        item._justClosed = true;
-        setTimeout(function(){ item._justClosed = false; }, 300);
-      } else {
-        openItem(item);
-      }
+      if (item.classList.contains('mega-open')) { closeItem(item); } else { openItem(item); }
     };
     window.ATL_toggleMega = window.toggleMega;
 
@@ -6047,9 +6398,9 @@ img:not([loading=lazy]){opacity:1;}
     if (el && window.bootstrap) bsModal = new bootstrap.Modal(el);
 
     initNav();
-    initScrollSpy();
-    initReveal();
-    initCounters();
+    // initScrollSpy();
+    // initReveal();
+    // initCounters();
 
     if (window.ATL_PRODUCTS) {
       renderGrid();
@@ -6247,8 +6598,20 @@ document.querySelectorAll('.atl-prod-rail__item').forEach(function(btn) {
 
 
 </script>
-<!-- global tab init dupe removed -->
-
+<script>
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+  });
+});
+</script>
+<script>
+(function(){var m=document.getElementById('cuThankModal');if(m)m.style.display='none';})();
+function closeCuModal(){var m=document.getElementById('cuThankModal');if(m){m.style.display='none';document.body.style.overflow='';}}
+</script>
 
 <div id="cuThankModal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:1rem;" onclick="event.stopPropagation();">
   <div style="background:#fff;border-radius:16px;width:100%;max-width:480px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.25);animation:cuModalPop .3s cubic-bezier(.34,1.56,.64,1) both;">
@@ -6273,62 +6636,14 @@ document.querySelectorAll('.atl-prod-rail__item').forEach(function(btn) {
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     WhatsApp
   </a>
-  <a href="contact.html" class="nbl-sticky-btn nbl-sticky-btn--primary" title="Talk to an Engineer">
+  <!-- <a href="contact.html" class="nbl-sticky-btn nbl-sticky-btn--primary" title="Talk to an Engineer">
     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
     Talk to Engineer
-  </a>
+  </a> -->
 </div>
 
-
-
-<!-- ═══ FLOATING QUOTE FORM ═══ -->
-<div id="nblFloatForm" role="dialog" aria-label="Quick quote form">
-  <div class="nbl-float-tab" onclick="toggleFloatForm()" aria-label="Toggle quote form">
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-    Get Quote
-  </div>
-  <div class="nbl-float-form-inner">
-    <h4>Quick Quote Request</h4>
-    <input class="nbl-float-input" id="ffName" type="text" placeholder="Your Name" autocomplete="name">
-    <input class="nbl-float-input" id="ffEmail" type="email" placeholder="Work Email" autocomplete="email">
-    <input class="nbl-float-input" id="ffPhone" type="tel" placeholder="Phone Number" autocomplete="tel">
-    <textarea class="nbl-float-input" id="ffMsg" rows="3" placeholder="Tell us about your project..." style="resize:vertical;"></textarea>
-    <button class="nbl-float-submit" onclick="submitFloatForm()">Send Request</button>
-  </div>
-</div>
-
-<!-- ═══ COOKIE CONSENT ═══ -->
-<div id="nblCookie" role="alert" aria-live="polite">
-  <p>We use cookies to improve your experience and analyse site traffic. By continuing you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
-  <div class="nbl-cookie-btns">
-    <button class="nbl-cookie-btn nbl-cookie-btn--decline" id="nblCookieDecline">Decline</button>
-    <button class="nbl-cookie-btn nbl-cookie-btn--accept" id="nblCookieAccept">Accept All</button>
-  </div>
-</div>
-
-
-<!-- expertise accordion dupe removed -->
 <script>
-/* =====================================================
-   NEBULAE — MERGED INLINE SCRIPTS
-   Sections:
-     1. Modal close helper
-     2. Use-Case Selector tabs
-     3. FAQ accordion
-     4. ROI Calculator
-     5. Visual polish (progress bar, back-to-top, cursor,
-        constellation, parallax, dark mode, scroll-spy,
-        lazy load, float form, cookie consent)
-     6. Expertise accordion
-     7. Solution tabs (scoped)
-     8. Header offset
-===================================================== */
 
-/* ── 1. Modal close helper ─────────────────────────── */
-(function(){var m=document.getElementById('cuThankModal');if(m)m.style.display='none';})();
-function closeCuModal(){var m=document.getElementById('cuThankModal');if(m){m.style.display='none';document.body.style.overflow='';}}
-
-/* ── 2-4. Use-Case, FAQ, ROI ───────────────────────── */
 /* ══ Use-Case Selector ══ */
 document.querySelectorAll('.nbl-uc-tab').forEach(function(tab){
   tab.addEventListener('click',function(){
@@ -6340,12 +6655,7 @@ document.querySelectorAll('.nbl-uc-tab').forEach(function(tab){
   });
 });
 
-/* ══ FAQ Toggle ══ */
-window.toggleFAQ=function(item){
-  var isOpen=item.classList.contains('open');
-  document.querySelectorAll('.nbl-faq-item').forEach(function(i){i.classList.remove('open');});
-  if(!isOpen)item.classList.add('open');
-};
+ 
 
 /* ══ ROI Calculator ══ */
 window.calcROI=function(){
@@ -6419,7 +6729,35 @@ window.subscribeNewsletter=function(){
   cta.style.transition='opacity .3s,transform .3s';
 })();
 
-/* ── 5. Visual polish + UX ─────────────────────────── */
+</script>
+
+<!-- ═══ FLOATING QUOTE FORM ═══ -->
+<div id="nblFloatForm" role="dialog" aria-label="Quick quote form">
+  <div class="nbl-float-tab" onclick="toggleFloatForm()" aria-label="Toggle quote form">
+    <!-- <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> -->
+    Get Quote
+  </div>
+  <div class="nbl-float-form-inner">
+    <h4>Quick Quote Request</h4>
+    <input class="nbl-float-input" id="ffName" type="text" placeholder="Your Name" autocomplete="name">
+    <input class="nbl-float-input" id="ffEmail" type="email" placeholder="Work Email" autocomplete="email">
+    <input class="nbl-float-input" id="ffPhone" type="tel" placeholder="Phone Number" autocomplete="tel">
+    <textarea class="nbl-float-input" id="ffMsg" rows="3" placeholder="Tell us about your project..." style="resize:vertical;"></textarea>
+    <button class="nbl-float-submit" onclick="submitFloatForm()">Send Request</button>
+  </div>
+</div>
+
+<!-- ═══ COOKIE CONSENT ═══ -->
+<div id="nblCookie" role="alert" aria-live="polite">
+  <p>We use cookies to improve your experience and analyse site traffic. By continuing you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="nbl-cookie-btns">
+    <button class="nbl-cookie-btn nbl-cookie-btn--decline" id="nblCookieDecline">Decline</button>
+    <button class="nbl-cookie-btn nbl-cookie-btn--accept" id="nblCookieAccept">Accept All</button>
+  </div>
+</div>
+
+<script>
+
 /* ═══════════════════════════════════════════════════
    NEBULAE — VISUAL POLISH + UX + PERFORMANCE JS
 ═══════════════════════════════════════════════════ */
@@ -6484,13 +6822,10 @@ window.subscribeNewsletter=function(){
   if(!canvas)return;
   var ctx=canvas.getContext('2d');
   var pts=[],W,H,NUM=80,CONN=120;
-  var rafId=null,isVisible=false;
   function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight;}
   resize();window.addEventListener('resize',resize,{passive:true});
   for(var i=0;i<NUM;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3});
   function draw(){
-    if(!isVisible){rafId=null;return;}
-    rafId=requestAnimationFrame(draw);
     ctx.clearRect(0,0,W,H);
     for(var i=0;i<pts.length;i++){
       var p=pts[i];
@@ -6508,13 +6843,9 @@ window.subscribeNewsletter=function(){
         }
       }
     }
+    requestAnimationFrame(draw);
   }
-  /* Pause animation when canvas is scrolled out of view */
-  var io=new IntersectionObserver(function(entries){
-    isVisible=entries[0].isIntersecting;
-    if(isVisible&&!rafId)draw();
-  },{threshold:0});
-  io.observe(canvas);
+  draw();
 })();
 
 /* ─ Parallax on scroll ─ */
@@ -6584,22 +6915,14 @@ window.subscribeNewsletter=function(){
 window.toggleFloatForm=function(){
   var f=document.getElementById('nblFloatForm');
   if(f)f.classList.toggle('open');
-  /* Fields are NOT cleared on close — only on successful submit */
 };
 window.submitFloatForm=function(){
   var n=document.getElementById('ffName'),e=document.getElementById('ffEmail'),m=document.getElementById('ffMsg');
   if(!n||!e)return;
   if(!n.value.trim()||!e.value.trim()){return;}
+  [n,e,m].forEach(function(i){if(i)i.value='';});
   var btn=document.querySelector('.nbl-float-submit');
-  if(btn){
-    btn.textContent='✓ Sent!';btn.style.background='#059669';
-    setTimeout(function(){
-      /* Clear fields only after successful submit */
-      [n,e,m].forEach(function(i){if(i)i.value='';});
-      btn.textContent='Send Request';btn.style.background='';
-      toggleFloatForm();
-    },2500);
-  }
+  if(btn){btn.textContent='✓ Sent!';btn.style.background='#059669';setTimeout(function(){btn.textContent='Send Request';btn.style.background='';toggleFloatForm();},2500);}
 };
 
 /* ─ Cookie consent ─ */
@@ -6611,15 +6934,41 @@ window.submitFloatForm=function(){
   document.getElementById('nblCookieDecline').addEventListener('click',function(){banner.classList.add('hidden');});
 })();
 
-/* ── 6. Expertise accordion ────────────────────────── */
+</script>
+<script>
+
+/* ─ Expertise accordion ─ */
+(function(){
+  var cards=document.querySelectorAll('.nbl-exp-card');
+  window.setExpActive=function(idx){
+    cards.forEach(function(c,i){c.classList.toggle('nbl-exp-active',i===idx);});
+  };
+})();
+
+/* ─ Nebulae Solutions tabs (new tabs with nb- prefix) ─ */
+document.querySelectorAll('.tab').forEach(function(tab){
+  tab.addEventListener('click',function(){
+    var row=tab.closest('.section-wrapper')||tab.closest('section');
+    if(!row)return;
+    row.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
+    row.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
+    tab.classList.add('active');
+    var panel=document.getElementById('tab-'+tab.getAttribute('data-tab'));
+    if(panel)panel.classList.add('active');
+  });
+});
+
+</script>
+<script>
+
+/* Expertise accordion */
 (function(){
   var cards = document.querySelectorAll('.nbl-exp-card');
   window.setExpActive = function(idx){
     cards.forEach(function(c,i){ c.classList.toggle('nbl-exp-active', i===idx); });
   };
 })();
-
-/* ── 7. Solution tabs (scoped — safe with multiple tab groups) ── */
+/* Nebulae solution tabs */
 document.querySelectorAll('.tab').forEach(function(tab){
   tab.addEventListener('click', function(){
     var wrap = tab.closest('.section-wrapper') || tab.closest('section');
@@ -6632,16 +6981,39 @@ document.querySelectorAll('.tab').forEach(function(tab){
   });
 });
 
-/* ── 8. Header offset ───────────────────────────────── */
-(function(){
-  var hdr  = document.querySelector('.atl-sticky-header');
-  var hero = document.querySelector('.nbl-hero');
-  function setOffset(){
-    if(hdr && hero) hero.style.marginTop = hdr.offsetHeight + 'px';
+const header = document.querySelector('.atl-sticky-header');
+const body = document.querySelector('.nbl-hero');
+ 
+function setOffset() {
+  const headerHeight = header.offsetHeight;
+  body.style.marginTop = headerHeight + 'px';
+}
+ 
+window.addEventListener('load', setOffset);
+window.addEventListener('resize', setOffset);
+
+ 
+</script>
+<script>
+  function openModal() {
+    document.getElementById('modalBg').classList.add('open');
+    document.getElementById('formView').style.display = 'block';
+    document.getElementById('successView').style.display = 'none';
   }
-  window.addEventListener('load', setOffset);
-  window.addEventListener('resize', setOffset);
-})();
+  function closeModal() {
+    document.getElementById('modalBg').classList.remove('open');
+  }
+  function handleBgClick(e) {
+    if (e.target === document.getElementById('modalBg')) closeModal();
+  }
+  function submitForm() {
+    var f = document.getElementById('fname').value.trim();
+    var e = document.getElementById('email').value.trim();
+    var r = document.getElementById('reqtype').value;
+    if (!f || !e || !r) { alert('Please fill in First name, Email, and Request type.'); return; }
+    document.getElementById('formView').style.display = 'none';
+    document.getElementById('successView').style.display = 'block';
+  }
 </script>
 </body>
 </html>
