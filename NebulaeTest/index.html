@@ -46,6 +46,9 @@
   --fmono:   'IBM Plex Mono', monospace;
   --r:       10px;
   --sh:      0 4px 24px rgba(0,0,0,.07);
+  /* Extra tokens from landing sections */
+  --cyan:    #06b6d4;
+  --electric:#4f46e5;
 }
 *,*::before,*::after { box-sizing:border-box; }
 html { scroll-behavior:smooth; margin:0; padding:0; }
@@ -2724,11 +2727,14 @@ nav#atlNav {
     }
   }
  
-</style>
-<style>
 
+
+/* ═══════════════════════════════════════════════════
+   §  NEW LANDING SECTIONS — Hero, Tech, News
+   (Moved from separate <style> block)
+═══════════════════════════════════════════════════ */
 /* ═══════════════ NEW LANDING SECTIONS ══════════════ */
-:root{--cyan:#06b6d4;--electric:#4f46e5;}
+
 
 /* ─ NEBULAE HERO ─ */
 .nbl-hero{min-height:100vh;background:linear-gradient(135deg,#03031a 0%,#070726 40%,#0c0c38 70%,#06061f 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:5rem 0 4rem;}
@@ -2886,8 +2892,9 @@ nav#atlNav {
 @media(max-width:991.98px){.nbl-hero{min-height:auto;padding:4rem 0 3rem;}.nbl-hero__visual{margin-top:2.5rem;}.nbl-hero__stats{gap:1.25rem;}.nbl-hero__stat-divider{display:none;}.nbl-cta-wrap{padding:3rem 1.5rem;}}
 @media(max-width:767.98px){.nbl-hero{padding:3rem 0 2.5rem;}.nbl-hero__btns,.nbl-cta-btns{flex-direction:column;}.nbl-btn-primary,.nbl-btn-outline,.nbl-cta-btn-primary,.nbl-cta-btn-outline{width:100%;justify-content:center;}.nbl-tech-section,.nbl-products-section,.nbl-updates-section,.nbl-why-section,.nbl-cta-section{padding:3.5rem 0;}.nbl-hero__stats{justify-content:center;}.nbl-cta-contact-strip{gap:1.25rem;}}
 
-</style>
-<style>
+/* ═══════════════════════════════════════════════════
+   §  ADDITIONAL LANDING — Modals, Contact, Transitions
+═══════════════════════════════════════════════════ */
 html,body{margin:0!important;}
 /* body{padding-top:100px!important;} */
 /* @media(max-width:767.98px){body{padding-top:64px!important;}} */
@@ -3122,90 +3129,10 @@ html,body{margin:0!important;}
   .nbl-sticky-cta{bottom:1rem;right:1rem;}
 }
 
-</style>
-
-  <!-- SEO: Canonical & Language -->
-  <link rel="canonical" href="https://www.nebulae.io/" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="theme-color" content="#313185" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Nebulae | IoT, LoRa, Wi-SUN &amp; Smart Connectivity Solutions" />
-  <meta property="og:description" content="India's premier IoT hardware manufacturer — LoRa, Wi-SUN, Zigbee, BLE, Wi-Fi, GSM modules &amp; gateways for smart metering, smart cities, and industrial IoT." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.nebulae.io/" />
-  <meta property="og:image" content="https://www.nebulae.io/images/og-nebulae.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:site_name" content="Nebulae IoT Solutions" />
-  <meta property="og:locale" content="en_IN" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Nebulae | IoT &amp; Smart Connectivity Solutions" />
-  <meta name="twitter:description" content="LoRa, Wi-SUN, Zigbee, GSM &amp; BLE modules built for India's smart infrastructure." />
-  <meta name="twitter:image" content="https://www.nebulae.io/images/og-nebulae.jpg" />
-
-  <!-- JSON-LD: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Nebulae",
-    "url": "https://www.nebulae.io",
-    "logo": "https://www.nebulae.io/images/LogoBlue.png",
-    "description": "India's premier IoT hardware manufacturer specialising in LoRa, Wi-SUN, Zigbee, Wi-Fi, GSM and BLE wireless modules, gateways and smart connectivity solutions.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Anand",
-      "addressRegion": "Gujarat",
-      "addressCountry": "IN"
-    },
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "telephone": "+91-02692-232501",
-      "contactType": "sales",
-      "email": "sales@nebulae.io",
-      "areaServed": "IN"
-    }],
-    "sameAs": [
-      "https://www.linkedin.com/company/nebulae-iot",
-      "https://twitter.com/nebulaeiot"
-    ]
-  }
-  </script>
-
-  <!-- JSON-LD: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"What wireless protocols do Nebulae products support?","acceptedAnswer":{"@type":"Answer","text":"Nebulae supports LoRa/LoRaWAN, Wi-SUN, Zigbee, Wi-Fi, GSM/4G LTE/NB-IoT, and Bluetooth Low Energy (BLE 5.x)."}},
-      {"@type":"Question","name":"Are Nebulae products certified for use in India?","acceptedAnswer":{"@type":"Answer","text":"Yes. All wireless products carry WPC approval, BIS certification, and international CE/FCC certifications."}},
-      {"@type":"Question","name":"Do you offer Evaluation Kits for prototyping?","acceptedAnswer":{"@type":"Answer","text":"Yes, complete EVKs are available for LoRa, Wi-SUN, and Zigbee with firmware, schematics, and documentation."}},
-      {"@type":"Question","name":"Can Nebulae develop a custom IoT product end-to-end?","acceptedAnswer":{"@type":"Answer","text":"Yes. Services cover PCB design, firmware, cloud integration, mobile app, and production support."}}
-    ]
-  }
-  </script>
-
-  <!-- JSON-LD: WebSite with SearchAction -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Nebulae IoT Solutions",
-    "url": "https://www.nebulae.io",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.nebulae.io/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
-<style>
-
+/* ═══════════════════════════════════════════════════
+   §  VISUAL POLISH — Progress bar, Back-to-top, Cursor,
+      Cookie, Float form, Sticky CTA
+═══════════════════════════════════════════════════ */
 /* ══════════════════════════════════════════════
    VISUAL POLISH + UX + PERFORMANCE CSS
 ══════════════════════════════════════════════ */
@@ -3303,9 +3230,9 @@ img:not([loading=lazy]){opacity:1;}
 .nbl-float-submit:hover{opacity:.9;}
 @media(max-width:767.98px){#nblFloatForm{display:none;}}
 
-</style>
-<style>
-
+/* ═══════════════════════════════════════════════════
+   §  EXPERTISE ACCORDION
+═══════════════════════════════════════════════════ */
 /* ════════════════════════════════════════════
    EXPERTISE ACCORDION SECTION
 ════════════════════════════════════════════ */
@@ -3380,7 +3307,99 @@ img:not([loading=lazy]){opacity:1;}
   .nbl-exp-card:not(.nbl-exp-active) .nbl-exp-img img{opacity:0!important;transform:scale(1.06)!important;}
 }
 
+.nbl-compare-table.table-striped tbody tr:nth-child(even) {
+  background-color: #f8fafc; /* light gray */
+}
+
+.nbl-compare-table.table-striped tbody tr:nth-child(odd) {
+  background-color: #CBCBE8  ; /* white */
+}
+
 </style>
+
+
+
+  <!-- SEO: Canonical & Language -->
+  <link rel="canonical" href="https://www.nebulae.io/" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#313185" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nebulae | IoT, LoRa, Wi-SUN &amp; Smart Connectivity Solutions" />
+  <meta property="og:description" content="India's premier IoT hardware manufacturer — LoRa, Wi-SUN, Zigbee, BLE, Wi-Fi, GSM modules &amp; gateways for smart metering, smart cities, and industrial IoT." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.nebulae.io/" />
+  <meta property="og:image" content="https://www.nebulae.io/images/og-nebulae.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Nebulae IoT Solutions" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nebulae | IoT &amp; Smart Connectivity Solutions" />
+  <meta name="twitter:description" content="LoRa, Wi-SUN, Zigbee, GSM &amp; BLE modules built for India's smart infrastructure." />
+  <meta name="twitter:image" content="https://www.nebulae.io/images/og-nebulae.jpg" />
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Nebulae",
+    "url": "https://www.nebulae.io",
+    "logo": "https://www.nebulae.io/images/LogoBlue.png",
+    "description": "India's premier IoT hardware manufacturer specialising in LoRa, Wi-SUN, Zigbee, Wi-Fi, GSM and BLE wireless modules, gateways and smart connectivity solutions.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Anand",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN"
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+91-02692-232501",
+      "contactType": "sales",
+      "email": "sales@nebulae.io",
+      "areaServed": "IN"
+    }],
+    "sameAs": [
+      "https://www.linkedin.com/company/nebulae-iot",
+      "https://twitter.com/nebulaeiot"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"What wireless protocols do Nebulae products support?","acceptedAnswer":{"@type":"Answer","text":"Nebulae supports LoRa/LoRaWAN, Wi-SUN, Zigbee, Wi-Fi, GSM/4G LTE/NB-IoT, and Bluetooth Low Energy (BLE 5.x)."}},
+      {"@type":"Question","name":"Are Nebulae products certified for use in India?","acceptedAnswer":{"@type":"Answer","text":"Yes. All wireless products carry WPC approval, BIS certification, and international CE/FCC certifications."}},
+      {"@type":"Question","name":"Do you offer Evaluation Kits for prototyping?","acceptedAnswer":{"@type":"Answer","text":"Yes, complete EVKs are available for LoRa, Wi-SUN, and Zigbee with firmware, schematics, and documentation."}},
+      {"@type":"Question","name":"Can Nebulae develop a custom IoT product end-to-end?","acceptedAnswer":{"@type":"Answer","text":"Yes. Services cover PCB design, firmware, cloud integration, mobile app, and production support."}}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: WebSite with SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Nebulae IoT Solutions",
+    "url": "https://www.nebulae.io",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.nebulae.io/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+
 </head>
 <body>
 <a class="nbl-skip-link" href="#nbl-hero">Skip to content</a>
@@ -4074,7 +4093,7 @@ img:not([loading=lazy]){opacity:1;}
       <p class="nbl-section-desc">Compare all six wireless protocols side-by-side across the metrics that matter most for your IoT deployment.</p>
     </div>
     <div class="nbl-compare-table-wrap" data-anim="slide-up">
-      <table class="nbl-compare-table">
+      <table class="nbl-compare-table table-striped">
         <thead>
           <tr>
             <th style="width:160px">Specification</th>
@@ -5300,6 +5319,8 @@ img:not([loading=lazy]){opacity:1;}
         var open = mobile.classList.toggle("open");
         burger.classList.toggle("open", open);
         burger.setAttribute("aria-expanded", open);
+        /* Scroll-lock body while drawer is open */
+        document.body.style.overflow = open ? 'hidden' : '';
       });
     }
 
@@ -6226,20 +6247,8 @@ document.querySelectorAll('.atl-prod-rail__item').forEach(function(btn) {
 
 
 </script>
-<script>
-document.querySelectorAll('.tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
-  });
-});
-</script>
-<script>
-(function(){var m=document.getElementById('cuThankModal');if(m)m.style.display='none';})();
-function closeCuModal(){var m=document.getElementById('cuThankModal');if(m){m.style.display='none';document.body.style.overflow='';}}
-</script>
+<!-- global tab init dupe removed -->
+
 
 <div id="cuThankModal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:1rem;" onclick="event.stopPropagation();">
   <div style="background:#fff;border-radius:16px;width:100%;max-width:480px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.25);animation:cuModalPop .3s cubic-bezier(.34,1.56,.64,1) both;">
@@ -6270,8 +6279,56 @@ function closeCuModal(){var m=document.getElementById('cuThankModal');if(m){m.st
   </a>
 </div>
 
-<script>
 
+
+<!-- ═══ FLOATING QUOTE FORM ═══ -->
+<div id="nblFloatForm" role="dialog" aria-label="Quick quote form">
+  <div class="nbl-float-tab" onclick="toggleFloatForm()" aria-label="Toggle quote form">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    Get Quote
+  </div>
+  <div class="nbl-float-form-inner">
+    <h4>Quick Quote Request</h4>
+    <input class="nbl-float-input" id="ffName" type="text" placeholder="Your Name" autocomplete="name">
+    <input class="nbl-float-input" id="ffEmail" type="email" placeholder="Work Email" autocomplete="email">
+    <input class="nbl-float-input" id="ffPhone" type="tel" placeholder="Phone Number" autocomplete="tel">
+    <textarea class="nbl-float-input" id="ffMsg" rows="3" placeholder="Tell us about your project..." style="resize:vertical;"></textarea>
+    <button class="nbl-float-submit" onclick="submitFloatForm()">Send Request</button>
+  </div>
+</div>
+
+<!-- ═══ COOKIE CONSENT ═══ -->
+<div id="nblCookie" role="alert" aria-live="polite">
+  <p>We use cookies to improve your experience and analyse site traffic. By continuing you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="nbl-cookie-btns">
+    <button class="nbl-cookie-btn nbl-cookie-btn--decline" id="nblCookieDecline">Decline</button>
+    <button class="nbl-cookie-btn nbl-cookie-btn--accept" id="nblCookieAccept">Accept All</button>
+  </div>
+</div>
+
+
+<!-- expertise accordion dupe removed -->
+<script>
+/* =====================================================
+   NEBULAE — MERGED INLINE SCRIPTS
+   Sections:
+     1. Modal close helper
+     2. Use-Case Selector tabs
+     3. FAQ accordion
+     4. ROI Calculator
+     5. Visual polish (progress bar, back-to-top, cursor,
+        constellation, parallax, dark mode, scroll-spy,
+        lazy load, float form, cookie consent)
+     6. Expertise accordion
+     7. Solution tabs (scoped)
+     8. Header offset
+===================================================== */
+
+/* ── 1. Modal close helper ─────────────────────────── */
+(function(){var m=document.getElementById('cuThankModal');if(m)m.style.display='none';})();
+function closeCuModal(){var m=document.getElementById('cuThankModal');if(m){m.style.display='none';document.body.style.overflow='';}}
+
+/* ── 2-4. Use-Case, FAQ, ROI ───────────────────────── */
 /* ══ Use-Case Selector ══ */
 document.querySelectorAll('.nbl-uc-tab').forEach(function(tab){
   tab.addEventListener('click',function(){
@@ -6362,35 +6419,7 @@ window.subscribeNewsletter=function(){
   cta.style.transition='opacity .3s,transform .3s';
 })();
 
-</script>
-
-<!-- ═══ FLOATING QUOTE FORM ═══ -->
-<div id="nblFloatForm" role="dialog" aria-label="Quick quote form">
-  <div class="nbl-float-tab" onclick="toggleFloatForm()" aria-label="Toggle quote form">
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-    Get Quote
-  </div>
-  <div class="nbl-float-form-inner">
-    <h4>Quick Quote Request</h4>
-    <input class="nbl-float-input" id="ffName" type="text" placeholder="Your Name" autocomplete="name">
-    <input class="nbl-float-input" id="ffEmail" type="email" placeholder="Work Email" autocomplete="email">
-    <input class="nbl-float-input" id="ffPhone" type="tel" placeholder="Phone Number" autocomplete="tel">
-    <textarea class="nbl-float-input" id="ffMsg" rows="3" placeholder="Tell us about your project..." style="resize:vertical;"></textarea>
-    <button class="nbl-float-submit" onclick="submitFloatForm()">Send Request</button>
-  </div>
-</div>
-
-<!-- ═══ COOKIE CONSENT ═══ -->
-<div id="nblCookie" role="alert" aria-live="polite">
-  <p>We use cookies to improve your experience and analyse site traffic. By continuing you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
-  <div class="nbl-cookie-btns">
-    <button class="nbl-cookie-btn nbl-cookie-btn--decline" id="nblCookieDecline">Decline</button>
-    <button class="nbl-cookie-btn nbl-cookie-btn--accept" id="nblCookieAccept">Accept All</button>
-  </div>
-</div>
-
-<script>
-
+/* ── 5. Visual polish + UX ─────────────────────────── */
 /* ═══════════════════════════════════════════════════
    NEBULAE — VISUAL POLISH + UX + PERFORMANCE JS
 ═══════════════════════════════════════════════════ */
@@ -6455,10 +6484,13 @@ window.subscribeNewsletter=function(){
   if(!canvas)return;
   var ctx=canvas.getContext('2d');
   var pts=[],W,H,NUM=80,CONN=120;
+  var rafId=null,isVisible=false;
   function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight;}
   resize();window.addEventListener('resize',resize,{passive:true});
   for(var i=0;i<NUM;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3});
   function draw(){
+    if(!isVisible){rafId=null;return;}
+    rafId=requestAnimationFrame(draw);
     ctx.clearRect(0,0,W,H);
     for(var i=0;i<pts.length;i++){
       var p=pts[i];
@@ -6476,9 +6508,13 @@ window.subscribeNewsletter=function(){
         }
       }
     }
-    requestAnimationFrame(draw);
   }
-  draw();
+  /* Pause animation when canvas is scrolled out of view */
+  var io=new IntersectionObserver(function(entries){
+    isVisible=entries[0].isIntersecting;
+    if(isVisible&&!rafId)draw();
+  },{threshold:0});
+  io.observe(canvas);
 })();
 
 /* ─ Parallax on scroll ─ */
@@ -6548,14 +6584,22 @@ window.subscribeNewsletter=function(){
 window.toggleFloatForm=function(){
   var f=document.getElementById('nblFloatForm');
   if(f)f.classList.toggle('open');
+  /* Fields are NOT cleared on close — only on successful submit */
 };
 window.submitFloatForm=function(){
   var n=document.getElementById('ffName'),e=document.getElementById('ffEmail'),m=document.getElementById('ffMsg');
   if(!n||!e)return;
   if(!n.value.trim()||!e.value.trim()){return;}
-  [n,e,m].forEach(function(i){if(i)i.value='';});
   var btn=document.querySelector('.nbl-float-submit');
-  if(btn){btn.textContent='✓ Sent!';btn.style.background='#059669';setTimeout(function(){btn.textContent='Send Request';btn.style.background='';toggleFloatForm();},2500);}
+  if(btn){
+    btn.textContent='✓ Sent!';btn.style.background='#059669';
+    setTimeout(function(){
+      /* Clear fields only after successful submit */
+      [n,e,m].forEach(function(i){if(i)i.value='';});
+      btn.textContent='Send Request';btn.style.background='';
+      toggleFloatForm();
+    },2500);
+  }
 };
 
 /* ─ Cookie consent ─ */
@@ -6567,41 +6611,15 @@ window.submitFloatForm=function(){
   document.getElementById('nblCookieDecline').addEventListener('click',function(){banner.classList.add('hidden');});
 })();
 
-</script>
-<script>
-
-/* ─ Expertise accordion ─ */
-(function(){
-  var cards=document.querySelectorAll('.nbl-exp-card');
-  window.setExpActive=function(idx){
-    cards.forEach(function(c,i){c.classList.toggle('nbl-exp-active',i===idx);});
-  };
-})();
-
-/* ─ Nebulae Solutions tabs (new tabs with nb- prefix) ─ */
-document.querySelectorAll('.tab').forEach(function(tab){
-  tab.addEventListener('click',function(){
-    var row=tab.closest('.section-wrapper')||tab.closest('section');
-    if(!row)return;
-    row.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
-    row.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
-    tab.classList.add('active');
-    var panel=document.getElementById('tab-'+tab.getAttribute('data-tab'));
-    if(panel)panel.classList.add('active');
-  });
-});
-
-</script>
-<script>
-
-/* Expertise accordion */
+/* ── 6. Expertise accordion ────────────────────────── */
 (function(){
   var cards = document.querySelectorAll('.nbl-exp-card');
   window.setExpActive = function(idx){
     cards.forEach(function(c,i){ c.classList.toggle('nbl-exp-active', i===idx); });
   };
 })();
-/* Nebulae solution tabs */
+
+/* ── 7. Solution tabs (scoped — safe with multiple tab groups) ── */
 document.querySelectorAll('.tab').forEach(function(tab){
   tab.addEventListener('click', function(){
     var wrap = tab.closest('.section-wrapper') || tab.closest('section');
@@ -6614,16 +6632,16 @@ document.querySelectorAll('.tab').forEach(function(tab){
   });
 });
 
-const header = document.querySelector('.atl-sticky-header');
-const body = document.querySelector('.nbl-hero');
- 
-function setOffset() {
-  const headerHeight = header.offsetHeight;
-  body.style.marginTop = headerHeight + 'px';
-}
- 
-window.addEventListener('load', setOffset);
-window.addEventListener('resize', setOffset);
+/* ── 8. Header offset ───────────────────────────────── */
+(function(){
+  var hdr  = document.querySelector('.atl-sticky-header');
+  var hero = document.querySelector('.nbl-hero');
+  function setOffset(){
+    if(hdr && hero) hero.style.marginTop = hdr.offsetHeight + 'px';
+  }
+  window.addEventListener('load', setOffset);
+  window.addEventListener('resize', setOffset);
+})();
 </script>
 </body>
 </html>

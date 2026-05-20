@@ -3306,6 +3306,15 @@ img:not([loading=lazy]){opacity:1;}
   .nbl-exp-row:has(.nbl-exp-card:hover) .nbl-exp-card:hover .nbl-exp-img img{opacity:1!important;transform:scale(1)!important;}
   .nbl-exp-card:not(.nbl-exp-active) .nbl-exp-img img{opacity:0!important;transform:scale(1.06)!important;}
 }
+
+.nbl-compare-table.table-striped tbody tr:nth-child(even) {
+  background-color: #f8fafc; /* light gray */
+}
+
+.nbl-compare-table.table-striped tbody tr:nth-child(odd) {
+  background-color: #CBCBE8  ; /* white */
+}
+
 </style>
 
 
@@ -4084,7 +4093,7 @@ img:not([loading=lazy]){opacity:1;}
       <p class="nbl-section-desc">Compare all six wireless protocols side-by-side across the metrics that matter most for your IoT deployment.</p>
     </div>
     <div class="nbl-compare-table-wrap" data-anim="slide-up">
-      <table class="nbl-compare-table">
+      <table class="nbl-compare-table table-striped">
         <thead>
           <tr>
             <th style="width:160px">Specification</th>
