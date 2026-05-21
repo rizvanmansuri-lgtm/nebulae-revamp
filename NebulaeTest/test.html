@@ -3042,6 +3042,7 @@ html,body{margin:0!important;}
       align-items: center;
       width: max-content;
       animation: marquee 32s linear infinite;
+      height: 90px;
     }
 
     .nbl-logos-track:hover { animation-play-state: paused; }
@@ -3099,26 +3100,65 @@ html,body{margin:0!important;}
 .nbl-stat-icon{width:40px;height:40px;border-radius:10px;background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.2);display:flex;align-items:center;justify-content:center;margin:0 auto .75rem;color:#06b6d4;}
 
 /* ─ PROTOCOL COMPARISON ─ */
-.nbl-compare-section{background:#fff;padding:5rem 0;}
-.nbl-compare-table-wrap{overflow-x:auto;border-radius:18px;border:1.5px solid #e5e7eb;box-shadow:0 4px 24px rgba(79,70,229,.06);}
-.nbl-compare-table{width:100%;border-collapse:collapse;min-width:700px;}
-.nbl-compare-table th{padding:1.1rem 1.25rem;font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;background:#f8f9ff;border-bottom:2px solid #e5e7eb;text-align:center;white-space:nowrap;}
-.nbl-compare-table th:first-child{text-align:left;border-right:1px solid #e5e7eb;}
-.nbl-compare-table td{padding:1rem 1.25rem;font-size:.87rem;color:#374151;border-bottom:1px solid #f3f4f6;text-align:center;vertical-align:middle;}
-.nbl-compare-table td:first-child{text-align:left;font-weight:700;color:#111827;border-right:1px solid #f3f4f6;background:#fafafe;}
+.nbl-compare-section{background:#f8f9ff;padding:5rem 0;}
+.nbl-compare-wrap{margin-top:2.5rem;}
+.nbl-compare-scroll{overflow-x:auto;border-radius:20px;border:1.5px solid #e5e7eb;background:#fff;box-shadow:0 8px 40px rgba(79,70,229,.08);}
+.nbl-compare-table{width:100%;border-collapse:collapse;min-width:760px;}
+
+/* ── header ── */
+.nbl-compare-table thead tr th{padding:0;border-bottom:1.5px solid #e5e7eb;vertical-align:bottom;}
+.nbl-compare-table thead tr th.nbl-compare-spec-col{width:148px;}
+.nbl-proto-head{display:flex;flex-direction:column;align-items:center;gap:.45rem;padding:1.4rem .75rem 1.1rem;position:relative;}
+.nbl-proto-head::after{content:'';position:absolute;bottom:0;left:16px;right:16px;height:2.5px;border-radius:2px 2px 0 0;}
+.nbl-proto-head__icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;}
+.nbl-proto-head__name{font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-family:'Outfit',sans-serif;}
+
+/* per-protocol colours */
+.nbl-proto--lora .nbl-proto-head__icon{background:rgba(37,99,235,.1);color:#2563eb;} .nbl-proto--lora .nbl-proto-head__name{color:#2563eb;} .nbl-proto--lora::after{background:#2563eb;}
+.nbl-proto--wisun .nbl-proto-head__icon{background:rgba(13,148,136,.1);color:#0d9488;} .nbl-proto--wisun .nbl-proto-head__name{color:#0d9488;} .nbl-proto--wisun::after{background:#0d9488;}
+.nbl-proto--zigbee .nbl-proto-head__icon{background:rgba(234,88,12,.1);color:#ea580c;} .nbl-proto--zigbee .nbl-proto-head__name{color:#ea580c;} .nbl-proto--zigbee::after{background:#ea580c;}
+.nbl-proto--wifi .nbl-proto-head__icon{background:rgba(79,70,229,.1);color:#4f46e5;} .nbl-proto--wifi .nbl-proto-head__name{color:#4f46e5;} .nbl-proto--wifi::after{background:#4f46e5;}
+.nbl-proto--gsm .nbl-proto-head__icon{background:rgba(220,38,38,.1);color:#dc2626;} .nbl-proto--gsm .nbl-proto-head__name{color:#dc2626;} .nbl-proto--gsm::after{background:#dc2626;}
+.nbl-proto--ble .nbl-proto-head__icon{background:rgba(124,58,237,.1);color:#7c3aed;} .nbl-proto--ble .nbl-proto-head__name{color:#7c3aed;} .nbl-proto--ble::after{background:#7c3aed;}
+
+/* ── body ── */
+.nbl-compare-table td{padding:.9rem .75rem;text-align:center;vertical-align:middle;border-bottom:1px solid #eef0f6;}
 .nbl-compare-table tr:last-child td{border-bottom:none;}
-.nbl-compare-table tr:hover td{background:#fafafe;}
-.nbl-compare-table tr:hover td:first-child{background:#f0f3ff;}
-.nbl-compare-badge{display:inline-block;padding:3px 10px;border-radius:100px;font-size:.72rem;font-weight:700;}
-.nbl-cb--green{background:rgba(16,185,129,.1);color:#059669;}
-.nbl-cb--blue{background:rgba(37,99,235,.1);color:#2563eb;}
-.nbl-cb--orange{background:rgba(234,88,12,.1);color:#ea580c;}
-.nbl-cb--purple{background:rgba(124,58,237,.1);color:#7c3aed;}
-.nbl-cb--teal{background:rgba(13,148,136,.1);color:#0d9488;}
-.nbl-cb--red{background:rgba(220,38,38,.1);color:#dc2626;}
-.nbl-cb--gray{background:rgba(107,114,128,.1);color:#6b7280;}
-.nbl-compare-check{color:#059669;font-size:1rem;}
-.nbl-compare-cross{color:#dc2626;font-size:.9rem;}
+
+/* stripes — strong enough to see */
+.nbl-compare-table tbody tr:nth-child(odd) td{background:#f0f3ff;}
+.nbl-compare-table tbody tr:nth-child(even) td{background:#fff;}
+
+/* spec column always slightly darker than its row */
+.nbl-compare-spec{padding:.95rem 1.25rem;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.06em;border-right:1.5px solid #e5e7eb;white-space:nowrap;text-align:left;}
+.nbl-compare-table tbody tr:nth-child(odd) td.nbl-compare-spec{background:#e4e9ff;}
+.nbl-compare-table tbody tr:nth-child(even) td.nbl-compare-spec{background:#f0f3ff;}
+
+/* hover */
+.nbl-compare-table tbody tr:hover td{background:#dde5ff!important;}
+.nbl-compare-table tbody tr:hover td.nbl-compare-spec{background:#c7d2ff!important;}
+
+/* products row */
+.nbl-compare-row--products td{background:#f8f9ff!important;border-top:2px solid #e5e7eb;border-bottom:none;}
+.nbl-compare-row--products td.nbl-compare-spec{background:#eef1ff!important;}
+
+/* ── misc ── */
+.nbl-compare-text{font-size:.82rem;color:#6b7280;}
+.nbl-cb{display:inline-block;padding:3px 11px;border-radius:100px;font-size:.72rem;font-weight:700;white-space:nowrap;}
+.nbl-cb--green{background:rgba(16,185,129,.12);color:#059669;}
+.nbl-cb--blue{background:rgba(37,99,235,.12);color:#2563eb;}
+.nbl-cb--orange{background:rgba(234,88,12,.12);color:#ea580c;}
+.nbl-cb--red{background:rgba(220,38,38,.12);color:#dc2626;}
+.nbl-cb--gray{background:rgba(107,114,128,.12);color:#6b7280;}
+
+/* product links */
+.nbl-proto-link{font-size:.82rem;font-weight:700;text-decoration:none;padding:4px 12px;border-radius:8px;display:inline-block;transition:background .15s;}
+.nbl-proto-link--lora{color:#2563eb;background:rgba(37,99,235,.08);} .nbl-proto-link--lora:hover{background:rgba(37,99,235,.18);}
+.nbl-proto-link--wisun{color:#0d9488;background:rgba(13,148,136,.08);} .nbl-proto-link--wisun:hover{background:rgba(13,148,136,.18);}
+.nbl-proto-link--zigbee{color:#ea580c;background:rgba(234,88,12,.08);} .nbl-proto-link--zigbee:hover{background:rgba(234,88,12,.18);}
+.nbl-proto-link--wifi{color:#4f46e5;background:rgba(79,70,229,.08);} .nbl-proto-link--wifi:hover{background:rgba(79,70,229,.18);}
+.nbl-proto-link--gsm{color:#dc2626;background:rgba(220,38,38,.08);} .nbl-proto-link--gsm:hover{background:rgba(220,38,38,.18);}
+.nbl-proto-link--ble{color:#7c3aed;background:rgba(124,58,237,.08);} .nbl-proto-link--ble:hover{background:rgba(124,58,237,.18);}
 
 /* ─ USE-CASE SELECTOR ─ */
 .nbl-usecase-section{background:#f5f7ff;padding:5rem 0;}
@@ -3210,7 +3250,7 @@ html,body{margin:0!important;}
 .nbl-map-stat__label{font-size:.76rem;color:rgba(255,255,255,.5);font-weight:500;}
 
 /* ─ ROI CALCULATOR ─ */
-.nbl-roi-section{background:#f5f7ff;padding:5.5rem 0;}
+/* .nbl-roi-section{background:#f5f7ff;padding:5.5rem 0;}
 .nbl-roi-wrap{background:#fff;border-radius:24px;border:1.5px solid #e5e7eb;box-shadow:0 8px 40px rgba(79,70,229,.07);overflow:hidden;}
 .nbl-roi-inputs{padding:2.5rem;border-right:1.5px solid #f0f0f8;}
 .nbl-roi-results{padding:2.5rem;background:linear-gradient(135deg,#0a0a2e,#1a1a6e);display:flex;flex-direction:column;justify-content:center;}
@@ -3222,7 +3262,7 @@ html,body{margin:0!important;}
 .nbl-roi-result-label{font-size:.72rem;color:rgba(255,255,255,.5);font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.35rem;}
 .nbl-roi-result-val{font-family:'Outfit',sans-serif;font-size:2rem;font-weight:800;background:linear-gradient(120deg,#06b6d4,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
 .nbl-roi-result-sub{font-size:.75rem;color:rgba(255,255,255,.35);margin-top:.2rem;}
-.nbl-roi-disclaimer{font-size:.7rem;color:rgba(255,255,255,.3);margin-top:1rem;line-height:1.5;}
+.nbl-roi-disclaimer{font-size:.7rem;color:rgba(255,255,255,.3);margin-top:1rem;line-height:1.5;} */
 
 /* ─ PRESS / AWARDS ─ */
 .nbl-press-section{background:#fff;padding:5rem 0;border-top:1px solid #f0f0f8;}
@@ -4429,37 +4469,97 @@ img:not([loading=lazy]){opacity:1;}
       <h2 class="nbl-section-title">Which Protocol is Right for You?</h2>
       <p class="nbl-section-desc">Compare all six wireless protocols side-by-side across the metrics that matter most for your IoT deployment.</p>
     </div>
-    <div class="nbl-compare-table-wrap" data-anim="slide-up">
-      <table class="nbl-compare-table">
-        <thead>
-          <tr>
-            <th style="width:160px">Specification</th>
-            <th>LoRa</th>
-            <th>Wi-SUN</th>
-            <th>Zigbee</th>
-            <th>Wi-Fi</th>
-            <th>GSM/LTE</th>
-            <th>BLE</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Range</td><td><span class="nbl-compare-badge nbl-cb--green">Up to 15km</span></td><td><span class="nbl-compare-badge nbl-cb--green">1–5km</span></td><td><span class="nbl-compare-badge nbl-cb--orange">100m mesh</span></td><td><span class="nbl-compare-badge nbl-cb--orange">~100m</span></td><td><span class="nbl-compare-badge nbl-cb--blue">Nationwide</span></td><td><span class="nbl-compare-badge nbl-cb--gray">~50m</span></td></tr>
-          <tr><td>Power Usage</td><td><span class="nbl-compare-badge nbl-cb--green">Ultra-low</span></td><td><span class="nbl-compare-badge nbl-cb--green">Low</span></td><td><span class="nbl-compare-badge nbl-cb--green">Very low</span></td><td><span class="nbl-compare-badge nbl-cb--red">High</span></td><td><span class="nbl-compare-badge nbl-cb--orange">Medium</span></td><td><span class="nbl-compare-badge nbl-cb--green">Ultra-low</span></td></tr>
-          <tr><td>Data Rate</td><td><span class="nbl-compare-badge nbl-cb--gray">0.3–50 kbps</span></td><td><span class="nbl-compare-badge nbl-cb--blue">300 kbps</span></td><td><span class="nbl-compare-badge nbl-cb--orange">250 kbps</span></td><td><span class="nbl-compare-badge nbl-cb--green">Up to 1Gbps</span></td><td><span class="nbl-compare-badge nbl-cb--blue">Up to 100Mbps</span></td><td><span class="nbl-compare-badge nbl-cb--orange">1–2 Mbps</span></td></tr>
-          <tr><td>Network Topology</td><td>Star</td><td>Mesh</td><td>Mesh</td><td>Star</td><td>Star</td><td>Point-to-Point</td></tr>
-          <tr><td>Best For</td><td>Smart metering, tracking</td><td>Smart grid, AMI</td><td>Smart home, BMS</td><td>Gateway, cloud</td><td>Remote monitoring</td><td>Wearables, proximity</td></tr>
-          <tr><td>Infrastructure Cost</td><td><span class="nbl-compare-badge nbl-cb--green">Low</span></td><td><span class="nbl-compare-badge nbl-cb--orange">Medium</span></td><td><span class="nbl-compare-badge nbl-cb--green">Low</span></td><td><span class="nbl-compare-badge nbl-cb--orange">Medium</span></td><td><span class="nbl-compare-badge nbl-cb--red">SIM cost</span></td><td><span class="nbl-compare-badge nbl-cb--green">Very low</span></td></tr>
-          <tr><td>Battery Life</td><td><span class="nbl-compare-badge nbl-cb--green">10+ years</span></td><td><span class="nbl-compare-badge nbl-cb--green">5–10 years</span></td><td><span class="nbl-compare-badge nbl-cb--green">2–5 years</span></td><td><span class="nbl-compare-badge nbl-cb--red">Hours–days</span></td><td><span class="nbl-compare-badge nbl-cb--orange">Months</span></td><td><span class="nbl-compare-badge nbl-cb--green">Years</span></td></tr>
-          <tr><td>Nebulae Products</td>
-            <td><a href="products/lora-module.html" style="color:#2563eb;font-weight:700;font-size:.82rem;text-decoration:none;">6 types →</a></td>
-            <td><a href="products/wisun-module.html" style="color:#0d9488;font-weight:700;font-size:.82rem;text-decoration:none;">6 types →</a></td>
-            <td><a href="products/zigbee-module.html" style="color:#ea580c;font-weight:700;font-size:.82rem;text-decoration:none;">6 types →</a></td>
-            <td><a href="products/wifi-module.html" style="color:#4f46e5;font-weight:700;font-size:.82rem;text-decoration:none;">2 types →</a></td>
-            <td><a href="products/gsm-module.html" style="color:#dc2626;font-weight:700;font-size:.82rem;text-decoration:none;">2 types →</a></td>
-            <td><a href="products/ble-module.html" style="color:#7c3aed;font-weight:700;font-size:.82rem;text-decoration:none;">2 types →</a></td>
-          </tr>
-        </tbody>
-      </table>
+
+    <div class="nbl-compare-wrap" data-anim="slide-up">
+      <div class="nbl-compare-scroll">
+        <table class="nbl-compare-table">
+          <thead>
+            <tr>
+              <th class="nbl-compare-spec-col"></th>
+              <th><div class="nbl-proto-head nbl-proto--lora"><div class="nbl-proto-head__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div><span class="nbl-proto-head__name">LoRa</span></div></th>
+              <th><div class="nbl-proto-head nbl-proto--wisun"><div class="nbl-proto-head__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div><span class="nbl-proto-head__name">Wi-SUN</span></div></th>
+              <th><div class="nbl-proto-head nbl-proto--zigbee"><div class="nbl-proto-head__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><span class="nbl-proto-head__name">Zigbee</span></div></th>
+              <th><div class="nbl-proto-head nbl-proto--wifi"><div class="nbl-proto-head__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div><span class="nbl-proto-head__name">Wi-Fi</span></div></th>
+              <th><div class="nbl-proto-head nbl-proto--gsm"><div class="nbl-proto-head__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><span class="nbl-proto-head__name">GSM/LTE</span></div></th>
+              <th><div class="nbl-proto-head nbl-proto--ble"><div class="nbl-proto-head__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></div><span class="nbl-proto-head__name">BLE</span></div></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="nbl-compare-spec">Range</td>
+              <td><span class="nbl-cb nbl-cb--green">Up to 15km</span></td>
+              <td><span class="nbl-cb nbl-cb--green">1–5km</span></td>
+              <td><span class="nbl-cb nbl-cb--orange">100m mesh</span></td>
+              <td><span class="nbl-cb nbl-cb--orange">~100m</span></td>
+              <td><span class="nbl-cb nbl-cb--blue">Nationwide</span></td>
+              <td><span class="nbl-cb nbl-cb--gray">~50m</span></td>
+            </tr>
+            <tr>
+              <td class="nbl-compare-spec">Power Usage</td>
+              <td><span class="nbl-cb nbl-cb--green">Ultra-low</span></td>
+              <td><span class="nbl-cb nbl-cb--green">Low</span></td>
+              <td><span class="nbl-cb nbl-cb--green">Very low</span></td>
+              <td><span class="nbl-cb nbl-cb--red">High</span></td>
+              <td><span class="nbl-cb nbl-cb--orange">Medium</span></td>
+              <td><span class="nbl-cb nbl-cb--green">Ultra-low</span></td>
+            </tr>
+            <tr>
+              <td class="nbl-compare-spec">Data Rate</td>
+              <td><span class="nbl-cb nbl-cb--gray">0.3–50 kbps</span></td>
+              <td><span class="nbl-cb nbl-cb--blue">300 kbps</span></td>
+              <td><span class="nbl-cb nbl-cb--orange">250 kbps</span></td>
+              <td><span class="nbl-cb nbl-cb--green">Up to 1Gbps</span></td>
+              <td><span class="nbl-cb nbl-cb--blue">Up to 100Mbps</span></td>
+              <td><span class="nbl-cb nbl-cb--orange">1–2 Mbps</span></td>
+            </tr>
+            <tr>
+              <td class="nbl-compare-spec">Topology</td>
+              <td><span class="nbl-compare-text">Star</span></td>
+              <td><span class="nbl-compare-text">Mesh</span></td>
+              <td><span class="nbl-compare-text">Mesh</span></td>
+              <td><span class="nbl-compare-text">Star</span></td>
+              <td><span class="nbl-compare-text">Star</span></td>
+              <td><span class="nbl-compare-text">P2P</span></td>
+            </tr>
+            <tr>
+              <td class="nbl-compare-spec">Best For</td>
+              <td><span class="nbl-compare-text">Smart metering, tracking</span></td>
+              <td><span class="nbl-compare-text">Smart grid, AMI</span></td>
+              <td><span class="nbl-compare-text">Smart home, BMS</span></td>
+              <td><span class="nbl-compare-text">Gateway, cloud</span></td>
+              <td><span class="nbl-compare-text">Remote monitoring</span></td>
+              <td><span class="nbl-compare-text">Wearables, proximity</span></td>
+            </tr>
+            <tr>
+              <td class="nbl-compare-spec">Infra Cost</td>
+              <td><span class="nbl-cb nbl-cb--green">Low</span></td>
+              <td><span class="nbl-cb nbl-cb--orange">Medium</span></td>
+              <td><span class="nbl-cb nbl-cb--green">Low</span></td>
+              <td><span class="nbl-cb nbl-cb--orange">Medium</span></td>
+              <td><span class="nbl-cb nbl-cb--red">SIM cost</span></td>
+              <td><span class="nbl-cb nbl-cb--green">Very low</span></td>
+            </tr>
+            <tr>
+              <td class="nbl-compare-spec">Battery Life</td>
+              <td><span class="nbl-cb nbl-cb--green">10+ years</span></td>
+              <td><span class="nbl-cb nbl-cb--green">5–10 years</span></td>
+              <td><span class="nbl-cb nbl-cb--green">2–5 years</span></td>
+              <td><span class="nbl-cb nbl-cb--red">Hours–days</span></td>
+              <td><span class="nbl-cb nbl-cb--orange">Months</span></td>
+              <td><span class="nbl-cb nbl-cb--green">Years</span></td>
+            </tr>
+            <tr class="nbl-compare-row--products">
+              <td class="nbl-compare-spec">Our Products</td>
+              <td><a href="products/lora-module.html" class="nbl-proto-link nbl-proto-link--lora">6 types →</a></td>
+              <td><a href="products/wisun-module.html" class="nbl-proto-link nbl-proto-link--wisun">6 types →</a></td>
+              <td><a href="products/zigbee-module.html" class="nbl-proto-link nbl-proto-link--zigbee">6 types →</a></td>
+              <td><a href="products/wifi-module.html" class="nbl-proto-link nbl-proto-link--wifi">2 types →</a></td>
+              <td><a href="products/gsm-module.html" class="nbl-proto-link nbl-proto-link--gsm">2 types →</a></td>
+              <td><a href="products/ble-module.html" class="nbl-proto-link nbl-proto-link--ble">2 types →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
@@ -5347,7 +5447,7 @@ img:not([loading=lazy]){opacity:1;}
 
 
 <!-- ═══ ROI CALCULATOR ═══ -->
-<section class="nbl-roi-section" id="roi-calculator">
+<!-- <section class="nbl-roi-section" id="roi-calculator">
   <div class="container">
     <div class="nbl-section-header nbl-section-header--center" data-anim="slide-up">
       <span class="nbl-section-eyebrow">ROI Calculator</span>
@@ -5395,7 +5495,7 @@ img:not([loading=lazy]){opacity:1;}
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- ═══ PRESS MENTIONS & AWARDS ═══ -->
@@ -6658,6 +6758,7 @@ document.querySelectorAll('.nbl-uc-tab').forEach(function(tab){
  
 
 /* ══ ROI Calculator ══ */
+/*
 window.calcROI=function(){
   var endpoints=parseInt(document.getElementById('roiEndpoints').value)||1000;
   var manualCost=parseInt(document.getElementById('roiManualCost').value)||500;
@@ -6672,7 +6773,7 @@ window.calcROI=function(){
   document.getElementById('roiTotal').textContent=fmt(total);
 };
 calcROI();
-
+*/
 /* ══ Newsletter ══ */
 window.subscribeNewsletter=function(){
   var inp=document.getElementById('newsletterEmail');
