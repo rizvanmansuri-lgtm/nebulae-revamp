@@ -1,4 +1,26 @@
 /* =====================================================
+   nebulae-nav.css
+   Header & Footer shared styles — include on EVERY page.
+   Contains: CSS tokens, reset, utility bar, navbar,
+   mega menu, mobile drawer, brochure dropdown,
+   footer, sticky header fixes, responsive nav fixes.
+   ===================================================== */
+
+/* =====================================================
+   NEBULAE — MERGED STYLESHEET
+   All CSS in one block. Sections labelled below.
+   To extract to external file: save contents as nebulae.css
+   then use: link rel="stylesheet" href="nebulae.css"
+===================================================== */
+
+
+/* ════════════════════════════════════════════════════════════════
+   SECTION 1: GLOBAL TOKENS · RESET · BASE STYLES
+   UTILITY BAR · NAVBAR · MEGA MENU · MOBILE NAV
+   SCROLL ANIMATIONS · FILTER PILLS
+   ════════════════════════════════════════════════════════════════ */
+
+/* =====================================================
    atl-merged.css  —  Avartanam Test Labs
    Single unified stylesheet: Navbar + Home + About +
    Services/Products + Contact + Footer
@@ -582,7 +604,9 @@ img { max-width:100%; padding:5px; border:5px solid #fff; box-sizing:border-box;
 .atl-nav__item--mega.mega-open .atl-mega__col:nth-child(4) {
   opacity: 1; transform: translateY(0); transition-delay: 0.27s;
 }
-
+.atl-nav__item--mega.mega-open .atl-mega__col:nth-child(5) {
+  opacity: 1; transform: translateY(0); transition-delay: 0.27s;
+}
 /* Product cards — same downward stagger */
 .atl-mega__prod-card {
   opacity: 0;
@@ -596,6 +620,9 @@ img { max-width:100%; padding:5px; border:5px solid #fff; box-sizing:border-box;
   opacity: 1; transform: translateY(0); transition-delay: 0.15s;
 }
 .atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(3) {
+  opacity: 1; transform: translateY(0); transition-delay: 0.14s;
+}
+.atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(4) {
   opacity: 1; transform: translateY(0); transition-delay: 0.14s;
 }
 
@@ -2152,6 +2179,7 @@ a.atl-btn-back-home-nav:active,
 .atl-nav__item--mega.mega-open .atl-mega__col:nth-child(2) .atl-mega__col-head { transition-delay: 0.26s !important; }
 .atl-nav__item--mega.mega-open .atl-mega__col:nth-child(3) .atl-mega__col-head { transition-delay: 0.36s !important; }
 .atl-nav__item--mega.mega-open .atl-mega__col:nth-child(4) .atl-mega__col-head { transition-delay: 0.30s !important; }
+.atl-nav__item--mega.mega-open .atl-mega__col:nth-child(5) .atl-mega__col-head { transition-delay: 0.30s !important; }
 
 /* Column head items transition duration */
 .atl-mega__col-head {
@@ -2183,6 +2211,8 @@ a.atl-btn-back-home-nav:active,
 .atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(1) { transition-delay: 0.20s !important; }
 .atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(2) { transition-delay: 0.28s !important; }
 .atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(3) { transition-delay: 0.36s !important; }
+
+.atl-nav__item--mega.mega-open .atl-mega__prod-card:nth-child(4) { transition-delay: 0.36s !important; }
 
 /* Chevron arrow on nav link — fast spin */
 .atl-nav__link--has-mega svg,
@@ -2770,4 +2800,3 @@ nav#atlNav {
       justify-content: space-between;
     }
   }
- 

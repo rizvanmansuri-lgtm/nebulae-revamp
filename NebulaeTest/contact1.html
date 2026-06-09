@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Nebulae — IoT &amp; Smart Connectivity Solutions</title>
+  <meta name="description" content="Contact Nebulae for LoRa, Wi-SUN, Zigbee IoT module enquiries, custom IoT development, or technical support. Offices in India, USA, and UK." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.nebulae.io/contact.html" />
+  <meta property="og:title" content="Contact Nebulae | IoT Solutions India" />
+  <meta property="og:description" content="Get in touch with Nebulae's engineering team for product inquiries, custom IoT development, and technical support." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.nebulae.io/contact.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/nebulae-nav.css">
+  <style>
+/* ═══════════════════════════════════════════════════
+   §  CONTACT PAGE — Progress bar, back-to-top, hero,
+      form, map, FAQ, CTA, dark-mode
+      (merged from separate <style> block)
+═══════════════════════════════════════════════════ */
+/* ── Progress bar ── */
+#nblProgressBar{position:fixed;top:0;left:0;height:3px;width:0%;z-index:99999;
+  background:linear-gradient(90deg,#4f46e5,#06b6d4,#818cf8);transition:width .1s linear;pointer-events:none;}
+
+/* ── Back to top ── */
+#nblBackTop{position:fixed;bottom:2rem;right:2rem;z-index:8887;width:44px;height:44px;
+  border-radius:50%;background:rgba(255,255,255,.9);border:1.5px solid #e5e7eb;
+  box-shadow:0 4px 16px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;color:#4f46e5;opacity:0;transform:translateY(12px);
+  transition:opacity .3s,transform .3s;backdrop-filter:blur(8px);}
+#nblBackTop.visible{opacity:1;transform:translateY(0);}
+#nblBackTop:hover{background:#4f46e5;color:#fff;}
+
+/* ── Skip link ── */
+.nbl-skip-link{position:absolute;top:-100px;left:1rem;background:#4f46e5;color:#fff;
+  padding:.5rem 1rem;border-radius:0 0 8px 8px;font-weight:700;font-size:.85rem;
+  text-decoration:none;z-index:99999;transition:top .2s;}
+.nbl-skip-link:focus{top:0;}
+
+/* ══ HERO BANNER ══ */
+.ct-hero{position:relative;background:linear-gradient(135deg,#03031a 0%,#070726 50%,#0c0c38 100%);
+  padding:5rem 0 4rem;overflow:hidden;}
+.ct-hero__grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(6,182,212,.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(6,182,212,.06) 1px,transparent 1px);
+  background-size:60px 60px;animation:ctGridPan 30s linear infinite;}
+@keyframes ctGridPan{0%{background-position:0 0}100%{background-position:60px 60px}}
+.ct-hero__orb{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;}
+.ct-hero__orb--1{width:400px;height:400px;background:radial-gradient(circle,rgba(79,70,229,.3),transparent 70%);
+  top:-80px;left:-60px;}
+.ct-hero__orb--2{width:350px;height:350px;background:radial-gradient(circle,rgba(6,182,212,.25),transparent 70%);
+  top:30%;right:-60px;}
+.ct-hero__inner{position:relative;z-index:2;}
+.ct-hero__breadcrumb{display:flex;align-items:center;gap:.5rem;margin-bottom:1.5rem;
+  font-size:.78rem;color:rgba(255,255,255,.45);}
+.ct-hero__breadcrumb a{color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;}
+.ct-hero__breadcrumb a:hover{color:#06b6d4;}
+.ct-hero__breadcrumb span{color:rgba(255,255,255,.25);}
+.ct-hero__eyebrow{display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(6,182,212,.12);border:1px solid rgba(6,182,212,.3);
+  color:#06b6d4;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  padding:.35rem .85rem;border-radius:100px;margin-bottom:1.25rem;}
+.ct-hero__eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;
+  background:#06b6d4;animation:ctPulse 1.5s ease-in-out infinite;}
+@keyframes ctPulse{0%,100%{box-shadow:0 0 0 0 rgba(6,182,212,.6)}50%{box-shadow:0 0 0 6px rgba(6,182,212,0)}}
+.ct-hero__title{font-family:var(--fcond);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;
+  color:#fff;line-height:1.08;letter-spacing:-.025em;margin-bottom:1rem;}
+.ct-hero__title span{background:linear-gradient(120deg,#06b6d4,#818cf8,#4f46e5);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ct-hero__desc{font-size:1rem;color:rgba(255,255,255,.62);line-height:1.75;max-width:500px;}
+.ct-hero__stats{display:flex;gap:2rem;margin-top:2.5rem;flex-wrap:wrap;}
+.ct-hero__stat{text-align:left;}
+.ct-hero__stat-num{font-family:var(--fcond);font-size:1.8rem;font-weight:800;
+  background:linear-gradient(120deg,#06b6d4,#818cf8);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;}
+.ct-hero__stat-label{font-size:.72rem;color:rgba(255,255,255,.45);text-transform:uppercase;
+  letter-spacing:.08em;display:block;margin-top:.15rem;}
+.ct-hero__divider{width:1px;height:44px;background:rgba(255,255,255,.12);align-self:center;}
+/* Response time badge */
+.ct-response-badge{display:inline-flex;align-items:center;gap:.6rem;
+  background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.3);
+  border-radius:100px;padding:.4rem 1rem;font-size:.78rem;color:#10b981;font-weight:600;}
+.ct-response-dot{width:8px;height:8px;border-radius:50%;background:#10b981;
+  animation:ctPulse 1.5s ease-in-out infinite;flex-shrink:0;}
+
+/* ══ MAIN CONTENT AREA ══ */
+.ct-main{padding:4.5rem 0;background:#f5f7ff;}
+.ct-card{background:#fff;border-radius:24px;border:1.5px solid #e5e7eb;
+  box-shadow:0 4px 32px rgba(79,70,229,.05);overflow:hidden;}
+
+/* ── Form side ── */
+.ct-form-wrap{padding:2.75rem 2.5rem;}
+.ct-form-header{margin-bottom:2rem;}
+.ct-form-eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:#4f46e5;display:block;margin-bottom:.5rem;}
+.ct-form-title{font-family:var(--fcond);font-size:1.5rem;font-weight:800;color:#111827;
+  margin-bottom:.4rem;}
+.ct-form-sub{font-size:.88rem;color:#6b7280;}
+
+/* Inquiry type selector */
+.ct-inq-row{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.ct-inq-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .95rem;
+  border:1.5px solid #e5e7eb;border-radius:100px;font-size:.78rem;font-weight:600;
+  color:#6b7280;background:#fff;cursor:pointer;font-family:var(--font);
+  transition:all .22s;}
+.ct-inq-btn:hover{border-color:#4f46e5;color:#4f46e5;}
+.ct-inq-btn.active{background:#4f46e5;border-color:#4f46e5;color:#fff;}
+
+/* Field groups */
+.ct-field-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
+.ct-field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem;}
+.ct-field label{font-size:.78rem;font-weight:700;color:#374151;letter-spacing:.02em;}
+.ct-field label span{color:#ef4444;margin-left:2px;}
+.ct-input{width:100%;border:1.5px solid #e5e7eb;border-radius:10px;padding:.75rem 1rem;
+  font-size:.9rem;font-family:var(--font);color:#111827;outline:none;
+  transition:border-color .2s,box-shadow .2s;background:#fff;}
+.ct-input:focus{border-color:#4f46e5;box-shadow:0 0 0 3px rgba(79,70,229,.1);}
+.ct-input.error{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.1);}
+.ct-input::placeholder{color:#9ca3af;}
+textarea.ct-input{resize:vertical;min-height:120px;}
+select.ct-input{appearance:none;background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right .75rem center;background-size:16px;}
+.ct-error-msg{font-size:.72rem;color:#ef4444;font-weight:500;display:none;}
+.ct-field.has-error .ct-error-msg{display:block;}
+.ct-field.has-error .ct-input{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.1);}
+
+/* Protocol multi-select */
+.ct-proto-grid{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.3rem;}
+.ct-proto-chip{display:inline-flex;align-items:center;gap:.35rem;padding:.38rem .85rem;
+  border:1.5px solid #e5e7eb;border-radius:100px;font-size:.76rem;font-weight:600;
+  color:#6b7280;background:#fff;cursor:pointer;transition:all .2s;user-select:none;}
+.ct-proto-chip:hover{border-color:#4f46e5;color:#4f46e5;}
+.ct-proto-chip.selected{background:#4f46e5;border-color:#4f46e5;color:#fff;}
+.ct-proto-chip svg{flex-shrink:0;}
+
+/* Submit button */
+.ct-submit{width:100%;padding:1rem;background:linear-gradient(135deg,#4f46e5,#06b6d4);
+  color:#fff;border:none;border-radius:12px;font-size:.95rem;font-weight:700;
+  font-family:var(--fcond);letter-spacing:.04em;cursor:pointer;
+  transition:transform .25s,box-shadow .25s;
+  box-shadow:0 8px 32px rgba(79,70,229,.3);display:flex;align-items:center;
+  justify-content:center;gap:.5rem;}
+.ct-submit:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(79,70,229,.45);}
+.ct-submit:active{transform:translateY(0);}
+.ct-submit:disabled{opacity:.6;cursor:not-allowed;transform:none;}
+.ct-privacy-note{font-size:.72rem;color:#9ca3af;text-align:center;margin-top:.85rem;}
+.ct-privacy-note a{color:#4f46e5;}
+
+/* Success state */
+.ct-success{display:none;flex-direction:column;align-items:center;justify-content:center;
+  padding:3rem 2rem;text-align:center;min-height:400px;}
+.ct-success__icon{width:80px;height:80px;background:#dcfce7;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;
+  animation:ctScalePop .5s cubic-bezier(.34,1.56,.64,1) both;}
+@keyframes ctScalePop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.ct-success__title{font-family:var(--fcond);font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:.6rem;}
+.ct-success__desc{font-size:.95rem;color:#6b7280;line-height:1.7;max-width:380px;margin-bottom:1.5rem;}
+.ct-success__back{display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.5rem;
+  border-radius:10px;background:#4f46e5;color:#fff;font-size:.88rem;font-weight:700;
+  font-family:var(--fcond);cursor:pointer;border:none;transition:opacity .2s;}
+.ct-success__back:hover{opacity:.9;}
+
+/* ── Info side ── */
+.ct-info-wrap{padding:2.75rem 2.25rem;background:linear-gradient(160deg,#07071e 0%,#0d0d3a 100%);
+  display:flex;flex-direction:column;gap:2rem;height:100%;position:relative;overflow:hidden;}
+.ct-info-wrap::before{content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(6,182,212,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(6,182,212,.05) 1px,transparent 1px);
+  background-size:40px 40px;pointer-events:none;}
+.ct-info-wrap > *{position:relative;z-index:1;}
+.ct-info-label{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(255,255,255,.35);margin-bottom:.6rem;display:block;}
+.ct-info-title{font-family:var(--fcond);font-size:1.3rem;font-weight:800;color:#fff;
+  margin-bottom:.5rem;line-height:1.25;}
+.ct-info-sub{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.7;}
+
+/* Contact items */
+.ct-contact-list{display:flex;flex-direction:column;gap:.85rem;}
+.ct-contact-item{display:flex;align-items:flex-start;gap:.85rem;padding:1rem 1.1rem;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;transition:border-color .25s,background .25s;text-decoration:none;}
+.ct-contact-item:hover{border-color:rgba(6,182,212,.35);background:rgba(6,182,212,.07);}
+.ct-contact-icon{width:38px;height:38px;border-radius:10px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;}
+.ct-contact-detail{min-width:0;}
+.ct-contact-type{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.35);margin-bottom:.2rem;}
+.ct-contact-val{font-size:.9rem;font-weight:600;color:#fff;line-height:1.4;word-break:break-all;}
+.ct-contact-note{font-size:.73rem;color:rgba(255,255,255,.35);margin-top:.15rem;}
+
+/* Office cards */
+.ct-offices{display:flex;flex-direction:column;gap:.75rem;}
+.ct-office{padding:1rem 1.1rem;background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.07);border-radius:14px;
+  transition:border-color .25s;}
+.ct-office:hover{border-color:rgba(6,182,212,.25);}
+.ct-office__name{font-size:.82rem;font-weight:700;color:#fff;margin-bottom:.25rem;
+  display:flex;align-items:center;gap:.5rem;}
+.ct-office__badge{font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:2px 7px;border-radius:100px;background:rgba(6,182,212,.2);color:#06b6d4;}
+.ct-office__addr{font-size:.79rem;color:rgba(255,255,255,.45);line-height:1.6;}
+
+/* Hours */
+.ct-hours{display:flex;flex-direction:column;gap:.5rem;}
+.ct-hours-row{display:flex;justify-content:space-between;align-items:center;
+  padding:.45rem 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:.82rem;}
+.ct-hours-row:last-child{border-bottom:none;}
+.ct-hours-day{color:rgba(255,255,255,.5);font-weight:500;}
+.ct-hours-time{color:#fff;font-weight:600;}
+.ct-hours-closed{color:rgba(255,255,255,.25);font-weight:400;}
+.ct-status-open{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;
+  font-weight:700;color:#10b981;}
+.ct-status-dot{width:6px;height:6px;border-radius:50%;background:#10b981;
+  animation:ctPulse 1.5s ease-in-out infinite;flex-shrink:0;}
+
+/* Social links */
+.ct-socials{display:flex;gap:.6rem;}
+.ct-social{width:40px;height:40px;border-radius:10px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.5);text-decoration:none;
+  transition:all .25s;}
+.ct-social:hover{background:rgba(6,182,212,.2);border-color:rgba(6,182,212,.4);color:#06b6d4;}
+
+/* ══ MAP SECTION ══ */
+.ct-map-section{background:#fff;padding:0;}
+.ct-map-wrap{position:relative;height:420px;overflow:hidden;}
+.ct-map-wrap iframe{width:100%;height:100%;border:none;display:block;filter:grayscale(20%);}
+.ct-map-overlay{position:absolute;top:1.5rem;left:1.5rem;
+  background:rgba(255,255,255,.95);backdrop-filter:blur(12px);
+  border-radius:16px;padding:1.25rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,.12);
+  border:1.5px solid #e5e7eb;max-width:260px;}
+.ct-map-title{font-family:var(--fcond);font-size:1rem;font-weight:800;color:#111827;margin-bottom:.25rem;}
+.ct-map-addr{font-size:.8rem;color:#6b7280;line-height:1.6;margin-bottom:.85rem;}
+.ct-map-link{display:inline-flex;align-items:center;gap:.35rem;font-size:.8rem;
+  font-weight:700;color:#4f46e5;text-decoration:none;transition:gap .2s;}
+.ct-map-link:hover{gap:.55rem;}
+
+/* ══ FAQ STRIP ══ */
+.ct-faq-strip{background:#f5f7ff;padding:4rem 0;}
+.ct-faq-item{background:#fff;border:1.5px solid #e5e7eb;border-radius:14px;
+  margin-bottom:.75rem;overflow:hidden;}
+.ct-faq-item.open{border-color:#4f46e5;}
+.ct-faq-q{width:100%;background:none;border:none;padding:1.1rem 1.4rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  cursor:pointer;font-size:.9rem;font-weight:700;color:#111827;
+  font-family:var(--font);text-align:left;}
+.ct-faq-q:hover{color:#4f46e5;}
+.ct-faq-item.open .ct-faq-q{color:#4f46e5;}
+.ct-faq-icon{width:26px;height:26px;border-radius:50%;background:#f0f3ff;
+  border:1.5px solid #e0e7ff;display:flex;align-items:center;justify-content:center;
+  color:#4f46e5;flex-shrink:0;transition:transform .3s,background .25s;}
+.ct-faq-item.open .ct-faq-icon{transform:rotate(45deg);background:#4f46e5;color:#fff;border-color:#4f46e5;}
+.ct-faq-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.22,1,.36,1);}
+.ct-faq-item.open .ct-faq-a{max-height:200px;}
+.ct-faq-a-inner{padding:0 1.4rem 1.1rem;font-size:.87rem;color:#6b7280;line-height:1.75;
+  border-top:1px solid #f0f3ff;}
+
+/* ══ CTA STRIP ══ */
+.ct-cta-strip{background:linear-gradient(135deg,#0a0a2e,#1a1a6e);padding:3.5rem 0;position:relative;overflow:hidden;}
+.ct-cta-strip::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 30% 50%,rgba(6,182,212,.15),transparent 50%),
+    radial-gradient(circle at 70% 50%,rgba(79,70,229,.2),transparent 50%);pointer-events:none;}
+.ct-cta-strip::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,#06b6d4,#4f46e5,#818cf8,#06b6d4);
+  background-size:200% 100%;animation:ctGradSlide 4s linear infinite;}
+@keyframes ctGradSlide{0%{background-position:0}100%{background-position:200%}}
+.ct-cta-inner{position:relative;z-index:1;display:flex;align-items:center;
+  justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+.ct-cta-text h3{font-family:var(--fcond);font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:.35rem;}
+.ct-cta-text p{font-size:.9rem;color:rgba(255,255,255,.55);margin:0;}
+.ct-cta-btns{display:flex;gap:.75rem;flex-wrap:wrap;flex-shrink:0;}
+.ct-cta-btn{display:inline-flex;align-items:center;gap:.45rem;padding:.8rem 1.6rem;
+  border-radius:10px;font-size:.88rem;font-weight:700;font-family:var(--fcond);
+  text-decoration:none;transition:all .25s;cursor:pointer;border:none;}
+.ct-cta-btn--primary{background:linear-gradient(135deg,#06b6d4,#4f46e5);color:#fff;
+  box-shadow:0 6px 24px rgba(6,182,212,.35);}
+.ct-cta-btn--primary:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(6,182,212,.5);color:#fff;}
+.ct-cta-btn--outline{background:transparent;color:rgba(255,255,255,.8);
+  border:1.5px solid rgba(255,255,255,.25);}
+.ct-cta-btn--outline:hover{border-color:#06b6d4;color:#06b6d4;}
+.ct-cta-btn--wa{background:#25d366;color:#fff;
+  box-shadow:0 6px 24px rgba(37,211,102,.3);}
+.ct-cta-btn--wa:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(37,211,102,.45);color:#fff;}
+
+/* Responsive */
+@media(max-width:991.98px){
+  .ct-field-row{grid-template-columns:1fr;}
+  .ct-form-wrap{padding:2rem 1.5rem;}
+  .ct-info-wrap{padding:2rem 1.5rem;}
+}
+@media(max-width:767.98px){
+  .ct-hero{padding:3rem 0 2.5rem;}
+  .ct-hero__stats{gap:1.25rem;}
+  .ct-hero__divider{display:none;}
+  .ct-main{padding:2.5rem 0;}
+  .ct-map-wrap{height:320px;}
+  .ct-cta-inner{flex-direction:column;text-align:center;}
+  .ct-cta-btns{justify-content:center;}
+}
+/* ─ Dark/Light mode toggle ─ */
+#nblThemeToggle{position:fixed;top:110px;right:1rem;z-index:8880;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.9);border:1.5px solid #e5e7eb;box-shadow:0 4px 14px rgba(0,0,0,.1);display:flex;align-items:center;justify-content:center;cursor:pointer!important;transition:all .3s;backdrop-filter:blur(8px);}
+#nblThemeToggle:hover{background:#4f46e5;border-color:#4f46e5;color:#fff;box-shadow:0 6px 20px rgba(79,70,229,.3);}
+body.dark-mode{background:#0a0a1e!important;color:#e2e8f0!important;}
+body.dark-mode .atl-nav,body.dark-mode .atl-util-bar{background:#0d0d2b!important;}
+body.dark-mode .nbl-tech-section,body.dark-mode .nbl-compare-section,body.dark-mode .nbl-usecase-section,body.dark-mode .nbl-cases-section,body.dark-mode .nbl-certs-section,body.dark-mode .nbl-roi-section,body.dark-mode .nbl-faq-section,body.dark-mode .nbl-sample-section,body.dark-mode .nbl-press-section,body.dark-mode .nbl-updates-section,body.dark-mode .atl-section{background:#0f0f28!important;}
+body.dark-mode .nbl-tech-card,body.dark-mode .nbl-news-card,body.dark-mode .nbl-faq-item,body.dark-mode .nbl-case-card,body.dark-mode .nbl-cert-card,body.dark-mode .nbl-roi-wrap,body.dark-mode .nbl-sample-wrap,body.dark-mode .nbl-press-card,body.dark-mode .card{background:#1a1a3e!important;border-color:rgba(255,255,255,.08)!important;}
+body.dark-mode .nbl-section-title,body.dark-mode .nbl-tech-card__title,body.dark-mode h1,body.dark-mode h2,body.dark-mode h3,body.dark-mode h4{color:#f1f5f9!important;}
+body.dark-mode .nbl-section-desc,body.dark-mode .nbl-tech-card__desc,body.dark-mode p,body.dark-mode .card-desc{color:rgba(255,255,255,.55)!important;}
+body.dark-mode .atl-nav__link,body.dark-mode .atl-nav__logo-name{color:#e2e8f0!important;}
+body.dark-mode .nbl-logos-section,body.dark-mode .nbl-cta-section{background:#0f0f28!important;}
+body.dark-mode #nblThemeToggle{background:#1a1a3e;border-color:rgba(255,255,255,.1);}
+body.dark-mode .nbl-roi-inputs{background:#1a1a3e;border-color:rgba(255,255,255,.06);}
+body.dark-mode .nbl-roi-input{background:#0f0f28;border-color:rgba(255,255,255,.1);color:#e2e8f0;}
+
+
+/* Submit spinner */
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+  </style>
+
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ContactPage",
+    "name":"Contact Nebulae",
+    "url":"https://www.nebulae.io/contact.html",
+    "description":"Contact Nebulae for IoT module inquiries, custom development, and technical support.",
+    "mainEntity":{
+      "@type":"Organization",
+      "name":"Nebulae",
+      "telephone":"+91-02692-232501",
+      "email":"sales@nebulae.io",
+      "address":{"@type":"PostalAddress","streetAddress":"Plot#32, Zone-D/4, Phase-1, GIDC Estate","addressLocality":"V.U.Nagar","addressRegion":"Gujarat","postalCode":"388121","addressCountry":"IN"}
+    }
+  }
+  </script>
+</head>
+<body>
+
+<a class="nbl-skip-link" href="#ct-form">Skip to contact form</a>
+<div id="nblProgressBar"></div>
+<button id="nblThemeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode"></button>
+<button id="nblBackTop" aria-label="Back to top" title="Back to top">
+  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+<!-- ════ STICKY HEADER ════ -->
+<div class="atl-sticky-header" style="position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:9999!important;">
+
+  <!-- Utility bar -->
+  <div class="atl-util-bar">
+    <div class="atl-util-bar__inner">
+      <div class="atl-util-bar__left">
+        <!-- <span class="atl-util-link">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          India · IoT Solutions Provider
+        </span> -->
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 9898042339 
+        </a>
+      </div>
+      <div class="atl-util-bar__right">
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91-02692-232501/02
+        </a>
+        <a href="mailto:sales@nebulae.io" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          sales@nebulae.io
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main navbar -->
+  <nav class="atl-nav" id="atlNav">
+    <div class="atl-nav__inner">
+
+      <!-- Logo -->
+      <a href="#home" class="atl-nav__logo">
+        <img src="./assets/images/LogoBlue.png" alt="Nebulae" class="atl-nav__logo-img">
+      </a>
+
+      <!-- Desktop nav -->
+      <ul class="atl-nav__links" id="navLinks">
+
+        <!-- 1. PRODUCTS -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaProducts">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaProducts')">
+            Products
+            <svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="atl-mega" id="mega-megaProducts">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner atl-mega__inner--products" style="display:flex;gap:0;min-height:320px;">
+
+                <!-- Rail -->
+                <div class="atl-prod-rail">
+                  <button class="atl-prod-rail__item atl-prod-rail__item--active" data-prod="module">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                    Module
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="gateway">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h.01M10 11h.01"/><circle cx="17" cy="11" r="1" fill="currentColor"/></svg>
+                    Gateway
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="concentrator">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                    Concentrator
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="filter">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                    Filter
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  
+                  <button class="atl-prod-rail__item" data-prod="node">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+                    Nodes
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="evk">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+                    EVK
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="dataconnector">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h7"/><circle cx="17" cy="18" r="3"/><path d="M17 15v-1.5M17 21v1.5M14.2 16.5l-1.3-.75M20.1 19.25l1.3.75M14.2 19.25l-1.3.75M20.1 16.5l1.3-.75"/></svg>
+                    Data Connector
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                </div>
+
+                <!-- Panels -->
+                <div class="atl-prod-panel">
+                  <!-- Module -->
+                  <div class="atl-prod-panel__body atl-prod-panel__body--active" data-panel="module">
+                    <p class="atl-prod-panel__label">Module — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-module.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products/wisun-module.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products/zigbee-module.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products/wifi-module.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="products/gsm-module.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                      <a href="products/ble-module.html" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></span><span class="atl-prod-card__name">BLE</span><span class="atl-prod-card__desc">Bluetooth Low Energy</span></a>
+                    </div>
+                  </div>
+                  <!-- Gateway -->
+                  <div class="atl-prod-panel__body" data-panel="gateway">
+                    <p class="atl-prod-panel__label">Gateway — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-gateway.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products/wisun-gateway.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products/zigbee-gateway.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products/wifi-gateway.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="products/gsm-gateway.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                      <a href="products/ble-gateway.html" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></span><span class="atl-prod-card__name">BLE</span><span class="atl-prod-card__desc">Bluetooth Low Energy</span></a>
+                    </div>
+                  </div>
+                  <!-- Filter -->
+                  <div class="atl-prod-panel__body" data-panel="filter">
+                    <p class="atl-prod-panel__label">Filter — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-filter.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Filter 1</span></a>
+                      <a href="products/wisun-filter.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Filter 2</span></a>
+                    
+                    </div>
+                  </div>
+                  <!-- EVK -->
+                  <div class="atl-prod-panel__body" data-panel="evk">
+                    <p class="atl-prod-panel__label">EVK — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-evk.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products/wisun-evk.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products/zigbee-evk.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products/wifi-evk.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="products/gsm-evk.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                      <a href="products/ble-evk.html" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></span><span class="atl-prod-card__name">BLE</span><span class="atl-prod-card__desc">Bluetooth Low Energy</span></a>
+                    </div>
+                  </div>
+                  <!-- Concentrator -->
+                  <div class="atl-prod-panel__body" data-panel="concentrator">
+                    <p class="atl-prod-panel__label">Concentrator — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-concentrator.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products/wisun-concentrator.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products/zigbee-concentrator.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products/wifi-concentrator.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="products/gsm-concentrator.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                      <a href="products/ble-concentrator.html" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></span><span class="atl-prod-card__name">BLE</span><span class="atl-prod-card__desc">Bluetooth Low Energy</span></a>
+                    </div>
+                  </div>
+                  <!-- Node -->
+                  <div class="atl-prod-panel__body" data-panel="node">
+                    <p class="atl-prod-panel__label">Node — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-node.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products/wisun-node.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products/zigbee-node.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products/wifi-node.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="products/gsm-node.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                      <a href="products/ble-node.html" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></span><span class="atl-prod-card__name">BLE</span><span class="atl-prod-card__desc">Bluetooth Low Energy</span></a>
+                    </div>
+                  </div>
+                  <!-- Add to Panels section (after EVK panel) -->
+                  <div class="atl-prod-panel__body" data-panel="dataconnector">
+                    <p class="atl-prod-panel__label">Data Connector — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-dataconnector.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">RS485 LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products/wisun-dataconnector.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">RS485 Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products/zigbee-dataconnector.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">RS485 Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products/wifi-dataconnector.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">RS485 Wireless LAN</span></a>
+                      <a href="products/gsm-dataconnector.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">RS485 GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                    
+                    </div>
+                  </div>
+                </div><!-- /atl-prod-panel -->
+
+                <!-- Feature card -->
+                <div style="width:220px;flex-shrink:0;padding:1.5rem 1.25rem;display:flex;align-items:center;">
+                  <div class="atl-mega__feature-card" style="width:100%">
+                    <span class="atl-mega__new-tag">FULL STACK IoT</span>
+                    <p class="atl-mega__feature-name">End-to-End IoT Hardware</p>
+                    <p class="atl-mega__feature-desc">Modules, Gateways, Filters, EVKs, Concentrators &amp; Nodes across all major wireless protocols.</p>
+                    <a href="products.html" class="atl-mega__feature-link">View All Products →</a>
+                    <div class="atl-mega__cert-badges">
+                      <span class="atl-mega__cert">LoRa</span>
+                      <span class="atl-mega__cert">Wi-SUN</span>
+                      <span class="atl-mega__cert">BLE</span>
+                      <span class="atl-mega__cert">Zigbee</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2. SOLUTIONS -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaSolutions">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaSolutions')">Solutions<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaSolutions">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner atl-mega__inner--3col">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div><div><p class="atl-mega__col-title">Smart Metering</p><p class="atl-mega__col-desc">AMI &amp; AMR utility solutions</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="solutions/smart-water-meter.html"><span class="atl-mega__dot"></span>Smart Water Meter Solution</a></li>
+                    <li><a href="solutions/smart-electric-meter.html"><span class="atl-mega__dot"></span>Smart Electric Meter Solution</a></li>
+                    <li><a href="solutions/smart-gas-meter.html"><span class="atl-mega__dot"></span>Smart Gas Metering Solution</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div><div><p class="atl-mega__col-title">Smart Infrastructure</p><p class="atl-mega__col-desc">City &amp; grid automation</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="solutions/smart-street-light.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Smart Street Light Solution</a></li>
+                    <li><a href="solutions/transformer-monitoring.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Transformer Monitoring System</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col atl-mega__col--feature">
+                  <div class="atl-mega__feature-card">
+                    <span class="atl-mega__new-tag">END-TO-END</span>
+                    <p class="atl-mega__feature-name">Complete IoT Solutions</p>
+                    <p class="atl-mega__feature-desc">From hardware modules to cloud dashboards — turn-key smart utility &amp; infrastructure deployments.</p>
+                    <a href="solutions.html" class="atl-mega__feature-link">View All Solutions →</a>
+                    <div class="atl-mega__cert-badges"><span class="atl-mega__cert">AMI</span><span class="atl-mega__cert">SCADA</span><span class="atl-mega__cert">Cloud</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3. SERVICES -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaServices">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaServices')">Services<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaServices">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div><p class="atl-mega__col-title">Development</p><p class="atl-mega__col-desc">IoT product &amp; embedded design</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="services/iot-product-development.html"><span class="atl-mega__dot"></span>IoT Product Development</a></li>
+                    <li><a href="services/embedded-hardware-design.html"><span class="atl-mega__dot"></span>Embedded Hardware Design</a></li>
+                    <li><a href="services/embedded-software-development.html"><span class="atl-mega__dot"></span>Embedded Software Development</a></li>
+                    <li><a href="services/embedded-firmware-design.html"><span class="atl-mega__dot"></span>Embedded Firmware Design</a></li>
+                    <li><a href="services/pcb-design-services.html"><span class="atl-mega__dot"></span>PCB Design Services</a></li>
+                    <li><a href="services/poc-to-mvp.html"><span class="atl-mega__dot"></span>PoC to MVP Development</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div><div><p class="atl-mega__col-title">RF - Survey</p><p class="atl-mega__col-desc">Network, cloud &amp; dashboard</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="services/wireless-sensor-network.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Wireless Sensor Network in IoT</a></li>
+                    
+                    <li><a href="services/iot-cloud-integration.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>IoT Cloud Integration</a></li>
+                    <li><a href="services/edge-computing.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Edge Computing</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--purple"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div><p class="atl-mega__col-title">Consulting</p><p class="atl-mega__col-desc">Strategy &amp; mobile solutions</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="services/iot-consulting.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>IoT Consulting</a></li>
+                    <li><a href="services/iot-mobile-app.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>IoT Mobile App Development</a></li>
+                    <li><a href="services/iot-dashboard.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>IoT Dashboard</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col atl-mega__col--feature">
+                  <div class="atl-mega__feature-card">
+                    <span class="atl-mega__new-tag">FULL STACK IoT</span>
+                    <p class="atl-mega__feature-name">Concept to Deployment</p>
+                    <p class="atl-mega__feature-desc">Hardware design, embedded firmware, cloud integration &amp; mobile apps — all under one roof.</p>
+                    <a href="services.html" class="atl-mega__feature-link">View All Services →</a>
+                    <div class="atl-mega__cert-badges"><span class="atl-mega__cert">HW</span><span class="atl-mega__cert">FW</span><span class="atl-mega__cert">Cloud</span><span class="atl-mega__cert">App</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+          <li class="atl-nav__item">
+          <a class="atl-nav__link" href="resources.html">Resources</a>
+        </li>
+        <!-- 4. INDUSTRIES -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaIndustries">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaIndustries')">Industries<svg
+              class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="m6 9 6 6 6-6" />
+            </svg></button>
+          <div class="atl-mega" id="mega-megaIndustries">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Smart City</p>
+                      <p class="atl-mega__col-desc">Automation &amp; security</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/home-security-automation.html"><span class="atl-mega__dot"></span>Home Security
+                        &amp; Automation</a></li>
+                    <li><a href="industries/sos-devices.html"><span class="atl-mega__dot"></span>SOS Devices</a></li>
+                    <li><a href="industries/smart-city-solutions.html"><span class="atl-mega__dot"></span>Smart City
+                        Solutions</a></li>
+                    <li><a href="industries/building-management-system.html"><span class="atl-mega__dot"></span>Building
+                        Management System</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 22V12M12 12C12 12 8 9 4 12M12 12C12 12 16 9 20 12M4 8C7 5 12 7 12 7C12 7 17 5 20 8" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Agriculture &amp; Energy</p>
+                      <p class="atl-mega__col-desc">Smart farming &amp; utilities</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/smart-agriculture.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Smart
+                        Agriculture System</a></li>
+                    <li><a href="industries/farm-animal-management.html"><span
+                          class="atl-mega__dot atl-mega__dot--teal"></span>Farm Animal Management</a></li>
+                    <li><a href="industries/iot-energy-utilities.html"><span
+                          class="atl-mega__dot atl-mega__dot--teal"></span>IoT in Energy &amp; Utilities</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--orange"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="14" rx="2" />
+                        <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Industrial &amp; Automotive</p>
+                      <p class="atl-mega__col-desc">IIoT &amp; connected vehicles</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/industrial-iot.html"><span class="atl-mega__dot"
+                          style="background:#f97316"></span>Industrial IoT</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--red"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Healthcare</p>
+                      <p class="atl-mega__col-desc">Connected health &amp; Care</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/iot-healthcare.html"><span class="atl-mega__dot atl-mega__dot--red"></span>IoT in
+                        Healthcare</a></li>
+                    <li><a href="industries/telematics-fleet.html"><span
+                          class="atl-mega__dot atl-mega__dot--red"></span>Telematics &amp; Fleet Management</a></li>
+                    <li><a href="industries/consumer-iot.html"><span class="atl-mega__dot atl-mega__dot--red"></span>Consumer
+                        IoT Solutions</a></li>
+                  </ul>
+                </div>
+                <!-- NEW: Defence Column -->
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon" style="background:#e8f0fe;"><svg width="18" height="18" fill="none"
+                        stroke="#1e40af" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Defence</p>
+                      <p class="atl-mega__col-desc">IoT for defence &amp; security</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/iot-in-defence.html"><span class="atl-mega__dot"
+                          style="background:#1e40af"></span>IoT in Defence</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- 5. ABOUT US -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaAbout">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaAbout')">About Us<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaAbout">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><p class="atl-mega__col-title">Company</p><p class="atl-mega__col-desc">Who we are &amp; what we do</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="about.html"><span class="atl-mega__dot"></span>About Nebulae</a></li>
+                    <li><a href="about.html#mission"><span class="atl-mega__dot"></span>Our Mission &amp; Vision</a></li>
+                    <li><a href="about.html#team"><span class="atl-mega__dot"></span>Our Team</a></li>
+                    <li><a href="about.html#partners"><span class="atl-mega__dot"></span>Partners &amp; Certifications</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><p class="atl-mega__col-title">Blog &amp; Careers</p><p class="atl-mega__col-desc">Insights &amp; opportunities</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="blog.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Blog</a></li>
+                    <li><a href="blog.html#latest"><span class="atl-mega__dot atl-mega__dot--teal"></span>Latest Articles</a></li>
+                    <li><a href="careers.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Careers</a></li>
+                    <li><a href="careers.html#openings"><span class="atl-mega__dot atl-mega__dot--teal"></span>Open Positions</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--orange"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div><p class="atl-mega__col-title">Events &amp; News</p><p class="atl-mega__col-desc">What's happening at Nebulae</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="events.html"><span class="atl-mega__dot" style="background:#f97316"></span> Events</a></li>
+                    <li><a href="news.html"><span class="atl-mega__dot" style="background:#f97316"></span>News</a></li> 
+                  </ul>
+                </div>
+                <div class="atl-mega__col atl-mega__col--feature">
+                  <div class="atl-mega__feature-card">
+                    <span class="atl-mega__new-tag">JOIN US</span>
+                    <p class="atl-mega__feature-name">Building the Future of IoT</p>
+                    <p class="atl-mega__feature-desc">We're a team of engineers, designers &amp; innovators passionate about connecting the world through smart technology.</p>
+                    <a href="careers.html" class="atl-mega__feature-link">See Open Roles →</a>
+                    <div class="atl-mega__cert-badges"><span class="atl-mega__cert">IoT</span><span class="atl-mega__cert">HW</span><span class="atl-mega__cert">SW</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 6. CONTACT -->
+        <li class="atl-nav__item">
+          <a class="atl-nav__link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Right: CTA -->
+      <div class="atl-nav__right">
+        <div class="atl-brochure-dropdown" id="brochureDropdown">
+          <button class="atl-nav__cta atl-brochure-btn" id="brochureBtn" aria-expanded="false">
+            Company Profile <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left:4px"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="atl-brochure-menu" id="brochureMenu">
+            <a href="resource.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Resources</a>
+            <a href="about.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Who We Are</a>
+            <a href="team.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Leadership Team</a>
+            <a href="awards.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Awards & Recognition</a>
+          </div>
+          
+        </div>
+        <button class="atl-nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="atl-nav__mobile" id="navMobile">
+      <div class="atl-nav__mobile-header">
+        <span class="atl-nav__mobile-title">Menu</span>
+        <button class="atl-nav__mobile-close" id="navMobileClose" aria-label="Close menu">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <a class="atl-nav__mlink" href="#home">Home</a>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Products<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <div class="atl-nav__macc-section">LoRa</div>
+          <a class="atl-nav__msublink" href="products/lora-module.html">Module</a><a class="atl-nav__msublink" href="products/lora-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/lora-filter.html">Filter</a><a class="atl-nav__msublink" href="products/lora-evk.html">EVK</a><a class="atl-nav__msublink" href="products/lora-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/lora-node.html">Node</a>
+          <div class="atl-nav__macc-section">Wi-SUN</div>
+          <a class="atl-nav__msublink" href="products/wisun-module.html">Module</a><a class="atl-nav__msublink" href="products/wisun-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/wisun-filter.html">Filter</a><a class="atl-nav__msublink" href="products/wisun-evk.html">EVK</a><a class="atl-nav__msublink" href="products/wisun-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/wisun-node.html">Node</a>
+          <div class="atl-nav__macc-section">Zigbee</div>
+          <a class="atl-nav__msublink" href="products/zigbee-module.html">Module</a><a class="atl-nav__msublink" href="products/zigbee-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/zigbee-filter.html">Filter</a><a class="atl-nav__msublink" href="products/zigbee-evk.html">EVK</a><a class="atl-nav__msublink" href="products/zigbee-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/zigbee-node.html">Node</a>
+          <div class="atl-nav__macc-section">Wi-Fi</div>
+          <a class="atl-nav__msublink" href="products/wifi-module.html">Module</a><a class="atl-nav__msublink" href="products/wifi-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/wifi-filter.html">Filter</a><a class="atl-nav__msublink" href="products/wifi-evk.html">EVK</a><a class="atl-nav__msublink" href="products/wifi-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/wifi-node.html">Node</a>
+          <div class="atl-nav__macc-section">GSM</div>
+          <a class="atl-nav__msublink" href="products/gsm-module.html">Module</a><a class="atl-nav__msublink" href="products/gsm-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/gsm-filter.html">Filter</a><a class="atl-nav__msublink" href="products/gsm-evk.html">EVK</a><a class="atl-nav__msublink" href="products/gsm-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/gsm-node.html">Node</a>
+          <div class="atl-nav__macc-section">BLE</div>
+          <a class="atl-nav__msublink" href="products/ble-module.html">Module</a><a class="atl-nav__msublink" href="products/ble-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/ble-filter.html">Filter</a><a class="atl-nav__msublink" href="products/ble-evk.html">EVK</a><a class="atl-nav__msublink" href="products/ble-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/ble-node.html">Node</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Solutions<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="solutions/smart-water-meter.html">Smart Water Meter Solution</a>
+          <a class="atl-nav__msublink" href="solutions/smart-electric-meter.html">Smart Electric Meter Solution</a>
+          <a class="atl-nav__msublink" href="solutions/smart-gas-meter.html">Smart Gas Metering Solution</a>
+          <a class="atl-nav__msublink" href="solutions/smart-street-light.html">Smart Street Light Solution</a>
+          <a class="atl-nav__msublink" href="solutions/transformer-monitoring.html">Transformer Monitoring System</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Services<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <div class="atl-nav__macc-section">Development</div>
+          <a class="atl-nav__msublink" href="services/iot-product-development.html">IoT Product Development</a>
+          <a class="atl-nav__msublink" href="services/embedded-hardware-design.html">Embedded Hardware Design</a>
+          <a class="atl-nav__msublink" href="services/embedded-firmware-design.html">Embedded Firmware Design</a>
+          <a class="atl-nav__msublink" href="services/pcb-design-services.html">PCB Design Services</a>
+          <a class="atl-nav__msublink" href="services/poc-to-mvp.html">PoC to MVP Development</a>
+          <div class="atl-nav__macc-section">Connectivity &amp; Cloud</div>
+          <a class="atl-nav__msublink" href="services/iot-dashboard.html">IoT Dashboard</a>
+          <a class="atl-nav__msublink" href="services/iot-cloud-integration.html">IoT Cloud Integration</a>
+          <a class="atl-nav__msublink" href="services/edge-computing.html">Edge Computing</a>
+          <div class="atl-nav__macc-section">Consulting</div>
+          <a class="atl-nav__msublink" href="services/iot-consulting.html">IoT Consulting</a>
+          <a class="atl-nav__msublink" href="services/iot-mobile-app.html">IoT Mobile App Development</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Industries<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="industries/home-security-automation.html">Home Security &amp; Automation</a>
+          <a class="atl-nav__msublink" href="industries/smart-agriculture.html">Smart Agriculture System</a>
+          <a class="atl-nav__msublink" href="industries/industrial-iot.html">Industrial IoT</a>
+          <a class="atl-nav__msublink" href="industries/iot-healthcare.html">IoT in Healthcare</a>
+          <a class="atl-nav__msublink" href="industries/iot-logistics.html">IoT in Logistics</a>
+          <a class="atl-nav__msublink" href="industries/consumer-iot.html">Consumer IoT Solutions</a>
+        </div>
+      </div>
+
+      <a class="atl-nav__mlink" href="./resource.html">Resources</a>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">About Us<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="about.html">About Nebulae</a>
+          <a class="atl-nav__msublink" href="about.html#mission">Our Mission &amp; Vision</a>
+          <a class="atl-nav__msublink" href="about.html#team">Our Team</a>
+          <a class="atl-nav__msublink" href="blog.html">Blog</a>
+          <a class="atl-nav__msublink" href="careers.html">Careers</a>
+          <a class="atl-nav__msublink" href="events.html">Upcoming Events</a>
+          <a class="atl-nav__msublink" href="news.html">Latest News</a>
+        </div>
+      </div>
+
+      <a class="atl-nav__mlink" href="contact.html">Contact Us</a>
+    </div><!-- /mobile drawer -->
+  </nav>
+</div><!-- /.atl-sticky-header -->
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="ct-hero">
+  <div class="ct-hero__grid"></div>
+  <div class="ct-hero__orb ct-hero__orb--1"></div>
+  <div class="ct-hero__orb ct-hero__orb--2"></div>
+  <div class="container ct-hero__inner">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <nav class="ct-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span style="color:rgba(255,255,255,.7);">Contact Us</span>
+        </nav>
+        <div class="ct-hero__eyebrow">Get In Touch</div>
+        <h1 class="ct-hero__title">Let's Build Something<br><span>Remarkable Together</span></h1>
+        <p class="ct-hero__desc">Whether you need a single LoRa module sample, a complete AMI deployment, or end-to-end IoT product development — our engineers are ready to help.</p>
+        <div class="ct-hero__stats" style="margin-top:2rem;">
+          <div class="ct-hero__stat">
+            <span class="ct-hero__stat-num">&lt;4hr</span>
+            <span class="ct-hero__stat-label">Response Time</span>
+          </div>
+          <div class="ct-hero__divider"></div>
+          <div class="ct-hero__stat">
+            <span class="ct-hero__stat-num">200+</span>
+            <span class="ct-hero__stat-label">Clients Served</span>
+          </div>
+          <div class="ct-hero__divider"></div>
+          <div class="ct-hero__stat">
+            <span class="ct-hero__stat-num">10+</span>
+            <span class="ct-hero__stat-label">Years Experience</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-flex flex-column gap-3">
+        <div class="ct-response-badge">
+          <span class="ct-response-dot"></span>
+          Engineering team online now
+        </div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:1.75rem;backdrop-filter:blur(12px);">
+          <p style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1rem;">Ways to Reach Us</p>
+          <div style="display:flex;flex-direction:column;gap:.75rem;">
+            <a href="tel:+9102692232501" style="display:flex;align-items:center;gap:.75rem;text-decoration:none;">
+              <span style="width:36px;height:36px;border-radius:10px;background:rgba(79,70,229,.2);display:flex;align-items:center;justify-content:center;color:#818cf8;flex-shrink:0;">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              </span>
+              <div>
+                <div style="font-size:.68rem;color:rgba(255,255,255,.35);font-weight:600;letter-spacing:.06em;text-transform:uppercase;">Phone</div>
+                <div style="font-size:.9rem;color:#fff;font-weight:600;">+91-02692-232501</div>
+              </div>
+            </a>
+            <a href="mailto:sales@nebulae.io" style="display:flex;align-items:center;gap:.75rem;text-decoration:none;">
+              <span style="width:36px;height:36px;border-radius:10px;background:rgba(6,182,212,.2);display:flex;align-items:center;justify-content:center;color:#06b6d4;flex-shrink:0;">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <div>
+                <div style="font-size:.68rem;color:rgba(255,255,255,.35);font-weight:600;letter-spacing:.06em;text-transform:uppercase;">Email</div>
+                <div style="font-size:.9rem;color:#fff;font-weight:600;">sales@nebulae.io</div>
+              </div>
+            </a>
+            <a href="https://wa.me/917486031238" target="_blank" style="display:flex;align-items:center;gap:.75rem;text-decoration:none;">
+              <span style="width:36px;height:36px;border-radius:10px;background:rgba(37,211,102,.2);display:flex;align-items:center;justify-content:center;color:#25d366;flex-shrink:0;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </span>
+              <div>
+                <div style="font-size:.68rem;color:rgba(255,255,255,.35);font-weight:600;letter-spacing:.06em;text-transform:uppercase;">WhatsApp</div>
+                <div style="font-size:.9rem;color:#fff;font-weight:600;">+91-7486031238</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MAIN CONTACT AREA ═══ -->
+<section class="ct-main" id="ct-form">
+  <div class="container">
+    <div class="ct-card">
+      <div class="row g-0">
+
+        <!-- FORM COLUMN -->
+        <div class="col-lg-7">
+          <div class="ct-form-wrap">
+            <div id="ctFormInner">
+              <div class="ct-form-header">
+                <span class="ct-form-eyebrow">Send a Message</span>
+                <h2 class="ct-form-title">How Can We Help You?</h2>
+                <p class="ct-form-sub">Fill in the form and our team will respond within 4 business hours.</p>
+              </div>
+
+              <!-- Inquiry type selector -->
+              <div style="margin-bottom:1.25rem;">
+                <label style="font-size:.78rem;font-weight:700;color:#374151;display:block;margin-bottom:.6rem;">I'm interested in</label>
+                <div class="ct-inq-row">
+                  <button class="ct-inq-btn active" type="button">
+                    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                    Buy Products
+                  </button>
+                  <button class="ct-inq-btn" type="button">
+                    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a7 7 0 017 7c0 2.4-1.2 4.5-3 5.7V17a2 2 0 01-2 2h-4a2 2 0 01-2-2v-2.3C6.2 13.5 5 11.4 5 9a7 7 0 017-7z"/></svg>
+                    Free Sample / EVK
+                  </button>
+                  <button class="ct-inq-btn" type="button">
+                    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    Custom Development
+                  </button>
+                  <button class="ct-inq-btn" type="button">
+                    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    Technical Support
+                  </button>
+                  <button class="ct-inq-btn" type="button">
+                    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                    Partnership
+                  </button>
+                </div>
+              </div>
+
+              <form id="ctContactForm" onsubmit="return false;">
+                <div class="ct-field-row">
+                  <div class="ct-field">
+                    <label for="ctName">Full Name <span>*</span></label>
+                    <input id="ctName" class="ct-input" type="text" placeholder="Rajesh Sharma" autocomplete="name">
+                    <span class="ct-error-msg"></span>
+                  </div>
+                  <div class="ct-field">
+                    <label for="ctEmail">Work Email <span>*</span></label>
+                    <input id="ctEmail" class="ct-input" type="email" placeholder="rajesh@company.com" autocomplete="email">
+                    <span class="ct-error-msg"></span>
+                  </div>
+                </div>
+                <div class="ct-field-row">
+                  <div class="ct-field">
+                    <label for="ctPhone">Phone Number <span>*</span></label>
+                    <input id="ctPhone" class="ct-input" type="tel" placeholder="+91 98765 43210" autocomplete="tel">
+                    <span class="ct-error-msg"></span>
+                  </div>
+                  <div class="ct-field">
+                    <label for="ctCompany">Company / Organisation <span>*</span></label>
+                    <input id="ctCompany" class="ct-input" type="text" placeholder="Your Company Pvt Ltd" autocomplete="organization">
+                    <span class="ct-error-msg"></span>
+                  </div>
+                </div>
+                <div class="ct-field-row">
+                  <div class="ct-field">
+                    <label for="ctSubject">Subject <span>*</span></label>
+                    <select id="ctSubject" class="ct-input">
+                      <option value="">— Select a subject —</option>
+                      <option>LoRa Module / Gateway Inquiry</option>
+                      <option>Wi-SUN Module / Gateway Inquiry</option>
+                      <option>Zigbee Module / Gateway Inquiry</option>
+                      <option>Wi-Fi / GSM / BLE Module Inquiry</option>
+                      <option>Smart Metering Solution</option>
+                      <option>Smart City / Street Lighting</option>
+                      <option>Custom IoT Product Development</option>
+                      <option>Bulk Order / OEM Pricing</option>
+                      <option>Free Sample / EVK Request</option>
+                      <option>Technical Support</option>
+                      <option>Partnership / Reseller Program</option>
+                      <option>Other</option>
+                    </select>
+                    <span class="ct-error-msg"></span>
+                  </div>
+                  <div class="ct-field">
+                    <label for="ctQty">Estimated Quantity</label>
+                    <select id="ctQty" class="ct-input">
+                      <option value="">— Select range —</option>
+                      <option>1–10 (Sample / Prototype)</option>
+                      <option>11–100 (Pilot Project)</option>
+                      <option>101–1,000</option>
+                      <option>1,001–10,000</option>
+                      <option>10,000+ (Production Scale)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Protocol chips -->
+                <div class="ct-field">
+                  <label>Protocols of Interest (select all that apply)</label>
+                  <div class="ct-proto-grid">
+                    <span class="ct-proto-chip"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>LoRa / LoRaWAN</span>
+                    <span class="ct-proto-chip"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 007 7"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>Wi-SUN</span>
+                    <span class="ct-proto-chip"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Zigbee</span>
+                    <span class="ct-proto-chip"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>Wi-Fi</span>
+                    <span class="ct-proto-chip"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>GSM / LTE</span>
+                    <span class="ct-proto-chip"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg>BLE</span>
+                  </div>
+                </div>
+
+                <div class="ct-field">
+                  <label for="ctMessage">Project Description <span>*</span> <span style="font-weight:400;color:#9ca3af;margin-left:.35rem;font-size:.72rem;"><span id="ctMsgCount">0</span> chars</span></label>
+                  <textarea id="ctMessage" class="ct-input" rows="4" placeholder="Tell us about your project — application, scale, timeline, and any specific technical requirements…"></textarea>
+                  <span class="ct-error-msg"></span>
+                </div>
+
+                <div class="ct-field" style="flex-direction:row;align-items:flex-start;gap:.65rem;margin-bottom:1.5rem;">
+                  <input type="checkbox" id="ctConsent" style="width:16px;height:16px;margin-top:2px;accent-color:#4f46e5;cursor:pointer;flex-shrink:0;">
+                  <label for="ctConsent" style="font-size:.8rem;color:#6b7280;cursor:pointer;font-weight:400;">
+                    I agree to Nebulae's <a href="privacy.html" style="color:#4f46e5;">Privacy Policy</a> and consent to being contacted by the Nebulae sales team regarding my inquiry.
+                  </label>
+                </div>
+
+                <button class="ct-submit" id="ctSubmitBtn" onclick="submitContactForm()">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  Send Message
+                </button>
+                <p class="ct-privacy-note">🔒 Your data is secure and will never be shared with third parties. <a href="privacy.html">Privacy Policy</a></p>
+              </form>
+            </div>
+
+            <!-- Success state -->
+            <div class="ct-success" id="ctSuccess">
+              <div class="ct-success__icon">
+                <svg width="38" height="38" fill="none" stroke="#166534" stroke-width="2.8" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h3 class="ct-success__title">Message Sent!</h3>
+              <p class="ct-success__desc">Thank you, <strong id="ctSuccessName">there</strong>! We've received your <strong id="ctSuccessType">inquiry</strong> and our engineering team will respond within <strong>4 business hours</strong>.</p>
+              <p style="font-size:.82rem;color:#9ca3af;margin-bottom:1.5rem;">In a hurry? Call us directly at <a href="tel:+9102692232501" style="color:#4f46e5;font-weight:600;">+91-02692-232501</a></p>
+              <button class="ct-success__back" onclick="resetForm()">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                Send Another Message
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- INFO COLUMN -->
+        <div class="col-lg-5">
+          <div class="ct-info-wrap h-100">
+            <div>
+              <span class="ct-info-label">Contact Information</span>
+              <h3 class="ct-info-title">Talk to Our Engineering Team</h3>
+              <p class="ct-info-sub">Our technical sales team has deep knowledge of all protocols and can recommend the right product for your exact application.</p>
+            </div>
+
+            <div class="ct-contact-list">
+              <a class="ct-contact-item" href="tel:+9102692232501">
+                <div class="ct-contact-icon" style="background:rgba(79,70,229,.2);color:#818cf8;">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                <div class="ct-contact-detail">
+                  <div class="ct-contact-type">Landline</div>
+                  <div class="ct-contact-val">+91-02692-232501 / 232502</div>
+                  <div class="ct-contact-note">Mon–Sat, 9:30 AM – 6:30 PM IST</div>
+                </div>
+              </a>
+              <a class="ct-contact-item" href="tel:+917486031238">
+                <div class="ct-contact-icon" style="background:rgba(6,182,212,.2);color:#06b6d4;">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                </div>
+                <div class="ct-contact-detail">
+                  <div class="ct-contact-type">Mobile / WhatsApp</div>
+                  <div class="ct-contact-val">+91-7486031238</div>
+                  <div class="ct-contact-note">WhatsApp preferred for quick queries</div>
+                </div>
+              </a>
+              <a class="ct-contact-item" href="mailto:sales@nebulae.io">
+                <div class="ct-contact-icon" style="background:rgba(251,191,36,.2);color:#fbbf24;">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="ct-contact-detail">
+                  <div class="ct-contact-type">Sales Email</div>
+                  <div class="ct-contact-val">sales@nebulae.io</div>
+                  <div class="ct-contact-note">For quotes, datasheet requests &amp; partnerships</div>
+                </div>
+              </a>
+              <a class="ct-contact-item" href="mailto:support@nebulae.io">
+                <div class="ct-contact-icon" style="background:rgba(16,185,129,.2);color:#10b981;">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <div class="ct-contact-detail">
+                  <div class="ct-contact-type">Technical Support</div>
+                  <div class="ct-contact-val">support@nebulae.io</div>
+                  <div class="ct-contact-note">For existing customers — product &amp; integration help</div>
+                </div>
+              </a>
+            </div>
+
+            <div>
+              <span class="ct-info-label">Our Offices</span>
+              <div class="ct-offices">
+                <div class="ct-office">
+                  <div class="ct-office__name">
+                    India
+                    <span class="ct-office__badge">HQ</span>
+                  </div>
+                  <div class="ct-office__addr">System Level Solutions (India) Pvt. Ltd.<br>Plot#32, Zone-D/4, Phase-1,<br>GIDC Estate, V.U.Nagar – 388121,<br>Gujarat, India</div>
+                </div>
+                <div class="ct-office">
+                  <div class="ct-office__name">USA</div>
+                  <div class="ct-office__addr">System Level Solutions, Inc.<br>511 N. Washington Avenue,<br>Marshall, Texas 75670</div>
+                </div>
+                <div class="ct-office">
+                  <div class="ct-office__name">UK</div>
+                  <div class="ct-office__addr">SLS Overseas<br>20 Mortlake High Street,<br>London, SW14 8JN</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <span class="ct-info-label">Business Hours</span>
+              <div class="ct-hours">
+                <div class="ct-hours-row">
+                  <span class="ct-hours-day">Monday – Friday</span>
+                  <span class="ct-hours-time">9:30 AM – 6:30 PM IST <span class="ct-status-open"><span class="ct-status-dot"></span>Open</span></span>
+                </div>
+                <div class="ct-hours-row">
+                  <span class="ct-hours-day">Saturday</span>
+                  <span class="ct-hours-time">10:00 AM – 2:00 PM IST</span>
+                </div>
+                <div class="ct-hours-row">
+                  <span class="ct-hours-day">Sunday</span>
+                  <span class="ct-hours-closed">Closed</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <span class="ct-info-label">Follow Us</span>
+              <div class="ct-socials">
+                <a class="ct-social" href="https://linkedin.com" target="_blank" rel="noopener" title="LinkedIn">
+                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a class="ct-social" href="https://twitter.com" target="_blank" rel="noopener" title="X / Twitter">
+                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a class="ct-social" href="https://youtube.com" target="_blank" rel="noopener" title="YouTube">
+                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="#07071e"/></svg>
+                </a>
+                <a class="ct-social" href="https://instagram.com" target="_blank" rel="noopener" title="Instagram">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+                </a>
+                <a class="ct-social" href="https://wa.me/917486031238" target="_blank" rel="noopener" title="WhatsApp">
+                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MAP ═══ -->
+<section class="ct-map-section">
+  <div class="ct-map-wrap">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7370.271927856086!2d72.92902565864406!3d22.536578997699703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e4dc33868317d%3A0x69485a5b140c602b!2sSystem%20Level%20Solutions!5e0!3m2!1sen!2sin!4v1778829505073!5m2!1sen!2sin"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      title="Nebulae Office Location - GIDC Estate, V.U.Nagar, Gujarat, India">
+    </iframe>
+    <div class="ct-map-overlay">
+      <div class="ct-map-title">Nebulae Headquarters</div>
+      <div class="ct-map-addr">Plot#32, Zone-D/4, Phase-1,<br>GIDC Estate, V.U.Nagar – 388121,<br>Gujarat, India</div>
+      <a class="ct-map-link" href="https://maps.app.goo.gl/Ftsux4XggPbCZxhj6" target="_blank" rel="noopener">
+        Get Directions <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ STRIP ═══ -->
+<section class="ct-faq-strip">
+  <div class="container">
+    <div class="row   align-items-start">
+      <div class="col-lg-4">
+        <span style="display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#4f46e5;background:rgba(79,70,229,.08);padding:.3rem .85rem;border-radius:100px;margin-bottom:.85rem;">Common Questions</span>
+        <h2 style="font-family:'Outfit',sans-serif;font-size:1.8rem;font-weight:800;color:#111827;margin-bottom:.65rem;line-height:1.2;">Before You Reach Out</h2>
+        <p style="font-size:.9rem;color:#6b7280;line-height:1.75;margin-bottom:1.25rem;">Quick answers to common questions — if you don't find yours, just send us a message.</p>
+        <a href="mailto:sales@nebulae.io" style="display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.4rem;border-radius:10px;background:#4f46e5;color:#fff;font-size:.85rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;">Email Us Directly →</a>
+      </div>
+      <div class="col-lg-8">
+        <div class="ct-faq-item" onclick="toggleCtFAQ(this)">
+          <button class="ct-faq-q">Do you offer product samples before bulk ordering?<div class="ct-faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="ct-faq-a"><div class="ct-faq-a-inner">Yes. Qualified engineers, OEM customers, and enterprises can request sample modules or full Evaluation Kits (EVKs) for hands-on testing. Contact our sales team with your application details and we'll arrange samples based on your project requirements.</div></div>
+        </div>
+        <div class="ct-faq-item" onclick="toggleCtFAQ(this)">
+          <button class="ct-faq-q">What is the typical lead time for orders?<div class="ct-faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="ct-faq-a"><div class="ct-faq-a-inner">Standard products ship within 3–7 business days from our Anand warehouse. Large volume orders (10,000+ units) may require 4–8 weeks for production. Custom developed products have project-specific timelines discussed during the scoping phase.</div></div>
+        </div>
+        <div class="ct-faq-item" onclick="toggleCtFAQ(this)">
+          <button class="ct-faq-q">Can you help us select the right protocol for our application?<div class="ct-faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="ct-faq-a"><div class="ct-faq-a-inner">Absolutely. Our engineers will evaluate your application requirements — range, data rate, power budget, network scale, and regulatory environment — and recommend the optimal protocol. We offer free pre-sales technical consultations for qualified projects.</div></div>
+        </div>
+        <div class="ct-faq-item" onclick="toggleCtFAQ(this)">
+          <button class="ct-faq-q">Do you provide custom product development services?<div class="ct-faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="ct-faq-a"><div class="ct-faq-a-inner">Yes. Our end-to-end IoT product development services cover PCB design, RF and antenna engineering, embedded firmware, cloud backend, mobile app, and full production support — from concept to mass production in Anand, Gujarat.</div></div>
+        </div>
+        <div class="ct-faq-item" onclick="toggleCtFAQ(this)">
+          <button class="ct-faq-q">Do you ship outside India?<div class="ct-faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="ct-faq-a"><div class="ct-faq-a-inner">Yes. We ship to 40+ countries including Middle East, Southeast Asia, Africa, and Europe. International orders carry CE and FCC certifications. Contact us for freight options and export documentation support.</div></div>
+        </div>
+        <div class="ct-faq-item" onclick="toggleCtFAQ(this)">
+          <button class="ct-faq-q">What payment terms do you offer?<div class="ct-faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="ct-faq-a"><div class="ct-faq-a-inner">We accept bank transfer (NEFT/RTGS/SWIFT), UPI, and major cards. For established enterprise customers, we offer net-30 payment terms. Large orders may qualify for advance payment discounts — contact our sales team for details.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA STRIP ═══ -->
+<section class="ct-cta-strip">
+  <div class="container">
+    <div class="ct-cta-inner">
+      <div class="ct-cta-text">
+        <h3>Prefer to Talk Directly?</h3>
+        <p>Our engineering team is available Mon–Sat, 9:30 AM – 6:30 PM IST</p>
+      </div>
+      <div class="ct-cta-btns">
+        <a href="tel:+9102692232501" class="ct-cta-btn ct-cta-btn--primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now
+        </a>
+        <a href="https://wa.me/917486031238?text=Hi%20Nebulae%2C%20I%20want%20to%20inquire%20about%20your%20IoT%20products." target="_blank" class="ct-cta-btn ct-cta-btn--wa">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <a href="mailto:sales@nebulae.io" class="ct-cta-btn ct-cta-btn--outline">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="atl-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+
+      <!-- Brand -->
+      <div class="col-12 col-md-4">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img loading="lazy" src="./assets/images/LogoBlue.png" alt="Nebulae" class="atl-footer__logo-img atl-footer__logo-color">
+        </div>
+        <p class="atl-footer__desc">End-to-end IoT solutions provider — from embedded hardware design and wireless modules to cloud integration and smart utility deployments across India and beyond.</p>
+      </div>
+
+      <!-- Navigate -->
+      <div class="col-6 col-md-2">
+        <h6 class="atl-footer__heading">Navigate</h6>
+        <ul class="atl-footer__list">
+          <li><a href="/" onclick="return navClick('home')">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="./resource.html">Resources</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Services & Solutions -->
+      <div class="col-6 col-md-3">
+        <h6 class="atl-footer__heading">Services</h6>
+        <ul class="atl-footer__list">
+          <li><a href="services/iot-product-development.html">IoT Product Development</a></li>
+          <li><a href="services/embedded-hardware-design.html">Embedded Hardware Design</a></li>
+          <li><a href="services/embedded-firmware-design.html">Embedded Firmware Design</a></li>
+          <li><a href="services/iot-cloud-integration.html">IoT Cloud Integration</a></li>
+          <li><a href="services/pcb-design-services.html">PCB Design Services</a></li>
+          <li><a href="services/iot-consulting.html">IoT Consulting</a></li>
+        </ul>
+        <h6 class="atl-footer__heading mt-3">Solutions</h6>
+        <ul class="atl-footer__list">
+          <li><a href="solutions/smart-water-meter.html">Smart Water Meter</a></li>
+          <li><a href="solutions/smart-electric-meter.html">Smart Electric Meter</a></li>
+          <li><a href="solutions/smart-street-light.html">Smart Street Light</a></li>
+          <li><a href="solutions/transformer-monitoring.html">Transformer Monitoring</a></li>
+        </ul>
+      </div>
+
+      <!-- Products & Contact -->
+      <div class="col-12 col-md-3">
+        <h6 class="atl-footer__heading">Products</h6>
+        <ul class="atl-footer__list">
+          <li><a href="products/lora-module.html">LoRa — Module &amp; Gateway</a></li>
+          <li><a href="products/wisun-module.html">Wi-SUN — Module &amp; Gateway</a></li>
+          <li><a href="products/zigbee-module.html">Zigbee — Module &amp; Gateway</a></li>
+          <li><a href="products/gsm-module.html">GSM — Module &amp; Gateway</a></li>
+          <li><a href="products/ble-module.html">BLE — Module &amp; Gateway</a></li>
+          <li><a href="products.html">View All Products →</a></li>
+        </ul>
+        <h6 class="atl-footer__heading mt-3">Contact</h6>
+        <ul class="atl-footer__list">
+          <li><a href="tel:+9102692232501">+91-02692-232501 / 232502</a></li>
+          <li><a href="mailto:sales@nebulae.io">sales@nebulae.io</a></li>
+          <li>Plot#32, Zone-D/4, Phase-1, GIDC Estate, V.U.Nagar – 388121, Gujarat, India</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="atl-footer__bottom">
+      <span>© 2025 Nebulae. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/nebulae-nav.js"></script>
+<script>
+
+/* Progress bar */
+(function(){
+  var bar=document.getElementById('nblProgressBar');
+  if(!bar)return;
+  window.addEventListener('scroll',function(){
+    var s=window.scrollY,h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(h>0?s/h*100:0)+'%';
+  },{passive:true});
+})();
+/* Back to top */
+(function(){
+  var btn=document.getElementById('nblBackTop');
+  if(!btn)return;
+  window.addEventListener('scroll',function(){btn.classList.toggle('visible',window.scrollY>400);},{passive:true});
+  btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+})();
+ 
+/* Product rail (nav) */
+(function(){
+  var items=document.querySelectorAll('.atl-prod-rail__item');
+  items.forEach(function(item){
+    item.addEventListener('click',function(){
+      var wrap=item.closest('.atl-mega__inner--products');
+      if(!wrap)return;
+      wrap.querySelectorAll('.atl-prod-rail__item').forEach(function(i){i.classList.remove('atl-prod-rail__item--active');});
+      wrap.querySelectorAll('.atl-prod-panel__body').forEach(function(p){p.classList.remove('atl-prod-panel__body--active');});
+      item.classList.add('atl-prod-rail__item--active');
+      var panel=wrap.querySelector('[data-panel="'+item.getAttribute('data-prod')+'"]');
+      if(panel)panel.classList.add('atl-prod-panel__body--active');
+    });
+  });
+})();
+/* FAQ */
+window.toggleCtFAQ=function(item){
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.ct-faq-item').forEach(function(i){i.classList.remove('open');});
+  if(!isOpen)item.classList.add('open');
+};
+
+/* ═══ FORM VALIDATION & SUBMIT ═══ */
+window.submitContactForm=function(){
+  var fields={
+    ctName:   {msg:'Please enter your full name'},
+    ctEmail:  {msg:'Please enter a valid email address', email:true},
+    ctPhone:  {msg:'Please enter your phone number'},
+    ctCompany:{msg:'Please enter your company name'},
+    ctSubject:{msg:'Please select a subject'},
+    ctMessage:{msg:'Please describe your requirements (min 20 chars)', min:20},
+  };
+  var valid=true;
+  Object.entries(fields).forEach(function(e){
+    var id=e[0],rule=e[1];
+    var el=document.getElementById(id);
+    var fg=el?el.closest('.ct-field'):null;
+    if(!el||!fg)return;
+    var val=el.value.trim();
+    var err='';
+    if(!val){err=rule.msg;}
+    else if(rule.email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)){err=rule.msg;}
+    else if(rule.min&&val.length<rule.min){err=rule.msg;}
+    if(err){
+      fg.classList.add('has-error');
+      var msg=fg.querySelector('.ct-error-msg');
+      if(msg)msg.textContent=err;
+      valid=false;
+    } else {
+      fg.classList.remove('has-error');
+    }
+  });
+  if(!valid)return;
+
+  var btn=document.getElementById('ctSubmitBtn');
+  btn.disabled=true;
+  btn.innerHTML='<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="animation:spin .8s linear infinite"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> Sending…';
+
+  setTimeout(function(){
+    document.getElementById('ctFormInner').style.display='none';
+    var suc=document.getElementById('ctSuccess');
+    suc.style.display='flex';
+    // Get selected inquiry type
+    var inqBtn=document.querySelector('.ct-inq-btn.active');
+    var inqType=inqBtn?inqBtn.textContent.trim():'General';
+    document.getElementById('ctSuccessType').textContent=inqType;
+    document.getElementById('ctSuccessName').textContent=document.getElementById('ctName').value.trim().split(' ')[0];
+  }, 1400);
+};
+window.resetForm=function(){
+  document.getElementById('ctFormInner').style.display='block';
+  document.getElementById('ctSuccess').style.display='none';
+  document.getElementById('ctContactForm').reset();
+  document.querySelectorAll('.ct-inq-btn').forEach(function(b,i){b.classList.toggle('active',i===0);});
+  document.querySelectorAll('.ct-proto-chip').forEach(function(c){c.classList.remove('selected');});
+  document.getElementById('ctSubmitBtn').disabled=false;
+  document.getElementById('ctSubmitBtn').innerHTML='<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
+};
+/* @keyframes spin defined in <style> */
+
+/* Live char counter for message */
+(function(){
+  var ta=document.getElementById('ctMessage');
+  var counter=document.getElementById('ctMsgCount');
+  if(!ta||!counter)return;
+  ta.addEventListener('input',function(){counter.textContent=ta.value.length;});
+})();
+/* ─ Dark/Light mode toggle ─ */
+(function(){
+  var btn=document.getElementById('nblThemeToggle');
+  if(!btn)return;
+  var sun='<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+  var moon='<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var dark=localStorage.getItem('nblDark')==='1';
+  function apply(d){document.body.classList.toggle('dark-mode',d);btn.innerHTML=d?sun:moon;localStorage.setItem('nblDark',d?'1':'0');}
+  apply(dark);
+  btn.addEventListener('click',function(){apply(!document.body.classList.contains('dark-mode'));});
+})();
+
+(function(){
+  var hdr=document.querySelector('.atl-sticky-header');
+  var hero=document.querySelector('.ct-hero');
+  function setOffset(){
+    if(hdr&&hero)hero.style.marginTop=hdr.offsetHeight+'px';
+  }
+  window.addEventListener('load',setOffset);
+  window.addEventListener('resize',setOffset);
+})();
+</script>
+</body>
+</html>
