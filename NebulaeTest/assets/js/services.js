@@ -41,14 +41,16 @@
   /* ── Service card filter ── */
   function initFilter() {
     var btns = document.querySelectorAll(".sv-filter-btn");
-    var cards = document.querySelectorAll(".sv-card-wrap");
+    var cards = document.querySelectorAll("[data-card-wrap]");
     btns.forEach(function (btn) {
       btn.addEventListener("click", function () {
         btns.forEach(function (b) { b.classList.remove("active"); });
         btn.classList.add("active");
         var f = btn.dataset.filter;
         cards.forEach(function (c) {
-          var show = f === "all" || c.dataset.cat === f;
+          var inner = c.querySelector(".sv-card");
+          var cat = inner ? inner.dataset.cat : c.dataset.cat;
+          var show = f === "all" || cat === f;
           c.style.display = show ? "" : "none";
           c.style.opacity = show ? "1" : "0";
         });

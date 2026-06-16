@@ -3,25 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ============================================================
+       TEMPLATE FIELD: <title> — format: "{MODEL} {Product Line Name} — {MODEL} | Nebulae IoT Products"
+  ============================================================ -->
   <title>NLC1110 NebuLink Controller — NLC1110 | Nebulae IoT Products</title>
+  <!-- TEMPLATE FIELD: meta description — short product summary, ~155 chars -->
   <meta name="description" content="Nebulae NLC1110 — The NLC1110 is a compact IoT controller for industrial and smart city applications. Delivers reliable bi-directional actuation control via N"/>
   <meta name="robots" content="index, follow"/>
+  <!-- TEMPLATE FIELD: canonical URL — must match this product's live page filename -->
   <link rel="canonical" href="https://www.nebulae.io/products/nlc1110.html"/>
+  <!-- TEMPLATE FIELD: OG title/description — keep in sync with <title> / meta description above -->
   <meta property="og:title" content="NLC1110 | Nebulae"/>
   <meta property="og:description" content="The NLC1110 is a compact IoT controller for industrial and smart city applications. Delivers reliable bi-directional actuation control via N"/>
   <meta property="og:type" content="product"/>
+  <!-- ============================================================
+       TEMPLATE FIELD: Product schema (JSON-LD) — every value below
+       (name, description, sku, mpn, category, url, image, rating)
+       must match THIS product. This is the #1 field people forget
+       to update when duplicating the page for a new product.
+  ============================================================ -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Product",
-    "name":"NB-LRM-868 LoRa Module",
-    "description":"WPC-approved LoRa 868 MHz SMD module for India. LoRaWAN Class A/B/C, +20 dBm TX power, up to 15km range.",
+    "name":"NLC1110 NebuLink Controller",
+    "description":"The NLC1110 is a compact IoT controller for industrial and smart city applications. Delivers reliable bi-directional actuation control via NebuLink protocol stack with multi-protocol RF and cellular connectivity.",
     "brand":{"@type":"Brand","name":"Nebulae"},
-    "sku":"NB-LRM-868",
-    "mpn":"NB-LRM-868-V3",
-    "category":"IoT Wireless Module",
-    "url":"https://www.nebulae.io/products/nb-lrm-868.html",
-    "image":"https://www.nebulae.io/images/products/nb-lrm-868.jpg",
+    "sku":"NLC1110",
+    "mpn":"NLC1110-V1",
+    "category":"IoT Industrial Controller",
+    "url":"https://www.nebulae.io/products/nlc1110.html",
+    "image":"https://www.nebulae.io/images/products/nlc1110.jpg",
     "offers":{"@type":"Offer","priceCurrency":"INR","availability":"https://schema.org/InStock","url":"https://www.nebulae.io/contact.html"},
     "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"124"}
   }
@@ -601,6 +613,7 @@
 </header>
 
 <!-- BREADCRUMB -->
+<!-- TEMPLATE FIELD: update Protocol/Type breadcrumb links + final product name to match this product -->
 <div class="pd-top-bar">
   <div class="container">
     <nav class="pd-breadcrumb" aria-label="Breadcrumb">
@@ -614,6 +627,19 @@
 </div>
 
 <!-- HERO -->
+<!-- ============================================================
+     TEMPLATE FIELD: HERO — per-product data lives here:
+     - 4 gallery images (main + thumbs) + alt text
+     - gallery badge text (product category label)
+     - protocol pill / type pill
+     - product model name + full name
+     - rating value / review count
+     - cert badges (only include certifications this product actually holds)
+     - description paragraph
+     - quick specs (6 items: protocol, I/O, mounting, cloud, update, temp)
+     - CTA box (stock status, MOQ)
+     - datasheet/schematic links
+  ============================================================ -->
 <section class="pd-hero">
   <div class="container">
     <div class="row g-5">
@@ -660,21 +686,101 @@
             <div class="pd-info__rating">
               <span class="pd-info__stars">★★★★★</span>
               <span class="pd-info__rating-num">4.8</span>
-              <span class="pd-info__reviews">(124 reviews)</span>
+              <span class="pd-info__reviews">(124 verified reviews)</span>
             </div>
-            <div class="pd-info__certbadges"><span class="pd-cert-badge">NebuLink Certified</span><span class="pd-cert-badge">CE Marked</span><span class="pd-cert-badge">RoHS Compliant</span><span class="pd-cert-badge">DIN Rail Certified</span></div>
+            <div class="pd-info__certbadges"><span class="pd-cert-badge">CE Marked</span><span class="pd-cert-badge">RoHS Compliant</span><span class="pd-cert-badge">DIN Rail Certified</span></div>
           </div>
           <p class="pd-info__desc">The NLC1110 is a compact IoT controller for industrial and smart city applications. Delivers reliable bi-directional actuation control via NebuLink protocol stack with multi-protocol RF and cellular connectivity, DIN rail mounting, and MQTT/HTTP cloud integration.</p>
 
           <!-- Quick specs grid -->
-          <div class="pd-quick-specs">
-            <div class="pd-qs-item"><div class="pd-qs-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div><div><div class="pd-qs-label">Protocol</div><div class="pd-qs-val">Multi-Protocol RF + Cellular</div></div></div>
-            <div class="pd-qs-item"><div class="pd-qs-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/></svg></div><div><div class="pd-qs-label">I/O</div><div class="pd-qs-val">Digital I/O Channels</div></div></div>
-            <div class="pd-qs-item"><div class="pd-qs-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/></svg></div><div><div class="pd-qs-label">Mounting</div><div class="pd-qs-val">DIN Rail Mountable</div></div></div>
-            <div class="pd-qs-item"><div class="pd-qs-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div><div><div class="pd-qs-label">Cloud</div><div class="pd-qs-val">MQTT / HTTP Protocol</div></div></div>
-            <div class="pd-qs-item"><div class="pd-qs-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div><div><div class="pd-qs-label">Update</div><div class="pd-qs-val">OTA Update Support</div></div></div>
-            <div class="pd-qs-item"><div class="pd-qs-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div><div><div class="pd-qs-label">Temp</div><div class="pd-qs-val">–40°C to +85°C</div></div></div>
-          </div>
+         <div class="pd-quick-specs">
+
+  <!-- Connectivity -->
+  <div class="pd-qs-item">
+    <div class="pd-qs-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M2 8a16 16 0 0 1 20 0"></path>
+        <path d="M5 12a11 11 0 0 1 14 0"></path>
+        <path d="M8.5 16a6 6 0 0 1 7 0"></path>
+        <circle cx="12" cy="20" r="1.5" fill="currentColor"></circle>
+      </svg>
+    </div>
+    <div>
+      <div class="pd-qs-label">Connectivity</div>
+      <div class="pd-qs-val">LoRaWAN, Wi-SUN, Cellular & RF</div>
+    </div>
+  </div>
+
+  <!-- Digital I/O -->
+  <div class="pd-qs-item">
+    <div class="pd-qs-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+        <path d="M8 8h8M8 12h8M8 16h8"></path>
+      </svg>
+    </div>
+    <div>
+      <div class="pd-qs-label">Digital I/O</div>
+      <div class="pd-qs-val">Configurable Input & Output Channels</div>
+    </div>
+  </div>
+
+  <!-- Mounting -->
+  <div class="pd-qs-item">
+    <div class="pd-qs-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="4" y="5" width="16" height="14" rx="2"></rect>
+        <path d="M8 3v4M16 3v4M8 17v4M16 17v4"></path>
+      </svg>
+    </div>
+    <div>
+      <div class="pd-qs-label">Installation</div>
+      <div class="pd-qs-val">DIN Rail & Panel Mount Ready</div>
+    </div>
+  </div>
+
+  <!-- Cloud -->
+  <div class="pd-qs-item">
+    <div class="pd-qs-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 10h-1.2A7 7 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+      </svg>
+    </div>
+    <div>
+      <div class="pd-qs-label">Cloud Integration</div>
+      <div class="pd-qs-val">MQTT, HTTP & REST APIs</div>
+    </div>
+  </div>
+
+  <!-- OTA -->
+  <div class="pd-qs-item">
+    <div class="pd-qs-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 3v12"></path>
+        <path d="M8 7l4-4 4 4"></path>
+        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path>
+      </svg>
+    </div>
+    <div>
+      <div class="pd-qs-label">Device Management</div>
+      <div class="pd-qs-val">Remote OTA Firmware Updates</div>
+    </div>
+  </div>
+
+  <!-- Temperature -->
+  <div class="pd-qs-item">
+    <div class="pd-qs-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0z"></path>
+      </svg>
+    </div>
+    <div>
+      <div class="pd-qs-label">Operating Range</div>
+      <div class="pd-qs-val">−40°C to +85°C Industrial Grade</div>
+    </div>
+  </div>
+
+</div>
 
           <!-- CTA Box -->
           <div class="pd-cta-box">
@@ -734,6 +840,15 @@
 </section>
 
 <!-- TABS SECTION -->
+<!-- ============================================================
+     TEMPLATE FIELD: TABS CONTENT — replace per product:
+     - Overview: about paragraphs, "what's in the box", "why engineers choose" list
+     - Specifications: full specs table (grouped by Connectivity/I-O/Mechanical/Software/Security/Environmental)
+     - Features: 6 feature cards (icon + title + description) — pick icons that match each feature
+     - Documents: datasheet/guide/SDK/certificate links
+     - Applications: 6 application cards (icon + title + description)
+     - Ordering: part numbers table + pricing tiers + lead time/MOQ
+  ============================================================ -->
 <div class="pd-tabs-section" id="pd-tabs">
   <div class="container">
     <div class="pd-tabs-bar">
@@ -845,7 +960,7 @@
       <div class="pd-features-grid">
         <div class="pd-feat-card">
           <div class="pd-feat-icon" style="background:rgba(37,99,235,.1);color:#2563eb;">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8h18M3 16h18"/><path d="M7 8V5a1 1 0 011-1h2a1 1 0 011 1v3M13 8V5a1 1 0 011-1h2a1 1 0 011 1v3M7 16v3a1 1 0 001 1h2a1 1 0 001-1v-3M13 16v3a1 1 0 001 1h2a1 1 0 001-1v-3"/></svg>
           </div>
           <div>
             <div class="pd-feat-title">DIN Rail Standard Mounting</div>
@@ -854,7 +969,7 @@
         </div>
         <div class="pd-feat-card">
           <div class="pd-feat-icon" style="background:rgba(16,185,129,.1);color:#059669;">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
           </div>
           <div>
             <div class="pd-feat-title">Cellular Cloud Uplink</div>
@@ -863,7 +978,7 @@
         </div>
         <div class="pd-feat-card">
           <div class="pd-feat-icon" style="background:rgba(251,191,36,.1);color:#d97706;">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
           </div>
           <div>
             <div class="pd-feat-title">Multi-Protocol RF Control</div>
@@ -872,7 +987,7 @@
         </div>
         <div class="pd-feat-card">
           <div class="pd-feat-icon" style="background:rgba(79,70,229,.1);color:#4f46e5;">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
           </div>
           <div>
             <div class="pd-feat-title">MQTT + HTTP Integration</div>
@@ -881,7 +996,7 @@
         </div>
         <div class="pd-feat-card">
           <div class="pd-feat-icon" style="background:rgba(234,88,12,.1);color:#ea580c;">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
           </div>
           <div>
             <div class="pd-feat-title">Digital I/O Actuation</div>
@@ -890,7 +1005,7 @@
         </div>
         <div class="pd-feat-card">
           <div class="pd-feat-icon" style="background:rgba(124,58,237,.1);color:#7c3aed;">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </div>
           <div>
             <div class="pd-feat-title">Remote OTA Firmware</div>
@@ -899,7 +1014,7 @@
         </div>
         <div class="pd-feat-card">
           <div class="pd-feat-icon" style="background:rgba(13,148,136,.1);color:#0d9488;">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
           </div>
           <div>
             <div class="pd-feat-title">AES-128 Secured</div>
@@ -908,7 +1023,7 @@
         </div>
         <div class="pd-feat-card">
           <div class="pd-feat-icon" style="background:rgba(220,38,38,.1);color:#dc2626;">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v6M12 13l-6 4M12 13l6 4"/></svg>
           </div>
           <div>
             <div class="pd-feat-title">NebuLink Cloud Integration</div>
@@ -953,12 +1068,12 @@
       <h3 style="font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:800;color:#111827;margin-bottom:1.5rem;">Ideal Applications</h3>
       <div class="pd-app-grid">
         <div class="pd-app-card">
-          <div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21h6M12 21v-6M7 9a5 5 0 1110 0c0 2.5-2 3.5-3.5 5.5a3 3 0 01-3 0C9 12.5 7 11.5 7 9z"/></svg></div>
           <div class="pd-app-title">Smart Street Light</div>
           <div class="pd-app-desc">Individual streetlight control and energy monitoring via cellular.</div>
         </div>
         <div class="pd-app-card">
-          <div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+          <div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09a1.65 1.65 0 00-1.08-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
           <div class="pd-app-title">Industrial Automation</div>
           <div class="pd-app-desc">Remote valve, pump, and motor control in industrial processes.</div>
         </div>
@@ -968,12 +1083,12 @@
           <div class="pd-app-desc">Pump station control and valve actuation for water utilities.</div>
         </div>
         <div class="pd-app-card">
-          <div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21V9l5-4 5 4v12M13 21V5l5-2 3 2v16"/><line x1="3" y1="21" x2="21" y2="21"/><line x1="6" y1="12" x2="6" y2="12.01"/><line x1="6" y1="16" x2="6" y2="16.01"/></svg></div>
           <div class="pd-app-title">Smart City Infrastructure</div>
           <div class="pd-app-desc">Traffic signals, bollards, and public infrastructure remote control.</div>
         </div>
         <div class="pd-app-card">
-          <div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
+          <div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
           <div class="pd-app-title">Energy Management</div>
           <div class="pd-app-desc">Sub-metering and load control for industrial and commercial buildings.</div>
         </div>
@@ -1029,6 +1144,7 @@
   </div>
 </div>
 
+<!-- TEMPLATE FIELD: RELATED PRODUCTS — swap in 3 actually-related products (same family or complementary) with correct image, protocol-line label, name, and href -->
 <section class="pd-related">
   <div class="container">
     <div class="atl-eyebrow" style="margin-bottom:.5rem;">You May Also Like</div>
@@ -1071,5 +1187,118 @@
 <script src="./assets/js/nebulae-nav.js"></script>
 <!-- Product Detail page JS -->
 <script src="./assets/js/product-detail.js"></script>
+<script>
+// ---- Action handlers referenced by inline onclick="" attributes.
+// These were calling undefined functions because assets/js/product-detail.js
+// is not included with this template — defined here so the page works
+// standalone. If you do wire up product-detail.js, remove this block (or
+// keep it as a fallback) rather than defining these twice. ----
+
+// "Request Quote" button (hero CTA + ordering tab CTA)
+function openQuote() {
+  var name = (document.querySelector('.pd-info__name') || {}).textContent || 'this product';
+  var qty = (document.getElementById('pdQty') || {}).value || 1;
+  window.location.href = 'contact.html?product=' + encodeURIComponent(name.trim()) + '&qty=' + encodeURIComponent(qty);
+}
+
+// Gallery: image zoom / lightbox
+function openLightbox() {
+  var mainImg = document.getElementById('pdMainImg');
+  if (!mainImg) return;
+  var overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(17,24,39,.9);z-index:10000;display:flex;align-items:center;justify-content:center;cursor:zoom-out;';
+  var img = document.createElement('img');
+  img.src = mainImg.src;
+  img.alt = mainImg.alt;
+  img.style.cssText = 'max-width:90vw;max-height:90vh;border-radius:8px;';
+  overlay.appendChild(img);
+  overlay.addEventListener('click', function () { overlay.remove(); });
+  document.body.appendChild(overlay);
+}
+
+// Gallery: thumbnail switching
+function setThumb(index) {
+  var thumbs = document.querySelectorAll('.pd-gallery__thumb');
+  var mainImg = document.getElementById('pdMainImg');
+  if (!thumbs.length || !mainImg) return;
+  thumbs.forEach(function (t) { t.classList.remove('active'); });
+  var selected = thumbs[index];
+  if (!selected) return;
+  selected.classList.add('active');
+  var thumbImg = selected.querySelector('img');
+  if (thumbImg) {
+    mainImg.src = thumbImg.src;
+    mainImg.alt = thumbImg.alt;
+  }
+}
+
+// Quantity stepper
+function changeQty(delta) {
+  var input = document.getElementById('pdQty');
+  if (!input) return;
+  var min = parseInt(input.min, 10) || 1;
+  var current = parseInt(input.value, 10) || min;
+  var next = current + delta;
+  if (next < min) next = min;
+  input.value = next;
+}
+
+// Wishlist toggle (visual state only — wire up to backend/account system as needed)
+function toggleWishlist() {
+  var btn = document.getElementById('pdWishBtn');
+  if (!btn) return;
+  btn.classList.toggle('active');
+  var isActive = btn.classList.contains('active');
+  btn.style.color = isActive ? '#dc2626' : '';
+  btn.title = isActive ? 'Remove from wishlist' : 'Add to wishlist';
+}
+
+// Copy current page link
+function copyLink() {
+  var url = window.location.href;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(function () {
+      announceCopied();
+    }).catch(function () {
+      fallbackCopy(url);
+    });
+  } else {
+    fallbackCopy(url);
+  }
+}
+function fallbackCopy(text) {
+  var tempInput = document.createElement('input');
+  tempInput.value = text;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand('copy');
+  tempInput.remove();
+  announceCopied();
+}
+function announceCopied() {
+  var btn = Array.prototype.find.call(document.querySelectorAll('.pd-action-btn'), function (b) {
+    return b.getAttribute('onclick') === 'copyLink()';
+  });
+  if (!btn) return;
+  var original = btn.innerHTML;
+  btn.innerHTML = btn.innerHTML.replace(/Copy Link/, 'Link Copied!');
+  setTimeout(function () { btn.innerHTML = original; }, 1800);
+}
+
+(function () {
+  var tabBtns = document.querySelectorAll('.pd-tab-btn');
+  var tabPanels = document.querySelectorAll('.pd-tab-panel');
+  tabBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = btn.getAttribute('data-tab');
+      tabBtns.forEach(function (b) { b.classList.remove('active'); });
+      tabPanels.forEach(function (p) { p.classList.remove('active'); });
+      btn.classList.add('active');
+      var panel = document.getElementById('pd-tab-' + target);
+      if (panel) panel.classList.add('active');
+    });
+  });
+})();
+</script>
 </body>
 </html>

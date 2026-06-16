@@ -179,6 +179,7 @@ img{max-width:100%;padding:0!important;border:none!important;}
 .sv-card--featured .sv-card__list li{color:rgba(255,255,255,.7);}
 .sv-card--featured .sv-card__list li::before{color:#06b6d4;}
 .sv-card--featured .sv-card__link{color:#06b6d4;}
+.sv-card__list {display: none !important;}
 
 /* ══ PROCESS SECTION ══ */
 .sv-process-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0;

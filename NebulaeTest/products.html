@@ -603,8 +603,9 @@
   <div class="container">
     <div class="pr-filter-inner">
       <!-- Protocol filters -->
-      <span class="pr-filter-label">Protocol</span>
-      <div class="pr-filter-group">
+      <div>
+        <div class="pr-filter-group">
+        <span class="pr-filter-label">Protocol</span>
         <button class="pr-filter-btn active" data-filter-proto="all">All</button>
         <button class="pr-filter-btn" data-filter-proto="lora">LoRa</button>
         <button class="pr-filter-btn" data-filter-proto="wisun">Wi-SUN</button>
@@ -613,10 +614,10 @@
         <button class="pr-filter-btn" data-filter-proto="gsm">GSM</button>
         <button class="pr-filter-btn" data-filter-proto="ble">BLE</button>
       </div>
-      <div class="pr-filter-sep"></div>
-      <!-- Type filters -->
-      <span class="pr-filter-label">Type</span>
-      <div class="pr-filter-group">
+      </div>
+      <div class="d-flex">
+        <div class="pr-filter-group">
+        <span class="pr-filter-label">Type</span>
         <button class="pr-filter-btn active" data-filter-type="all">All</button>
         <button class="pr-filter-btn" data-filter-type="module">Module</button>
         <button class="pr-filter-btn" data-filter-type="gateway">Gateway</button>
@@ -632,6 +633,12 @@
           <input type="text" id="prSearch" placeholder="Search products…" autocomplete="off">
         </div>
       </div>
+      </div>
+   
+      <div class="pr-filter-sep"></div>
+      <!-- Type filters -->
+      
+      
     </div>
   </div>
 </div>
@@ -1233,7 +1240,7 @@
       <!-- Brand -->
       <div class="col-12 col-md-4">
         <div class="d-flex align-items-center gap-2 mb-3">
-          <img loading="lazy" src="images/LogoBlue.png" alt="Nebulae" class="atl-footer__logo-img atl-footer__logo-color">
+          <img loading="lazy" src="./assets/images/LogoWhite.png" alt="Nebulae" class="atl-footer__logo-img atl-footer__logo-color">
         </div>
         <p class="atl-footer__desc">End-to-end IoT solutions provider — from embedded hardware design and wireless modules to cloud integration and smart utility deployments across India and beyond.</p>
       </div>
@@ -1295,7 +1302,7 @@
     </div>
 
     <div class="atl-footer__bottom">
-      <span>© 2025 Nebulae. All rights reserved.</span>
+      <span>© 2026 Nebulae. All rights reserved.</span>
     </div>
   </div>
 </footer>
