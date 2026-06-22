@@ -98,7 +98,8 @@ a{text-decoration:none;}img{max-width:100%;padding:0!important;border:none!impor
 /* ══ DEEP SOLUTION SECTIONS ══ */
 .sl-solution{padding:5rem 0;position:relative;}
 .sl-solution--alt{background:#f5f7ff;}
-.sl-solution--dark{background:linear-gradient(135deg,#07071e,#0e0e38);}
+/* .sl-solution--dark{background:linear-gradient(135deg,#07071e,#0e0e38);} */
+.sl-solution--dark{background: linear-gradient(135deg, #e8eaf6, #e3f2fd);}
 .sl-solution__tag{display:inline-block;font-size:.65rem;font-weight:800;
   letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:100px;
   margin-bottom:1rem;}
@@ -108,8 +109,12 @@ a{text-decoration:none;}img{max-width:100%;padding:0!important;border:none!impor
 /* Feature list */
 .sl-feat-list{list-style:none;margin:0 0 1.75rem;padding:0;display:flex;flex-direction:column;gap:.65rem;}
 .sl-feat-list li{display:flex;align-items:flex-start;gap:.75rem;font-size:.9rem;}
+
 .sl-feat-list__icon{width:22px;height:22px;border-radius:6px;flex-shrink:0;
   display:flex;align-items:center;justify-content:center;margin-top:1px;}
+
+.sl-section--dark .sl-feat-list .sl-feat-list__icon{background:rgba(6,182,212,.12); color:#06b6d4;}
+
 /* Metric pills row */
 .sl-metrics{display:flex;flex-wrap:wrap;gap:.65rem;margin-bottom:1.75rem;}
 .sl-metric{background:#f0f3ff;border:1.5px solid #c7d2fe;border-radius:12px;
@@ -120,7 +125,7 @@ a{text-decoration:none;}img{max-width:100%;padding:0!important;border:none!impor
 .sl-metric--dark .sl-metric__val{color:#06b6d4;}
 .sl-metric__label{font-size:.68rem;color:#6b7280;font-weight:600;
   text-transform:uppercase;letter-spacing:.07em;margin-top:.2rem;display:block;}
-.sl-metric--dark .sl-metric__label{color:rgba(255,255,255,.5);}
+.sl-metric--dark .sl-metric__label{color:rgba(0,0,0,.5);}
 /* Products used strip */
 .sl-products-strip{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.25rem;}
 .sl-product-chip{display:inline-flex;align-items:center;gap:.4rem;
