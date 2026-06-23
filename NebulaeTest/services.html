@@ -129,6 +129,15 @@
                     Data Connector
                     <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
                   </button>
+                  <button class="atl-prod-rail__item" data-prod="datacloud">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
+    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
+    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
+</svg>
+                    Cloud
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
                 </div>
 
                 <!-- Panels -->
@@ -212,6 +221,17 @@
                       <a href="products/wifi-dataconnector.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">RS485 Wireless LAN</span></a>
                       <a href="products/gsm-dataconnector.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">RS485 GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
                     
+                    </div>
+                  </div>
+                  <div class="atl-prod-panel__body" data-panel="datacloud">
+                    <p class="atl-prod-panel__label">Cloud/Edge Connector — Choose a protocol</p> 
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/cloud.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
+    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
+    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
+</svg></span><span class="atl-prod-card__name">Cloud</span><span class="atl-prod-card__desc">Middleware</span></a>
+                      
                     </div>
                   </div>
                 </div><!-- /atl-prod-panel -->
@@ -595,6 +615,7 @@
 </div><!-- /.atl-sticky-header -->
 </header>
 
+
 <!-- ═══ HERO ═══ -->
 <section class="sv-hero">
   <div class="sv-hero__grid"></div>
@@ -676,7 +697,7 @@
   <div class="container">
     <div class="text-center mb-5" data-sv="up">
       <span class="sv-eyebrow-sm">What We Do</span>
-      <h2 class="sv-section-title">9 Core Engineering Services</h2>
+      <h2 class="sv-section-title">12 Core Engineering Services</h2>
       <p class="sv-section-desc" style="margin:0 auto;">Every service is delivered by Nebulae's in-house engineers — no outsourcing, no middlemen.</p>
     </div>
     <!-- Filter -->
@@ -755,8 +776,30 @@
         </div>
       </div>
 
-      <!-- 4. PCB Design Services -->
+      <!-- 4. Embedded Software Development (NEW) -->
       <div class="col-md-6 col-lg-4" data-card-wrap data-sv="up" data-sv-d="1">
+        <div class="sv-card sv-card--fw h-100" data-cat="firmware">
+          <div class="sv-card__icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+  <rect x="3" y="4" width="18" height="16" rx="2"/>
+  <path d="M8 10l-3 2 3 2M16 10l3 2-3 2M13 8l-2 8"/>
+</svg></div>
+          <div class="sv-card__cat">Firmware · Software</div>
+          <div class="sv-card__title">Embedded Software Development</div>
+          <p class="sv-card__desc">Application-layer and middleware software development for embedded Linux, RTOS, and bare-metal platforms. We build robust, maintainable codebases for resource-constrained IoT devices with long product lifespans.</p>
+          <ul class="sv-card__list">
+            <li>Embedded Linux (Yocto / Buildroot)</li>
+            <li>Device driver &amp; HAL development</li>
+            <li>Middleware &amp; protocol stack integration</li>
+            <li>POSIX &amp; multithreaded application design</li>
+            <li>Unit testing &amp; CI/CD for embedded</li>
+            <li>Legacy codebase migration &amp; refactoring</li>
+          </ul>
+          <a href="contact.html" class="sv-card__link">Discuss Requirements <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
+        </div>
+      </div>
+
+      <!-- 5. PCB Design Services -->
+      <div class="col-md-6 col-lg-4" data-card-wrap data-sv="up" data-sv-d="2">
         <div class="sv-card sv-card--pcb h-100" data-cat="hardware">
           <div class="sv-card__icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
   <rect x="3" y="3" width="18" height="18" rx="2"/>
@@ -778,8 +821,31 @@
         </div>
       </div>
 
-      <!-- 5. IoT Cloud Integration -->
-      <div class="col-md-6 col-lg-4" data-card-wrap data-sv="up" data-sv-d="2">
+      <!-- 6. Wireless Sensor Network in IoT (NEW) -->
+      <div class="col-md-6 col-lg-4" data-card-wrap data-sv="up" data-sv-d="3">
+        <div class="sv-card sv-card--cloud h-100" data-cat="cloud">
+          <div class="sv-card__icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="2"/>
+  <path d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 16.24a6 6 0 0 1 0-8.49"/>
+  <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14"/>
+</svg></div>
+          <div class="sv-card__cat">RF · Network</div>
+          <div class="sv-card__title">Wireless Sensor Network in IoT</div>
+          <p class="sv-card__desc">End-to-end design and deployment of wireless sensor networks for industrial, utility, and smart city applications. We select the right protocol, plan coverage, and deliver a fully integrated sensing layer ready for cloud ingestion.</p>
+          <ul class="sv-card__list">
+            <li>LoRaWAN / Wi-SUN / Zigbee network design</li>
+            <li>RF site survey &amp; coverage planning</li>
+            <li>Sensor node hardware &amp; firmware</li>
+            <li>Gateway selection &amp; configuration</li>
+            <li>Network health monitoring &amp; diagnostics</li>
+            <li>Scalable multi-site deployment support</li>
+          </ul>
+          <a href="contact.html" class="sv-card__link">Plan Your Network <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
+        </div>
+      </div>
+
+      <!-- 7. IoT Cloud Integration -->
+      <div class="col-md-6 col-lg-4" data-card-wrap data-sv="up" data-sv-d="1">
         <div class="sv-card sv-card--cloud h-100" data-cat="cloud">
           <div class="sv-card__icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
   <path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.3-1.6A5 5 0 0 0 6.5 19h11z"/>
@@ -799,7 +865,30 @@
         </div>
       </div>
 
-      <!-- 6. IoT Dashboard -->
+      <!-- 8. Edge Computing (NEW) -->
+      <div class="col-md-6 col-lg-4" data-card-wrap data-sv="up" data-sv-d="2">
+        <div class="sv-card sv-card--fw h-100" data-cat="cloud">
+          <div class="sv-card__icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+  <rect x="2" y="3" width="20" height="14" rx="2"/>
+  <path d="M8 21h8M12 17v4"/>
+  <path d="M7 8h3v3H7zM14 8h3v3h-3z"/>
+</svg></div>
+          <div class="sv-card__cat">Cloud · Edge</div>
+          <div class="sv-card__title">Edge Computing</div>
+          <p class="sv-card__desc">Bring intelligence to the network edge with local processing, real-time decision-making, and reduced cloud dependency. We design edge architectures that cut latency, lower bandwidth costs, and keep critical systems operational even offline.</p>
+          <ul class="sv-card__list">
+            <li>Edge gateway hardware &amp; OS selection</li>
+            <li>Local inference &amp; rule engine deployment</li>
+            <li>Docker / containerised edge apps</li>
+            <li>Offline-first &amp; store-and-forward design</li>
+            <li>Edge-to-cloud sync &amp; data filtering</li>
+            <li>Remote management &amp; OTA updates</li>
+          </ul>
+          <a href="contact.html" class="sv-card__link">Explore Edge Solutions <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
+        </div>
+      </div>
+
+      <!-- 9. IoT Dashboard -->
       <div class="col-md-6 col-lg-4" data-card-wrap data-sv="up" data-sv-d="3">
         <div class="sv-card sv-card--cloud h-100" data-cat="cloud">
           <div class="sv-card__icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -822,7 +911,7 @@
         </div>
       </div>
 
-      <!-- 7. Mobile App -->
+      <!-- 10. Mobile App -->
       <div class="col-md-6 col-lg-4" data-card-wrap data-sv="up" data-sv-d="1">
         <div class="sv-card sv-card--mobile h-100" data-cat="cloud">
           <div class="sv-card__icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -844,7 +933,7 @@
         </div>
       </div>
 
-      <!-- 8. PoC to MVP -->
+      <!-- 11. PoC to MVP -->
       <div class="col-md-6 col-lg-4" data-card-wrap data-sv="up" data-sv-d="2">
         <div class="sv-card sv-card--poc h-100" data-cat="consulting">
           <div class="sv-card__icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -865,7 +954,7 @@
         </div>
       </div>
 
-      <!-- 9. IoT Consulting (Featured) -->
+      <!-- 12. IoT Consulting (Featured) -->
       <div class="col-md-6 col-lg-4" data-card-wrap data-sv="up" data-sv-d="3">
         <div class="sv-card sv-card--consult sv-card--featured h-100" data-cat="consulting">
           <div class="sv-card__icon" style="background:rgba(6,182,212,.2);color:#06b6d4;">
