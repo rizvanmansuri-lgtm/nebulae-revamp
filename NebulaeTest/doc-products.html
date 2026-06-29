@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Documents | Nebulae — Datasheets, Brochures &amp; Technical Downloads</title>
+  <meta name="description" content="Download Nebulae IoT product datasheets, brochures, user guides, and technical documents. LoRa, Wi-SUN, Zigbee, Wi-Fi, GSM modules, gateways, concentrators and more." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.nebulae.io/products.html" />
+  <meta property="og:title" content="IoT Products | Nebulae" />
+  <meta property="og:description" content="500+ IoT products across 6 protocols. Modules, Gateways, EVKs, Concentrators &amp; Nodes — all WPC approved." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <!-- Nebulae shared nav/footer styles -->
+  <link rel="stylesheet" href="./assets/css/nebulae-nav.css">
+  <!-- Products page styles -->
+  <link rel="stylesheet" href="./assets/css/products.css">
+  <link rel="stylesheet" href="./assets/css/doc-products.css">
+</head>
+<body>
+<div id="nblProgressBar"></div>
+<button id="nblBackTop" aria-label="Back to top">
+  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<header>
+<!-- ════ STICKY HEADER ════ -->
+<div class="atl-sticky-header" style="position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:9999!important;">
+
+  <!-- Utility bar -->
+  <div class="atl-util-bar">
+    <div class="atl-util-bar__inner">
+      <div class="atl-util-bar__left">
+        <!-- <span class="atl-util-link">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          India · IoT Solutions Provider
+        </span> -->
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 9898042339 
+        </a>
+      </div>
+      <div class="atl-util-bar__right">
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91-02692-232501/02
+        </a>
+        <a href="mailto:sales@nebulae.io" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          sales@nebulae.io
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main navbar -->
+  <nav class="atl-nav" id="atlNav">
+    <div class="atl-nav__inner">
+
+      <!-- Logo -->
+      <a href="./index.html" class="atl-nav__logo">
+        <img src="./assets/images/LogoBlue.png" alt="Nebulae" class="atl-nav__logo-img">
+      </a>
+
+      <!-- Desktop nav -->
+      <ul class="atl-nav__links" id="navLinks">
+
+        <!-- 1. PRODUCTS -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaProducts">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaProducts')">
+            Products
+            <svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="atl-mega" id="mega-megaProducts">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner atl-mega__inner--products" style="display:flex;gap:0;min-height:320px;">
+
+                <!-- Rail -->
+                <div class="atl-prod-rail">
+                  <button class="atl-prod-rail__item atl-prod-rail__item--active" data-prod="module">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                    Module
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="gateway">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h.01M10 11h.01"/><circle cx="17" cy="11" r="1" fill="currentColor"/></svg>
+                    Gateway
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="concentrator">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                    Concentrator
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="filter">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                    Filter
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  
+                  <button class="atl-prod-rail__item" data-prod="node">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+                    Nodes
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="evk">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+                    EVK
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="dataconnector">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h7"/><circle cx="17" cy="18" r="3"/><path d="M17 15v-1.5M17 21v1.5M14.2 16.5l-1.3-.75M20.1 19.25l1.3.75M14.2 19.25l-1.3.75M20.1 16.5l1.3-.75"/></svg>
+                    Data Connector
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                </div>
+
+                <!-- Panels -->
+                <div class="atl-prod-panel">
+                  <!-- Module -->
+                  <div class="atl-prod-panel__body atl-prod-panel__body--active" data-panel="module">
+                    <p class="atl-prod-panel__label">Module — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-module.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products/wisun-module.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products/zigbee-module.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products/wifi-module.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="products/gsm-module.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                      <a href="products/ble-module.html" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></span><span class="atl-prod-card__name">BLE</span><span class="atl-prod-card__desc">Bluetooth Low Energy</span></a>
+                    </div>
+                  </div>
+                  <!-- Gateway -->
+                  <div class="atl-prod-panel__body" data-panel="gateway">
+                    <p class="atl-prod-panel__label">Gateway — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-gateway.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products/wisun-gateway.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products/zigbee-gateway.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products/wifi-gateway.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="products/gsm-gateway.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                      <a href="products/ble-gateway.html" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></span><span class="atl-prod-card__name">BLE</span><span class="atl-prod-card__desc">Bluetooth Low Energy</span></a>
+                    </div>
+                  </div>
+                  <!-- Filter -->
+                  <div class="atl-prod-panel__body" data-panel="filter">
+                    <p class="atl-prod-panel__label">Filter — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-filter.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Filter 1</span></a>
+                      <a href="products/wisun-filter.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Filter 2</span></a>
+                    
+                    </div>
+                  </div>
+                  <!-- EVK -->
+                  <div class="atl-prod-panel__body" data-panel="evk">
+                    <p class="atl-prod-panel__label">EVK — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-evk.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products/wisun-evk.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products/zigbee-evk.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products/wifi-evk.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="products/gsm-evk.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                      <a href="products/ble-evk.html" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></span><span class="atl-prod-card__name">BLE</span><span class="atl-prod-card__desc">Bluetooth Low Energy</span></a>
+                    </div>
+                  </div>
+                  <!-- Concentrator -->
+                  <div class="atl-prod-panel__body" data-panel="concentrator">
+                    <p class="atl-prod-panel__label">Concentrator — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-concentrator.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products/wisun-concentrator.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products/zigbee-concentrator.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products/wifi-concentrator.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="products/gsm-concentrator.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                      <a href="products/ble-concentrator.html" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></span><span class="atl-prod-card__name">BLE</span><span class="atl-prod-card__desc">Bluetooth Low Energy</span></a>
+                    </div>
+                  </div>
+                  <!-- Node -->
+                  <div class="atl-prod-panel__body" data-panel="node">
+                    <p class="atl-prod-panel__label">Node — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-node.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products/wisun-node.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products/zigbee-node.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products/wifi-node.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="products/gsm-node.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                      <a href="products/ble-node.html" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></span><span class="atl-prod-card__name">BLE</span><span class="atl-prod-card__desc">Bluetooth Low Energy</span></a>
+                    </div>
+                  </div>
+                  <!-- Add to Panels section (after EVK panel) -->
+                  <div class="atl-prod-panel__body" data-panel="dataconnector">
+                    <p class="atl-prod-panel__label">Data Connector — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/lora-dataconnector.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">RS485 LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products/wisun-dataconnector.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">RS485 Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products/zigbee-dataconnector.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">RS485 Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products/wifi-dataconnector.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">RS485 Wireless LAN</span></a>
+                      <a href="products/gsm-dataconnector.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">RS485 GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                    
+                    </div>
+                  </div>
+                </div><!-- /atl-prod-panel -->
+
+                <!-- Feature card -->
+                <div style="width:220px;flex-shrink:0;padding:1.5rem 1.25rem;display:flex;align-items:center;">
+                  <div class="atl-mega__feature-card" style="width:100%">
+                    <span class="atl-mega__new-tag">FULL STACK IoT</span>
+                    <p class="atl-mega__feature-name">End-to-End IoT Hardware</p>
+                    <p class="atl-mega__feature-desc">Modules, Gateways, Filters, EVKs, Concentrators &amp; Nodes across all major wireless protocols.</p>
+                    <a href="products.html" class="atl-mega__feature-link">View All Products →</a>
+                    <div class="atl-mega__cert-badges">
+                      <span class="atl-mega__cert">LoRa</span>
+                      <span class="atl-mega__cert">Wi-SUN</span>
+                      <span class="atl-mega__cert">BLE</span>
+                      <span class="atl-mega__cert">Zigbee</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2. SOLUTIONS -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaSolutions">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaSolutions')">Solutions<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaSolutions">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner atl-mega__inner--3col">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div><div><p class="atl-mega__col-title">Smart Metering</p><p class="atl-mega__col-desc">AMI &amp; AMR utility solutions</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="solutions/smart-water-meter.html"><span class="atl-mega__dot"></span>Smart Water Meter Solution</a></li>
+                    <li><a href="solutions/smart-electric-meter.html"><span class="atl-mega__dot"></span>Smart Electric Meter Solution</a></li>
+                    <li><a href="solutions/smart-gas-meter.html"><span class="atl-mega__dot"></span>Smart Gas Metering Solution</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div><div><p class="atl-mega__col-title">Smart Infrastructure</p><p class="atl-mega__col-desc">City &amp; grid automation</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="solutions/smart-street-light.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Smart Street Light Solution</a></li>
+                    <li><a href="solutions/transformer-monitoring.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Transformer Monitoring System</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col atl-mega__col--feature">
+                  <div class="atl-mega__feature-card">
+                    <span class="atl-mega__new-tag">END-TO-END</span>
+                    <p class="atl-mega__feature-name">Complete IoT Solutions</p>
+                    <p class="atl-mega__feature-desc">From hardware modules to cloud dashboards — turn-key smart utility &amp; infrastructure deployments.</p>
+                    <a href="solutions.html" class="atl-mega__feature-link">View All Solutions →</a>
+                    <div class="atl-mega__cert-badges"><span class="atl-mega__cert">AMI</span><span class="atl-mega__cert">SCADA</span><span class="atl-mega__cert">Cloud</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3. SERVICES -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaServices">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaServices')">Services<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaServices">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div><p class="atl-mega__col-title">Development</p><p class="atl-mega__col-desc">IoT product &amp; embedded design</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="services/iot-product-development.html"><span class="atl-mega__dot"></span>IoT Product Development</a></li>
+                    <li><a href="services/embedded-hardware-design.html"><span class="atl-mega__dot"></span>Embedded Hardware Design</a></li>
+                    <li><a href="services/embedded-software-development.html"><span class="atl-mega__dot"></span>Embedded Software Development</a></li>
+                    <li><a href="services/embedded-firmware-design.html"><span class="atl-mega__dot"></span>Embedded Firmware Design</a></li>
+                    <li><a href="services/pcb-design-services.html"><span class="atl-mega__dot"></span>PCB Design Services</a></li>
+                    <li><a href="services/poc-to-mvp.html"><span class="atl-mega__dot"></span>PoC to MVP Development</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div><div><p class="atl-mega__col-title">RF - Survey</p><p class="atl-mega__col-desc">Network, cloud &amp; dashboard</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="services/wireless-sensor-network.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Wireless Sensor Network in IoT</a></li>
+                    
+                    <li><a href="services/iot-cloud-integration.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>IoT Cloud Integration</a></li>
+                    <li><a href="services/edge-computing.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Edge Computing</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--purple"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div><p class="atl-mega__col-title">Consulting</p><p class="atl-mega__col-desc">Strategy &amp; mobile solutions</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="services/iot-consulting.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>IoT Consulting</a></li>
+                    <li><a href="services/iot-mobile-app.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>IoT Mobile App Development</a></li>
+                    <li><a href="services/iot-dashboard.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>IoT Dashboard</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col atl-mega__col--feature">
+                  <div class="atl-mega__feature-card">
+                    <span class="atl-mega__new-tag">FULL STACK IoT</span>
+                    <p class="atl-mega__feature-name">Concept to Deployment</p>
+                    <p class="atl-mega__feature-desc">Hardware design, embedded firmware, cloud integration &amp; mobile apps — all under one roof.</p>
+                    <a href="services.html" class="atl-mega__feature-link">View All Services →</a>
+                    <div class="atl-mega__cert-badges"><span class="atl-mega__cert">HW</span><span class="atl-mega__cert">FW</span><span class="atl-mega__cert">Cloud</span><span class="atl-mega__cert">App</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+          <li class="atl-nav__item">
+          <a class="atl-nav__link" href="resources.html">Resources</a>
+        </li>
+        <!-- 4. INDUSTRIES -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaIndustries">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaIndustries')">Industries<svg
+              class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="m6 9 6 6 6-6" />
+            </svg></button>
+          <div class="atl-mega" id="mega-megaIndustries">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Smart City</p>
+                      <p class="atl-mega__col-desc">Automation &amp; security</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/home-security-automation.html"><span class="atl-mega__dot"></span>Home Security
+                        &amp; Automation</a></li>
+                    <li><a href="industries/sos-devices.html"><span class="atl-mega__dot"></span>SOS Devices</a></li>
+                    <li><a href="industries/smart-city-solutions.html"><span class="atl-mega__dot"></span>Smart City
+                        Solutions</a></li>
+                    <li><a href="industries/building-management-system.html"><span class="atl-mega__dot"></span>Building
+                        Management System</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 22V12M12 12C12 12 8 9 4 12M12 12C12 12 16 9 20 12M4 8C7 5 12 7 12 7C12 7 17 5 20 8" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Agriculture &amp; Energy</p>
+                      <p class="atl-mega__col-desc">Smart farming &amp; utilities</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/smart-agriculture.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Smart
+                        Agriculture System</a></li>
+                    <li><a href="industries/farm-animal-management.html"><span
+                          class="atl-mega__dot atl-mega__dot--teal"></span>Farm Animal Management</a></li>
+                    <li><a href="industries/iot-energy-utilities.html"><span
+                          class="atl-mega__dot atl-mega__dot--teal"></span>IoT in Energy &amp; Utilities</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--orange"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="14" rx="2" />
+                        <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Industrial &amp; Automotive</p>
+                      <p class="atl-mega__col-desc">IIoT &amp; connected vehicles</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/industrial-iot.html"><span class="atl-mega__dot"
+                          style="background:#f97316"></span>Industrial IoT</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--red"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Healthcare</p>
+                      <p class="atl-mega__col-desc">Connected health &amp; Care</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/iot-healthcare.html"><span class="atl-mega__dot atl-mega__dot--red"></span>IoT in
+                        Healthcare</a></li>
+                    <li><a href="industries/telematics-fleet.html"><span
+                          class="atl-mega__dot atl-mega__dot--red"></span>Telematics &amp; Fleet Management</a></li>
+                    <li><a href="industries/consumer-iot.html"><span class="atl-mega__dot atl-mega__dot--red"></span>Consumer
+                        IoT Solutions</a></li>
+                  </ul>
+                </div>
+                <!-- NEW: Defence Column -->
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon" style="background:#e8f0fe;"><svg width="18" height="18" fill="none"
+                        stroke="#1e40af" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Defence</p>
+                      <p class="atl-mega__col-desc">IoT for defence &amp; security</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/iot-in-defence.html"><span class="atl-mega__dot"
+                          style="background:#1e40af"></span>IoT in Defence</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- 5. ABOUT US -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaAbout">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaAbout')">About Us<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaAbout">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><p class="atl-mega__col-title">Company</p><p class="atl-mega__col-desc">Who we are &amp; what we do</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="about.html"><span class="atl-mega__dot"></span>About Nebulae</a></li>
+                    
+                    <li><a href="about.html#team"><span class="atl-mega__dot"></span>Our Team</a></li>
+                    <li><a href="about.html#partners"><span class="atl-mega__dot"></span>Partners &amp; Certifications</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><p class="atl-mega__col-title">Blog &amp; Careers</p><p class="atl-mega__col-desc">Insights &amp; opportunities</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="blog.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Blog</a></li>
+                    
+                    <li><a href="careers.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Careers</a></li>
+                    <li><a href="careers.html#openings"><span class="atl-mega__dot atl-mega__dot--teal"></span>Open Positions</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--orange"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div><p class="atl-mega__col-title">Events &amp; News</p><p class="atl-mega__col-desc">What's happening at Nebulae</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="events.html"><span class="atl-mega__dot" style="background:#f97316"></span> Events</a></li>
+                    <li><a href="news.html"><span class="atl-mega__dot" style="background:#f97316"></span>News</a></li> 
+                  </ul>
+                </div>
+                <div class="atl-mega__col atl-mega__col--feature">
+                  <div class="atl-mega__feature-card">
+                    <span class="atl-mega__new-tag">JOIN US</span>
+                    <p class="atl-mega__feature-name">Building the Future of IoT</p>
+                    <p class="atl-mega__feature-desc">We're a team of engineers, designers &amp; innovators passionate about connecting the world through smart technology.</p>
+                    <a href="careers.html" class="atl-mega__feature-link">See Open Roles →</a>
+                    <div class="atl-mega__cert-badges"><span class="atl-mega__cert">IoT</span><span class="atl-mega__cert">HW</span><span class="atl-mega__cert">SW</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 6. CONTACT -->
+        <li class="atl-nav__item">
+          <a class="atl-nav__link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Right: CTA -->
+      <div class="atl-nav__right">
+        <div class="atl-brochure-dropdown" id="brochureDropdown">
+          <button class="atl-nav__cta atl-brochure-btn" id="brochureBtn" aria-expanded="false">
+            Company Profile <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left:4px"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="atl-brochure-menu" id="brochureMenu">
+            <a href="resource.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Resources</a>
+            <a href="about.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Who We Are</a>
+            <a href="team.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Leadership Team</a>
+            <a href="awards.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Awards & Recognition</a>
+          </div>
+          
+        </div>
+        <button class="atl-nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="atl-nav__mobile" id="navMobile">
+      <div class="atl-nav__mobile-header">
+        <span class="atl-nav__mobile-title">Menu</span>
+        <button class="atl-nav__mobile-close" id="navMobileClose" aria-label="Close menu">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <a class="atl-nav__mlink" href="#home">Home</a>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Products<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <div class="atl-nav__macc-section">LoRa</div>
+          <a class="atl-nav__msublink" href="products/lora-module.html">Module</a><a class="atl-nav__msublink" href="products/lora-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/lora-filter.html">Filter</a><a class="atl-nav__msublink" href="products/lora-evk.html">EVK</a><a class="atl-nav__msublink" href="products/lora-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/lora-node.html">Node</a>
+          <div class="atl-nav__macc-section">Wi-SUN</div>
+          <a class="atl-nav__msublink" href="products/wisun-module.html">Module</a><a class="atl-nav__msublink" href="products/wisun-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/wisun-filter.html">Filter</a><a class="atl-nav__msublink" href="products/wisun-evk.html">EVK</a><a class="atl-nav__msublink" href="products/wisun-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/wisun-node.html">Node</a>
+          <div class="atl-nav__macc-section">Zigbee</div>
+          <a class="atl-nav__msublink" href="products/zigbee-module.html">Module</a><a class="atl-nav__msublink" href="products/zigbee-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/zigbee-filter.html">Filter</a><a class="atl-nav__msublink" href="products/zigbee-evk.html">EVK</a><a class="atl-nav__msublink" href="products/zigbee-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/zigbee-node.html">Node</a>
+          <div class="atl-nav__macc-section">Wi-Fi</div>
+          <a class="atl-nav__msublink" href="products/wifi-module.html">Module</a><a class="atl-nav__msublink" href="products/wifi-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/wifi-filter.html">Filter</a><a class="atl-nav__msublink" href="products/wifi-evk.html">EVK</a><a class="atl-nav__msublink" href="products/wifi-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/wifi-node.html">Node</a>
+          <div class="atl-nav__macc-section">GSM</div>
+          <a class="atl-nav__msublink" href="products/gsm-module.html">Module</a><a class="atl-nav__msublink" href="products/gsm-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/gsm-filter.html">Filter</a><a class="atl-nav__msublink" href="products/gsm-evk.html">EVK</a><a class="atl-nav__msublink" href="products/gsm-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/gsm-node.html">Node</a>
+          <div class="atl-nav__macc-section">BLE</div>
+          <a class="atl-nav__msublink" href="products/ble-module.html">Module</a><a class="atl-nav__msublink" href="products/ble-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/ble-filter.html">Filter</a><a class="atl-nav__msublink" href="products/ble-evk.html">EVK</a><a class="atl-nav__msublink" href="products/ble-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/ble-node.html">Node</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Solutions<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="solutions/smart-water-meter.html">Smart Water Meter Solution</a>
+          <a class="atl-nav__msublink" href="solutions/smart-electric-meter.html">Smart Electric Meter Solution</a>
+          <a class="atl-nav__msublink" href="solutions/smart-gas-meter.html">Smart Gas Metering Solution</a>
+          <a class="atl-nav__msublink" href="solutions/smart-street-light.html">Smart Street Light Solution</a>
+          <a class="atl-nav__msublink" href="solutions/transformer-monitoring.html">Transformer Monitoring System</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Services<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <div class="atl-nav__macc-section">Development</div>
+          <a class="atl-nav__msublink" href="services/iot-product-development.html">IoT Product Development</a>
+          <a class="atl-nav__msublink" href="services/embedded-hardware-design.html">Embedded Hardware Design</a>
+          <a class="atl-nav__msublink" href="services/embedded-firmware-design.html">Embedded Firmware Design</a>
+          <a class="atl-nav__msublink" href="services/pcb-design-services.html">PCB Design Services</a>
+          <a class="atl-nav__msublink" href="services/poc-to-mvp.html">PoC to MVP Development</a>
+          <div class="atl-nav__macc-section">Connectivity &amp; Cloud</div>
+          <a class="atl-nav__msublink" href="services/iot-dashboard.html">IoT Dashboard</a>
+          <a class="atl-nav__msublink" href="services/iot-cloud-integration.html">IoT Cloud Integration</a>
+          <a class="atl-nav__msublink" href="services/edge-computing.html">Edge Computing</a>
+          <div class="atl-nav__macc-section">Consulting</div>
+          <a class="atl-nav__msublink" href="services/iot-consulting.html">IoT Consulting</a>
+          <a class="atl-nav__msublink" href="services/iot-mobile-app.html">IoT Mobile App Development</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Industries<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="industries/home-security-automation.html">Home Security &amp; Automation</a>
+          <a class="atl-nav__msublink" href="industries/smart-agriculture.html">Smart Agriculture System</a>
+          <a class="atl-nav__msublink" href="industries/industrial-iot.html">Industrial IoT</a>
+          <a class="atl-nav__msublink" href="industries/iot-healthcare.html">IoT in Healthcare</a>
+          <a class="atl-nav__msublink" href="industries/iot-logistics.html">IoT in Logistics</a>
+          <a class="atl-nav__msublink" href="industries/consumer-iot.html">Consumer IoT Solutions</a>
+        </div>
+      </div>
+
+      <a class="atl-nav__mlink" href="./resource.html">Resources</a>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">About Us<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="about.html">About Nebulae</a>
+          <a class="atl-nav__msublink" href="about.html#mission">Our Mission &amp; Vision</a>
+          <a class="atl-nav__msublink" href="about.html#team">Our Team</a>
+          <a class="atl-nav__msublink" href="blog.html">Blog</a>
+          <a class="atl-nav__msublink" href="careers.html">Careers</a>
+          <a class="atl-nav__msublink" href="events.html">Upcoming Events</a>
+          <a class="atl-nav__msublink" href="news.html">Latest News</a>
+        </div>
+      </div>
+
+      <a class="atl-nav__mlink" href="contact.html">Contact Us</a>
+    </div><!-- /mobile drawer -->
+  </nav>
+</div><!-- /.atl-sticky-header -->
+</header>
+
+
+<!-- HERO -->
+<section class="pr-hero">
+  <div class="pr-hero__grid"></div>
+  <div class="pr-hero__orb pr-hero__orb--1"></div>
+  <div class="pr-hero__orb pr-hero__orb--2"></div>
+  <div class="container pr-hero__inner">
+    <nav class="pr-breadcrumb"><a href="index.html">Home</a><span>›</span><a href="products.html">Products</a><span>›</span><span style="color:rgba(255,255,255,.7)">Documents</span></nav>
+    <div class="pr-eyebrow">Technical Downloads</div>
+    <h1 class="pr-hero__title">Product Datasheets<br>&amp; <span>Technical Documents</span></h1>
+    <p class="pr-hero__desc">Download datasheets, brochures, user guides and technical documents for all Nebulae IoT products across every protocol.</p>
+    <div class="pr-proto-chips"><a class="pr-proto-chip" data-chip-proto="lora" href="#proto-lora">LoRa</a><a class="pr-proto-chip" data-chip-proto="wi-sun" href="#proto-wi-sun">Wi-SUN</a><a class="pr-proto-chip" data-chip-proto="zigbee" href="#proto-zigbee">Zigbee</a><a class="pr-proto-chip" data-chip-proto="gsm" href="#proto-gsm">GSM</a><a class="pr-proto-chip" data-chip-proto="wi-fi" href="#proto-wi-fi">Wi-Fi</a><a class="pr-proto-chip" data-chip-proto="general" href="#proto-general">General</a><a class="pr-proto-chip" data-chip-proto="smart-street-light" href="#proto-smart-street-light">Smart Street Light</a></div>
+  </div>
+</section>
+
+<!-- STICKY FILTER BAR -->
+<div class="pr-filter-bar" id="prFilterBar">
+  <div class="container">
+    <div class="pr-filter-inner">
+      <div>
+        <div class="pr-filter-group">
+          <span class="pr-filter-label">Protocol</span>
+          <button class="pr-filter-btn active" data-filter-proto="all">All</button>
+          <button class="pr-filter-btn" data-filter-proto="lora">LoRa</button>
+          <button class="pr-filter-btn" data-filter-proto="wi-sun">Wi-SUN</button>
+          <button class="pr-filter-btn" data-filter-proto="zigbee">Zigbee</button>
+          <button class="pr-filter-btn" data-filter-proto="wi-fi">Wi-Fi</button>
+          <button class="pr-filter-btn" data-filter-proto="gsm">GSM</button>
+          <button class="pr-filter-btn" data-filter-proto="smart-street-light">Street Light</button>
+        </div>
+      </div>
+      <div class="d-flex">
+        <div class="pr-filter-group">
+          <span class="pr-filter-label">Type</span>
+          <button class="pr-filter-btn active" data-filter-type="all">All</button>
+          <button class="pr-filter-btn" data-filter-type="datasheet">Datasheet</button>
+          <button class="pr-filter-btn" data-filter-type="brochure">Brochure</button>
+          <button class="pr-filter-btn" data-filter-type="case-study">Case Study</button>
+        </div>
+        <div class="pr-search-wrap">
+          <div class="pr-search">
+            <svg width="15" height="15" fill="none" stroke="#9ca3af" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="prSearch" placeholder="Search documents…" autocomplete="off">
+          </div>
+        </div>
+      </div>
+      <div class="pr-filter-sep"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main style="background:#f5f7ff;padding:1.5rem 0 4rem;">
+  <div class="container">
+    <div class="pr-results-bar">
+      <div class="pr-results-count">Showing <strong id="prResultCount">44</strong> of <strong>44</strong> documents</div>
+      <div style="display:flex;align-items:center;gap:.75rem;">
+        <select class="pr-sort-select" id="prSort">
+          <option value="default">Sort: Default</option>
+          <option value="name">Sort: Name A–Z</option>
+        </select>
+        <div class="pr-view-toggle">
+          <button class="pr-view-btn active" data-view="grid" title="Grid view">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </button>
+          <button class="pr-view-btn" data-view="list" title="List view">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="prGrid">
+
+    <div class="pr-proto-section" id="proto-lora">
+      <div class="pr-proto-header">
+        <div class="pr-proto-header__icon" style="background:rgba(37,99,235,.1);color:#2563eb;">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
+        </div>
+        <div>
+          <div class="pr-proto-header__title">LoRa</div>
+          <div class="pr-proto-header__count">23 documents</div>
+        </div>
+      </div>
+      <div class="pr-grid pr-grid-inner doc-grid">
+    <div class="pr-card doc-card" data-proto="lora" data-type="brochure" data-id="nln500a-lora-module-brochure">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Module</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">NLN500a LoRa Module Brochure</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.56 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=nln500a-lora-module-brochure" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/NLN500a%20LoRa%20Module%20Brochure.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="brochure" data-id="nln500b-brochure">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Module</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">NLN500b Brochure</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 4.11 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=nln500b-brochure" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/NLN500b%20Brochure.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="datasheet" data-id="nln500b-lora-module-datasheet-2">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Module</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">NLN500b LoRa Module Datasheet 2.0</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 2.31 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=nln500b-lora-module-datasheet-2" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/NLN500b%20LoRa%20Module%20Datasheet%202.0.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="datasheet" data-id="nln500-module-datasheet_v2">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Module</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">NLN500a Module Datasheet V2.2</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 3.77 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=nln500-module-datasheet_v2" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/NLN500a_Module_Datasheet_V2.2.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="brochure" data-id="SOM-mx6ull_brochure_v1">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Module</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">SOM-MX6Ull Brochure V1</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 1.85 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=SOM-mx6ull_brochure_v1" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/SLS-SOM-MX6Ull_BROCHURE.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="datasheet" data-id="nlg8600-gateway-datasheet">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Gateway</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">NLG8600 Gateway Datasheet</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 1.07 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=nlg8600-gateway-datasheet" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/NLG8600%20Gateway%20Datasheet.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="datasheet" data-id="nlg8400-gateway-datasheet">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Gateway</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">NLG8400 Gateway Datasheet</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 3.96 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=nlg8400-gateway-datasheet" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/NLG8400_V7.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="brochure" data-id="multichannel-lorawan-gateway-v2">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Gateway</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">Multichannel LoRaWAN Gateway V2</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.36 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=multichannel-lorawan-gateway-v2" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/Multichannel_LoRaWAN_Gateway_V2.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="brochure" data-id="lora-gateway-brochure">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Gateway</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">LoRa Gateway Brochure</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.28 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=lora-gateway-brochure" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/LoRa%20Gateway%20Brochure.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="datasheet" data-id="lorawan-gateway-data-sheet">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Gateway</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">LoRaWAN Gateway Data Sheet</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 1.70 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=lorawan-gateway-data-sheet" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/LoRaWAN%20Gateway%20Data%20Sheet.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="brochure" data-id="lora-single-channel-lora-gateway-v1">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Gateway</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">P2P Single Channel LoRa Gateway V1</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.28 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=lora-single-channel-lora-gateway-v1" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/P2P%20Single%20Channel%20LoRa%20Gateway_V1.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="datasheet" data-id="lorawan_4g_gateway">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Gateway</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">LoRaWAN 4G Gateway</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 1.7 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=lorawan_4g_gateway" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/LoRaWAN_4G_Gateway%201%201.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="brochure" data-id="lora-concentrator-brochure">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Concentrator</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">LoRa Concentrator Brochure</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 4.62 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=lora-concentrator-brochure" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/LoRa%20Concentrator%20Brochure.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="datasheet" data-id="lora-concentrator-datasheet">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Concentrator</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">LoRa Concentrator Datasheet</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 1.10 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=lora-concentrator-datasheet" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/LoRa%20Concentrator%20Datasheet.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="brochure" data-id="lora-concentrator-base-board-v5">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Concentrator</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">LoRa Concentrator Base Board V5</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 4.68 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=lora-concentrator-base-board-v5" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/LoRa%20Concentrator%2020x2%20Pinout%20details_V5%205.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="brochure" data-id="mini-pcle-lora-concentrator-board">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Concentrator</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">mini PCIe LoRa Concentrator Board</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.23 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=mini-pcle-lora-concentrator-board" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/mini%20PCIe%20LoRa%20Concentrator%20Board%20Borchure.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="datasheet" data-id="mpcis-lora-concentrator-datasheet">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Concentrator</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">mPCIe LoRa Concentrator Board Datasheet</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 4.45 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=mpcis-lora-concentrator-datasheet" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/mPCIe%20LoRa%20Concentrator%20Board%20Datasheet.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="datasheet" data-id="lora-concentrator-mpcie-datasheet">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Concentrator</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">LoRa Concentrator mPCIe Datasheet</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 4.45 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=lora-concentrator-mpcie-datasheet" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/LoRa_Concentrator_mPCIe_Datasheet(5).pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="datasheet" data-id="lora-concentrator-compatible-evk-datasheet">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">EVK</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">LoRa Concentrator Compatible EVK Datasheet</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.33 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=lora-concentrator-compatible-evk-datasheet" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/LoRa_Arduino_compatible_EVK_Datasheet_V0.1.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="brochure" data-id="lora-evk-arduino-v2">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">EVK</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">LoRa EVK Arduino V2</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.87 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=lora-evk-arduino-v2" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/LoRa%20EVK%20Aurdino_v2.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="brochure" data-id="amr-brochure">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Node</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">AMR Brochure</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 5.97 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=amr-brochure" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/AMR%20Bochure.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="datasheet" data-id="AFL0001_Datasheet">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Filter</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">AFL0001 Datasheet</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.3 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=AFL0001_Datasheet" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/AFL0001_Datasheet.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="lora" data-type="datasheet" data-id="AFL0003_Datasheet">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(37,99,235,.1);">
+          <svg width="48" height="48" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--lora">LoRa</span>
+        <span class="pr-card__tag-badge">Filter</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">AFL0003 Datasheet 2</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.3 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=AFL0003_Datasheet" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/AFL0003_Datasheet%202.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    <div class="pr-proto-section" id="proto-wi-sun">
+      <div class="pr-proto-header">
+        <div class="pr-proto-header__icon" style="background:rgba(13,148,136,.1);color:#0d9488;">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+        </div>
+        <div>
+          <div class="pr-proto-header__title">Wi-SUN</div>
+          <div class="pr-proto-header__count">11 documents</div>
+        </div>
+      </div>
+      <div class="pr-grid pr-grid-inner doc-grid">
+    <div class="pr-card doc-card" data-proto="wi-sun" data-type="brochure" data-id="wisun-dcu-v2-NLG6580">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(13,148,136,.1);">
+          <svg width="48" height="48" fill="none" stroke="#0d9488" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--wisun">Wi-SUN</span>
+        <span class="pr-card__tag-badge">Gateway</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">Wi-SUN DCU NLG6580 V2</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 3.08 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=wisun-dcu-v2-NLG6580" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/WiSUN%20DCU%20NLG8520%20Brochure.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="wi-sun" data-type="brochure" data-id="wisun-dcu-v2">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(13,148,136,.1);">
+          <svg width="48" height="48" fill="none" stroke="#0d9488" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--wisun">Wi-SUN</span>
+        <span class="pr-card__tag-badge">Gateway</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">Wi-SUN DCU V2</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.36 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=wisun-dcu-v2" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/Wi-SUN%20DCU_V2.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="wi-sun" data-type="brochure" data-id="wisun-dcu-nlg8520">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(13,148,136,.1);">
+          <svg width="48" height="48" fill="none" stroke="#0d9488" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--wisun">Wi-SUN</span>
+        <span class="pr-card__tag-badge">Gateway</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">Wi-SUN DCU NLG8520 Brochure</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 3.08 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=wisun-dcu-nlg8520" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/WiSUN%20DCU%20NLG8520%20Brochure.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="wi-sun" data-type="brochure" data-id="nlg8520-brochure">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(13,148,136,.1);">
+          <svg width="48" height="48" fill="none" stroke="#0d9488" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--wisun">Wi-SUN</span>
+        <span class="pr-card__tag-badge">Gateway</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">NLG8520 Brochure</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 3.08 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=nlg8520-brochure" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/NLG8520%20Brochure.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="wi-sun" data-type="brochure" data-id="nebulae-node-nm0211">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(13,148,136,.1);">
+          <svg width="48" height="48" fill="none" stroke="#0d9488" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--wisun">Wi-SUN</span>
+        <span class="pr-card__tag-badge">Node</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">Nebulae Node NM0211-I</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 2.16 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=nebulae-node-nm0211" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/Wi-SUN%20Module.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="wi-sun" data-type="datasheet" data-id="wisun-nic-card">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(13,148,136,.1);">
+          <svg width="48" height="48" fill="none" stroke="#0d9488" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--wisun">Wi-SUN</span>
+        <span class="pr-card__tag-badge">Node</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">Wi-SUN NIC Card Datasheet</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.6 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=wisun-nic-card" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/WiSUN%20NIC%20Card%20Datasheet.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="wi-sun" data-type="brochure" data-id="nln0711-wpc-brochure">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(13,148,136,.1);">
+          <svg width="48" height="48" fill="none" stroke="#0d9488" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--wisun">Wi-SUN</span>
+        <span class="pr-card__tag-badge">Module</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">NLN0721 WPC Brochure</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 4.77 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=nln0711-wpc-brochure" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/NLN0721%20WPC%20Brochure.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="wi-sun" data-type="brochure" data-id="nln0721-wisun-module-datasheet-wpc">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(13,148,136,.1);">
+          <svg width="48" height="48" fill="none" stroke="#0d9488" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--wisun">Wi-SUN</span>
+        <span class="pr-card__tag-badge">Module</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">NLN0721 Wi-SUN Module Datasheet WPC</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 1.82 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=nln0721-wisun-module-datasheet-wpc" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/NLN0721%20Wi-SUN%20Module%20Datasheet%20WPC.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="wi-sun" data-type="datasheet" data-id="wisun-module-nln500a">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(13,148,136,.1);">
+          <svg width="48" height="48" fill="none" stroke="#0d9488" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--wisun">Wi-SUN</span>
+        <span class="pr-card__tag-badge">Module</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">Wi-SUN Module NLN500a Datasheet</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.98 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=wisun-module-nln500a" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/WiSUN%20Module%20NLN500a%20Datasheet.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="wi-sun" data-type="brochure" data-id="wisun-high-power-module-v1">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(13,148,136,.1);">
+          <svg width="48" height="48" fill="none" stroke="#0d9488" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--wisun">Wi-SUN</span>
+        <span class="pr-card__tag-badge">Module</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">Wi-SUN High Power Module V1</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.62 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=wisun-high-power-module-v1" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/Wi-SUN%20High%20Power%20Module_V1.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="wi-sun" data-type="brochure" data-id="ofom-411mhz-module-v1">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(13,148,136,.1);">
+          <svg width="48" height="48" fill="none" stroke="#0d9488" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--wisun">Wi-SUN</span>
+        <span class="pr-card__tag-badge">Module</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">OTAG-433 MHz Module V1</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.18 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=ofom-411mhz-module-v1" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/OTAG-433%20MHz%20Module_V1.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    <div class="pr-proto-section" id="proto-zigbee">
+      <div class="pr-proto-header">
+        <div class="pr-proto-header__icon" style="background:rgba(234,88,12,.1);color:#ea580c;">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div>
+          <div class="pr-proto-header__title">Zigbee</div>
+          <div class="pr-proto-header__count">2 documents</div>
+        </div>
+      </div>
+      <div class="pr-grid pr-grid-inner doc-grid">
+    <div class="pr-card doc-card" data-proto="zigbee" data-type="brochure" data-id="nln81p-v1">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(234,88,12,.1);">
+          <svg width="48" height="48" fill="none" stroke="#ea580c" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--zigbee">Zigbee</span>
+        <span class="pr-card__tag-badge">Module</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">NLN81P V1</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.25 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=nln81p-v1" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/NLN811P.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="zigbee" data-type="brochure" data-id="nln11p-v1">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(234,88,12,.1);">
+          <svg width="48" height="48" fill="none" stroke="#ea580c" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--zigbee">Zigbee</span>
+        <span class="pr-card__tag-badge">Module</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">NLN11P V1</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.25 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=nln11p-v1" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/NLN111P.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    <div class="pr-proto-section" id="proto-gsm">
+      <div class="pr-proto-header">
+        <div class="pr-proto-header__icon" style="background:rgba(220,38,38,.1);color:#dc2626;">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <div>
+          <div class="pr-proto-header__title">GSM</div>
+          <div class="pr-proto-header__count">2 documents</div>
+        </div>
+      </div>
+      <div class="pr-grid pr-grid-inner doc-grid">
+    <div class="pr-card doc-card" data-proto="gsm" data-type="datasheet" data-id="nlg8600-v5">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(220,38,38,.1);">
+          <svg width="48" height="48" fill="none" stroke="#dc2626" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--gsm">GSM</span>
+        <span class="pr-card__tag-badge">Gateway</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">NLG8600 V5</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 4.21 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=nlg8600-v5" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/NLG8600_V5.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="gsm" data-type="datasheet" data-id="nlg8400-v7">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(220,38,38,.1);">
+          <svg width="48" height="48" fill="none" stroke="#dc2626" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--gsm">GSM</span>
+        <span class="pr-card__tag-badge">Gateway</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">NLG8400 V7</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 3.96 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=nlg8400-v7" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/NLG8400_V7.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    <div class="pr-proto-section" id="proto-wi-fi">
+      <div class="pr-proto-header">
+        <div class="pr-proto-header__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
+        </div>
+        <div>
+          <div class="pr-proto-header__title">Wi-Fi</div>
+          <div class="pr-proto-header__count">1 document</div>
+        </div>
+      </div>
+      <div class="pr-grid pr-grid-inner doc-grid">
+    <div class="pr-card doc-card" data-proto="wi-fi" data-type="brochure" data-id="wifi-module-v1">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(79,70,229,.1);">
+          <svg width="48" height="48" fill="none" stroke="#4f46e5" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--wifi">Wi-Fi</span>
+        <span class="pr-card__tag-badge">Module</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">Wi-Fi Module V1</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.8 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=wifi-module-v1" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/Wi-Fi%20Module_V1.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    <div class="pr-proto-section" id="proto-general">
+      <div class="pr-proto-header">
+        <div class="pr-proto-header__icon" style="background:rgba(107,114,128,.1);color:#6b7280;">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div>
+          <div class="pr-proto-header__title">General</div>
+          <div class="pr-proto-header__count">1 document</div>
+        </div>
+      </div>
+      <div class="pr-grid pr-grid-inner doc-grid">
+    <div class="pr-card doc-card" data-proto="general" data-type="case-study" data-id="case_study">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(107,114,128,.1);">
+          <svg width="48" height="48" fill="none" stroke="#6b7280" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--general">General</span>
+        
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Case Study</div>
+        <div class="pr-card__name">CIAZ TECH Case Study</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.28 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=case_study" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/Ciaz_Tech.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    <div class="pr-proto-section" id="proto-smart-street-light">
+      <div class="pr-proto-header">
+        <div class="pr-proto-header__icon" style="background:rgba(245,158,11,.1);color:#f59e0b;">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+        </div>
+        <div>
+          <div class="pr-proto-header__title">Smart Street Light</div>
+          <div class="pr-proto-header__count">4 documents</div>
+        </div>
+      </div>
+      <div class="pr-grid pr-grid-inner doc-grid">
+    <div class="pr-card doc-card" data-proto="smart-street-light" data-type="datasheet" data-id="citycharge-ccms-unit-v1-pdf">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(245,158,11,.1);">
+          <svg width="48" height="48" fill="none" stroke="#f59e0b" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--ssl">Smart Street Light</span>
+        
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Datasheet</div>
+        <div class="pr-card__name">CityCharge CCMS Unit V1</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.8 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=citycharge-ccms-unit-v1-pdf" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/CityCharge-CCMS-Unit.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="smart-street-light" data-type="brochure" data-id="pole-mount-retrofit-street-light-controller-v1-pdf">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(245,158,11,.1);">
+          <svg width="48" height="48" fill="none" stroke="#f59e0b" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--ssl">Smart Street Light</span>
+        <span class="pr-card__tag-badge">Node</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">Pole Mount & Retrofit Street Light Controller V1</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 2.00 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=pole-mount-retrofit-street-light-controller-v1-pdf" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/Pole%20Mount%20&%20Retrofit%20Street%20Light%20Controller_V1.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="smart-street-light" data-type="brochure" data-id="ilc-nema-lora-4g-v1-pdf">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(245,158,11,.1);">
+          <svg width="48" height="48" fill="none" stroke="#f59e0b" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--ssl">Smart Street Light</span>
+        <span class="pr-card__tag-badge">Node</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">ILC NEMA - LoRa & 4G V1</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.2 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=ilc-nema-lora-4g-v1-pdf" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/ILC%20NEMA%20-%20LoRa%20&%204G_V1.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pr-card doc-card" data-proto="smart-street-light" data-type="brochure" data-id="ccms-brochure-v2-pdf">
+      <div class="pr-card__img-wrap doc-card__thumb">
+        <div class="doc-card__icon-wrap" style="background:rgba(245,158,11,.1);">
+          <svg width="48" height="48" fill="none" stroke="#f59e0b" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="pr-card__proto-badge badge--ssl">Smart Street Light</span>
+        <span class="pr-card__tag-badge">Node</span>
+      </div>
+      <div class="pr-card__body">
+        <div class="pr-card__type doc-type-badge"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Brochure</div>
+        <div class="pr-card__name">CCMS Brochure V2</div>
+        <div class="pr-card__full" style="font-size:.78rem;color:#9ca3af;margin-top:.2rem;">PDF · 0.3 MB</div>
+        <div class="pr-card__cta" style="margin-top:auto;">
+          <a href="doc-detail.html?id=ccms-brochure-v2-pdf" class="pr-card__btn pr-card__btn--primary">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </a>
+          <a href="https://www.nebulae.io/downloads/documents/CCMS%20Brochure_V2.pdf" target="_blank" class="pr-card__btn pr-card__btn--outline">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    </div>
+
+    <div id="prEmpty" style="display:none;" class="pr-empty">
+      <svg width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <h4>No documents found</h4>
+      <p>Try adjusting your filters or search query.</p>
+      <button onclick="resetFilters()">Clear Filters</button>
+    </div>
+  </div>
+</main>
+
+<!-- CTA -->
+<section class="pr-cta">
+  <div class="container">
+    <div class="pr-cta__inner">
+      <div class="pr-cta__text">
+        <h3>Need a Custom Technical Document?</h3>
+        <p>Contact our engineering team for custom datasheets, integration guides, or application notes.</p>
+      </div>
+      <div class="pr-cta__btns">
+        <a href="contact.html" class="pr-cta__btn pr-cta__btn--primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Contact Engineering Team
+        </a>
+        <a href="resources.html" class="pr-cta__btn pr-cta__btn--outline">View All Resources →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="atl-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+
+      <!-- Brand -->
+      <div class="col-12 col-md-4">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img loading="lazy" src="./assets/images/LogoWhite.png" alt="Nebulae" class="atl-footer__logo-img atl-footer__logo-color">
+        </div>
+        <p class="atl-footer__desc">End-to-end IoT solutions provider — from embedded hardware design and wireless modules to cloud integration and smart utility deployments across India and beyond.</p>
+      </div>
+
+      <!-- Navigate -->
+      <div class="col-6 col-md-2">
+        <h6 class="atl-footer__heading">Navigate</h6>
+        <ul class="atl-footer__list">
+          <li><a href="#home" onclick="return navClick('home')">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="industries.html">Industries</a></li>
+           <li><a href="./resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Services & Solutions -->
+      <div class="col-6 col-md-3">
+        <h6 class="atl-footer__heading">Services</h6>
+        <ul class="atl-footer__list">
+          <li><a href="services/iot-product-development.html">IoT Product Development</a></li>
+          <li><a href="services/embedded-hardware-design.html">Embedded Hardware Design</a></li>
+          <li><a href="services/embedded-firmware-design.html">Embedded Firmware Design</a></li>
+          <li><a href="services/iot-cloud-integration.html">IoT Cloud Integration</a></li>
+          <li><a href="services/pcb-design-services.html">PCB Design Services</a></li>
+          <li><a href="services/iot-consulting.html">IoT Consulting</a></li>
+        </ul>
+        <h6 class="atl-footer__heading mt-3">Solutions</h6>
+        <ul class="atl-footer__list">
+          <li><a href="solutions/smart-water-meter.html">Smart Water Meter</a></li>
+          <li><a href="solutions/smart-electric-meter.html">Smart Electric Meter</a></li>
+          <li><a href="solutions/smart-street-light.html">Smart Street Light</a></li>
+          <li><a href="solutions/transformer-monitoring.html">Transformer Monitoring</a></li>
+        </ul>
+      </div>
+
+      <!-- Products & Contact -->
+      <div class="col-12 col-md-3">
+        <h6 class="atl-footer__heading">Products</h6>
+        <ul class="atl-footer__list">
+          <li><a href="products/lora-module.html">LoRa — Module &amp; Gateway</a></li>
+          <li><a href="products/wisun-module.html">Wi-SUN — Module &amp; Gateway</a></li>
+          <li><a href="products/zigbee-module.html">Zigbee — Module &amp; Gateway</a></li>
+          <li><a href="products/gsm-module.html">GSM — Module &amp; Gateway</a></li>
+          <li><a href="products/ble-module.html">BLE — Module &amp; Gateway</a></li>
+          <li><a href="products.html">View All Products →</a></li>
+        </ul>
+        <h6 class="atl-footer__heading mt-3">Contact</h6>
+        <ul class="atl-footer__list">
+          <li><a href="tel:+9102692232501">+91-02692-232501 / 232502</a></li>
+          <li><a href="mailto:sales@nebulae.io">sales@nebulae.io</a></li>
+          <li>Anand, Gujarat, India</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="atl-footer__bottom">
+      <span>© 2026 Nebulae. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Nebulae shared nav/footer JS -->
+<script src="./assets/js/nebulae-nav.js"></script>
+<!-- Products page JS -->
+<script src="./assets/js/doc-products.js"></script>
+</body>
+</html>

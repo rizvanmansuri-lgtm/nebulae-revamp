@@ -20,9 +20,7 @@
 </head>
 <body>
 <div id="nblProgressBar"></div>
-<button id="nblBackTop" aria-label="Back to top">
-  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
-</button>
+ 
 <style>
 /* ── Hero ── */
 .pg-hero{background:linear-gradient(135deg,#03031a 0%,#07072a 50%,#0d0d3a 100%);padding:5.5rem 0 4.5rem;position:relative;overflow:hidden;}
@@ -261,7 +259,40 @@ body.dark-mode .pg-related-section{background:#0f0f28 !important;}
   .pg-newsletter{flex-direction:column;}
   .pg-team-card__social{opacity:1;transform:translateY(0);}
 }
-</style><nav class="atl-nav" id="atlNav">
+</style>
+
+  <header>
+<!-- ════ STICKY HEADER ════ -->
+<div class="atl-sticky-header" style="position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:9999!important;">
+
+  <!-- Utility bar -->
+  <div class="atl-util-bar">
+    <div class="atl-util-bar__inner">
+      <div class="atl-util-bar__left">
+        <!-- <span class="atl-util-link">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          India · IoT Solutions Provider
+        </span> -->
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 9898042339 
+        </a>
+      </div>
+      <div class="atl-util-bar__right">
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91-02692-232501/02
+        </a>
+        <a href="mailto:sales@nebulae.io" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          sales@nebulae.io
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main navbar -->
+  <nav class="atl-nav" id="atlNav">
     <div class="atl-nav__inner">
 
       <!-- Logo -->
@@ -320,6 +351,15 @@ body.dark-mode .pg-related-section{background:#0f0f28 !important;}
                     Data Connector
                     <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
                   </button>
+                  <button class="atl-prod-rail__item" data-prod="datacloud">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
+    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
+    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
+</svg>
+                    Cloud
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
                 </div>
 
                 <!-- Panels -->
@@ -328,7 +368,7 @@ body.dark-mode .pg-related-section{background:#0f0f28 !important;}
                   <div class="atl-prod-panel__body atl-prod-panel__body--active" data-panel="module">
                     <p class="atl-prod-panel__label">Module — Choose a protocol</p>
                     <div class="atl-prod-panel__grid">
-                      <a href="products/lora-module.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products/lora-module.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
                       <a href="products/wisun-module.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
                       <a href="products/zigbee-module.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
                       <a href="products/wifi-module.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
@@ -403,6 +443,17 @@ body.dark-mode .pg-related-section{background:#0f0f28 !important;}
                       <a href="products/wifi-dataconnector.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">RS485 Wireless LAN</span></a>
                       <a href="products/gsm-dataconnector.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">RS485 GSM</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
                     
+                    </div>
+                  </div>
+                  <div class="atl-prod-panel__body" data-panel="datacloud">
+                    <p class="atl-prod-panel__label">Cloud/Edge Connector — Choose a protocol</p> 
+                    <div class="atl-prod-panel__grid">
+                      <a href="products/cloud.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
+    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
+    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
+</svg></span><span class="atl-prod-card__name">Cloud</span><span class="atl-prod-card__desc">Middleware</span></a>
+                      
                     </div>
                   </div>
                 </div><!-- /atl-prod-panel -->
@@ -633,7 +684,7 @@ body.dark-mode .pg-related-section{background:#0f0f28 !important;}
                   <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><p class="atl-mega__col-title">Company</p><p class="atl-mega__col-desc">Who we are &amp; what we do</p></div></div>
                   <ul class="atl-mega__list">
                     <li><a href="about.html"><span class="atl-mega__dot"></span>About Nebulae</a></li>
-                    <li><a href="about.html#mission"><span class="atl-mega__dot"></span>Our Mission &amp; Vision</a></li>
+                    
                     <li><a href="about.html#team"><span class="atl-mega__dot"></span>Our Team</a></li>
                     <li><a href="about.html#partners"><span class="atl-mega__dot"></span>Partners &amp; Certifications</a></li>
                   </ul>
@@ -642,7 +693,7 @@ body.dark-mode .pg-related-section{background:#0f0f28 !important;}
                   <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><p class="atl-mega__col-title">Blog &amp; Careers</p><p class="atl-mega__col-desc">Insights &amp; opportunities</p></div></div>
                   <ul class="atl-mega__list">
                     <li><a href="blog.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Blog</a></li>
-                    <li><a href="blog.html#latest"><span class="atl-mega__dot atl-mega__dot--teal"></span>Latest Articles</a></li>
+                    
                     <li><a href="careers.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Careers</a></li>
                     <li><a href="careers.html#openings"><span class="atl-mega__dot atl-mega__dot--teal"></span>Open Positions</a></li>
                   </ul>
@@ -782,7 +833,10 @@ body.dark-mode .pg-related-section{background:#0f0f28 !important;}
 
       <a class="atl-nav__mlink" href="contact.html">Contact Us</a>
     </div><!-- /mobile drawer -->
-  </nav><section class="pg-hero">
+  </nav>
+</div><!-- /.atl-sticky-header -->
+</header>
+  <section class="pg-hero ">
   <div class="pg-hero__grid"></div>
   <div class="pg-hero__orb pg-hero__orb--1"></div>
   <div class="pg-hero__orb pg-hero__orb--2"></div>
@@ -975,6 +1029,7 @@ body.dark-mode .pg-related-section{background:#0f0f28 !important;}
     </div>
   </div>
 </section><footer class="atl-footer">
+  <footer>
   <div class="container">
     <div class="row g-4 align-items-start">
 
@@ -1068,7 +1123,19 @@ body.dark-mode .pg-related-section{background:#0f0f28 !important;}
   });
 })();
 </script>
+ <script>
+  const header = document.querySelector('.atl-sticky-header');
+const body = document.querySelector('.pg-hero');
+ 
+function setOffset() {
+  const headerHeight = header.offsetHeight;
+  body.style.marginTop = headerHeight + 'px';
+}
+ 
+window.addEventListener('load', setOffset);
+window.addEventListener('resize', setOffset);
+ </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/nebulae-nav.js"></script>
-<script src="./assets/js/nebulae-page.js"></script>
+
 </body></html>

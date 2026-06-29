@@ -146,13 +146,3 @@ function openModal() {
     document.getElementById('successView').style.display = 'block';
   }
 
-const header = document.querySelector('.atl-sticky-header');
-const body = document.querySelector('.nbl-hero');
- 
-function setOffset() {
-  const headerHeight = header.offsetHeight;
-  body.style.marginTop = headerHeight + 'px';
-}
- 
-window.addEventListener('load', setOffset);
-window.addEventListener('resize', setOffset);

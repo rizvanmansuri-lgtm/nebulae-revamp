@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Product Document | Nebulae IoT</title>
+  <meta name="description" content="Nebulae IoT product datasheet and technical documentation." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/nebulae-nav.css">
+  <link rel="stylesheet" href="./assets/css/product-detail.css">
+  <style>
+    /* ── Doc Detail Extras ── */
+    body { padding-top: 100px !important; }
+    @media(max-width:767.98px){ body { padding-top:64px !important; } }
+
+    /* Loading skeleton */
+    .dd-loading { min-height: 60vh; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.25rem; color:#6b7280; }
+    .dd-spinner { width:48px;height:48px;border:3px solid #e5e7eb;border-top-color:#4f46e5;border-radius:50%;animation:spin .8s linear infinite; }
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .dd-loading__text { font-size:.9rem; font-family:'Outfit',sans-serif; font-weight:600; color:#374151; }
+    .dd-loading__sub { font-size:.78rem; color:#9ca3af; }
+    .dd-progress { width:220px;height:4px;background:#e5e7eb;border-radius:4px;overflow:hidden; }
+    .dd-progress__bar { height:100%;background:linear-gradient(90deg,#4f46e5,#06b6d4);width:0%;transition:width .4s;border-radius:4px; }
+
+    /* Doc viewer layout */
+    .dd-wrap { display:none; } /* shown after load */
+    .dd-wrap.visible { display:block; }
+
+    /* PDF preview panel */
+    .dd-pdf-panel { background:linear-gradient(135deg,#f0f3ff,#e8f4ff);border-radius:20px;border:1.5px solid #e5e7eb;overflow:hidden;position:sticky;top:120px; }
+    .dd-pdf-embed { width:100%;height:600px;border:none; }
+    .dd-pdf-actions { padding:1rem 1.25rem;background:#fff;border-top:1px solid #e5e7eb;display:flex;gap:.75rem;flex-wrap:wrap; }
+    .dd-pdf-actions a { flex:1;min-width:130px; }
+
+    /* AI content area */
+    .dd-ai-section { margin-bottom:2rem; }
+    .dd-ai-section h3 { font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:800;color:#111827;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #f3f4f6; }
+    .dd-overview { font-size:.92rem;line-height:1.75;color:#374151;background:#f9fafb;border-left:3px solid #4f46e5;padding:1rem 1.25rem;border-radius:0 12px 12px 0;margin-bottom:1.5rem; }
+
+    /* Spec table */
+    .dd-spec-table { width:100%;border-collapse:collapse;font-size:.85rem; }
+    .dd-spec-table tr { border-bottom:1px solid #f3f4f6; }
+    .dd-spec-table td:first-child { width:40%;color:#6b7280;font-weight:600;padding:.6rem .5rem; }
+    .dd-spec-table td:last-child { color:#111827;padding:.6rem .5rem;font-family:'IBM Plex Mono',monospace;font-size:.8rem; }
+
+    /* Features list */
+    .dd-features { list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:.6rem; }
+    .dd-features li { display:flex;align-items:flex-start;gap:.5rem;font-size:.85rem;color:#374151; }
+    .dd-features li::before { content:"";width:6px;height:6px;border-radius:50%;background:#4f46e5;flex-shrink:0;margin-top:.45rem; }
+    @media(max-width:576px){ .dd-features { grid-template-columns:1fr; } }
+
+    /* Applications */
+    .dd-apps { display:flex;flex-wrap:wrap;gap:.5rem; }
+    .dd-app-chip { background:#f0f3ff;color:#4f46e5;font-size:.75rem;font-weight:600;padding:.3rem .8rem;border-radius:100px;border:1px solid #c7d2fe; }
+
+    /* Badge pills */
+    .dd-proto-pill { display:inline-flex;align-items:center;gap:.35rem;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .8rem;border-radius:100px; }
+    .dd-type-pill { background:#f3f4f6;color:#374151;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .8rem;border-radius:100px; }
+    .pill-lora { background:rgba(37,99,235,.1);color:#2563eb; }
+    .pill-wisun { background:rgba(13,148,136,.1);color:#0d9488; }
+    .pill-zigbee { background:rgba(234,88,12,.1);color:#ea580c; }
+    .pill-wifi { background:rgba(79,70,229,.1);color:#4f46e5; }
+    .pill-gsm { background:rgba(220,38,38,.1);color:#dc2626; }
+    .pill-ssl { background:rgba(245,158,11,.1);color:#b45309; }
+
+    /* Error state */
+    .dd-error { text-align:center;padding:3rem 1rem;color:#6b7280; }
+    .dd-error h4 { color:#111827;font-family:'Outfit',sans-serif;font-weight:800;margin-bottom:.5rem; }
+
+    /* Related docs */
+    .dd-related-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem; }
+    .dd-rel-card { background:#fff;border:1.5px solid #e5e7eb;border-radius:14px;padding:1.25rem;transition:border-color .2s,box-shadow .2s;cursor:pointer; }
+    .dd-rel-card:hover { border-color:#4f46e5;box-shadow:0 4px 20px rgba(79,70,229,.12); }
+    .dd-rel-card__type { font-size:.7rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem; }
+    .dd-rel-card__name { font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:700;color:#111827;margin-bottom:.3rem; }
+    .dd-rel-card__size { font-size:.75rem;color:#9ca3af; }
+    .dd-rel-card__link { display:inline-flex;align-items:center;gap:.3rem;font-size:.78rem;font-weight:600;color:#4f46e5;margin-top:.75rem;text-decoration:none; }
+
+    /* Info card */
+    .dd-info-card { background:#fff;border:1.5px solid #e5e7eb;border-radius:16px;padding:1.5rem; }
+    .dd-info-card + .dd-info-card { margin-top:1rem; }
+    .dd-cta-card { background:linear-gradient(135deg,#313185,#4f46e5);border-radius:16px;padding:1.5rem;color:#fff; }
+    .dd-cta-card h4 { font-family:'Outfit',sans-serif;font-size:1rem;font-weight:800;margin-bottom:.4rem; }
+    .dd-cta-card p { font-size:.82rem;opacity:.85;margin-bottom:1rem; }
+    .dd-cta-card a { display:block;background:#fff;color:#313185;text-align:center;padding:.65rem;border-radius:10px;font-family:'Outfit',sans-serif;font-weight:800;font-size:.85rem;text-decoration:none;transition:opacity .2s; }
+    .dd-cta-card a:hover { opacity:.9; }
+
+    /* Section header */
+    .dd-section-head { margin:2.5rem 0 1.5rem; }
+    .dd-section-head .atl-eyebrow { font-size:.68rem;letter-spacing:.15em;font-weight:700;color:#06b6d4;text-transform:uppercase;margin-bottom:.3rem; }
+    .dd-section-head h3 { font-family:'Outfit',sans-serif;font-size:1.4rem;font-weight:800;color:#111827;margin:0; }
+
+    /* Skeleton pulse */
+    .skel { background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:skel 1.2s infinite;border-radius:8px; }
+    @keyframes skel{0%{background-position:200%}100%{background-position:-200%}}
+  </style>
+</head>
+<body>
+<div id="nblProgressBar"></div>
+<button id="nblBackTop" aria-label="Back to top">
+  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<!-- ════ HEADER (copied from products.html) ════ -->
+<header>
+<div class="atl-sticky-header" style="position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:9999!important;">
+  <div class="atl-util-bar">
+    <div class="atl-util-bar__inner">
+      <div class="atl-util-bar__left">
+        <a href="tel:+919898042339" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 9898042339
+        </a>
+      </div>
+      <div class="atl-util-bar__right">
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91-02692-232501/02
+        </a>
+        <a href="mailto:sales@nebulae.io" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          sales@nebulae.io
+        </a>
+      </div>
+    </div>
+  </div>
+  <nav class="atl-nav" id="atlNav">
+    <div class="atl-nav__inner">
+      <a href="./index.html" class="atl-nav__logo">
+        <img src="./assets/images/LogoBlue.png" alt="Nebulae" class="atl-nav__logo-img">
+      </a>
+      <ul class="atl-nav__links" id="navLinks">
+        <li class="atl-nav__item"><a class="atl-nav__link" href="products.html">Products</a></li>
+        <li class="atl-nav__item"><a class="atl-nav__link" href="solutions.html">Solutions</a></li>
+        <li class="atl-nav__item"><a class="atl-nav__link" href="services.html">Services</a></li>
+        <li class="atl-nav__item"><a class="atl-nav__link" href="resources.html">Resources</a></li>
+        <li class="atl-nav__item"><a class="atl-nav__link" href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="atl-nav__right">
+        <button class="atl-nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="atl-nav__mobile" id="navMobile">
+      <div class="atl-nav__mobile-header">
+        <span class="atl-nav__mobile-title">Menu</span>
+        <button class="atl-nav__mobile-close" id="navMobileClose" aria-label="Close menu">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <a class="atl-nav__mlink" href="index.html">Home</a>
+      <a class="atl-nav__mlink" href="products.html">Products</a>
+      <a class="atl-nav__mlink" href="solutions.html">Solutions</a>
+      <a class="atl-nav__mlink" href="services.html">Services</a>
+      <a class="atl-nav__mlink" href="resources.html">Resources</a>
+      <a class="atl-nav__mlink" href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+</div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="pd-top-bar">
+  <div class="container">
+    <nav class="pd-breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>›</span>
+      <a href="products.html">Products</a><span>›</span>
+      <a href="doc-products.html">Documents</a><span>›</span>
+      <span id="bcProduct" style="color:#374151;font-weight:600;">Loading…</span>
+    </nav>
+  </div>
+</div>
+
+<!-- LOADING STATE -->
+<div id="ddLoading" class="dd-loading container" style="margin-top:3rem;">
+  <div class="dd-spinner"></div>
+  <div>
+    <div class="dd-loading__text" id="loadingText">Fetching document details…</div>
+    <div class="dd-loading__sub">Reading PDF and extracting specifications</div>
+  </div>
+  <div class="dd-progress">
+    <div class="dd-progress__bar" id="progressBar"></div>
+  </div>
+</div>
+
+<!-- ERROR STATE -->
+<div id="ddError" class="dd-error container" style="display:none;margin-top:3rem;">
+  <svg width="56" height="56" fill="none" stroke="#d1d5db" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+  <h4>Document Not Found</h4>
+  <p id="errorMsg">Could not load this document. Please try again.</p>
+  <a href="doc-products.html" class="pr-card__btn pr-card__btn--primary" style="display:inline-flex;margin-top:1rem;">← Back to Documents</a>
+</div>
+
+<!-- MAIN CONTENT (populated by JS) -->
+<div id="ddWrap" class="dd-wrap">
+
+  <!-- HERO -->
+  <section class="pd-hero">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Left: PDF Preview -->
+        <div class="col-lg-5">
+          <div class="dd-pdf-panel">
+            <iframe id="pdfEmbed" class="dd-pdf-embed" title="PDF Preview"></iframe>
+            <div class="dd-pdf-actions">
+              <a id="pdfDownload" href="#" target="_blank" class="pr-card__btn pr-card__btn--primary" style="text-align:center;display:flex;align-items:center;justify-content:center;gap:.4rem;">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download PDF
+              </a>
+              <a id="pdfOpen" href="#" target="_blank" class="pr-card__btn pr-card__btn--outline" style="text-align:center;display:flex;align-items:center;justify-content:center;gap:.4rem;">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Open Full PDF
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Info -->
+        <div class="col-lg-7">
+          <div class="pd-info">
+            <div class="pd-info__eyebrow" style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.85rem;">
+              <span id="protoPill" class="dd-proto-pill pill-lora">LoRa</span>
+              <span id="typePill" class="dd-type-pill">Datasheet</span>
+              <span id="subcatPill" class="dd-type-pill" style="display:none;"></span>
+            </div>
+            <h1 class="pd-info__name" id="productName" style="font-family:'Outfit',sans-serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:800;color:#111827;line-height:1.1;margin-bottom:.5rem;">Loading…</h1>
+            <p id="productFull" class="pd-info__full" style="font-size:.9rem;color:#6b7280;margin-bottom:1.25rem;"></p>
+
+            <!-- AI-generated overview -->
+            <div id="overviewBlock" class="dd-overview">
+              <div class="skel" style="height:14px;margin-bottom:8px;width:90%;"></div>
+              <div class="skel" style="height:14px;margin-bottom:8px;width:75%;"></div>
+              <div class="skel" style="height:14px;width:60%;"></div>
+            </div>
+
+            <!-- Quick specs -->
+            <div style="margin-bottom:1.25rem;">
+              <h3 class="pd-info__name" style="font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem;">Key Specifications</h3>
+              <table id="quickSpecs" class="dd-spec-table">
+                <tr><td colspan="2"><div class="skel" style="height:12px;"></div></td></tr>
+                <tr><td colspan="2"><div class="skel" style="height:12px;width:80%;"></div></td></tr>
+                <tr><td colspan="2"><div class="skel" style="height:12px;width:70%;"></div></td></tr>
+              </table>
+            </div>
+
+            <!-- CTA box -->
+            <div class="dd-info-card" style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+              <div style="flex:1;min-width:160px;">
+                <div style="font-size:.72rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">File Size</div>
+                <div id="fileSize" style="font-family:'IBM Plex Mono',monospace;font-size:.9rem;color:#111827;font-weight:600;">—</div>
+              </div>
+              <div style="flex:1;min-width:160px;">
+                <div style="font-size:.72rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">Format</div>
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:.9rem;color:#111827;font-weight:600;">PDF</div>
+              </div>
+              <div style="flex:1;min-width:160px;">
+                <a id="ctaDownload" href="#" target="_blank" class="pr-card__btn pr-card__btn--primary" style="display:inline-flex;align-items:center;gap:.4rem;justify-content:center;width:100%;">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download
+                </a>
+                <a href="contact.html" class="pr-card__btn pr-card__btn--outline" style="display:inline-flex;align-items:center;gap:.4rem;justify-content:center;width:100%;margin-top:.5rem;">Get Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAIL TABS -->
+  <div style="background:#f5f7ff;padding:3rem 0;">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Main content -->
+        <div class="col-lg-8">
+
+          <!-- Features -->
+          <div class="dd-info-card dd-ai-section">
+            <h3>Key Features</h3>
+            <ul id="featuresList" class="dd-features">
+              <li><div class="skel" style="height:12px;width:150px;"></div></li>
+              <li><div class="skel" style="height:12px;width:120px;"></div></li>
+              <li><div class="skel" style="height:12px;width:140px;"></div></li>
+              <li><div class="skel" style="height:12px;width:110px;"></div></li>
+            </ul>
+          </div>
+
+          <!-- Full Specs -->
+          <div class="dd-info-card dd-ai-section">
+            <h3>Technical Specifications</h3>
+            <table id="fullSpecs" class="dd-spec-table">
+              <tr><td colspan="2"><div class="skel" style="height:12px;"></div></td></tr>
+              <tr><td colspan="2"><div class="skel" style="height:12px;width:80%;"></div></td></tr>
+              <tr><td colspan="2"><div class="skel" style="height:12px;width:65%;"></div></td></tr>
+              <tr><td colspan="2"><div class="skel" style="height:12px;width:90%;"></div></td></tr>
+              <tr><td colspan="2"><div class="skel" style="height:12px;width:70%;"></div></td></tr>
+            </table>
+          </div>
+
+          <!-- Applications -->
+          <div class="dd-info-card dd-ai-section">
+            <h3>Applications</h3>
+            <div id="applicationsList" class="dd-apps">
+              <div class="skel" style="height:28px;width:100px;border-radius:100px;"></div>
+              <div class="skel" style="height:28px;width:130px;border-radius:100px;"></div>
+              <div class="skel" style="height:28px;width:90px;border-radius:100px;"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <div class="dd-cta-card">
+            <h4>Request a Quote</h4>
+            <p>Contact our team for pricing, samples, and technical support.</p>
+            <a href="contact.html" id="sidebarQuote">Request a Quote</a>
+          </div>
+
+          <div class="dd-info-card" style="margin-top:1rem;">
+            <h5 style="font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:800;color:#111827;margin-bottom:.85rem;">Document Info</h5>
+            <div style="font-size:.82rem;color:#6b7280;line-height:1.9;">
+              <div><strong style="color:#111827;">Document Type:</strong> <span id="sideDocType">—</span></div>
+              <div><strong style="color:#111827;">Protocol:</strong> <span id="sideProto">—</span></div>
+              <div><strong style="color:#111827;">Category:</strong> <span id="sideCat">—</span></div>
+              <div><strong style="color:#111827;">File Size:</strong> <span id="sideSizeInfo">—</span></div>
+              <div><strong style="color:#111827;">Format:</strong> PDF</div>
+            </div>
+          </div>
+
+          <div class="dd-info-card" style="margin-top:1rem;">
+            <h5 style="font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:800;color:#111827;margin-bottom:.85rem;">Support</h5>
+            <div style="font-size:.82rem;color:#6b7280;line-height:1.9;">
+              <div>📞 <a href="tel:+917486031238" style="color:#4f46e5;">+91-02692-232501/02</a></div>
+              <div>✉️ <a href="mailto:sales@nebulae.io" style="color:#4f46e5;">sales@nebulae.io</a></div>
+              <div style="margin-top:.5rem;">Lead Time: 2–4 weeks</div>
+              <div>MOQ: 1 unit (samples)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED DOCS -->
+  <section style="padding:3rem 0;background:#fff;">
+    <div class="container">
+      <div class="dd-section-head">
+        <div class="atl-eyebrow">More Documents</div>
+        <h3>Related Documents</h3>
+      </div>
+      <div id="relatedDocs" class="dd-related-grid"></div>
+    </div>
+  </section>
+
+</div><!-- /ddWrap -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/nebulae-nav.js"></script>
+<script>
+/* ═══════════════════════════════════════════════════════
+   doc-detail.js — AI-powered document detail page
+   Reads PDF via Anthropic API, extracts specs/features
+═══════════════════════════════════════════════════════ */
+
+var BASE_URL = 'https://www.nebulae.io/downloads/documents/';
+
+var DOCS = [
+  {id:"nln500a-lora-module-brochure",name:"NLN500a LoRa Module Brochure",type:"Brochure",cat:"LoRa",subcat:"Module",size:"0.56 MB",file:"NLN500a LoRa Module Brochure.pdf"},
+  {id:"nln500b-brochure",name:"NLN500b Brochure",type:"Brochure",cat:"LoRa",subcat:"Module",size:"4.11 MB",file:"NLN500b Brochure.pdf"},
+  {id:"nln500b-lora-module-datasheet-2",name:"NLN500b LoRa Module Datasheet 2.0",type:"Datasheet",cat:"LoRa",subcat:"Module",size:"2.31 MB",file:"NLN500b LoRa Module Datasheet 2.0.pdf"},
+  {id:"nln500-module-datasheet_v2",name:"NLN500a Module Datasheet V2.2",type:"Datasheet",cat:"LoRa",subcat:"Module",size:"3.77 MB",file:"NLN500a_Module_Datasheet_V2.2.pdf"},
+  {id:"SOM-mx6ull_brochure_v1",name:"SOM-MX6Ull Brochure V1",type:"Brochure",cat:"LoRa",subcat:"Module",size:"1.85 MB",file:"SLS-SOM-MX6Ull_BROCHURE.pdf"},
+  {id:"nlg8600-gateway-datasheet",name:"NLG8600 Gateway Datasheet",type:"Datasheet",cat:"LoRa",subcat:"Gateway",size:"1.07 MB",file:"NLG8600 Gateway Datasheet.pdf"},
+  {id:"nlg8400-gateway-datasheet",name:"NLG8400 Gateway Datasheet",type:"Datasheet",cat:"LoRa",subcat:"Gateway",size:"3.96 MB",file:"NLG8400_V7.pdf"},
+  {id:"multichannel-lorawan-gateway-v2",name:"Multichannel LoRaWAN Gateway V2",type:"Brochure",cat:"LoRa",subcat:"Gateway",size:"0.36 MB",file:"Multichannel_LoRaWAN_Gateway_V2.pdf"},
+  {id:"lora-gateway-brochure",name:"LoRa Gateway Brochure",type:"Brochure",cat:"LoRa",subcat:"Gateway",size:"0.28 MB",file:"LoRa Gateway Brochure.pdf"},
+  {id:"lorawan-gateway-data-sheet",name:"LoRaWAN Gateway Data Sheet",type:"Datasheet",cat:"LoRa",subcat:"Gateway",size:"1.70 MB",file:"LoRaWAN Gateway Data Sheet.pdf"},
+  {id:"lora-single-channel-lora-gateway-v1",name:"P2P Single Channel LoRa Gateway V1",type:"Brochure",cat:"LoRa",subcat:"Gateway",size:"0.28 MB",file:"P2P Single Channel LoRa Gateway_V1.pdf"},
+  {id:"lorawan_4g_gateway",name:"LoRaWAN 4G Gateway",type:"Datasheet",cat:"LoRa",subcat:"Gateway",size:"1.7 MB",file:"LoRaWAN_4G_Gateway 1 1.pdf"},
+  {id:"lora-concentrator-brochure",name:"LoRa Concentrator Brochure",type:"Brochure",cat:"LoRa",subcat:"Concentrator",size:"4.62 MB",file:"LoRa Concentrator Brochure.pdf"},
+  {id:"lora-concentrator-datasheet",name:"LoRa Concentrator Datasheet",type:"Datasheet",cat:"LoRa",subcat:"Concentrator",size:"1.10 MB",file:"LoRa Concentrator Datasheet.pdf"},
+  {id:"lora-concentrator-base-board-v5",name:"LoRa Concentrator Base Board V5",type:"Brochure",cat:"LoRa",subcat:"Concentrator",size:"4.68 MB",file:"LoRa Concentrator 20x2 Pinout details_V5 5.pdf"},
+  {id:"mini-pcle-lora-concentrator-board",name:"mini PCIe LoRa Concentrator Board",type:"Brochure",cat:"LoRa",subcat:"Concentrator",size:"0.23 MB",file:"mini PCIe LoRa Concentrator Board Borchure.pdf"},
+  {id:"mpcis-lora-concentrator-datasheet",name:"mPCIe LoRa Concentrator Board Datasheet",type:"Datasheet",cat:"LoRa",subcat:"Concentrator",size:"4.45 MB",file:"mPCIe LoRa Concentrator Board Datasheet.pdf"},
+  {id:"lora-concentrator-mpcie-datasheet",name:"LoRa Concentrator mPCIe Datasheet",type:"Datasheet",cat:"LoRa",subcat:"Concentrator",size:"4.45 MB",file:"LoRa_Concentrator_mPCIe_Datasheet(5).pdf"},
+  {id:"lora-concentrator-compatible-evk-datasheet",name:"LoRa Concentrator Compatible EVK Datasheet",type:"Datasheet",cat:"LoRa",subcat:"EVK",size:"0.33 MB",file:"LoRa_Arduino_compatible_EVK_Datasheet_V0.1.pdf"},
+  {id:"lora-evk-arduino-v2",name:"LoRa EVK Arduino V2",type:"Brochure",cat:"LoRa",subcat:"EVK",size:"0.87 MB",file:"LoRa EVK Aurdino_v2.pdf"},
+  {id:"amr-brochure",name:"AMR Brochure",type:"Brochure",cat:"LoRa",subcat:"Node",size:"5.97 MB",file:"AMR Bochure.pdf"},
+  {id:"AFL0001_Datasheet",name:"AFL0001 Datasheet",type:"Datasheet",cat:"LoRa",subcat:"Filter",size:"0.3 MB",file:"AFL0001_Datasheet.pdf"},
+  {id:"AFL0003_Datasheet",name:"AFL0003 Datasheet 2",type:"Datasheet",cat:"LoRa",subcat:"Filter",size:"0.3 MB",file:"AFL0003_Datasheet 2.pdf"},
+  {id:"wisun-dcu-v2-NLG6580",name:"Wi-SUN DCU NLG6580 V2",type:"Brochure",cat:"Wi-SUN",subcat:"Gateway",size:"3.08 MB",file:"WiSUN DCU NLG8520 Brochure.pdf"},
+  {id:"wisun-dcu-v2",name:"Wi-SUN DCU V2",type:"Brochure",cat:"Wi-SUN",subcat:"Gateway",size:"0.36 MB",file:"Wi-SUN DCU_V2.pdf"},
+  {id:"wisun-dcu-nlg8520",name:"Wi-SUN DCU NLG8520 Brochure",type:"Brochure",cat:"Wi-SUN",subcat:"Gateway",size:"3.08 MB",file:"WiSUN DCU NLG8520 Brochure.pdf"},
+  {id:"nlg8520-brochure",name:"NLG8520 Brochure",type:"Brochure",cat:"Wi-SUN",subcat:"Gateway",size:"3.08 MB",file:"NLG8520 Brochure.pdf"},
+  {id:"nebulae-node-nm0211",name:"Nebulae Node NM0211-I",type:"Brochure",cat:"Wi-SUN",subcat:"Node",size:"2.16 MB",file:"Wi-SUN Module.pdf"},
+  {id:"wisun-nic-card",name:"Wi-SUN NIC Card Datasheet",type:"Datasheet",cat:"Wi-SUN",subcat:"Node",size:"0.6 MB",file:"WiSUN NIC Card Datasheet.pdf"},
+  {id:"nln0711-wpc-brochure",name:"NLN0721 WPC Brochure",type:"Brochure",cat:"Wi-SUN",subcat:"Module",size:"4.77 MB",file:"NLN0721 WPC Brochure.pdf"},
+  {id:"nln0721-wisun-module-datasheet-wpc",name:"NLN0721 Wi-SUN Module Datasheet WPC",type:"Brochure",cat:"Wi-SUN",subcat:"Module",size:"1.82 MB",file:"NLN0721 Wi-SUN Module Datasheet WPC.pdf"},
+  {id:"wisun-module-nln500a",name:"Wi-SUN Module NLN500a Datasheet",type:"Datasheet",cat:"Wi-SUN",subcat:"Module",size:"0.98 MB",file:"WiSUN Module NLN500a Datasheet.pdf"},
+  {id:"wisun-high-power-module-v1",name:"Wi-SUN High Power Module V1",type:"Brochure",cat:"Wi-SUN",subcat:"Module",size:"0.62 MB",file:"Wi-SUN High Power Module_V1.pdf"},
+  {id:"ofom-411mhz-module-v1",name:"OTAG-433 MHz Module V1",type:"Brochure",cat:"Wi-SUN",subcat:"Module",size:"0.18 MB",file:"OTAG-433 MHz Module_V1.pdf"},
+  {id:"nln81p-v1",name:"NLN81P V1",type:"Brochure",cat:"Zigbee",subcat:"Module",size:"0.25 MB",file:"NLN811P.pdf"},
+  {id:"nln11p-v1",name:"NLN11P V1",type:"Brochure",cat:"Zigbee",subcat:"Module",size:"0.25 MB",file:"NLN111P.pdf"},
+  {id:"nlg8600-v5",name:"NLG8600 V5",type:"Datasheet",cat:"GSM",subcat:"Gateway",size:"4.21 MB",file:"NLG8600_V5.pdf"},
+  {id:"nlg8400-v7",name:"NLG8400 V7",type:"Datasheet",cat:"GSM",subcat:"Gateway",size:"3.96 MB",file:"NLG8400_V7.pdf"},
+  {id:"wifi-module-v1",name:"Wi-Fi Module V1",type:"Brochure",cat:"Wi-Fi",subcat:"Module",size:"0.8 MB",file:"Wi-Fi Module_V1.pdf"},
+  {id:"case_study",name:"CIAZ TECH Case Study",type:"Case Study",cat:"General",subcat:"",size:"0.28 MB",file:"Ciaz_Tech.pdf"},
+  {id:"citycharge-ccms-unit-v1-pdf",name:"CityCharge CCMS Unit V1",type:"Datasheet",cat:"Smart Street Light",subcat:"",size:"0.8 MB",file:"CityCharge-CCMS-Unit.pdf"},
+  {id:"pole-mount-retrofit-street-light-controller-v1-pdf",name:"Pole Mount & Retrofit Street Light Controller V1",type:"Brochure",cat:"Smart Street Light",subcat:"Node",size:"2.00 MB",file:"Pole Mount & Retrofit Street Light Controller_V1.pdf"},
+  {id:"ilc-nema-lora-4g-v1-pdf",name:"ILC NEMA - LoRa & 4G V1",type:"Brochure",cat:"Smart Street Light",subcat:"Node",size:"0.2 MB",file:"ILC NEMA - LoRa & 4G_V1.pdf"},
+  {id:"ccms-brochure-v2-pdf",name:"CCMS Brochure V2",type:"Brochure",cat:"Smart Street Light",subcat:"Node",size:"0.3 MB",file:"CCMS Brochure_V2.pdf"}
+];
+
+var PROTO_PILL_CLASS = {
+  'LoRa':'pill-lora','Wi-SUN':'pill-wisun','Zigbee':'pill-zigbee',
+  'Wi-Fi':'pill-wifi','GSM':'pill-gsm','Smart Street Light':'pill-ssl','General':'pill-wifi'
+};
+
+function getParam(k){ return new URLSearchParams(window.location.search).get(k); }
+
+function setProgress(pct, text){
+  document.getElementById('progressBar').style.width = pct+'%';
+  if(text) document.getElementById('loadingText').textContent = text;
+}
+
+function showError(msg){
+  document.getElementById('ddLoading').style.display='none';
+  document.getElementById('ddError').style.display='block';
+  document.getElementById('errorMsg').textContent = msg || 'Could not load document.';
+}
+
+function buildRelated(current){
+  var same = DOCS.filter(function(d){ return d.id !== current.id && d.cat === current.cat; }).slice(0,4);
+  if(!same.length){ same = DOCS.filter(function(d){ return d.id !== current.id; }).slice(0,4); }
+  var html = same.map(function(d){
+    return '<a href="doc-detail.html?id='+d.id+'" class="dd-rel-card" style="text-decoration:none;">'
+      +'<div class="dd-rel-card__type">'+d.type+'</div>'
+      +'<div class="dd-rel-card__name">'+d.name+'</div>'
+      +'<div class="dd-rel-card__size">PDF · '+d.size+'</div>'
+      +'<span class="dd-rel-card__link">View Details <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>'
+      +'</a>';
+  }).join('');
+  document.getElementById('relatedDocs').innerHTML = html;
+}
+
+function renderContent(doc, aiData){
+  // Title & breadcrumb
+  document.title = doc.name + ' | Nebulae IoT';
+  document.getElementById('pageTitle').textContent = doc.name + ' | Nebulae IoT';
+  document.getElementById('bcProduct').textContent = doc.name;
+
+  // PDF embed & download links
+  var pdfURL = BASE_URL + doc.file;
+  document.getElementById('pdfEmbed').src = pdfURL;
+  document.getElementById('pdfDownload').href = pdfURL;
+  document.getElementById('pdfOpen').href = pdfURL;
+  document.getElementById('ctaDownload').href = pdfURL;
+
+  // Badges
+  var protoPill = document.getElementById('protoPill');
+  protoPill.textContent = doc.cat;
+  protoPill.className = 'dd-proto-pill ' + (PROTO_PILL_CLASS[doc.cat] || 'pill-wifi');
+  document.getElementById('typePill').textContent = doc.type;
+  if(doc.subcat){
+    var sp = document.getElementById('subcatPill');
+    sp.textContent = doc.subcat;
+    sp.style.display = 'inline-block';
+  }
+
+  // Name
+  document.getElementById('productName').textContent = doc.name;
+  document.getElementById('productFull').textContent = aiData.fullName || '';
+
+  // Sidebar info
+  document.getElementById('sideDocType').textContent = doc.type;
+  document.getElementById('sideProto').textContent = doc.cat;
+  document.getElementById('sideCat').textContent = doc.subcat || doc.cat;
+  document.getElementById('sideSizeInfo').textContent = doc.size;
+  document.getElementById('fileSize').textContent = doc.size;
+  document.getElementById('sidebarQuote').href = 'contact.html?product=' + encodeURIComponent(doc.name);
+
+  // Quote link
+  document.getElementById('ctaDownload').href = pdfURL;
+
+  // AI Overview
+  document.getElementById('overviewBlock').textContent = aiData.overview || 'No overview available.';
+
+  // Quick specs
+  var qs = '';
+  (aiData.quickSpecs || []).forEach(function(s){
+    qs += '<tr><td>'+s.label+'</td><td>'+s.value+'</td></tr>';
+  });
+  document.getElementById('quickSpecs').innerHTML = qs || '<tr><td colspan="2" style="color:#9ca3af;font-size:.82rem;">No specs extracted</td></tr>';
+
+  // Features
+  var fl = '';
+  (aiData.features || []).forEach(function(f){ fl += '<li>'+f+'</li>'; });
+  document.getElementById('featuresList').innerHTML = fl || '<li style="color:#9ca3af;">No features extracted</li>';
+
+  // Full specs
+  var fs = '';
+  (aiData.fullSpecs || []).forEach(function(s){
+    fs += '<tr><td>'+s.label+'</td><td>'+s.value+'</td></tr>';
+  });
+  document.getElementById('fullSpecs').innerHTML = fs || '<tr><td colspan="2" style="color:#9ca3af;font-size:.82rem;">No specifications available</td></tr>';
+
+  // Applications
+  var apps = '';
+  (aiData.applications || []).forEach(function(a){ apps += '<span class="dd-app-chip">'+a+'</span>'; });
+  document.getElementById('applicationsList').innerHTML = apps || '<span style="color:#9ca3af;font-size:.85rem;">No applications listed</span>';
+
+  // Related
+  buildRelated(doc);
+}
+
+async function fetchPDFAsBase64(url){
+  var resp = await fetch(url);
+  if(!resp.ok) throw new Error('PDF fetch failed: ' + resp.status);
+  var buf = await resp.arrayBuffer();
+  var bytes = new Uint8Array(buf);
+  var binary = '';
+  for(var i=0;i<bytes.byteLength;i++) binary += String.fromCharCode(bytes[i]);
+  return btoa(binary);
+}
+
+async function extractWithAI(doc, pdfBase64){
+  var prompt = 'You are analyzing a Nebulae IoT product PDF document: "'+doc.name+'" (Type: '+doc.type+', Protocol: '+doc.cat+(doc.subcat?', Category: '+doc.subcat:'')+').\n\nExtract the following and respond ONLY with valid JSON (no markdown, no backticks):\n{\n  "fullName": "full product name or model line from the document",\n  "overview": "2-3 sentence product overview extracted from the document",\n  "quickSpecs": [\n    {"label":"Protocol","value":"..."},\n    {"label":"Form Factor","value":"..."},\n    {"label":"Power","value":"..."},\n    {"label":"Interface","value":"..."},\n    {"label":"Operating Temp","value":"..."},\n    {"label":"Certifications","value":"..."}\n  ],\n  "features": ["feature 1","feature 2","feature 3","feature 4","feature 5","feature 6","feature 7","feature 8"],\n  "fullSpecs": [\n    {"label":"Frequency Band","value":"..."},\n    {"label":"Output Power","value":"..."},\n    {"label":"Sensitivity","value":"..."},\n    {"label":"Data Rate","value":"..."},\n    {"label":"Supply Voltage","value":"..."},\n    {"label":"Current Consumption","value":"..."},\n    {"label":"Dimensions","value":"..."},\n    {"label":"Weight","value":"..."},\n    {"label":"Modulation","value":"..."},\n    {"label":"Security","value":"..."}\n  ],\n  "applications": ["app1","app2","app3","app4","app5","app6"]\n}\n\nIf a field is not found in the document, use "—". Keep values concise and technical.';
+
+  var response = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: 'claude-sonnet-4-6',
+      max_tokens: 1000,
+      messages: [{
+        role: 'user',
+        content: [{
+          type: 'document',
+          source: { type: 'base64', media_type: 'application/pdf', data: pdfBase64 }
+        }, {
+          type: 'text',
+          text: prompt
+        }]
+      }]
+    })
+  });
+
+  if(!response.ok) throw new Error('API error: ' + response.status);
+  var data = await response.json();
+  var text = (data.content || []).map(function(b){ return b.text||''; }).join('');
+  text = text.replace(/```json|```/g,'').trim();
+  return JSON.parse(text);
+}
+
+async function init(){
+  var id = getParam('id');
+  if(!id){ showError('No document ID provided.'); return; }
+
+  var doc = DOCS.find(function(d){ return d.id === id; });
+  if(!doc){ showError('Document "'+id+'" not found in catalogue.'); return; }
+
+  setProgress(10, 'Found document: ' + doc.name);
+
+  try {
+    setProgress(25, 'Downloading PDF…');
+    var pdfURL = BASE_URL + doc.file;
+    var pdfBase64 = await fetchPDFAsBase64(pdfURL);
+
+    setProgress(55, 'Analysing document with AI…');
+    var aiData = await extractWithAI(doc, pdfBase64);
+
+    setProgress(90, 'Building page…');
+    renderContent(doc, aiData);
+
+    setProgress(100);
+    setTimeout(function(){
+      document.getElementById('ddLoading').style.display='none';
+      document.getElementById('ddWrap').classList.add('visible');
+    }, 300);
+
+  } catch(err) {
+    console.error(err);
+    // Still show the page with what we know, just no AI content
+    setProgress(100, 'Showing document preview…');
+    var fallback = {
+      fullName: doc.name,
+      overview: 'This is a Nebulae IoT ' + doc.type + ' for the ' + doc.name + '. Download the PDF for complete technical specifications.',
+      quickSpecs: [
+        {label:'Protocol', value: doc.cat},
+        {label:'Category', value: doc.subcat || doc.cat},
+        {label:'Document Type', value: doc.type},
+        {label:'File Size', value: doc.size}
+      ],
+      features: ['View the PDF for full feature list'],
+      fullSpecs: [{label:'Reference', value:'See PDF download for full specifications'}],
+      applications: ['IoT Deployments','Smart Metering','Industrial Automation','Smart City']
+    };
+    renderContent(doc, fallback);
+    setTimeout(function(){
+      document.getElementById('ddLoading').style.display='none';
+      document.getElementById('ddWrap').classList.add('visible');
+    }, 300);
+  }
+}
+
+init();
+</script>
+</body>
+</html>

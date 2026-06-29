@@ -17,6 +17,7 @@
    Buy modal
    Requires: Bootstrap 5 bundle + products-data.js
 ===================================================== */
+
 (function () {
   "use strict";
 
@@ -1154,3 +1155,16 @@ window.submitFloatForm=function(){
   document.getElementById('nblCookieAccept').addEventListener('click',function(){banner.classList.add('hidden');localStorage.setItem('nblCookieAccepted','1');});
   document.getElementById('nblCookieDecline').addEventListener('click',function(){banner.classList.add('hidden');});
 })();
+
+if (document.querySelector('.nbl-hero')) {
+  const header = document.querySelector('.atl-sticky-header');
+  const body = document.querySelector('.nbl-hero');
+
+  function setOffset() {
+    const headerHeight = header.offsetHeight;
+    body.style.marginTop = `${headerHeight}px`;
+  }
+
+  window.addEventListener('load', setOffset);
+  window.addEventListener('resize', setOffset);
+}
