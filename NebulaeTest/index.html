@@ -90,6 +90,8 @@
   <link rel="stylesheet" href="./assets/css/nebulae-nav.css">
   <!-- Landing page section styles (index only) -->
   <link rel="stylesheet" href="./assets/css/nebulae-page.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 </head>
 <body>
 <a class="nbl-skip-link" href="#nbl-hero">Skip to content</a>
@@ -679,12 +681,12 @@
 
 
 <!-- ═══ 2. HERO (NEW) ═══ -->
-<section class="nbl-hero" id="nbl-hero">
+<!-- <section class="nbl-hero" id="nbl-hero">
   <div class="nbl-hero__bg">
     <div class="nbl-hero__img-overlay" aria-hidden="true">
       <img loading="lazy" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=70" alt="" loading="eager" style="padding:0!important;border:none!important;">
     </div>
-    <canvas id="nblConstellation" aria-hidden="true"></canvas>
+ 
     <div class="nbl-hero__grid"></div>
     <div class="nbl-hero__orb nbl-hero__orb--1"></div>
     <div class="nbl-hero__orb nbl-hero__orb--2"></div>
@@ -733,189 +735,142 @@
       </div>
     </div>
   </div>
+</section> -->
+
+<section class="nbl-hero" id="nbl-hero">
+  <div class="nbl-hero__bg">
+    <div class="nbl-hero__bg-slider swiper" aria-hidden="true">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img loading="eager" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=70" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=70" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&q=70" alt="">
+        </div>
+      </div>
+    </div>
+ 
+    <div class="nbl-hero__grid"></div>
+    <div class="nbl-hero__orb nbl-hero__orb--1"></div>
+    <div class="nbl-hero__orb nbl-hero__orb--2"></div>
+    <div class="nbl-hero__orb nbl-hero__orb--3"></div>
+  </div>
+  <div class="container nbl-hero__inner">
+    <div class="row align-items-center py-4">
+      <div class="col-lg-6" data-anim="slide-left">
+        <div class="nbl-hero__eyebrow">India's Premier IoT Solutions Provider</div>
+        <h1 class="nbl-hero__title">Powering the World's<br><span>Connected Future</span></h1>
+        <p class="nbl-hero__desc">From LoRa modules to Wi-SUN gateways — Nebulae delivers battle-tested wireless connectivity solutions for smart cities, industrial automation, and utility-grade deployments.</p>
+        <div class="nbl-hero__btns">
+          <a href="products.html" class="nbl-btn-primary"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Explore Products</a>
+          <a href="solutions.html" class="nbl-btn-primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          Explore Solutions
+        </a>
+        </div>
+        <div class="nbl-hero__stats">
+          <div class="nbl-hero__stat-item"><span class="nbl-hero__stat-num">6+</span><span class="nbl-hero__stat-label">Protocols</span></div>
+          <div class="nbl-hero__stat-divider"></div>
+          <div class="nbl-hero__stat-item"><span class="nbl-hero__stat-num">500+</span><span class="nbl-hero__stat-label">Products</span></div>
+          <div class="nbl-hero__stat-divider"></div>
+          <div class="nbl-hero__stat-item"><span class="nbl-hero__stat-num">20+</span><span class="nbl-hero__stat-label">Industries</span></div>
+          <div class="nbl-hero__stat-divider"></div>
+          <div class="nbl-hero__stat-item"><span class="nbl-hero__stat-num">Pan-India</span><span class="nbl-hero__stat-label">Deployments</span></div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-anim="slide-right">
+        <div class="nbl-hero__tech-card">
+          <div class="nbl-tech-grid-inner">
+            <div class="nbl-mini-card nbl-mini-card--lora"><div class="nbl-mini-card__icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div><span class="nbl-mini-card__label">LoRa</span><span class="nbl-mini-card__sub">Long Range · 15km+</span></div>
+            <div class="nbl-mini-card nbl-mini-card--wisun"><div class="nbl-mini-card__icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div><span class="nbl-mini-card__label">Wi-SUN</span><span class="nbl-mini-card__sub">Smart Utility · Mesh</span></div>
+            <div class="nbl-mini-card nbl-mini-card--zigbee"><div class="nbl-mini-card__icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><span class="nbl-mini-card__label">Zigbee</span><span class="nbl-mini-card__sub">Mesh · Low Power</span></div>
+            <div class="nbl-mini-card nbl-mini-card--wifi"><div class="nbl-mini-card__icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M2 8.5a16 16 0 0 1 20 0"/>
+    <path d="M5 12a11 11 0 0 1 14 0"/>
+    <path d="M8.5 15.5a6 6 0 0 1 7 0"/>
+    <circle cx="12" cy="19" r="1" fill="currentColor" stroke="none"/>
+</svg></div><span class="nbl-mini-card__label">Wi-Fi</span><span class="nbl-mini-card__sub">Wireless LAN · 2.4G/5G</span></div>
+            <div class="nbl-mini-card nbl-mini-card--gsm"><div class="nbl-mini-card__icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><span class="nbl-mini-card__label">GSM</span><span class="nbl-mini-card__sub">Cellular IoT · 2G–4G</span></div>
+            <div class="nbl-mini-card nbl-mini-card--ble"><div class="nbl-mini-card__icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></div><span class="nbl-mini-card__label">BLE</span><span class="nbl-mini-card__sub">Bluetooth 5.x</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
-
 <!-- ═══ PARTNER / LOGO STRIP ═══ -->
+ 
 <section class="nbl-logos-section">
   <div class="container">
-    <p class="nbl-logos-label">Trusted by leading enterprises &amp; certified by global authorities</p>
+    <h2 class="nbl-logos-label">Supported Technologies</h2>
   </div>
   <div class="nbl-logos-strip">
     <div class="nbl-logos-track">
 
       <!-- ===== ORIGINAL SET ===== -->
-
-      <!-- Semtech -->
-      <div class="nbl-logo-item" title="Semtech Partner">
-        <svg width="100" height="28" viewBox="0 0 190 40" xmlns="http://www.w3.org/2000/svg" style="opacity:0.7">
-          <rect x="0" y="6" width="28" height="28" rx="4" fill="#E8401C"/>
-          <rect x="6" y="0" width="28" height="28" rx="4" fill="#E8401C" opacity="0.35"/>
-          <text x="40" y="28" font-family="Arial,sans-serif" font-weight="800" font-size="22" fill="#1a1a1a" letter-spacing="1">SEMTECH</text>
-        </svg>
-        <span class="nbl-logo-name">Semtech Partner</span>
+      <div class="nbl-logo-item" title="Bluetooth">
+        <img src="./assets/images/SupportedTech/Bluetooth.png" alt="Bluetooth">
       </div>
-
-      <!-- Silicon Labs -->
-      <div class="nbl-logo-item" title="Silicon Labs">
-        <svg width="110" height="28" viewBox="0 0 230 44" xmlns="http://www.w3.org/2000/svg" style="opacity:0.7">
-          <circle cx="22" cy="22" r="20" fill="#0066CC"/>
-          <circle cx="22" cy="22" r="13" fill="white"/>
-          <circle cx="22" cy="22" r="6"  fill="#0066CC"/>
-          <circle cx="22" cy="10" r="3"  fill="#0066CC"/>
-          <circle cx="22" cy="34" r="3"  fill="#0066CC"/>
-          <circle cx="10" cy="22" r="3"  fill="#0066CC"/>
-          <circle cx="34" cy="22" r="3"  fill="#0066CC"/>
-          <text x="52" y="30" font-family="Arial,sans-serif" font-weight="700" font-size="20" fill="#1a1a1a" letter-spacing="0.5">Silicon Labs</text>
-        </svg>
-        <span class="nbl-logo-name">Silicon Labs</span>
+      <div class="nbl-logo-item" title="G3-PLC Alliance">
+        <img src="./assets/images/SupportedTech/G3-PLC.png" alt="G3-PLC Alliance">
       </div>
-
-      <!-- Texas Instruments -->
-      <div class="nbl-logo-item" title="Texas Instruments">
-        <svg width="72" height="30" viewBox="0 0 72 30" xmlns="http://www.w3.org/2000/svg" style="opacity:0.88">
-          <rect width="72" height="30" rx="3" fill="#C8102E"/>
-          <text x="36" y="13" font-family="Arial,sans-serif" font-weight="900" font-size="13" fill="white" text-anchor="middle">TEXAS</text>
-          <text x="36" y="26" font-family="Arial,sans-serif" font-weight="900" font-size="9.5" fill="white" text-anchor="middle" letter-spacing="0.8">INSTRUMENTS</text>
-        </svg>
-        <span class="nbl-logo-name">Texas Instruments</span>
+      <div class="nbl-logo-item" title="LoRaWAN">
+        <img src="./assets/images/SupportedTech/LoRaWAN.png" alt="LoRaWAN">
       </div>
-
-      <!-- LoRa Alliance -->
-      <div class="nbl-logo-item" title="LoRa Alliance">
-        <svg width="118" height="28" viewBox="0 0 245 50" xmlns="http://www.w3.org/2000/svg" style="opacity:0.78">
-          <path d="M5,25 C5,14 14,5 25,5 C36,5 45,14 45,25 C45,36 36,45 25,45 C14,45 5,36 5,25Z" fill="none" stroke="#5A2D82" stroke-width="4"/>
-          <path d="M12,25 C12,17 18,11 25,11 C32,11 38,17 38,25 C38,33 32,39 25,39 C18,39 12,33 12,25Z" fill="none" stroke="#5A2D82" stroke-width="3.5"/>
-          <circle cx="25" cy="25" r="6" fill="#5A2D82"/>
-          <text x="56" y="33" font-family="Arial,sans-serif" font-weight="700" font-size="22" fill="#5A2D82" letter-spacing="0.3">LoRa Alliance</text>
-        </svg>
-        <span class="nbl-logo-name">LoRa Alliance</span>
+      <div class="nbl-logo-item" title="LowPAN">
+        <img src="./assets/images/SupportedTech/LowPAN.png" alt="LowPAN">
       </div>
-
-      <!-- Wi-SUN Alliance -->
+      <div class="nbl-logo-item" title="NB-IoT">
+        <img src="./assets/images/SupportedTech/NB-IoT.png" alt="NB-IoT">
+      </div>
+      <div class="nbl-logo-item" title="sigfox">
+        <img src="./assets/images/SupportedTech/sigfox.png" alt="sigfox">
+      </div>
+      <div class="nbl-logo-item" title="WiFi">
+        <img src="./assets/images/SupportedTech/WiFi.png" alt="WiFi">
+      </div>
       <div class="nbl-logo-item" title="Wi-SUN Alliance">
-        <svg width="132" height="28" viewBox="0 0 265 50" xmlns="http://www.w3.org/2000/svg" style="opacity:0.75">
-          <path d="M4,38 Q12,14 20,38 Q28,14 36,38" fill="none" stroke="#00A651" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M10,44 Q18,24 26,44 Q34,24 42,44" fill="none" stroke="#00A651" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
-          <text x="54" y="34" font-family="Arial,sans-serif" font-weight="700" font-size="20" fill="#1a1a1a" letter-spacing="0.3">Wi-SUN Alliance</text>
-        </svg>
-        <span class="nbl-logo-name">Wi-SUN Alliance</span>
+        <img src="./assets/images/SupportedTech/Wi-SUN-Main-Logo.png" alt="Wi-SUN Alliance">
       </div>
-
-      <!-- NIELIT -->
-      <div class="nbl-logo-item" title="NIELIT">
-        <svg width="104" height="28" viewBox="0 0 210 44" xmlns="http://www.w3.org/2000/svg" style="opacity:0.82">
-          <rect x="0" y="2" width="40" height="40" rx="4" fill="#003580"/>
-          <text x="20" y="16" font-family="Arial,sans-serif" font-weight="900" font-size="10" fill="#F5A623" text-anchor="middle">GOVT.</text>
-          <text x="20" y="31" font-family="Arial,sans-serif" font-weight="900" font-size="11" fill="white" text-anchor="middle">INDIA</text>
-          <text x="52" y="30" font-family="Arial,sans-serif" font-weight="800" font-size="24" fill="#1a1a1a" letter-spacing="1">NIELIT</text>
-        </svg>
-        <span class="nbl-logo-name">NIELIT</span>
-      </div>
-
-      <!-- BIS Certified -->
-      <div class="nbl-logo-item" title="BIS Certified">
-        <svg width="105" height="32" viewBox="0 0 205 54" xmlns="http://www.w3.org/2000/svg" style="opacity:0.82">
-          <polygon points="27,2 50,14 50,40 27,52 4,40 4,14" fill="#FF6600" opacity="0.1"/>
-          <polygon points="27,2 50,14 50,40 27,52 4,40 4,14" fill="none" stroke="#FF6600" stroke-width="3"/>
-          <text x="27" y="24" font-family="Arial,sans-serif" font-weight="900" font-size="11" fill="#FF6600" text-anchor="middle">BIS</text>
-          <text x="27" y="38" font-family="Arial,sans-serif" font-size="8" fill="#FF6600" text-anchor="middle">INDIA</text>
-          <text x="62" y="26" font-family="Arial,sans-serif" font-weight="800" font-size="20" fill="#1a1a1a">BIS</text>
-          <text x="62" y="42" font-family="Arial,sans-serif" font-size="14" fill="#888">Certified</text>
-        </svg>
-        <span class="nbl-logo-name">BIS Certified</span>
-      </div>
-
-      <!-- AWS IoT -->
-      <div class="nbl-logo-item" title="AWS IoT">
-        <svg width="96" height="32" viewBox="0 0 185 54" xmlns="http://www.w3.org/2000/svg" style="opacity:0.88">
-          <path d="M12,42 Q28,8 44,42"  fill="none" stroke="#FF9900" stroke-width="4.5" stroke-linecap="round"/>
-          <path d="M20,42 Q28,20 36,42" fill="none" stroke="#FF9900" stroke-width="4.5" stroke-linecap="round"/>
-          <path d="M6,48 Q28,60 50,48"  fill="none" stroke="#FF9900" stroke-width="3"   stroke-linecap="round"/>
-          <text x="62" y="26" font-family="Arial,sans-serif" font-weight="900" font-size="20" fill="#FF9900" letter-spacing="1">AWS</text>
-          <text x="62" y="44" font-family="Arial,sans-serif" font-size="14" fill="#888" letter-spacing="0.4">IoT Core</text>
-        </svg>
-        <span class="nbl-logo-name">AWS IoT Core</span>
+      <div class="nbl-logo-item" title="zigbee">
+        <img src="./assets/images/SupportedTech/zigbee.png" alt="zigbee">
       </div>
 
       <!-- ===== DUPLICATE SET (seamless loop) ===== -->
-
-      <div class="nbl-logo-item" title="Semtech Partner" aria-hidden="true">
-        <svg width="100" height="28" viewBox="0 0 190 40" xmlns="http://www.w3.org/2000/svg" style="opacity:0.7">
-          <rect x="0" y="6" width="28" height="28" rx="4" fill="#E8401C"/>
-          <rect x="6" y="0" width="28" height="28" rx="4" fill="#E8401C" opacity="0.35"/>
-          <text x="40" y="28" font-family="Arial,sans-serif" font-weight="800" font-size="22" fill="#1a1a1a" letter-spacing="1">SEMTECH</text>
-        </svg>
-        <span class="nbl-logo-name">Semtech Partner</span>
+      <div class="nbl-logo-item" title="Bluetooth" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/Bluetooth.png" alt="Bluetooth">
       </div>
-      <div class="nbl-logo-item" title="Silicon Labs" aria-hidden="true">
-        <svg width="110" height="28" viewBox="0 0 230 44" xmlns="http://www.w3.org/2000/svg" style="opacity:0.7">
-          <circle cx="22" cy="22" r="20" fill="#0066CC"/><circle cx="22" cy="22" r="13" fill="white"/><circle cx="22" cy="22" r="6" fill="#0066CC"/>
-          <circle cx="22" cy="10" r="3" fill="#0066CC"/><circle cx="22" cy="34" r="3" fill="#0066CC"/><circle cx="10" cy="22" r="3" fill="#0066CC"/><circle cx="34" cy="22" r="3" fill="#0066CC"/>
-          <text x="52" y="30" font-family="Arial,sans-serif" font-weight="700" font-size="20" fill="#1a1a1a" letter-spacing="0.5">Silicon Labs</text>
-        </svg>
-        <span class="nbl-logo-name">Silicon Labs</span>
+      <div class="nbl-logo-item" title="G3-PLC Alliance" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/G3-PLC.png" alt="G3-PLC Alliance">
       </div>
-      <div class="nbl-logo-item" title="Texas Instruments" aria-hidden="true">
-        <svg width="72" height="30" viewBox="0 0 72 30" xmlns="http://www.w3.org/2000/svg" style="opacity:0.88">
-          <rect width="72" height="30" rx="3" fill="#C8102E"/>
-          <text x="36" y="13" font-family="Arial,sans-serif" font-weight="900" font-size="13" fill="white" text-anchor="middle">TEXAS</text>
-          <text x="36" y="26" font-family="Arial,sans-serif" font-weight="900" font-size="9.5" fill="white" text-anchor="middle" letter-spacing="0.8">INSTRUMENTS</text>
-        </svg>
-        <span class="nbl-logo-name">Texas Instruments</span>
+      <div class="nbl-logo-item" title="LoRaWAN" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/LoRaWAN.png" alt="LoRaWAN">
       </div>
-      <div class="nbl-logo-item" title="LoRa Alliance" aria-hidden="true">
-        <svg width="118" height="28" viewBox="0 0 245 50" xmlns="http://www.w3.org/2000/svg" style="opacity:0.78">
-          <path d="M5,25 C5,14 14,5 25,5 C36,5 45,14 45,25 C45,36 36,45 25,45 C14,45 5,36 5,25Z" fill="none" stroke="#5A2D82" stroke-width="4"/>
-          <path d="M12,25 C12,17 18,11 25,11 C32,11 38,17 38,25 C38,33 32,39 25,39 C18,39 12,33 12,25Z" fill="none" stroke="#5A2D82" stroke-width="3.5"/>
-          <circle cx="25" cy="25" r="6" fill="#5A2D82"/>
-          <text x="56" y="33" font-family="Arial,sans-serif" font-weight="700" font-size="22" fill="#5A2D82" letter-spacing="0.3">LoRa Alliance</text>
-        </svg>
-        <span class="nbl-logo-name">LoRa Alliance</span>
+      <div class="nbl-logo-item" title="LowPAN" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/LowPAN.png" alt="LowPAN">
+      </div>
+      <div class="nbl-logo-item" title="NB-IoT" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/NB-IoT.png" alt="NB-IoT">
+      </div>
+      <div class="nbl-logo-item" title="sigfox" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/sigfox.png" alt="sigfox">
+      </div>
+      <div class="nbl-logo-item" title="WiFi" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/WiFi.png" alt="WiFi">
       </div>
       <div class="nbl-logo-item" title="Wi-SUN Alliance" aria-hidden="true">
-        <svg width="132" height="28" viewBox="0 0 265 50" xmlns="http://www.w3.org/2000/svg" style="opacity:0.75">
-          <path d="M4,38 Q12,14 20,38 Q28,14 36,38" fill="none" stroke="#00A651" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M10,44 Q18,24 26,44 Q34,24 42,44" fill="none" stroke="#00A651" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
-          <text x="54" y="34" font-family="Arial,sans-serif" font-weight="700" font-size="20" fill="#1a1a1a" letter-spacing="0.3">Wi-SUN Alliance</text>
-        </svg>
-        <span class="nbl-logo-name">Wi-SUN Alliance</span>
+        <img src="./assets/images/SupportedTech/Wi-SUN-Main-Logo.png" alt="Wi-SUN Alliance">
       </div>
-      <div class="nbl-logo-item" title="NIELIT" aria-hidden="true">
-        <svg width="104" height="28" viewBox="0 0 210 44" xmlns="http://www.w3.org/2000/svg" style="opacity:0.82">
-          <rect x="0" y="2" width="40" height="40" rx="4" fill="#003580"/>
-          <text x="20" y="16" font-family="Arial,sans-serif" font-weight="900" font-size="10" fill="#F5A623" text-anchor="middle">GOVT.</text>
-          <text x="20" y="31" font-family="Arial,sans-serif" font-weight="900" font-size="11" fill="white" text-anchor="middle">INDIA</text>
-          <text x="52" y="30" font-family="Arial,sans-serif" font-weight="800" font-size="24" fill="#1a1a1a" letter-spacing="1">NIELIT</text>
-        </svg>
-        <span class="nbl-logo-name">NIELIT</span>
-      </div>
-      <div class="nbl-logo-item" title="BIS Certified" aria-hidden="true">
-        <svg width="105" height="32" viewBox="0 0 205 54" xmlns="http://www.w3.org/2000/svg" style="opacity:0.82">
-          <polygon points="27,2 50,14 50,40 27,52 4,40 4,14" fill="#FF6600" opacity="0.1"/>
-          <polygon points="27,2 50,14 50,40 27,52 4,40 4,14" fill="none" stroke="#FF6600" stroke-width="3"/>
-          <text x="27" y="24" font-family="Arial,sans-serif" font-weight="900" font-size="11" fill="#FF6600" text-anchor="middle">BIS</text>
-          <text x="27" y="38" font-family="Arial,sans-serif" font-size="8" fill="#FF6600" text-anchor="middle">INDIA</text>
-          <text x="62" y="26" font-family="Arial,sans-serif" font-weight="800" font-size="20" fill="#1a1a1a">BIS</text>
-          <text x="62" y="42" font-family="Arial,sans-serif" font-size="14" fill="#888">Certified</text>
-        </svg>
-        <span class="nbl-logo-name">BIS Certified</span>
-      </div>
-      <div class="nbl-logo-item" title="AWS IoT" aria-hidden="true">
-        <svg width="96" height="32" viewBox="0 0 185 54" xmlns="http://www.w3.org/2000/svg" style="opacity:0.88">
-          <path d="M12,42 Q28,8 44,42"  fill="none" stroke="#FF9900" stroke-width="4.5" stroke-linecap="round"/>
-          <path d="M20,42 Q28,20 36,42" fill="none" stroke="#FF9900" stroke-width="4.5" stroke-linecap="round"/>
-          <path d="M6,48 Q28,60 50,48"  fill="none" stroke="#FF9900" stroke-width="3"   stroke-linecap="round"/>
-          <text x="62" y="26" font-family="Arial,sans-serif" font-weight="900" font-size="20" fill="#FF9900" letter-spacing="1">AWS</text>
-          <text x="62" y="44" font-family="Arial,sans-serif" font-size="14" fill="#888" letter-spacing="0.4">IoT Core</text>
-        </svg>
-        <span class="nbl-logo-name">AWS IoT Core</span>
+      <div class="nbl-logo-item" title="zigbee" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/zigbee.png" alt="zigbee">
       </div>
 
     </div>
   </div>
 </section>
-
 
 <!-- ═══ STATS COUNTER ═══ -->
 <section class="nbl-stats-section">
@@ -2377,5 +2332,15 @@
 <script src="./assets/js/nebulae-nav.js"></script>
 <!-- Landing page JS (index only) -->
 <script src="./assets/js/nebulae-page.js"></script>
+<script>
+new Swiper('.nbl-hero__bg-slider', {
+  effect: 'fade',
+  fadeEffect: { crossFade: true },
+  loop: true,
+  autoplay: { delay: 4000, disableOnInteraction: false },
+  speed: 1200,
+  allowTouchMove: false
+});
+</script>
 </body>
 </html>
