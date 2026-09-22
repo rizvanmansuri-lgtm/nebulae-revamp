@@ -49,8 +49,8 @@
   --surf2:   #EEF2F8;
   --white:   #FFFFFF;
   --font:    'Poppins', sans-serif;
-  --fcond:   'Outfit', sans-serif;
-  --fmono:   'IBM Plex Mono', monospace;
+  --fcond:   'Poppins', sans-serif;
+  --fmono:   'Poppins', sans-serif;
   --r:       10px;
   --sh:      0 4px 24px rgba(0,0,0,.07);
 }
@@ -2123,7 +2123,7 @@ a.atl-btn-back-home-nav:active,
   margin-bottom: .4rem;
 }
 .atl-nav__mobile-title {
-  font-family: 'Outfit', sans-serif;
+  font-family:'Outfit',sans-serif;
   font-size: .82rem;
   font-weight: 700;
   letter-spacing: .08em;
