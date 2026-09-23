@@ -96,8 +96,7 @@
 <body>
 <a class="nbl-skip-link" href="#nbl-hero">Skip to content</a>
 <div id="nblProgressBar" role="progressbar" aria-label="Page scroll progress"></div>
-<!-- <div id="nblCursor" aria-hidden="true"></div>
-<div id="nblCursorRing" aria-hidden="true"></div> -->
+ 
 <!-- <button id="nblThemeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode"></button> -->
 <button id="nblBackTop" aria-label="Back to top" title="Back to top">
   <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
@@ -162,14 +161,16 @@
                     Module
                     <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
                   </button>
-                  <button class="atl-prod-rail__item" data-prod="gateway">
-                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h.01M10 11h.01"/><circle cx="17" cy="11" r="1" fill="currentColor"/></svg>
-                    Gateway
-                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
-                  </button>
+                  
                   <button class="atl-prod-rail__item" data-prod="concentrator">
                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
                     Concentrator
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+
+                  <button class="atl-prod-rail__item" data-prod="gateway">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h.01M10 11h.01"/><circle cx="17" cy="11" r="1" fill="currentColor"/></svg>
+                    Gateway
                     <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
                   </button>
                   <button class="atl-prod-rail__item" data-prod="filter">
@@ -193,15 +194,7 @@
                     Data Connector
                     <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
                   </button>
-                  <button class="atl-prod-rail__item" data-prod="datacloud">
-                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
-    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
-    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
-</svg>
-                    Cloud
-                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
-                  </button>
+                   
                 </div>
 
                 <!-- Panels -->
@@ -214,6 +207,7 @@
                       <a href="products/wisun-module.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
                       <a href="products/zigbee-module.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
                       <a href="products/wifi-module.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="products/som-module.html" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span><span class="atl-prod-card__name">SOM</span><span class="atl-prod-card__desc">System on Module</span></a>
                     </div>
                   </div>
                   <!-- Gateway -->
@@ -266,17 +260,7 @@
                     
                     </div>
                   </div>
-                  <div class="atl-prod-panel__body" data-panel="datacloud">
-                    <p class="atl-prod-panel__label">Cloud/Edge Connector — Choose a protocol</p> 
-                    <div class="atl-prod-panel__grid">
-                      <a href="products/cloud.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
-    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
-    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
-</svg></span><span class="atl-prod-card__name">Cloud</span><span class="atl-prod-card__desc">Middleware</span></a>
-                      
-                    </div>
-                  </div>
+                   
                 </div><!-- /atl-prod-panel -->
 
                 <!-- Feature card -->
@@ -286,12 +270,7 @@
                     <p class="atl-mega__feature-name">End-to-End IoT Hardware</p>
                     <p class="atl-mega__feature-desc">Modules, Gateways, Filters, EVKs, Concentrators &amp; Nodes across all major wireless protocols.</p>
                     <a href="products.html" class="atl-mega__feature-link">View All Products →</a>
-                    <div class="atl-mega__cert-badges">
-                      <span class="atl-mega__cert">LoRa</span>
-                      <span class="atl-mega__cert">Wi-SUN</span>
-                      <span class="atl-mega__cert">BLE</span>
-                      <span class="atl-mega__cert">Zigbee</span>
-                    </div>
+                   
                   </div>
                 </div>
               </div>
@@ -326,7 +305,7 @@
                     <p class="atl-mega__feature-name">Complete IoT Solutions</p>
                     <p class="atl-mega__feature-desc">From hardware modules to cloud dashboards — turn-key smart utility &amp; infrastructure deployments.</p>
                     <a href="solutions.html" class="atl-mega__feature-link">View All Solutions →</a>
-                    <div class="atl-mega__cert-badges"><span class="atl-mega__cert">AMI</span><span class="atl-mega__cert">SCADA</span><span class="atl-mega__cert">Cloud</span></div>
+                     
                   </div>
                 </div>
               </div>
@@ -345,10 +324,8 @@
                   <ul class="atl-mega__list">
                     <li><a href="services/iot-product-development.html"><span class="atl-mega__dot"></span>IoT Product Development</a></li>
                     <li><a href="services/embedded-hardware-design.html"><span class="atl-mega__dot"></span>Embedded Hardware Design</a></li>
-                    <li><a href="services/embedded-software-development.html"><span class="atl-mega__dot"></span>Embedded Software Development</a></li>
-                    <li><a href="services/embedded-firmware-design.html"><span class="atl-mega__dot"></span>Embedded Firmware Design</a></li>
-                    <li><a href="services/pcb-design-services.html"><span class="atl-mega__dot"></span>PCB Design Services</a></li>
-                    <li><a href="services/poc-to-mvp.html"><span class="atl-mega__dot"></span>PoC to MVP Development</a></li>
+                    <li><a href="services/embedded-firmware-design.html"><span class="atl-mega__dot"></span>Embedded Firmware Development</a></li>
+                    <li><a href="services/pcb-design-services.html"><span class="atl-mega__dot"></span>PCB Design Services</a></li> 
                   </ul>
                 </div>
                 <div class="atl-mega__col">
@@ -361,11 +338,15 @@
                   </ul>
                 </div>
                 <div class="atl-mega__col">
-                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--purple"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div><p class="atl-mega__col-title">Consulting</p><p class="atl-mega__col-desc">Strategy &amp; mobile solutions</p></div></div>
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--purple"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
+    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
+    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
+</svg></div><div><p class="atl-mega__col-title">Cloud</p><p class="atl-mega__col-desc">Platforms &amp; management systems</p></div></div>
                   <ul class="atl-mega__list">
-                    <li><a href="services/iot-consulting.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>IoT Consulting</a></li>
-                    <li><a href="services/iot-mobile-app.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>IoT Mobile App Development</a></li>
-                    <li><a href="services/iot-dashboard.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>IoT Dashboard</a></li>
+                    <li><a href="services/street-light-management-system.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>Street Light Management System (LMS)</a></li>
+                    <li><a href="services/network-management-system.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>Network Management System (NMS)</a></li>
+                    <li><a href="services/head-end-system.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>Head End System (HES)</a></li>
                   </ul>
                 </div>
                 <div class="atl-mega__col atl-mega__col--feature">
@@ -374,7 +355,7 @@
                     <p class="atl-mega__feature-name">Concept to Deployment</p>
                     <p class="atl-mega__feature-desc">Hardware design, embedded firmware, cloud integration &amp; mobile apps — all under one roof.</p>
                     <a href="services.html" class="atl-mega__feature-link">View All Services →</a>
-                    <div class="atl-mega__cert-badges"><span class="atl-mega__cert">HW</span><span class="atl-mega__cert">FW</span><span class="atl-mega__cert">Cloud</span><span class="atl-mega__cert">App</span></div>
+                
                   </div>
                 </div>
               </div>
@@ -532,7 +513,7 @@
                     <p class="atl-mega__feature-name">Building the Future of IoT</p>
                     <p class="atl-mega__feature-desc">We're a team of engineers, designers &amp; innovators passionate about connecting the world through smart technology.</p>
                     <a href="careers.html" class="atl-mega__feature-link">See Open Roles →</a>
-                    <div class="atl-mega__cert-badges"><span class="atl-mega__cert">IoT</span><span class="atl-mega__cert">HW</span><span class="atl-mega__cert">SW</span></div>
+                    
                   </div>
                 </div>
               </div>
@@ -547,23 +528,7 @@
       </ul>
 
       <!-- Right: CTA -->
-      <div class="atl-nav__right">
-        <div class="atl-brochure-dropdown" id="brochureDropdown">
-          <button class="atl-nav__cta atl-brochure-btn" id="brochureBtn" aria-expanded="false">
-            Company Profile <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left:4px"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="atl-brochure-menu" id="brochureMenu">
-            <a href="resource.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Resources</a>
-            <a href="about.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Who We Are</a>
-            <a href="team.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Leadership Team</a>
-            <a href="awards.html" class="atl-brochure-item"><span class="atl-brochure-dot"></span>Awards & Recognition</a>
-          </div>
-          
-        </div>
-        <button class="atl-nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+     
     </div>
 
     <!-- Mobile Drawer -->
@@ -613,8 +578,7 @@
           <a class="atl-nav__msublink" href="services/iot-product-development.html">IoT Product Development</a>
           <a class="atl-nav__msublink" href="services/embedded-hardware-design.html">Embedded Hardware Design</a>
           <a class="atl-nav__msublink" href="services/embedded-firmware-design.html">Embedded Firmware Design</a>
-          <a class="atl-nav__msublink" href="services/pcb-design-services.html">PCB Design Services</a>
-          <a class="atl-nav__msublink" href="services/poc-to-mvp.html">PoC to MVP Development</a>
+          <a class="atl-nav__msublink" href="services/pcb-design-services.html">PCB Design Services</a> 
           <div class="atl-nav__macc-section">Connectivity &amp; Cloud</div>
           <a class="atl-nav__msublink" href="services/iot-dashboard.html">IoT Dashboard</a>
           <a class="atl-nav__msublink" href="services/iot-cloud-integration.html">IoT Cloud Integration</a>
@@ -658,63 +622,7 @@
 </div><!-- /.atl-sticky-header -->
 </header>
 
-
-<!-- ═══ 2. HERO (NEW) ═══ -->
-<!-- <section class="nbl-hero" id="nbl-hero">
-  <div class="nbl-hero__bg">
-    <div class="nbl-hero__img-overlay" aria-hidden="true">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=70" alt="" loading="eager" style="padding:0!important;border:none!important;">
-    </div>
  
-    <div class="nbl-hero__grid"></div>
-    <div class="nbl-hero__orb nbl-hero__orb--1"></div>
-    <div class="nbl-hero__orb nbl-hero__orb--2"></div>
-    <div class="nbl-hero__orb nbl-hero__orb--3"></div>
-  </div>
-  <div class="container nbl-hero__inner">
-    <div class="row align-items-center py-4">
-      <div class="col-lg-6" data-anim="slide-left">
-        <div class="nbl-hero__eyebrow">India's Premier IoT Solutions Provider</div>
-        <h1 class="nbl-hero__title">Powering the World's<br><span>Connected Future</span></h1>
-        <p class="nbl-hero__desc">From LoRa modules to Wi-SUN gateways — Nebulae delivers battle-tested wireless connectivity solutions for smart cities, industrial automation, and utility-grade deployments.</p>
-        <div class="nbl-hero__btns">
-          <a href="products.html" class="nbl-btn-primary"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Explore Products</a>
-         
-          <a href="solutions.html" class="nbl-btn-primary">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-          Explore Solutions
-        </a>
-        </div>
-        <div class="nbl-hero__stats">
-          <div class="nbl-hero__stat-item"><span class="nbl-hero__stat-num">6+</span><span class="nbl-hero__stat-label">Protocols</span></div>
-          <div class="nbl-hero__stat-divider"></div>
-          <div class="nbl-hero__stat-item"><span class="nbl-hero__stat-num">500+</span><span class="nbl-hero__stat-label">Products</span></div>
-          <div class="nbl-hero__stat-divider"></div>
-          <div class="nbl-hero__stat-item"><span class="nbl-hero__stat-num">20+</span><span class="nbl-hero__stat-label">Industries</span></div>
-          <div class="nbl-hero__stat-divider"></div>
-          <div class="nbl-hero__stat-item"><span class="nbl-hero__stat-num">Pan-India</span><span class="nbl-hero__stat-label">Deployments</span></div>
-        </div>
-      </div>
-      <div class="col-lg-6" data-anim="slide-right">
-        <div class="nbl-hero__tech-card">
-          <div class="nbl-tech-grid-inner">
-            <div class="nbl-mini-card nbl-mini-card--lora"><div class="nbl-mini-card__icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div><span class="nbl-mini-card__label">LoRa</span><span class="nbl-mini-card__sub">Long Range · 15km+</span></div>
-            <div class="nbl-mini-card nbl-mini-card--wisun"><div class="nbl-mini-card__icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div><span class="nbl-mini-card__label">Wi-SUN</span><span class="nbl-mini-card__sub">Smart Utility · Mesh</span></div>
-            <div class="nbl-mini-card nbl-mini-card--zigbee"><div class="nbl-mini-card__icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><span class="nbl-mini-card__label">Zigbee</span><span class="nbl-mini-card__sub">Mesh · Low Power</span></div>
-            <div class="nbl-mini-card nbl-mini-card--wifi"><div class="nbl-mini-card__icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-    <path d="M2 8.5a16 16 0 0 1 20 0"/>
-    <path d="M5 12a11 11 0 0 1 14 0"/>
-    <path d="M8.5 15.5a6 6 0 0 1 7 0"/>
-    <circle cx="12" cy="19" r="1" fill="currentColor" stroke="none"/>
-</svg></div><span class="nbl-mini-card__label">Wi-Fi</span><span class="nbl-mini-card__sub">Wireless LAN · 2.4G/5G</span></div>
-            <div class="nbl-mini-card nbl-mini-card--gsm"><div class="nbl-mini-card__icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><span class="nbl-mini-card__label">GSM</span><span class="nbl-mini-card__sub">Cellular IoT · 2G–4G</span></div>
-            <div class="nbl-mini-card nbl-mini-card--ble"><div class="nbl-mini-card__icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg></div><span class="nbl-mini-card__label">BLE</span><span class="nbl-mini-card__sub">Bluetooth 5.x</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 <section class="nbl-hero" id="nbl-hero">
   <div class="nbl-hero__bg">
