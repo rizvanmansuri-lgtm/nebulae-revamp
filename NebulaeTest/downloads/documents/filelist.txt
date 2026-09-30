@@ -1,0 +1,82 @@
+D:\My Work\NebulaeResource\downloads\documents\AFL0001_Datasheet.pdf
+D:\My Work\NebulaeResource\downloads\documents\AFL0003_Datasheet 2.pdf
+D:\My Work\NebulaeResource\downloads\documents\AMR Bochure.pdf
+D:\My Work\NebulaeResource\downloads\documents\AV_Case_Study_Kochi_ALL_V1 (3).pdf
+D:\My Work\NebulaeResource\downloads\documents\Bhadaran Smart Water_V5 2.pdf
+D:\My Work\NebulaeResource\downloads\documents\CCMS Brochure_V2.pdf
+D:\My Work\NebulaeResource\downloads\documents\Ciaz_Tech.pdf
+D:\My Work\NebulaeResource\downloads\documents\CityCharge-CCMS-Unit.pdf
+D:\My Work\NebulaeResource\downloads\documents\Confidential_Noise Floor Analysis_Jaisalmer_Test Report (1).pdf
+D:\My Work\NebulaeResource\downloads\documents\DTMS Brochure Version 2.pdf
+D:\My Work\NebulaeResource\downloads\documents\Gas AMR Datasheet.pdf
+D:\My Work\NebulaeResource\downloads\documents\HES FLYER (1).pdf
+D:\My Work\NebulaeResource\downloads\documents\HES Gas Metering_v1.pdf
+D:\My Work\NebulaeResource\downloads\documents\HES Water Metering_V1.pdf
+D:\My Work\NebulaeResource\downloads\documents\HHU_Brochure_V2.pdf
+D:\My Work\NebulaeResource\downloads\documents\ILC NEMA - LoRa & 4G_V1.pdf
+D:\My Work\NebulaeResource\downloads\documents\Introduction_to_RF_Site_Survey_in_Telecommunications_final (1).pdf
+D:\My Work\NebulaeResource\downloads\documents\Jaipur_OFT Range Test Report.pdf
+D:\My Work\NebulaeResource\downloads\documents\LMS_V1.pdf
+D:\My Work\NebulaeResource\downloads\documents\LoRa Concentrator 20x2 Pinout details_V5 5.pdf
+D:\My Work\NebulaeResource\downloads\documents\LoRa Concentrator Brochure.pdf
+D:\My Work\NebulaeResource\downloads\documents\LoRa Concentrator Datasheet.pdf
+D:\My Work\NebulaeResource\downloads\documents\LoRa EVK Aurdino_v2.pdf
+D:\My Work\NebulaeResource\downloads\documents\LoRa Gateway Brochure.pdf
+D:\My Work\NebulaeResource\downloads\documents\Lorawan Flyer.pdf
+D:\My Work\NebulaeResource\downloads\documents\LoRaWAN Gateway Data Sheet.pdf
+D:\My Work\NebulaeResource\downloads\documents\LoRaWAN_4G_Gateway 1 1.pdf
+D:\My Work\NebulaeResource\downloads\documents\LoRa_Arduino_compatible_EVK_Datasheet_V0.1.pdf
+D:\My Work\NebulaeResource\downloads\documents\LoRa_Concentrator_mPCIe_Datasheet(5).pdf
+D:\My Work\NebulaeResource\downloads\documents\mini PCIe LoRa Concentrator Board Borchure.pdf
+D:\My Work\NebulaeResource\downloads\documents\mPCIe LoRa Concentrator Board Datasheet.pdf
+D:\My Work\NebulaeResource\downloads\documents\MultiChannel_LoRaWAN_Gateway_IP65_V3.pdf
+D:\My Work\NebulaeResource\downloads\documents\MultiChannel_LoRaWAN_Gateway_IP67_V1.pdf
+D:\My Work\NebulaeResource\downloads\documents\Multichannel_LoRaWAN_Gateway_V2.pdf
+D:\My Work\NebulaeResource\downloads\documents\Nebulae HES Scalability Report.pdf
+D:\My Work\NebulaeResource\downloads\documents\Nebulae LNS Deck.pdf
+D:\My Work\NebulaeResource\downloads\documents\Nebulae-An IoT Framework Brochure.pdf
+D:\My Work\NebulaeResource\downloads\documents\Nebulae-Brochure-2023.pdf
+D:\My Work\NebulaeResource\downloads\documents\Nebulae_Brand_Guideline.pdf
+D:\My Work\NebulaeResource\downloads\documents\Nebulae_Profile.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLG0192 RS485 IoT_Gateway_V3.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLG0192 RS485 IoT_Gateway_V3_new.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLG8400 Gateway Datasheet.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLG8400_V7.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLG8520 Brochure.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLG8600 Gateway Datasheet.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLG8600_V5.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLN0721 Wi-SUN Module Datasheet WPC.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLN0721 WPC Brochure.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLN111P.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLN500a LoRa Module Brochure.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLN500a_Module_Datasheet_V2.2.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLN500b Brochure.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLN500b LoRa Module Datasheet 2.0.pdf
+D:\My Work\NebulaeResource\downloads\documents\NLN811P.pdf
+D:\My Work\NebulaeResource\downloads\documents\NMS Brochure_V1.pdf
+D:\My Work\NebulaeResource\downloads\documents\OTAG-433 MHz Module_V1.pdf
+D:\My Work\NebulaeResource\downloads\documents\P2P Single Channel LoRa Gateway_V1.pdf
+D:\My Work\NebulaeResource\downloads\documents\Pole Mount & Retrofit Street Light Controller_V1.pdf
+D:\My Work\NebulaeResource\downloads\documents\RF_Site_Survey_Case_Study_Jaipur_Site_by_Avartanam_Test_Labs_(3) 1.pdf
+D:\My Work\NebulaeResource\downloads\documents\Roorkee_OFT_Range_Test_Report (1).pdf
+D:\My Work\NebulaeResource\downloads\documents\SLS Smart Metering NIC Card hardware capabilities.pdf
+D:\My Work\NebulaeResource\downloads\documents\SLS-SOM-MX6Ull_BROCHURE.pdf
+D:\My Work\NebulaeResource\downloads\documents\SLS_SinglePageWater.pdf
+D:\My Work\NebulaeResource\downloads\documents\Smart Energy Meter HES Case Study.pdf
+D:\My Work\NebulaeResource\downloads\documents\Smart Metering_Wi-SUN_V1 (1).pdf
+D:\My Work\NebulaeResource\downloads\documents\Smart Metering_Wi-SUN_V1.pdf
+D:\My Work\NebulaeResource\downloads\documents\Smart Water Meter_V1.pdf
+D:\My Work\NebulaeResource\downloads\documents\Transformer_Monitoring_Profile.pdf
+D:\My Work\NebulaeResource\downloads\documents\ViaLights (1).pdf
+D:\My Work\NebulaeResource\downloads\documents\ViaLights.pdf
+D:\My Work\NebulaeResource\downloads\documents\Water AMR HES User Guide 3.0.pdf
+D:\My Work\NebulaeResource\downloads\documents\Water Meter Solution_V1.pdf
+D:\My Work\NebulaeResource\downloads\documents\Wi-Fi Module_V1.pdf
+D:\My Work\NebulaeResource\downloads\documents\Wi-SUN DCU_NLG6580_V2.pdf
+D:\My Work\NebulaeResource\downloads\documents\Wi-SUN DCU_V2.pdf
+D:\My Work\NebulaeResource\downloads\documents\Wi-SUN HES Flyer_V1.pdf
+D:\My Work\NebulaeResource\downloads\documents\Wi-SUN High Power Module_V1.pdf
+D:\My Work\NebulaeResource\downloads\documents\Wi-SUN Module.pdf
+D:\My Work\NebulaeResource\downloads\documents\WiSUN DCU NLG8520 Brochure.pdf
+D:\My Work\NebulaeResource\downloads\documents\WiSUN Module NLN500a Datasheet.pdf
+D:\My Work\NebulaeResource\downloads\documents\WiSUN NIC Card Datasheet.pdf

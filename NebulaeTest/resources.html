@@ -2010,6 +2010,7 @@
 
    <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
 
+ 
   <div class="lib-body">
     <div class="doc-sidebar" id="docSidebar">
       <div class="sidebar-mobile-search">
@@ -2135,38 +2136,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Nebulae shared nav/footer JS -->
 <script src="./assets/js/nebulae-nav.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "IoT Resource Library – LoRa, Wi-SUN, Zigbee Datasheets & Guides",
-  "url": "https://www.nebulae.io/resources",
-  "description": "Explore Nebulae's IoT resource library. Download datasheets, brochures, user guides, videos and PPTs for LoRa, Wi-SUN, Zigbee and smart metering solutions.",
-  "inLanguage": "en",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Nebulae",
-    "url": "https://www.nebulae.io"
-  },
-  "about": [
-    "LoRa",
-    "Wi-SUN",
-    "Zigbee",
-    "Smart Metering",
-    "IoT Solutions"
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Nebulae",
-    "url": "https://www.nebulae.io",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.nebulae.io/Home/img/Logo/LogoWhite.png"
-    }
-  }
-}
-</script>
- <script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
     const DEMO_VIDEO = "https://www.youtube.com/embed/rDIScjwJGKs?si=UG62N8hGjXDczLHW";
 
     const CATS = {
@@ -2243,89 +2214,95 @@
 
     const DOCS = [
 
-      { id: "nebulae-brochure-2023", name: "Nebulae-Brochure-2023", type: "Brochure", fileType: "pdf", parent: ["product"], cat: [], subcat: null, size: "4.42 MB", date: "", file: "./documents/Nebulae-Brochure-2023.pdf" },
-      { id: "nebulae-an-iot-framework-brochure", name: "Nebulae - An IoT Framework Brochure", type: "Brochure", fileType: "pdf", parent: ["product"], cat: [], subcat: null, size: "1.89 MB", date: "", file: "./documents/Nebulae-An IoT Framework Brochure.pdf" },
-      { id: "nebulae-profile", name: "Nebulae Profile", type: "Brochure", fileType: "pdf", parent: ["product"], cat: [], subcat: null, size: "3.90 MB", date: "", file: "./documents/Nebulae_Profile.pdf" },
-      { id: "transformer-monitoring-system", name: "Transformer Monitoring System", type: "Brochure", fileType: "pdf", parent: ["solution"], cat: ["Transformer Monitoring System"], subcat: null, size: "17.1 MB", date: "", file: "./documents/Transformer_Monitoring_Profile.pdf" },
-      { id: "tms-brochure", name: "TMS-Brochure", type: "Brochure", fileType: "pdf", parent: ["solution"], cat: ["Transformer Monitoring System"], subcat: null, size: "14.9 MB", date: "", file: "./documents/DTMS Brochure Version 2.pdf" },
-      { id: "Nebulae_Brand_Guideline", name: "Nebulae_Brand_Guideline", type: "Brochure", fileType: "pdf", parent: ["Product"], cat: "", subcat: null, size: "1.32 MB", date: "", file: "./documents/Nebulae_Brand_Guideline.pdf" },
-      { id: "nln81p-v1", name: "NLN81P_V1", type: "Brochure", fileType: "pdf", parent: "product", cat: "Zigbee", subcat: ["Module"], size: "0.25 MB", date: "", file: "./documents/NLN811P.pdf" },
-      { id: "nln11p-v1", name: "NLN11P_V1", type: "Brochure", fileType: "pdf", parent: "product", cat: "Zigbee", subcat: ["Module"], size: "0.25 MB", date: "", file: "./documents/NLN111P.pdf" },
-      { id: "nlg8520-brochure", name: "NLG8520 Brochure", type: "Brochure", fileType: "pdf", parent: "product", cat: ["Wi-SUN"], subcat: ["Gateway"], size: "3.08 MB", date: "", file: "./documents/NLG8520 Brochure.pdf" },
-      { id: "nlg8600-v5", name: "NLG8600_V5", type: "Datasheet", fileType: "pdf", parent: "product", cat: "GSM", subcat: ["Gateway"], size: "4.21 MB", date: "", file: "./documents/NLG8600_V5.pdf" },
-      { id: "nlg8400-v7", name: "NLG8400_V7", type: "Datasheet", fileType: "pdf", parent: "product", cat: "GSM", subcat: ["Gateway"], size: "3.96 MB", date: "", file: "./documents/NLG8400_V7.pdf" },
-      { id: "nlg0192-rs485-gateway-v3", name: "NLG0192 RS485 IoT_Gateway_V3", type: "Brochure", fileType: "pdf", parent: "dataconvertor", cat: "", subcat: "", size: "0.2 MB", date: "", file: "./documents/NLG0192 RS485 IoT_Gateway_V3_new.pdf" },
-      /*{ id: "nms-brochure-v1", name: "NMS Brochure_V1", type: "Brochure", fileType: "pdf", parent: "software", cat: "", subcat: null, size: "2.28 MB", date: "", file: "./documents/NMS Brochure_V1.pdf" },*/
-      { id: "wifi-module-v1", name: "Wi-Fi Module_V1", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-Fi", subcat: ["Module"], size: "0.8 MB", date: "", file: "./documents/Wi-Fi Module_V1.pdf" },
+      { id: "nebulae-brochure-2023", name: "Nebulae-Brochure-2023", type: "Brochure", fileType: "pdf", parent: ["product"], cat: [], subcat: null, size: "4.42 MB", date: "", file: "./downloads/documents/Nebulae-Brochure-2023.pdf" },
+      { id: "nebulae-an-iot-framework-brochure", name: "Nebulae - An IoT Framework Brochure", type: "Brochure", fileType: "pdf", parent: ["product"], cat: [], subcat: null, size: "1.89 MB", date: "", file: "./downloads/documents/Nebulae-An IoT Framework Brochure.pdf" },
+      { id: "nebulae-profile", name: "Nebulae Profile", type: "Brochure", fileType: "pdf", parent: ["product"], cat: [], subcat: null, size: "3.90 MB", date: "", file: "./downloads/documents/Nebulae_Profile.pdf" },
+      { id: "transformer-monitoring-system", name: "Transformer Monitoring System", type: "Brochure", fileType: "pdf", parent: ["solution"], cat: ["Transformer Monitoring System"], subcat: null, size: "17.1 MB", date: "", file: "./downloads/documents/Transformer_Monitoring_Profile.pdf" },
+      { id: "tms-brochure", name: "TMS-Brochure", type: "Brochure", fileType: "pdf", parent: ["solution"], cat: ["Transformer Monitoring System"], subcat: null, size: "14.9 MB", date: "", file: "./downloads/documents/DTMS Brochure Version 2.pdf" },
+    //   { id: "Nebulae_Brand_Guideline", name: "Nebulae_Brand_Guideline", type: "Brochure", fileType: "pdf", parent: ["Product"], cat: "", subcat: null, size: "1.32 MB", date: "", file: "./downloads/documents/Nebulae_Brand_Guideline.pdf" },
+      { id: "nln81p-v1", name: "NLN81P_V1", type: "Brochure", fileType: "pdf", parent: "product", cat: "Zigbee", subcat: ["Module"], size: "0.25 MB", date: "", file: "./downloads/documents/NLN811P.pdf" },
+      { id: "nln11p-v1", name: "NLN11P_V1", type: "Brochure", fileType: "pdf", parent: "product", cat: "Zigbee", subcat: ["Module"], size: "0.25 MB", date: "", file: "./downloads/documents/NLN111P.pdf" },
+      { id: "nlg8520-brochure", name: "NLG8520 Brochure", type: "Brochure", fileType: "pdf", parent: "product", cat: ["Wi-SUN"], subcat: ["Gateway"], size: "3.08 MB", date: "", file: "./downloads/documents/NLG8520 Brochure.pdf" },
+      { id: "nlg8600-v5", name: "NLG8600_V5", type: "Datasheet", fileType: "pdf", parent: "product", cat: "GSM", subcat: ["Gateway"], size: "4.21 MB", date: "", file: "./downloads/documents/NLG8600_V5.pdf" },
+      { id: "nlg8400-v7", name: "NLG8400_V7", type: "Datasheet", fileType: "pdf", parent: "product", cat: "GSM", subcat: ["Gateway"], size: "3.96 MB", date: "", file: "./downloads/documents/NLG8400_V7.pdf" },
+      { id: "nlg0192-rs485-gateway-v3", name: "NLG0192 RS485 IoT_Gateway_V3", type: "Brochure", fileType: "pdf", parent: "dataconvertor", cat: "", subcat: "", size: "0.2 MB", date: "", file: "./downloads/documents/NLG0192 RS485 IoT_Gateway_V3_new.pdf" },
+      /*{ id: "nms-brochure-v1", name: "NMS Brochure_V1", type: "Brochure", fileType: "pdf", parent: "software", cat: "", subcat: null, size: "2.28 MB", date: "", file: "./downloads/documents/NMS Brochure_V1.pdf" },*/
+      { id: "wifi-module-v1", name: "Wi-Fi Module_V1", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-Fi", subcat: ["Module"], size: "0.8 MB", date: "", file: "./downloads/documents/Wi-Fi Module_V1.pdf" },
       
-      { id: "nlg8600-gateway-datasheet", name: "NLG8600 Gateway Datasheet", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Gateway", size: "1.07 MB", date: "", file: "./documents/NLG8600 Gateway Datasheet.pdf" },
-      { id: "nlg8400-gateway-datasheet", name: "NLG8400 Gateway Datasheet", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Gateway", size: "3.96MB", date: "", file: "./documents/NLG8400_V7.pdf" },
-      { id: "wisun-dcu-v2-NLG6580", name: "Wi-SUN DCU_NLG6580_V2", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-SUN", subcat: "Gateway", size: "3.08 MB", date: "", file: "./documents/WiSUN DCU NLG8520 Brochure.pdf" },
-      { id: "wisun-dcu-v2", name: "Wi-SUN DCU_V2", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-SUN", subcat: "Gateway", size: "0.36 MB", date: "", file: "./documents/Wi-SUN DCU_V2.pdf" },
-      { id: "nln0711-wpc-brochure", name: "NLN0721 WPC Brochure", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-SUN", subcat: "Module", size: "4.77 MB", date: "", file: "./documents/NLN0721 WPC Brochure.pdf" },
-      { id: "nebulae-node-nm0211", name: "Nebulae Node NM0211-I", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-SUN", subcat: "Node", size: "2.16 MB", date: "", file: "./documents/Wi-SUN Module.pdf" },
-      { id: "wisun-high-power-module-v1", name: "Wi-SUN High Power Module_V1", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-SUN", subcat: "Module", size: "0.62 MB", date: "", file: "./documents/Wi-SUN High Power Module_V1.pdf" },
-      { id: "lora-evk-arduino-v2", name: "LoRa EVK Arduino_V2", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "EVK", size: "0.87 MB", date: "", file: "./documents/LoRa EVK Aurdino_v2.pdf" },
-      { id: "multichannel-lorawan-gateway-v2", name: "Multichannel_LoRaWAN_Gateway_V2", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Gateway", size: "0.36 MB", date: "", file: "./documents/Multichannel_LoRaWAN_Gateway_V2.pdf" },
-      { id: "mini-pcle-lora-concentrator-board", name: "mini PCIe LoRa Concentrator Board Brochure", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Concentrator", size: "0.23 MB", date: "", file: "./documents/mini PCIe LoRa Concentrator Board Borchure.pdf" },
-      { id: "nln500b-brochure", name: "NLN500b Brochure", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Module", size: "4.11 MB", date: "", file: "./documents/NLN500b Brochure.pdf" },
-      { id: "nln500a-lora-module-brochure", name: "NLN500a LoRa Module Brochure", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Module", size: "0.56 MB", date: "", file: "./documents/NLN500a LoRa Module Brochure.pdf" },
-      { id: "lora-concentrator-brochure", name: "LoRa Concentrator Brochure", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Concentrator", size: "4.62 MB", date: "", file: "./documents/LoRa Concentrator Brochure.pdf" },
-      { id: "nln0721-wisun-module-datasheet-wpc", name: "NLN0721 Wi-SUN Module Datasheet WPC", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-SUN", subcat: "Module", size: "1.82 MB", date: "", file: "./documents/NLN0721 Wi-SUN Module Datasheet WPC.pdf" },
-      { id: "ofom-411mhz-module-v1", name: "OTAG-433 MHz Module_V1", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-SUN", subcat: "Module", size: "0.18 MB", date: "", file: "./documents/OTAG-433 MHz Module_V1.pdf" },
-      { id: "smart_metering_wi-sun_v1", name: "Smart Metering_Wi-SUN_V1", type: "PPT", fileType: "pdf", parent: "Solution", cat: "Smart Electric Meter Solution", subcat: "", size: "0.28 MB", date: "", file: "./documents/Smart Metering_Wi-SUN_V1.pdf" },
-      { id: "case_study", name: "CIAZ TECH Case Study", type: "Case Study", fileType: "pdf", parent: "product", cat: "", subcat: "", size: "0.28 MB", date: "", file: "./documents/Ciaz_Tech.pdf" },
-      { id: "water-amr-hes-user-guide-v3", name: "Water AMR HES User Guide V3.0", type: "User Guide", fileType: "pdf", parent: ["software", "Solution"], cat: ["Smart Water Meter Solution"], subcat: null, size: "3.5 MB", date: "", file: "./documents/Water AMR HES User Guide 3.0.pdf" },
-      { id: "SOM-mx6ull_brochure_v1", name: "SOM-MX6Ull_Brochure_V1", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Module", size: "1.85 MB", date: "", file: "./documents/SLS-SOM-MX6Ull_BROCHURE.pdf" },
-      { id: "lora-concentrator-base-board-v5", name: "LoRa Concentrator Base Board_V5", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Concentrator", size: "4.68 MB", date: "", file: "./documents/LoRa Concentrator 20x2 Pinout details_V5 5.pdf" },
-      { id: "lora-single-channel-lora-gateway-v1", name: "P2P Single Channel LoRa Gateway_V1", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Gateway", size: "0.28 MB", date: "", file: "./documents/P2P Single Channel LoRa Gateway_V1.pdf" },
-      { id: "mpcis-lora-concentrator-datasheet", name: "mPCIe LoRa Concentrator Board Datasheet", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Concentrator", size: "4.45 MB", date: "", file: "./documents/mPCIe LoRa Concentrator Board Datasheet.pdf" },
-      { id: "lorawan-gateway-data-sheet", name: "LoRaWAN Gateway Data Sheet", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Gateway", size: "1.70 MB", date: "", file: "./documents/LoRaWAN Gateway Data Sheet.pdf" },
-      { id: "nln500b-lora-module-datasheet-2", name: "NLN500b LoRa Module Datasheet 2.0", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Module", size: "2.31 MB", date: "", file: "./documents/NLN500b LoRa Module Datasheet 2.0.pdf" },
-      { id: "nln500-module-datasheet_v2", name: "NLN500a_Module_Datasheet_V2.2", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Module", size: "3.77 MB", date: "", file: "./documents/NLN500a_Module_Datasheet_V2.2.pdf" },
-      { id: "lora-concentrator-datasheet", name: "LoRa Concentrator Datasheet", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Concentrator", size: "1.10 MB", date: "", file: "./documents/LoRa Concentrator Datasheet.pdf" },
-      { id: "lora-concentrator-compatible-evk-datasheet", name: "LoRa Concentrator Compatible_EVK_Datasheet_v0.1", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: ["EVK"], size: "0.33 MB", date: "", file: "./documents/LoRa_Arduino_compatible_EVK_Datasheet_V0.1.pdf" },
-      { id: "lora-gateway-brochure", name: "LoRa Gateway Brochure", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Gateway", size: "0.28 MB", date: "", file: "./documents/LoRa Gateway Brochure.pdf" },
-      { id: "amr-brochure", name: "AMR Brochure", type: "Brochure", fileType: "pdf", parent: ["product", "solution"], cat: "LoRa", subcat: "Node", size: "5.97 MB", date: "", file: "./documents/AMR Bochure.pdf" },
-      { id: "smart_electricity_metering", name: "Smart Electricity Metering", type: "PPT", fileType: "pptx", parent: "Solution", cat: "Smart Electric Meter Solution", subcat: "", size: "0.28 MB", date: "", file: "./documents/Smart Metering.pptx" },
-      { id: "SLS_SinglePageWater", name: "SLS_SinglePageWater", type: "Brochure", fileType: "pdf", parent: "Solution", cat: "Smart water Meter Solution", subcat: "", size: "0.28 MB", date: "", file: "./documents/SLS_SinglePageWater.pdf" },
-      { id: "hes_electricity_metering_lorawan_v1", name: "HES Electricity Metering_LoRaWAN_V1", type: "Datasheet", fileType: "pdf", parent: ["software", "solution"], cat: ["Smart Electric Meter Solution"], subcat: null, size: "6.81 MB", date: "", file: "./documents/HES FLYER (1).pdf" },
-      { id: "hes-electricity-wisun-v1", name: "HES Electricity Metering_Wi-SUN_V1", type: "Datasheet", fileType: "pdf", parent: ["software", "solution"], cat: ["Wi-sun","Smart Electric Meter Solution"], subcat: null, size: "6.81 MB", date: "", file: "./documents/Wi-SUN HES Flyer_V1.pdf" },
-      { id: "hes-gas-metering-v1", name: "HES Gas Metering_v1", type: "Datasheet", fileType: "pdf", parent: ["software", "solution"], cat: "Smart Gas Metering Solution", subcat: null, size: "0.4 MB", date: "", file: "./documents/HES Gas Metering_v1.pdf" },
-      { id: "hes-water-metering-v1", name: "HES Water Metering_V1", type: "Datasheet", fileType: "pdf", parent: ["software", "solution"], cat: "Smart Water Meter Solution", subcat: null, size: "0.6 MB", date: "", file: "./documents/HES Water Metering_V1.pdf" },
-      { id: "gas-amr-datasheet", name: "Gas AMR Datasheet", type: "Datasheet", fileType: "pdf", parent: ["Product", "solution"], cat: ["LoRa", "Smart Gas Metering Solution"], subcat: "Node", size: "0.3 MB", date: "", file: "./documents/Gas AMR Datasheet.pdf" },
-      { id: "nebulae-lns-deck", name: "Nebulae LNS Deck", type: "PPT", fileType: "pdf", parent: ["software"], cat: "LoRa", subcat: null, size: "2.88 MB", date: "", file: "./documents/Nebulae LNS Deck.pdf" },
-      { id: "lorawan-flyer", name: "LoRaWAN Flyer", type: "Brochure", fileType: "pdf", parent: "software", cat: "LoRa", subcat: null, size: "1.85 MB", date: "", file: "./documents/LoRawan Flyer.pdf" },
-      { id: "water_meter_solution_v1", name: "Water Meter Solution_V1", type: "Brochure", fileType: "pdf", parent: ["solution"], cat: "Smart Water Meter Solution", subcat: null, size: "0.6 MB", date: "", file: "./documents/Water Meter Solution_V1.pdf" },
-      { id: "wisun-dcu-nlg8520", name: "Wi-SUN DCU NLG8520 Brochure", type: "Brochure", fileType: "pdf", parent: ["product", "solution"], cat: ["Wi-SUN", "Smart Electric Meter Solution"], subcat: "Gateway", size: "3.08 MB", date: "", file: "./documents/WiSUN DCU NLG8520 Brochure.pdf" },
-      { id: "wisun-module-nln500a", name: "Wi-SUN Module NLN500a Datasheet", type: "Datasheet", fileType: "pdf", parent: ["product", "solution"], cat: ["Wi-SUN", "Smart Electric Meter Solution"], subcat: "Module", size: "0.98 MB", date: "", file: "./documents/WiSUN Module NLN500a Datasheet.pdf" },
-      { id: "lora-concentrator-mpcie-datasheet", name: "LoRa_Concentrator_mPCIe_Datasheet", type: "Datasheet", fileType: "pdf", parent: ["product", "solution"], cat: ["LoRa", "Smart Water Meter Solution"], subcat: ["Concentrator"], size: "4.45 MB", date: "", file: "./documents/LoRa_Concentrator_mPCIe_Datasheet(5).pdf" },
-      { id: "wisun-nic-card", name: "Wi-SUN NIC Card Datasheet", type: "Datasheet", fileType: "pdf", parent: ["product", "solution"], cat: ["Wi-SUN", "Smart Electric Meter Solution", "Smart Street Light Solution"], subcat: "Node", size: "0.6 MB", date: "", file: "./documents/WiSUN NIC Card Datasheet.pdf" },
-      { id: "lorawan_4g_gateway", name: "LoRaWAN_4G_Gateway 1 1", type: "Datasheet", fileType: "pdf", parent: ["product"], cat: ["LoRa"], subcat: "Gateway", size: "1.7 MB", date: "", file: "./documents/LoRaWAN_4G_Gateway 1 1.pdf" },
-      { id: "smart_water_meter_v1", name: "Smart Water Meter_V1", type: "Brochure", fileType: "pdf", parent: ["solution"], cat: "Smart Water Meter Solution", subcat: null, size: "3 MB", date: "", file: "./documents/Smart Water Meter_V1.pdf" },
-      { id: "bhadaran_smart_water_v5_2", name: "Bhadaran Smart Water_V5 2", type: "PPT", fileType: "pdf", parent: "Solution", cat: "Smart Water Meter Solution", subcat: "", size: "7.53 MB", date: "", file: "./documents/Bhadaran Smart Water_V5 2.pdf" },
-      { id: "smart_metering_wi-sun_v1b", name: "Smart Metering_Wi-SUN_V1", type: "PPT", fileType: "pdf", parent: "Solution", cat: "Smart Electric Meter Solution", subcat: "", size: "0.9 MB", date: "", file: "./documents/Smart Metering_Wi-SUN_V1 (1).pdf" },
-      { id: "nms-brochure-v1-pdf", name: "NMS Brochure_V1", type: "Brochure", fileType: "pdf", parent: ["software"], cat: "", subcat: null, size: "2.28 MB", date: "", file: "./documents/NMS Brochure_V1.pdf" },
-      { id: "gas-amr-nbiot-field-test-pptx", name: "Gas AMR NB-IoT Based Device Field Test", type: "Case Study", fileType: "pptx", parent: "", cat: "", subcat: "", size: "5.15 MB", date: "", file: "./documents/Gas AMR NB-IoT based device field test  - Copy.pptx" },
-      { id: "sls-smart-metering-nic-hardware-pdf", name: "SLS Smart Metering NIC Card Hardware Capabilities", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "0.4 MB", date: "", file: "./documents/SLS Smart Metering NIC Card hardware capabilities.pdf" },
-      { id: "nebulae-hes-scalability-report-pdf", name: "Nebulae HES Scalability Report", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "0.1 MB", date: "", file: "./documents/Nebulae HES Scalability Report.pdf" },
-      { id: "smart-energy-meter-hes-case-study-pdf", name: "Smart Energy Meter HES Case Study", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "0.2 MB", date: "", file: "./documents/Smart Energy Meter HES Case Study.pdf" },
-      { id: "rf-site-survey-case-study-jaipur-pdf", name: "RF Site Survey Case Study – Jaipur (Avartanam Test Labs)", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "1.75 MB", date: "", file: "./documents/RF_Site_Survey_Case_Study_Jaipur_Site_by_Avartanam_Test_Labs_(3) 1.pdf" },
-      { id: "roorkee-oft-range-test-report-pdf", name: "Roorkee OFT Range Test Report", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "1.4 MB", date: "", file: "./documents/Roorkee_OFT_Range_Test_Report (1).pdf" },
-      { id: "jaipur-oft-range-test-report-pdf", name: "Jaipur OFT Range Test Report", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "1.14 MB", date: "", file: "./documents/Jaipur_OFT Range Test Report.pdf" },
-      { id: "noise-floor-analysis-jaisalmer-report-pdf", name: "Noise Floor Analysis – Jaisalmer Test Report", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "1.11 MB", date: "", file: "./documents/Confidential_Noise Floor Analysis_Jaisalmer_Test Report (1).pdf" },
-      { id: "av-case-study-kochi-pdf", name: "AV Case Study – Kochi", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "16.2 MB", date: "", file: "./documents/AV_Case_Study_Kochi_ALL_V1 (3).pdf" },
-      { id: "intro-rf-site-survey-telecom-pdf", name: "Introduction to RF Site Survey in Telecommunications", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "1.82 MB", date: "", file: "./documents/Introduction_to_RF_Site_Survey_in_Telecommunications_final (1).pdf" },
-      { id: "citycharge-ccms-unit-v1-pdf", name: "CityCharge_CCMS_Unit_V1", type: "Datasheet", fileType: "pdf", parent: ["product", "solution"], cat: "smart street light solution", subcat: "", size: "0.8 MB", date: "", file: "./documents/CityCharge-CCMS-Unit.pdf" },
-      { id: "lms-v1-pdf", name: "LMS_V1", type: "Datasheet", fileType: "pdf", parent: ["software", "solution"], cat: "Smart Street Light Solution", subcat: "", size: "0.8 MB", date: "", file: "./documents/LMS_V1.pdf" },
-      { id: "vialights-profile-pdf", name: "ViaLights Profile", type: "Brochure", fileType: "pdf", parent: "product", cat: "", subcat: "", size: "2.55 MB", date: "", file: "./documents/ViaLights.pdf" },
-      { id: "vialights-presentation-pptx", name: "ViaLights Presentation", type: "PPT", fileType: "pptx", parent: "product", cat: "", subcat: "", size: "2.55 MB", date: "", file: "./documents/ViaLights.pdf" },
-      { id: "pole-mount-retrofit-street-light-controller-v1-pdf", name: "Pole Mount & Retrofit Street Light Controller_V1", type: "Brochure", fileType: "pdf", parent: ["product", "solution"], cat: ["LoRa", "Smart Street Light Solution"], subcat: "Node", size: "2.00 MB", date: "", file: "./documents/Pole Mount & Retrofit Street Light Controller_V1.pdf" },
-      { id: "ilc-nema-lora-4g-v1-pdf", name: "ILC NEMA - LoRa & 4G_V1", type: "Brochure", fileType: "pdf", parent: ["product", "solution"], cat: ["LoRa", "Smart Street Light Solution"], subcat: "Node", size: "0.2 MB", date: "", file: "./documents/ILC NEMA - LoRa & 4G_V1.pdf" },
-      { id: "ccms-brochure-v2-pdf", name: "CCMS Brochure_V2", type: "Brochure", fileType: "pdf", parent: ["product", "solution"], cat: ["LoRa", "Smart Street Light Solution"], subcat: "Node", size: "0.3 MB", date: "", file: "./documents/CCMS Brochure_V2.pdf" },
+      { id: "nlg8600-gateway-datasheet", name: "NLG8600 Gateway Datasheet", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Gateway", size: "1.07 MB", date: "", file: "./downloads/documents/NLG8600 Gateway Datasheet.pdf" },
+      { id: "nlg8400-gateway-datasheet", name: "NLG8400 Gateway Datasheet", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Gateway", size: "3.96MB", date: "", file: "./downloads/documents/NLG8400_V7.pdf" },
+      { id: "wisun-dcu-v2-NLG6580", name: "Wi-SUN DCU_NLG6580_V2", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-SUN", subcat: "Gateway", size: "3.08 MB", date: "", file: "./downloads/documents/WiSUN DCU NLG8520 Brochure.pdf" },
+      { id: "wisun-dcu-v2", name: "Wi-SUN DCU_V2", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-SUN", subcat: "Gateway", size: "0.36 MB", date: "", file: "./downloads/documents/Wi-SUN DCU_V2.pdf" },
+      { id: "nln0711-wpc-brochure", name: "NLN0721 WPC Brochure", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-SUN", subcat: "Module", size: "4.77 MB", date: "", file: "./downloads/documents/NLN0721 WPC Brochure.pdf" },
+      { id: "nebulae-node-nm0211", name: "Nebulae Node NM0211-I", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-SUN", subcat: "Node", size: "2.16 MB", date: "", file: "./downloads/documents/Wi-SUN Module.pdf" },
+      { id: "wisun-high-power-module-v1", name: "Wi-SUN High Power Module_V1", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-SUN", subcat: "Module", size: "0.62 MB", date: "", file: "./downloads/documents/Wi-SUN High Power Module_V1.pdf" },
+      { id: "lora-evk-arduino-v2", name: "LoRa EVK Arduino_V2", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "EVK", size: "0.87 MB", date: "", file: "./downloads/documents/LoRa EVK Aurdino_v2.pdf" },
+    //   { id: "multichannel-lorawan-gateway-v2", name: "Multichannel_LoRaWAN_Gateway_V2", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Gateway", size: "0.36 MB", date: "", file: "./downloads/documents/Multichannel_LoRaWAN_Gateway_V2.pdf" },
+      { id: "mini-pcle-lora-concentrator-board", name: "mini PCIe LoRa Concentrator Board Brochure", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Concentrator", size: "0.23 MB", date: "", file: "./downloads/documents/mini PCIe LoRa Concentrator Board Borchure.pdf" },
+      { id: "nln500b-brochure", name: "NLN500b Brochure", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Module", size: "4.11 MB", date: "", file: "./downloads/documents/NLN500b Brochure.pdf" },
+      { id: "nln500a-lora-module-brochure", name: "NLN500a LoRa Module Brochure", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Module", size: "0.56 MB", date: "", file: "./downloads/documents/NLN500a LoRa Module Brochure.pdf" },
+      { id: "lora-concentrator-brochure", name: "LoRa Concentrator Brochure", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Concentrator", size: "4.62 MB", date: "", file: "./downloads/documents/LoRa Concentrator Brochure.pdf" },
+      { id: "nln0721-wisun-module-datasheet-wpc", name: "NLN0721 Wi-SUN Module Datasheet WPC", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-SUN", subcat: "Module", size: "1.82 MB", date: "", file: "./downloads/documents/NLN0721 Wi-SUN Module Datasheet WPC.pdf" },
+      { id: "ofom-411mhz-module-v1", name: "OTAG-433 MHz Module_V1", type: "Brochure", fileType: "pdf", parent: "product", cat: "Wi-SUN", subcat: "Module", size: "0.18 MB", date: "", file: "./downloads/documents/OTAG-433 MHz Module_V1.pdf" },
+      { id: "smart_metering_wi-sun_v1", name: "Smart Metering_Wi-SUN_V1", type: "PPT", fileType: "pdf", parent: "Solution", cat: "Smart Electric Meter Solution", subcat: "", size: "0.28 MB", date: "", file: "./downloads/documents/Smart Metering_Wi-SUN_V1.pdf" },
+      { id: "case_study", name: "CIAZ TECH Case Study", type: "Case Study", fileType: "pdf", parent: "product", cat: "", subcat: "", size: "0.28 MB", date: "", file: "./downloads/documents/Ciaz_Tech.pdf" },
+      { id: "water-amr-hes-user-guide-v3", name: "Water AMR HES User Guide V3.0", type: "User Guide", fileType: "pdf", parent: ["software", "Solution"], cat: ["Smart Water Meter Solution"], subcat: null, size: "3.5 MB", date: "", file: "./downloads/documents/Water AMR HES User Guide 3.0.pdf" },
+      { id: "SOM-mx6ull_brochure_v1", name: "SOM-MX6Ull_Brochure_V1", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Module", size: "1.85 MB", date: "", file: "./downloads/documents/SLS-SOM-MX6Ull_BROCHURE.pdf" },
+      { id: "lora-concentrator-base-board-v5", name: "LoRa Concentrator Base Board_V5", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Concentrator", size: "4.68 MB", date: "", file: "./downloads/documents/LoRa Concentrator 20x2 Pinout details_V5 5.pdf" },
+      { id: "lora-single-channel-lora-gateway-v1", name: "P2P Single Channel LoRa Gateway_V1", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Gateway", size: "0.28 MB", date: "", file: "./downloads/documents/P2P Single Channel LoRa Gateway_V1.pdf" },
+      { id: "mpcis-lora-concentrator-datasheet", name: "mPCIe LoRa Concentrator Board Datasheet", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Concentrator", size: "4.45 MB", date: "", file: "./downloads/documents/mPCIe LoRa Concentrator Board Datasheet.pdf" },
+      { id: "lorawan-gateway-data-sheet", name: "LoRaWAN Gateway Data Sheet", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Gateway", size: "1.70 MB", date: "", file: "./downloads/documents/LoRaWAN Gateway Data Sheet.pdf" },
+      { id: "nln500b-lora-module-datasheet-2", name: "NLN500b LoRa Module Datasheet 2.0", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Module", size: "2.31 MB", date: "", file: "./downloads/documents/NLN500b LoRa Module Datasheet 2.0.pdf" },
+      { id: "nln500-module-datasheet_v2", name: "NLN500a_Module_Datasheet_V2.2", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Module", size: "3.77 MB", date: "", file: "./downloads/documents/NLN500a_Module_Datasheet_V2.2.pdf" },
+      { id: "lora-concentrator-datasheet", name: "LoRa Concentrator Datasheet", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Concentrator", size: "1.10 MB", date: "", file: "./downloads/documents/LoRa Concentrator Datasheet.pdf" },
+      { id: "lora-concentrator-compatible-evk-datasheet", name: "LoRa Concentrator Compatible_EVK_Datasheet_v0.1", type: "Datasheet", fileType: "pdf", parent: "product", cat: "LoRa", subcat: ["EVK"], size: "0.33 MB", date: "", file: "./downloads/documents/LoRa_Arduino_compatible_EVK_Datasheet_V0.1.pdf" },
+      { id: "lora-gateway-brochure", name: "LoRa Gateway Brochure", type: "Brochure", fileType: "pdf", parent: "product", cat: "LoRa", subcat: "Gateway", size: "0.28 MB", date: "", file: "./downloads/documents/LoRa Gateway Brochure.pdf" },
+      { id: "amr-brochure", name: "AMR Brochure", type: "Brochure", fileType: "pdf", parent: ["product", "solution"], cat: "LoRa", subcat: "Node", size: "5.97 MB", date: "", file: "./downloads/documents/AMR Bochure.pdf" },
+      { id: "smart_electricity_metering", name: "Smart Electricity Metering", type: "PPT", fileType: "pptx", parent: "Solution", cat: "Smart Electric Meter Solution", subcat: "", size: "0.28 MB", date: "", file: "./downloads/documents/Smart Metering.pptx" },
+      { id: "SLS_SinglePageWater", name: "SLS_SinglePageWater", type: "Brochure", fileType: "pdf", parent: "Solution", cat: "Smart water Meter Solution", subcat: "", size: "0.28 MB", date: "", file: "./downloads/documents/SLS_SinglePageWater.pdf" },
+      { id: "hes_electricity_metering_lorawan_v1", name: "HES Electricity Metering_LoRaWAN_V1", type: "Datasheet", fileType: "pdf", parent: ["software", "solution"], cat: ["Smart Electric Meter Solution"], subcat: null, size: "6.81 MB", date: "", file: "./downloads/documents/HES FLYER (1).pdf" },
+      { id: "hes-electricity-wisun-v1", name: "HES Electricity Metering_Wi-SUN_V1", type: "Datasheet", fileType: "pdf", parent: ["software", "solution"], cat: ["Wi-sun","Smart Electric Meter Solution"], subcat: null, size: "6.81 MB", date: "", file: "./downloads/documents/Wi-SUN HES Flyer_V1.pdf" },
+      { id: "hes-gas-metering-v1", name: "HES Gas Metering_v1", type: "Datasheet", fileType: "pdf", parent: ["software", "solution"], cat: "Smart Gas Metering Solution", subcat: null, size: "0.4 MB", date: "", file: "./downloads/documents/HES Gas Metering_v1.pdf" },
+      { id: "hes-water-metering-v1", name: "HES Water Metering_V1", type: "Datasheet", fileType: "pdf", parent: ["software", "solution"], cat: "Smart Water Meter Solution", subcat: null, size: "0.6 MB", date: "", file: "./downloads/documents/HES Water Metering_V1.pdf" },
+      { id: "gas-amr-datasheet", name: "Gas AMR Datasheet", type: "Datasheet", fileType: "pdf", parent: ["Product", "solution"], cat: ["LoRa", "Smart Gas Metering Solution"], subcat: "Node", size: "0.3 MB", date: "", file: "./downloads/documents/Gas AMR Datasheet.pdf" },
+      { id: "nebulae-lns-deck", name: "Nebulae LNS Deck", type: "PPT", fileType: "pdf", parent: ["software"], cat: "LoRa", subcat: null, size: "2.88 MB", date: "", file: "./downloads/documents/Nebulae LNS Deck.pdf" },
+      { id: "lorawan-flyer", name: "LoRaWAN Flyer", type: "Brochure", fileType: "pdf", parent: "software", cat: "LoRa", subcat: null, size: "1.85 MB", date: "", file: "./downloads/documents/LoRawan Flyer.pdf" },
+      { id: "water_meter_solution_v1", name: "Water Meter Solution_V1", type: "Brochure", fileType: "pdf", parent: ["solution"], cat: "Smart Water Meter Solution", subcat: null, size: "0.6 MB", date: "", file: "./downloads/documents/Water Meter Solution_V1.pdf" },
+      { id: "wisun-dcu-nlg8520", name: "Wi-SUN DCU NLG8520 Brochure", type: "Brochure", fileType: "pdf", parent: ["product", "solution"], cat: ["Wi-SUN", "Smart Electric Meter Solution"], subcat: "Gateway", size: "3.08 MB", date: "", file: "./downloads/documents/WiSUN DCU NLG8520 Brochure.pdf" },
+      { id: "wisun-module-nln500a", name: "Wi-SUN Module NLN500a Datasheet", type: "Datasheet", fileType: "pdf", parent: ["product", "solution"], cat: ["Wi-SUN", "Smart Electric Meter Solution"], subcat: "Module", size: "0.98 MB", date: "", file: "./downloads/documents/WiSUN Module NLN500a Datasheet.pdf" },
+      { id: "lora-concentrator-mpcie-datasheet", name: "LoRa_Concentrator_mPCIe_Datasheet", type: "Datasheet", fileType: "pdf", parent: ["product", "solution"], cat: ["LoRa", "Smart Water Meter Solution"], subcat: ["Concentrator"], size: "4.45 MB", date: "", file: "./downloads/documents/LoRa_Concentrator_mPCIe_Datasheet(5).pdf" },
+      { id: "wisun-nic-card", name: "Wi-SUN NIC Card Datasheet", type: "Datasheet", fileType: "pdf", parent: ["product", "solution"], cat: ["Wi-SUN", "Smart Electric Meter Solution", "Smart Street Light Solution"], subcat: "Node", size: "0.6 MB", date: "", file: "./downloads/documents/WiSUN NIC Card Datasheet.pdf" },
+      { id: "lorawan_4g_gateway", name: "LoRaWAN_4G_Gateway 1 1", type: "Datasheet", fileType: "pdf", parent: ["product"], cat: ["LoRa"], subcat: "Gateway", size: "1.7 MB", date: "", file: "./downloads/documents/LoRaWAN_4G_Gateway 1 1.pdf" },
+      { id: "smart_water_meter_v1", name: "Smart Water Meter_V1", type: "Brochure", fileType: "pdf", parent: ["solution"], cat: "Smart Water Meter Solution", subcat: null, size: "3 MB", date: "", file: "./downloads/documents/Smart Water Meter_V1.pdf" },
+      { id: "bhadaran_smart_water_v5_2", name: "Bhadaran Smart Water_V5 2", type: "PPT", fileType: "pdf", parent: "Solution", cat: "Smart Water Meter Solution", subcat: "", size: "7.53 MB", date: "", file: "./downloads/documents/Bhadaran Smart Water_V5 2.pdf" },
+      { id: "smart_metering_wi-sun_v1b", name: "Smart Metering_Wi-SUN_V1", type: "PPT", fileType: "pdf", parent: "Solution", cat: "Smart Electric Meter Solution", subcat: "", size: "0.9 MB", date: "", file: "./downloads/documents/Smart Metering_Wi-SUN_V1 (1).pdf" },
+      { id: "nms-brochure-v1-pdf", name: "NMS Brochure_V1", type: "Brochure", fileType: "pdf", parent: ["software"], cat: "", subcat: null, size: "2.28 MB", date: "", file: "./downloads/documents/NMS Brochure_V1.pdf" },
+      { id: "gas-amr-nbiot-field-test-pptx", name: "Gas AMR NB-IoT Based Device Field Test", type: "Case Study", fileType: "pptx", parent: "", cat: "", subcat: "", size: "5.15 MB", date: "", file: "./downloads/documents/Gas AMR NB-IoT based device field test  - Copy.pptx" },
+      { id: "sls-smart-metering-nic-hardware-pdf", name: "SLS Smart Metering NIC Card Hardware Capabilities", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "0.4 MB", date: "", file: "./downloads/documents/SLS Smart Metering NIC Card hardware capabilities.pdf" },
+      { id: "nebulae-hes-scalability-report-pdf", name: "Nebulae HES Scalability Report", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "0.1 MB", date: "", file: "./downloads/documents/Nebulae HES Scalability Report.pdf" },
+      { id: "smart-energy-meter-hes-case-study-pdf", name: "Smart Energy Meter HES Case Study", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "0.2 MB", date: "", file: "./downloads/documents/Smart Energy Meter HES Case Study.pdf" },
+      { id: "rf-site-survey-case-study-jaipur-pdf", name: "RF Site Survey Case Study – Jaipur (Avartanam Test Labs)", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "1.75 MB", date: "", file: "./downloads/documents/RF_Site_Survey_Case_Study_Jaipur_Site_by_Avartanam_Test_Labs_(3) 1.pdf" },
+      { id: "roorkee-oft-range-test-report-pdf", name: "Roorkee OFT Range Test Report", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "1.4 MB", date: "", file: "./downloads/documents/Roorkee_OFT_Range_Test_Report (1).pdf" },
+      { id: "jaipur-oft-range-test-report-pdf", name: "Jaipur OFT Range Test Report", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "1.14 MB", date: "", file: "./downloads/documents/Jaipur_OFT Range Test Report.pdf" },
+      { id: "noise-floor-analysis-jaisalmer-report-pdf", name: "Noise Floor Analysis – Jaisalmer Test Report", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "1.11 MB", date: "", file: "./downloads/documents/Confidential_Noise Floor Analysis_Jaisalmer_Test Report (1).pdf" },
+      { id: "av-case-study-kochi-pdf", name: "AV Case Study – Kochi", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "16.2 MB", date: "", file: "./downloads/documents/AV_Case_Study_Kochi_ALL_V1 (3).pdf" },
+      { id: "intro-rf-site-survey-telecom-pdf", name: "Introduction to RF Site Survey in Telecommunications", type: "Case Study", fileType: "pdf", parent: "", cat: "", subcat: "", size: "1.82 MB", date: "", file: "./downloads/documents/Introduction_to_RF_Site_Survey_in_Telecommunications_final (1).pdf" },
+      { id: "citycharge-ccms-unit-v1-pdf", name: "CityCharge_CCMS_Unit_V1", type: "Datasheet", fileType: "pdf", parent: ["product", "solution"], cat: "smart street light solution", subcat: "", size: "0.8 MB", date: "", file: "./downloads/documents/CityCharge-CCMS-Unit.pdf" },
+      { id: "lms-v1-pdf", name: "LMS_V1", type: "Datasheet", fileType: "pdf", parent: ["software", "solution"], cat: "Smart Street Light Solution", subcat: "", size: "0.8 MB", date: "", file: "./downloads/documents/LMS_V1.pdf" },
+      { id: "vialights-profile-pdf", name: "ViaLights Profile", type: "Brochure", fileType: "pdf", parent: "product", cat: "", subcat: "", size: "2.55 MB", date: "", file: "./downloads/documents/ViaLights.pdf" },
+      { id: "vialights-presentation-pptx", name: "ViaLights Presentation", type: "PPT", fileType: "pptx", parent: "product", cat: "", subcat: "", size: "2.55 MB", date: "", file: "./downloads/documents/ViaLights.pdf" },
+      { id: "pole-mount-retrofit-street-light-controller-v1-pdf", name: "Pole Mount & Retrofit Street Light Controller_V1", type: "Brochure", fileType: "pdf", parent: ["product", "solution"], cat: ["LoRa", "Smart Street Light Solution"], subcat: "Node", size: "2.00 MB", date: "", file: "./downloads/documents/Pole Mount & Retrofit Street Light Controller_V1.pdf" },
+      { id: "ilc-nema-lora-4g-v1-pdf", name: "ILC NEMA - LoRa & 4G_V1", type: "Brochure", fileType: "pdf", parent: ["product", "solution"], cat: ["LoRa", "Smart Street Light Solution"], subcat: "Node", size: "0.2 MB", date: "", file: "./downloads/documents/ILC NEMA - LoRa & 4G_V1.pdf" },
+      { id: "ccms-brochure-v2-pdf", name: "CCMS Brochure_V2", type: "Brochure", fileType: "pdf", parent: ["product", "solution"], cat: ["LoRa", "Smart Street Light Solution"], subcat: "Node", size: "0.3 MB", date: "", file: "./downloads/documents/CCMS Brochure_V2.pdf" },
 
-      { id: "AFL0001_Datasheet", name: "AFL0001_Datasheet", type: "Datasheet", fileType: "pdf", parent: ["product"], cat: ["LoRa"], subcat: "Filter", size: "0.3 MB", date: "", file: "./documents/AFL0001_Datasheet.pdf" },
-      { id: "AFL0003_Datasheet 2", name: "AFL0003_Datasheet 2", type: "Datasheet", fileType: "pdf", parent: ["product"], cat: ["LoRa"], subcat: "Filter", size: "0.3 MB", date: "", file: "./documents/AFL0003_Datasheet 2.pdf" },
+      { id: "AFL0001_Datasheet", name: "AFL0001_Datasheet", type: "Datasheet", fileType: "pdf", parent: ["product"], cat: ["LoRa"], subcat: "Filter", size: "0.3 MB", date: "", file: "./downloads/documents/AFL0001_Datasheet.pdf" },
+      { id: "AFL0003_Datasheet 2", name: "AFL0003_Datasheet 2", type: "Datasheet", fileType: "pdf", parent: ["product"], cat: ["LoRa"], subcat: "Filter", size: "0.3 MB", date: "", file: "./downloads/documents/AFL0003_Datasheet 2.pdf" },
+
+
+     { id: "HHU_Brochure_V2", name: "HHU_Brochure_V2", type: "Brochure", fileType: "pdf", parent: ["product"], cat: ["LoRa"], subcat: "Module", size: "0.4 MB", date: "", file: "./downloads/documents/HHU_Brochure_V2.pdf" },
+     { id: "MultiChannel_LoRaWAN_Gateway_IP67_V1", name: "MultiChannel_LoRaWAN_Gateway_IP67_V1", type: "Brochure", fileType: "pdf", parent: ["product"], cat: ["LoRa"], subcat: "Gateway", size: "0.4 MB", date: "", file: "./downloads/documents/MultiChannel_LoRaWAN_Gateway_IP67_V1.pdf" },
+     { id: "MultiChannel_LoRaWAN_Gateway_IP65_V3", name: "MultiChannel_LoRaWAN_Gateway_IP65_V3", type: "Brochure", fileType: "pdf", parent: ["product"], cat: ["LoRa"], subcat: "Gateway", size: "0.4 MB", date: "", file: "./downloads/documents/MultiChannel_LoRaWAN_Gateway_IP65_V3.pdf" },
+
 
 
     ];
@@ -2911,7 +2888,7 @@
     buildSidebar();
     render();
 
-           const header = document.querySelector('header');
+           const header = document.querySelector('.atl-nav');
 const body = document.querySelector('.lib-body');
  
 function setOffset() {
