@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Awards & Certifications | Nebulae IoT — Regulatory Compliance & Recognition</title>
+  <meta name="description" content="Nebulae IoT's full certification portfolio — WPC ETA, BIS, CE RED, FCC Part 15, ISO 9001:2015, LoRa Alliance, Wi-SUN Alliance, IS 16444, IS 15500 — plus industry awards and recognition."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.nebulae.io/awards.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/nebulae-nav.css">
+  <link rel="stylesheet" href="./assets/css/site-pages-fix.css">
+  <style>
+    /* ── Hero ── */
+    .aw-hero{background:linear-gradient(135deg,#03031a 0%,#07072a 50%,#0d0d3a 100%);padding:5.5rem 0 4.5rem;position:relative;overflow:hidden;}
+    .aw-hero__grid{position:absolute;inset:0;background-image:linear-gradient(rgba(6,182,212,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(6,182,212,.055) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+    .aw-hero__orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;}
+    .aw-hero__orb--1{width:500px;height:500px;background:radial-gradient(circle,rgba(79,70,229,.28),transparent 70%);top:-150px;left:-100px;}
+    .aw-hero__orb--2{width:380px;height:380px;background:radial-gradient(circle,rgba(6,182,212,.22),transparent 70%);bottom:-80px;right:-80px;}
+    .aw-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(6,182,212,.12);border:1px solid rgba(6,182,212,.3);color:#06b6d4;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.35rem .9rem;border-radius:100px;margin-bottom:1.1rem;}
+    .aw-hero__title{font-family:'Outfit',sans-serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:800;color:#fff;line-height:1.08;letter-spacing:-.025em;margin-bottom:.9rem;}
+    .aw-hero__title span{background:linear-gradient(120deg,#06b6d4,#818cf8,#4f46e5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .aw-hero__desc{font-size:.97rem;color:rgba(255,255,255,.62);line-height:1.78;max-width:580px;margin-bottom:2rem;}
+    .aw-breadcrumb{display:flex;align-items:center;gap:.5rem;margin-bottom:1.5rem;font-size:.78rem;color:rgba(255,255,255,.4);}
+    .aw-breadcrumb a{color:rgba(255,255,255,.4);text-decoration:none;}
+    .aw-breadcrumb a:hover{color:#06b6d4;}
+    .aw-stat-strip{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:2rem;}
+    .aw-stat-chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.65rem 1.25rem;text-align:center;}
+    .aw-stat-chip__num{font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:800;color:#fff;display:block;line-height:1;}
+    .aw-stat-chip__label{font-size:.68rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em;margin-top:.2rem;display:block;}
+
+    /* ── Sections ── */
+    .aw-section{padding:5rem 0;}
+    .aw-section--surf{background:#f5f7ff;}
+    .aw-section--dark{background:linear-gradient(135deg,#07071e,#0e0e38);}
+    body.dark-mode .aw-section{background:#0a0a1e !important;}
+    body.dark-mode .aw-section--surf{background:#0f0f28 !important;}
+    .aw-section-eyebrow{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#4f46e5;background:rgba(79,70,229,.08);padding:.3rem .85rem;border-radius:100px;margin-bottom:.75rem;}
+    .aw-section-title{font-family:'Outfit',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:#0a0a1e;line-height:1.1;letter-spacing:-.02em;margin-bottom:.75rem;}
+    body.dark-mode .aw-section-title{color:#f1f5f9 !important;}
+    .aw-section-desc{font-size:.95rem;color:#6b7280;line-height:1.78;max-width:640px;}
+    body.dark-mode .aw-section-desc{color:rgba(255,255,255,.55) !important;}
+
+    /* ── CERT CARD — main design ── */
+    .aw-cert-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:24px;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s;height:100%;}
+    .aw-cert-card:hover{transform:translateY(-6px);box-shadow:0 24px 64px rgba(79,70,229,.14);border-color:rgba(79,70,229,.3);}
+    body.dark-mode .aw-cert-card{background:#1a1a3e !important;border-color:rgba(255,255,255,.08) !important;}
+    .aw-cert-card__header{padding:2rem 1.75rem 1.5rem;position:relative;}
+    .aw-cert-card__badge{width:72px;height:72px;border-radius:18px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:700;color:#fff;letter-spacing:.05em;box-shadow:0 8px 24px rgba(0,0,0,.2);flex-shrink:0;}
+    .aw-cert-card__status{position:absolute;top:1.5rem;right:1.5rem;font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:100px;}
+    .aw-cert-card__status--active{background:rgba(16,185,129,.12);color:#059669;border:1px solid rgba(16,185,129,.25);}
+    .aw-cert-card__status--pending{background:rgba(245,158,11,.1);color:#d97706;border:1px solid rgba(245,158,11,.2);}
+    body.dark-mode .aw-cert-card__status--active{background:rgba(16,185,129,.15) !important;}
+    body.dark-mode .aw-cert-card__status--pending{background:rgba(245,158,11,.12) !important;}
+    .aw-cert-card__name{font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:800;color:#111827;margin-bottom:.2rem;}
+    body.dark-mode .aw-cert-card__name{color:#f1f5f9 !important;}
+    .aw-cert-card__issuer{font-size:.78rem;color:#6b7280;font-weight:600;margin-bottom:.85rem;}
+    body.dark-mode .aw-cert-card__issuer{color:rgba(255,255,255,.4) !important;}
+    .aw-cert-card__body{padding:0 1.75rem 1.75rem;}
+    .aw-cert-card__desc{font-size:.86rem;color:#374151;line-height:1.72;margin-bottom:1.1rem;}
+    body.dark-mode .aw-cert-card__desc{color:rgba(255,255,255,.6) !important;}
+    .aw-cert-card__divider{height:1px;background:#f3f4f6;margin-bottom:1.1rem;}
+    body.dark-mode .aw-cert-card__divider{background:rgba(255,255,255,.06) !important;}
+    .aw-cert-card__meta{display:flex;flex-direction:column;gap:.45rem;}
+    .aw-cert-card__meta-row{display:flex;align-items:flex-start;gap:.65rem;font-size:.8rem;}
+    .aw-cert-card__meta-label{color:#9ca3af;font-weight:600;min-width:80px;flex-shrink:0;}
+    body.dark-mode .aw-cert-card__meta-label{color:rgba(255,255,255,.3) !important;}
+    .aw-cert-card__meta-val{color:#374151;font-weight:600;line-height:1.4;}
+    body.dark-mode .aw-cert-card__meta-val{color:rgba(255,255,255,.65) !important;}
+    .aw-cert-card__products{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.75rem;}
+    .aw-cert-card__chip{font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:100px;background:#f0f3ff;color:#4f46e5;}
+    body.dark-mode .aw-cert-card__chip{background:rgba(79,70,229,.15) !important;color:#818cf8 !important;}
+
+    /* ── Cert category tab bar ── */
+    .aw-tab-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem;}
+    .aw-tab{padding:.5rem 1.2rem;border-radius:100px;border:1.5px solid #e5e7eb;background:#fff;font-size:.82rem;font-weight:700;color:#374151;cursor:pointer;transition:all .2s;}
+    .aw-tab:hover,.aw-tab.active{background:#4f46e5;border-color:#4f46e5;color:#fff;}
+    body.dark-mode .aw-tab{background:#1a1a3e !important;border-color:rgba(255,255,255,.1) !important;color:rgba(255,255,255,.65) !important;}
+    body.dark-mode .aw-tab.active{background:#4f46e5 !important;border-color:#4f46e5 !important;color:#fff !important;}
+
+    /* ── Compliance matrix ── */
+    .aw-matrix{width:100%;border-collapse:collapse;border-radius:18px;overflow:hidden;border:1.5px solid #e5e7eb;}
+    body.dark-mode .aw-matrix{border-color:rgba(255,255,255,.08) !important;}
+    .aw-matrix th{padding:.9rem 1.1rem;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;background:#f8f9ff;border-bottom:2px solid #e5e7eb;}
+    body.dark-mode .aw-matrix th{background:#1a1a3e !important;color:rgba(255,255,255,.4) !important;border-color:rgba(255,255,255,.08) !important;}
+    .aw-matrix td{padding:.75rem 1.1rem;font-size:.84rem;border-bottom:1px solid #f3f4f6;text-align:center;color:#374151;}
+    body.dark-mode .aw-matrix td{border-color:rgba(255,255,255,.05) !important;color:rgba(255,255,255,.6) !important;}
+    .aw-matrix td:first-child{text-align:left;font-weight:700;color:#111827;background:#fafafe;}
+    body.dark-mode .aw-matrix td:first-child{background:#141432 !important;color:#f1f5f9 !important;}
+    .aw-matrix tr:last-child td{border-bottom:none;}
+    .aw-chk{color:#10b981;font-size:1.1rem;font-weight:800;}
+    .aw-na{color:#d1d5db;font-size:.9rem;}
+    .aw-pend{color:#f59e0b;font-size:.78rem;font-weight:700;}
+
+    /* ── Process steps (how to get certified) ── */
+    .aw-process-wrap{position:relative;}
+    .aw-process-wrap::before{content:'';position:absolute;left:21px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,#4f46e5,#06b6d4);z-index:0;}
+    .aw-process-item{display:flex;gap:1.25rem;margin-bottom:2rem;position:relative;z-index:1;}
+    .aw-process-num{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 16px rgba(79,70,229,.35);}
+    .aw-process-body{padding-top:.3rem;}
+    .aw-process-title{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:800;color:#111827;margin-bottom:.3rem;}
+    body.dark-mode .aw-process-title{color:#f1f5f9 !important;}
+    .aw-process-desc{font-size:.85rem;color:#6b7280;line-height:1.65;}
+    body.dark-mode .aw-process-desc{color:rgba(255,255,255,.5) !important;}
+
+    /* ── Award card ── */
+    .aw-award-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:1.75rem;transition:transform .25s,box-shadow .25s;height:100%;}
+    body.dark-mode .aw-award-card{background:#1a1a3e !important;border-color:rgba(255,255,255,.08) !important;}
+    .aw-award-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(79,70,229,.1);}
+    .aw-award-card__icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.6rem;}
+    .aw-award-card__year{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#9ca3af;margin-bottom:.35rem;}
+    body.dark-mode .aw-award-card__year{color:rgba(255,255,255,.35) !important;}
+    .aw-award-card__title{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:800;color:#111827;margin-bottom:.35rem;line-height:1.3;}
+    body.dark-mode .aw-award-card__title{color:#f1f5f9 !important;}
+    .aw-award-card__org{font-size:.8rem;color:#4f46e5;font-weight:700;margin-bottom:.65rem;}
+    .aw-award-card__desc{font-size:.84rem;color:#6b7280;line-height:1.65;}
+    body.dark-mode .aw-award-card__desc{color:rgba(255,255,255,.5) !important;}
+
+    /* ── Standard compliance bands ── */
+    .aw-standard-band{background:linear-gradient(135deg,#0a0a2e,#1a1a6e);border-radius:20px;padding:2rem;position:relative;overflow:hidden;}
+    .aw-standard-band::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 10% 50%,rgba(6,182,212,.15),transparent 40%);pointer-events:none;}
+    .aw-standard-pill{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.65rem 1.1rem;margin:.3rem;}
+    .aw-standard-pill__code{font-family:'IBM Plex Mono',monospace;font-size:.82rem;font-weight:700;color:#fff;}
+    .aw-standard-pill__name{font-size:.72rem;color:rgba(255,255,255,.5);}
+
+    /* ── Download CTA strip ── */
+    .aw-dl-strip{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;margin-top:2.5rem;}
+    .aw-dl-btn{display:inline-flex;align-items:center;gap:.55rem;padding:.72rem 1.4rem;border-radius:10px;background:#fff;border:1.5px solid #e5e7eb;font-size:.85rem;font-weight:700;color:#374151;text-decoration:none;transition:all .25s;}
+    body.dark-mode .aw-dl-btn{background:#1a1a3e !important;border-color:rgba(255,255,255,.1) !important;color:rgba(255,255,255,.7) !important;}
+    .aw-dl-btn:hover{border-color:#4f46e5;color:#4f46e5;transform:translateY(-2px);box-shadow:0 8px 24px rgba(79,70,229,.12);}
+
+    @media(max-width:767px){
+      .aw-hero{padding:4rem 0 3rem;}
+      .aw-process-wrap::before{left:19px;}
+    }
+  </style>
+</head>
+<body>
+
+<div id="nblProgressBar" role="progressbar" aria-label="Page scroll progress"></div>
+ 
+<!-- <button id="nblThemeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode"></button> -->
+<button id="nblBackTop" aria-label="Back to top" title="Back to top">
+  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<header>
+<!-- ════ STICKY HEADER ════ -->
+<div class="atl-sticky-header" style="position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:9999!important;">
+
+  <!-- Utility bar -->
+  <div class="atl-util-bar">
+    <div class="atl-util-bar__inner">
+      <div class="atl-util-bar__left">
+        <!-- <span class="atl-util-link">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          India · IoT Solutions Provider
+        </span> -->
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 9898042339 
+        </a>
+      </div>
+      <div class="atl-util-bar__right">
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91-02692-232501/02
+        </a>
+        <a href="mailto:sales@nebulae.io" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          sales@nebulae.io
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main navbar -->
+  <nav class="atl-nav" id="atlNav">
+    <div class="atl-nav__inner">
+
+      <!-- Logo -->
+      <a href="./index.html" class="atl-nav__logo">
+        <img src="./assets/images/LogoBlue.png" alt="Nebulae" class="atl-nav__logo-img">
+      </a>
+
+      <!-- Desktop nav -->
+      <ul class="atl-nav__links" id="navLinks">
+
+        <!-- 1. PRODUCTS -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaProducts">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaProducts')">
+            Products
+            <svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="atl-mega" id="mega-megaProducts">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner atl-mega__inner--products" style="display:flex;gap:0;min-height:320px;">
+
+                <!-- Rail -->
+                <div class="atl-prod-rail">
+                  <button class="atl-prod-rail__item atl-prod-rail__item--active" data-prod="module">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                    Module
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  
+                  <button class="atl-prod-rail__item" data-prod="concentrator">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                    Concentrator
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+
+                  <button class="atl-prod-rail__item" data-prod="gateway">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h.01M10 11h.01"/><circle cx="17" cy="11" r="1" fill="currentColor"/></svg>
+                    Gateway
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="filter">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                    Filter
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  
+                  <button class="atl-prod-rail__item" data-prod="node">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+                    Nodes
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="evk">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+                    EVK
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="dataconnector">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h7"/><circle cx="17" cy="18" r="3"/><path d="M17 15v-1.5M17 21v1.5M14.2 16.5l-1.3-.75M20.1 19.25l1.3.75M14.2 19.25l-1.3.75M20.1 16.5l1.3-.75"/></svg>
+                    Data Connector
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                   
+                </div>
+
+                <!-- Panels -->
+                <div class="atl-prod-panel">
+                  <!-- Module -->
+                  <div class="atl-prod-panel__body atl-prod-panel__body--active" data-panel="module">
+                    <p class="atl-prod-panel__label">Module — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products.html?proto=lora&amp;type=module" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products.html?proto=wisun&amp;type=module" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products.html?proto=zigbee&amp;type=module" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products.html?proto=wifi&amp;type=module" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="products.html?proto=som&amp;type=module" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span><span class="atl-prod-card__name">SOM</span><span class="atl-prod-card__desc">System on Module</span></a>
+                    </div>
+                  </div>
+                  <!-- Gateway -->
+                  <div class="atl-prod-panel__body" data-panel="gateway">
+                    <p class="atl-prod-panel__label">Gateway — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products.html?proto=lora&amp;type=gateway" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products.html?proto=wisun&amp;type=gateway" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products.html?proto=gsm&amp;type=gateway" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">LTE</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- Filter -->
+                  <div class="atl-prod-panel__body" data-panel="filter">
+                    <p class="atl-prod-panel__label">Filter — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products.html?proto=lora&amp;type=filter" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- EVK -->
+                  <div class="atl-prod-panel__body" data-panel="evk">
+                    <p class="atl-prod-panel__label">EVK — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products.html?proto=lora&amp;type=evk" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- Concentrator -->
+                  <div class="atl-prod-panel__body" data-panel="concentrator">
+                    <p class="atl-prod-panel__label">Concentrator — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products.html?proto=lora&amp;type=concentrator" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- Node -->
+                  <div class="atl-prod-panel__body" data-panel="node">
+                    <p class="atl-prod-panel__label">Node — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products.html?proto=lora&amp;type=node" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products.html?proto=wisun&amp;type=node" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                    </div>
+                  </div>
+                  <!-- Add to Panels section (after EVK panel) -->
+                  <div class="atl-prod-panel__body" data-panel="dataconnector">
+                    <p class="atl-prod-panel__label">Data Connector — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products.html?proto=lora&amp;type=dataconnector" class="atl-prod-card atl-prod-card--blue"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M1.42 9a16 16 0 0121.16 0" />
+                            <path d="M5 12.55a11 11 0 0114.08 0" />
+                            <path d="M10.54 17a6 6 0 012.92 0" />
+                            <circle cx="12" cy="20" r="1" fill="currentColor" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To LoRa</span><span class="atl-prod-card__desc">Long Range
+                          IoT</span></a>
+                      <a href="products.html?proto=wisun&amp;type=dataconnector" class="atl-prod-card atl-prod-card--teal"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M8.5 8.5a5 5 0 0 0 7 7" />
+                            <path d="M5 5a9 9 0 0 0 13 13" />
+                            <path d="M2 2a13 13 0 0 0 19 19" />
+                            <circle cx="12" cy="12" r="1" fill="currentColor" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To Wi-SUN</span><span class="atl-prod-card__desc">Smart
+                          Utility Network</span></a>
+                      <a href="products.html?proto=zigbee&amp;type=dataconnector" class="atl-prod-card atl-prod-card--orange"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To Zigbee</span><span class="atl-prod-card__desc">Mesh
+                          Networking</span></a>
+                      <a href="products.html?proto=wifi&amp;type=dataconnector" class="atl-prod-card atl-prod-card--blue"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M5 12.55a11 11 0 0114.08 0" />
+                            <path d="M1.42 9a16 16 0 0121.16 0" />
+                            <path d="M10.54 17a6 6 0 012.92 0" />
+                            <circle cx="12" cy="20" r="1" fill="currentColor" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To Wi-Fi</span><span class="atl-prod-card__desc">RS485 Wireless
+                          LAN</span></a>
+                      <a href="products.html?proto=gsm&amp;type=dataconnector" class="atl-prod-card atl-prod-card--red"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                            <line x1="12" y1="18" x2="12.01" y2="18" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To LTE</span><span class="atl-prod-card__desc">Cellular
+                          IoT</span></a>
+                  
+                    </div>
+                  </div>
+                   
+                </div><!-- /atl-prod-panel -->
+
+                <!-- Feature card -->
+                <div style="width:220px;flex-shrink:0;padding:1.5rem 1.25rem;display:flex;align-items:center;">
+                  <div class="atl-mega__feature-card" style="width:100%">
+                    <p class="atl-mega__feature-name">Official Partners</p>
+                    <img src="./assets/images/Semtech.png" alt="Official Partner Logo 1" style="max-width:120px;height:auto;margin-bottom:0.75rem;">
+                    <img src="./assets/images/SLabs.png" alt="Official Partner Logo 2" style="max-width:120px;height:auto;">
+                    <a href="products.html" class="atl-mega__feature-link">View All Products →</a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2. SOLUTIONS -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaSolutions">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaSolutions')">Solutions<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaSolutions">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner atl-mega__inner--3col">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div><div><p class="atl-mega__col-title">Smart Metering</p><p class="atl-mega__col-desc">AMI &amp; AMR utility solutions</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="solutions/smart-water-meter.html"><span class="atl-mega__dot"></span>Smart Water Meter Solution</a></li>
+                    <li><a href="solutions/smart-electric-meter.html"><span class="atl-mega__dot"></span>Smart Electric Meter Solution</a></li>
+                    <li><a href="solutions/smart-gas-meter.html"><span class="atl-mega__dot"></span>Smart Gas Metering Solution</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div><div><p class="atl-mega__col-title">Smart Infrastructure</p><p class="atl-mega__col-desc">City &amp; grid automation</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="solutions/smart-street-light.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Smart Street Light Solution</a></li>
+                    <li><a href="solutions/transformer-monitoring.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Transformer Monitoring System</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col atl-mega__col--feature">
+                     <div class="atl-mega__feature-card" style="width:100%">
+                    <p class="atl-mega__feature-name">Official Partners</p>
+                    <img src="./assets/images/Semtech.png" alt="Official Partner Logo 1" style="max-width:120px;height:auto;margin-bottom:0.75rem;">
+                    <img src="./assets/images/SLabs.png" alt="Official Partner Logo 2" style="max-width:120px;height:auto;">
+                    <a href="products.html" class="atl-mega__feature-link">View All Products →</a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3. SERVICES -->
+           <li class="atl-nav__item atl-nav__item--mega" id="megaServices">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaServices')">Services<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaServices">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div><p class="atl-mega__col-title">Development</p><p class="atl-mega__col-desc">IoT product &amp; embedded design</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="services/iot-product-development.html"><span class="atl-mega__dot"></span>IoT Product Development</a></li>
+                    <li><a href="services/embedded-hardware-design.html"><span class="atl-mega__dot"></span>Embedded Hardware Design</a></li>
+                    <li><a href="services/embedded-firmware-design.html"><span class="atl-mega__dot"></span>Embedded Firmware Development</a></li>
+                    <li><a href="services/pcb-design-services.html"><span class="atl-mega__dot"></span>PCB Design Services</a></li> 
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div><div><p class="atl-mega__col-title">RF - Survey</p><p class="atl-mega__col-desc">Network, cloud &amp; dashboard</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="services/wireless-sensor-network.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Wireless Sensor Network in IoT</a></li>
+                    
+                    <li><a href="services/iot-cloud-integration.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>IoT Cloud Integration</a></li>
+                    <li><a href="services/edge-computing.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Edge Computing</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--purple"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
+    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
+    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
+</svg></div><div><p class="atl-mega__col-title">Cloud</p><p class="atl-mega__col-desc">Platforms &amp; management systems</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="services/lora-management-system.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>LoRa Management System</a></li>
+                    <li><a href="services/lorawan-network-server.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>LoRaWAN Network Server (LNS)</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--purple"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
+    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
+    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
+</svg></div><div><p class="atl-mega__col-title">IOT Dashboard</p><p class="atl-mega__col-desc">Metering &amp; utility management</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="services/hes-electricity-metering.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>HES Electricity Metering</a></li> 
+                    <li><a href="services/hes-gas-metering.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>HES Gas Metering</a></li>
+                    <li><a href="services/hes-water-metering.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>HES Water Metering</a></li>
+                    <li><a href="services/cms-ev-charging-management-solution.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>CMS - EV Charging Management Solution</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col atl-mega__col--feature">
+                  <div class="atl-mega__feature-card">
+                    <p class="atl-mega__feature-name">Technologies We Use</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;margin:0.75rem 0;">
+                      <img src="./assets/images/SupportedTech/LoRaWAN.png" alt="Technology 4" style="max-width:80px;height:auto;">
+                      <img src="./assets/images/SupportedTech/zigbee.png" alt="Technology 1" style="max-width:80px;height:auto;">
+                      <img src="./assets/images/SupportedTech/Bluetooth.png" alt="Technology 2" style="max-width:80px;height:auto;">
+                      <img src="./assets/images/SupportedTech/WiFi.png" alt="Technology 3" style="max-width:80px;height:auto;">
+                    </div>
+                    <a href="services.html" class="atl-mega__feature-link">View All Services →</a>
+                
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+          <li class="atl-nav__item">
+          <a class="atl-nav__link" href="resources.html">Resources</a>
+        </li>
+        <!-- 4. INDUSTRIES -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaIndustries">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaIndustries')">Industries<svg
+              class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="m6 9 6 6 6-6" />
+            </svg></button>
+          <div class="atl-mega" id="mega-megaIndustries">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Smart City</p>
+                      <p class="atl-mega__col-desc">Automation &amp; security</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/home-security-automation.html"><span class="atl-mega__dot"></span>Home Security
+                        &amp; Automation</a></li>
+                    <li><a href="industries/sos-devices.html"><span class="atl-mega__dot"></span>SOS Devices</a></li>
+                    <li><a href="industries/smart-city-solutions.html"><span class="atl-mega__dot"></span>Smart City
+                        Solutions</a></li>
+                    <li><a href="industries/building-management-system.html"><span class="atl-mega__dot"></span>Building
+                        Management System</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 22V12M12 12C12 12 8 9 4 12M12 12C12 12 16 9 20 12M4 8C7 5 12 7 12 7C12 7 17 5 20 8" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Agriculture &amp; Energy</p>
+                      <p class="atl-mega__col-desc">Smart farming &amp; utilities</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/smart-agriculture.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Smart
+                        Agriculture System</a></li>
+                    <li><a href="industries/farm-animal-management.html"><span
+                          class="atl-mega__dot atl-mega__dot--teal"></span>Farm Animal Management</a></li>
+                    <li><a href="industries/iot-energy-utilities.html"><span
+                          class="atl-mega__dot atl-mega__dot--teal"></span>IoT in Energy &amp; Utilities</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--orange"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="14" rx="2" />
+                        <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Industrial &amp; Automotive</p>
+                      <p class="atl-mega__col-desc">IIoT &amp; connected vehicles</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/industrial-iot.html"><span class="atl-mega__dot"
+                          style="background:#f97316"></span>Industrial IoT</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--red"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Healthcare</p>
+                      <p class="atl-mega__col-desc">Connected health &amp; Care</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/iot-healthcare.html"><span class="atl-mega__dot atl-mega__dot--red"></span>IoT in
+                        Healthcare</a></li>
+                    <li><a href="industries/telematics-fleet.html"><span
+                          class="atl-mega__dot atl-mega__dot--red"></span>Telematics &amp; Fleet Management</a></li>
+                    <li><a href="industries/consumer-iot.html"><span class="atl-mega__dot atl-mega__dot--red"></span>Consumer
+                        IoT Solutions</a></li>
+                  </ul>
+                </div>
+                <!-- NEW: Defence Column -->
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon" style="background:#e8f0fe;"><svg width="18" height="18" fill="none"
+                        stroke="#1e40af" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Defence</p>
+                      <p class="atl-mega__col-desc">IoT for defence &amp; security</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/iot-in-defence.html"><span class="atl-mega__dot"
+                          style="background:#1e40af"></span>IoT in Defence</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- 5. ABOUT US -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaAbout">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaAbout')">About Us<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaAbout">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><p class="atl-mega__col-title">Company</p><p class="atl-mega__col-desc">Who we are &amp; what we do</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="about.html"><span class="atl-mega__dot"></span>About Nebulae</a></li>
+                    
+                    <li><a href="about.html#team"><span class="atl-mega__dot"></span>Our Team</a></li>
+                    <li><a href="about.html#partners"><span class="atl-mega__dot"></span>Partners &amp; Certifications</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><p class="atl-mega__col-title">Blog &amp; Careers</p><p class="atl-mega__col-desc">Insights &amp; opportunities</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="blog.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Blog</a></li>
+                    
+                    <li><a href="careers.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Careers</a></li>
+                    <li><a href="careers.html#openings"><span class="atl-mega__dot atl-mega__dot--teal"></span>Open Positions</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--orange"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div><p class="atl-mega__col-title">Events &amp; News</p><p class="atl-mega__col-desc">What's happening at Nebulae</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="events.html"><span class="atl-mega__dot" style="background:#f97316"></span> Events</a></li>
+                    <li><a href="news.html"><span class="atl-mega__dot" style="background:#f97316"></span>News</a></li> 
+                  </ul>
+                </div>
+                <!-- <div class="atl-mega__col atl-mega__col--feature">
+                  <div class="atl-mega__feature-card">
+                    <span class="atl-mega__new-tag">JOIN US</span>
+                    <p class="atl-mega__feature-name">Building the Future of IoT</p>
+                    <p class="atl-mega__feature-desc">We're a team of engineers, designers &amp; innovators passionate about connecting the world through smart technology.</p>
+                    <a href="careers.html" class="atl-mega__feature-link">See Open Roles →</a>
+                    
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 6. CONTACT -->
+        <li class="atl-nav__item">
+          <a class="atl-nav__link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Right: CTA -->
+        <div class="atl-nav__right"><button class="atl-nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+     
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="atl-nav__mobile" id="navMobile">
+      <div class="atl-nav__mobile-header">
+        <span class="atl-nav__mobile-title">Menu</span>
+        <button class="atl-nav__mobile-close" id="navMobileClose" aria-label="Close menu">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <a class="atl-nav__mlink" href="index.html">Home</a>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Products<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <div class="atl-nav__macc-section">LoRa</div>
+          <a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">Wi-SUN</div>
+          <a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">Zigbee</div>
+          <a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">Wi-Fi</div>
+          <a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">LTE</div>
+          <a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">BLE</div>
+          <a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=node">Node</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Solutions<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="solutions/smart-water-meter.html">Smart Water Meter Solution</a>
+          <a class="atl-nav__msublink" href="solutions/smart-electric-meter.html">Smart Electric Meter Solution</a>
+          <a class="atl-nav__msublink" href="solutions/smart-gas-meter.html">Smart Gas Metering Solution</a>
+          <a class="atl-nav__msublink" href="solutions/smart-street-light.html">Smart Street Light Solution</a>
+          <a class="atl-nav__msublink" href="solutions/transformer-monitoring.html">Transformer Monitoring System</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Services<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <div class="atl-nav__macc-section">Development</div>
+          <a class="atl-nav__msublink" href="services/iot-product-development.html">IoT Product Development</a>
+          <a class="atl-nav__msublink" href="services/embedded-hardware-design.html">Embedded Hardware Design</a>
+          <a class="atl-nav__msublink" href="services/embedded-firmware-design.html">Embedded Firmware Design</a>
+          <a class="atl-nav__msublink" href="services/pcb-design-services.html">PCB Design Services</a> 
+          <div class="atl-nav__macc-section">Connectivity &amp; Cloud</div>
+          <a class="atl-nav__msublink" href="services/iot-dashboard.html">IoT Dashboard</a>
+          <a class="atl-nav__msublink" href="services/iot-cloud-integration.html">IoT Cloud Integration</a>
+          <a class="atl-nav__msublink" href="services/edge-computing.html">Edge Computing</a>
+          <div class="atl-nav__macc-section">Consulting</div>
+          <a class="atl-nav__msublink" href="services/iot-consulting.html">IoT Consulting</a>
+          <a class="atl-nav__msublink" href="services/iot-mobile-app.html">IoT Mobile App Development</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Industries<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="industries/home-security-automation.html">Home Security &amp; Automation</a>
+          <a class="atl-nav__msublink" href="industries/smart-agriculture.html">Smart Agriculture System</a>
+          <a class="atl-nav__msublink" href="industries/industrial-iot.html">Industrial IoT</a>
+          <a class="atl-nav__msublink" href="industries/iot-healthcare.html">IoT in Healthcare</a>
+          <a class="atl-nav__msublink" href="industries/iot-logistics.html">IoT in Logistics</a>
+          <a class="atl-nav__msublink" href="industries/consumer-iot.html">Consumer IoT Solutions</a>
+        </div>
+      </div>
+
+      <a class="atl-nav__mlink" href="./resources.html">Resources</a>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">About Us<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="about.html">About Nebulae</a>
+          <a class="atl-nav__msublink" href="about.html#mission">Our Mission &amp; Vision</a>
+          <a class="atl-nav__msublink" href="about.html#team">Our Team</a>
+          <a class="atl-nav__msublink" href="blog.html">Blog</a>
+          <a class="atl-nav__msublink" href="careers.html">Careers</a>
+          <a class="atl-nav__msublink" href="events.html">Upcoming Events</a>
+          <a class="atl-nav__msublink" href="news.html">Latest News</a>
+        </div>
+      </div>
+
+      <a class="atl-nav__mlink" href="contact.html">Contact Us</a>
+    </div><!-- /mobile drawer -->
+  </nav>
+</div><!-- /.atl-sticky-header -->
+</header>
+
+
+<!-- ═══ HERO ═══ -->
+<section class="aw-hero">
+  <div class="aw-hero__grid"></div>
+  <div class="aw-hero__orb aw-hero__orb--1"></div>
+  <div class="aw-hero__orb aw-hero__orb--2"></div>
+  <div class="container" style="position:relative;z-index:2;">
+    <nav class="aw-breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,.65);">Awards & Certifications</span></nav>
+    <div class="aw-eyebrow">Regulatory Compliance · Industry Recognition</div>
+    <h1 class="aw-hero__title">Certified. Compliant. <span>Trusted.</span></h1>
+    <p class="aw-hero__desc">Every Nebulae product carries the certifications required for legal deployment in India and global markets — WPC, BIS, CE, FCC, ISO 9001:2015, LoRa Alliance, and Wi-SUN Alliance compliance managed entirely in-house.</p>
+    <div style="display:flex;gap:.85rem;flex-wrap:wrap;">
+      <a href="#certifications" class="pg-btn" style="display:inline-flex;align-items:center;gap:.45rem;padding:.85rem 1.85rem;border-radius:10px;background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;font-size:.9rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;box-shadow:0 8px 28px rgba(79,70,229,.35);">View Certifications ↓</a>
+      <a href="contact.html" style="display:inline-flex;align-items:center;gap:.45rem;padding:.82rem 1.75rem;border-radius:10px;border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);font-size:.9rem;font-weight:600;font-family:'Outfit',sans-serif;text-decoration:none;">Request Cert Documents</a>
+    </div>
+    <div class="aw-stat-strip">
+      <div class="aw-stat-chip"><span class="aw-stat-chip__num">8+</span><span class="aw-stat-chip__label">Active Certifications</span></div>
+      <div class="aw-stat-chip"><span class="aw-stat-chip__num">6</span><span class="aw-stat-chip__label">Protocol Protocols Certified</span></div>
+      <div class="aw-stat-chip"><span class="aw-stat-chip__num">40+</span><span class="aw-stat-chip__label">Export Markets</span></div>
+      <div class="aw-stat-chip"><span class="aw-stat-chip__num">ISO 9001</span><span class="aw-stat-chip__label">Quality Certified</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUICK STANDARDS BAND ═══ -->
+<section style="background:linear-gradient(135deg,#0a0a2e,#1a1a6e);padding:2.5rem 0;">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-4">
+        <p style="font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:.35rem;">Standards We Build To</p>
+        <p style="font-size:.85rem;color:rgba(255,255,255,.5);margin:0;">Every product is designed to comply with applicable Indian and international standards from day one — not retrofitted after design.</p>
+      </div>
+      <div class="col-lg-8">
+        <div style="display:flex;flex-wrap:wrap;">
+          <div class="aw-standard-pill"><span class="aw-standard-pill__code">IS 16444</span><span class="aw-standard-pill__name">Smart Electric Meter</span></div>
+          <div class="aw-standard-pill"><span class="aw-standard-pill__code">IS 15500</span><span class="aw-standard-pill__name">Smart Water Meter</span></div>
+          <div class="aw-standard-pill"><span class="aw-standard-pill__code">IS 16687</span><span class="aw-standard-pill__name">Smart Gas Meter</span></div>
+          <div class="aw-standard-pill"><span class="aw-standard-pill__code">RDSS</span><span class="aw-standard-pill__name">Ministry of Power</span></div>
+          <div class="aw-standard-pill"><span class="aw-standard-pill__code">AIS-140</span><span class="aw-standard-pill__name">Vehicle Tracking</span></div>
+          <div class="aw-standard-pill"><span class="aw-standard-pill__code">IEC 62368</span><span class="aw-standard-pill__name">Product Safety</span></div>
+          <div class="aw-standard-pill"><span class="aw-standard-pill__code">ETSI EN 300 220</span><span class="aw-standard-pill__name">Sub-GHz Radio</span></div>
+          <div class="aw-standard-pill"><span class="aw-standard-pill__code">IEEE 802.15.4g</span><span class="aw-standard-pill__name">Wi-SUN PHY</span></div>
+          <div class="aw-standard-pill"><span class="aw-standard-pill__code">LoRaWAN 1.0.4</span><span class="aw-standard-pill__name">LoRa Alliance</span></div>
+          <div class="aw-standard-pill"><span class="aw-standard-pill__code">DLMS/COSEM</span><span class="aw-standard-pill__name">Metering Data</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATIONS GRID ═══ -->
+<section class="aw-section" id="certifications">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="aw-section-eyebrow">Regulatory Certifications</span>
+      <h2 class="aw-section-title">Our Certification Portfolio</h2>
+      <p class="aw-section-desc mx-auto">All certifications are held in Nebulae's name and are valid for the current product lineup. Certification documents are available upon request under NDA for qualified customers.</p>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="aw-tab-bar">
+      <button class="aw-tab active" data-filter="all">All</button>
+      <button class="aw-tab" data-filter="india">India</button>
+      <button class="aw-tab" data-filter="international">International</button>
+      <button class="aw-tab" data-filter="protocol">Protocol Alliance</button>
+      <button class="aw-tab" data-filter="quality">Quality & Safety</button>
+      <button class="aw-tab" data-filter="product">Product Standard</button>
+    </div>
+
+    <div class="row g-4" id="certGrid">
+
+      <!-- WPC -->
+      <div class="col-md-6 col-lg-4" data-filter="india">
+        <div class="aw-cert-card">
+          <div class="aw-cert-card__header">
+            <span class="aw-cert-card__status aw-cert-card__status--active">Active</span>
+            <div class="aw-cert-card__badge" style="background:linear-gradient(135deg,#ff6b00,#e65000);">WPC</div>
+            <h3 class="aw-cert-card__name">WPC Equipment Type Approval</h3>
+            <p class="aw-cert-card__issuer">Wireless Planning & Coordination Wing, DoT, India</p>
+          </div>
+          <div class="aw-cert-card__body">
+            <p class="aw-cert-card__desc">Mandatory Equipment Type Approval (ETA) from India's Department of Telecommunications for all wireless products. Without WPC ETA, wireless devices cannot legally be sold, imported, or used in India. Nebulae holds WPC ETA across its LoRaWAN, Wi-SUN, BLE, Zigbee, and Wi-Fi product lines.</p>
+            <div class="aw-cert-card__divider"></div>
+            <div class="aw-cert-card__meta">
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Issuing Body</span><span class="aw-cert-card__meta-val">WPC Wing, Ministry of Communications</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Scope</span><span class="aw-cert-card__meta-val">All wireless IoT modules &amp; gateways</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Band</span><span class="aw-cert-card__meta-val">IN865 (Sub-GHz) · 2.4 GHz · 5 GHz</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Renewal</span><span class="aw-cert-card__meta-val">Every 5 years per ETA</span></div>
+            </div>
+            <div class="aw-cert-card__products">
+              <span class="aw-cert-card__chip">LoRa Module</span>
+              <span class="aw-cert-card__chip">Wi-SUN Module</span>
+              <span class="aw-cert-card__chip">BLE Module</span>
+              <span class="aw-cert-card__chip">Zigbee Module</span>
+              <span class="aw-cert-card__chip">Wi-Fi Module</span>
+              <span class="aw-cert-card__chip">LoRa Gateway</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BIS -->
+      <div class="col-md-6 col-lg-4" data-filter="india">
+        <div class="aw-cert-card">
+          <div class="aw-cert-card__header">
+            <span class="aw-cert-card__status aw-cert-card__status--active">Active</span>
+            <div class="aw-cert-card__badge" style="background:linear-gradient(135deg,#0057b8,#003d82);">BIS</div>
+            <h3 class="aw-cert-card__name">BIS CRS Certification</h3>
+            <p class="aw-cert-card__issuer">Bureau of Indian Standards, India</p>
+          </div>
+          <div class="aw-cert-card__body">
+            <p class="aw-cert-card__desc">Compulsory Registration Scheme (CRS) certification under the Bureau of Indian Standards for electronics and IT products. BIS CRS is mandatory for electronics sold in India under the Electronics and Information Technology Goods (Requirements for Compulsory Registration) Order. Covers product safety and electromagnetic compatibility.</p>
+            <div class="aw-cert-card__divider"></div>
+            <div class="aw-cert-card__meta">
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Issuing Body</span><span class="aw-cert-card__meta-val">Bureau of Indian Standards (BIS)</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Standard</span><span class="aw-cert-card__meta-val">IS 13252 · IS 616 · CRS Order 2012</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Scope</span><span class="aw-cert-card__meta-val">IoT modules &amp; gateway hardware</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Testing Lab</span><span class="aw-cert-card__meta-val">BIS-recognised NABL accredited lab</span></div>
+            </div>
+            <div class="aw-cert-card__products">
+              <span class="aw-cert-card__chip">LoRa Module</span>
+              <span class="aw-cert-card__chip">Wi-SUN Module</span>
+              <span class="aw-cert-card__chip">Gateway Hardware</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CE RED -->
+      <div class="col-md-6 col-lg-4" data-filter="international">
+        <div class="aw-cert-card">
+          <div class="aw-cert-card__header">
+            <span class="aw-cert-card__status aw-cert-card__status--active">Active</span>
+            <div class="aw-cert-card__badge" style="background:linear-gradient(135deg,#003087,#0057e7);">CE</div>
+            <h3 class="aw-cert-card__name">CE Marking (RED)</h3>
+            <p class="aw-cert-card__issuer">European Union — Radio Equipment Directive</p>
+          </div>
+          <div class="aw-cert-card__body">
+            <p class="aw-cert-card__desc">CE marking under the Radio Equipment Directive (RED) 2014/53/EU — required for all radio equipment placed on the European market. Demonstrates conformity with EU safety, health, and environmental requirements. Nebulae's CE-marked modules are shipped to customers in 25+ European markets.</p>
+            <div class="aw-cert-card__divider"></div>
+            <div class="aw-cert-card__meta">
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Directive</span><span class="aw-cert-card__meta-val">RED 2014/53/EU</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Standards</span><span class="aw-cert-card__meta-val">EN 300 220 · EN 301 489 · EN 62368</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Markets</span><span class="aw-cert-card__meta-val">EU 27 + UK (UKCA equivalent)</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Notified Body</span><span class="aw-cert-card__meta-val">Self-declaration with technical file</span></div>
+            </div>
+            <div class="aw-cert-card__products">
+              <span class="aw-cert-card__chip">LoRa Module</span>
+              <span class="aw-cert-card__chip">Wi-SUN Module</span>
+              <span class="aw-cert-card__chip">BLE Module</span>
+              <span class="aw-cert-card__chip">Zigbee Module</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FCC -->
+      <div class="col-md-6 col-lg-4" data-filter="international">
+        <div class="aw-cert-card">
+          <div class="aw-cert-card__header">
+            <span class="aw-cert-card__status aw-cert-card__status--active">Active</span>
+            <div class="aw-cert-card__badge" style="background:linear-gradient(135deg,#b22222,#8b0000);">FCC</div>
+            <h3 class="aw-cert-card__name">FCC Part 15 Certification</h3>
+            <p class="aw-cert-card__issuer">Federal Communications Commission, USA</p>
+          </div>
+          <div class="aw-cert-card__body">
+            <p class="aw-cert-card__desc">FCC Part 15 certification for unlicensed radio devices operating in the USA. Required for sale or use of intentional and unintentional radiators in the US market. Nebulae's LoRa concentrator boards and mini PCIe cards are FCC ID certified, enabling direct use in North American deployments and export.</p>
+            <div class="aw-cert-card__divider"></div>
+            <div class="aw-cert-card__meta">
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Regulation</span><span class="aw-cert-card__meta-val">FCC Part 15 Subpart C &amp; B</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Frequency</span><span class="aw-cert-card__meta-val">902–928 MHz (US915) · 2.4 GHz</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Test Lab</span><span class="aw-cert-card__meta-val">FCC-accredited TCB laboratory</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Markets</span><span class="aw-cert-card__meta-val">USA · Canada (ISED) · Mexico</span></div>
+            </div>
+            <div class="aw-cert-card__products">
+              <span class="aw-cert-card__chip">LoRa Concentrator</span>
+              <span class="aw-cert-card__chip">LoRa Mini PCIe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ISO 9001 -->
+      <div class="col-md-6 col-lg-4" data-filter="quality">
+        <div class="aw-cert-card">
+          <div class="aw-cert-card__header">
+            <span class="aw-cert-card__status aw-cert-card__status--active">Active</span>
+            <div class="aw-cert-card__badge" style="background:linear-gradient(135deg,#1a7a1a,#145214);">ISO</div>
+            <h3 class="aw-cert-card__name">ISO 9001:2015</h3>
+            <p class="aw-cert-card__issuer">International Organization for Standardization</p>
+          </div>
+          <div class="aw-cert-card__body">
+            <p class="aw-cert-card__desc">ISO 9001:2015 Quality Management System certification covering Nebulae's design, development, manufacturing, testing, and support processes at our Anand, Gujarat facility. Demonstrates a systematic approach to consistent product quality and continuous improvement — audited annually by an accredited third-party certification body.</p>
+            <div class="aw-cert-card__divider"></div>
+            <div class="aw-cert-card__meta">
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Standard</span><span class="aw-cert-card__meta-val">ISO 9001:2015</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Scope</span><span class="aw-cert-card__meta-val">Design · Manufacturing · Support</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Facility</span><span class="aw-cert-card__meta-val">GIDC Estate, Anand, Gujarat</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Audit Cycle</span><span class="aw-cert-card__meta-val">Annual surveillance + 3-year recert</span></div>
+            </div>
+            <div class="aw-cert-card__products">
+              <span class="aw-cert-card__chip">All Products</span>
+              <span class="aw-cert-card__chip">Manufacturing</span>
+              <span class="aw-cert-card__chip">Design Process</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LoRa Alliance -->
+      <div class="col-md-6 col-lg-4" data-filter="protocol">
+        <div class="aw-cert-card">
+          <div class="aw-cert-card__header">
+            <span class="aw-cert-card__status aw-cert-card__status--active">Compliant</span>
+            <div class="aw-cert-card__badge" style="background:linear-gradient(135deg,#5b21b6,#4c1d95);">LoRa</div>
+            <h3 class="aw-cert-card__name">LoRa Alliance Compliance</h3>
+            <p class="aw-cert-card__issuer">LoRa Alliance — LoRaWAN Specification</p>
+          </div>
+          <div class="aw-cert-card__body">
+            <p class="aw-cert-card__desc">Nebulae's LoRaWAN modules implement the LoRa Alliance LoRaWAN 1.0.4 and 1.1 specifications — including Class A, Class B, and Class C device modes, OTAA and ABP join procedures, ADR (Adaptive Data Rate), and LoRaWAN FUOTA (Firmware Update Over The Air). Interoperable with all LoRa Alliance-certified network servers.</p>
+            <div class="aw-cert-card__divider"></div>
+            <div class="aw-cert-card__meta">
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Spec Version</span><span class="aw-cert-card__meta-val">LoRaWAN 1.0.4 · 1.1</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Device Classes</span><span class="aw-cert-card__meta-val">Class A · Class B · Class C</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Security</span><span class="aw-cert-card__meta-val">AES-128 OTAA · Network &amp; App Keys</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Band</span><span class="aw-cert-card__meta-val">IN865 · EU868 · US915 · AS923</span></div>
+            </div>
+            <div class="aw-cert-card__products">
+              <span class="aw-cert-card__chip">NEB-LRW-100</span>
+              <span class="aw-cert-card__chip">NEB-LRW-200</span>
+              <span class="aw-cert-card__chip">LoRa Gateway</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wi-SUN Alliance -->
+      <div class="col-md-6 col-lg-4" data-filter="protocol">
+        <div class="aw-cert-card">
+          <div class="aw-cert-card__header">
+            <span class="aw-cert-card__status aw-cert-card__status--active">Compliant</span>
+            <div class="aw-cert-card__badge" style="background:linear-gradient(135deg,#0d9488,#065f46);">WSA</div>
+            <h3 class="aw-cert-card__name">Wi-SUN Alliance FAN Compliance</h3>
+            <p class="aw-cert-card__issuer">Wi-SUN Alliance — FAN 1.1 Specification</p>
+          </div>
+          <div class="aw-cert-card__body">
+            <p class="aw-cert-card__desc">Nebulae's Wi-SUN modules implement Wi-SUN FAN (Field Area Network) 1.1 — including IEEE 802.15.4g PHY, 6LoWPAN adaptation layer, RPL mesh routing protocol, and Wi-SUN FAN-specific security (EAP-TLS, PANA). Designed for interoperability with all Wi-SUN Alliance-certified FAN devices from other manufacturers.</p>
+            <div class="aw-cert-card__divider"></div>
+            <div class="aw-cert-card__meta">
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Spec Version</span><span class="aw-cert-card__meta-val">Wi-SUN FAN 1.1</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">PHY Layer</span><span class="aw-cert-card__meta-val">IEEE 802.15.4g OFDM/FSK</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Routing</span><span class="aw-cert-card__meta-val">RPL / 6LoWPAN / IPv6</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Security</span><span class="aw-cert-card__meta-val">EAP-TLS · AES-128 CCM*</span></div>
+            </div>
+            <div class="aw-cert-card__products">
+              <span class="aw-cert-card__chip">NEB-WSN-100</span>
+              <span class="aw-cert-card__chip">Wi-SUN Gateway</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IS 16444 -->
+      <div class="col-md-6 col-lg-4" data-filter="product">
+        <div class="aw-cert-card">
+          <div class="aw-cert-card__header">
+            <span class="aw-cert-card__status aw-cert-card__status--active">Aligned</span>
+            <div class="aw-cert-card__badge" style="background:linear-gradient(135deg,#374151,#111827);">IS</div>
+            <h3 class="aw-cert-card__name">IS 16444 — Smart Electricity Meter</h3>
+            <p class="aw-cert-card__issuer">Bureau of Indian Standards · Ministry of Power RDSS</p>
+          </div>
+          <div class="aw-cert-card__body">
+            <p class="aw-cert-card__desc">Indian Standard IS 16444 (Parts 1, 2, 3) defines technical requirements for Advanced Metering Infrastructure (AMI) electricity meters in India. Nebulae's LoRaWAN and Wi-SUN communication modules are designed to interface with IS 16444-compliant meters via RS-485 and implement DLMS/COSEM data protocol required under the RDSS and AMISP schemes.</p>
+            <div class="aw-cert-card__divider"></div>
+            <div class="aw-cert-card__meta">
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Standard</span><span class="aw-cert-card__meta-val">IS 16444 Part 1 / 2 / 3</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Interface</span><span class="aw-cert-card__meta-val">RS-485 · DLMS/COSEM</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Scheme</span><span class="aw-cert-card__meta-val">RDSS · AMISP · MoP Guidelines</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Security</span><span class="aw-cert-card__meta-val">AES-128 min. · DLMS security suite</span></div>
+            </div>
+            <div class="aw-cert-card__products">
+              <span class="aw-cert-card__chip">Wi-SUN Module</span>
+              <span class="aw-cert-card__chip">LoRa Module</span>
+              <span class="aw-cert-card__chip">DLMS Adapter</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IS 15500 -->
+      <div class="col-md-6 col-lg-4" data-filter="product">
+        <div class="aw-cert-card">
+          <div class="aw-cert-card__header">
+            <span class="aw-cert-card__status aw-cert-card__status--active">Aligned</span>
+            <div class="aw-cert-card__badge" style="background:linear-gradient(135deg,#0369a1,#01579b);">IS</div>
+            <h3 class="aw-cert-card__name">IS 15500 — Smart Water Meter</h3>
+            <p class="aw-cert-card__issuer">Bureau of Indian Standards · Jal Jeevan Mission</p>
+          </div>
+          <div class="aw-cert-card__body">
+            <p class="aw-cert-card__desc">Indian Standard IS 15500 specifies requirements for electronic water meters used in automated meter reading (AMR) and advanced metering infrastructure (AMI). Nebulae's LoRaWAN pulse adapter modules connect to IS 15500-compliant water meters, supporting remote valve control, tamper detection, and burst/leak alerts as required under the Jal Jeevan Mission AMI guidelines.</p>
+            <div class="aw-cert-card__divider"></div>
+            <div class="aw-cert-card__meta">
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Standard</span><span class="aw-cert-card__meta-val">IS 15500 AMI/AMR</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Interface</span><span class="aw-cert-card__meta-val">Pulse output · RS-485</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Scheme</span><span class="aw-cert-card__meta-val">Jal Jeevan Mission · RDSS Water</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Features</span><span class="aw-cert-card__meta-val">Remote valve · Tamper · Burst alert</span></div>
+            </div>
+            <div class="aw-cert-card__products">
+              <span class="aw-cert-card__chip">LoRa Pulse Adapter</span>
+              <span class="aw-cert-card__chip">Water AMI Module</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RoHS -->
+      <div class="col-md-6 col-lg-4" data-filter="quality">
+        <div class="aw-cert-card">
+          <div class="aw-cert-card__header">
+            <span class="aw-cert-card__status aw-cert-card__status--active">Compliant</span>
+            <div class="aw-cert-card__badge" style="background:linear-gradient(135deg,#166534,#14532d);">RoHS</div>
+            <h3 class="aw-cert-card__name">RoHS 3 Compliance</h3>
+            <p class="aw-cert-card__issuer">EU Directive 2011/65/EU (as amended 2015/863)</p>
+          </div>
+          <div class="aw-cert-card__body">
+            <p class="aw-cert-card__desc">Restriction of Hazardous Substances (RoHS 3) compliance — all Nebulae PCBs and components are free from the 10 restricted substances including lead (Pb), mercury (Hg), cadmium (Cd), hexavalent chromium, and specified flame retardants. RoHS compliance is verified through material declarations from component suppliers and periodic third-party testing.</p>
+            <div class="aw-cert-card__divider"></div>
+            <div class="aw-cert-card__meta">
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Directive</span><span class="aw-cert-card__meta-val">2011/65/EU + 2015/863/EU</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Substances</span><span class="aw-cert-card__meta-val">10 restricted substances compliant</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Verification</span><span class="aw-cert-card__meta-val">Supplier DoC + XRF testing</span></div>
+              <div class="aw-cert-card__meta-row"><span class="aw-cert-card__meta-label">Scope</span><span class="aw-cert-card__meta-val">All PCBs and assembled modules</span></div>
+            </div>
+            <div class="aw-cert-card__products">
+              <span class="aw-cert-card__chip">All Products</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /certGrid -->
+
+    <!-- Download strip -->
+    <div class="aw-dl-strip">
+      <a href="contact.html" class="aw-dl-btn">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Request WPC Certificate
+      </a>
+      <a href="contact.html" class="aw-dl-btn">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Request CE Declaration
+      </a>
+      <a href="contact.html" class="aw-dl-btn">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Request ISO 9001 Certificate
+      </a>
+      <a href="contact.html" class="aw-dl-btn">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Request FCC ID Document
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMPLIANCE MATRIX ═══ -->
+<section class="aw-section aw-section--surf">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="aw-section-eyebrow">At a Glance</span>
+      <h2 class="aw-section-title">Product × Certification Matrix</h2>
+      <p class="aw-section-desc mx-auto">Quick reference for which certifications apply to each Nebulae product line.</p>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="aw-matrix">
+        <thead>
+          <tr>
+            <th style="text-align:left;">Product / Module</th>
+            <th>WPC</th><th>BIS</th><th>CE</th><th>FCC</th><th>ISO 9001</th><th>LoRa Alliance</th><th>Wi-SUN</th><th>RoHS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>LoRa Module (NEB-LRW-100/200)</td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td></tr>
+          <tr><td>Wi-SUN Module (NEB-WSN-100)</td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td></tr>
+          <tr><td>Zigbee Module</td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td></tr>
+          <tr><td>BLE Module</td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td></tr>
+          <tr><td>Wi-Fi Module</td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td></tr>
+          <tr><td>GSM / LTE Module</td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td></tr>
+          <tr><td>LoRa Gateway / Concentrator</td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td></tr>
+          <tr><td>Wi-SUN Gateway</td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-na">—</span></td><td><span class="aw-chk">✓</span></td><td><span class="aw-chk">✓</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.75rem;color:#9ca3af;margin-top:1rem;text-align:center;">✓ = Certified/Compliant &nbsp;·&nbsp; — = Not applicable to this product type &nbsp;·&nbsp; Contact us for certification documents under NDA.</p>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATION PROCESS ═══ -->
+<section class="aw-section">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-5">
+        <span class="aw-section-eyebrow">How We Certify</span>
+        <h2 class="aw-section-title">Our Certification Process</h2>
+        <p class="aw-section-desc">Every Nebulae product goes through a structured pre-compliance → lab → submission → approval pipeline managed entirely in-house by our regulatory team. No external certification agencies needed — we own the process end-to-end.</p>
+        <div style="background:linear-gradient(135deg,#4f46e5,#06b6d4);border-radius:18px;padding:1.75rem;margin-top:2rem;">
+          <p style="font-family:'Outfit',sans-serif;font-size:1rem;font-weight:800;color:#fff;margin-bottom:.5rem;">Managing Your Product's Certification?</p>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.75);line-height:1.65;margin-bottom:1.25rem;">Nebulae's certification team manages WPC, BIS, CE, and FCC for client products as part of our IoT Product Development service.</p>
+          <a href="services/iot-product-development.html" style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:.84rem;font-weight:700;padding:.6rem 1.2rem;border-radius:8px;text-decoration:none;">Learn About Our Service →</a>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="aw-process-wrap">
+          <div class="aw-process-item">
+            <div class="aw-process-num">1</div>
+            <div class="aw-process-body">
+              <p class="aw-process-title">Design-for-Compliance Review</p>
+              <p class="aw-process-desc">Before PCB layout, our regulatory team reviews the schematic and planned operating parameters against target certifications — WPC frequency band, CE emission limits, FCC Part 15 masks. Compliance issues are fixed in design, not at the lab.</p>
+            </div>
+          </div>
+          <div class="aw-process-item">
+            <div class="aw-process-num">2</div>
+            <div class="aw-process-body">
+              <p class="aw-process-title">In-House Pre-Compliance Testing</p>
+              <p class="aw-process-desc">Near-field EMC scan and conducted emissions check in our lab using calibrated equipment. Radiated power measurements to verify EIRP is within WPC/CE/FCC limits. Issues are resolved before external lab booking.</p>
+            </div>
+          </div>
+          <div class="aw-process-item">
+            <div class="aw-process-num">3</div>
+            <div class="aw-process-body">
+              <p class="aw-process-title">Accredited Lab Testing</p>
+              <p class="aw-process-desc">Product sent to WPC-empanelled / BIS-recognised / FCC-accredited TCB laboratory. We prepare the Technical Construction File (TCF) and test plan in advance — minimising lab time and re-test risk.</p>
+            </div>
+          </div>
+          <div class="aw-process-item">
+            <div class="aw-process-num">4</div>
+            <div class="aw-process-body">
+              <p class="aw-process-title">Documentation & Submission</p>
+              <p class="aw-process-desc">Full regulatory package prepared: test reports, Declaration of Conformity (DoC), technical file, application forms. WPC online portal submission, BIS CRS registration, CE DoC signing, FCC TCB submission — handled in-house.</p>
+            </div>
+          </div>
+          <div class="aw-process-item">
+            <div class="aw-process-num">5</div>
+            <div class="aw-process-body">
+              <p class="aw-process-title">Approval & Ongoing Maintenance</p>
+              <p class="aw-process-desc">Certificates received, product marked accordingly. We maintain a certification calendar for renewal dates, track regulatory updates (new standards, amended directives), and manage change-in-design impact assessments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AWARDS ═══ -->
+<section class="aw-section aw-section--surf" id="awards">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="aw-section-eyebrow">Industry Recognition</span>
+      <h2 class="aw-section-title">Awards & Recognition</h2>
+      <p class="aw-section-desc mx-auto">Recognition from India's IoT, Smart City, and electronics industry for Nebulae's engineering and deployment work.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="aw-award-card">
+          <div class="aw-award-card__icon" style="background:rgba(217,119,6,.1);">🏆</div>
+          <p class="aw-award-card__year">2026</p>
+          <h3 class="aw-award-card__title">Smart City Excellence Award — Street Lighting Category</h3>
+          <p class="aw-award-card__org">IoT India Congress 2026</p>
+          <p class="aw-award-card__desc">Recognised for the LoRaWAN adaptive street lighting deployment across a Smart City Mission municipality achieving 44% energy savings and 95% operator adoption.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="aw-award-card">
+          <div class="aw-award-card__icon" style="background:rgba(37,99,235,.1);">🥇</div>
+          <p class="aw-award-card__year">2025</p>
+          <h3 class="aw-award-card__title">Best IoT Hardware Company — India</h3>
+          <p class="aw-award-card__org">Electronics For You (EFY) Awards 2025</p>
+          <p class="aw-award-card__desc">EFY recognised Nebulae as India's Best IoT Hardware Company for its indigenous LoRaWAN and Wi-SUN module development and large-scale AMI deployments.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="aw-award-card">
+          <div class="aw-award-card__icon" style="background:rgba(79,70,229,.1);">🌟</div>
+          <p class="aw-award-card__year">2025</p>
+          <h3 class="aw-award-card__title">Make in India IoT Innovation Award</h3>
+          <p class="aw-award-card__org">NASSCOM IoT India 2025</p>
+          <p class="aw-award-card__desc">Awarded for indigenously designing and manufacturing India's first Wi-SUN FAN 1.1 module at the Anand, Gujarat facility — eliminating import dependency for RDSS AMI deployments.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="aw-award-card">
+          <div class="aw-award-card__icon" style="background:rgba(13,148,136,.1);">🎖️</div>
+          <p class="aw-award-card__year">2024</p>
+          <h3 class="aw-award-card__title">Smart Water Management Innovation Award</h3>
+          <p class="aw-award-card__org">India Smart Utility Week 2024</p>
+          <p class="aw-award-card__desc">Recognised for the 12,000-node LoRaWAN water AMI deployment achieving 28% NRW reduction for a Gujarat municipal corporation under Jal Jeevan Mission.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="aw-award-card">
+          <div class="aw-award-card__icon" style="background:rgba(5,150,105,.1);">🏅</div>
+          <p class="aw-award-card__year">2024</p>
+          <h3 class="aw-award-card__title">Startup of the Year — Deep Tech Category</h3>
+          <p class="aw-award-card__org">Gujarat Innovation Summit 2024</p>
+          <p class="aw-award-card__desc">Recognised by the Gujarat government for deep-tech hardware innovation — indigenous IoT module design, WPC/BIS certification, and contribution to Gujarat's smart city infrastructure.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="aw-award-card">
+          <div class="aw-award-card__icon" style="background:rgba(220,38,38,.1);">🔬</div>
+          <p class="aw-award-card__year">2023</p>
+          <h3 class="aw-award-card__title">Emerging IoT Company — India</h3>
+          <p class="aw-award-card__org">Electronica India 2023</p>
+          <p class="aw-award-card__desc">Recognised at Electronica India as an Emerging IoT Company for the rapid expansion of the LoRaWAN and Wi-SUN product portfolio and deployment scale across utilities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="aw-section">
+  <div class="container">
+    <div style="background:linear-gradient(135deg,#0a0a2e,#1a1a6e);border-radius:28px;padding:4.5rem 3rem;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(6,182,212,.18),transparent 50%),radial-gradient(circle at 80% 50%,rgba(79,70,229,.22),transparent 50%);pointer-events:none;"></div>
+      <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:#fff;margin-bottom:.75rem;position:relative;z-index:1;">Need Certification Documents?</h2>
+      <p style="color:rgba(255,255,255,.6);font-size:.97rem;max-width:520px;margin:0 auto 2rem;position:relative;z-index:1;">WPC ETA certificates, CE Declarations of Conformity, FCC ID grant documents, and ISO 9001 certificates are available to qualified customers under NDA.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;">
+        <a href="contact.html" style="display:inline-flex;align-items:center;gap:.45rem;padding:.85rem 1.85rem;border-radius:10px;background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;font-size:.9rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;box-shadow:0 8px 28px rgba(79,70,229,.35);">Request Documents →</a>
+        <a href="capabilities.html" style="display:inline-flex;align-items:center;gap:.45rem;padding:.82rem 1.75rem;border-radius:10px;border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);font-size:.9rem;font-weight:600;font-family:'Outfit',sans-serif;text-decoration:none;">View Capabilities</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="atl-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+
+      <!-- Brand -->
+      <div class="col-12 col-md-4">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img loading="lazy" src="./assets/images/LogoWhite.png" alt="Nebulae" class="atl-footer__logo-img atl-footer__logo-color">
+        </div>
+        <p class="atl-footer__desc">End-to-end IoT solutions provider — from embedded hardware design and wireless modules to cloud integration and smart utility deployments across India and beyond.</p>
+      </div>
+
+      <!-- Navigate -->
+      <div class="col-6 col-md-2">
+        <h6 class="atl-footer__heading">Navigate</h6>
+        <ul class="atl-footer__list">
+          <li><a href="#home" onclick="return navClick('home')">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="industries.html">Industries</a></li>
+           <li><a href="./resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Services & Solutions -->
+      <div class="col-6 col-md-3">
+        <h6 class="atl-footer__heading">Services</h6>
+        <ul class="atl-footer__list">
+          <li><a href="services/iot-product-development.html">IoT Product Development</a></li>
+          <li><a href="services/embedded-hardware-design.html">Embedded Hardware Design</a></li>
+          <li><a href="services/embedded-firmware-design.html">Embedded Firmware Design</a></li>
+          <li><a href="services/iot-cloud-integration.html">IoT Cloud Integration</a></li>
+          <li><a href="services/pcb-design-services.html">PCB Design Services</a></li>
+          <li><a href="services/iot-consulting.html">IoT Consulting</a></li>
+        </ul>
+        <h6 class="atl-footer__heading mt-3">Solutions</h6>
+        <ul class="atl-footer__list">
+          <li><a href="solutions/smart-water-meter.html">Smart Water Meter</a></li>
+          <li><a href="solutions/smart-electric-meter.html">Smart Electric Meter</a></li>
+          <li><a href="solutions/smart-street-light.html">Smart Street Light</a></li>
+          <li><a href="solutions/transformer-monitoring.html">Transformer Monitoring</a></li>
+        </ul>
+      </div>
+
+      <!-- Products & Contact -->
+      <div class="col-12 col-md-3">
+        <h6 class="atl-footer__heading">Products</h6>
+        <ul class="atl-footer__list">
+          <li><a href="products.html?proto=lora&amp;type=module">LoRa — Module &amp; Gateway</a></li>
+          <li><a href="products.html?proto=wisun&amp;type=module">Wi-SUN — Module &amp; Gateway</a></li>
+          <li><a href="products.html?proto=zigbee&amp;type=module">Zigbee — Module &amp; Gateway</a></li>
+          <li><a href="products.html?proto=gsm&amp;type=module">LTE — Module &amp; Gateway</a></li>
+          <li><a href="products.html?proto=ble&amp;type=module">BLE — Module &amp; Gateway</a></li>
+          <li><a href="products.html">View All Products →</a></li>
+        </ul>
+        <h6 class="atl-footer__heading mt-3">Contact</h6>
+        <ul class="atl-footer__list">
+          <li><a href="tel:+9102692232501">+91-02692-232501 / 232502</a></li>
+          <li><a href="mailto:sales@nebulae.io">sales@nebulae.io</a></li>
+          <li>Anand, Gujarat, India</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="atl-footer__bottom">
+      <span>© 2026 Nebulae. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/nebulae-nav.js"></script>
+<script src="./assets/js/nebulae-page.js"></script>
+<script>
+// Filter tabs
+document.querySelectorAll('.aw-tab').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.aw-tab').forEach(function(b){b.classList.remove('active');});
+    this.classList.add('active');
+    var filter = this.dataset.filter;
+    document.querySelectorAll('#certGrid [data-filter]').forEach(function(card){
+      if(filter === 'all' || card.dataset.filter === filter){
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+</body></html>

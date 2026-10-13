@@ -1,0 +1,312 @@
+{
+ "slug": "nm0221i-nic",
+ "model": "NM0221-I NIC Card",
+ "full": "NM0221-I WPC Certified NIC Card",
+ "title_name": "Wi-SUN / 6LoWPAN NIC Card",
+ "type_key": "module",
+ "type_label": "NIC Card",
+ "proto_key": "wisun",
+ "proto_crumb": "Wi-SUN",
+ "proto_label": "Wi-SUN / 6LoWPAN",
+ "badge": "NIC Card",
+ "category": "Wi-SUN / 6LoWPAN Meter NIC Card",
+ "tagline": "WPC certified NM0221-I based NIC card for IS16444 smart meters — 2-wire UART meter interface.",
+ "meta_desc": "Nebulae NM0221-I NIC card — WPC certified 6LoWPAN / IEEE 802.15.4 network interface card for IS16444 smart meters: 863-876 MHz, 15 dBm radiated TX, 2-wire UART, FOTA.",
+ "desc": "The NM0221-I NIC Card by Nebulae provides long-range connectivity for IoT devices and is engineered to support 6LoWPAN and IEEE 802.15.4 PHY networks. It is ideal for IS16444 smart metering applications, is WPC certified, and offers FOTA for remote security updates. It connects to the meter through a 2-wire serial UART interface.",
+ "cert_badges": [
+  "WPC Certified",
+  "6LoWPAN",
+  "IS16444"
+ ],
+ "gallery": [
+  {
+   "file": "nm0221i-nic-block-diagram.png",
+   "alt": "NM0221-I NIC card functional block diagram showing the main board and antenna board",
+   "label": "Block diagram"
+  },
+  {
+   "file": "nm0221i-module.jpg",
+   "alt": "NM0221-I module used on the NIC card, shown next to an Indian coin",
+   "label": "NM0221-I module"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "plug",
+   "label": "Meter Interface",
+   "value": "2-wire serial UART"
+  },
+  {
+   "icon": "range",
+   "label": "TX / RX",
+   "value": "15 dBm radiated · −105 dBm @ 38.4 kbps"
+  },
+  {
+   "icon": "grid",
+   "label": "Frequency Band",
+   "value": "863 MHz to 876 MHz"
+  },
+  {
+   "icon": "bolt",
+   "label": "Input Supply",
+   "value": "3.3 V to 5 V DC"
+  },
+  {
+   "icon": "thermo",
+   "label": "Working Temperature",
+   "value": "0 ~ 70 °C or −40 ~ 85 °C (industrial)"
+  },
+  {
+   "icon": "ruler",
+   "label": "Dimensions",
+   "value": "62.8 × 42.8 mm, 2-layer PCB"
+  }
+ ],
+ "stats": [
+  {
+   "num": "15 dBm",
+   "label": "Radiated transmit power"
+  },
+  {
+   "num": "−105 dBm",
+   "label": "Sensitivity @ 38.4 kbps, 1% PER"
+  },
+  {
+   "num": "100 mA",
+   "label": "TX current @ 3.3 V"
+  },
+  {
+   "num": "62.8 × 42.8 mm",
+   "label": "Card dimensions"
+  }
+ ],
+ "overview": [
+  "The NM0221-I NIC Card is a SoC-based low-power wireless network interface card by Nebulae that provides long-range connectivity for IoT devices. It is engineered to support 6LoWPAN and IEEE 802.15.4 PHY networks and is ideal for applications that need self-forming and self-healing mesh networks.",
+  "The card is ideal for IS16444 smart metering applications because it is equipped with sufficient memory and is WPC certified. Its FOTA capability makes it suitable for remote security updates.",
+  "By leveraging 6LoWPAN technology it enables communication between meters and utility providers, supporting advanced smart-grid capabilities such as reliable mesh connectivity, long-range communication, low power consumption and real-time monitoring of energy usage patterns. Two LEDs indicate power and network status, and the card is easy to install."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Built for smart meters",
+   "d": "WPC certified NIC card for IS16444 smart metering applications."
+  },
+  {
+   "t": "Simple meter interface",
+   "d": "2-wire serial UART communication to the meter."
+  },
+  {
+   "t": "Self-healing mesh",
+   "d": "6LoWPAN over IEEE 802.15.4 for self-forming, self-healing networks."
+  },
+  {
+   "t": "Status LEDs",
+   "d": "One LED for power and one for network status."
+  },
+  {
+   "t": "Remote updates",
+   "d": "OTA firmware update mechanism for remote security updates."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Card Specifications",
+   "rows": [
+    [
+     "Base Module",
+     "NM0221-I (WPC certified)"
+    ],
+    [
+     "Frequency Band",
+     "863 MHz to 876 MHz"
+    ],
+    [
+     "Radiated Transmit Power",
+     "15 dBm"
+    ],
+    [
+     "RX Sensitivity (@ 1% PER)",
+     "38.4 kbps: −105 dBm · 100 kbps: −101 dBm"
+    ],
+    [
+     "Meter Interface",
+     "2-wire serial UART"
+    ],
+    [
+     "Dimensions",
+     "62.8 × 42.8 mm"
+    ],
+    [
+     "PCB",
+     "2-layer design"
+    ]
+   ]
+  },
+  {
+   "group": "Processor & Memory",
+   "rows": [
+    [
+     "Flash Program Memory",
+     "Up to 1024 kB"
+    ],
+    [
+     "RAM Data Memory",
+     "Up to 128 kB"
+    ],
+    [
+     "Modulation",
+     "BPSK / DBPSK TX"
+    ],
+    [
+     "Timers",
+     "2 × watchdog timer with dedicated RC oscillator"
+    ],
+    [
+     "Standard",
+     "IEEE 802.15.4 compliant"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical & Environmental",
+   "rows": [
+    [
+     "Operating Voltage",
+     "3.3 V to 5 V DC input supply"
+    ],
+    [
+     "Current Consumption",
+     "100 mA @ 3.3 V, TX mode"
+    ],
+    [
+     "Working Temperature",
+     "0 ~ 70 °C (commercial grade) or −40 ~ 85 °C (industrial grade)"
+    ]
+   ]
+  },
+  {
+   "group": "Meter Pin Connection (meter pin → NM0221-I module pin)",
+   "rows": [
+    [
+     "Meter pins 1, 2, 4, 5, 8, 9, 11",
+     "NC"
+    ],
+    [
+     "Meter pin 3 — Power EN (option with NL)",
+     "Module pin 1"
+    ],
+    [
+     "Meter pin 6 — Meter TX",
+     "Module pin 26"
+    ],
+    [
+     "Meter pin 7 — Meter RX",
+     "Module pin 8"
+    ],
+    [
+     "Meter pin 10 — NIC Reset (optional with NL)",
+     "Module pin 27"
+    ],
+    [
+     "Meter pins 13, 14",
+     "GND"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NM0221-I NIC card datasheet (version 1.0).",
+ "features": [
+  {
+   "icon": "plug",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "2-Wire UART Meter Interface",
+   "d": "Serial UART communication to the meter over two wires."
+  },
+  {
+   "icon": "network",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "6LoWPAN Mesh",
+   "d": "6LoWPAN over IEEE 802.15.4 for reliable, self-healing connectivity."
+  },
+  {
+   "icon": "shield",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "WPC Certified",
+   "d": "WPC certified NM0221-I based NIC card."
+  },
+  {
+   "icon": "chip",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Ample Memory",
+   "d": "Up to 1024 kB flash and 128 kB RAM."
+  },
+  {
+   "icon": "bolt",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Low Power",
+   "d": "Low power consumption; 100 mA in TX mode at 3.3 V."
+  },
+  {
+   "icon": "eye",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "Power & Network LEDs",
+   "d": "Two LEDs: one for power and one for network status."
+  },
+  {
+   "icon": "download",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "FOTA",
+   "d": "Over-the-air firmware update mechanism."
+  },
+  {
+   "icon": "grid",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Easy to Install",
+   "d": "Designed for straightforward installation in the meter."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "meter",
+   "t": "IS16444 Smart Metering",
+   "d": "Network interface for IS16444 smart meters."
+  },
+  {
+   "icon": "bolt",
+   "t": "Smart Grid",
+   "d": "Meter-to-utility communication for smart-grid deployments."
+  },
+  {
+   "icon": "gauge",
+   "t": "Energy Usage Monitoring",
+   "d": "Real-time insight into energy usage patterns."
+  }
+ ],
+ "part_rows": [
+  [
+   "NM0221-I NIC Card",
+   "WPC certified NIC card based on the NM0221-I module"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NM0221-I Module Brochure",
+   "path": "./assets/docs/NM0221-I_Brochure.pdf",
+   "sub": "PDF · Base module brochure"
+  }
+ ],
+ "related": [
+  "nm0221i",
+  "nln0721"
+ ],
+ "primary_doc": ""
+}

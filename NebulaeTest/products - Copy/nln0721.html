@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NLN0721 NebuLink Wi-SUN Module — Wi-SUN | Nebulae IoT Products</title>
+  <meta name="description" content="NebuLink NLN0721 — EFR32FG28 based sub-GHz Wi-SUN module: +20 dBm TX, -108 dBm sensitivity, Wi-SUN / Amazon Sidewalk / WM-BUS, WPC certified, 26.68 x 16 x 3.6 mm."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.nebulae.io/products/nln0721.html"/>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta property="og:title" content="NLN0721 | Nebulae"/>
+  <meta property="og:description" content="NebuLink NLN0721 — EFR32FG28 based sub-GHz Wi-SUN module: +20 dBm TX, -108 dBm sensitivity, Wi-SUN / Amazon Sidewalk / WM-BUS, WPC certified, 26.68 x 16 x 3.6 mm."/>
+  <meta property="og:type" content="product"/>
+  <meta property="og:url" content="https://www.nebulae.io/products/nln0721.html"/>
+  <meta property="og:image" content="https://www.nebulae.io/assets/images/products/nln0721-vs-sim.png"/>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "NebuLink Module NLN0721 — Wi-SUN",
+  "description": "The NLN0721 is an ideal sub-GHz solution for Internet of Things applications such as smart metering, smart lighting, building automation and smart homes. Based on the EFR32FG28, this single-die, multi-core module offers long-range and mesh connectivity for multi-hop connections, with industry-leading security, low power consumption and fast wake-up times.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Nebulae"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "System Level Solutions",
+    "url": "https://www.slscorp.com"
+  },
+  "sku": "NLN0721",
+  "mpn": "NLN0721",
+  "category": "Wi-SUN Sub-GHz IoT Module",
+  "url": "https://www.nebulae.io/products/nln0721.html",
+  "image": "https://www.nebulae.io/assets/images/products/nln0721-vs-sim.png"
+}
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <!-- Nebulae shared nav/footer styles -->
+  <link rel="stylesheet" href="../assets/css/nebulae-nav.css">
+  <!-- Product Detail page styles -->
+  <link rel="stylesheet" href="../assets/css/product-detail.css">
+</head>
+<body data-pd-page="nln" data-pd-base="../">
+
+<div id="nblProgressBar" role="progressbar" aria-label="Page scroll progress"></div>
+ 
+<!-- <button id="nblThemeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode"></button> -->
+<button id="nblBackTop" aria-label="Back to top" title="Back to top">
+  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<header>
+<!-- ════ STICKY HEADER ════ -->
+<div class="atl-sticky-header" style="position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:9999!important;">
+
+  <!-- Utility bar -->
+  <div class="atl-util-bar">
+    <div class="atl-util-bar__inner">
+      <div class="atl-util-bar__left">
+        <!-- <span class="atl-util-link">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          India · IoT Solutions Provider
+        </span> -->
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 9898042339 
+        </a>
+      </div>
+      <div class="atl-util-bar__right">
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91-02692-232501/02
+        </a>
+        <a href="mailto:sales@nebulae.io" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          sales@nebulae.io
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main navbar -->
+  <nav class="atl-nav" id="atlNav">
+    <div class="atl-nav__inner">
+
+      <!-- Logo -->
+      <a href="../index.html" class="atl-nav__logo">
+        <img src="../assets/images/LogoBlue.png" alt="Nebulae" class="atl-nav__logo-img">
+      </a>
+
+      <!-- Desktop nav -->
+      <ul class="atl-nav__links" id="navLinks">
+
+        <!-- 1. PRODUCTS -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaProducts">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaProducts')">
+            Products
+            <svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="atl-mega" id="mega-megaProducts">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner atl-mega__inner--products" style="display:flex;gap:0;min-height:320px;">
+
+                <!-- Rail -->
+                <div class="atl-prod-rail">
+                  <button class="atl-prod-rail__item atl-prod-rail__item--active" data-prod="module">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                    Module
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  
+                  <button class="atl-prod-rail__item" data-prod="concentrator">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                    Concentrator
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+
+                  <button class="atl-prod-rail__item" data-prod="gateway">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h.01M10 11h.01"/><circle cx="17" cy="11" r="1" fill="currentColor"/></svg>
+                    Gateway
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="filter">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                    Filter
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  
+                  <button class="atl-prod-rail__item" data-prod="node">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+                    Nodes
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="evk">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+                    EVK
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="dataconnector">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h7"/><circle cx="17" cy="18" r="3"/><path d="M17 15v-1.5M17 21v1.5M14.2 16.5l-1.3-.75M20.1 19.25l1.3.75M14.2 19.25l-1.3.75M20.1 16.5l1.3-.75"/></svg>
+                    Data Connector
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                   
+                </div>
+
+                <!-- Panels -->
+                <div class="atl-prod-panel">
+                  <!-- Module -->
+                  <div class="atl-prod-panel__body atl-prod-panel__body--active" data-panel="module">
+                    <p class="atl-prod-panel__label">Module — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="../products.html?proto=lora&amp;type=module" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="../products.html?proto=wisun&amp;type=module" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="../products.html?proto=zigbee&amp;type=module" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="../products.html?proto=wifi&amp;type=module" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="../products.html?proto=som&amp;type=module" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span><span class="atl-prod-card__name">SOM</span><span class="atl-prod-card__desc">System on Module</span></a>
+                    </div>
+                  </div>
+                  <!-- Gateway -->
+                  <div class="atl-prod-panel__body" data-panel="gateway">
+                    <p class="atl-prod-panel__label">Gateway — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="../products.html?proto=lora&amp;type=gateway" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="../products.html?proto=wisun&amp;type=gateway" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="../products.html?proto=gsm&amp;type=gateway" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">LTE</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- Filter -->
+                  <div class="atl-prod-panel__body" data-panel="filter">
+                    <p class="atl-prod-panel__label">Filter — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="../products.html?proto=lora&amp;type=filter" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- EVK -->
+                  <div class="atl-prod-panel__body" data-panel="evk">
+                    <p class="atl-prod-panel__label">EVK — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="../products.html?proto=lora&amp;type=evk" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- Concentrator -->
+                  <div class="atl-prod-panel__body" data-panel="concentrator">
+                    <p class="atl-prod-panel__label">Concentrator — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="../products.html?proto=lora&amp;type=concentrator" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- Node -->
+                  <div class="atl-prod-panel__body" data-panel="node">
+                    <p class="atl-prod-panel__label">Node — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="../products.html?proto=lora&amp;type=node" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="../products.html?proto=wisun&amp;type=node" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                    </div>
+                  </div>
+                  <!-- Add to Panels section (after EVK panel) -->
+                  <div class="atl-prod-panel__body" data-panel="dataconnector">
+                    <p class="atl-prod-panel__label">Data Connector — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="../products.html?proto=lora&amp;type=dataconnector" class="atl-prod-card atl-prod-card--blue"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M1.42 9a16 16 0 0121.16 0" />
+                            <path d="M5 12.55a11 11 0 0114.08 0" />
+                            <path d="M10.54 17a6 6 0 012.92 0" />
+                            <circle cx="12" cy="20" r="1" fill="currentColor" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To LoRa</span><span class="atl-prod-card__desc">Long Range
+                          IoT</span></a>
+                      <a href="../products.html?proto=wisun&amp;type=dataconnector" class="atl-prod-card atl-prod-card--teal"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M8.5 8.5a5 5 0 0 0 7 7" />
+                            <path d="M5 5a9 9 0 0 0 13 13" />
+                            <path d="M2 2a13 13 0 0 0 19 19" />
+                            <circle cx="12" cy="12" r="1" fill="currentColor" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To Wi-SUN</span><span class="atl-prod-card__desc">Smart
+                          Utility Network</span></a>
+                      <a href="../products.html?proto=zigbee&amp;type=dataconnector" class="atl-prod-card atl-prod-card--orange"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To Zigbee</span><span class="atl-prod-card__desc">Mesh
+                          Networking</span></a>
+                      <a href="../products.html?proto=wifi&amp;type=dataconnector" class="atl-prod-card atl-prod-card--blue"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M5 12.55a11 11 0 0114.08 0" />
+                            <path d="M1.42 9a16 16 0 0121.16 0" />
+                            <path d="M10.54 17a6 6 0 012.92 0" />
+                            <circle cx="12" cy="20" r="1" fill="currentColor" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To Wi-Fi</span><span class="atl-prod-card__desc">RS485 Wireless
+                          LAN</span></a>
+                      <a href="../products.html?proto=gsm&amp;type=dataconnector" class="atl-prod-card atl-prod-card--red"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                            <line x1="12" y1="18" x2="12.01" y2="18" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To LTE</span><span class="atl-prod-card__desc">Cellular
+                          IoT</span></a>
+                  
+                    </div>
+                  </div>
+                   
+                </div><!-- /atl-prod-panel -->
+
+                <!-- Feature card -->
+                <div style="width:220px;flex-shrink:0;padding:1.5rem 1.25rem;display:flex;align-items:center;">
+                  <div class="atl-mega__feature-card" style="width:100%">
+                    <p class="atl-mega__feature-name">Official Partners</p>
+                    <img src="../assets/images/Semtech.png" alt="Official Partner Logo 1" style="max-width:120px;height:auto;margin-bottom:0.75rem;">
+                    <img src="../assets/images/SLabs.png" alt="Official Partner Logo 2" style="max-width:120px;height:auto;">
+                    <a href="../products.html" class="atl-mega__feature-link">View All Products →</a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2. SOLUTIONS -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaSolutions">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaSolutions')">Solutions<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaSolutions">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner atl-mega__inner--3col">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div><div><p class="atl-mega__col-title">Smart Metering</p><p class="atl-mega__col-desc">AMI &amp; AMR utility solutions</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../solutions/smart-water-meter.html"><span class="atl-mega__dot"></span>Smart Water Meter Solution</a></li>
+                    <li><a href="../solutions/smart-electric-meter.html"><span class="atl-mega__dot"></span>Smart Electric Meter Solution</a></li>
+                    <li><a href="../solutions/smart-gas-meter.html"><span class="atl-mega__dot"></span>Smart Gas Metering Solution</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div><div><p class="atl-mega__col-title">Smart Infrastructure</p><p class="atl-mega__col-desc">City &amp; grid automation</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../solutions/smart-street-light.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Smart Street Light Solution</a></li>
+                    <li><a href="../solutions/transformer-monitoring.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Transformer Monitoring System</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col atl-mega__col--feature">
+                     <div class="atl-mega__feature-card" style="width:100%">
+                    <p class="atl-mega__feature-name">Official Partners</p>
+                    <img src="../assets/images/Semtech.png" alt="Official Partner Logo 1" style="max-width:120px;height:auto;margin-bottom:0.75rem;">
+                    <img src="../assets/images/SLabs.png" alt="Official Partner Logo 2" style="max-width:120px;height:auto;">
+                    <a href="../products.html" class="atl-mega__feature-link">View All Products →</a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3. SERVICES -->
+           <li class="atl-nav__item atl-nav__item--mega" id="megaServices">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaServices')">Services<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaServices">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div><p class="atl-mega__col-title">Development</p><p class="atl-mega__col-desc">IoT product &amp; embedded design</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../services/iot-product-development.html"><span class="atl-mega__dot"></span>IoT Product Development</a></li>
+                    <li><a href="../services/embedded-hardware-design.html"><span class="atl-mega__dot"></span>Embedded Hardware Design</a></li>
+                    <li><a href="../services/embedded-firmware-design.html"><span class="atl-mega__dot"></span>Embedded Firmware Development</a></li>
+                    <li><a href="../services/pcb-design-services.html"><span class="atl-mega__dot"></span>PCB Design Services</a></li> 
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div><div><p class="atl-mega__col-title">RF - Survey</p><p class="atl-mega__col-desc">Network, cloud &amp; dashboard</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../services/wireless-sensor-network.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Wireless Sensor Network in IoT</a></li>
+                    
+                    <li><a href="../services/iot-cloud-integration.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>IoT Cloud Integration</a></li>
+                    <li><a href="../services/edge-computing.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Edge Computing</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--purple"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
+    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
+    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
+</svg></div><div><p class="atl-mega__col-title">Cloud</p><p class="atl-mega__col-desc">Platforms &amp; management systems</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../services/lora-management-system.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>LoRa Management System</a></li>
+                    <li><a href="../services/lorawan-network-server.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>LoRaWAN Network Server (LNS)</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--purple"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
+    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
+    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
+</svg></div><div><p class="atl-mega__col-title">IOT Dashboard</p><p class="atl-mega__col-desc">Metering &amp; utility management</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../services/hes-electricity-metering.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>HES Electricity Metering</a></li> 
+                    <li><a href="../services/hes-gas-metering.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>HES Gas Metering</a></li>
+                    <li><a href="../services/hes-water-metering.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>HES Water Metering</a></li>
+                    <li><a href="../services/cms-ev-charging-management-solution.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>CMS - EV Charging Management Solution</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col atl-mega__col--feature">
+                  <div class="atl-mega__feature-card">
+                    <p class="atl-mega__feature-name">Technologies We Use</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;margin:0.75rem 0;">
+                      <img src="../assets/images/SupportedTech/LoRaWAN.png" alt="Technology 4" style="max-width:80px;height:auto;">
+                      <img src="../assets/images/SupportedTech/zigbee.png" alt="Technology 1" style="max-width:80px;height:auto;">
+                      <img src="../assets/images/SupportedTech/Bluetooth.png" alt="Technology 2" style="max-width:80px;height:auto;">
+                      <img src="../assets/images/SupportedTech/WiFi.png" alt="Technology 3" style="max-width:80px;height:auto;">
+                    </div>
+                    <a href="../services.html" class="atl-mega__feature-link">View All Services →</a>
+                
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+          <li class="atl-nav__item">
+          <a class="atl-nav__link" href="../resources.html">Resources</a>
+        </li>
+        <!-- 4. INDUSTRIES -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaIndustries">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaIndustries')">Industries<svg
+              class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="m6 9 6 6 6-6" />
+            </svg></button>
+          <div class="atl-mega" id="mega-megaIndustries">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Smart City</p>
+                      <p class="atl-mega__col-desc">Automation &amp; security</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../industries/home-security-automation.html"><span class="atl-mega__dot"></span>Home Security
+                        &amp; Automation</a></li>
+                    <li><a href="../industries/sos-devices.html"><span class="atl-mega__dot"></span>SOS Devices</a></li>
+                    <li><a href="../industries/smart-city-solutions.html"><span class="atl-mega__dot"></span>Smart City
+                        Solutions</a></li>
+                    <li><a href="../industries/building-management-system.html"><span class="atl-mega__dot"></span>Building
+                        Management System</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 22V12M12 12C12 12 8 9 4 12M12 12C12 12 16 9 20 12M4 8C7 5 12 7 12 7C12 7 17 5 20 8" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Agriculture &amp; Energy</p>
+                      <p class="atl-mega__col-desc">Smart farming &amp; utilities</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../industries/smart-agriculture.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Smart
+                        Agriculture System</a></li>
+                    <li><a href="../industries/farm-animal-management.html"><span
+                          class="atl-mega__dot atl-mega__dot--teal"></span>Farm Animal Management</a></li>
+                    <li><a href="../industries/iot-energy-utilities.html"><span
+                          class="atl-mega__dot atl-mega__dot--teal"></span>IoT in Energy &amp; Utilities</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--orange"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="14" rx="2" />
+                        <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Industrial &amp; Automotive</p>
+                      <p class="atl-mega__col-desc">IIoT &amp; connected vehicles</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../industries/industrial-iot.html"><span class="atl-mega__dot"
+                          style="background:#f97316"></span>Industrial IoT</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--red"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Healthcare</p>
+                      <p class="atl-mega__col-desc">Connected health &amp; Care</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../industries/iot-healthcare.html"><span class="atl-mega__dot atl-mega__dot--red"></span>IoT in
+                        Healthcare</a></li>
+                    <li><a href="../industries/telematics-fleet.html"><span
+                          class="atl-mega__dot atl-mega__dot--red"></span>Telematics &amp; Fleet Management</a></li>
+                    <li><a href="../industries/consumer-iot.html"><span class="atl-mega__dot atl-mega__dot--red"></span>Consumer
+                        IoT Solutions</a></li>
+                  </ul>
+                </div>
+                <!-- NEW: Defence Column -->
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon" style="background:#e8f0fe;"><svg width="18" height="18" fill="none"
+                        stroke="#1e40af" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Defence</p>
+                      <p class="atl-mega__col-desc">IoT for defence &amp; security</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../industries/iot-in-defence.html"><span class="atl-mega__dot"
+                          style="background:#1e40af"></span>IoT in Defence</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- 5. ABOUT US -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaAbout">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaAbout')">About Us<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaAbout">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><p class="atl-mega__col-title">Company</p><p class="atl-mega__col-desc">Who we are &amp; what we do</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../about.html"><span class="atl-mega__dot"></span>About Nebulae</a></li>
+                    
+                    <li><a href="../about.html#team"><span class="atl-mega__dot"></span>Our Team</a></li>
+                    <li><a href="../about.html#partners"><span class="atl-mega__dot"></span>Partners &amp; Certifications</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><p class="atl-mega__col-title">Blog &amp; Careers</p><p class="atl-mega__col-desc">Insights &amp; opportunities</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../blog.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Blog</a></li>
+                    
+                    <li><a href="../careers.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Careers</a></li>
+                    <li><a href="../careers.html#openings"><span class="atl-mega__dot atl-mega__dot--teal"></span>Open Positions</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--orange"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div><p class="atl-mega__col-title">Events &amp; News</p><p class="atl-mega__col-desc">What's happening at Nebulae</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../events.html"><span class="atl-mega__dot" style="background:#f97316"></span> Events</a></li>
+                    <li><a href="../news.html"><span class="atl-mega__dot" style="background:#f97316"></span>News</a></li> 
+                  </ul>
+                </div>
+                <!-- <div class="atl-mega__col atl-mega__col--feature">
+                  <div class="atl-mega__feature-card">
+                    <span class="atl-mega__new-tag">JOIN US</span>
+                    <p class="atl-mega__feature-name">Building the Future of IoT</p>
+                    <p class="atl-mega__feature-desc">We're a team of engineers, designers &amp; innovators passionate about connecting the world through smart technology.</p>
+                    <a href="../careers.html" class="atl-mega__feature-link">See Open Roles →</a>
+                    
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 6. CONTACT -->
+        <li class="atl-nav__item">
+          <a class="atl-nav__link" href="../contact.html">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Right: CTA -->
+        <div class="atl-nav__right"><button class="atl-nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+     
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="atl-nav__mobile" id="navMobile">
+      <div class="atl-nav__mobile-header">
+        <span class="atl-nav__mobile-title">Menu</span>
+        <button class="atl-nav__mobile-close" id="navMobileClose" aria-label="Close menu">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <a class="atl-nav__mlink" href="../index.html">Home</a>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Products<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <div class="atl-nav__macc-section">LoRa</div>
+          <a class="atl-nav__msublink" href="../products.html?proto=lora&amp;type=module">Module</a><a class="atl-nav__msublink" href="../products.html?proto=lora&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="../products.html?proto=lora&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="../products.html?proto=lora&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="../products.html?proto=lora&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="../products.html?proto=lora&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">Wi-SUN</div>
+          <a class="atl-nav__msublink" href="../products.html?proto=wisun&amp;type=module">Module</a><a class="atl-nav__msublink" href="../products.html?proto=wisun&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="../products.html?proto=wisun&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="../products.html?proto=wisun&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="../products.html?proto=wisun&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="../products.html?proto=wisun&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">Zigbee</div>
+          <a class="atl-nav__msublink" href="../products.html?proto=zigbee&amp;type=module">Module</a><a class="atl-nav__msublink" href="../products.html?proto=zigbee&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="../products.html?proto=zigbee&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="../products.html?proto=zigbee&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="../products.html?proto=zigbee&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="../products.html?proto=zigbee&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">Wi-Fi</div>
+          <a class="atl-nav__msublink" href="../products.html?proto=wifi&amp;type=module">Module</a><a class="atl-nav__msublink" href="../products.html?proto=wifi&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="../products.html?proto=wifi&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="../products.html?proto=wifi&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="../products.html?proto=wifi&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="../products.html?proto=wifi&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">LTE</div>
+          <a class="atl-nav__msublink" href="../products.html?proto=gsm&amp;type=module">Module</a><a class="atl-nav__msublink" href="../products.html?proto=gsm&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="../products.html?proto=gsm&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="../products.html?proto=gsm&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="../products.html?proto=gsm&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="../products.html?proto=gsm&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">BLE</div>
+          <a class="atl-nav__msublink" href="../products.html?proto=ble&amp;type=module">Module</a><a class="atl-nav__msublink" href="../products.html?proto=ble&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="../products.html?proto=ble&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="../products.html?proto=ble&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="../products.html?proto=ble&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="../products.html?proto=ble&amp;type=node">Node</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Solutions<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="../solutions/smart-water-meter.html">Smart Water Meter Solution</a>
+          <a class="atl-nav__msublink" href="../solutions/smart-electric-meter.html">Smart Electric Meter Solution</a>
+          <a class="atl-nav__msublink" href="../solutions/smart-gas-meter.html">Smart Gas Metering Solution</a>
+          <a class="atl-nav__msublink" href="../solutions/smart-street-light.html">Smart Street Light Solution</a>
+          <a class="atl-nav__msublink" href="../solutions/transformer-monitoring.html">Transformer Monitoring System</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Services<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <div class="atl-nav__macc-section">Development</div>
+          <a class="atl-nav__msublink" href="../services/iot-product-development.html">IoT Product Development</a>
+          <a class="atl-nav__msublink" href="../services/embedded-hardware-design.html">Embedded Hardware Design</a>
+          <a class="atl-nav__msublink" href="../services/embedded-firmware-design.html">Embedded Firmware Design</a>
+          <a class="atl-nav__msublink" href="../services/pcb-design-services.html">PCB Design Services</a> 
+          <div class="atl-nav__macc-section">Connectivity &amp; Cloud</div>
+          <a class="atl-nav__msublink" href="../services/iot-dashboard.html">IoT Dashboard</a>
+          <a class="atl-nav__msublink" href="../services/iot-cloud-integration.html">IoT Cloud Integration</a>
+          <a class="atl-nav__msublink" href="../services/edge-computing.html">Edge Computing</a>
+          <div class="atl-nav__macc-section">Consulting</div>
+          <a class="atl-nav__msublink" href="../services/iot-consulting.html">IoT Consulting</a>
+          <a class="atl-nav__msublink" href="../services/iot-mobile-app.html">IoT Mobile App Development</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Industries<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="../industries/home-security-automation.html">Home Security &amp; Automation</a>
+          <a class="atl-nav__msublink" href="../industries/smart-agriculture.html">Smart Agriculture System</a>
+          <a class="atl-nav__msublink" href="../industries/industrial-iot.html">Industrial IoT</a>
+          <a class="atl-nav__msublink" href="../industries/iot-healthcare.html">IoT in Healthcare</a>
+          <a class="atl-nav__msublink" href="../industries/iot-logistics.html">IoT in Logistics</a>
+          <a class="atl-nav__msublink" href="../industries/consumer-iot.html">Consumer IoT Solutions</a>
+        </div>
+      </div>
+
+      <a class="atl-nav__mlink" href="../resource.html">Resources</a>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">About Us<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="../about.html">About Nebulae</a>
+          <a class="atl-nav__msublink" href="../about.html#mission">Our Mission &amp; Vision</a>
+          <a class="atl-nav__msublink" href="../about.html#team">Our Team</a>
+          <a class="atl-nav__msublink" href="../blog.html">Blog</a>
+          <a class="atl-nav__msublink" href="../careers.html">Careers</a>
+          <a class="atl-nav__msublink" href="../events.html">Upcoming Events</a>
+          <a class="atl-nav__msublink" href="../news.html">Latest News</a>
+        </div>
+      </div>
+
+      <a class="atl-nav__mlink" href="../contact.html">Contact Us</a>
+    </div><!-- /mobile drawer -->
+  </nav>
+</div><!-- /.atl-sticky-header -->
+</header>
+
+<!-- BREADCRUMB -->
+<div class="pd-top-bar">
+  <div class="container">
+    <nav class="pd-breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span aria-hidden="true">›</span>
+      <a href="../products.html">Products</a><span aria-hidden="true">›</span>
+      <a href="../products.html?proto=wisun">Wi-SUN</a><span aria-hidden="true">›</span>
+      <a href="../products.html?type=module">Module</a><span aria-hidden="true">›</span>
+      <span class="pd-breadcrumb__current" aria-current="page">NLN0721</span>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="pd-hero">
+  <div class="container">
+    <div class="row gx-lg-5 gy-4">
+      <div class="col-lg-5">
+        <div class="pd-gallery">
+          <div class="pd-gallery__main">
+            <img id="pdMainImg" src="../assets/images/products/nln0721-vs-sim.png" alt="NebuLink Module NLN0721 shown beside a standard SIM card for size comparison" width="700" height="700" loading="eager"/>
+            <span class="pd-gallery__badge pd-gallery__badge--wisun">Wi-SUN Module</span>
+            <button type="button" class="pd-gallery__zoom" data-pd-zoom title="Zoom image" aria-label="Zoom image"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+          </div>
+          <div class="pd-gallery__thumbs" role="group" aria-label="Product images"><button type="button" class="pd-gallery__thumb active" data-pd-thumb="0" data-full="../assets/images/products/nln0721-vs-sim.png" data-alt="NebuLink Module NLN0721 shown beside a standard SIM card for size comparison" aria-label="Show image: vs SIM card"><img src="../assets/images/products/nln0721-vs-sim.png" alt="vs SIM card" loading="eager" width="72" height="72"/></button><button type="button" class="pd-gallery__thumb" data-pd-thumb="1" data-full="../assets/images/products/nln0721-module-photo.png" data-alt="NLN0721 Wi-SUN module, 26.69 mm long, beside a 25 mm SIM card" aria-label="Show image: Module view"><img src="../assets/images/products/nln0721-module-photo.png" alt="Module view" loading="lazy" width="72" height="72"/></button></div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="pd-info">
+          <div class="pd-info__eyebrow"><span class="pd-info__proto">Wi-SUN</span><span class="pd-info__type">Module</span></div>
+          <h1 class="pd-info__name">NLN0721</h1>
+          <div class="pd-info__full">NebuLink Module NLN0721 — Wi-SUN</div>
+          <div class="pd-info__meta"><div class="pd-info__certbadges"><span class="pd-cert-badge">WPC Certified</span><span class="pd-cert-badge">Wi-SUN</span><span class="pd-cert-badge">AES-256</span></div></div>
+          <p class="pd-info__desc">The NLN0721 is an ideal sub-GHz solution for Internet of Things applications such as smart metering, smart lighting, building automation and smart homes. Based on the EFR32FG28, this single-die, multi-core module offers long-range and mesh connectivity for multi-hop connections, with industry-leading security, low power consumption and fast wake-up times.</p>
+          <div class="pd-quick-specs"><div class="pd-qs-item"><div class="pd-qs-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 8a16 16 0 0 1 20 0"/><path d="M5 12a11 11 0 0 1 14 0"/><path d="M8.5 16a6 6 0 0 1 7 0"/><circle cx="12" cy="20" r="1.5" fill="currentColor"/></svg></div><div><div class="pd-qs-label">Protocols</div><div class="pd-qs-val">Wi-SUN · Amazon Sidewalk · WM-BUS</div></div></div><div class="pd-qs-item"><div class="pd-qs-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19A10 10 0 0 1 5 5"/></svg></div><div><div class="pd-qs-label">TX / RX</div><div class="pd-qs-val">+20 dBm · −108 dBm @ 100 kbps</div></div></div><div class="pd-qs-item"><div class="pd-qs-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div><div><div class="pd-qs-label">Frequency Band</div><div class="pd-qs-val">EU 863-870 · US 902-928 · IN865</div></div></div><div class="pd-qs-item"><div class="pd-qs-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div><div><div class="pd-qs-label">Core &amp; Memory</div><div class="pd-qs-val">78 MHz Cortex-M33 · 1024 KB flash / 256 KB SRAM</div></div></div><div class="pd-qs-item"><div class="pd-qs-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0V8z"/><path d="M12 18v4"/></svg></div><div><div class="pd-qs-label">I/O</div><div class="pd-qs-val">Up to 21 pins · U(S)ART · LPUART</div></div></div><div class="pd-qs-item"><div class="pd-qs-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.3 8.7 8.7 21.3a1 1 0 0 1-1.4 0L2.7 16.7a1 1 0 0 1 0-1.4L15.3 2.7a1 1 0 0 1 1.4 0l4.6 4.6a1 1 0 0 1 0 1.4z"/><path d="m7.5 10.5 2 2M10.5 7.5l2 2M13.5 4.5l2 2M4.5 13.5l2 2"/></svg></div><div><div class="pd-qs-label">Size (L × W × H)</div><div class="pd-qs-val">26.68 × 16.0 × 3.6 mm</div></div></div></div>
+          <div class="pd-cta-box">
+            <div class="pd-cta-box__top">
+              <div class="pd-cta-box__avail"><span class="pd-avail-dot"></span>Samples &amp; volume orders — contact sales</div>
+              <div class="pd-cta-box__lead"><strong>Enquiries</strong>sales@nebulae.io</div>
+            </div>
+            <div class="pd-qty-row">
+              <span class="pd-qty-label">Quantity:</span>
+              <div class="pd-qty-ctrl">
+                <button type="button" class="pd-qty-btn" data-pd-qty="-1" aria-label="Decrease quantity">−</button>
+                <input id="pdQty" class="pd-qty-input" type="number" value="1" min="1" inputmode="numeric" aria-label="Quantity">
+                <button type="button" class="pd-qty-btn" data-pd-qty="1" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+            <div class="pd-cta-btns">
+              <button type="button" class="pd-cta-btn pd-cta-btn--primary" data-pd-quote><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m22 2-11 11M22 2l-7 20-4-9-9-4 20-7z"/></svg> Request Quote</button>
+              <a href="../contact.html?product=NLN0721&amp;type=sample" class="pd-cta-btn pd-cta-btn--outline"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Request Sample</a>
+            </div>
+          </div>
+          <div class="pd-action-row">
+            <a href="../assets/docs/NLN0721_Brochure.pdf" class="pd-action-btn" download><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12"/><path d="m8 11 4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg> Datasheet (PDF)</a>
+            <a href="mailto:sales@nebulae.io?subject=Enquiry%20-%20NLN0721" class="pd-action-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg> Email Sales</a>
+            <button type="button" class="pd-action-btn" data-pd-copy><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> <span>Copy Link</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AT A GLANCE -->
+<section class="pd-x-stats" aria-label="NLN0721 at a glance">
+  <div class="container"><div class="pd-x-stats__grid"><div class="pd-x-stat"><div class="pd-x-stat__num">+20 dBm</div><div class="pd-x-stat__lbl">Maximum TX power</div></div><div class="pd-x-stat"><div class="pd-x-stat__num">−109.5 dBm</div><div class="pd-x-stat__lbl">Sensitivity @ 50 kbps, no FEC</div></div><div class="pd-x-stat"><div class="pd-x-stat__num">1 km</div><div class="pd-x-stat__lbl">RF range, line of sight</div></div><div class="pd-x-stat"><div class="pd-x-stat__num">10 years</div><div class="pd-x-stat__lbl">Module lifespan &amp; support</div></div></div></div>
+</section>
+
+<!-- TABS SECTION -->
+<div class="pd-tabs-section" id="pd-tabs">
+  <div class="container">
+    <div class="pd-tabs-bar" role="tablist" aria-label="NLN0721 details">
+      <button type="button" class="pd-tab-btn active" role="tab" id="pd-tabbtn-overview" aria-controls="pd-tab-overview" aria-selected="true" data-tab="overview">Overview</button>
+      <button type="button" class="pd-tab-btn" role="tab" id="pd-tabbtn-specs" aria-controls="pd-tab-specs" aria-selected="false" tabindex="-1" data-tab="specs">Specifications</button>
+      <button type="button" class="pd-tab-btn" role="tab" id="pd-tabbtn-features" aria-controls="pd-tab-features" aria-selected="false" tabindex="-1" data-tab="features">Features</button>
+      <button type="button" class="pd-tab-btn" role="tab" id="pd-tabbtn-docs" aria-controls="pd-tab-docs" aria-selected="false" tabindex="-1" data-tab="docs">Documents</button>
+      <button type="button" class="pd-tab-btn" role="tab" id="pd-tabbtn-applications" aria-controls="pd-tab-applications" aria-selected="false" tabindex="-1" data-tab="applications">Applications</button>
+      <button type="button" class="pd-tab-btn" role="tab" id="pd-tabbtn-ordering" aria-controls="pd-tab-ordering" aria-selected="false" tabindex="-1" data-tab="ordering">Ordering</button>
+    </div>
+
+    <div class="pd-tab-panel active" id="pd-tab-overview" role="tabpanel" aria-labelledby="pd-tabbtn-overview">
+      <div class="row gx-lg-5 gy-4 align-items-start">
+        <div class="col-lg-7">
+          <h2 class="pd-x-h">About NLN0721</h2>
+          <p class="pd-x-p">The NLN0721 is an ideal sub-GHz solution for Internet of Things applications such as smart metering, smart lighting, building automation and smart homes. The module is based on the EFR32FG28 and offers long-range and mesh connectivity for multi-hop connections.</p><p class="pd-x-p">This single-die, multi-core solution provides industry-leading security features, low power consumption with fast wake-up times, and integrated power amplifiers to enable the next level of secure connectivity for IoT devices. A large memory footprint enables flexible solutions for dynamic protocol support.</p><p class="pd-x-p">The compact size of the module makes it an ideal choice for any IoT device. With a lifespan and support of 10 years, the module suits IoT end devices that must stay in the field for a long time. It is WPC certified and is available with a u.FL connector or a feed line for the antenna.</p>
+          
+        </div>
+        <div class="col-lg-5">
+          <h3 class="pd-x-h3">Why Engineers Choose NLN0721</h3>
+          <div class="pd-x-whylist"><div class="pd-x-why"><span class="pd-x-why__ic"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span><div><div class="pd-x-why__t">Wi-SUN, Sidewalk &amp; WM-BUS</div><div class="pd-x-why__d">Three sub-GHz protocols supported on one hardware platform.</div></div></div><div class="pd-x-why"><span class="pd-x-why__ic"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span><div><div class="pd-x-why__t">Mesh, long range</div><div class="pd-x-why__d">Multi-hop mesh connectivity with an estimated 1 km line-of-sight range.</div></div></div><div class="pd-x-why"><span class="pd-x-why__ic"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span><div><div class="pd-x-why__t">Secure</div><div class="pd-x-why__d">Hardware cryptographic acceleration for AES-128/192/256.</div></div></div><div class="pd-x-why"><span class="pd-x-why__ic"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span><div><div class="pd-x-why__t">WPC certified</div><div class="pd-x-why__d">The module is WPC certified (regulatory approval per the datasheet).</div></div></div><div class="pd-x-why"><span class="pd-x-why__ic"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span><div><div class="pd-x-why__t">10-year support</div><div class="pd-x-why__d">A lifespan and support commitment of 10 years.</div></div></div></div>
+          <div class="pd-x-maker"><img src="../assets/images/products/sls-logo.png" alt="System Level Solutions" loading="lazy" width="120" height="55"/><div><div class="pd-x-maker__t">Designed &amp; supported by System Level Solutions</div><div class="pd-x-maker__d">USA | India | UK — <a href="https://www.slscorp.com" target="_blank" rel="noopener">www.slscorp.com</a></div></div></div>
+        </div>
+      </div>
+      <div class="pd-x-card pd-x-card--tint pd-x-showcase">
+        <h3 class="pd-x-h3">Pinout, Block Diagram &amp; Mechanical Drawings</h3>
+        <p class="pd-x-p pd-x-p--sm">Reference drawings taken from the NLN0721 datasheet (version 3.0).</p>
+        <div class="pd-x-figs pd-x-figs--4"><figure class="pd-x-fig"><div class="pd-x-fig__img"><img src="../assets/images/products/nln0721-pinout.png" alt="NLN0721 module pinout diagram" loading="lazy" width="600" height="400"/></div><figcaption>Module pinout</figcaption></figure><figure class="pd-x-fig"><div class="pd-x-fig__img"><img src="../assets/images/products/nln0721-block-diagram.png" alt="NLN0721 block diagram based on the EFR32FG28" loading="lazy" width="600" height="400"/></div><figcaption>Block diagram — EFR32FG28</figcaption></figure><figure class="pd-x-fig"><div class="pd-x-fig__img"><img src="../assets/images/products/nln0721-package-outline.png" alt="NLN0721 package outline drawing with front, side and bottom views" loading="lazy" width="600" height="400"/></div><figcaption>Package outline (all dimensions in mm)</figcaption></figure><figure class="pd-x-fig"><div class="pd-x-fig__img"><img src="../assets/images/products/nln0721-footprint.png" alt="NLN0721 recommended PCB footprint" loading="lazy" width="600" height="400"/></div><figcaption>Recommended footprint</figcaption></figure></div>
+      </div>
+    </div>
+
+    <div class="pd-tab-panel" id="pd-tab-specs" role="tabpanel" aria-labelledby="pd-tabbtn-specs" hidden>
+      <div class="row gx-lg-5 gy-4">
+        <div class="col-lg-8">
+          <h2 class="pd-x-h">Technical Specifications</h2>
+          <div class="pd-specs-wrap"><table class="pd-specs-table">
+            <thead><tr><th scope="col">Parameter</th><th scope="col">Value</th></tr></thead>
+            <tbody><tr class="pd-specs-group"><td colspan="2">Performance</td></tr><tr><td>TX Power</td><td>+20 dBm</td></tr><tr><td>RX Sensitivity — IN865 MHz</td><td>100 kbps, no FEC, PER &lt; 10%: −108 dBm</td></tr><tr><td>RX Sensitivity — IN865 MHz</td><td>50 kbps, no FEC, PER &lt; 10%: −109.5 dBm</td></tr><tr><td>RX Sensitivity — EU 863-870 MHz</td><td>50 kbps, no FEC, PER &lt; 10%: −109.5 dBm</td></tr><tr><td>Tolerance</td><td>± 2 dBm variation in test results</td></tr><tr><td>RF Range (Line of Sight)</td><td>1 km</td></tr><tr><td>RF Data Rate</td><td>50 kbps, 100 kbps</td></tr><tr class="pd-specs-group"><td colspan="2">Processor Specifications</td></tr><tr><td>Processor</td><td>32-bit 78 MHz ARM Cortex-M33 with DSP instruction and floating-point unit</td></tr><tr><td>Memory</td><td>Up to 1024 KB flash, 256 KB SRAM</td></tr><tr><td>Frequency Band</td><td>EU 863-870, US 902-928, IN865</td></tr><tr><td>Mounting Type</td><td>1.27 mm pitch SMD</td></tr><tr><td>Antenna Option</td><td>u.FL, Feedline</td></tr><tr><td>Size (L × W × H)</td><td>26.68 × 16.0 × 3.6 mm</td></tr><tr class="pd-specs-group"><td colspan="2">I/O Specifications</td></tr><tr><td>Serial Interface</td><td>1 × U(S)ART, 1 × LPUART</td></tr><tr><td>Other Peripherals</td><td>1 × I2C, 1 × SPI</td></tr><tr><td>Analog Input</td><td>2 × 12-bit ADC, 2.5 Msps</td></tr><tr><td>Digital IO</td><td>Up to 21 pins</td></tr><tr class="pd-specs-group"><td colspan="2">Electrical Specifications</td></tr><tr><td>Supply Voltage (VDD)</td><td>1.8 V ~ 3.6 V, 3.3 V</td></tr><tr><td>Current — Standby Mode</td><td>6.95 mA</td></tr><tr><td>Current — TX Mode</td><td>98.5 mA</td></tr><tr><td>Current — RX Mode</td><td>6.21 mA</td></tr><tr><td>Operating Temperature</td><td>−30 °C to 85 °C</td></tr><tr class="pd-specs-group"><td colspan="2">Networking &amp; Compliance</td></tr><tr><td>Protocol</td><td>Amazon Sidewalk, WM-BUS, Wi-SUN</td></tr><tr><td>Security</td><td>Hardware cryptographic acceleration: AES-128/192/256</td></tr><tr><td>Firmware Update</td><td>Over-the-air (FUOTA); programming via SWD</td></tr><tr><td>Regulatory</td><td>WPC certified</td></tr></tbody>
+          </table></div>
+          <p class="pd-x-note">Specification values as published in the NLN0721 product brochure; the datasheet (v3.0) adds the peripheral counts.</p>
+        </div>
+        <div class="col-lg-4">
+          <div class="pd-x-card pd-x-card--brand">
+            <h3 class="pd-x-h3 pd-x-h3--light">Need the full datasheet?</h3>
+            <p class="pd-x-p pd-x-p--sm pd-x-p--light">Download the NLN0721 product document for the complete feature list and specifications.</p>
+            <a href="../assets/docs/NLN0721_Brochure.pdf" class="pd-x-btn" download><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12"/><path d="m8 11 4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg> Download PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pd-tab-panel" id="pd-tab-features" role="tabpanel" aria-labelledby="pd-tabbtn-features" hidden>
+      <h2 class="pd-x-h">Key Features</h2>
+      <div class="pd-features-grid"><div class="pd-feat-card"><div class="pd-feat-icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v5M12 12l-6 5M12 12l6 5"/></svg></div><div><h3 class="pd-feat-title">Sub-GHz Mesh Connectivity</h3><div class="pd-feat-desc">Long-range and mesh connectivity for multi-hop connections.</div></div></div><div class="pd-feat-card"><div class="pd-feat-icon" style="background:rgba(16,185,129,.1);color:#059669;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><h3 class="pd-feat-title">Integrated Power Amplifier</h3><div class="pd-feat-desc">Up to +20 dBm TX power with an integrated PA; 98.5 mA in TX mode.</div></div></div><div class="pd-feat-card"><div class="pd-feat-icon" style="background:rgba(251,191,36,.12);color:#d97706;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 8a16 16 0 0 1 20 0"/><path d="M5 12a11 11 0 0 1 14 0"/><path d="M8.5 16a6 6 0 0 1 7 0"/><circle cx="12" cy="20" r="1.5" fill="currentColor"/></svg></div><div><h3 class="pd-feat-title">Multi-Protocol</h3><div class="pd-feat-desc">Amazon Sidewalk, WM-BUS and Wi-SUN on one module.</div></div></div><div class="pd-feat-card"><div class="pd-feat-icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div><div><h3 class="pd-feat-title">Cortex-M33 Processing</h3><div class="pd-feat-desc">78 MHz ARM Cortex-M33 with DSP instructions and FPU; 1024 KB flash, 256 KB SRAM.</div></div></div><div class="pd-feat-card"><div class="pd-feat-icon" style="background:rgba(234,88,12,.1);color:#ea580c;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div><h3 class="pd-feat-title">Hardware Security</h3><div class="pd-feat-desc">Cryptographic acceleration for AES-128/192/256.</div></div></div><div class="pd-feat-card"><div class="pd-feat-icon" style="background:rgba(124,58,237,.1);color:#7c3aed;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12"/><path d="m8 11 4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></div><div><h3 class="pd-feat-title">FUOTA &amp; SWD</h3><div class="pd-feat-desc">Firmware update over the air, with serial-wire debugging.</div></div></div><div class="pd-feat-card"><div class="pd-feat-icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div><h3 class="pd-feat-title">RF Shield</h3><div class="pd-feat-desc">Shield protects the radio from external electromagnetic interference.</div></div></div><div class="pd-feat-card"><div class="pd-feat-icon" style="background:rgba(220,38,38,.1);color:#dc2626;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0V8z"/><path d="M12 18v4"/></svg></div><div><h3 class="pd-feat-title">Solderable, 21 I/O</h3><div class="pd-feat-desc">Up to 21 I/Os on edge plated holes; solder directly to any device board.</div></div></div></div>
+    </div>
+
+    <div class="pd-tab-panel" id="pd-tab-docs" role="tabpanel" aria-labelledby="pd-tabbtn-docs" hidden>
+      <h2 class="pd-x-h">Documents &amp; Resources</h2>
+      <div class="pd-docs-grid"><a href="../assets/docs/NLN0721_Brochure.pdf" class="pd-doc-card" download><div class="pd-doc-icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div><div><div class="pd-doc-name">NLN0721 Brochure</div><div class="pd-doc-size">PDF · Product brochure</div></div><span class="pd-doc-arrow"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12"/><path d="m8 11 4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span></a><a href="../assets/docs/NLN0721_Datasheet_v3.0.pdf" class="pd-doc-card" download><div class="pd-doc-icon" style="background:rgba(16,185,129,.1);color:#059669;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div><div><div class="pd-doc-name">NLN0721 Datasheet v3.0</div><div class="pd-doc-size">PDF · Technical datasheet, May 2024</div></div><span class="pd-doc-arrow"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12"/><path d="m8 11 4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span></a></div>
+      <p class="pd-x-note">Need schematics, certification reports or integration support? Contact <a href="mailto:sales@nebulae.io">sales@nebulae.io</a>.</p>
+    </div>
+
+    <div class="pd-tab-panel" id="pd-tab-applications" role="tabpanel" aria-labelledby="pd-tabbtn-applications" hidden>
+      <h2 class="pd-x-h">Ideal Applications</h2>
+      <div class="pd-app-grid"><div class="pd-app-card"><div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m12 12 4-4"/><path d="M7 16h10"/></svg></div><h3 class="pd-app-title">Smart Metering</h3><div class="pd-app-desc">Sub-GHz Wi-SUN connectivity for utility metering.</div></div><div class="pd-app-card"><div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 21h6M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg></div><h3 class="pd-app-title">Smart Street Lighting</h3><div class="pd-app-desc">Mesh networking for street lighting nodes.</div></div><div class="pd-app-card"><div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></div><h3 class="pd-app-title">Smart Waste Management</h3><div class="pd-app-desc">Long-range links for waste-bin monitoring.</div></div><div class="pd-app-card"><div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 21V9l5-4 5 4v12M13 21V5l5-2 3 2v16"/><path d="M2 21h20"/></svg></div><h3 class="pd-app-title">Smart City Network</h3><div class="pd-app-desc">Sub-GHz mesh for city infrastructure.</div></div><div class="pd-app-card"><div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 21V9l5-4 5 4v12M13 21V5l5-2 3 2v16"/><path d="M2 21h20"/></svg></div><h3 class="pd-app-title">Smart City Traffic Control</h3><div class="pd-app-desc">Connected control for traffic infrastructure.</div></div><div class="pd-app-card"><div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22V12M12 12C12 12 7 9 7 4a5 5 0 0 1 10 0c0 5-5 8-5 8z"/></svg></div><h3 class="pd-app-title">Smart Agriculture</h3><div class="pd-app-desc">Field sensing over long-range links.</div></div><div class="pd-app-card"><div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg></div><h3 class="pd-app-title">Building Automation &amp; Monitoring</h3><div class="pd-app-desc">Wireless connectivity for building systems.</div></div><div class="pd-app-card"><div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 21h6M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg></div><h3 class="pd-app-title">Lighting Controls</h3><div class="pd-app-desc">Wireless control of lighting networks.</div></div><div class="pd-app-card"><div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 8 12 3 3 8v8l9 5 9-5V8z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3 class="pd-app-title">Inventory Management</h3><div class="pd-app-desc">Tracking and status reporting for stock.</div></div><div class="pd-app-card"><div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.5-6.5"/></svg></div><h3 class="pd-app-title">Environmental Monitoring</h3><div class="pd-app-desc">Distributed environmental sensing.</div></div><div class="pd-app-card"><div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 20V8l6 4V8l6 4V4h4v16H2z"/><path d="M6 16h.01M10 16h.01M14 16h.01"/></svg></div><h3 class="pd-app-title">Industrial Monitoring</h3><div class="pd-app-desc">Remote monitoring across industrial sites.</div></div><div class="pd-app-card"><div class="pd-app-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 14l4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/></svg></div><h3 class="pd-app-title">Machinery Condition Monitoring</h3><div class="pd-app-desc">Condition and performance monitoring of machinery.</div></div></div>
+    </div>
+
+    <div class="pd-tab-panel" id="pd-tab-ordering" role="tabpanel" aria-labelledby="pd-tabbtn-ordering" hidden>
+      <div class="row gx-lg-5 gy-4">
+        <div class="col-lg-6">
+          <h2 class="pd-x-h">Ordering Information</h2>
+          <div class="pd-specs-wrap"><table class="pd-specs-table">
+            <thead><tr><th scope="col">Part Number</th><th scope="col">Description</th></tr></thead>
+            <tbody><tr><td>PL0NL0721I100</td><td>NLN0721 — u.FL RF output</td></tr><tr><td>PL0NL0721S100</td><td>NLN0721 — feed line RF output</td></tr></tbody>
+          </table></div>
+          <p class="pd-x-note">Pricing, lead time and minimum order quantity are provided on request.</p>
+        </div>
+        <div class="col-lg-6">
+          <div class="pd-x-card pd-x-card--brand">
+            <h3 class="pd-x-h3 pd-x-h3--light">Get a Quote</h3>
+            <p class="pd-x-p pd-x-p--sm pd-x-p--light">Contact our team for pricing, samples and technical support for NLN0721.</p>
+            <button type="button" class="pd-x-btn pd-x-btn--block" data-pd-quote>Request a Quote</button>
+          </div>
+          <div class="pd-x-card pd-x-card--tint pd-x-contact">
+            <h3 class="pd-x-h3">Contact</h3>
+            <ul class="pd-x-contact__list">
+              <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg><a href="mailto:sales@nebulae.io">sales@nebulae.io</a></li>
+              <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><a href="https://www.nebulae.io" target="_blank" rel="noopener">www.nebulae.io</a></li>
+              <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+9102692232501">+91-2692-232 501 / 502</a></li>
+            </ul>
+            <div class="pd-x-contact__co">System Level Solutions · USA | India | UK<br>info@slscorp.com · <a href="https://www.slscorp.com" target="_blank" rel="noopener">www.slscorp.com</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RELATED PRODUCTS -->
+<section class="pd-related">
+  <div class="container">
+    <div class="atl-eyebrow" style="margin-bottom:.5rem;">You May Also Like</div>
+    <h2 class="atl-section-h3" style="margin-bottom:1.5rem;">Related Products</h2>
+    <div class="pd-related__grid">
+      <div class="pd-rel-card"><div class="pd-rel-card__img"><img src="../assets/images/products/nln0725is-module.png" alt="Wi-SUN High Power Module NLN0725-IS" loading="lazy" width="400" height="260"/></div><div class="pd-rel-card__body"><span class="pd-rel-card__proto" style="background:rgba(49,49,133,.1);color:#313185;">Module · Wi-SUN</span><div class="pd-rel-card__name">NLN0725-IS</div><div class="pd-rel-card__desc">High power Wi-SUN module — up to +27 dBm (WPC limit), -107 dBm sensitivity, 39.5 × 16 mm.</div><a href="nln0725is.html" class="pd-rel-card__link">View Details <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg></a></div></div><div class="pd-rel-card"><div class="pd-rel-card__img"><img src="../assets/images/products/nm0221i-module.jpg" alt="NebuLink Module NM0221-I — Wi-SUN" loading="lazy" width="400" height="260"/></div><div class="pd-rel-card__body"><span class="pd-rel-card__proto" style="background:rgba(49,49,133,.1);color:#313185;">Module · Wi-SUN</span><div class="pd-rel-card__name">NM0221-I</div><div class="pd-rel-card__desc">WPC certified SoC-based Wi-SUN / IEEE 802.15.4 module for self-forming, self-healing mesh networks.</div><a href="nm0221i.html" class="pd-rel-card__link">View Details <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg></a></div></div>
+      <div class="pd-rel-card"><div class="pd-rel-card__img"><img src="../assets/images/SupportedTech/Wi-SUN-Main-Logo.png" alt="Wi-SUN" loading="lazy" width="400" height="140"/></div><div class="pd-rel-card__body"><span class="pd-rel-card__proto" style="background:rgba(49,49,133,.1);color:#313185;">Wi-SUN</span><div class="pd-rel-card__name">All Wi-SUN Products</div><div class="pd-rel-card__desc">Browse the full range of Nebulae Wi-SUN modules, gateways and devices.</div><a href="../products.html?proto=wisun" class="pd-rel-card__link">Browse Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg></a></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="atl-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+
+      <!-- Brand -->
+      <div class="col-12 col-md-4">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img loading="lazy" src="../assets/images/LogoWhite.png" alt="Nebulae" class="atl-footer__logo-img atl-footer__logo-color">
+        </div>
+        <p class="atl-footer__desc">End-to-end IoT solutions provider — from embedded hardware design and wireless modules to cloud integration and smart utility deployments across India and beyond.</p>
+      </div>
+
+      <!-- Navigate -->
+      <div class="col-6 col-md-2">
+        <h6 class="atl-footer__heading">Navigate</h6>
+        <ul class="atl-footer__list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../products.html">Products</a></li>
+          <li><a href="../solutions.html">Solutions</a></li>
+          <li><a href="../industries.html">Industries</a></li>
+           <li><a href="../resources.html">Resources</a></li>
+          <li><a href="../contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Services & Solutions -->
+      <div class="col-6 col-md-3">
+        <h6 class="atl-footer__heading">Services</h6>
+        <ul class="atl-footer__list">
+          <li><a href="../services/iot-product-development.html">IoT Product Development</a></li>
+          <li><a href="../services/embedded-hardware-design.html">Embedded Hardware Design</a></li>
+          <li><a href="../services/embedded-firmware-design.html">Embedded Firmware Design</a></li>
+          <li><a href="../services/iot-cloud-integration.html">IoT Cloud Integration</a></li>
+          <li><a href="../services/pcb-design-services.html">PCB Design Services</a></li>
+          <li><a href="../services/iot-consulting.html">IoT Consulting</a></li>
+        </ul>
+        <h6 class="atl-footer__heading mt-3">Solutions</h6>
+        <ul class="atl-footer__list">
+          <li><a href="../solutions/smart-water-meter.html">Smart Water Meter</a></li>
+          <li><a href="../solutions/smart-electric-meter.html">Smart Electric Meter</a></li>
+          <li><a href="../solutions/smart-street-light.html">Smart Street Light</a></li>
+          <li><a href="../solutions/transformer-monitoring.html">Transformer Monitoring</a></li>
+        </ul>
+      </div>
+
+      <!-- Products & Contact -->
+      <div class="col-12 col-md-3">
+        <h6 class="atl-footer__heading">Products</h6>
+        <ul class="atl-footer__list">
+          <li><a href="../products.html?proto=lora&amp;type=module">LoRa — Module &amp; Gateway</a></li>
+          <li><a href="../products.html?proto=wisun&amp;type=module">Wi-SUN — Module &amp; Gateway</a></li>
+          <li><a href="../products.html?proto=zigbee&amp;type=module">Zigbee — Module &amp; Gateway</a></li>
+          <li><a href="../products.html?proto=gsm&amp;type=module">GSM — Module &amp; Gateway</a></li>
+          <li><a href="../products.html?proto=ble&amp;type=module">BLE — Module &amp; Gateway</a></li>
+          <li><a href="../products.html">View All Products →</a></li>
+        </ul>
+        <h6 class="atl-footer__heading mt-3">Contact</h6>
+        <ul class="atl-footer__list">
+          <li><a href="tel:+9102692232501">+91-02692-232501 / 232502</a></li>
+          <li><a href="mailto:sales@nebulae.io">sales@nebulae.io</a></li>
+          <li>Anand, Gujarat, India</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="atl-footer__bottom">
+      <span>© 2026 Nebulae. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="pd-lightbox" id="pdLightbox" role="dialog" aria-modal="true" aria-label="Product image preview">
+  <button type="button" class="pd-lightbox__close" data-pd-lb-close aria-label="Close preview">&times;</button>
+  <img id="pdLightboxImg" alt="">
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Nebulae shared nav/footer JS -->
+<script src="../assets/js/nebulae-nav.js"></script>
+<!-- Product Detail page JS -->
+<script src="../assets/js/product-detail.js"></script>
+</body>
+</html>

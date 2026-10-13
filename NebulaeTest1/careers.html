@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Careers | Nebulae IoT — Join Our Engineering Team</title>
+  <meta name="description" content="Join Nebulae IoT's engineering team in Anand, Gujarat. Open roles in firmware, hardware, embedded Linux, cloud, mobile, and sales for IoT products deployed across India."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.nebulae.io/careers.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/nebulae-nav.css">
+  <link rel="stylesheet" href="./assets/css/site-pages-fix.css">
+  <style>
+    /* ── Shared page styles ── */
+    .lg-hero{background:linear-gradient(135deg,#03031a 0%,#07072a 50%,#0d0d3a 100%);padding:5.5rem 0 4.5rem;position:relative;overflow:hidden;}
+    .lg-hero__grid{position:absolute;inset:0;background-image:linear-gradient(rgba(6,182,212,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(6,182,212,.055) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+    .lg-hero__orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;}
+    .lg-hero__orb--1{width:460px;height:460px;background:radial-gradient(circle,rgba(79,70,229,.28),transparent 70%);top:-120px;left:-80px;}
+    .lg-hero__orb--2{width:340px;height:340px;background:radial-gradient(circle,rgba(6,182,212,.22),transparent 70%);bottom:-60px;right:-60px;}
+    .lg-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(6,182,212,.12);border:1px solid rgba(6,182,212,.3);color:#06b6d4;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.35rem .9rem;border-radius:100px;margin-bottom:1.1rem;}
+    .lg-hero__title{font-family:'Outfit',sans-serif;font-size:clamp(2rem,4.5vw,3.4rem);font-weight:800;color:#fff;line-height:1.08;letter-spacing:-.025em;margin-bottom:.9rem;}
+    .lg-hero__title span{background:linear-gradient(120deg,#06b6d4,#818cf8,#4f46e5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .lg-hero__desc{font-size:.97rem;color:rgba(255,255,255,.62);line-height:1.78;max-width:580px;margin-bottom:1.5rem;}
+    .lg-breadcrumb{display:flex;align-items:center;gap:.5rem;margin-bottom:1.5rem;font-size:.78rem;color:rgba(255,255,255,.4);}
+    .lg-breadcrumb a{color:rgba(255,255,255,.4);text-decoration:none;}
+    .lg-breadcrumb a:hover{color:#06b6d4;}
+    .lg-section{padding:4.5rem 0;}
+    .lg-section--surf{background:#f5f7ff;}
+    body.dark-mode .lg-section--surf{background:#0f0f28 !important;}
+    body.dark-mode .lg-section{background:#0a0a1e;}
+    .lg-section-eyebrow{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#4f46e5;background:rgba(79,70,229,.08);padding:.3rem .85rem;border-radius:100px;margin-bottom:.75rem;}
+    .lg-section-title{font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:#0a0a1e;line-height:1.1;letter-spacing:-.02em;margin-bottom:.75rem;}
+    body.dark-mode .lg-section-title{color:#f1f5f9 !important;}
+    .lg-section-desc{font-size:.95rem;color:#6b7280;line-height:1.78;}
+    body.dark-mode .lg-section-desc{color:rgba(255,255,255,.55) !important;}
+    .lg-btn-primary{display:inline-flex;align-items:center;gap:.45rem;padding:.85rem 1.85rem;border-radius:10px;background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;font-size:.9rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 8px 28px rgba(79,70,229,.35);}
+    .lg-btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(79,70,229,.5);color:#fff;}
+    .lg-btn-outline{display:inline-flex;align-items:center;gap:.45rem;padding:.82rem 1.75rem;border-radius:10px;background:transparent;color:#4f46e5;border:1.5px solid #c7d2fe;font-size:.9rem;font-weight:600;font-family:'Outfit',sans-serif;text-decoration:none;transition:all .25s;}
+    .lg-btn-outline:hover{border-color:#4f46e5;background:#f0f3ff;}
+    /* ── TOC ── */
+    .lg-toc{background:#f8f9ff;border:1.5px solid #e5e7eb;border-radius:16px;padding:1.5rem;position:sticky;top:90px;}
+    body.dark-mode .lg-toc{background:#1a1a3e !important;border-color:rgba(255,255,255,.08) !important;}
+    .lg-toc__title{font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:800;color:#111827;margin-bottom:.85rem;text-transform:uppercase;letter-spacing:.08em;}
+    body.dark-mode .lg-toc__title{color:#f1f5f9 !important;}
+    .lg-toc__list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.35rem;}
+    .lg-toc__link{font-size:.82rem;color:#6b7280;text-decoration:none;padding:.35rem .65rem;border-radius:7px;display:block;transition:all .2s;}
+    .lg-toc__link:hover,.lg-toc__link.active{background:rgba(79,70,229,.08);color:#4f46e5;}
+    body.dark-mode .lg-toc__link{color:rgba(255,255,255,.45) !important;}
+    body.dark-mode .lg-toc__link:hover,.lg-toc__link.active{background:rgba(79,70,229,.15) !important;color:#818cf8 !important;}
+    /* ── Prose ── */
+    .lg-prose{font-size:.96rem;color:#374151;line-height:1.9;}
+    body.dark-mode .lg-prose{color:rgba(255,255,255,.65) !important;}
+    .lg-prose h2{font-family:'Outfit',sans-serif;font-size:1.4rem;font-weight:800;color:#111827;margin-top:2.75rem;margin-bottom:.85rem;padding-bottom:.5rem;border-bottom:1.5px solid #e5e7eb;}
+    body.dark-mode .lg-prose h2{color:#f1f5f9 !important;border-color:rgba(255,255,255,.08) !important;}
+    .lg-prose h3{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:700;color:#111827;margin-top:1.75rem;margin-bottom:.55rem;}
+    body.dark-mode .lg-prose h3{color:#f1f5f9 !important;}
+    .lg-prose p{margin-bottom:1.1rem;}
+    .lg-prose ul{margin-bottom:1.1rem;padding-left:1.25rem;}
+    .lg-prose ul li{margin-bottom:.4rem;}
+    .lg-prose a{color:#4f46e5;}
+    .lg-prose a:hover{color:#06b6d4;}
+    .lg-prose strong{color:#111827;}
+    body.dark-mode .lg-prose strong{color:#f1f5f9 !important;}
+    .lg-prose .lg-callout{background:#f0f3ff;border:1.5px solid #c7d2fe;border-radius:12px;padding:1.1rem 1.4rem;margin:1.5rem 0;}
+    body.dark-mode .lg-prose .lg-callout{background:rgba(79,70,229,.1) !important;border-color:rgba(79,70,229,.25) !important;}
+    /* ── Last updated badge ── */
+    .lg-updated{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.5);font-size:.76rem;padding:.3rem .85rem;border-radius:100px;margin-bottom:1.25rem;}
+    /* ── Job card ── */
+    .lg-job-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:1.75rem;transition:transform .25s,box-shadow .25s,border-color .25s;}
+    body.dark-mode .lg-job-card{background:#1a1a3e !important;border-color:rgba(255,255,255,.08) !important;}
+    .lg-job-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(79,70,229,.1);border-color:rgba(79,70,229,.25);}
+    .lg-job-card__dept{font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:100px;display:inline-block;margin-bottom:.65rem;}
+    .lg-job-card__title{font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:800;color:#111827;margin-bottom:.5rem;}
+    body.dark-mode .lg-job-card__title{color:#f1f5f9 !important;}
+    .lg-job-card__meta{display:flex;flex-wrap:wrap;gap:.65rem;font-size:.8rem;color:#6b7280;margin-bottom:1rem;}
+    body.dark-mode .lg-job-card__meta{color:rgba(255,255,255,.45) !important;}
+    .lg-job-card__meta-item{display:flex;align-items:center;gap:.35rem;}
+    .lg-job-card__desc{font-size:.88rem;color:#374151;line-height:1.7;margin-bottom:1.25rem;}
+    body.dark-mode .lg-job-card__desc{color:rgba(255,255,255,.6) !important;}
+    .lg-job-card__skills{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.25rem;}
+    .lg-job-card__skill{font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:100px;background:#f0f3ff;color:#4f46e5;}
+    body.dark-mode .lg-job-card__skill{background:rgba(79,70,229,.15) !important;color:#818cf8 !important;}
+    /* ── Perk card ── */
+    .lg-perk-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:1.5rem;height:100%;}
+    body.dark-mode .lg-perk-card{background:#1a1a3e !important;border-color:rgba(255,255,255,.08) !important;}
+    .lg-perk-card__icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:.85rem;}
+    .lg-perk-card__title{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:800;color:#111827;margin-bottom:.4rem;}
+    body.dark-mode .lg-perk-card__title{color:#f1f5f9 !important;}
+    .lg-perk-card__desc{font-size:.84rem;color:#6b7280;line-height:1.65;margin:0;}
+    body.dark-mode .lg-perk-card__desc{color:rgba(255,255,255,.5) !important;}
+    /* ── Process steps ── */
+    .lg-process{display:flex;gap:0;align-items:flex-start;overflow-x:auto;padding-bottom:.5rem;}
+    .lg-process-step{flex:1;min-width:140px;text-align:center;position:relative;padding:0 .75rem;}
+    .lg-process-step:not(:last-child)::after{content:'';position:absolute;top:21px;left:calc(50% + 22px);width:calc(100% - 44px);height:2px;background:linear-gradient(90deg,#4f46e5,#06b6d4);}
+    .lg-process-num{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto .75rem;position:relative;z-index:1;box-shadow:0 4px 16px rgba(79,70,229,.35);}
+    .lg-process-title{font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:800;color:#111827;margin-bottom:.25rem;}
+    body.dark-mode .lg-process-title{color:#f1f5f9 !important;}
+    .lg-process-desc{font-size:.74rem;color:#6b7280;line-height:1.55;}
+    body.dark-mode .lg-process-desc{color:rgba(255,255,255,.45) !important;}
+    @media(max-width:767px){
+      .lg-toc{display:none;}
+      .lg-process{flex-direction:column;gap:1.25rem;}
+      .lg-process-step::after{display:none;}
+      .lg-process-step{display:flex;align-items:center;gap:.85rem;text-align:left;}
+      .lg-process-num{flex-shrink:0;margin:0;}
+    }
+  </style>
+</head>
+<body>
+
+<div id="nblProgressBar" role="progressbar" aria-label="Page scroll progress"></div>
+ 
+<!-- <button id="nblThemeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode"></button> -->
+<button id="nblBackTop" aria-label="Back to top" title="Back to top">
+  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<header>
+<!-- ════ STICKY HEADER ════ -->
+<div class="atl-sticky-header" style="position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:9999!important;">
+
+  <!-- Utility bar -->
+  <div class="atl-util-bar">
+    <div class="atl-util-bar__inner">
+      <div class="atl-util-bar__left">
+        <!-- <span class="atl-util-link">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          India · IoT Solutions Provider
+        </span> -->
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 9898042339 
+        </a>
+      </div>
+      <div class="atl-util-bar__right">
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91-02692-232501/02
+        </a>
+        <a href="mailto:sales@nebulae.io" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          sales@nebulae.io
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main navbar -->
+  <nav class="atl-nav" id="atlNav">
+    <div class="atl-nav__inner">
+
+      <!-- Logo -->
+      <a href="./index.html" class="atl-nav__logo">
+        <img src="./assets/images/LogoBlue.png" alt="Nebulae" class="atl-nav__logo-img">
+      </a>
+
+      <!-- Desktop nav -->
+      <ul class="atl-nav__links" id="navLinks">
+
+        <!-- 1. PRODUCTS -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaProducts">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaProducts')">
+            Products
+            <svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="atl-mega" id="mega-megaProducts">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner atl-mega__inner--products" style="display:flex;gap:0;min-height:320px;">
+
+                <!-- Rail -->
+                <div class="atl-prod-rail">
+                  <button class="atl-prod-rail__item atl-prod-rail__item--active" data-prod="module">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                    Module
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  
+                  <button class="atl-prod-rail__item" data-prod="concentrator">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                    Concentrator
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+
+                  <button class="atl-prod-rail__item" data-prod="gateway">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h.01M10 11h.01"/><circle cx="17" cy="11" r="1" fill="currentColor"/></svg>
+                    Gateway
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="filter">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                    Filter
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  
+                  <button class="atl-prod-rail__item" data-prod="node">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+                    Nodes
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="evk">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+                    EVK
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="dataconnector">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h7"/><circle cx="17" cy="18" r="3"/><path d="M17 15v-1.5M17 21v1.5M14.2 16.5l-1.3-.75M20.1 19.25l1.3.75M14.2 19.25l-1.3.75M20.1 16.5l1.3-.75"/></svg>
+                    Data Connector
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                   
+                </div>
+
+                <!-- Panels -->
+                <div class="atl-prod-panel">
+                  <!-- Module -->
+                  <div class="atl-prod-panel__body atl-prod-panel__body--active" data-panel="module">
+                    <p class="atl-prod-panel__label">Module — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products.html?proto=lora&amp;type=module" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products.html?proto=wisun&amp;type=module" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products.html?proto=zigbee&amp;type=module" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products.html?proto=wifi&amp;type=module" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="products.html?proto=som&amp;type=module" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span><span class="atl-prod-card__name">SOM</span><span class="atl-prod-card__desc">System on Module</span></a>
+                    </div>
+                  </div>
+                  <!-- Gateway -->
+                  <div class="atl-prod-panel__body" data-panel="gateway">
+                    <p class="atl-prod-panel__label">Gateway — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products.html?proto=lora&amp;type=gateway" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products.html?proto=wisun&amp;type=gateway" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products.html?proto=gsm&amp;type=gateway" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">LTE</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- Filter -->
+                  <div class="atl-prod-panel__body" data-panel="filter">
+                    <p class="atl-prod-panel__label">Filter — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products.html?proto=lora&amp;type=filter" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- EVK -->
+                  <div class="atl-prod-panel__body" data-panel="evk">
+                    <p class="atl-prod-panel__label">EVK — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products.html?proto=lora&amp;type=evk" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- Concentrator -->
+                  <div class="atl-prod-panel__body" data-panel="concentrator">
+                    <p class="atl-prod-panel__label">Concentrator — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products.html?proto=lora&amp;type=concentrator" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- Node -->
+                  <div class="atl-prod-panel__body" data-panel="node">
+                    <p class="atl-prod-panel__label">Node — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products.html?proto=lora&amp;type=node" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products.html?proto=wisun&amp;type=node" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                    </div>
+                  </div>
+                  <!-- Add to Panels section (after EVK panel) -->
+                  <div class="atl-prod-panel__body" data-panel="dataconnector">
+                    <p class="atl-prod-panel__label">Data Connector — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="products.html?proto=lora&amp;type=dataconnector" class="atl-prod-card atl-prod-card--blue"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M1.42 9a16 16 0 0121.16 0" />
+                            <path d="M5 12.55a11 11 0 0114.08 0" />
+                            <path d="M10.54 17a6 6 0 012.92 0" />
+                            <circle cx="12" cy="20" r="1" fill="currentColor" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To LoRa</span><span class="atl-prod-card__desc">Long Range
+                          IoT</span></a>
+                      <a href="products.html?proto=wisun&amp;type=dataconnector" class="atl-prod-card atl-prod-card--teal"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M8.5 8.5a5 5 0 0 0 7 7" />
+                            <path d="M5 5a9 9 0 0 0 13 13" />
+                            <path d="M2 2a13 13 0 0 0 19 19" />
+                            <circle cx="12" cy="12" r="1" fill="currentColor" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To Wi-SUN</span><span class="atl-prod-card__desc">Smart
+                          Utility Network</span></a>
+                      <a href="products.html?proto=zigbee&amp;type=dataconnector" class="atl-prod-card atl-prod-card--orange"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To Zigbee</span><span class="atl-prod-card__desc">Mesh
+                          Networking</span></a>
+                      <a href="products.html?proto=wifi&amp;type=dataconnector" class="atl-prod-card atl-prod-card--blue"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M5 12.55a11 11 0 0114.08 0" />
+                            <path d="M1.42 9a16 16 0 0121.16 0" />
+                            <path d="M10.54 17a6 6 0 012.92 0" />
+                            <circle cx="12" cy="20" r="1" fill="currentColor" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To Wi-Fi</span><span class="atl-prod-card__desc">RS485 Wireless
+                          LAN</span></a>
+                      <a href="products.html?proto=gsm&amp;type=dataconnector" class="atl-prod-card atl-prod-card--red"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                            <line x1="12" y1="18" x2="12.01" y2="18" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To LTE</span><span class="atl-prod-card__desc">Cellular
+                          IoT</span></a>
+                  
+                    </div>
+                  </div>
+                   
+                </div><!-- /atl-prod-panel -->
+
+                <!-- Feature card -->
+                <div style="width:220px;flex-shrink:0;padding:1.5rem 1.25rem;display:flex;align-items:center;">
+                  <div class="atl-mega__feature-card" style="width:100%">
+                    <p class="atl-mega__feature-name">Official Partners</p>
+                    <img src="./assets/images/Semtech.png" alt="Official Partner Logo 1" style="max-width:120px;height:auto;margin-bottom:0.75rem;">
+                    <img src="./assets/images/SLabs.png" alt="Official Partner Logo 2" style="max-width:120px;height:auto;">
+                    <a href="products.html" class="atl-mega__feature-link">View All Products →</a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2. SOLUTIONS -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaSolutions">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaSolutions')">Solutions<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaSolutions">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner atl-mega__inner--3col">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div><div><p class="atl-mega__col-title">Smart Metering</p><p class="atl-mega__col-desc">AMI &amp; AMR utility solutions</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="solutions/smart-water-meter.html"><span class="atl-mega__dot"></span>Smart Water Meter Solution</a></li>
+                    <li><a href="solutions/smart-electric-meter.html"><span class="atl-mega__dot"></span>Smart Electric Meter Solution</a></li>
+                    <li><a href="solutions/smart-gas-meter.html"><span class="atl-mega__dot"></span>Smart Gas Metering Solution</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div><div><p class="atl-mega__col-title">Smart Infrastructure</p><p class="atl-mega__col-desc">City &amp; grid automation</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="solutions/smart-street-light.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Smart Street Light Solution</a></li>
+                    <li><a href="solutions/transformer-monitoring.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Transformer Monitoring System</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col atl-mega__col--feature">
+                     <div class="atl-mega__feature-card" style="width:100%">
+                    <p class="atl-mega__feature-name">Official Partners</p>
+                    <img src="./assets/images/Semtech.png" alt="Official Partner Logo 1" style="max-width:120px;height:auto;margin-bottom:0.75rem;">
+                    <img src="./assets/images/SLabs.png" alt="Official Partner Logo 2" style="max-width:120px;height:auto;">
+                    <a href="products.html" class="atl-mega__feature-link">View All Products →</a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3. SERVICES -->
+           <li class="atl-nav__item atl-nav__item--mega" id="megaServices">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaServices')">Services<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaServices">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div><p class="atl-mega__col-title">Development</p><p class="atl-mega__col-desc">IoT product &amp; embedded design</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="services/iot-product-development.html"><span class="atl-mega__dot"></span>IoT Product Development</a></li>
+                    <li><a href="services/embedded-hardware-design.html"><span class="atl-mega__dot"></span>Embedded Hardware Design</a></li>
+                    <li><a href="services/embedded-firmware-design.html"><span class="atl-mega__dot"></span>Embedded Firmware Development</a></li>
+                    <li><a href="services/pcb-design-services.html"><span class="atl-mega__dot"></span>PCB Design Services</a></li> 
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div><div><p class="atl-mega__col-title">RF - Survey</p><p class="atl-mega__col-desc">Network, cloud &amp; dashboard</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="services/wireless-sensor-network.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Wireless Sensor Network in IoT</a></li>
+                    
+                    <li><a href="services/iot-cloud-integration.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>IoT Cloud Integration</a></li>
+                    <li><a href="services/edge-computing.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Edge Computing</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--purple"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
+    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
+    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
+</svg></div><div><p class="atl-mega__col-title">Cloud</p><p class="atl-mega__col-desc">Platforms &amp; management systems</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="services/lora-management-system.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>LoRa Management System</a></li>
+                    <li><a href="services/lorawan-network-server.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>LoRaWAN Network Server (LNS)</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--purple"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
+    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
+    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
+</svg></div><div><p class="atl-mega__col-title">IOT Dashboard</p><p class="atl-mega__col-desc">Metering &amp; utility management</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="services/hes-electricity-metering.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>HES Electricity Metering</a></li> 
+                    <li><a href="services/hes-gas-metering.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>HES Gas Metering</a></li>
+                    <li><a href="services/hes-water-metering.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>HES Water Metering</a></li>
+                    <li><a href="services/cms-ev-charging-management-solution.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>CMS - EV Charging Management Solution</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col atl-mega__col--feature">
+                  <div class="atl-mega__feature-card">
+                    <p class="atl-mega__feature-name">Technologies We Use</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;margin:0.75rem 0;">
+                      <img src="./assets/images/SupportedTech/LoRaWAN.png" alt="Technology 4" style="max-width:80px;height:auto;">
+                      <img src="./assets/images/SupportedTech/zigbee.png" alt="Technology 1" style="max-width:80px;height:auto;">
+                      <img src="./assets/images/SupportedTech/Bluetooth.png" alt="Technology 2" style="max-width:80px;height:auto;">
+                      <img src="./assets/images/SupportedTech/WiFi.png" alt="Technology 3" style="max-width:80px;height:auto;">
+                    </div>
+                    <a href="services.html" class="atl-mega__feature-link">View All Services →</a>
+                
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+          <li class="atl-nav__item">
+          <a class="atl-nav__link" href="resources.html">Resources</a>
+        </li>
+        <!-- 4. INDUSTRIES -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaIndustries">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaIndustries')">Industries<svg
+              class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="m6 9 6 6 6-6" />
+            </svg></button>
+          <div class="atl-mega" id="mega-megaIndustries">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Smart City</p>
+                      <p class="atl-mega__col-desc">Automation &amp; security</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/home-security-automation.html"><span class="atl-mega__dot"></span>Home Security
+                        &amp; Automation</a></li>
+                    <li><a href="industries/sos-devices.html"><span class="atl-mega__dot"></span>SOS Devices</a></li>
+                    <li><a href="industries/smart-city-solutions.html"><span class="atl-mega__dot"></span>Smart City
+                        Solutions</a></li>
+                    <li><a href="industries/building-management-system.html"><span class="atl-mega__dot"></span>Building
+                        Management System</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 22V12M12 12C12 12 8 9 4 12M12 12C12 12 16 9 20 12M4 8C7 5 12 7 12 7C12 7 17 5 20 8" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Agriculture &amp; Energy</p>
+                      <p class="atl-mega__col-desc">Smart farming &amp; utilities</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/smart-agriculture.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Smart
+                        Agriculture System</a></li>
+                    <li><a href="industries/farm-animal-management.html"><span
+                          class="atl-mega__dot atl-mega__dot--teal"></span>Farm Animal Management</a></li>
+                    <li><a href="industries/iot-energy-utilities.html"><span
+                          class="atl-mega__dot atl-mega__dot--teal"></span>IoT in Energy &amp; Utilities</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--orange"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="14" rx="2" />
+                        <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Industrial &amp; Automotive</p>
+                      <p class="atl-mega__col-desc">IIoT &amp; connected vehicles</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/industrial-iot.html"><span class="atl-mega__dot"
+                          style="background:#f97316"></span>Industrial IoT</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--red"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Healthcare</p>
+                      <p class="atl-mega__col-desc">Connected health &amp; Care</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/iot-healthcare.html"><span class="atl-mega__dot atl-mega__dot--red"></span>IoT in
+                        Healthcare</a></li>
+                    <li><a href="industries/telematics-fleet.html"><span
+                          class="atl-mega__dot atl-mega__dot--red"></span>Telematics &amp; Fleet Management</a></li>
+                    <li><a href="industries/consumer-iot.html"><span class="atl-mega__dot atl-mega__dot--red"></span>Consumer
+                        IoT Solutions</a></li>
+                  </ul>
+                </div>
+                <!-- NEW: Defence Column -->
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon" style="background:#e8f0fe;"><svg width="18" height="18" fill="none"
+                        stroke="#1e40af" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Defence</p>
+                      <p class="atl-mega__col-desc">IoT for defence &amp; security</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="industries/iot-in-defence.html"><span class="atl-mega__dot"
+                          style="background:#1e40af"></span>IoT in Defence</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- 5. ABOUT US -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaAbout">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaAbout')">About Us<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaAbout">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><p class="atl-mega__col-title">Company</p><p class="atl-mega__col-desc">Who we are &amp; what we do</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="about.html"><span class="atl-mega__dot"></span>About Nebulae</a></li>
+                    
+                    <li><a href="about.html#team"><span class="atl-mega__dot"></span>Our Team</a></li>
+                    <li><a href="about.html#partners"><span class="atl-mega__dot"></span>Partners &amp; Certifications</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><p class="atl-mega__col-title">Blog &amp; Careers</p><p class="atl-mega__col-desc">Insights &amp; opportunities</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="blog.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Blog</a></li>
+                    
+                    <li><a href="careers.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Careers</a></li>
+                    <li><a href="careers.html#openings"><span class="atl-mega__dot atl-mega__dot--teal"></span>Open Positions</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--orange"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div><p class="atl-mega__col-title">Events &amp; News</p><p class="atl-mega__col-desc">What's happening at Nebulae</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="events.html"><span class="atl-mega__dot" style="background:#f97316"></span> Events</a></li>
+                    <li><a href="news.html"><span class="atl-mega__dot" style="background:#f97316"></span>News</a></li> 
+                  </ul>
+                </div>
+                <!-- <div class="atl-mega__col atl-mega__col--feature">
+                  <div class="atl-mega__feature-card">
+                    <span class="atl-mega__new-tag">JOIN US</span>
+                    <p class="atl-mega__feature-name">Building the Future of IoT</p>
+                    <p class="atl-mega__feature-desc">We're a team of engineers, designers &amp; innovators passionate about connecting the world through smart technology.</p>
+                    <a href="careers.html" class="atl-mega__feature-link">See Open Roles →</a>
+                    
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 6. CONTACT -->
+        <li class="atl-nav__item">
+          <a class="atl-nav__link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Right: CTA -->
+        <div class="atl-nav__right"><button class="atl-nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+     
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="atl-nav__mobile" id="navMobile">
+      <div class="atl-nav__mobile-header">
+        <span class="atl-nav__mobile-title">Menu</span>
+        <button class="atl-nav__mobile-close" id="navMobileClose" aria-label="Close menu">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <a class="atl-nav__mlink" href="index.html">Home</a>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Products<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <div class="atl-nav__macc-section">LoRa</div>
+          <a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">Wi-SUN</div>
+          <a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">Zigbee</div>
+          <a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">Wi-Fi</div>
+          <a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">LTE</div>
+          <a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">BLE</div>
+          <a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=node">Node</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Solutions<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="solutions/smart-water-meter.html">Smart Water Meter Solution</a>
+          <a class="atl-nav__msublink" href="solutions/smart-electric-meter.html">Smart Electric Meter Solution</a>
+          <a class="atl-nav__msublink" href="solutions/smart-gas-meter.html">Smart Gas Metering Solution</a>
+          <a class="atl-nav__msublink" href="solutions/smart-street-light.html">Smart Street Light Solution</a>
+          <a class="atl-nav__msublink" href="solutions/transformer-monitoring.html">Transformer Monitoring System</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Services<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <div class="atl-nav__macc-section">Development</div>
+          <a class="atl-nav__msublink" href="services/iot-product-development.html">IoT Product Development</a>
+          <a class="atl-nav__msublink" href="services/embedded-hardware-design.html">Embedded Hardware Design</a>
+          <a class="atl-nav__msublink" href="services/embedded-firmware-design.html">Embedded Firmware Design</a>
+          <a class="atl-nav__msublink" href="services/pcb-design-services.html">PCB Design Services</a> 
+          <div class="atl-nav__macc-section">Connectivity &amp; Cloud</div>
+          <a class="atl-nav__msublink" href="services/iot-dashboard.html">IoT Dashboard</a>
+          <a class="atl-nav__msublink" href="services/iot-cloud-integration.html">IoT Cloud Integration</a>
+          <a class="atl-nav__msublink" href="services/edge-computing.html">Edge Computing</a>
+          <div class="atl-nav__macc-section">Consulting</div>
+          <a class="atl-nav__msublink" href="services/iot-consulting.html">IoT Consulting</a>
+          <a class="atl-nav__msublink" href="services/iot-mobile-app.html">IoT Mobile App Development</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Industries<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="industries/home-security-automation.html">Home Security &amp; Automation</a>
+          <a class="atl-nav__msublink" href="industries/smart-agriculture.html">Smart Agriculture System</a>
+          <a class="atl-nav__msublink" href="industries/industrial-iot.html">Industrial IoT</a>
+          <a class="atl-nav__msublink" href="industries/iot-healthcare.html">IoT in Healthcare</a>
+          <a class="atl-nav__msublink" href="industries/iot-logistics.html">IoT in Logistics</a>
+          <a class="atl-nav__msublink" href="industries/consumer-iot.html">Consumer IoT Solutions</a>
+        </div>
+      </div>
+
+      <a class="atl-nav__mlink" href="./resources.html">Resources</a>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">About Us<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="about.html">About Nebulae</a>
+          <a class="atl-nav__msublink" href="about.html#mission">Our Mission &amp; Vision</a>
+          <a class="atl-nav__msublink" href="about.html#team">Our Team</a>
+          <a class="atl-nav__msublink" href="blog.html">Blog</a>
+          <a class="atl-nav__msublink" href="careers.html">Careers</a>
+          <a class="atl-nav__msublink" href="events.html">Upcoming Events</a>
+          <a class="atl-nav__msublink" href="news.html">Latest News</a>
+        </div>
+      </div>
+
+      <a class="atl-nav__mlink" href="contact.html">Contact Us</a>
+    </div><!-- /mobile drawer -->
+  </nav>
+</div><!-- /.atl-sticky-header -->
+</header>
+<section class="lg-hero">
+  <div class="lg-hero__grid"></div>
+  <div class="lg-hero__orb lg-hero__orb--1"></div>
+  <div class="lg-hero__orb lg-hero__orb--2"></div>
+  <div class="container" style="position:relative;z-index:2;">
+    <nav class="lg-breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,.65);">Careers</span></nav>
+    <div class="lg-eyebrow">We're Hiring</div>
+    <h1 class="lg-hero__title">Build IoT That <span>Ships to the Field</span></h1>
+    <p class="lg-hero__desc">Nebulae is a 25-person engineering team in Anand, Gujarat building LoRaWAN, Wi-SUN, Zigbee, and BLE IoT hardware deployed across smart cities, utilities, and industrial plants in India. No passengers — everyone ships.</p>
+    <div style="display:flex;gap:.85rem;flex-wrap:wrap;">
+      <a href="#openings" class="lg-btn-primary">See Open Roles <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
+      <a href="mailto:careers@nebulae.io" class="lg-btn-outline" style="color:rgba(255,255,255,.75);border-color:rgba(255,255,255,.2);">Email Your CV</a>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:.65rem;margin-top:2rem;">
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:.55rem 1rem;text-align:center;"><span style='font-family:"Outfit",sans-serif;font-size:1.25rem;font-weight:800;color:#fff;display:block;'>25+</span><span style='font-size:.67rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em;'>Team Members</span></div><div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:.55rem 1rem;text-align:center;"><span style='font-family:"Outfit",sans-serif;font-size:1.25rem;font-weight:800;color:#fff;display:block;'>8</span><span style='font-size:.67rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em;'>Open Roles</span></div><div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:.55rem 1rem;text-align:center;"><span style='font-family:"Outfit",sans-serif;font-size:1.25rem;font-weight:800;color:#fff;display:block;'>Anand</span><span style='font-size:.67rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em;'>Gujarat HQ</span></div><div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:.55rem 1rem;text-align:center;"><span style='font-family:"Outfit",sans-serif;font-size:1.25rem;font-weight:800;color:#fff;display:block;'>Remote</span><span style='font-size:.67rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em;'>SW Roles</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Perks -->
+<section class="lg-section lg-section--surf">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="lg-section-eyebrow">Why Nebulae</span>
+      <h2 class="lg-section-title">What Working Here Looks Like</h2>
+      <p class="lg-section-desc mx-auto">We're not a typical startup. We're an engineering company that makes real hardware for real deployments — and we hire people who care about that distinction.</p>
+    </div>
+    <div class="row g-3"><div class="col-sm-6 col-lg-3">
+      <div class="lg-perk-card">
+        <div class="lg-perk-card__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h4 class="lg-perk-card__title">Engineer-Led Culture</h4>
+        <p class="lg-perk-card__desc">Every decision is made by people who understand the hardware. No bureaucracy between your idea and shipping it.</p>
+      </div>
+    </div><div class="col-sm-6 col-lg-3">
+      <div class="lg-perk-card">
+        <div class="lg-perk-card__icon" style="background:rgba(6,182,212,.1);color:#06b6d4;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <h4 class="lg-perk-card__title">Real Products, Real Scale</h4>
+        <p class="lg-perk-card__desc">Your work goes into products deployed across 50,000+ IoT nodes in Indian cities, utilities, and farms — not internal tools.</p>
+      </div>
+    </div><div class="col-sm-6 col-lg-3">
+      <div class="lg-perk-card">
+        <div class="lg-perk-card__icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h4 class="lg-perk-card__title">Learning Budget</h4>
+        <p class="lg-perk-card__desc">₹30,000/year for courses, certifications (WPC, BIS, AWS), conference attendance, and technical books. No approval committee.</p>
+      </div>
+    </div><div class="col-sm-6 col-lg-3">
+      <div class="lg-perk-card">
+        <div class="lg-perk-card__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h4 class="lg-perk-card__title">Flexible Work</h4>
+        <p class="lg-perk-card__desc">Engineers choose their own hours. Remote-friendly for software roles. Core team in Anand, Gujarat.</p>
+      </div>
+    </div><div class="col-sm-6 col-lg-3">
+      <div class="lg-perk-card">
+        <div class="lg-perk-card__icon" style="background:rgba(217,119,6,.1);color:#d97706;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h4 class="lg-perk-card__title">Competitive CTC</h4>
+        <p class="lg-perk-card__desc">Market-rate salary with performance bonus. ESOP pool for senior engineers and early joiners.</p>
+      </div>
+    </div><div class="col-sm-6 col-lg-3">
+      <div class="lg-perk-card">
+        <div class="lg-perk-card__icon" style="background:rgba(220,38,38,.1);color:#dc2626;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+        <h4 class="lg-perk-card__title">Health & Wellbeing</h4>
+        <p class="lg-perk-card__desc">Group health insurance (employee + family), generous leave policy, and a team that respects your time off.</p>
+      </div>
+    </div><div class="col-sm-6 col-lg-3">
+      <div class="lg-perk-card">
+        <div class="lg-perk-card__icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h4 class="lg-perk-card__title">Small Team, Big Impact</h4>
+        <p class="lg-perk-card__desc">25-person team. You're not a cog. Your name is on the product.</p>
+      </div>
+    </div><div class="col-sm-6 col-lg-3">
+      <div class="lg-perk-card">
+        <div class="lg-perk-card__icon" style="background:rgba(99,102,241,.1);color:#6366f1;"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h4 class="lg-perk-card__title">Ownership Mentality</h4>
+        <p class="lg-perk-card__desc">Ship features, not tickets. You own your domain end-to-end — design, implementation, testing, and production.</p>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- Open Roles -->
+<section class="lg-section" id="openings">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+      <div>
+        <span class="lg-section-eyebrow">Open Positions</span>
+        <h2 class="lg-section-title" style="margin-bottom:0;">8 Open Roles</h2>
+      </div>
+      <a href="mailto:careers@nebulae.io" class="lg-btn-outline">Don't see your role? Email us</a>
+    </div>
+    <div class="lg-job-card mb-3" id="sfe-lora-wisun">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:.85rem;">
+        <div>
+          <span class="lg-job-card__dept" style="background:rgba(124,58,237,.1);color:#7c3aed;">Firmware Engineering</span>
+          <h3 class="lg-job-card__title">Senior Firmware Engineer — LoRaWAN / Wi-SUN</h3>
+          <div class="lg-job-card__meta">
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Anand, Gujarat</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg> Full-time</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3–6 years</span>
+          </div>
+        </div>
+        <a href="mailto:careers@nebulae.io?subject=Application: Senior Firmware Engineer — LoRaWAN / Wi-SUN" class="lg-btn-primary" style="font-size:.82rem;padding:.65rem 1.25rem;white-space:nowrap;align-self:flex-start;">Apply Now <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
+      </div>
+      <p class="lg-job-card__desc">Design and develop production firmware for LoRaWAN and Wi-SUN IoT modules — FreeRTOS/Zephyr on ARM Cortex-M, protocol stack integration, FUOTA bootloader, and ultra-low-power optimisation for 10-year battery targets.</p>
+      <div class="lg-job-card__skills"><span class="lg-job-card__skill">ARM Cortex-M</span><span class="lg-job-card__skill">FreeRTOS / Zephyr</span><span class="lg-job-card__skill">LoRaWAN 1.0.4/1.1</span><span class="lg-job-card__skill">C / C++17</span><span class="lg-job-card__skill">OTA / FUOTA</span><span class="lg-job-card__skill">Low-Power Design</span><span class="lg-job-card__skill">GDB / J-Link</span></div>
+    </div><div class="lg-job-card mb-3" id="pcb-rf">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:.85rem;">
+        <div>
+          <span class="lg-job-card__dept" style="background:rgba(37,99,235,.1);color:#2563eb;">Hardware Engineering</span>
+          <h3 class="lg-job-card__title">PCB Layout Engineer — RF & High-Speed</h3>
+          <div class="lg-job-card__meta">
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Anand, Gujarat</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg> Full-time</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2–5 years</span>
+          </div>
+        </div>
+        <a href="mailto:careers@nebulae.io?subject=Application: PCB Layout Engineer — RF & High-Speed" class="lg-btn-primary" style="font-size:.82rem;padding:.65rem 1.25rem;white-space:nowrap;align-self:flex-start;">Apply Now <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
+      </div>
+      <p class="lg-job-card__desc">Layout multi-layer PCBs for IoT and RF products — sub-GHz antenna design, impedance-controlled routing, SI/PI analysis, and DFM review. Tools: Altium Designer and KiCad.</p>
+      <div class="lg-job-card__skills"><span class="lg-job-card__skill">Altium Designer</span><span class="lg-job-card__skill">KiCad</span><span class="lg-job-card__skill">RF PCB Layout</span><span class="lg-job-card__skill">Impedance Control</span><span class="lg-job-card__skill">Sub-GHz RF</span><span class="lg-job-card__skill">DFM Review</span><span class="lg-job-card__skill">EMC Pre-Compliance</span></div>
+    </div><div class="lg-job-card mb-3" id="be-iot-cloud">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:.85rem;">
+        <div>
+          <span class="lg-job-card__dept" style="background:rgba(79,70,229,.1);color:#4f46e5;">Software Engineering</span>
+          <h3 class="lg-job-card__title">Backend Engineer — IoT Cloud & MQTT</h3>
+          <div class="lg-job-card__meta">
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Anand, Gujarat / Remote</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg> Full-time</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2–5 years</span>
+          </div>
+        </div>
+        <a href="mailto:careers@nebulae.io?subject=Application: Backend Engineer — IoT Cloud & MQTT" class="lg-btn-primary" style="font-size:.82rem;padding:.65rem 1.25rem;white-space:nowrap;align-self:flex-start;">Apply Now <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
+      </div>
+      <p class="lg-job-card__desc">Build and scale IoT cloud backends — EMQX/Mosquitto MQTT broker, InfluxDB time-series pipeline, FastAPI REST API, and DLMS/COSEM MDMS integration for smart metering projects.</p>
+      <div class="lg-job-card__skills"><span class="lg-job-card__skill">Python / FastAPI</span><span class="lg-job-card__skill">MQTT (EMQX)</span><span class="lg-job-card__skill">InfluxDB</span><span class="lg-job-card__skill">PostgreSQL</span><span class="lg-job-card__skill">Docker / K8s</span><span class="lg-job-card__skill">DLMS/COSEM</span><span class="lg-job-card__skill">AWS IoT</span></div>
+    </div><div class="lg-job-card mb-3" id="iot-sa-ami">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:.85rem;">
+        <div>
+          <span class="lg-job-card__dept" style="background:rgba(13,148,136,.1);color:#0d9488;">Solutions</span>
+          <h3 class="lg-job-card__title">IoT Solutions Architect — AMI & Smart City</h3>
+          <div class="lg-job-card__meta">
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Anand, Gujarat</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg> Full-time</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4–8 years</span>
+          </div>
+        </div>
+        <a href="mailto:careers@nebulae.io?subject=Application: IoT Solutions Architect — AMI & Smart City" class="lg-btn-primary" style="font-size:.82rem;padding:.65rem 1.25rem;white-space:nowrap;align-self:flex-start;">Apply Now <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
+      </div>
+      <p class="lg-job-card__desc">Lead pre-sales solutions architecture for DISCOM AMI and Smart City projects — RF coverage planning, network design, RDSS compliance documentation, and technical proposal preparation.</p>
+      <div class="lg-job-card__skills"><span class="lg-job-card__skill">LoRaWAN / Wi-SUN</span><span class="lg-job-card__skill">AMI / RDSS</span><span class="lg-job-card__skill">RF Survey & Planning</span><span class="lg-job-card__skill">DLMS/COSEM</span><span class="lg-job-card__skill">Smart City Mission</span><span class="lg-job-card__skill">Technical Proposals</span><span class="lg-job-card__skill">Customer Presentations</span></div>
+    </div><div class="lg-job-card mb-3" id="hde-embedded">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:.85rem;">
+        <div>
+          <span class="lg-job-card__dept" style="background:rgba(37,99,235,.1);color:#2563eb;">Hardware Engineering</span>
+          <h3 class="lg-job-card__title">Hardware Design Engineer — Embedded IoT</h3>
+          <div class="lg-job-card__meta">
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Anand, Gujarat</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg> Full-time</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2–4 years</span>
+          </div>
+        </div>
+        <a href="mailto:careers@nebulae.io?subject=Application: Hardware Design Engineer — Embedded IoT" class="lg-btn-primary" style="font-size:.82rem;padding:.65rem 1.25rem;white-space:nowrap;align-self:flex-start;">Apply Now <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
+      </div>
+      <p class="lg-job-card__desc">Design schematics and PCB layouts for IoT end-nodes and gateways — power management, RF front-end, MCU peripherals, and production handoff including DFM, BOM, and certification documentation.</p>
+      <div class="lg-job-card__skills"><span class="lg-job-card__skill">Schematic Design</span><span class="lg-job-card__skill">Altium Designer</span><span class="lg-job-card__skill">Power Management</span><span class="lg-job-card__skill">RF Circuit Design</span><span class="lg-job-card__skill">WPC / BIS Certification</span><span class="lg-job-card__skill">BOM Management</span><span class="lg-job-card__skill">Prototyping</span></div>
+    </div><div class="lg-job-card mb-3" id="flutter-dev">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:.85rem;">
+        <div>
+          <span class="lg-job-card__dept" style="background:rgba(79,70,229,.1);color:#4f46e5;">Software Engineering</span>
+          <h3 class="lg-job-card__title">Flutter Mobile Developer — IoT Apps</h3>
+          <div class="lg-job-card__meta">
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Anand, Gujarat / Remote</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg> Full-time</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 1–4 years</span>
+          </div>
+        </div>
+        <a href="mailto:careers@nebulae.io?subject=Application: Flutter Mobile Developer — IoT Apps" class="lg-btn-primary" style="font-size:.82rem;padding:.65rem 1.25rem;white-space:nowrap;align-self:flex-start;">Apply Now <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
+      </div>
+      <p class="lg-job-card__desc">Build production Flutter apps for IoT devices — BLE provisioning, Wi-Fi SmartConfig, real-time MQTT data, device control, and App Store/Play Store delivery.</p>
+      <div class="lg-job-card__skills"><span class="lg-job-card__skill">Flutter / Dart</span><span class="lg-job-card__skill">BLE (flutter_blue_plus)</span><span class="lg-job-card__skill">MQTT</span><span class="lg-job-card__skill">REST API</span><span class="lg-job-card__skill">Firebase FCM</span><span class="lg-job-card__skill">App Store Submission</span><span class="lg-job-card__skill">State Management</span></div>
+    </div><div class="lg-job-card mb-3" id="embedded-linux">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:.85rem;">
+        <div>
+          <span class="lg-job-card__dept" style="background:rgba(124,58,237,.1);color:#7c3aed;">Firmware Engineering</span>
+          <h3 class="lg-job-card__title">Embedded Linux Engineer — Yocto / BSP</h3>
+          <div class="lg-job-card__meta">
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Anand, Gujarat</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg> Full-time</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3–6 years</span>
+          </div>
+        </div>
+        <a href="mailto:careers@nebulae.io?subject=Application: Embedded Linux Engineer — Yocto / BSP" class="lg-btn-primary" style="font-size:.82rem;padding:.65rem 1.25rem;white-space:nowrap;align-self:flex-start;">Apply Now <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
+      </div>
+      <p class="lg-job-card__desc">Develop Yocto-based Linux BSPs for IoT gateways, custom kernel drivers, protocol middleware (Modbus/DLMS), and SWUpdate OTA systems for NXP i.MX8M and Rockchip RK3568 platforms.</p>
+      <div class="lg-job-card__skills"><span class="lg-job-card__skill">Yocto / Buildroot</span><span class="lg-job-card__skill">Linux Kernel</span><span class="lg-job-card__skill">C / Python</span><span class="lg-job-card__skill">SWUpdate / Mender</span><span class="lg-job-card__skill">Modbus / DLMS</span><span class="lg-job-card__skill">Device Drivers</span><span class="lg-job-card__skill">Security Hardening</span></div>
+    </div><div class="lg-job-card mb-3" id="tsm-iot">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:.85rem;">
+        <div>
+          <span class="lg-job-card__dept" style="background:rgba(234,88,12,.1);color:#ea580c;">Business</span>
+          <h3 class="lg-job-card__title">Technical Sales Manager — IoT (DISCOM & Smart City)</h3>
+          <div class="lg-job-card__meta">
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Anand, Gujarat / Field</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg> Full-time</span>
+            <span class="lg-job-card__meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4–8 years</span>
+          </div>
+        </div>
+        <a href="mailto:careers@nebulae.io?subject=Application: Technical Sales Manager — IoT (DISCOM & Smart City)" class="lg-btn-primary" style="font-size:.82rem;padding:.65rem 1.25rem;white-space:nowrap;align-self:flex-start;">Apply Now <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
+      </div>
+      <p class="lg-job-card__desc">Drive sales of Nebulae's AMI, Smart City, and IIoT solutions to DISCOMs, Smart City SPVs, and large enterprises — technical presentations, RFP responses, and key account management.</p>
+      <div class="lg-job-card__skills"><span class="lg-job-card__skill">IoT / AMI Knowledge</span><span class="lg-job-card__skill">DISCOM / Smart City</span><span class="lg-job-card__skill">RFP Management</span><span class="lg-job-card__skill">Technical Presentations</span><span class="lg-job-card__skill">B2B Sales</span><span class="lg-job-card__skill">CRM (Salesforce)</span><span class="lg-job-card__skill">Key Account Management</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Hiring process -->
+<section class="lg-section lg-section--surf">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="lg-section-eyebrow">Our Hiring Process</span>
+      <h2 class="lg-section-title">Simple, Fast, Respectful</h2>
+      <p class="lg-section-desc mx-auto">From application to offer in under 3 weeks. No ghosting — we respond to every application.</p>
+    </div>
+    <div class="lg-process"><div class="lg-process-step"><div class="lg-process-num">1</div><p class="lg-process-title">CV Review</p><p class="lg-process-desc">We review your application within 5 business days. No automated screening — a human engineer reads every CV.</p></div><div class="lg-process-step"><div class="lg-process-num">2</div><p class="lg-process-title">Technical Screen</p><p class="lg-process-desc">30-min async technical task or code review — relevant to the actual role, not algorithmic puzzles.</p></div><div class="lg-process-step"><div class="lg-process-num">3</div><p class="lg-process-title">Engineering Interview</p><p class="lg-process-desc">60-min call with the team — technical depth, past projects, and how you think through real problems.</p></div><div class="lg-process-step"><div class="lg-process-num">4</div><p class="lg-process-title">Founder Call</p><p class="lg-process-desc">30-min call with our CTO — culture fit, your questions about Nebulae, and offer discussion.</p></div><div class="lg-process-step"><div class="lg-process-num">5</div><p class="lg-process-title">Offer</p><p class="lg-process-desc">Written offer within 48 hours of the final interview.</p></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="lg-section">
+  <div class="container">
+    <div style="background:linear-gradient(135deg,#0a0a2e,#1a1a6e);border-radius:28px;padding:4.5rem 3rem;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(6,182,212,.18),transparent 50%),radial-gradient(circle at 80% 50%,rgba(79,70,229,.22),transparent 50%);pointer-events:none;"></div>
+      <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:#fff;margin-bottom:.75rem;position:relative;z-index:1;">Don't See Your Role Listed?</h2>
+      <p style="color:rgba(255,255,255,.6);font-size:.97rem;max-width:520px;margin:0 auto 2rem;position:relative;z-index:1;">We hire for capability, not job titles. If you're a strong firmware, hardware, or IoT engineer — send us your CV with a note on what you'd like to build.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;">
+        <a href="mailto:careers@nebulae.io" class="lg-btn-primary">Send Your CV <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
+        <a href="about.html" class="lg-btn-outline" style="color:rgba(255,255,255,.75);border-color:rgba(255,255,255,.2);">Learn About Nebulae</a>
+      </div>
+    </div>
+  </div>
+</section><footer class="atl-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+
+      <!-- Brand -->
+      <div class="col-12 col-md-4">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img loading="lazy" src="./assets/images/LogoWhite.png" alt="Nebulae" class="atl-footer__logo-img atl-footer__logo-color">
+        </div>
+        <p class="atl-footer__desc">End-to-end IoT solutions provider — from embedded hardware design and wireless modules to cloud integration and smart utility deployments across India and beyond.</p>
+      </div>
+
+      <!-- Navigate -->
+      <div class="col-6 col-md-2">
+        <h6 class="atl-footer__heading">Navigate</h6>
+        <ul class="atl-footer__list">
+          <li><a href="#home" onclick="return navClick('home')">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="industries.html">Industries</a></li>
+           <li><a href="./resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Services & Solutions -->
+      <div class="col-6 col-md-3">
+        <h6 class="atl-footer__heading">Services</h6>
+        <ul class="atl-footer__list">
+          <li><a href="services/iot-product-development.html">IoT Product Development</a></li>
+          <li><a href="services/embedded-hardware-design.html">Embedded Hardware Design</a></li>
+          <li><a href="services/embedded-firmware-design.html">Embedded Firmware Design</a></li>
+          <li><a href="services/iot-cloud-integration.html">IoT Cloud Integration</a></li>
+          <li><a href="services/pcb-design-services.html">PCB Design Services</a></li>
+          <li><a href="services/iot-consulting.html">IoT Consulting</a></li>
+        </ul>
+        <h6 class="atl-footer__heading mt-3">Solutions</h6>
+        <ul class="atl-footer__list">
+          <li><a href="solutions/smart-water-meter.html">Smart Water Meter</a></li>
+          <li><a href="solutions/smart-electric-meter.html">Smart Electric Meter</a></li>
+          <li><a href="solutions/smart-street-light.html">Smart Street Light</a></li>
+          <li><a href="solutions/transformer-monitoring.html">Transformer Monitoring</a></li>
+        </ul>
+      </div>
+
+      <!-- Products & Contact -->
+      <div class="col-12 col-md-3">
+        <h6 class="atl-footer__heading">Products</h6>
+        <ul class="atl-footer__list">
+          <li><a href="products.html?proto=lora&amp;type=module">LoRa — Module &amp; Gateway</a></li>
+          <li><a href="products.html?proto=wisun&amp;type=module">Wi-SUN — Module &amp; Gateway</a></li>
+          <li><a href="products.html?proto=zigbee&amp;type=module">Zigbee — Module &amp; Gateway</a></li>
+          <li><a href="products.html?proto=gsm&amp;type=module">LTE — Module &amp; Gateway</a></li>
+          <li><a href="products.html?proto=ble&amp;type=module">BLE — Module &amp; Gateway</a></li>
+          <li><a href="products.html">View All Products →</a></li>
+        </ul>
+        <h6 class="atl-footer__heading mt-3">Contact</h6>
+        <ul class="atl-footer__list">
+          <li><a href="tel:+9102692232501">+91-02692-232501 / 232502</a></li>
+          <li><a href="mailto:sales@nebulae.io">sales@nebulae.io</a></li>
+          <li>Anand, Gujarat, India</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="atl-footer__bottom">
+      <span>© 2026 Nebulae. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/nebulae-nav.js"></script>
+<script src="./assets/js/nebulae-page.js"></script>
+</body></html>

@@ -1,0 +1,306 @@
+{
+ "slug": "amr-nic",
+ "model": "RF NIC Energy Meter AMR",
+ "full": "RF NIC Card for Energy Meter AMR",
+ "title_name": "RF NIC Energy Meter AMR Card",
+ "type_key": "module",
+ "type_label": "AMR NIC Card",
+ "proto_key": "other",
+ "proto_crumb": "Sub-GHz RF",
+ "proto_label": "Sub-GHz RF · 865–867 MHz",
+ "badge": "RF NIC Card",
+ "category": "RF NIC Card for Energy Meter AMR",
+ "tagline": "Sub-GHz RF NIC card with external antenna and meter interface connector for energy-meter AMR.",
+ "meta_desc": "Nebulae RF NIC Energy Meter AMR card — sub-GHz 865-867 MHz module, +20 dBm TX, -98 dBm RX, 800 m LoS, Cortex-M4 40 MHz, 1024 KB flash, 1.5 uA deep sleep, -20 to +65 C.",
+ "desc": "The RF NIC Card houses a sub-GHz RF module with an external antenna and an interface connector for communicating with smart meters. It monitors energy meters promptly, giving utilities industry-standard energy efficiency, ultra-fast wake-up times, a scalable power amplifier and an integrated balun.",
+ "cert_badges": [
+  "865–867 MHz",
+  "Cortex-M4",
+  "Deep Sleep"
+ ],
+ "gallery": [
+  {
+   "file": "amr-nic-board.jpg",
+   "alt": "RF NIC card board with the sub-GHz RF module mounted on a carrier board",
+   "label": "NIC card board"
+  },
+  {
+   "file": "amr-nic-energy-meter.jpg",
+   "alt": "Energy meter that the RF NIC card communicates with",
+   "label": "Energy meter"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Frequency Band",
+   "value": "865 – 867 MHz"
+  },
+  {
+   "icon": "range",
+   "label": "TX / RX",
+   "value": "+20 dBm · −98 dBm (1% PER)"
+  },
+  {
+   "icon": "range",
+   "label": "Range",
+   "value": "800 m line of sight"
+  },
+  {
+   "icon": "chip",
+   "label": "Core & Memory",
+   "value": "Cortex-M4 40 MHz · 1024 KB flash / 128 KB RAM"
+  },
+  {
+   "icon": "battery",
+   "label": "Current",
+   "value": "TX 107 mA · RX 10.2 mA · deep sleep 1.5 µA"
+  },
+  {
+   "icon": "thermo",
+   "label": "Operating Temperature",
+   "value": "−20 °C to +65 °C"
+  }
+ ],
+ "stats": [
+  {
+   "num": "+20 dBm",
+   "label": "Transmit power"
+  },
+  {
+   "num": "−98 dBm",
+   "label": "Receive sensitivity (1% PER)"
+  },
+  {
+   "num": "800 m",
+   "label": "RF range, line of sight"
+  },
+  {
+   "num": "1.5 µA",
+   "label": "Deep-sleep current"
+  }
+ ],
+ "overview": [
+  "The RF NIC Card houses a sub-GHz RF module with an external antenna and an interface connector for establishing communication with smart meters. It promptly monitors energy meters, ensuring utilities industry-standard energy efficiency, ultra-fast wake-up times, a scalable power amplifier and an integrated balun.",
+  "The module is built on a high-performance 32-bit 40 MHz ARM Cortex-M4 CPU with 1024 KB flash and 128 KB RAM, running from a 38.4 MHz crystal. It transmits at +20 dBm in the 865–867 MHz band with −98 dBm receive sensitivity and an 800 m line-of-sight range.",
+  "It sits in the same AMR ecosystem as the gas and water AMR devices — meter (magnetic / inductive / RS485) to AMR to gateway/DCU to network server or IoT middleware and the end-user application — and operates from −20 °C to +65 °C."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Ultra-low-power",
+   "d": "1.5 µA in deep sleep and 70 µA in active mode."
+  },
+  {
+   "t": "Fast wake-up",
+   "d": "Ultra-fast wake-up times for responsive meter monitoring."
+  },
+  {
+   "t": "Integrated RF design",
+   "d": "Scalable power amplifier and integrated balun, with external antenna."
+  },
+  {
+   "t": "Meter interface",
+   "d": "Connector for communicating with smart energy meters."
+  },
+  {
+   "t": "Generous memory",
+   "d": "1024 KB flash and 128 KB RAM on a 40 MHz Cortex-M4."
+  }
+ ],
+ "showcase": {
+  "title": "Head End System",
+  "intro": "Real-time reporting is done with a Head End System — an IoT-powered software solution that acts as a communication driver between Meter Data Management and the measurement devices.",
+  "items": [
+   {
+    "file": "amr-hes-dashboard.jpg",
+    "alt": "Head End System dashboard shown on a monitor",
+    "cap": "Head End System dashboard (from the AMR brochure)"
+   }
+  ]
+ },
+ "specs": [
+  {
+   "group": "RF Characteristics",
+   "rows": [
+    [
+     "Transmit Power",
+     "+20 dBm"
+    ],
+    [
+     "Receive Sensitivity (1% PER)",
+     "−98 dBm"
+    ],
+    [
+     "RF Range (Line of Sight)",
+     "800 m"
+    ],
+    [
+     "Frequency Band",
+     "865 – 867 MHz"
+    ],
+    [
+     "RF Data Rate",
+     "150 KB (as printed in the brochure)"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical Specifications",
+   "rows": [
+    [
+     "Supply Voltage",
+     "3.3 V (min) – 4.2 V (max)"
+    ],
+    [
+     "Digital Input/Output Voltage",
+     "0.3 V – 3.3 V"
+    ],
+    [
+     "Current — Radio in Transmit Mode",
+     "107 mA"
+    ],
+    [
+     "Current — Radio in Receive Mode",
+     "10.2 mA"
+    ],
+    [
+     "Current — Active Mode",
+     "70 µA"
+    ],
+    [
+     "Current — Deep Sleep Mode",
+     "1.5 µA"
+    ]
+   ]
+  },
+  {
+   "group": "Functional Specifications",
+   "rows": [
+    [
+     "CPU",
+     "High-performance 32-bit 40 MHz ARM Cortex-M4"
+    ],
+    [
+     "Memory",
+     "1024 KB flash and 128 KB RAM"
+    ],
+    [
+     "Clock",
+     "Operates on 38.4 MHz crystal"
+    ]
+   ]
+  },
+  {
+   "group": "Environmental Specifications",
+   "rows": [
+    [
+     "Operating Temperature",
+     "−20 °C to +65 °C"
+    ],
+    [
+     "Storage Temperature",
+     "−20 °C to +50 °C"
+    ],
+    [
+     "Humidity",
+     "Up to 95% RH (non-condensing)"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the Nebulae AMR brochure (RF NIC Energy Meter AMR section).",
+ "features": [
+  {
+   "icon": "wifi",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Sub-GHz RF Module",
+   "d": "865–867 MHz module with external antenna."
+  },
+  {
+   "icon": "plug",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Meter Interface Connector",
+   "d": "Interface connector for communicating with smart meters."
+  },
+  {
+   "icon": "bolt",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Scalable Power Amplifier",
+   "d": "Up to +20 dBm transmit power with integrated balun."
+  },
+  {
+   "icon": "chip",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Cortex-M4 at 40 MHz",
+   "d": "32-bit CPU with 1024 KB flash and 128 KB RAM."
+  },
+  {
+   "icon": "battery",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Ultra-Low-Power Modes",
+   "d": "70 µA active and 1.5 µA deep-sleep current."
+  },
+  {
+   "icon": "gauge",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "Ultra-Fast Wake-Up",
+   "d": "Fast wake-up for responsive monitoring."
+  },
+  {
+   "icon": "range",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "800 m Range",
+   "d": "Line-of-sight range at 865–867 MHz."
+  },
+  {
+   "icon": "thermo",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "−20 to +65 °C",
+   "d": "Operating temperature range."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "meter",
+   "t": "Energy Meter AMR",
+   "d": "Remote reading of smart energy meters."
+  },
+  {
+   "icon": "bolt",
+   "t": "Utility Monitoring",
+   "d": "Energy-efficiency monitoring for utilities."
+  },
+  {
+   "icon": "city",
+   "t": "Smart City Infrastructure",
+   "d": "Made-in-India solution in line with smart-city infrastructure."
+  }
+ ],
+ "part_rows": [
+  [
+   "RF NIC Energy Meter AMR",
+   "RF NIC card with sub-GHz module, external antenna and meter interface connector"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "Nebulae AMR Devices Brochure",
+   "path": "./assets/docs/Nebulae_AMR_Devices_Brochure.pdf",
+   "sub": "PDF · Gas, water and RF NIC energy-meter AMR"
+  }
+ ],
+ "related": [
+  "amr-gas",
+  "nm0221i-nic"
+ ],
+ "primary_doc": "./assets/docs/Nebulae_AMR_Devices_Brochure.pdf"
+}

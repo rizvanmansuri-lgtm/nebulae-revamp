@@ -1,0 +1,318 @@
+{
+ "slug": "nln111p",
+ "model": "NLN111P",
+ "full": "Zigbee MG21 Module NLN111P",
+ "title_name": "Zigbee MG21 Module",
+ "type_key": "module",
+ "type_label": "Module",
+ "proto_key": "zigbee",
+ "proto_crumb": "Zigbee",
+ "proto_label": "Zigbee · Thread · BLE 5",
+ "badge": "Zigbee MG21 Module",
+ "category": "Zigbee Multiprotocol IoT Module",
+ "tagline": "EFR32MG21 based 2.4 GHz Zigbee / Thread / Bluetooth 5 module with PCB antenna.",
+ "meta_desc": "Nebulae NLN111P — EFR32MG21 based 2.4 GHz Zigbee, Thread and Bluetooth 5 module: +20 dBm TX, -104.3 dBm sensitivity, 1024 kB flash, secure boot, OTA, PCB antenna, 26.7 x 16 mm.",
+ "desc": "NLN111P is a compact-size, high-performance Zigbee module based on the Silicon Labs EFR32MG21 SoC. Ideal for energy-friendly, multiprotocol, multiband networking for IoT devices, it features an integrated PCB antenna for excellent RF performance in dense environments and ultra-low power consumption for both battery-powered and always-on devices.",
+ "cert_badges": [
+  "Zigbee",
+  "Thread",
+  "Bluetooth 5"
+ ],
+ "gallery": [
+  {
+   "file": "nln111p-module.jpg",
+   "alt": "NLN111P Zigbee MG21 module, top view with RF shield and PCB antenna",
+   "label": "Module view"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Protocols",
+   "value": "Zigbee · Thread · Bluetooth 5"
+  },
+  {
+   "icon": "range",
+   "label": "TX / RX",
+   "value": "Up to +20 dBm · −104.3 dBm @ 250 kbps"
+  },
+  {
+   "icon": "grid",
+   "label": "Frequency Band",
+   "value": "2.4 GHz ISM"
+  },
+  {
+   "icon": "chip",
+   "label": "Core & Memory",
+   "value": "80 MHz Cortex-M33 · 1024 kB flash / 96 kB RAM"
+  },
+  {
+   "icon": "lock",
+   "label": "Security",
+   "value": "AES-128/192/256 HW crypto · secure boot"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size",
+   "value": "26.7 × 16 × 3.6 mm"
+  }
+ ],
+ "stats": [
+  {
+   "num": "+20 dBm",
+   "label": "Maximum TX power"
+  },
+  {
+   "num": "−104.3 dBm",
+   "label": "Sensitivity @ 250 kbps"
+  },
+  {
+   "num": "60 µA",
+   "label": "Standby current"
+  },
+  {
+   "num": "26.7 × 16 mm",
+   "label": "Module footprint"
+  }
+ ],
+ "overview": [
+  "NLN111P is a compact-size, high-performance Zigbee module based on the Silicon Labs EFR32MG21 SoC. It is ideal for enabling energy-friendly, multiprotocol, multiband networking for IoT devices.",
+  "It features an integrated PCB antenna for excellent RF performance in dense environments. With ultra-low power consumption it is suited to both battery-powered and always-on IoT devices.",
+  "The 80 MHz ARM Cortex-M33 with 1024 kB flash and 96 kB RAM delivers significant processing capability for complex IoT applications, while hardware-accelerated cryptography, secure boot loading, debug access control and a true random number generator keep devices secure. Firmware can be updated over the air."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Multiprotocol",
+   "d": "Bluetooth 5, Zigbee and Thread on the EFR32MG21 SoC."
+  },
+  {
+   "t": "Longer battery life",
+   "d": "60 µA standby current for battery-powered devices."
+  },
+  {
+   "t": "Robust RF performance",
+   "d": "Integrated PCB antenna, up to +20 dBm TX and −104.3 dBm sensitivity."
+  },
+  {
+   "t": "Secure",
+   "d": "Secure boot loading, hardware-accelerated AES and debug access control."
+  },
+  {
+   "t": "OTA updates",
+   "d": "Update firmware in the field without physical access."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Processor & Memory",
+   "rows": [
+    [
+     "Processor",
+     "Silicon Labs EFR32MG21 SoC"
+    ],
+    [
+     "CPU",
+     "80 MHz ARM Cortex-M33"
+    ],
+    [
+     "Memory",
+     "1024 kB Flash, 96 kB RAM"
+    ],
+    [
+     "Firmware",
+     "OTA updates, Secure Boot"
+    ]
+   ]
+  },
+  {
+   "group": "Radio",
+   "rows": [
+    [
+     "Frequency Bands",
+     "2.4 GHz ISM"
+    ],
+    [
+     "TX Power",
+     "Up to +20 dBm"
+    ],
+    [
+     "RF Sensitivity",
+     "−104.3 dBm @ 250 kbps"
+    ],
+    [
+     "Network Protocols",
+     "Bluetooth 5, Zigbee, Thread"
+    ],
+    [
+     "Antenna",
+     "Integrated PCB antenna"
+    ]
+   ]
+  },
+  {
+   "group": "Power & Current",
+   "rows": [
+    [
+     "Supply",
+     "3.3 V"
+    ],
+    [
+     "Standby",
+     "60 µA"
+    ],
+    [
+     "TX",
+     "185 mA"
+    ],
+    [
+     "RX",
+     "9.5 mA"
+    ]
+   ]
+  },
+  {
+   "group": "Security",
+   "rows": [
+    [
+     "Cryptography",
+     "AES-128/192/256 (hardware accelerated)"
+    ],
+    [
+     "Boot & Debug",
+     "Secure boot loading, debug access control, true random number generator"
+    ]
+   ]
+  },
+  {
+   "group": "Physical & Environment",
+   "rows": [
+    [
+     "Size",
+     "26.7 × 16 × 3.6 mm"
+    ],
+    [
+     "I/O",
+     "Serial, Analog, Digital (21 pins)"
+    ],
+    [
+     "Mounting",
+     "1.27 mm pitch SMD"
+    ],
+    [
+     "Shielding",
+     "EMI RF shield"
+    ],
+    [
+     "Temperature Range",
+     "−20 °C to +85 °C"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NLN111P product brochure.",
+ "features": [
+  {
+   "icon": "wifi",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Multiprotocol Radio",
+   "d": "Bluetooth 5, Zigbee and Thread from one 2.4 GHz SoC."
+  },
+  {
+   "icon": "bolt",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Ultra-Low Power",
+   "d": "60 µA standby, 9.5 mA RX and 185 mA TX at 3.3 V."
+  },
+  {
+   "icon": "chip",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Cortex-M33 Performance",
+   "d": "80 MHz core with 1024 kB flash and 96 kB RAM for complex applications."
+  },
+  {
+   "icon": "lock",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Hardware Security",
+   "d": "Accelerated AES-128/192/256, secure boot and a true random number generator."
+  },
+  {
+   "icon": "download",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "OTA Updates",
+   "d": "Field firmware updates over the air."
+  },
+  {
+   "icon": "range",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "Strong RF Range",
+   "d": "Up to +20 dBm TX power with −104.3 dBm sensitivity at 250 kbps."
+  },
+  {
+   "icon": "shield",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "EMI RF Shield",
+   "d": "Shielded module for dense RF environments."
+  },
+  {
+   "icon": "plug",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "SMD, 21 I/O",
+   "d": "1.27 mm pitch SMD with serial, analog and digital I/O (21 pins)."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "chip",
+   "t": "IoT Multi-Protocol Devices",
+   "d": "Devices that need Zigbee, Thread and Bluetooth 5."
+  },
+  {
+   "icon": "city",
+   "t": "Smart Cities & Smart Factory",
+   "d": "Connected infrastructure and factory automation."
+  },
+  {
+   "icon": "bulb",
+   "t": "Smart Lights & Smart Metering",
+   "d": "Lighting and metering endpoints."
+  },
+  {
+   "icon": "building",
+   "t": "Building Automation & Security",
+   "d": "Connected building systems and security devices."
+  },
+  {
+   "icon": "home",
+   "t": "Gateways & Digital Assistants",
+   "d": "Hubs and voice or digital assistant devices."
+  }
+ ],
+ "part_rows": [
+  [
+   "NLN111P",
+   "Zigbee MG21 Module — EFR32MG21, integrated PCB antenna, 1.27 mm pitch SMD"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLN111P Brochure",
+   "path": "./assets/docs/NLN111P_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  }
+ ],
+ "related": [
+  "nln811p",
+  "nln0721"
+ ],
+ "primary_doc": "./assets/docs/NLN111P_Brochure.pdf"
+}

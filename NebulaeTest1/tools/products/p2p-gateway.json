@@ -1,0 +1,331 @@
+{
+ "slug": "p2p-gateway",
+ "model": "P2P Gateway",
+ "full": "P2P Single Channel LoRa Gateway",
+ "title_name": "P2P Single Channel LoRa Gateway",
+ "type_key": "gateway",
+ "type_label": "Gateway",
+ "proto_key": "lora",
+ "proto_crumb": "LoRa",
+ "proto_label": "LoRa · P2P",
+ "badge": "P2P LoRa Gateway",
+ "category": "Single Channel LoRa Gateway",
+ "tagline": "Compact, cost-effective single-channel LoRa gateway for point-to-point links with 4G LTE backhaul.",
+ "meta_desc": "Nebulae P2P Single Channel LoRa Gateway — STM32WL based, IN865/EU868, +27 dBm, -137 dBm sensitivity, 4G LTE, up to 30 nodes, 5 km LoS, wall mount polycarbonate enclosure.",
+ "desc": "A compact and cost-effective gateway designed for reliable long-range point-to-point communication using LoRa technology. Operating on a single frequency channel, it enables direct device connectivity without the complexity of a full LoRaWAN network, which makes it ideal for small-scale and controlled IoT deployments.",
+ "cert_badges": [
+  "WPC LoRa Module",
+  "4G LTE",
+  "Single Channel"
+ ],
+ "gallery": [
+  {
+   "file": "p2p-gateway-kit.jpg",
+   "alt": "P2P Single Channel LoRa Gateway with power adapter, external antennas and mounting accessories",
+   "label": "Gateway kit"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "LoRa Bands",
+   "value": "IN865 MHz · EU868 MHz"
+  },
+  {
+   "icon": "range",
+   "label": "Sensitivity",
+   "value": "Down to −137 dBm @ SF12, BW 125 kHz"
+  },
+  {
+   "icon": "bolt",
+   "label": "Conducted Power",
+   "value": "+27 dBm"
+  },
+  {
+   "icon": "network",
+   "label": "Backhaul",
+   "value": "4G LTE · Nano SIM tray"
+  },
+  {
+   "icon": "chip",
+   "label": "Processor",
+   "value": "STM32WL Cortex-M4 · 256 KB flash / 64 KB RAM"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size",
+   "value": "135 × 90 × 65 mm · wall mount"
+  }
+ ],
+ "stats": [
+  {
+   "num": "5 km",
+   "label": "Range, line of sight*"
+  },
+  {
+   "num": "1 channel",
+   "label": "Single-frequency uplink"
+  },
+  {
+   "num": "Up to 30",
+   "label": "Nodes per gateway*"
+  },
+  {
+   "num": "+27 dBm",
+   "label": "Conducted power"
+  }
+ ],
+ "overview": [
+  "The P2P Single Channel LoRa Gateway is a compact and cost-effective gateway designed for reliable long-range point-to-point communication using LoRa technology. Operating on a single frequency channel, it enables direct device connectivity without the complexity of a full LoRaWAN network.",
+  "It is based on a Cortex-M4 STM32WL 32-bit RISC processor at 48 MHz with 256 KB flash and 64 KB RAM. RF parameters such as frequency, spreading factor and bandwidth are configurable, receiver sensitivity is down to −137 dBm at SF12 / 125 kHz, and conducted power is +27 dBm.",
+  "Data is carried over a 4G LTE connection (Nano SIM tray, external 4G antenna), and the gateway is powered from a 5 V / 3 A DC supply. It ships in a polycarbonate wall-mount enclosure of 135 × 90 × 65 mm and uses a WPC certified LoRa module."
+ ],
+ "overview_note": "* Range and node count are estimated based on ideal conditions with limited sources of interference; field results will vary.",
+ "why": [
+  {
+   "t": "Simple P2P architecture",
+   "d": "Direct device connectivity without full LoRaWAN network complexity."
+  },
+  {
+   "t": "Cost-effective",
+   "d": "Single-channel design for small-scale, controlled deployments."
+  },
+  {
+   "t": "Configurable RF",
+   "d": "Frequency, spreading factor and bandwidth are configurable."
+  },
+  {
+   "t": "4G LTE backhaul",
+   "d": "LTE FDD and GSM/GPRS/EDGE bands with a Nano SIM tray."
+  },
+  {
+   "t": "Rugged & compact",
+   "d": "Industrial-grade hardware in a wall-mount polycarbonate enclosure."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Processor & Memory",
+   "rows": [
+    [
+     "Processor",
+     "Cortex-M4 STM32WL, 32-bit RISC, 48 MHz"
+    ],
+    [
+     "Storage",
+     "256 KB flash and 64 KB RAM"
+    ]
+   ]
+  },
+  {
+   "group": "LoRa",
+   "rows": [
+    [
+     "Frequency",
+     "IN865 MHz, EU868 MHz"
+    ],
+    [
+     "Conducted Power",
+     "+27 dBm"
+    ],
+    [
+     "Receiver Sensitivity",
+     "Down to −137 dBm @ SF12, BW 125 kHz"
+    ],
+    [
+     "Uplink Channels",
+     "1"
+    ],
+    [
+     "Antenna",
+     "External LoRa antenna"
+    ],
+    [
+     "Range*",
+     "Up to 5 km (Line of Sight) and over 1 km in dense urban environments"
+    ],
+    [
+     "Capacity*",
+     "Up to 30 nodes on a single gateway"
+    ]
+   ]
+  },
+  {
+   "group": "Cellular",
+   "rows": [
+    [
+     "Cellular Bands",
+     "LTE FDD B1/B3/B5/B8 # B34, B38, B39, B40, B41 # GSM/GPRS/EDGE 900/1800 MHz"
+    ],
+    [
+     "SIM Card",
+     "Nano SIM tray"
+    ],
+    [
+     "Antenna",
+     "External 4G LTE"
+    ]
+   ]
+  },
+  {
+   "group": "Power",
+   "rows": [
+    [
+     "Power Supply",
+     "5 V – 3 A DC"
+    ]
+   ]
+  },
+  {
+   "group": "Mechanical & Compliance",
+   "rows": [
+    [
+     "Size",
+     "135 × 90 × 65 mm"
+    ],
+    [
+     "Mounting Type",
+     "Wall mount"
+    ],
+    [
+     "Enclosure",
+     "Polycarbonate"
+    ],
+    [
+     "Pre-Compliance Certification",
+     "WPC certified LoRa module"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "* Estimated based on ideal conditions with limited sources of interference; node capacity depends on field scenario. Values as published in the P2P Single Channel LoRa Gateway brochure.",
+ "features": [
+  {
+   "icon": "network",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Point-to-Point Architecture",
+   "d": "Direct device-to-gateway links over a single frequency channel."
+  },
+  {
+   "icon": "range",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Long-Range Wireless",
+   "d": "Up to 5 km line of sight and over 1 km in dense urban environments.*"
+  },
+  {
+   "icon": "eye",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "High Receiver Sensitivity",
+   "d": "Down to −137 dBm at SF12 / 125 kHz for stable data transmission."
+  },
+  {
+   "icon": "gauge",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Configurable RF Parameters",
+   "d": "Set frequency, spreading factor and bandwidth."
+  },
+  {
+   "icon": "bolt",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Low Power Consumption",
+   "d": "Low-power design."
+  },
+  {
+   "icon": "shield",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "Industrial-Grade Hardware",
+   "d": "Built for harsh environments."
+  },
+  {
+   "icon": "wifi",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "4G LTE Connectivity",
+   "d": "LTE FDD / GSM-GPRS-EDGE with Nano SIM tray."
+  },
+  {
+   "icon": "box",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Wall-Mount Enclosure",
+   "d": "Compact polycarbonate enclosure, 135 × 90 × 65 mm."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "building",
+   "t": "Building Automation & Monitoring",
+   "d": "Point-to-point links inside buildings and campuses."
+  },
+  {
+   "icon": "meter",
+   "t": "Smart Metering & Lighting Solutions",
+   "d": "Metering and lighting endpoints."
+  },
+  {
+   "icon": "trash",
+   "t": "Smart Waste Management",
+   "d": "Fill-level reporting."
+  },
+  {
+   "icon": "factory",
+   "t": "Industrial Monitoring",
+   "d": "Remote industrial monitoring."
+  },
+  {
+   "icon": "box",
+   "t": "Inventory Management",
+   "d": "Stock and asset status reporting."
+  },
+  {
+   "icon": "drop",
+   "t": "Smart Flood Sensors",
+   "d": "Flood and water-level sensing."
+  },
+  {
+   "icon": "bulb",
+   "t": "Smart Street Lighting",
+   "d": "Street lighting control and monitoring."
+  },
+  {
+   "icon": "city",
+   "t": "Smart City Network",
+   "d": "Small-scale city sensor networks."
+  },
+  {
+   "icon": "leaf",
+   "t": "Environmental Monitoring",
+   "d": "Environmental sensing."
+  },
+  {
+   "icon": "sprout",
+   "t": "Smart Agriculture",
+   "d": "Field and crop sensing."
+  }
+ ],
+ "part_rows": [
+  [
+   "P2P Single Channel LoRa Gateway",
+   "Single-channel LoRa gateway — IN865 / EU868, 4G LTE, wall mount"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "P2P Single Channel LoRa Gateway Brochure",
+   "path": "./assets/docs/P2P_Single_Channel_LoRa_Gateway_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  }
+ ],
+ "related": [
+  "nln500a",
+  "nm0821i"
+ ],
+ "primary_doc": "./assets/docs/P2P_Single_Channel_LoRa_Gateway_Brochure.pdf"
+}

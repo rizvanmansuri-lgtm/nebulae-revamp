@@ -1,0 +1,362 @@
+{
+ "slug": "nlg6770in",
+ "model": "NLG6770-IN",
+ "full": "Wi-SUN DCU NLG6770-IN",
+ "title_name": "Wi-SUN DCU",
+ "type_key": "gateway",
+ "type_label": "Gateway",
+ "proto_key": "wisun",
+ "proto_crumb": "Wi-SUN",
+ "proto_label": "Wi-SUN FAN 1.0",
+ "badge": "Wi-SUN DCU",
+ "category": "Wi-SUN Data Concentrator Unit",
+ "tagline": "i.MX6 Wi-SUN DCU for up to 200 nodes — IN865, +26 dBm, IP65, 85–528 VAC, 10 kV surge, 4 h backup.",
+ "meta_desc": "Nebulae NLG6770-IN Wi-SUN DCU — NXP i.MX6 Cortex-A7, Wi-SUN FAN 1.0, IN 865-868 MHz, +26 dBm, -109 dBm sensitivity, up to 200 nodes, LTE, Ethernet, 85-528 VAC, 10 kV surge protection.",
+ "desc": "The Wi-SUN DCU (NLG6770-IN) provides secured interconnection of Wi-SUN field devices with WAN communication networks. Its capabilities include Wi-SUN FAN 1.0 support, remote device management, communication management, data storage and interface abstraction, in an industrial-grade enclosure for small to medium mesh networks of up to 200 nodes.",
+ "cert_badges": [
+  "Wi-SUN FAN 1.0",
+  "IP65",
+  "10 kV Surge"
+ ],
+ "gallery": [
+  {
+   "file": "nlg6770in.jpg",
+   "alt": "NLG6770-IN Wi-SUN DCU in a pole- or wall-mount enclosure with external antenna",
+   "label": "DCU view"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Wi-SUN",
+   "value": "FAN 1.0 · IN 865–868 MHz"
+  },
+  {
+   "icon": "range",
+   "label": "TX / RX",
+   "value": "+26 dBm · −109 dBm @ 50 kbps · −107 dBm @ 100 kbps"
+  },
+  {
+   "icon": "network",
+   "label": "WAN",
+   "value": "LTE · Ethernet 10/100 · Wi-Fi optional"
+  },
+  {
+   "icon": "cpu",
+   "label": "Processor",
+   "value": "NXP i.MX6 Cortex-A7 792 MHz · Yocto Linux"
+  },
+  {
+   "icon": "bolt",
+   "label": "Power",
+   "value": "85 – 528 VAC · 4 h battery backup"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size",
+   "value": "250 × 210 × 92 mm · pole / wall mount"
+  }
+ ],
+ "stats": [
+  {
+   "num": "200",
+   "label": "Nodes on one network*"
+  },
+  {
+   "num": "+26 dBm",
+   "label": "Conducted power"
+  },
+  {
+   "num": "10 kV",
+   "label": "Surge protection"
+  },
+  {
+   "num": "10 W",
+   "label": "Average power (approx.)"
+  }
+ ],
+ "overview": [
+  "The Wi-SUN DCU (NLG6770-IN) provides secured interconnection of Wi-SUN field devices with WAN communication networks. Its capabilities include Wi-SUN FAN 1.0 support, remote device management, communication management, data storage and interface abstraction.",
+  "A choice of multiple WAN interfaces and mounting options makes it suitable for different deployment strategies and locations. It is ideal for small to medium mesh networks supporting up to 200 nodes on a single network (depending on the field scenario) for various IoT applications.",
+  "Built on an NXP i.MX6 Cortex-A7 running a Yocto based Linux system, it accepts a wide 85–528 VAC input with integrated over-voltage protection, offers 10 kV surge protection, tamper detection, 32 GB offline data storage and 4 hours of battery backup, and uses an external 5 dBi fibre-glass antenna for long range. LTE and Ethernet are standard; Wi-Fi is optional."
+ ],
+ "overview_note": "* Node count depends on the field scenario. IP65 is self-certified per the brochure.",
+ "why": [
+  {
+   "t": "Wi-SUN FAN 1.0",
+   "d": "Secured interconnection of Wi-SUN field devices with WAN networks."
+  },
+  {
+   "t": "Wide power input",
+   "d": "85 – 528 VAC with integrated over-voltage and 10 kV surge protection."
+  },
+  {
+   "t": "Resilient",
+   "d": "4 hours of battery backup, tamper detection and 32 GB offline storage."
+  },
+  {
+   "t": "Flexible connectivity",
+   "d": "LTE and Ethernet, with optional Wi-Fi, through a model selector."
+  },
+  {
+   "t": "Regional variants",
+   "d": "IN, US, EU, AU and RU frequency options."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Processor & Storage",
+   "rows": [
+    [
+     "Processor",
+     "ARM Cortex-A7 microprocessor IC i.MX6, 1 core, 32-bit, 792 MHz, 289-MAPBGA"
+    ],
+    [
+     "Operating System",
+     "Yocto based Linux system"
+    ],
+    [
+     "Storage",
+     "256 MB NAND flash, 512 MB DDR3L RAM, 32 GB SD card"
+    ]
+   ]
+  },
+  {
+   "group": "Wi-SUN",
+   "rows": [
+    [
+     "Frequency",
+     "IN 865–868 MHz (other country options available — see product selector list)"
+    ],
+    [
+     "Conductive Power",
+     "+26 dBm (configurable based on region)"
+    ],
+    [
+     "Receiver Sensitivity",
+     "−109 dBm @ 50 kbps 2FSK · −107 dBm @ 100 kbps 2FSK"
+    ],
+    [
+     "Antenna",
+     "External 5 dBi fibre glass antenna"
+    ],
+    [
+     "Capacity*",
+     "Up to 200 nodes on a single network"
+    ]
+   ]
+  },
+  {
+   "group": "Cellular",
+   "rows": [
+    [
+     "Cellular Bands",
+     "LTE FDD – B1/B3/B5#/B7/B8/B20/B28# · GSM/GPRS/EDGE 900/1800 MHz"
+    ],
+    [
+     "SIM Card",
+     "Nano SIM tray"
+    ],
+    [
+     "Antenna",
+     "Inside enclosure"
+    ]
+   ]
+  },
+  {
+   "group": "Wi-Fi (optional — see product selector guide)",
+   "rows": [
+    [
+     "Band",
+     "Single spatial stream in 2.4 GHz ISM band"
+    ],
+    [
+     "Standards",
+     "802.11 b/g/n, 802.3, 802.3u, 802.11e-compatible bursting"
+    ],
+    [
+     "Antenna",
+     "Inside enclosure"
+    ]
+   ]
+  },
+  {
+   "group": "Interfaces",
+   "rows": [
+    [
+     "Ethernet",
+     "1 × IEEE 802.3 10/100M"
+    ],
+    [
+     "USB",
+     "Type-C for serial debug communication"
+    ]
+   ]
+  },
+  {
+   "group": "Power",
+   "rows": [
+    [
+     "Power Supply",
+     "85 ~ 528 VAC"
+    ],
+    [
+     "Power Backup",
+     "4 hours battery backup after power failure"
+    ],
+    [
+     "Power Consumption",
+     "Average 10 W (approx.)"
+    ]
+   ]
+  },
+  {
+   "group": "Mechanical & Environmental",
+   "rows": [
+    [
+     "Size",
+     "250 × 210 × 92 mm"
+    ],
+    [
+     "Mounting Type",
+     "Pole / wall mount"
+    ],
+    [
+     "Enclosure",
+     "Polycarbonate — UV stabilised, UL94 V0 rated, IP65 self-certified, fire-retardant case"
+    ],
+    [
+     "Operating Temperature",
+     "−10 °C to 60 °C"
+    ],
+    [
+     "Humidity",
+     "Relative humidity 15% to 93% non-condensing"
+    ]
+   ]
+  },
+  {
+   "group": "Pre-Compliance Certification",
+   "rows": [
+    [
+     "Tests",
+     "ESD (IEC 61000-4-2) · EFT (IEC 61000-4-4) · Surge (IEC 61000-4-5) · Radiated emission (CISPR22) · Immunity to electromagnetic HF field (IEC 61000-4-3)"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the Wi-SUN DCU NLG6770-IN brochure (version 2.0). “#” marks are reproduced from the brochure’s cellular band list.",
+ "features": [
+  {
+   "icon": "wifi",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Wi-SUN FAN 1.0",
+   "d": "Wi-SUN FAN 1.0 support for field-area networks."
+  },
+  {
+   "icon": "network",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Up to 200 Nodes",
+   "d": "Single-network capacity (field dependent)."
+  },
+  {
+   "icon": "bolt",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Wide Input Supply",
+   "d": "85 – 528 VAC with integrated over-voltage protection."
+  },
+  {
+   "icon": "shield",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "10 kV Surge Protection",
+   "d": "Plus tamper detection."
+  },
+  {
+   "icon": "server",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "32 GB Offline Storage",
+   "d": "Offline data storage of 32 GB."
+  },
+  {
+   "icon": "battery",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "DCU Battery Backup",
+   "d": "4 hours of backup after power failure."
+  },
+  {
+   "icon": "range",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "External 5 dBi Antenna",
+   "d": "Fibre-glass antenna for long range."
+  },
+  {
+   "icon": "plug",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "LTE, Ethernet & Wi-Fi",
+   "d": "LTE and Ethernet standard; Wi-Fi optional."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "meter",
+   "t": "Smart Utility Metering",
+   "d": "Electricity, gas and water metering."
+  },
+  {
+   "icon": "factory",
+   "t": "Industrial Automation & Predictive Maintenance",
+   "d": "Condition monitoring across plants."
+  },
+  {
+   "icon": "sprout",
+   "t": "Agriculture & Environmental Monitoring",
+   "d": "Field and environmental sensing."
+  },
+  {
+   "icon": "bulb",
+   "t": "Smart Street Lighting",
+   "d": "Street-lighting control networks."
+  },
+  {
+   "icon": "shield",
+   "t": "Defence & Military Applications",
+   "d": "Rugged, secure Wi-Fi/Wi-SUN coverage."
+  },
+  {
+   "icon": "city",
+   "t": "Smart Cities",
+   "d": "City-scale IoT networks."
+  }
+ ],
+ "part_rows": [
+  [
+   "NLG6770-IN",
+   "Wi-SUN DCU, IN865 (ordering code PL1WSNSOM0100)"
+  ],
+  [
+   "NLG6 70 - IN (model structure)",
+   "Cloud-connection selector 5 = GSM + Ethernet, 7 = GSM + Wi-Fi + Ethernet; 70 = Wi-SUN; region IN / US / EU / AU / RU"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLG6770-IN Brochure",
+   "path": "./assets/docs/NLG6770-IN_Wi-SUN_DCU_Brochure.pdf",
+   "sub": "PDF · Product brochure v2.0"
+  }
+ ],
+ "related": [
+  "nlg8520",
+  "nlg6x40g-in"
+ ],
+ "primary_doc": "./assets/docs/NLG6770-IN_Wi-SUN_DCU_Brochure.pdf"
+}

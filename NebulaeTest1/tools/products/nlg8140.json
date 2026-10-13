@@ -1,0 +1,293 @@
+{
+ "slug": "nlg8140",
+ "model": "NLG8140",
+ "full": "Handheld LoRaWAN Gateway NLG8140",
+ "title_name": "Handheld LoRaWAN Gateway",
+ "type_key": "gateway",
+ "type_label": "Gateway",
+ "proto_key": "lora",
+ "proto_crumb": "LoRa",
+ "proto_label": "LoRa / LoRaWAN",
+ "badge": "Handheld Gateway",
+ "category": "Portable LoRaWAN Gateway",
+ "tagline": "Portable 8-channel LoRaWAN concentrator for field testing — SX1303, +27 dBm, Raspberry Pi 4.",
+ "meta_desc": "Nebulae NLG8140 handheld LoRaWAN gateway — SX1303 baseband, dual SX1250, SKY66420 front end, +27 dBm TX, -139 dBm sensitivity, Raspberry Pi 4, 8-channel, IN865, WPC.",
+ "desc": "The Handheld LoRaWAN Gateway is a high-performance portable concentrator designed for precision field testing and industrial IoT deployment. Built with the SX1303 baseband and the high-power SKY66420 front end, it offers superior sensitivity, with a Raspberry Pi 4 for edge computing.",
+ "cert_badges": [
+  "WPC",
+  "SX1303",
+  "+27 dBm"
+ ],
+ "gallery": [
+  {
+   "file": "nlg8140.jpg",
+   "alt": "NLG8140 handheld LoRaWAN gateway with antenna",
+   "label": "Gateway view"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "LoRa IC",
+   "value": "Semtech SX1303 · dual SX1250"
+  },
+  {
+   "icon": "bolt",
+   "label": "TX Power",
+   "value": "+27 dBm (high power)"
+  },
+  {
+   "icon": "range",
+   "label": "Sensitivity",
+   "value": "−139 dBm @ SF12"
+  },
+  {
+   "icon": "cpu",
+   "label": "Processor",
+   "value": "Raspberry Pi 4 · quad-core 64-bit ARM"
+  },
+  {
+   "icon": "grid",
+   "label": "Channels & Band",
+   "value": "8-channel multi-packet · IN865"
+  },
+  {
+   "icon": "network",
+   "label": "Backhaul",
+   "value": "Wi-Fi"
+  }
+ ],
+ "stats": [
+  {
+   "num": "+27 dBm",
+   "label": "Extreme TX power"
+  },
+  {
+   "num": "−139 dBm",
+   "label": "Sensitivity @ SF12"
+  },
+  {
+   "num": "8",
+   "label": "Multi-packet channels"
+  },
+  {
+   "num": "1 km+",
+   "label": "RF range, line of sight"
+  }
+ ],
+ "overview": [
+  "The Handheld LoRaWAN Gateway NLG8140 is a high-performance, portable concentrator designed for precision field testing and industrial IoT deployment.",
+  "It is built with the SX1303 next-generation baseband, dual SX1250 radios and the high-power SKY66420 front-end module with an integrated LNA, which together deliver superior sensitivity (−139 dBm at SF12) and up to +27 dBm transmit power. It receives on 8 channels with multi-packet capability in the IN865 band.",
+  "A Raspberry Pi 4 (64-bit quad-core ARM, up to 1 GB LPDDR4) provides edge computing, with Wi-Fi as the backhaul. The gateway is WPC certified and is aimed at field testing, industrial IoT, agriculture and environmental monitoring, smart agriculture and asset tracking."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Portable",
+   "d": "A handheld concentrator for field testing and quick deployment."
+  },
+  {
+   "t": "Extreme output power",
+   "d": "+27 dBm TX with a high-power SKY66420 front end."
+  },
+  {
+   "t": "Next-gen baseband",
+   "d": "Semtech SX1303 with dual SX1250 radios."
+  },
+  {
+   "t": "Edge computing",
+   "d": "Raspberry Pi 4 platform with up to 1 GB LPDDR4."
+  },
+  {
+   "t": "WPC certified",
+   "d": "Certified for use in India."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Processor Specifications",
+   "rows": [
+    [
+     "Processor",
+     "Raspberry Pi 4"
+    ],
+    [
+     "Architecture",
+     "64-bit quad-core ARM"
+    ],
+    [
+     "Memory",
+     "Up to 1 GB LPDDR4"
+    ],
+    [
+     "Frequency Band",
+     "IN865"
+    ]
+   ]
+  },
+  {
+   "group": "RF & Connectivity",
+   "rows": [
+    [
+     "LoRa IC",
+     "Semtech SX1303"
+    ],
+    [
+     "Radio IC",
+     "Dual SX1250"
+    ],
+    [
+     "Front-End Module",
+     "SKY66420"
+    ],
+    [
+     "Backhaul",
+     "Wi-Fi"
+    ]
+   ]
+  },
+  {
+   "group": "Performance",
+   "rows": [
+    [
+     "TX Power",
+     "+27 dBm (high power)"
+    ],
+    [
+     "Sensitivity",
+     "−139 dBm @ SF12"
+    ],
+    [
+     "RF Range (LoS)",
+     "Up to 1 km+"
+    ],
+    [
+     "Channels",
+     "8-channel multi-packet"
+    ]
+   ]
+  },
+  {
+   "group": "Mechanical & Compliance",
+   "rows": [
+    [
+     "Enclosure Dimensions (H × W × D)",
+     "120 × 80 × 55 mm"
+    ],
+    [
+     "Antenna Length",
+     "199 mm"
+    ],
+    [
+     "Certification",
+     "WPC"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NLG8140 brochure (version 2.0); dimensions read from its dimension drawing.",
+ "features": [
+  {
+   "icon": "bolt",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Extreme +27 dBm TX Power",
+   "d": "High-power SKY66420 front-end module."
+  },
+  {
+   "icon": "chip",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "SX1303 Next-Gen Baseband",
+   "d": "Dual SX1250 radios for 8-channel multi-packet reception."
+  },
+  {
+   "icon": "cpu",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "RPi Powered Edge Computing",
+   "d": "Raspberry Pi 4 with quad-core 64-bit ARM."
+  },
+  {
+   "icon": "eye",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Integrated LNA",
+   "d": "Low-noise amplifier for superior sensitivity."
+  },
+  {
+   "icon": "wifi",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Wi-Fi Backhaul",
+   "d": "Connects the handheld gateway to the network over Wi-Fi."
+  },
+  {
+   "icon": "range",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "−139 dBm Sensitivity",
+   "d": "At SF12."
+  },
+  {
+   "icon": "shield",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "WPC Certified",
+   "d": "Certified for use in India."
+  },
+  {
+   "icon": "box",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Handheld Form Factor",
+   "d": "Compact portable enclosure."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "eye",
+   "t": "Field Testing",
+   "d": "Precision LoRaWAN field testing and site surveys."
+  },
+  {
+   "icon": "factory",
+   "t": "Industrial IoT",
+   "d": "Portable gateway for industrial IoT deployment."
+  },
+  {
+   "icon": "leaf",
+   "t": "Agriculture & Environmental Monitoring",
+   "d": "Field monitoring deployments."
+  },
+  {
+   "icon": "sprout",
+   "t": "Smart Agriculture",
+   "d": "Agricultural sensing."
+  },
+  {
+   "icon": "truck",
+   "t": "Asset Tracking",
+   "d": "Asset tracking trials and deployments."
+  }
+ ],
+ "part_rows": [
+  [
+   "NLG8140",
+   "Handheld LoRaWAN Gateway — SX1303, IN865, Raspberry Pi 4, Wi-Fi"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLG8140 Brochure",
+   "path": "./assets/docs/NLG8140_Brochure.pdf",
+   "sub": "PDF · Product brochure v2.0"
+  }
+ ],
+ "related": [
+  "nlg7644",
+  "nm0821i"
+ ],
+ "primary_doc": "./assets/docs/NLG8140_Brochure.pdf"
+}

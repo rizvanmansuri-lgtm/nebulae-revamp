@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lighting Management System (LMS) for Street Lights | Nebulae</title>
+  <meta name="description" content="ViaLights Lighting Management System: cloud-based, vendor-neutral platform for monitoring and controlling street lights with maps, scheduling, ticketing, analytics and alerts." />
+  <meta name="keywords" content="lighting management system, LMS, street light management software, vendor neutral, ViaLights, CMS" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.nebulae.io/services/lora-management-system.html" />
+  <meta property="og:title" content="Lighting Management System (LMS) for Street Lights | Nebulae" />
+  <meta property="og:description" content="ViaLights Lighting Management System: cloud-based, vendor-neutral platform for monitoring and controlling street lights with maps, scheduling, ticketing, analytics and alerts." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/nebulae-nav.css">
+  <link rel="stylesheet" href="../assets/css/solutions.css">
+  <link rel="stylesheet" href="../assets/css/solutions-extra.css">
+  <style>
+    .sl-hero{padding:5rem 0 4rem}
+    .sl-arch-card{margin-top:1.25rem}
+    .sl-arch-arrow:last-child{display:none}
+    .sl-related{padding:4rem 0;background:#f5f7ff}
+    .sl-related__title{font-family:'Outfit',sans-serif;font-size:1.35rem;font-weight:800;color:#111827;margin-bottom:1.5rem}
+    .sl-rel-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:1.5rem;display:block;text-decoration:none;transition:all .25s;height:100%}
+    .sl-rel-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(79,70,229,.1);border-color:rgba(79,70,229,.25)}
+    .sl-rel-card__tag{font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:.75rem;display:inline-block}
+    .sl-rel-card__name{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:700;color:#111827;margin-bottom:.4rem}
+    .sl-rel-card__desc{font-size:.8rem;color:#6b7280;line-height:1.6}
+    .sl-rel-card__arrow{font-size:.78rem;font-weight:700;color:#4f46e5;margin-top:.75rem;display:block}
+  </style>
+</head>
+<body>
+<div id="nblProgressBar" role="progressbar" aria-label="Page scroll progress"></div>
+ 
+<!-- <button id="nblThemeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode"></button> -->
+<button id="nblBackTop" aria-label="Back to top" title="Back to top">
+  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<header>
+<!-- ════ STICKY HEADER ════ -->
+<div class="atl-sticky-header" style="position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:9999!important;">
+
+  <!-- Utility bar -->
+  <div class="atl-util-bar">
+    <div class="atl-util-bar__inner">
+      <div class="atl-util-bar__left">
+        <!-- <span class="atl-util-link">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          India · IoT Solutions Provider
+        </span> -->
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 9898042339 
+        </a>
+      </div>
+      <div class="atl-util-bar__right">
+        <a href="tel:+917486031238" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91-02692-232501/02
+        </a>
+        <a href="mailto:sales@nebulae.io" class="atl-util-link">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          sales@nebulae.io
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main navbar -->
+  <nav class="atl-nav" id="atlNav">
+    <div class="atl-nav__inner">
+
+      <!-- Logo -->
+      <a href="../index.html" class="atl-nav__logo">
+        <img src="../assets/images/LogoBlue.png" alt="Nebulae" class="atl-nav__logo-img">
+      </a>
+
+      <!-- Desktop nav -->
+      <ul class="atl-nav__links" id="navLinks">
+
+        <!-- 1. PRODUCTS -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaProducts">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaProducts')">
+            Products
+            <svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="atl-mega" id="mega-megaProducts">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner atl-mega__inner--products" style="display:flex;gap:0;min-height:320px;">
+
+                <!-- Rail -->
+                <div class="atl-prod-rail">
+                  <button class="atl-prod-rail__item atl-prod-rail__item--active" data-prod="module">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                    Module
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  
+                  <button class="atl-prod-rail__item" data-prod="concentrator">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                    Concentrator
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+
+                  <button class="atl-prod-rail__item" data-prod="gateway">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h.01M10 11h.01"/><circle cx="17" cy="11" r="1" fill="currentColor"/></svg>
+                    Gateway
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="filter">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                    Filter
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  
+                  <button class="atl-prod-rail__item" data-prod="node">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+                    Nodes
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="evk">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+                    EVK
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                  <button class="atl-prod-rail__item" data-prod="dataconnector">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h7"/><circle cx="17" cy="18" r="3"/><path d="M17 15v-1.5M17 21v1.5M14.2 16.5l-1.3-.75M20.1 19.25l1.3.75M14.2 19.25l-1.3.75M20.1 16.5l1.3-.75"/></svg>
+                    Data Connector
+                    <svg class="atl-prod-rail__arrow" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                   
+                </div>
+
+                <!-- Panels -->
+                <div class="atl-prod-panel">
+                  <!-- Module -->
+                  <div class="atl-prod-panel__body atl-prod-panel__body--active" data-panel="module">
+                    <p class="atl-prod-panel__label">Module — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="../products.html?proto=lora&amp;type=module" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="../products.html?proto=wisun&amp;type=module" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="../products.html?proto=zigbee&amp;type=module" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="../products.html?proto=wifi&amp;type=module" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="../products.html?proto=som&amp;type=module" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span><span class="atl-prod-card__name">SOM</span><span class="atl-prod-card__desc">System on Module</span></a>
+                    </div>
+                  </div>
+                  <!-- Gateway -->
+                  <div class="atl-prod-panel__body" data-panel="gateway">
+                    <p class="atl-prod-panel__label">Gateway — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="../products.html?proto=lora&amp;type=gateway" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="../products.html?proto=wisun&amp;type=gateway" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="../products.html?proto=gsm&amp;type=gateway" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">LTE</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- Filter -->
+                  <div class="atl-prod-panel__body" data-panel="filter">
+                    <p class="atl-prod-panel__label">Filter — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="../products.html?proto=lora&amp;type=filter" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- EVK -->
+                  <div class="atl-prod-panel__body" data-panel="evk">
+                    <p class="atl-prod-panel__label">EVK — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="../products.html?proto=lora&amp;type=evk" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- Concentrator -->
+                  <div class="atl-prod-panel__body" data-panel="concentrator">
+                    <p class="atl-prod-panel__label">Concentrator — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="../products.html?proto=lora&amp;type=concentrator" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                    </div>
+                  </div>
+                  <!-- Node -->
+                  <div class="atl-prod-panel__body" data-panel="node">
+                    <p class="atl-prod-panel__label">Node — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="../products.html?proto=lora&amp;type=node" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="../products.html?proto=wisun&amp;type=node" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                    </div>
+                  </div>
+                  <!-- Add to Panels section (after EVK panel) -->
+                  <div class="atl-prod-panel__body" data-panel="dataconnector">
+                    <p class="atl-prod-panel__label">Data Connector — Choose a protocol</p>
+                    <div class="atl-prod-panel__grid">
+                      <a href="../products.html?proto=lora&amp;type=dataconnector" class="atl-prod-card atl-prod-card--blue"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M1.42 9a16 16 0 0121.16 0" />
+                            <path d="M5 12.55a11 11 0 0114.08 0" />
+                            <path d="M10.54 17a6 6 0 012.92 0" />
+                            <circle cx="12" cy="20" r="1" fill="currentColor" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To LoRa</span><span class="atl-prod-card__desc">Long Range
+                          IoT</span></a>
+                      <a href="../products.html?proto=wisun&amp;type=dataconnector" class="atl-prod-card atl-prod-card--teal"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M8.5 8.5a5 5 0 0 0 7 7" />
+                            <path d="M5 5a9 9 0 0 0 13 13" />
+                            <path d="M2 2a13 13 0 0 0 19 19" />
+                            <circle cx="12" cy="12" r="1" fill="currentColor" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To Wi-SUN</span><span class="atl-prod-card__desc">Smart
+                          Utility Network</span></a>
+                      <a href="../products.html?proto=zigbee&amp;type=dataconnector" class="atl-prod-card atl-prod-card--orange"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To Zigbee</span><span class="atl-prod-card__desc">Mesh
+                          Networking</span></a>
+                      <a href="../products.html?proto=wifi&amp;type=dataconnector" class="atl-prod-card atl-prod-card--blue"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M5 12.55a11 11 0 0114.08 0" />
+                            <path d="M1.42 9a16 16 0 0121.16 0" />
+                            <path d="M10.54 17a6 6 0 012.92 0" />
+                            <circle cx="12" cy="20" r="1" fill="currentColor" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To Wi-Fi</span><span class="atl-prod-card__desc">RS485 Wireless
+                          LAN</span></a>
+                      <a href="../products.html?proto=gsm&amp;type=dataconnector" class="atl-prod-card atl-prod-card--red"><span
+                          class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                            <line x1="12" y1="18" x2="12.01" y2="18" />
+                          </svg></span><span class="atl-prod-card__name">RS485 To LTE</span><span class="atl-prod-card__desc">Cellular
+                          IoT</span></a>
+                  
+                    </div>
+                  </div>
+                   
+                </div><!-- /atl-prod-panel -->
+
+                <!-- Feature card -->
+                <div style="width:220px;flex-shrink:0;padding:1.5rem 1.25rem;display:flex;align-items:center;">
+                  <div class="atl-mega__feature-card" style="width:100%">
+                    <p class="atl-mega__feature-name">Official Partners</p>
+                    <img src="../assets/images/Semtech.png" alt="Official Partner Logo 1" style="max-width:120px;height:auto;margin-bottom:0.75rem;">
+                    <img src="../assets/images/SLabs.png" alt="Official Partner Logo 2" style="max-width:120px;height:auto;">
+                    <a href="../products.html" class="atl-mega__feature-link">View All Products →</a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2. SOLUTIONS -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaSolutions">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaSolutions')">Solutions<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaSolutions">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner atl-mega__inner--3col">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div><div><p class="atl-mega__col-title">Smart Metering</p><p class="atl-mega__col-desc">AMI &amp; AMR utility solutions</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../solutions/smart-water-meter.html"><span class="atl-mega__dot"></span>Smart Water Meter Solution</a></li>
+                    <li><a href="../solutions/smart-electric-meter.html"><span class="atl-mega__dot"></span>Smart Electric Meter Solution</a></li>
+                    <li><a href="../solutions/smart-gas-meter.html"><span class="atl-mega__dot"></span>Smart Gas Metering Solution</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div><div><p class="atl-mega__col-title">Smart Infrastructure</p><p class="atl-mega__col-desc">City &amp; grid automation</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../solutions/smart-street-light.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Smart Street Light Solution</a></li>
+                    <li><a href="../solutions/transformer-monitoring.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Transformer Monitoring System</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col atl-mega__col--feature">
+                     <div class="atl-mega__feature-card" style="width:100%">
+                    <p class="atl-mega__feature-name">Official Partners</p>
+                    <img src="../assets/images/Semtech.png" alt="Official Partner Logo 1" style="max-width:120px;height:auto;margin-bottom:0.75rem;">
+                    <img src="../assets/images/SLabs.png" alt="Official Partner Logo 2" style="max-width:120px;height:auto;">
+                    <a href="../products.html" class="atl-mega__feature-link">View All Products →</a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3. SERVICES -->
+           <li class="atl-nav__item atl-nav__item--mega" id="megaServices">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaServices')">Services<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaServices">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div><p class="atl-mega__col-title">Development</p><p class="atl-mega__col-desc">IoT product &amp; embedded design</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../services/iot-product-development.html"><span class="atl-mega__dot"></span>IoT Product Development</a></li>
+                    <li><a href="../services/embedded-hardware-design.html"><span class="atl-mega__dot"></span>Embedded Hardware Design</a></li>
+                    <li><a href="../services/embedded-firmware-design.html"><span class="atl-mega__dot"></span>Embedded Firmware Development</a></li>
+                    <li><a href="../services/pcb-design-services.html"><span class="atl-mega__dot"></span>PCB Design Services</a></li> 
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div><div><p class="atl-mega__col-title">RF - Survey</p><p class="atl-mega__col-desc">Network, cloud &amp; dashboard</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../services/wireless-sensor-network.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Wireless Sensor Network in IoT</a></li>
+                    
+                    <li><a href="../services/iot-cloud-integration.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>IoT Cloud Integration</a></li>
+                    <li><a href="../services/edge-computing.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Edge Computing</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--purple"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
+    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
+    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
+</svg></div><div><p class="atl-mega__col-title">Cloud</p><p class="atl-mega__col-desc">Platforms &amp; management systems</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../services/lora-management-system.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>LoRa Management System</a></li>
+                    <li><a href="../services/lorawan-network-server.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>LoRaWAN Network Server (LNS)</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--purple"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M7 18h10a4 4 0 0 0 .5-8A5 5 0 0 0 8 7a4 4 0 0 0-1 11z"/>
+    <ellipse cx="12" cy="14" rx="3.5" ry="1.5"></ellipse>
+    <path d="M8.5 14v2c0 .8 1.6 1.5 3.5 1.5s3.5-.7 3.5-1.5v-2"></path>
+</svg></div><div><p class="atl-mega__col-title">IOT Dashboard</p><p class="atl-mega__col-desc">Metering &amp; utility management</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../services/hes-electricity-metering.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>HES Electricity Metering</a></li> 
+                    <li><a href="../services/hes-gas-metering.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>HES Gas Metering</a></li>
+                    <li><a href="../services/hes-water-metering.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>HES Water Metering</a></li>
+                    <li><a href="../services/cms-ev-charging-management-solution.html"><span class="atl-mega__dot atl-mega__dot--purple"></span>CMS - EV Charging Management Solution</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col atl-mega__col--feature">
+                  <div class="atl-mega__feature-card">
+                    <p class="atl-mega__feature-name">Technologies We Use</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;margin:0.75rem 0;">
+                      <img src="../assets/images/SupportedTech/LoRaWAN.png" alt="Technology 4" style="max-width:80px;height:auto;">
+                      <img src="../assets/images/SupportedTech/zigbee.png" alt="Technology 1" style="max-width:80px;height:auto;">
+                      <img src="../assets/images/SupportedTech/Bluetooth.png" alt="Technology 2" style="max-width:80px;height:auto;">
+                      <img src="../assets/images/SupportedTech/WiFi.png" alt="Technology 3" style="max-width:80px;height:auto;">
+                    </div>
+                    <a href="../services.html" class="atl-mega__feature-link">View All Services →</a>
+                
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+          <li class="atl-nav__item">
+          <a class="atl-nav__link" href="../resources.html">Resources</a>
+        </li>
+        <!-- 4. INDUSTRIES -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaIndustries">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaIndustries')">Industries<svg
+              class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="m6 9 6 6 6-6" />
+            </svg></button>
+          <div class="atl-mega" id="mega-megaIndustries">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Smart City</p>
+                      <p class="atl-mega__col-desc">Automation &amp; security</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../industries/home-security-automation.html"><span class="atl-mega__dot"></span>Home Security
+                        &amp; Automation</a></li>
+                    <li><a href="../industries/sos-devices.html"><span class="atl-mega__dot"></span>SOS Devices</a></li>
+                    <li><a href="../industries/smart-city-solutions.html"><span class="atl-mega__dot"></span>Smart City
+                        Solutions</a></li>
+                    <li><a href="../industries/building-management-system.html"><span class="atl-mega__dot"></span>Building
+                        Management System</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 22V12M12 12C12 12 8 9 4 12M12 12C12 12 16 9 20 12M4 8C7 5 12 7 12 7C12 7 17 5 20 8" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Agriculture &amp; Energy</p>
+                      <p class="atl-mega__col-desc">Smart farming &amp; utilities</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../industries/smart-agriculture.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Smart
+                        Agriculture System</a></li>
+                    <li><a href="../industries/farm-animal-management.html"><span
+                          class="atl-mega__dot atl-mega__dot--teal"></span>Farm Animal Management</a></li>
+                    <li><a href="../industries/iot-energy-utilities.html"><span
+                          class="atl-mega__dot atl-mega__dot--teal"></span>IoT in Energy &amp; Utilities</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--orange"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="14" rx="2" />
+                        <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Industrial &amp; Automotive</p>
+                      <p class="atl-mega__col-desc">IIoT &amp; connected vehicles</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../industries/industrial-iot.html"><span class="atl-mega__dot"
+                          style="background:#f97316"></span>Industrial IoT</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon atl-mega__col-icon--red"><svg width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Healthcare</p>
+                      <p class="atl-mega__col-desc">Connected health &amp; Care</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../industries/iot-healthcare.html"><span class="atl-mega__dot atl-mega__dot--red"></span>IoT in
+                        Healthcare</a></li>
+                    <li><a href="../industries/telematics-fleet.html"><span
+                          class="atl-mega__dot atl-mega__dot--red"></span>Telematics &amp; Fleet Management</a></li>
+                    <li><a href="../industries/consumer-iot.html"><span class="atl-mega__dot atl-mega__dot--red"></span>Consumer
+                        IoT Solutions</a></li>
+                  </ul>
+                </div>
+                <!-- NEW: Defence Column -->
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head">
+                    <div class="atl-mega__col-icon" style="background:#e8f0fe;"><svg width="18" height="18" fill="none"
+                        stroke="#1e40af" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg></div>
+                    <div>
+                      <p class="atl-mega__col-title">Defence</p>
+                      <p class="atl-mega__col-desc">IoT for defence &amp; security</p>
+                    </div>
+                  </div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../industries/iot-in-defence.html"><span class="atl-mega__dot"
+                          style="background:#1e40af"></span>IoT in Defence</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- 5. ABOUT US -->
+        <li class="atl-nav__item atl-nav__item--mega" id="megaAbout">
+          <button class="atl-nav__link atl-nav__link--has-mega" onclick="toggleMega('megaAbout')">About Us<svg class="atl-nav__chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="atl-mega" id="mega-megaAbout">
+            <div class="atl-mega__panel">
+              <div class="atl-mega__inner" style="grid-template-columns:1fr 1fr 1fr;">
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--blue"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><p class="atl-mega__col-title">Company</p><p class="atl-mega__col-desc">Who we are &amp; what we do</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../about.html"><span class="atl-mega__dot"></span>About Nebulae</a></li>
+                    
+                    <li><a href="../about.html#team"><span class="atl-mega__dot"></span>Our Team</a></li>
+                    <li><a href="../about.html#partners"><span class="atl-mega__dot"></span>Partners &amp; Certifications</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--teal"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><p class="atl-mega__col-title">Blog &amp; Careers</p><p class="atl-mega__col-desc">Insights &amp; opportunities</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../blog.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Blog</a></li>
+                    
+                    <li><a href="../careers.html"><span class="atl-mega__dot atl-mega__dot--teal"></span>Careers</a></li>
+                    <li><a href="../careers.html#openings"><span class="atl-mega__dot atl-mega__dot--teal"></span>Open Positions</a></li>
+                  </ul>
+                </div>
+                <div class="atl-mega__col">
+                  <div class="atl-mega__col-head"><div class="atl-mega__col-icon atl-mega__col-icon--orange"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div><p class="atl-mega__col-title">Events &amp; News</p><p class="atl-mega__col-desc">What's happening at Nebulae</p></div></div>
+                  <ul class="atl-mega__list">
+                    <li><a href="../events.html"><span class="atl-mega__dot" style="background:#f97316"></span> Events</a></li>
+                    <li><a href="../news.html"><span class="atl-mega__dot" style="background:#f97316"></span>News</a></li> 
+                  </ul>
+                </div>
+                <!-- <div class="atl-mega__col atl-mega__col--feature">
+                  <div class="atl-mega__feature-card">
+                    <span class="atl-mega__new-tag">JOIN US</span>
+                    <p class="atl-mega__feature-name">Building the Future of IoT</p>
+                    <p class="atl-mega__feature-desc">We're a team of engineers, designers &amp; innovators passionate about connecting the world through smart technology.</p>
+                    <a href="../careers.html" class="atl-mega__feature-link">See Open Roles →</a>
+                    
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 6. CONTACT -->
+        <li class="atl-nav__item">
+          <a class="atl-nav__link" href="../contact.html">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Right: CTA -->
+        <div class="atl-nav__right"><button class="atl-nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+     
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="atl-nav__mobile" id="navMobile">
+      <div class="atl-nav__mobile-header">
+        <span class="atl-nav__mobile-title">Menu</span>
+        <button class="atl-nav__mobile-close" id="navMobileClose" aria-label="Close menu">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <a class="atl-nav__mlink" href="../index.html">Home</a>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Products<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <div class="atl-nav__macc-section">LoRa</div>
+          <a class="atl-nav__msublink" href="../products.html?proto=lora&amp;type=module">Module</a><a class="atl-nav__msublink" href="../products.html?proto=lora&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="../products.html?proto=lora&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="../products.html?proto=lora&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="../products.html?proto=lora&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="../products.html?proto=lora&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">Wi-SUN</div>
+          <a class="atl-nav__msublink" href="../products.html?proto=wisun&amp;type=module">Module</a><a class="atl-nav__msublink" href="../products.html?proto=wisun&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="../products.html?proto=wisun&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="../products.html?proto=wisun&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="../products.html?proto=wisun&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="../products.html?proto=wisun&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">Zigbee</div>
+          <a class="atl-nav__msublink" href="../products.html?proto=zigbee&amp;type=module">Module</a><a class="atl-nav__msublink" href="../products.html?proto=zigbee&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="../products.html?proto=zigbee&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="../products.html?proto=zigbee&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="../products.html?proto=zigbee&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="../products.html?proto=zigbee&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">Wi-Fi</div>
+          <a class="atl-nav__msublink" href="../products.html?proto=wifi&amp;type=module">Module</a><a class="atl-nav__msublink" href="../products.html?proto=wifi&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="../products.html?proto=wifi&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="../products.html?proto=wifi&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="../products.html?proto=wifi&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="../products.html?proto=wifi&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">LTE</div>
+          <a class="atl-nav__msublink" href="../products.html?proto=gsm&amp;type=module">Module</a><a class="atl-nav__msublink" href="../products.html?proto=gsm&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="../products.html?proto=gsm&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="../products.html?proto=gsm&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="../products.html?proto=gsm&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="../products.html?proto=gsm&amp;type=node">Node</a>
+          <div class="atl-nav__macc-section">BLE</div>
+          <a class="atl-nav__msublink" href="../products.html?proto=ble&amp;type=module">Module</a><a class="atl-nav__msublink" href="../products.html?proto=ble&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="../products.html?proto=ble&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="../products.html?proto=ble&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="../products.html?proto=ble&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="../products.html?proto=ble&amp;type=node">Node</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Solutions<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="../solutions/smart-water-meter.html">Smart Water Meter Solution</a>
+          <a class="atl-nav__msublink" href="../solutions/smart-electric-meter.html">Smart Electric Meter Solution</a>
+          <a class="atl-nav__msublink" href="../solutions/smart-gas-meter.html">Smart Gas Metering Solution</a>
+          <a class="atl-nav__msublink" href="../solutions/smart-street-light.html">Smart Street Light Solution</a>
+          <a class="atl-nav__msublink" href="../solutions/transformer-monitoring.html">Transformer Monitoring System</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Services<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <div class="atl-nav__macc-section">Development</div>
+          <a class="atl-nav__msublink" href="../services/iot-product-development.html">IoT Product Development</a>
+          <a class="atl-nav__msublink" href="../services/embedded-hardware-design.html">Embedded Hardware Design</a>
+          <a class="atl-nav__msublink" href="../services/embedded-firmware-design.html">Embedded Firmware Design</a>
+          <a class="atl-nav__msublink" href="../services/pcb-design-services.html">PCB Design Services</a> 
+          <div class="atl-nav__macc-section">Connectivity &amp; Cloud</div>
+          <a class="atl-nav__msublink" href="../services/iot-dashboard.html">IoT Dashboard</a>
+          <a class="atl-nav__msublink" href="../services/iot-cloud-integration.html">IoT Cloud Integration</a>
+          <a class="atl-nav__msublink" href="../services/edge-computing.html">Edge Computing</a>
+          <div class="atl-nav__macc-section">Consulting</div>
+          <a class="atl-nav__msublink" href="../services/iot-consulting.html">IoT Consulting</a>
+          <a class="atl-nav__msublink" href="../services/iot-mobile-app.html">IoT Mobile App Development</a>
+        </div>
+      </div>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Industries<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="../industries/home-security-automation.html">Home Security &amp; Automation</a>
+          <a class="atl-nav__msublink" href="../industries/smart-agriculture.html">Smart Agriculture System</a>
+          <a class="atl-nav__msublink" href="../industries/industrial-iot.html">Industrial IoT</a>
+          <a class="atl-nav__msublink" href="../industries/iot-healthcare.html">IoT in Healthcare</a>
+          <a class="atl-nav__msublink" href="../industries/iot-logistics.html">IoT in Logistics</a>
+          <a class="atl-nav__msublink" href="../industries/consumer-iot.html">Consumer IoT Solutions</a>
+        </div>
+      </div>
+
+      <a class="atl-nav__mlink" href="../resource.html">Resources</a>
+
+      <div class="atl-nav__macc">
+        <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">About Us<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="atl-nav__macc-body">
+          <a class="atl-nav__msublink" href="../about.html">About Nebulae</a>
+          <a class="atl-nav__msublink" href="../about.html#mission">Our Mission &amp; Vision</a>
+          <a class="atl-nav__msublink" href="../about.html#team">Our Team</a>
+          <a class="atl-nav__msublink" href="../blog.html">Blog</a>
+          <a class="atl-nav__msublink" href="../careers.html">Careers</a>
+          <a class="atl-nav__msublink" href="../events.html">Upcoming Events</a>
+          <a class="atl-nav__msublink" href="../news.html">Latest News</a>
+        </div>
+      </div>
+
+      <a class="atl-nav__mlink" href="../contact.html">Contact Us</a>
+    </div><!-- /mobile drawer -->
+  </nav>
+</div><!-- /.atl-sticky-header -->
+</header>
+
+<!-- HERO -->
+<section class="sl-hero">
+  <div class="sl-hero__grid"></div>
+  <div class="sl-hero__orb sl-hero__orb--1"></div>
+  <div class="sl-hero__orb sl-hero__orb--2"></div>
+  <div class="container">
+    <div class="sl-hero__inner">
+      <nav class="sl-breadcrumb" aria-label="breadcrumb">
+        <a href="../index.html">Home</a><span>›</span>
+        <a href="../services.html">Services</a><span>›</span>
+        <span style="color:rgba(255,255,255,.65);">Lighting Management System</span>
+      </nav>
+      <div class="sl-eyebrow">Software · Street Lighting</div>
+      <h1 class="sl-hero__title">Lighting Management System (LMS)</h1>
+      <p class="sl-hero__desc">A cost-effective, cloud-based platform that gives municipalities complete control over street-light infrastructure — real-time monitoring, dashboards, analytics, inventory and maintenance in one place.</p>
+      <div class="sl-jump-pills"><a href="#overview" class="sl-jump-pill">Overview</a><a href="#benefits" class="sl-jump-pill">Why LMS</a><a href="#benefits2" class="sl-jump-pill">Benefits</a><a href="../contact.html" class="sl-jump-pill">Get a Proposal</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="sl-section" id="overview">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="slx-hero-img">
+          <img src="../assets/images/solutions/lms-ui.jpg" alt="Lighting Management System dashboard, live map and ticketing" width="900" height="560"/>
+          <div class="sl-img-card__stat"><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">Vendor</span><span class="sl-img-card__stat-label">Neutral</span></div><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">Cloud</span><span class="sl-img-card__stat-label">Or on-premise</span></div><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">SaaS</span><span class="sl-img-card__stat-label">Or one-time licence</span></div></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <span class="sl-solution__tag" style="background:rgba(79,70,229,.1);color:#4f46e5;">Cloud · Vendor-neutral</span>
+        <h2 class="sl-solution__title" style="color:#111827;">Street Light Management System</h2>
+        <p class="sl-solution__desc" style="color:#374151;">The LMS gives complete control over street-light infrastructure with real-time monitoring, insightful dashboards and advanced analytics to optimise energy consumption and streamline operations.</p><p class="sl-solution__desc" style="color:#374151;">It also covers inventory management, task allocation and maintenance planning. As a vendor-neutral solution it supports all street-light brands and suits both upgrades and new deployments, with automatic failure detection and an integrated work-order module.</p>
+        <div class="sl-metrics"><div class="sl-metric"><span class="sl-metric__val">Map</span><span class="sl-metric__label">Live device location</span></div><div class="sl-metric"><span class="sl-metric__val">Planner</span><span class="sl-metric__label">Light scheduling</span></div><div class="sl-metric"><span class="sl-metric__val">Tickets</span><span class="sl-metric__label">Escalation matrix</span></div></div>
+        <ul class="sl-feat-list" id="features"><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Live location map</strong> — see and control devices on a map</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Group and individual control</strong> — switch and dim lights singly or in groups</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Light planner &amp; scheduling</strong> — scheduled dimming and controllability</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Ticket management</strong> — escalation matrix and integrated work orders</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Alerts &amp; notifications</strong> — automatic detection of failures and abnormalities</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Reporting &amp; analytics</strong> — interactive dashboard, asset tracking and comprehensive reports</span></li></ul>
+        <div class="sl-products-strip"><a href="../solutions/smart-street-light.html" class="sl-product-chip">Smart Street Light Solution</a><a href="../products.html?proto=lora&amp;type=gateway" class="sl-product-chip">LoRaWAN Gateways</a></div>
+        <div style="display:flex;gap:.75rem;margin-top:1.75rem;flex-wrap:wrap;">
+          <a href="../contact.html" class="sl-sol-btn sl-sol-btn--primary">Get a Proposal</a>
+          <a href="../contact.html" class="sl-sol-btn sl-sol-btn--outline">Request Datasheet</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sl-section sl-section--surf" id="gallery"><div class="container"><div class="sl-eyebrow-sm">Platform</div><h2 class="sl-section-title">Dashboard, Map and Ticketing</h2><div class="row g-4 mt-1"><div class="col-12 col-md-6"><figure class="slx-fig"><div class="slx-fig__img"><img loading="lazy" src="../assets/images/solutions/lms-ui.jpg" alt="Interactive device dashboard, live location map and ticket management"/></div><figcaption>Interactive device dashboard, live location map and ticket management</figcaption></figure></div><div class="col-12 col-md-6"><figure class="slx-fig"><div class="slx-fig__img"><img loading="lazy" src="../assets/images/solutions/ccms-dash.jpg" alt="CCMS dashboard — energy comparison, daily consumption and device status"/></div><figcaption>CCMS dashboard — energy comparison, daily consumption and device status</figcaption></figure></div></div></div></section>
+<section class="sl-section sl-section--surf" id="benefits"><div class="container slx-cards"><div class="sl-eyebrow-sm">Why LMS</div><h2 class="sl-section-title">Why Choose ViaLights LMS</h2><div class="row g-3 mt-1"><div class="col-12 col-sm-6 col-lg-4"><div class="slx-card"><div class="slx-card__n">1</div><h3>Manage all lighting types</h3><p>Smart / NEMA-ready and non-NEMA lights.</p></div></div><div class="col-12 col-sm-6 col-lg-4"><div class="slx-card"><div class="slx-card__n">2</div><h3>Reduce maintenance cost</h3><p>Automated detection of failures and abnormalities.</p></div></div><div class="col-12 col-sm-6 col-lg-4"><div class="slx-card"><div class="slx-card__n">3</div><h3>Vendor neutral</h3><p>Supports all major brands.</p></div></div><div class="col-12 col-sm-6 col-lg-4"><div class="slx-card"><div class="slx-card__n">4</div><h3>Troubleshoot quickly</h3><p>Automatic failure detection with integrated work-order management.</p></div></div><div class="col-12 col-sm-6 col-lg-4"><div class="slx-card"><div class="slx-card__n">5</div><h3>Optimise energy</h3><p>Scheduled dimming and controllability.</p></div></div><div class="col-12 col-sm-6 col-lg-4"><div class="slx-card"><div class="slx-card__n">6</div><h3>Flexible deployment</h3><p>Cloud or on-premise; SaaS or one-time licence.</p></div></div></div></div></section>
+<section class="sl-section" id="benefits2"><div class="container slx-cards"><div class="sl-eyebrow-sm">Benefits</div><h2 class="sl-section-title">What You Get</h2><div class="row g-3 mt-1"><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">1</div><h3>Map-based interaction</h3><p>Direct interaction with lights on a map.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">2</div><h3>Ticketing &amp; maintenance automation</h3><p>Work orders and escalations built in.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">3</div><h3>Analytics &amp; reports</h3><p>In-depth analytics and customisable reports.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">4</div><h3>Top-notch security</h3><p>Safety and confidentiality of your data.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">5</div><h3>User &amp; access management</h3><p>Advanced roles and permissions.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">6</div><h3>Cabinet (group) control</h3><p>Control by cabinet or group.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">7</div><h3>Alerts &amp; notifications</h3><p>Instant notice of faults.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">8</div><h3>Command-centre integration</h3><p>Easy integration with a command centre.</p></div></div></div></div></section>
+<section class="sl-related"><div class="container"><p class="sl-related__title">Related Solutions</p><div class="row g-3"><div class="col-6 col-md-3"><a href="../solutions/smart-street-light.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Smart City</span><p class="sl-rel-card__name">Smart Street Light</p><p class="sl-rel-card__desc">Pole-mount, retrofit and NEMA controllers, CCMS panels and LMS software.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../services/cms-ev-charging-management-solution.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(16,185,129,.1);color:#059669;">Smart City</span><p class="sl-rel-card__name">CityCharge CCMS + EV</p><p class="sl-rel-card__desc">Street-light control panel with built-in EV charging.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../solutions/transformer-monitoring.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(37,99,235,.1);color:#2563eb;">DISCOM</span><p class="sl-rel-card__name">Transformer Monitoring</p><p class="sl-rel-card__desc">DTMS: real-time electrical and sensor monitoring for distribution transformers.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../services/hes-electricity-metering.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(234,88,12,.1);color:#ea580c;">Software</span><p class="sl-rel-card__name">HES — Electricity</p><p class="sl-rel-card__desc">Head End System for IS 16444 smart electricity meters.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div></div></div></section>
+<section style="padding:4rem 0;background:#fff;"><div class="container"><div class="sl-cta-wrap">
+  <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:.75rem;">See the LMS in Action</h2>
+  <p style="color:rgba(255,255,255,.6);font-size:.97rem;max-width:560px;margin:0 auto 2rem;">Request a demo of the Lighting Management System for your city.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <a href="../contact.html" class="sl-sol-btn sl-sol-btn--primary">Start a Conversation</a>
+    <a href="../products.html" class="sl-sol-btn sl-sol-btn--dark-outline">Browse Products →</a>
+  </div></div></div></section>
+<footer class="atl-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+
+      <!-- Brand -->
+      <div class="col-12 col-md-4">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img loading="lazy" src="../assets/images/LogoWhite.png" alt="Nebulae" class="atl-footer__logo-img atl-footer__logo-color">
+        </div>
+        <p class="atl-footer__desc">End-to-end IoT solutions provider — from embedded hardware design and wireless modules to cloud integration and smart utility deployments across India and beyond.</p>
+      </div>
+
+      <!-- Navigate -->
+      <div class="col-6 col-md-2">
+        <h6 class="atl-footer__heading">Navigate</h6>
+        <ul class="atl-footer__list">
+          <li><a href="#home" onclick="return navClick('home')">Home</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../products.html">Products</a></li>
+          <li><a href="../solutions.html">Solutions</a></li>
+          <li><a href="../industries.html">Industries</a></li>
+           <li><a href="../resources.html">Resources</a></li>
+          <li><a href="../contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Services & Solutions -->
+      <div class="col-6 col-md-3">
+        <h6 class="atl-footer__heading">Services</h6>
+        <ul class="atl-footer__list">
+          <li><a href="../services/iot-product-development.html">IoT Product Development</a></li>
+          <li><a href="../services/embedded-hardware-design.html">Embedded Hardware Design</a></li>
+          <li><a href="../services/embedded-firmware-design.html">Embedded Firmware Design</a></li>
+          <li><a href="../services/iot-cloud-integration.html">IoT Cloud Integration</a></li>
+          <li><a href="../services/pcb-design-services.html">PCB Design Services</a></li>
+          <li><a href="../services/iot-consulting.html">IoT Consulting</a></li>
+        </ul>
+        <h6 class="atl-footer__heading mt-3">Solutions</h6>
+        <ul class="atl-footer__list">
+          <li><a href="../solutions/smart-water-meter.html">Smart Water Meter</a></li>
+          <li><a href="../solutions/smart-electric-meter.html">Smart Electric Meter</a></li>
+          <li><a href="../solutions/smart-street-light.html">Smart Street Light</a></li>
+          <li><a href="../solutions/transformer-monitoring.html">Transformer Monitoring</a></li>
+        </ul>
+      </div>
+
+      <!-- Products & Contact -->
+      <div class="col-12 col-md-3">
+        <h6 class="atl-footer__heading">Products</h6>
+        <ul class="atl-footer__list">
+          <li><a href="../products.html?proto=lora&amp;type=module">LoRa — Module &amp; Gateway</a></li>
+          <li><a href="../products.html?proto=wisun&amp;type=module">Wi-SUN — Module &amp; Gateway</a></li>
+          <li><a href="../products.html?proto=zigbee&amp;type=module">Zigbee — Module &amp; Gateway</a></li>
+          <li><a href="../products.html?proto=gsm&amp;type=module">LTE — Module &amp; Gateway</a></li>
+          <li><a href="../products.html?proto=ble&amp;type=module">BLE — Module &amp; Gateway</a></li>
+          <li><a href="../products.html">View All Products →</a></li>
+        </ul>
+        <h6 class="atl-footer__heading mt-3">Contact</h6>
+        <ul class="atl-footer__list">
+          <li><a href="tel:+9102692232501">+91-02692-232501 / 232502</a></li>
+          <li><a href="mailto:sales@nebulae.io">sales@nebulae.io</a></li>
+          <li>Anand, Gujarat, India</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="atl-footer__bottom">
+      <span>© 2026 Nebulae. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/nebulae-nav.js"></script>
+<script src="../assets/js/nebulae-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+{
+ "slug": "nln811p",
+ "model": "NLN811P",
+ "full": "Zigbee MG24 Module NLN811P",
+ "title_name": "Zigbee MG24 Module",
+ "type_key": "module",
+ "type_label": "Module",
+ "proto_key": "zigbee",
+ "proto_crumb": "Zigbee",
+ "proto_label": "Zigbee · Matter · Thread",
+ "badge": "Zigbee MG24 Module",
+ "category": "Zigbee / Matter Multiprotocol IoT Module",
+ "tagline": "EFR32MG24 based 2.4 GHz module for Matter, OpenThread, Zigbee and Bluetooth 5 with AI/ML accelerator.",
+ "meta_desc": "Nebulae NLN811P — EFR32MG24 based 2.4 GHz module for Matter, OpenThread, Zigbee and Bluetooth 5: +19.5 dBm TX, -105.4 dBm sensitivity, 1536 kB flash, AI/ML accelerator, Secure Vault.",
+ "desc": "NLN811P is based on the Silicon Labs EFR32MG24 wireless SoC, ideal for mesh IoT connectivity using Matter, OpenThread and Zigbee. With high-performance 2.4 GHz RF, low current consumption, an AI/ML hardware accelerator and Secure Vault, device makers can build smart, robust and energy-efficient products that are secure from remote and local cyber-attacks.",
+ "cert_badges": [
+  "Matter",
+  "Zigbee",
+  "Thread"
+ ],
+ "gallery": [
+  {
+   "file": "nln811p-module.jpg",
+   "alt": "NLN811P Zigbee MG24 module, top view with RF shield and PCB antenna",
+   "label": "Module view"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Protocols",
+   "value": "Matter · Zigbee · Thread · Bluetooth 5"
+  },
+  {
+   "icon": "range",
+   "label": "TX / RX",
+   "value": "Up to +19.5 dBm · −105.4 dBm @ 250 kbps"
+  },
+  {
+   "icon": "grid",
+   "label": "Frequency Band",
+   "value": "2.4 GHz ISM"
+  },
+  {
+   "icon": "chip",
+   "label": "Core & Memory",
+   "value": "78 MHz Cortex-M33 · 1536 kB flash / 256 kB SRAM"
+  },
+  {
+   "icon": "lock",
+   "label": "Security",
+   "value": "AES-128/192/256 HW crypto · Secure Boot"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size",
+   "value": "26.7 × 16 × 3.6 mm"
+  }
+ ],
+ "stats": [
+  {
+   "num": "+19.5 dBm",
+   "label": "Maximum TX power"
+  },
+  {
+   "num": "−105.4 dBm",
+   "label": "Sensitivity @ 250 kbps"
+  },
+  {
+   "num": "50 µA",
+   "label": "Standby current"
+  },
+  {
+   "num": "1536 kB",
+   "label": "Flash memory"
+  }
+ ],
+ "overview": [
+  "NLN811P is an intelligent, secure and energy-efficient IoT connectivity module based on the Silicon Labs EFR32MG24 wireless SoC, ideal for mesh IoT wireless connectivity using Matter, OpenThread and Zigbee.",
+  "Key features include high-performance 2.4 GHz RF, low current consumption, an AI/ML hardware accelerator and Secure Vault, so IoT device makers can create smart, robust and energy-efficient products that are protected from remote and local cyber-attacks.",
+  "The 78 MHz ARM Cortex-M33 with up to 1536 kB flash and 256 kB SRAM provides the headroom for complex tasks and local processing. The module is 26.7 × 16 × 3.6 mm, uses a 1.27 mm pitch SMD footprint with an EMI RF shield, and supports OTA firmware updates and Secure Boot."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Future-proof protocols",
+   "d": "Matter, Bluetooth 5, Zigbee, Thread and multi-protocol operation."
+  },
+  {
+   "t": "Longer battery life",
+   "d": "50 µA standby current and 6 mA RX current at 3.3 V."
+  },
+  {
+   "t": "Local processing",
+   "d": "AI/ML hardware accelerator and up to 1536 kB flash for complex tasks."
+  },
+  {
+   "t": "Robust protection",
+   "d": "Secure Vault, Secure Boot and hardware-accelerated AES-128/192/256."
+  },
+  {
+   "t": "Wide range & reliability",
+   "d": "Up to +19.5 dBm TX power and −105.4 dBm sensitivity."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Processor & Memory",
+   "rows": [
+    [
+     "Processor",
+     "Silicon Labs EFR32MG24 SoC"
+    ],
+    [
+     "CPU",
+     "78 MHz ARM Cortex-M33"
+    ],
+    [
+     "Memory",
+     "Up to 1536 kB Flash, 256 kB SRAM"
+    ],
+    [
+     "Firmware",
+     "OTA updates, Secure Boot"
+    ]
+   ]
+  },
+  {
+   "group": "Radio",
+   "rows": [
+    [
+     "Frequency Bands",
+     "2.4 GHz ISM"
+    ],
+    [
+     "TX Power",
+     "Up to +19.5 dBm"
+    ],
+    [
+     "RF Sensitivity",
+     "−105.4 dBm @ 250 kbps"
+    ],
+    [
+     "Network Protocols",
+     "Matter, Bluetooth 5, Zigbee, Thread, Multi Protocol"
+    ]
+   ]
+  },
+  {
+   "group": "Power & Current",
+   "rows": [
+    [
+     "Supply",
+     "3.3 V"
+    ],
+    [
+     "Standby",
+     "50 µA"
+    ],
+    [
+     "TX",
+     "160 mA"
+    ],
+    [
+     "RX",
+     "6 mA"
+    ]
+   ]
+  },
+  {
+   "group": "Security",
+   "rows": [
+    [
+     "Cryptography",
+     "AES-128/192/256 (hardware accelerated)"
+    ],
+    [
+     "Platform Security",
+     "Secure Vault, Secure Boot"
+    ]
+   ]
+  },
+  {
+   "group": "Physical & Environment",
+   "rows": [
+    [
+     "Size",
+     "26.7 × 16 × 3.6 mm"
+    ],
+    [
+     "I/O",
+     "Serial, Analog, Digital (21 pins)"
+    ],
+    [
+     "Mounting",
+     "1.27 mm pitch SMD"
+    ],
+    [
+     "Shielding",
+     "EMI RF shield"
+    ],
+    [
+     "Temperature Range",
+     "−20 °C to +85 °C"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NLN811P product brochure.",
+ "features": [
+  {
+   "icon": "wifi",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Matter, Thread & Zigbee",
+   "d": "Mesh IoT connectivity with Matter, OpenThread and Zigbee, plus Bluetooth 5."
+  },
+  {
+   "icon": "cpu",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "AI/ML Hardware Accelerator",
+   "d": "On-chip accelerator for local processing at the edge."
+  },
+  {
+   "icon": "lock",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Secure Vault",
+   "d": "Robust protection against remote and local cyber-attacks."
+  },
+  {
+   "icon": "bolt",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Low Current Consumption",
+   "d": "50 µA standby, 6 mA RX and 160 mA TX at 3.3 V."
+  },
+  {
+   "icon": "chip",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Cortex-M33 with Large Memory",
+   "d": "78 MHz core with up to 1536 kB flash and 256 kB SRAM."
+  },
+  {
+   "icon": "download",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "OTA & Secure Boot",
+   "d": "Field firmware updates over the air with secure boot loading."
+  },
+  {
+   "icon": "shield",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "EMI RF Shield",
+   "d": "Shielded module for dense RF environments."
+  },
+  {
+   "icon": "plug",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "SMD, 21 I/O",
+   "d": "1.27 mm pitch SMD with serial, analog and digital I/O (21 pins)."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "bolt",
+   "t": "Energy Management Systems",
+   "d": "Connected energy monitoring and control."
+  },
+  {
+   "icon": "meter",
+   "t": "Smart Meters & Utility Monitoring",
+   "d": "Metering endpoints and utility monitoring."
+  },
+  {
+   "icon": "home",
+   "t": "Remote Controls & Voice Assistants",
+   "d": "Remote controls and voice-assistant devices."
+  },
+  {
+   "icon": "building",
+   "t": "Building Automation",
+   "d": "Connected building systems."
+  },
+  {
+   "icon": "lock",
+   "t": "Door Locks & Access Control",
+   "d": "Locks and access-control systems."
+  },
+  {
+   "icon": "plug",
+   "t": "Smart Switches, Plugs & Outlets",
+   "d": "Switches, plugs and outlets."
+  },
+  {
+   "icon": "server",
+   "t": "Smart Hubs & Gateways",
+   "d": "Hubs and gateways for mesh networks."
+  }
+ ],
+ "part_rows": [
+  [
+   "NLN811P",
+   "Zigbee MG24 Module — EFR32MG24, 1.27 mm pitch SMD"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLN811P Brochure",
+   "path": "./assets/docs/NLN811P_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  }
+ ],
+ "related": [
+  "nln111p",
+  "nln0721"
+ ],
+ "primary_doc": "./assets/docs/NLN811P_Brochure.pdf"
+}

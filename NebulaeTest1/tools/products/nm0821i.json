@@ -1,0 +1,325 @@
+{
+ "slug": "nm0821i",
+ "model": "NM0821-I",
+ "full": "LoRa Concentrator Board NM0821-I",
+ "title_name": "LoRa Concentrator Board",
+ "type_key": "concentrator",
+ "type_label": "Concentrator",
+ "proto_key": "lora",
+ "proto_crumb": "LoRa",
+ "proto_label": "LoRa / LoRaWAN",
+ "badge": "LoRa Concentrator",
+ "category": "LoRa Concentrator Board",
+ "tagline": "SX1303 based LoRa concentrator board with 2 × SX1250, GPS and a Raspberry Pi 40-pin compatible header.",
+ "meta_desc": "Nebulae NM0821-I LoRa concentrator board — SX1303 baseband, 2 x SX1250, onboard GPS and temperature sensor, -139 dBm sensitivity, +27 dBm output, up to 15 km LoS, Raspberry Pi 20x2 header.",
+ "desc": "NM0821-I is a compact, low-power LoRa concentrator board based on the SX1303 with 2 × SX1250 radios, an onboard GPS and an I2C temperature sensor. Compared with the SX1301, it offers higher sensitivity, lower power consumption and a lower operating temperature. It communicates with its host over SPI and lets you develop your own LoRaWAN gateway hassle-free.",
+ "cert_badges": [
+  "SX1303",
+  "LoRaWAN",
+  "GPS"
+ ],
+ "gallery": [
+  {
+   "file": "nm0821i-board.jpg",
+   "alt": "NM0821-I LoRa concentrator board with two SMA antenna connectors, GPS module and 40-pin header",
+   "label": "Board view"
+  },
+  {
+   "file": "nm0821i-annotated.jpg",
+   "alt": "NM0821-I concentrator board with its main components labelled",
+   "label": "Labelled board"
+  },
+  {
+   "file": "nm0821i-block-diagram.png",
+   "alt": "NM0821-I block diagram showing SX1303, SX1250 radios, GPS, temperature sensor and power rails",
+   "label": "Block diagram"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Baseband",
+   "value": "SX1303 + 2 × SX1250 front-ends"
+  },
+  {
+   "icon": "range",
+   "label": "Sensitivity",
+   "value": "−125 dBm @ SF7 · −139 dBm @ SF12 (125 kHz)"
+  },
+  {
+   "icon": "bolt",
+   "label": "Output Power",
+   "value": "Up to +27 dBm"
+  },
+  {
+   "icon": "grid",
+   "label": "Frequency Band",
+   "value": "868 / 915 MHz"
+  },
+  {
+   "icon": "plug",
+   "label": "Host Interface",
+   "value": "SPI · Raspberry Pi 20 × 2 header"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size",
+   "value": "85.00 × 56.00 mm (± 0.2 mm)"
+  }
+ ],
+ "stats": [
+  {
+   "num": "15 km",
+   "label": "Range, line of sight"
+  },
+  {
+   "num": "−139 dBm",
+   "label": "Sensitivity @ SF12"
+  },
+  {
+   "num": "+27 dBm",
+   "label": "Maximum output power"
+  },
+  {
+   "num": "−40 to +85 °C",
+   "label": "Temperature range"
+  }
+ ],
+ "overview": [
+  "NM0821-I is an SX1303 based, compact and low-power LoRa concentrator board with 2 × SX1250 radios, an onboard GPS and an I2C based on-board temperature sensor. Compared with the SX1301 LoRa chip, it offers higher sensitivity, lower power consumption and a lower operating temperature.",
+  "It supports SPI based communication with the host. An advanced fine time-stamp feature helps to identify the estimated geo-location. The board is designed for M2M and IoT applications and can be widely applied in LoRaWAN gateways.",
+  "The concentrator needs a host system (a PC or an MCU/single-board computer) connected over SPI, and it can receive several LoRa packets simultaneously on different spreading factors and channels. A Raspberry Pi 20 × 2 pin compatible header, UFL and SMA antenna connectors and status LEDs make it a quick starting point for your own LoRaWAN gateway."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Higher sensitivity",
+   "d": "−125 dBm at SF7 and −139 dBm at SF12 (125 kHz)."
+  },
+  {
+   "t": "Lower power & temperature",
+   "d": "Improved over the SX1301 generation."
+  },
+  {
+   "t": "Fine time-stamping",
+   "d": "Supports geo-location estimation; onboard GPS receiver."
+  },
+  {
+   "t": "Easy host integration",
+   "d": "SPI interface and a Raspberry Pi 20 × 2 pin compatible header."
+  },
+  {
+   "t": "Gateway-ready",
+   "d": "Build your own LoRaWAN gateway without RF design effort."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Radio",
+   "rows": [
+    [
+     "Baseband Processor",
+     "SX1303"
+    ],
+    [
+     "Radio Front-Ends",
+     "2 × SX1250 Tx/Rx"
+    ],
+    [
+     "Frequency Band",
+     "868 / 915 MHz"
+    ],
+    [
+     "Demodulators",
+     "High-speed 125/250/500 kHz LoRa; 1 (G)FSK"
+    ],
+    [
+     "Spreading Factors",
+     "Multi-SF (SF5, SF6, SF7 to SF12) 125 kHz LoRa reception"
+    ],
+    [
+     "Receiver Sensitivity",
+     "−125 dBm @ 125 kHz / SF7 · −139 dBm @ 125 kHz / SF12"
+    ],
+    [
+     "Output Power",
+     "Up to +27 dBm"
+    ],
+    [
+     "Range",
+     "Up to 15 km (Line of Sight)"
+    ],
+    [
+     "Fine Time Stamp",
+     "Supported"
+    ],
+    [
+     "LoRaWAN Classes",
+     "Class A, B, C supported"
+    ]
+   ]
+  },
+  {
+   "group": "Interfaces & Connectors",
+   "rows": [
+    [
+     "Host Interface",
+     "SPI"
+    ],
+    [
+     "Header",
+     "Raspberry Pi 20 × 2 pin compatible"
+    ],
+    [
+     "Antenna Connectors",
+     "UFL and SMA"
+    ],
+    [
+     "Sensors",
+     "GPS receiver; I2C on-board temperature sensor"
+    ],
+    [
+     "Indicators",
+     "Status LEDs"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical & Environmental",
+   "rows": [
+    [
+     "Supply Voltage",
+     "+3.3 V and/or +5 V"
+    ],
+    [
+     "Operating Temperature",
+     "−40 °C to +85 °C"
+    ]
+   ]
+  },
+  {
+   "group": "Physical",
+   "rows": [
+    [
+     "Size",
+     "85.00 × 56.00 mm ± 0.2 mm"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NM0821-I product brochure (br_pnm0821i_1.0).",
+ "features": [
+  {
+   "icon": "chip",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "SX1303 Baseband",
+   "d": "Next-generation LoRa baseband processor with 2 × SX1250 radios."
+  },
+  {
+   "icon": "range",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Long Range",
+   "d": "Up to 15 km line of sight with up to +27 dBm output power."
+  },
+  {
+   "icon": "eye",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Multi-SF Reception",
+   "d": "SF5, SF6 and SF7 to SF12 at 125 kHz, with 250/500 kHz LoRa demodulation."
+  },
+  {
+   "icon": "network",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Fine Time-Stamp & GPS",
+   "d": "Onboard GPS receiver supports estimated geo-location."
+  },
+  {
+   "icon": "thermo",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Onboard Temperature Sensor",
+   "d": "I2C based temperature sensing on the board."
+  },
+  {
+   "icon": "plug",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "Raspberry Pi Compatible Header",
+   "d": "20 × 2 pin header for quick bring-up with a single-board host."
+  },
+  {
+   "icon": "bolt",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "Flexible Power",
+   "d": "Runs from +3.3 V and/or +5 V."
+  },
+  {
+   "icon": "shield",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Industrial Temperature Range",
+   "d": "−40 °C to +85 °C operation."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "meter",
+   "t": "Smart Metering",
+   "d": "LoRaWAN gateways for metering networks."
+  },
+  {
+   "icon": "building",
+   "t": "Home, Building & Industrial Automation",
+   "d": "Gateway front end for automation systems."
+  },
+  {
+   "icon": "eye",
+   "t": "Wireless Sensors",
+   "d": "Collect data from wireless sensor networks."
+  },
+  {
+   "icon": "chip",
+   "t": "M2M & IoT",
+   "d": "Gateway hardware for M2M and IoT."
+  },
+  {
+   "icon": "sprout",
+   "t": "Smart Agriculture",
+   "d": "Long-range coverage for agricultural sensing."
+  },
+  {
+   "icon": "truck",
+   "t": "Logistic Tracking",
+   "d": "Gateways for tracking applications."
+  }
+ ],
+ "part_rows": [
+  [
+   "NM0821-I",
+   "LoRa Concentrator Board — SX1303, 2 × SX1250, SPI interface"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NM0821-I Brochure",
+   "path": "./assets/docs/NM0821-I_LoRa_Concentrator_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  },
+  {
+   "name": "EVK 20×2 Pinout Details",
+   "path": "./assets/docs/NM0821-I_EVK_20x2_Pinout_Details.pdf",
+   "sub": "PDF · CON1 header pin-out"
+  }
+ ],
+ "related": [
+  "nm0824i",
+  "nln500a"
+ ],
+ "primary_doc": "./assets/docs/NM0821-I_LoRa_Concentrator_Brochure.pdf"
+}

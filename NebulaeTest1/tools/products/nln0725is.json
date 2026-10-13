@@ -1,0 +1,317 @@
+{
+ "slug": "nln0725is",
+ "model": "NLN0725-IS",
+ "full": "Wi-SUN High Power Module NLN0725-IS",
+ "title_name": "Wi-SUN High Power Module",
+ "type_key": "module",
+ "type_label": "Module",
+ "proto_key": "wisun",
+ "proto_crumb": "Wi-SUN",
+ "proto_label": "Wi-SUN",
+ "badge": "High Power Wi-SUN Module",
+ "category": "High Power Wi-SUN IoT Module",
+ "tagline": "High power Wi-SUN module — up to +27 dBm (WPC limit), -107 dBm sensitivity, 39.5 × 16 mm.",
+ "meta_desc": "Nebulae NLN0725-IS High Power Wi-SUN module: +27 dBm TX (WPC limit, +30 dBm capable), -107 dBm RX sensitivity, Cortex-M33, 1024 KB flash, Wi-SUN / Amazon Sidewalk / WM-BUS.",
+ "desc": "NLN0725-IS is a high power Wi-SUN module delivering long-range, secure and energy-efficient wireless communication, designed for robust, large-scale IoT networks. With extended transmission range, strong penetration and mesh networking support, it enables reliable connectivity for smart metering, street lighting, industrial automation and other mission-critical applications.",
+ "cert_badges": [
+  "Wi-SUN",
+  "+27 dBm",
+  "AES"
+ ],
+ "gallery": [
+  {
+   "file": "nln0725is-module.png",
+   "alt": "NLN0725-IS high power Wi-SUN module, top view",
+   "label": "Module view"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "bolt",
+   "label": "TX Power",
+   "value": "+27 dBm (WPC limit) · up to +30 dBm capable"
+  },
+  {
+   "icon": "range",
+   "label": "RX Sensitivity",
+   "value": "−107 dBm @ 100 kbps (IN865)"
+  },
+  {
+   "icon": "wifi",
+   "label": "Protocols",
+   "value": "Wi-SUN · Amazon Sidewalk · WM-BUS"
+  },
+  {
+   "icon": "chip",
+   "label": "Core & Memory",
+   "value": "78 MHz Cortex-M33 · 1024 KB flash / 256 KB SRAM"
+  },
+  {
+   "icon": "plug",
+   "label": "I/O",
+   "value": "Up to 21 pins · U(S)ART · LPUART"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size (L × H × W)",
+   "value": "39.50 × 16 × 3.6 mm"
+  }
+ ],
+ "stats": [
+  {
+   "num": "+27 dBm",
+   "label": "TX power (WPC limit)"
+  },
+  {
+   "num": "−107 dBm",
+   "label": "RX sensitivity, IN865 @ 100 kbps"
+  },
+  {
+   "num": "39.5 × 16 mm",
+   "label": "Module footprint"
+  },
+  {
+   "num": "1024 KB",
+   "label": "Flash program memory"
+  }
+ ],
+ "overview": [
+  "NLN0725-IS is Nebulae's high power Wi-SUN module, delivering long-range, secure and energy-efficient wireless communication for robust, large-scale IoT networks.",
+  "With extended transmission range, strong penetration and mesh networking support, it enables reliable connectivity for smart metering, street lighting, industrial automation and other mission-critical applications.",
+  "Built for harsh environments, the module ensures stable performance and low power consumption, with seamless interoperability with global Wi-SUN standards. Output power can reach +30 dBm on a 5 V PA supply, but as per WPC criteria the module is limited to +27 dBm."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "High output power",
+   "d": "+27 dBm within the WPC limit; hardware capable of up to +30 dBm."
+  },
+  {
+   "t": "Wi-SUN mesh",
+   "d": "Extended range and strong penetration with mesh networking support."
+  },
+  {
+   "t": "Multi-protocol",
+   "d": "Wi-SUN, Amazon Sidewalk and WM-BUS."
+  },
+  {
+   "t": "Flexible modulation",
+   "d": "2/4 (G)FSK with configurable shaping, OQPSK DSSS, (G)MSK and OOK TX."
+  },
+  {
+   "t": "Field updatable",
+   "d": "Over-the-air firmware update mechanism."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Performance",
+   "rows": [
+    [
+     "TX Power",
+     "+27 dBm (maximum power up to +30 dBm is supported, but as per WPC criteria it cannot go beyond +27 dBm)"
+    ],
+    [
+     "RX Sensitivity — IN865 MHz",
+     "−107 dBm @ 100 kbps with PER < 10%"
+    ],
+    [
+     "RF Data Rate",
+     "50 kbps, 100 kbps"
+    ]
+   ]
+  },
+  {
+   "group": "Processor Specifications",
+   "rows": [
+    [
+     "Processor",
+     "32-bit 78 MHz ARM Cortex-M33 with DSP instruction and floating-point unit"
+    ],
+    [
+     "Memory",
+     "Up to 1024 KB flash, 256 KB SRAM"
+    ],
+    [
+     "Frequency Band",
+     "EU 863-870, US 902-928, IN865"
+    ],
+    [
+     "Mounting Type",
+     "1.27 mm pitch SMD"
+    ],
+    [
+     "Antenna Option",
+     "u.FL, Feedline"
+    ],
+    [
+     "Size (L × H × W)",
+     "39.50 × 16 × 3.6 mm"
+    ]
+   ]
+  },
+  {
+   "group": "I/O Specifications",
+   "rows": [
+    [
+     "Serial Interface",
+     "1 × U(S)ART, 1 × LPUART"
+    ],
+    [
+     "Analog Input",
+     "2 × 12-bit ADC, 2.5 Msps"
+    ],
+    [
+     "Digital IO",
+     "Up to 21 pins"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical Specifications",
+   "rows": [
+    [
+     "Power Supply — FG28",
+     "1.8 V ~ 3.6 V, 3.3 V"
+    ],
+    [
+     "Power Supply — PALNA",
+     "3.3 V (+27 dBm), 5 V (+30 dBm)"
+    ],
+    [
+     "Current — Standby Mode",
+     "18.4 mA"
+    ],
+    [
+     "Current — TX Mode",
+     "360 mA"
+    ],
+    [
+     "Current — RX Mode",
+     "30 mA"
+    ],
+    [
+     "Operating Temperature",
+     "−30 °C to +85 °C"
+    ]
+   ]
+  },
+  {
+   "group": "Networking",
+   "rows": [
+    [
+     "Protocol",
+     "Amazon Sidewalk, WM-BUS, Wi-SUN"
+    ],
+    [
+     "Frequency Band (features)",
+     "863 MHz to 876 MHz"
+    ],
+    [
+     "Standard",
+     "IEEE 802.15.4 compliant"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NLN0725-IS product brochure.",
+ "features": [
+  {
+   "icon": "bolt",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "High Power Output",
+   "d": "Up to +27 dBm TX power (+30 dBm capable, limited by WPC criteria)."
+  },
+  {
+   "icon": "wifi",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Flexible Modulation",
+   "d": "2/4 (G)FSK with fully configurable shaping, OQPSK DSSS, (G)MSK and OOK TX modulation formats."
+  },
+  {
+   "icon": "chip",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Cortex-M33 + Memory",
+   "d": "78 MHz ARM Cortex-M33 with 1024 KB flash and 256 KB RAM."
+  },
+  {
+   "icon": "gauge",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Real-Time Counter & Watchdog",
+   "d": "32-bit real-time counter and calendar; 2 × watchdog timer with dedicated RC oscillator."
+  },
+  {
+   "icon": "shield",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "IEEE 802.15.4",
+   "d": "IEEE 802.15.4 compliant radio."
+  },
+  {
+   "icon": "download",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "OTA Update",
+   "d": "Provides an over-the-air firmware update mechanism."
+  },
+  {
+   "icon": "plug",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "Antenna Options",
+   "d": "u.FL connector for an external antenna, or feed line for a PCB antenna."
+  },
+  {
+   "icon": "network",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Mesh Networking",
+   "d": "Mesh support for large-scale, mission-critical IoT networks."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "meter",
+   "t": "Smart Metering",
+   "d": "Long-range Wi-SUN connectivity for metering networks."
+  },
+  {
+   "icon": "city",
+   "t": "Smart Cities",
+   "d": "Robust connectivity for city-scale infrastructure."
+  },
+  {
+   "icon": "factory",
+   "t": "Smart Factory",
+   "d": "Reliable wireless links for industrial automation."
+  },
+  {
+   "icon": "server",
+   "t": "Data Centre / Server Room",
+   "d": "Wireless monitoring for data centres and server rooms."
+  }
+ ],
+ "part_rows": [
+  [
+   "NLN0725-IS",
+   "High Power Wi-SUN Module — 39.50 × 16 × 3.6 mm, 1.27 mm pitch SMD"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLN0725-IS Brochure",
+   "path": "./assets/docs/NLN0725-IS_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  }
+ ],
+ "related": [
+  "nln0721",
+  "nm0221i"
+ ],
+ "primary_doc": "./assets/docs/NLN0725-IS_Brochure.pdf"
+}

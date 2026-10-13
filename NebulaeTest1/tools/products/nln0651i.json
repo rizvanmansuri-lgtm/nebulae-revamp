@@ -1,0 +1,356 @@
+{
+ "slug": "nln0651i",
+ "model": "NLN0651-i",
+ "full": "NLN0651-i LoRa Arduino-Compatible EVK",
+ "title_name": "LoRa Arduino EVK",
+ "type_key": "evk",
+ "type_label": "EVK",
+ "proto_key": "lora",
+ "proto_crumb": "LoRa",
+ "proto_label": "LoRa / LoRaWAN",
+ "badge": "Arduino LoRa EVK",
+ "category": "LoRaWAN Evaluation Kit",
+ "tagline": "NLN500a based Arduino Nano-compatible LoRa evaluation kit with USB-C and Arduino IDE support.",
+ "meta_desc": "Nebulae NLN0651-i LoRa Arduino-compatible EVK — NLN500a (STM32WL) node board, Arduino Nano pinout, USB-C, Arduino IDE programming, EU863-870/US902-928/IN865, up to 10 km LoS.",
+ "desc": "NLN0651-i is an NLN500a (STM32WL) SoC-based, compact LoRa node board with an Arduino Nano-compatible design that supports Arduino IDE programming for easy, open-source software development. The evaluation kit is designed to help beginners, developers and students learn LoRa and IoT technology quickly and turn proofs-of-concept into practical applications.",
+ "cert_badges": [
+  "LoRaWAN",
+  "Arduino Nano",
+  "USB-C"
+ ],
+ "gallery": [
+  {
+   "file": "nln0651i-board.jpg",
+   "alt": "NLN0651-i LoRa Arduino EVK board with Nebulae NLN500a module, USB-C port and U.FL antenna connector",
+   "label": "EVK board"
+  },
+  {
+   "file": "nln0651i-pinout.png",
+   "alt": "NLN0651-i EVK pin-out diagram showing power, ground, reset, UART, analog and digital pins",
+   "label": "Pin-out"
+  },
+  {
+   "file": "nln0651i-block-diagram.png",
+   "alt": "NLN0651-i EVK block diagram",
+   "label": "Block diagram"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Bands",
+   "value": "EU863-870 · US902-928 · IN865"
+  },
+  {
+   "icon": "range",
+   "label": "Range",
+   "value": "Up to 10 km LoS · several km urban"
+  },
+  {
+   "icon": "chip",
+   "label": "Compatibility",
+   "value": "Arduino Nano pinout · 30-pin header"
+  },
+  {
+   "icon": "bolt",
+   "label": "Power Input",
+   "value": "USB Type-C or power pin"
+  },
+  {
+   "icon": "download",
+   "label": "Programming",
+   "value": "Arduino IDE over USB (on-board)"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size",
+   "value": "63 × 25 mm"
+  }
+ ],
+ "stats": [
+  {
+   "num": "10 km",
+   "label": "Communication range, line of sight"
+  },
+  {
+   "num": "−136 dBm",
+   "label": "Sensitivity @ 125 kHz / SF12"
+  },
+  {
+   "num": "21 dBm",
+   "label": "Maximum output power"
+  },
+  {
+   "num": "63 × 25 mm",
+   "label": "Board size"
+  }
+ ],
+ "overview": [
+  "The Arduino EVK, or evaluation kit, featuring LoRa technology is designed to help beginners, developers and students learn LoRa and IoT technology quickly. It helps users turn their idea or proof-of-concept into a practical application and make the IoT a reality; it is easy to program, create and connect your things everywhere.",
+  "NLN0651-i is built on the NLN500a (STM32WL) SoC and is a compact LoRa-based node board with an Arduino Nano-compatible design that supports Arduino IDE programming, ensuring easy, open-source software development. It is best suited to LoRa IoT sensor-node solutions for smart cities and other LoRaWAN applications, and is ideal where low cost and low power consumption are required.",
+  "The board includes basic examples and library support for Arduino and STM, an inbuilt programmer that works with the Arduino IDE over USB, LED indication for LoRa communication and power detection, and a U.FL antenna connector. The kit ships with a braided USB Type-C cable and a helical antenna."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Rapid LoRaWAN PoC",
+   "d": "Build end-node proofs of concept quickly."
+  },
+  {
+   "t": "Arduino friendly",
+   "d": "Arduino Nano pinout with a 30-pin header and Arduino IDE programming."
+  },
+  {
+   "t": "No external programmer",
+   "d": "Inbuilt programmer over USB; also supports SWD."
+  },
+  {
+   "t": "Examples included",
+   "d": "Basic examples and library support for Arduino and STM."
+  },
+  {
+   "t": "Ready in the box",
+   "d": "USB Type-C cable and helical antenna included."
+  }
+ ],
+ "showcase": {
+  "title": "Kit Contents",
+  "intro": "The NLN0651-i EVK is packaged with the board, a braided USB Type-C cable and a helical antenna (per the product brochure).",
+  "items": [
+   {
+    "file": "nln0651i-board-small.jpg",
+    "alt": "NLN0651-i LoRa Arduino EVK board",
+    "cap": "1 × LoRa Arduino EVK kit"
+   },
+   {
+    "file": "nln0651i-usb-cable.jpg",
+    "alt": "Braided USB Type-C cable included with the EVK",
+    "cap": "1 × braided USB Type-C cable"
+   },
+   {
+    "file": "nln0651i-antenna.jpg",
+    "alt": "Helical antenna with U.FL connector included with the EVK",
+    "cap": "1 × helical antenna"
+   }
+  ]
+ },
+ "specs": [
+  {
+   "group": "General",
+   "rows": [
+    [
+     "Product",
+     "NLN0651-i LoRa Arduino-compatible EVK"
+    ],
+    [
+     "Base Module",
+     "NLN500a (STM32WL) SoC-based LoRa node"
+    ],
+    [
+     "Size",
+     "63 × 25 mm"
+    ],
+    [
+     "Compatibility",
+     "Arduino Nano pinout, 30-pin 2.54 mm header"
+    ],
+    [
+     "Software Support",
+     "Arduino IDE, STM32 Cube IDE; basic examples and libraries for Arduino and STM"
+    ]
+   ]
+  },
+  {
+   "group": "Radio",
+   "rows": [
+    [
+     "Frequency Bands",
+     "EU863-870, US902-928, IN865"
+    ],
+    [
+     "Communication Range",
+     "Up to 10 km (LoS) and several km in urban environments"
+    ],
+    [
+     "Receiver Sensitivity",
+     "−122 dBm @ 125 kHz / SF7 and −136 dBm @ 125 kHz / SF12"
+    ],
+    [
+     "Output Power",
+     "Up to 21 dBm"
+    ],
+    [
+     "Antenna",
+     "U.FL antenna connector"
+    ]
+   ]
+  },
+  {
+   "group": "Processor & Memory",
+   "rows": [
+    [
+     "CPU",
+     "STM32WLE5JC — Arm Cortex-M4 32-bit, up to 48 MHz"
+    ],
+    [
+     "Memory",
+     "Up to 256 KB flash, up to 64 KB RAM"
+    ]
+   ]
+  },
+  {
+   "group": "Power & Programming",
+   "rows": [
+    [
+     "Power Input",
+     "USB Type-C (5 V) or power pin; battery input (3.7 V) supported"
+    ],
+    [
+     "Programming",
+     "Over USB with on-board USB-to-UART converter (Arduino IDE), or SWD with an ST programmer"
+    ],
+    [
+     "Indicators",
+     "LEDs for LoRa communication and power detection"
+    ],
+    [
+     "Operating Temperature",
+     "−40 °C to +85 °C (board)"
+    ]
+   ]
+  },
+  {
+   "group": "Packaging",
+   "rows": [
+    [
+     "Kit Contents",
+     "1 × NLN0651-i LoRa Arduino EVK, 1 × braided USB Type-C cable, 1 × helical antenna"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "From the NLN0651-i brochure; power, programming, CPU and memory rows also draw on the EVK technical datasheet (v0.1).",
+ "features": [
+  {
+   "icon": "chip",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "NLN500a STM32WL Node",
+   "d": "Compact LoRa node board built on the STM32WL SoC."
+  },
+  {
+   "icon": "grid",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Arduino Nano Pinout",
+   "d": "30-pin header compatible with the Arduino Nano pinout."
+  },
+  {
+   "icon": "download",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Inbuilt USB Programmer",
+   "d": "Program with the Arduino IDE over USB; no external programmer needed."
+  },
+  {
+   "icon": "bolt",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Dual Power Options",
+   "d": "Power via USB cable or via the power pin."
+  },
+  {
+   "icon": "eye",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Status LEDs",
+   "d": "LED indication for LoRa communication and power detection."
+  },
+  {
+   "icon": "file",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "Examples & Libraries",
+   "d": "Basic examples and library support for Arduino and STM."
+  },
+  {
+   "icon": "range",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "Long Range",
+   "d": "Up to 10 km line of sight and several km in urban environments; −136 dBm sensitivity."
+  },
+  {
+   "icon": "plug",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "U.FL Antenna Connector",
+   "d": "Connect the supplied helical antenna or another external antenna."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "meter",
+   "t": "Smart Metering",
+   "d": "Prototype LoRaWAN metering nodes."
+  },
+  {
+   "icon": "sprout",
+   "t": "Smart Agriculture",
+   "d": "Prototype field sensing nodes."
+  },
+  {
+   "icon": "chip",
+   "t": "M2M & IoT",
+   "d": "Prototype machine-to-machine connectivity."
+  },
+  {
+   "icon": "truck",
+   "t": "Logistics Tracking",
+   "d": "Prototype tracking devices."
+  },
+  {
+   "icon": "factory",
+   "t": "Industrial Automation",
+   "d": "Prototype industrial monitoring nodes."
+  },
+  {
+   "icon": "home",
+   "t": "Home Automation",
+   "d": "Prototype home-automation nodes."
+  },
+  {
+   "icon": "eye",
+   "t": "Wireless Sensors",
+   "d": "Prototype wireless sensor nodes."
+  },
+  {
+   "icon": "range",
+   "t": "Remote Control",
+   "d": "Prototype remote-control links."
+  },
+  {
+   "icon": "shield",
+   "t": "Advanced Healthcare",
+   "d": "Prototype healthcare connectivity."
+  }
+ ],
+ "part_rows": [
+  [
+   "NLN0651-i",
+   "LoRa Arduino-compatible EVK (NLN500a based) — includes USB Type-C cable and helical antenna"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLN0651-i EVK Brochure",
+   "path": "./assets/docs/NLN0651-i_LoRa_Arduino_EVK_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  }
+ ],
+ "related": [
+  "nln500a",
+  "nln500b"
+ ],
+ "primary_doc": "./assets/docs/NLN0651-i_LoRa_Arduino_EVK_Brochure.pdf"
+}

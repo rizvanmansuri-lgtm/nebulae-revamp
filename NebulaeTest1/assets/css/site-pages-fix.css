@@ -1,0 +1,17 @@
+/* site-pages-fix.css — small responsive safeguards for team/awards/careers/events/news/blog/privacy/404 pages.
+   Loaded AFTER nebulae-nav.css; touches only those pages. */
+html,body{max-width:100%;overflow-x:clip}
+/* Bootstrap g-5 (3rem gutter) is wider than the container padding on phones -> sideways scroll */
+@media (max-width:991.98px){
+  .container .row.g-5{--bs-gutter-x:1.5rem}
+}
+/* newsletter strip on very small phones */
+.pg-newsletter .pg-newsletter__form{min-width:0;width:100%}
+.pg-newsletter .pg-newsletter__input{min-width:0;width:100%;flex:1 1 100%}
+.pg-newsletter .pg-newsletter__btn{width:100%}
+@media (min-width:576px){
+  .pg-newsletter .pg-newsletter__input{flex:1 1 200px;width:auto}
+  .pg-newsletter .pg-newsletter__btn{width:auto}
+}
+/* wide tables scroll inside their own box instead of the page */
+.aw-matrix{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}

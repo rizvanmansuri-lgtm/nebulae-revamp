@@ -1,0 +1,278 @@
+{
+ "slug": "amr-water",
+ "model": "Water Meter AMR",
+ "full": "Automatic Meter Reading (AMR) Device for Water Meters",
+ "title_name": "Water Meter AMR Device",
+ "type_key": "node",
+ "type_label": "AMR Node",
+ "proto_key": "lora",
+ "proto_crumb": "LoRa",
+ "proto_label": "LoRaWAN · Sigfox",
+ "badge": "Water Meter AMR",
+ "category": "Automatic Meter Reading Device",
+ "tagline": "Battery-powered water-meter AMR for magnetic, inductive and RS485 meters — LoRaWAN / Sigfox, 5+ year battery.",
+ "meta_desc": "Nebulae Water Meter AMR — industry-standard battery-based device for smart water meters (magnetic, inductive, RS485), LoRaWAN/Sigfox, tamper and magnetic alerts, 5+ year battery, IP65, -20 to +65 C, 97 x 59 x 37 mm.",
+ "desc": "Nebulae's Water Meter-based AMR is an industry-standard, battery-based device used for live reporting of consumption data from smart water meters. It is designed to give utilities prompt alerts on tampering attempts, device removal and magnetic interference.",
+ "cert_badges": [
+  "LoRaWAN / Sigfox",
+  "IP65",
+  "5+ Year Battery"
+ ],
+ "gallery": [
+  {
+   "file": "amr-water-device.jpg",
+   "alt": "Nebulae Water Meter AMR device in a grey enclosure with a sensor connector",
+   "label": "AMR device"
+  },
+  {
+   "file": "amr-water-meter.jpg",
+   "alt": "Water meter fitted with the AMR pulse sensor",
+   "label": "On a water meter"
+  },
+  {
+   "file": "amr-water-sensor.jpg",
+   "alt": "WAMR sensor used with the water meter AMR",
+   "label": "WAMR sensor"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Connectivity",
+   "value": "LoRaWAN / Sigfox"
+  },
+  {
+   "icon": "eye",
+   "label": "Meter Types",
+   "value": "Diaphragm magnetic / inductive / RS485 pulse-based"
+  },
+  {
+   "icon": "battery",
+   "label": "Battery Life",
+   "value": "5+ years with deep sleep technology"
+  },
+  {
+   "icon": "shield",
+   "label": "Alerts",
+   "value": "Tamper · device removal · magnetic interference"
+  },
+  {
+   "icon": "thermo",
+   "label": "Operating Temperature",
+   "value": "−20 °C to +65 °C"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size",
+   "value": "97 × 59 × 37 mm · IP65 self-certified"
+  }
+ ],
+ "stats": [
+  {
+   "num": "5+ years",
+   "label": "Battery life (deep sleep)"
+  },
+  {
+   "num": "3 types",
+   "label": "Magnetic / inductive / RS485 meters"
+  },
+  {
+   "num": "IP65",
+   "label": "Self-certified"
+  },
+  {
+   "num": "97×59×37 mm",
+   "label": "Device size"
+  }
+ ],
+ "overview": [
+  "Nebulae's Water Meter-based AMR is an industry-standard, battery-based device used for live reporting of consumption data from smart water meters. It is specifically designed to assist utilities with prompt alerts on tampering attempts, device removal or magnetic interference.",
+  "The device retrofits on existing meters and is plug-n-play: no configuration is required, and it sends live data at configured intervals after installation. It supports any diaphragm magnetic, inductive or RS485 pulse-based meter and works with LoRaWAN or Sigfox, communicating to a gateway/DCU and on to a network server or IoT middleware and the end-user application.",
+  "It offers 5+ years of battery life using deep sleep technology and requires zero maintenance. Operating temperature is −20 °C to +65 °C, ingress protection is IP65 (self-certified) and the device measures 97 × 59 × 37 mm."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Retrofit, plug-n-play",
+   "d": "Fits existing meters with zero configuration after installation."
+  },
+  {
+   "t": "Several meter interfaces",
+   "d": "Supports magnetic, inductive and RS485 pulse-based meters."
+  },
+  {
+   "t": "Tamper alerts",
+   "d": "Prompt alerts for tampering, device removal and magnetic interference."
+  },
+  {
+   "t": "Long battery life",
+   "d": "5+ years with deep sleep technology."
+  },
+  {
+   "t": "Zero maintenance",
+   "d": "No maintenance required in operation."
+  }
+ ],
+ "showcase": {
+  "title": "Head End System",
+  "intro": "Real-time reporting is done with a Head End System — an IoT-powered software solution that acts as a communication driver between Meter Data Management and the measurement devices.",
+  "items": [
+   {
+    "file": "amr-hes-dashboard.jpg",
+    "alt": "Head End System dashboard shown on a monitor",
+    "cap": "Head End System dashboard (from the AMR brochure)"
+   }
+  ]
+ },
+ "specs": [
+  {
+   "group": "Metering",
+   "rows": [
+    [
+     "Compatible Meters",
+     "Any diaphragm magnetic / inductive / RS485 pulse-based meter"
+    ],
+    [
+     "Alerts",
+     "Tamper attempts, device removal and magnetic interference"
+    ]
+   ]
+  },
+  {
+   "group": "Network",
+   "rows": [
+    [
+     "Network",
+     "LoRaWAN / Sigfox"
+    ],
+    [
+     "System Path",
+     "AMR → Gateway / DCU → Network Server / IoT middleware → End-user application"
+    ]
+   ]
+  },
+  {
+   "group": "Battery & Environment",
+   "rows": [
+    [
+     "Battery Life",
+     "5+ years with deep sleep technology"
+    ],
+    [
+     "Operating Temperature",
+     "−20 °C to +65 °C"
+    ],
+    [
+     "Ingress Protection",
+     "IP65 (self-certified)"
+    ],
+    [
+     "Maintenance",
+     "Zero maintenance required"
+    ]
+   ]
+  },
+  {
+   "group": "Physical",
+   "rows": [
+    [
+     "Dimensions",
+     "97 × 59 × 37 mm"
+    ],
+    [
+     "Installation",
+     "Retrofit on existing meters, easy plug-n-play; zero configuration"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the Nebulae AMR brochure (water-meter AMR section).",
+ "features": [
+  {
+   "icon": "plug",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Retrofit & Plug-n-Play",
+   "d": "Easy installation on existing meters; zero configuration required."
+  },
+  {
+   "icon": "eye",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Multiple Pulse Interfaces",
+   "d": "Magnetic, inductive and RS485 pulse-based diaphragm meters."
+  },
+  {
+   "icon": "shield",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Tamper & Magnetic Alerts",
+   "d": "Alerts on tamper attempts, device removal and magnetic interference."
+  },
+  {
+   "icon": "battery",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "5+ Year Battery",
+   "d": "Deep-sleep technology."
+  },
+  {
+   "icon": "wifi",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "LoRaWAN / Sigfox",
+   "d": "Works with LoRaWAN or Sigfox networks."
+  },
+  {
+   "icon": "drop",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "IP65 Enclosure",
+   "d": "Self-certified ingress protection."
+  },
+  {
+   "icon": "gauge",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "Live Reporting",
+   "d": "Sends live data at configured intervals."
+  },
+  {
+   "icon": "check",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Zero Maintenance",
+   "d": "No maintenance required."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "drop",
+   "t": "Water Utility Metering",
+   "d": "Live reporting from smart water meters."
+  },
+  {
+   "icon": "city",
+   "t": "Smart City Infrastructure",
+   "d": "Made-in-India solution in line with smart-city infrastructure."
+  }
+ ],
+ "part_rows": [
+  [
+   "Water Meter AMR",
+   "Nebulae AMR device for water meters, LoRaWAN / Sigfox"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "Nebulae AMR Devices Brochure",
+   "path": "./assets/docs/Nebulae_AMR_Devices_Brochure.pdf",
+   "sub": "PDF · Gas, water and RF NIC energy-meter AMR"
+  }
+ ],
+ "related": [
+  "amr-gas",
+  "amr-nic"
+ ],
+ "primary_doc": "./assets/docs/Nebulae_AMR_Devices_Brochure.pdf"
+}

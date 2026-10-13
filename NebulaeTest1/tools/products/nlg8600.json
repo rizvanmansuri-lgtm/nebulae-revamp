@@ -1,0 +1,401 @@
+{
+ "slug": "nlg8600",
+ "model": "NLG8600",
+ "full": "NebuLink SCADA RTU Gateway NLG8600",
+ "title_name": "SCADA RTU Gateway with Ethernet",
+ "type_key": "gateway",
+ "type_label": "Gateway",
+ "proto_key": "gsm",
+ "proto_crumb": "GSM / Cellular",
+ "proto_label": "4G LTE · Ethernet · SCADA RTU",
+ "badge": "SCADA RTU",
+ "category": "Cellular SCADA RTU Gateway",
+ "tagline": "Cortex-A7 SCADA RTU with 4G LTE, Ethernet, RS232/RS485, analog and digital I/O, RTC and SSL/TLS.",
+ "meta_desc": "Nebulae NLG8600 SCADA RTU gateway — Cortex-A7 1.2 GHz, 4G LTE, 10/100/1000 Ethernet, RS232, RS485, analog and digital I/O, relay, RTC, SSL/TLS, Modbus RTU/TCP and DLMS, -40 to +85 C.",
+ "desc": "NebuLink Gateway NLG8600 is a SCADA RTU unit for remote logic control and monitoring in industrial applications. Powered by an ARM Cortex-A7 processor with RS232, RS485, Ethernet, cellular, analog and digital I/O, it lets users implement control logic using the pre-programmed QuecOpen OS, and is built for low-cost, battery-enabled M2M applications.",
+ "cert_badges": [
+  "SCADA RTU",
+  "4G LTE",
+  "Ethernet"
+ ],
+ "gallery": [
+  {
+   "file": "nlg8600-board.jpg",
+   "alt": "NLG8600 SCADA RTU board with screw terminals and external cellular antenna",
+   "label": "Board with antenna"
+  },
+  {
+   "file": "nlg8600-board-top.jpg",
+   "alt": "NLG8600 SCADA RTU board, top view without antenna",
+   "label": "Board top view"
+  },
+  {
+   "file": "nlg8600-application.png",
+   "alt": "NLG8600 application diagram showing field devices, cloud and user applications",
+   "label": "Application diagram"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "cpu",
+   "label": "Processor & Memory",
+   "value": "Cortex-A7 1.2 GHz · 256 MB RAM / 512 MB flash"
+  },
+  {
+   "icon": "network",
+   "label": "Network",
+   "value": "4G LTE · Ethernet 10/100/1000 · GPS optional"
+  },
+  {
+   "icon": "plug",
+   "label": "Serial & Bus",
+   "value": "RS232 · RS485 · I2C · SPI"
+  },
+  {
+   "icon": "grid",
+   "label": "I/O",
+   "value": "2 analog in · digital in/out · relay output"
+  },
+  {
+   "icon": "bolt",
+   "label": "Power",
+   "value": "6 – 24 VDC @ 4 A · battery 3.7/4.2 V"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size (L × W × H)",
+   "value": "102 × 107 × 15 mm"
+  }
+ ],
+ "stats": [
+  {
+   "num": "1.2 GHz",
+   "label": "ARM Cortex-A7"
+  },
+  {
+   "num": "−40 to +85 °C",
+   "label": "Operating temperature"
+  },
+  {
+   "num": "1 Gbps",
+   "label": "Ethernet"
+  },
+  {
+   "num": "2 years",
+   "label": "Warranty"
+  }
+ ],
+ "overview": [
+  "NebuLink Gateway NLG8600 is a SCADA RTU unit for remote logic control and monitoring in various industrial applications. It is powered by an ARM Cortex-A7 processor with multiple interfaces: RS232, RS485, Ethernet, cellular, analog and digital I/Os.",
+  "It supports the QuecOpen SDK for programming and configuration, with validated Modbus RTU, Modbus TCP and DLMS stacks that ease integration with SCADA software. A built-in lightweight web server covers Ethernet, GSM and peripherals; an RTC supports real-time scheduling; and SSL/TLS is supported.",
+  "Compact size, easy fitting and battery support (a 3.7 V / 4.2 V rechargeable battery can take over control when mains is absent) make it well suited to battery-based M2M solutions and shorten end users' time to market. It is covered by a two-year warranty."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Remote logic control",
+   "d": "Implement control logic on the controller with the pre-programmed QuecOpen OS."
+  },
+  {
+   "t": "SCADA-ready",
+   "d": "Validated Modbus RTU, Modbus TCP and DLMS stacks; Modbus/TCP for seamless integration."
+  },
+  {
+   "t": "Ethernet and 4G",
+   "d": "10/100/1000 Mbps Ethernet plus LTE for remote access, with SSL/TLS."
+  },
+  {
+   "t": "Battery operation",
+   "d": "Rechargeable battery keeps control active when mains supply is absent."
+  },
+  {
+   "t": "Protected I/O",
+   "d": "2-way isolation and ESD protection on analog and digital I/O."
+  }
+ ],
+ "showcase": {
+  "title": "Block Diagram & Mechanical Drawing",
+  "intro": "Reference drawings from the NLG8600 datasheet (version 1.0, January 2024).",
+  "items": [
+   {
+    "file": "nlg8600-block-diagram.png",
+    "alt": "NLG8600 block diagram showing the Cortex-A7 processor, memory and interfaces",
+    "cap": "Block diagram"
+   },
+   {
+    "file": "nlg8600-dimensions.png",
+    "alt": "NLG8600 board dimension drawing",
+    "cap": "Board dimensions"
+   }
+  ]
+ },
+ "specs": [
+  {
+   "group": "Processor & Storage",
+   "rows": [
+    [
+     "Processor",
+     "ARM Cortex-A7"
+    ],
+    [
+     "Frequency",
+     "1.2 GHz"
+    ],
+    [
+     "External RAM",
+     "256 MB"
+    ],
+    [
+     "Internal Flash",
+     "512 MB (20 MB for end application)"
+    ],
+    [
+     "Additional Storage",
+     "Up to 32 GB microSD card"
+    ],
+    [
+     "Software Stack",
+     "QuecOpen SDK with validated Modbus RTU, Modbus TCP and DLMS stack"
+    ]
+   ]
+  },
+  {
+   "group": "Communication Interface",
+   "rows": [
+    [
+     "Cellular",
+     "FDD-LTE: B1/B2/B3/B5/B7/B8/B20 · TDD-LTE: B38/B40 · HSPA/UMTS: 900/850/1800/1900/2100 MHz · GSM/GPRS/EDGE: 850/900/1800/1900 MHz"
+    ],
+    [
+     "GPS",
+     "Optional"
+    ],
+    [
+     "Serial",
+     "1 × RS232, 1 × RS485, 1 × I2C, 1 × SPI"
+    ],
+    [
+     "Ethernet",
+     "1 × 10/100M/1 Gbps"
+    ]
+   ]
+  },
+  {
+   "group": "I/O Interface",
+   "rows": [
+    [
+     "Analog Inputs",
+     "2 channels, 0–10 V or 4–20 mA"
+    ],
+    [
+     "Digital Input / Counter",
+     "Isolated 2 channels / 16 bits; on 12 V / off 0 V; overvoltage protection 15 V; counter max 65536; max input frequency 50 Hz; min pulse width 10 ms"
+    ],
+    [
+     "Digital Relay Output",
+     "Isolated 1 channel, 2 A 250 VAC / 220 VDC max (datasheet: 170 mA rms continuous, ±400 mA peak)"
+    ],
+    [
+     "Digital Outputs",
+     "Isolated 2 channels, open drain, 3.3 V to 15 VDC (max)"
+    ],
+    [
+     "General Purpose I/O (optional)",
+     "6 channels, 3.3 VDC"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical & Environmental",
+   "rows": [
+    [
+     "Power Supply",
+     "6 – 24 VDC @ 4 A"
+    ],
+    [
+     "Supported Battery Supply",
+     "3.7 / 4.2 V, 2000 mAh (upgradable based on end application)"
+    ],
+    [
+     "Operating Temperature",
+     "−40 to +85 °C"
+    ],
+    [
+     "Humidity",
+     "Relative humidity 15% to 93% non-condensing"
+    ],
+    [
+     "Safety",
+     "EMS protection; ESD (IEC 61000-4-2) 4 kV contact for each terminal; EFT (IEC 61000-4-4) ±2 kV for power"
+    ]
+   ]
+  },
+  {
+   "group": "General & Mechanical",
+   "rows": [
+    [
+     "LEDs",
+     "3 × status LED"
+    ],
+    [
+     "Dimensions (L × W × H)",
+     "102 × 107 × 15 mm"
+    ],
+    [
+     "Antennas",
+     "1 × cellular, 1 × GPS (optional), 1 × diversity (optional)"
+    ]
+   ]
+  },
+  {
+   "group": "40-Pin Header Summary",
+   "rows": [
+    [
+     "Power & battery",
+     "Pin 1 VCC, 2 GND; pin 3 VIN_BATTERY, 4 GND"
+    ],
+    [
+     "ADC",
+     "Pin 5 GND, 6 ADC1_IN, 7 ADC2_IN"
+    ],
+    [
+     "RS232",
+     "Pin 8 RTS, 9 TX, 10 CTS, 11 RX"
+    ],
+    [
+     "RS485",
+     "Pin 12 RS485−, 13 RS485+"
+    ],
+    [
+     "Digital out / in",
+     "Pin 14 DO2, 15 DO1; pin 16 DIN1, 17 DIN2, 18 GND"
+    ],
+    [
+     "Relay",
+     "Pin 19 RELAY_NO, 20 RELAY_COMM"
+    ],
+    [
+     "Ethernet",
+     "Pins 21–24 (RJ45)"
+    ],
+    [
+     "I2C (RTC)",
+     "Pin 25 SCL, 26 SDA"
+    ],
+    [
+     "Reserved",
+     "Pins 27–40 (NC)"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values from the NLG8600 brochure (V5) and datasheet (version 1.0, January 2024). Datasheet intro lists “4G (LTE Cat M1)”.",
+ "features": [
+  {
+   "icon": "server",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Lightweight Web Server",
+   "d": "Built-in web server for Ethernet, GSM and peripherals."
+  },
+  {
+   "icon": "network",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Ethernet + 4G + Serial",
+   "d": "10/100/1000 Ethernet, 4G LTE (Cat M1), RS232 and RS485."
+  },
+  {
+   "icon": "file",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Modbus/TCP & DLMS",
+   "d": "Validated stacks for seamless SCADA integration."
+  },
+  {
+   "icon": "gauge",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Analog & Digital I/O",
+   "d": "Supports I/O, counter and timer functions with 2-way isolation and ESD protection."
+  },
+  {
+   "icon": "lock",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "SSL/TLS",
+   "d": "Secure communications support."
+  },
+  {
+   "icon": "gauge",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "RTC Scheduling",
+   "d": "Real-time clock for scheduled operation."
+  },
+  {
+   "icon": "battery",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "Battery-Operated Control",
+   "d": "Rechargeable Li-ion/Li-Po battery takes over when mains supply is absent."
+  },
+  {
+   "icon": "grid",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "microSD Data Logging",
+   "d": "Storage expansion for data logging and configuration recovery."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "city",
+   "t": "Infrastructure",
+   "d": "ITS, utility, AMR and lighting."
+  },
+  {
+   "icon": "eye",
+   "t": "Security",
+   "d": "Surveillance, environment and disaster monitoring."
+  },
+  {
+   "icon": "factory",
+   "t": "Industry",
+   "d": "Livestock, agriculture, heavy industry and factory."
+  },
+  {
+   "icon": "gauge",
+   "t": "Device SCADA",
+   "d": "PLC, IED, generator and sensor monitoring."
+  },
+  {
+   "icon": "building",
+   "t": "Building",
+   "d": "Security, energy, waste management, facility and lighting."
+  }
+ ],
+ "part_rows": [
+  [
+   "NLG8600",
+   "NebuLink SCADA RTU Gateway — Cortex-A7, 4G LTE, Ethernet, RS232 / RS485, analog & digital I/O"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLG8600 Brochure",
+   "path": "./assets/docs/NLG8600_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  },
+  {
+   "name": "NLG8600 Datasheet v1.0",
+   "path": "./assets/docs/NLG8600_Datasheet_v1.0.pdf",
+   "sub": "PDF · Technical datasheet, January 2024"
+  }
+ ],
+ "related": [
+  "nlg8400",
+  "nlg7644"
+ ],
+ "primary_doc": "./assets/docs/NLG8600_Brochure.pdf"
+}

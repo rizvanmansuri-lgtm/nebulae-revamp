@@ -1,0 +1,308 @@
+{
+ "slug": "amr-gas",
+ "model": "Gas Meter AMR",
+ "full": "Automatic Meter Reading (AMR) Device for Gas Meters",
+ "title_name": "Gas Meter AMR Device",
+ "type_key": "node",
+ "type_label": "AMR Node",
+ "proto_key": "lora",
+ "proto_crumb": "LoRa",
+ "proto_label": "LoRaWAN · Sigfox",
+ "badge": "Gas Meter AMR",
+ "category": "Automatic Meter Reading Device",
+ "tagline": "Battery-powered LoRaWAN gas-meter AMR with built-in pulse detection, tamper alerts and 5+ year battery life.",
+ "meta_desc": "Nebulae Gas Meter AMR — wireless battery-based LoRaWAN/Sigfox device for diaphragm gas meters: Hall-effect pulse detection, tamper and magnetic alerts, ~10 km range, 5+ year battery, IP65, -20 to +85 C.",
+ "desc": "Nebulae AMR is a wireless, battery-based device for live reporting of gas consumption data, with a built-in pulse detector that installs on existing diaphragm gas meters. It provides alerts on tamper detection (device removal) and magnetic interference, and offers long range (about 10 km) through a single LoRaWAN gateway/DCU connected to Nebulae or another service provider's LoRaWAN server.",
+ "cert_badges": [
+  "LoRaWAN",
+  "IP65",
+  "5+ Year Battery"
+ ],
+ "gallery": [
+  {
+   "file": "amr-gas-device.jpg",
+   "alt": "Nebulae Gas Meter AMR device with its pulse sensor cable",
+   "label": "AMR device"
+  },
+  {
+   "file": "amr-gas-meter-illustration.jpg",
+   "alt": "Illustration of the AMR device mounted on a diaphragm gas meter",
+   "label": "On a gas meter"
+  },
+  {
+   "file": "amr-gas-device-2.jpg",
+   "alt": "Nebulae Gas Meter AMR device, alternate view",
+   "label": "Alternate view"
+  },
+  {
+   "file": "amr-gas-meter.jpg",
+   "alt": "Diaphragm gas meter that the AMR device retrofits onto",
+   "label": "Gas meter"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Connectivity",
+   "value": "LoRaWAN / Sigfox"
+  },
+  {
+   "icon": "range",
+   "label": "Range",
+   "value": "~10 km line of sight, multipoint via one gateway/DCU"
+  },
+  {
+   "icon": "battery",
+   "label": "Battery",
+   "value": "Replaceable D-cell Li-SOCl2 · 5+ years"
+  },
+  {
+   "icon": "eye",
+   "label": "Sensing",
+   "value": "Hall-effect pulse count · tamper & magnetic alerts"
+  },
+  {
+   "icon": "shield",
+   "label": "Protection",
+   "value": "IP65 or higher · −20 °C to +85 °C"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size",
+   "value": "97 × 59 × 37 mm"
+  }
+ ],
+ "stats": [
+  {
+   "num": "5+ years",
+   "label": "Battery life (deep sleep)"
+  },
+  {
+   "num": "~10 km",
+   "label": "Line-of-sight range"
+  },
+  {
+   "num": "IP65",
+   "label": "Self-certified ingress protection"
+  },
+  {
+   "num": "97×59×37 mm",
+   "label": "Device size"
+  }
+ ],
+ "overview": [
+  "Nebulae AMR is a unique wireless, battery-based device for live reporting of gas consumption data, with a built-in pulse detector that can be installed on existing diaphragm gas meters. It provides alerts on tamper detection on device removal and magnetic interference.",
+  "It offers long range (about 10 km) using multipoint communication with a single LoRaWAN gateway/DCU connected to Nebulae or another service provider's LoRaWAN server, which makes it a cost-effective solution for utility companies. It is built on the NebuLink Node NLN500a, the smallest STM32WL based LoRaWAN module.",
+  "Retrofit is simple: hook the device on with a screw or cable tie, and it sends live data at pre-configured intervals with no configuration. Meter reading is based on the incremental pulse count from the meter using Hall-effect technology; the sensor stays always on and wakes the device from sleep on pulse detection. Dial speeds up to 6 seconds per revolution are supported on G1.6 domestic meters (Qmax = 2.5 m³/h)."
+ ],
+ "overview_note": "* Customization is supported based on requirements.",
+ "why": [
+  {
+   "t": "Plug-n-play retrofit",
+   "d": "Installs on existing meters with a screw or cable tie; no configuration required."
+  },
+  {
+   "t": "Tamper-proof",
+   "d": "Device-removal and magnetic-interference alerts; other operations can be disabled on tamper (configurable)."
+  },
+  {
+   "t": "Long battery life",
+   "d": "5+ years with deep sleep, from a replaceable D-cell lithium thionyl chloride battery."
+  },
+  {
+   "t": "Lower infrastructure cost",
+   "d": "Multipoint communication to one gateway/DCU over up to 10 km line of sight."
+  },
+  {
+   "t": "No walk-by needed",
+   "d": "Client–server model removes walk-by or drive-by reading."
+  }
+ ],
+ "showcase": {
+  "title": "Head End System",
+  "intro": "Real-time reporting is done with a Head End System — an IoT-powered software solution that acts as a communication driver between Meter Data Management and the measurement devices.",
+  "items": [
+   {
+    "file": "amr-hes-dashboard.jpg",
+    "alt": "Head End System dashboard shown on a monitor",
+    "cap": "Head End System dashboard (from the AMR brochure)"
+   }
+  ]
+ },
+ "specs": [
+  {
+   "group": "Metering",
+   "rows": [
+    [
+     "Compatible Meters",
+     "Any diaphragm magnetic / inductive pulse-based gas meter"
+    ],
+    [
+     "Pulse Detection",
+     "Incremental pulse count using Hall-effect technology; sensor always on and wakes the device on pulse"
+    ],
+    [
+     "Supported Dial Speed",
+     "G1.6 domestic meters with Qmax = 2.5 m³/h: 6 seconds / revolution"
+    ],
+    [
+     "Reporting",
+     "Fixed or configurable reporting interval; sends the sum of pulse counts (total gas consumption count) plus battery, magnetic-interference and tamper status"
+    ]
+   ]
+  },
+  {
+   "group": "Radio",
+   "rows": [
+    [
+     "Network",
+     "LoRaWAN / Sigfox"
+    ],
+    [
+     "Based On",
+     "NebuLink Node NLN500a"
+    ],
+    [
+     "Transmit Power",
+     "Up to +22 dBm"
+    ],
+    [
+     "Frequency Bands",
+     "EU 863-870, US 902-928, AU 915-928, IN865"
+    ],
+    [
+     "Range",
+     "~10 km (line of sight), multipoint with a single LoRaWAN gateway/DCU"
+    ]
+   ]
+  },
+  {
+   "group": "Battery & Environment",
+   "rows": [
+    [
+     "Battery",
+     "Non-rechargeable D-cell lithium thionyl chloride (replaceable); 5+ years with deep sleep technology"
+    ],
+    [
+     "Operating Temperature",
+     "−20 °C to +85 °C"
+    ],
+    [
+     "Ingress Protection",
+     "IP65 (self-certified) or higher"
+    ],
+    [
+     "Maintenance",
+     "Zero maintenance"
+    ]
+   ]
+  },
+  {
+   "group": "Physical",
+   "rows": [
+    [
+     "Dimensions",
+     "97 × 59 × 37 mm"
+    ],
+    [
+     "Installation",
+     "Retrofit with screw or cable-tie hook option"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "From the Gas AMR datasheet (br_pamr_1.0) and the AMR brochure. The brochure lists operating temperature as −20 °C to +85 °C for the gas AMR.",
+ "features": [
+  {
+   "icon": "plug",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Plug-n-Play Retrofit",
+   "d": "Retrofit on existing meters with a screw or cable tie option."
+  },
+  {
+   "icon": "eye",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Hall-Effect Pulse Counting",
+   "d": "Accurate meter reading from incremental pulse count."
+  },
+  {
+   "icon": "shield",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Tamper & Magnetic Alerts",
+   "d": "Device-removal and magnetic-interference alerts."
+  },
+  {
+   "icon": "battery",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "5+ Year Battery",
+   "d": "Deep-sleep technology with a replaceable D-cell battery."
+  },
+  {
+   "icon": "range",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Multipoint ~10 km Range",
+   "d": "One LoRaWAN gateway/DCU serves many devices."
+  },
+  {
+   "icon": "wifi",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "Works With Any LoRaWAN Gateway",
+   "d": "Connects to Nebulae LoRaWAN private servers or others."
+  },
+  {
+   "icon": "drop",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "Outdoor Ready",
+   "d": "Industrial, robust design; IP65 or higher; −20 to +85 °C."
+  },
+  {
+   "icon": "gauge",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Live Reporting",
+   "d": "Fixed or configurable reporting interval."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "meter",
+   "t": "Gas Utility Metering",
+   "d": "Live reporting from existing diaphragm gas meters."
+  },
+  {
+   "icon": "city",
+   "t": "Smart City Infrastructure",
+   "d": "Made-in-India solution in line with smart-city infrastructure."
+  }
+ ],
+ "part_rows": [
+  [
+   "Gas Meter AMR",
+   "Nebulae AMR device for diaphragm gas meters, LoRaWAN / Sigfox"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "Gas AMR Datasheet",
+   "path": "./assets/docs/Gas_AMR_Datasheet.pdf",
+   "sub": "PDF · Product datasheet"
+  },
+  {
+   "name": "Nebulae AMR Devices Brochure",
+   "path": "./assets/docs/Nebulae_AMR_Devices_Brochure.pdf",
+   "sub": "PDF · Gas, water and RF NIC energy-meter AMR"
+  }
+ ],
+ "related": [
+  "amr-water",
+  "nln500a"
+ ],
+ "primary_doc": "./assets/docs/Gas_AMR_Datasheet.pdf"
+}

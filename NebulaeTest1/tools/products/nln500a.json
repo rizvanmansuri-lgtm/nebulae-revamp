@@ -1,0 +1,373 @@
+{
+ "slug": "nln500a",
+ "model": "NLN500a",
+ "full": "NebuLink Node NLN500a (LoRaWAN)",
+ "title_name": "NebuLink Node",
+ "type_key": "node",
+ "type_label": "Node",
+ "proto_key": "lora",
+ "proto_crumb": "LoRa",
+ "proto_label": "LoRa / LoRaWAN",
+ "badge": "LoRaWAN Node",
+ "category": "LoRaWAN IoT Node",
+ "meta_desc": "NebuLink Node NLN500a — compact STM32WL based LoRaWAN node (16 x 32.6 x 3.5 mm), EU863-870/IN865 MHz, -135 dBm sensitivity, +20 dBm output, up to 10 km LoS, AES-256.",
+ "desc": "NebuLink Node NLN500a is a compact and powerful node for LoRa applications. It is designed around the STM32WL — the world's first wireless microcontroller to integrate a LoRa transceiver — and enriched with multiple serial interfaces, digital and analog I/Os and on-chip memory to perform any IoT operation. It integrates easily into any LoRa based network.",
+ "cert_badges": [
+  "EN 300 220 Pre-certified",
+  "AES-256",
+  "LoRaWAN"
+ ],
+ "tagline": "Compact STM32WL based LoRaWAN node — 16 × 32.6 mm, −135 dBm sensitivity (SF12), up to 10 km line of sight.",
+ "gallery": [
+  {
+   "file": "nln500a-board.jpg",
+   "alt": "NLN500a NebuLink Node — top view of the LoRaWAN board",
+   "label": "Board view"
+  },
+  {
+   "file": "nln500a-chip-closeup.jpg",
+   "alt": "NLN500a close-up of the STM32WL wireless microcontroller and RF section",
+   "label": "STM32WL SoC"
+  },
+  {
+   "file": "nln500a-antenna-closeup.jpg",
+   "alt": "NLN500a close-up of the RF antenna connector and board edge castellations",
+   "label": "RF connector"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Connectivity",
+   "value": "LoRaWAN · EU863-870 / IN865 MHz"
+  },
+  {
+   "icon": "range",
+   "label": "Range (LoS)*",
+   "value": "Up to 10,000 m"
+  },
+  {
+   "icon": "chip",
+   "label": "Serial Interfaces",
+   "value": "2×SPI · 3×I2C · 2×USART · 1×LPUART"
+  },
+  {
+   "icon": "grid",
+   "label": "I/O",
+   "value": "Up to 43 digital I/O + analog inputs"
+  },
+  {
+   "icon": "bolt",
+   "label": "Supply Voltage",
+   "value": "1.8 V – 3.6 V, ultra low power"
+  },
+  {
+   "icon": "lock",
+   "label": "Security",
+   "value": "Hardware AES-256 + TRNG"
+  }
+ ],
+ "stats": [
+  {
+   "num": "10 km",
+   "label": "Communication range, line of sight*"
+  },
+  {
+   "num": "−135 dBm",
+   "label": "Sensitivity at SF12"
+  },
+  {
+   "num": "+20 dBm",
+   "label": "Maximum output power"
+  },
+  {
+   "num": "16 × 32.6 mm",
+   "label": "Compact module footprint"
+  }
+ ],
+ "overview": [
+  "NebuLink Node NLN500a is Nebulae's compact LoRaWAN node, designed using the STM32WL — the world's first wireless microcontroller to integrate a LoRa transceiver. A single ARM Cortex-M4 SoC handles both the application and the radio, keeping the module small and the design simple.",
+  "With 256 KB of flash and 64 KB of RAM, multiple serial interfaces (2 × SPI, 3 × I2C, 2 × USART and 1 × LPUART), up to 43 digital inputs and outputs and analog inputs, the NLN500a has the resources to perform a wide range of IoT operations.",
+  "The node is built for low-power deployments: an ultra low power design that runs from a 1.8 V to 3.6 V supply, LoRa modulation with sensitivity down to −135 dBm (SF12), output power up to +20 dBm and an estimated line-of-sight range of up to 10,000 m. Hardware AES-256 encryption and a true random number generator support secure communication, and the module is pre-certified according to EN 300 220."
+ ],
+ "overview_note": "* Estimated based on ideal conditions with limited sources of interference.",
+ "why": [
+  {
+   "t": "STM32WL based",
+   "d": "Integrated LoRa transceiver and ARM Cortex-M4 in one SoC."
+  },
+  {
+   "t": "Long range, low power",
+   "d": "−135 dBm sensitivity, +20 dBm output, ultra low power design."
+  },
+  {
+   "t": "Rich interfaces",
+   "d": "SPI, I2C, USART, LPUART, up to 43 digital I/O and analog inputs."
+  },
+  {
+   "t": "Secure by design",
+   "d": "Hardware AES-256 encryption and true random number generation."
+  },
+  {
+   "t": "Pre-certified",
+   "d": "Pre-certified according to EN 300 220 for the EU sub-GHz band."
+  }
+ ],
+ "showcase": {
+  "title": "Board Details",
+  "intro": "Close-up views of the NLN500a from the product brochure — the STM32WL SoC with its surrounding RF section, and the RF antenna connector.",
+  "items": [
+   {
+    "file": "nln500a-chip-closeup.jpg",
+    "alt": "STM32WL SoC and RF section of the NLN500a",
+    "cap": "STM32WL wireless microcontroller and RF section"
+   },
+   {
+    "file": "nln500a-antenna-closeup.jpg",
+    "alt": "RF antenna connector of the NLN500a",
+    "cap": "RF antenna connector and castellated edge"
+   }
+  ]
+ },
+ "specs": [
+  {
+   "group": "General",
+   "rows": [
+    [
+     "Product",
+     "NebuLink Node NLN500a (LoRaWAN)"
+    ],
+    [
+     "Platform",
+     "STM32WL — wireless microcontroller with integrated LoRa transceiver"
+    ],
+    [
+     "Size (L × W × H)",
+     "16 × 32.6 × 3.5 mm"
+    ]
+   ]
+  },
+  {
+   "group": "Radio",
+   "rows": [
+    [
+     "Modulation",
+     "LoRa™ modulation technology"
+    ],
+    [
+     "Frequency Band",
+     "EU863-870 MHz, IN865 MHz"
+    ],
+    [
+     "Sensitivity",
+     "Down to −135 dBm (SF12)"
+    ],
+    [
+     "Output Power",
+     "Up to +20 dBm"
+    ],
+    [
+     "RF Interface",
+     "Optimized for 50 Ω"
+    ],
+    [
+     "Communication Range",
+     "Up to 10,000 m (Line of Sight)*"
+    ]
+   ]
+  },
+  {
+   "group": "Processor & Memory",
+   "rows": [
+    [
+     "Core",
+     "ARM™ Cortex-M4"
+    ],
+    [
+     "Storage",
+     "256 KB flash and 64 KB RAM"
+    ]
+   ]
+  },
+  {
+   "group": "Interfaces",
+   "rows": [
+    [
+     "Serial Interfaces",
+     "2 × SPI, 3 × I2C, 2 × USART, 1 × LPUART"
+    ],
+    [
+     "Digital I/O",
+     "Supports up to 43 digital inputs and outputs"
+    ],
+    [
+     "Analog",
+     "Analog inputs"
+    ]
+   ]
+  },
+  {
+   "group": "Power",
+   "rows": [
+    [
+     "Supply Voltage",
+     "1.8 V ~ 3.6 V"
+    ],
+    [
+     "Power Design",
+     "Ultra low power design"
+    ]
+   ]
+  },
+  {
+   "group": "Security & Compliance",
+   "rows": [
+    [
+     "Encryption",
+     "Hardware based encryption up to AES 256-bit"
+    ],
+    [
+     "Random Number",
+     "True random number generation"
+    ],
+    [
+     "Certification",
+     "Pre-certified according to EN 300 220"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "* Estimated based on ideal conditions with limited sources of interference.",
+ "features": [
+  {
+   "icon": "chip",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "STM32WL Based Design",
+   "d": "Built on the world's first wireless microcontroller with an integrated LoRa transceiver."
+  },
+  {
+   "icon": "range",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Long Range Communication",
+   "d": "Up to 10,000 m line of sight* with −135 dBm sensitivity (SF12) and up to +20 dBm output."
+  },
+  {
+   "icon": "bolt",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Ultra Low Power",
+   "d": "Ultra low power design operating from a 1.8 V to 3.6 V supply."
+  },
+  {
+   "icon": "chip",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "ARM Cortex-M4 + Memory",
+   "d": "256 KB flash and 64 KB RAM for application code and data on the node."
+  },
+  {
+   "icon": "plug",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Multiple Serial Interfaces",
+   "d": "2 × SPI, 3 × I2C, 2 × USART and 1 × LPUART to connect sensors and peripherals."
+  },
+  {
+   "icon": "grid",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "Flexible I/O",
+   "d": "Up to 43 digital inputs and outputs plus analog inputs for sensing and control."
+  },
+  {
+   "icon": "lock",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "Hardware Security",
+   "d": "Hardware based AES 256-bit encryption and true random number generation."
+  },
+  {
+   "icon": "shield",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Pre-certified & Compact",
+   "d": "Pre-certified according to EN 300 220 in a 16 × 32.6 × 3.5 mm footprint."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "building",
+   "t": "Building Automation & Monitoring",
+   "d": "Connected sensing and control for commercial and residential buildings."
+  },
+  {
+   "icon": "box",
+   "t": "Inventory Management",
+   "d": "Long-range tracking and status reporting for stock and assets."
+  },
+  {
+   "icon": "leaf",
+   "t": "Environmental Monitoring",
+   "d": "Battery-friendly nodes for distributed environmental sensing."
+  },
+  {
+   "icon": "factory",
+   "t": "Industrial Monitoring",
+   "d": "Remote condition and process monitoring across industrial sites."
+  },
+  {
+   "icon": "meter",
+   "t": "Smart Metering & Lighting Solutions",
+   "d": "LoRaWAN connectivity for metering and lighting endpoints."
+  },
+  {
+   "icon": "drop",
+   "t": "Smart Flood Sensors",
+   "d": "Low-power flood and water-level sensing over long-range links."
+  },
+  {
+   "icon": "bulb",
+   "t": "Smart Street Lighting",
+   "d": "Remote monitoring and control of street lighting networks."
+  },
+  {
+   "icon": "city",
+   "t": "Smart City Network",
+   "d": "Wide-area sensor networks for city infrastructure."
+  },
+  {
+   "icon": "trash",
+   "t": "Smart Waste Management",
+   "d": "Fill-level reporting to optimise waste collection."
+  },
+  {
+   "icon": "sprout",
+   "t": "Smart Agriculture",
+   "d": "Field and crop sensing over long-range, low-power links."
+  }
+ ],
+ "part_rows": [
+  [
+   "NLN500a",
+   "NebuLink Node NLN500a (LoRaWAN) — EU863-870 MHz / IN865 MHz"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLN500a Brochure",
+   "path": "./assets/docs/NLN500a_LoRa_Module_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  },
+  {
+   "name": "NLN500a Module Datasheet v2.2",
+   "path": "./assets/docs/NLN500a_Module_Datasheet_V2.2.pdf",
+   "sub": "PDF · Technical datasheet"
+  }
+ ],
+ "related": [
+  "nln500b"
+ ],
+ "primary_doc": "./assets/docs/NLN500a_LoRa_Module_Brochure.pdf"
+}

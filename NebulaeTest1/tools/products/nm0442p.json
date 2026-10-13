@@ -1,0 +1,308 @@
+{
+ "slug": "nm0442p",
+ "model": "NM0442-P",
+ "full": "NM0442-P Wi-Fi Module",
+ "title_name": "Wi-Fi Module",
+ "type_key": "module",
+ "type_label": "Module",
+ "proto_key": "wifi",
+ "proto_crumb": "Wi-Fi",
+ "proto_label": "Wi-Fi 802.11 b/g/n",
+ "badge": "Wi-Fi Module",
+ "category": "2.4 GHz Wi-Fi IoT Module",
+ "tagline": "2.4 GHz 802.11 b/g/n Wi-Fi module with Xtensa LX6 processor, up to 150 Mbps and -40 to +105 °C operation.",
+ "meta_desc": "Nebulae NM0442-P Wi-Fi module — 2.4 GHz IEEE 802.11 b/g/n up to 150 Mbps, Xtensa LX6 32-bit processor, 520 kB SRAM, OTA updates, u.FL or PCB MiFA antenna, -40 to +105 °C.",
+ "desc": "The NM0442-P Wi-Fi Module is a compact, high-performance wireless communication solution designed for embedded applications. Operating in the 2.4 GHz band, it supports IEEE 802.11 b/g/n with data rates up to 150 Mbps and integrates a powerful Xtensa LX6 32-bit processor, large on-chip memory and versatile interfaces for IoT and connected devices.",
+ "cert_badges": [
+  "802.11 b/g/n",
+  "2.4 GHz",
+  "OTA"
+ ],
+ "gallery": [
+  {
+   "file": "nm0442p-module.jpg",
+   "alt": "NM0442-P Wi-Fi module, top view",
+   "label": "Module view"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Standard",
+   "value": "IEEE 802.11 b/g/n · up to 150 Mbps"
+  },
+  {
+   "icon": "range",
+   "label": "TX / RX",
+   "value": "17 dBm · −95 dBm @ 1 Mbps"
+  },
+  {
+   "icon": "grid",
+   "label": "Frequency Band",
+   "value": "2.4 GHz"
+  },
+  {
+   "icon": "chip",
+   "label": "Processor & Memory",
+   "value": "Xtensa LX6 · 448 kB ROM / 520 kB SRAM"
+  },
+  {
+   "icon": "thermo",
+   "label": "Operating Temperature",
+   "value": "−40 °C to 105 °C"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size",
+   "value": "37.47 × 16 mm"
+  }
+ ],
+ "stats": [
+  {
+   "num": "150 Mbps",
+   "label": "Maximum data rate (802.11n)"
+  },
+  {
+   "num": "+105 °C",
+   "label": "Upper operating temperature"
+  },
+  {
+   "num": "520 kB",
+   "label": "On-chip SRAM"
+  },
+  {
+   "num": "37.47 × 16 mm",
+   "label": "Module footprint"
+  }
+ ],
+ "overview": [
+  "The NM0442-P Wi-Fi Module is a compact, high-performance wireless communication solution designed for embedded applications. Operating in the 2.4 GHz frequency band, it supports IEEE 802.11 b/g/n standards with data rates up to 150 Mbps.",
+  "The module integrates a powerful Xtensa LX6 32-bit processor, large on-chip memory resources and versatile interfaces, making it ideal for IoT and connected-device applications.",
+  "With OTA (over-the-air) firmware updates, a choice of u.FL connector or PCB MiFA antenna variants, and extended operating temperature support (−40 °C to +105 °C), the NM0442-P offers flexibility, scalability and reliability for next-generation wireless devices."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Wi-Fi 802.11 b/g/n",
+   "d": "2.4 GHz operation with data rates up to 150 Mbps."
+  },
+  {
+   "t": "Capable processor",
+   "d": "Xtensa LX6 32-bit processor with 448 kB ROM and 520 kB SRAM."
+  },
+  {
+   "t": "Extended temperature",
+   "d": "Operates from −40 °C to +105 °C; storage −40 °C to +150 °C."
+  },
+  {
+   "t": "Antenna choice",
+   "d": "Variants with u.FL connector or PCB MiFA antenna."
+  },
+  {
+   "t": "Field updatable",
+   "d": "OTA firmware update mechanism."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Performance",
+   "rows": [
+    [
+     "TX Power",
+     "17 dBm"
+    ],
+    [
+     "RX Sensitivity @ 1 Mbps",
+     "−95 dBm"
+    ],
+    [
+     "RX Sensitivity @ 54 Mbps",
+     "−75 dBm"
+    ],
+    [
+     "RF Data Rate",
+     "1 Mbps to 54 Mbps (802.11n up to 150 Mbps)"
+    ]
+   ]
+  },
+  {
+   "group": "Processor Specifications",
+   "rows": [
+    [
+     "Processor",
+     "Xtensa single-/dual-core 32-bit LX6 microprocessor"
+    ],
+    [
+     "Memory",
+     "448 kB ROM, 520 kB SRAM, 16 kB SRAM"
+    ],
+    [
+     "Frequency Band",
+     "2.4 GHz"
+    ],
+    [
+     "Antenna Option",
+     "u.FL connector / PCB MiFA antenna"
+    ],
+    [
+     "Size",
+     "37.47 × 16 mm"
+    ]
+   ]
+  },
+  {
+   "group": "I/O Specifications",
+   "rows": [
+    [
+     "Serial Interface",
+     "1 × UART"
+    ],
+    [
+     "Analog Input",
+     "1 × ADC"
+    ],
+    [
+     "Digital IO",
+     "9 × Digital IO"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical Specifications",
+   "rows": [
+    [
+     "Supply Voltage",
+     "2.3 V – 3.6 V"
+    ],
+    [
+     "Current — Modem Sleep",
+     "27 ~ 34 mA"
+    ],
+    [
+     "Current — Light Sleep",
+     "0.8 mA"
+    ],
+    [
+     "Current — Transmit 802.11b",
+     "240 mA (DSSS 1 Mbps, POUT = +19.5 dBm)"
+    ],
+    [
+     "Current — Transmit 802.11g",
+     "190 mA (OFDM 54 Mbps, POUT = +16 dBm)"
+    ],
+    [
+     "Current — Transmit 802.11n",
+     "180 mA (OFDM MCS7, POUT = +14 dBm)"
+    ],
+    [
+     "Operating Temperature",
+     "−40 °C to 105 °C"
+    ],
+    [
+     "Storage Temperature",
+     "−40 °C to 150 °C"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NM0442-P product brochure.",
+ "features": [
+  {
+   "icon": "wifi",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "802.11 b/g/n up to 150 Mbps",
+   "d": "Compliant with 802.11 b/g/n and 802.11n (2.4 GHz)."
+  },
+  {
+   "icon": "chip",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Xtensa LX6 Processor",
+   "d": "Single-/dual-core 32-bit LX6 microprocessor."
+  },
+  {
+   "icon": "grid",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Large On-Chip Memory",
+   "d": "Up to 448 kB ROM and up to 520 kB SRAM."
+  },
+  {
+   "icon": "gauge",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Timers & Watchdog",
+   "d": "Two timer groups, each with 2 × 64-bit timers and a main watchdog; 32-bit RTC and RTC watchdog."
+  },
+  {
+   "icon": "download",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "OTA Firmware Update",
+   "d": "Over-the-air firmware update mechanism."
+  },
+  {
+   "icon": "plug",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "Antenna Variants",
+   "d": "u.FL connector or PCB MiFA antenna selection."
+  },
+  {
+   "icon": "thermo",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "−40 °C to +105 °C",
+   "d": "Extended operating temperature range for demanding environments."
+  },
+  {
+   "icon": "bolt",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Low-Power Modes",
+   "d": "0.8 mA in light sleep; 27 ~ 34 mA in modem sleep."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "factory",
+   "t": "Industrial IoT",
+   "d": "Wi-Fi connectivity for industrial IoT devices."
+  },
+  {
+   "icon": "server",
+   "t": "Sensor & Smart Gateways",
+   "d": "Sensor nodes and smart gateways."
+  },
+  {
+   "icon": "home",
+   "t": "Smart Home",
+   "d": "Connected home devices."
+  },
+  {
+   "icon": "cpu",
+   "t": "Consumer Electronics",
+   "d": "Wireless connectivity for consumer products."
+  }
+ ],
+ "part_rows": [
+  [
+   "NM0442-P",
+   "Wi-Fi Module — 802.11 b/g/n, u.FL connector / PCB MiFA antenna variants"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NM0442-P Wi-Fi Module Brochure",
+   "path": "./assets/docs/NM0442-P_Wi-Fi_Module_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  }
+ ],
+ "related": [
+  "nln811p",
+  "nln111p"
+ ],
+ "primary_doc": "./assets/docs/NM0442-P_Wi-Fi_Module_Brochure.pdf"
+}

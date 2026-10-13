@@ -1,0 +1,411 @@
+{
+ "slug": "sls-som-mx6",
+ "model": "SLS-SoM-MX6",
+ "full": "SLS-SoM-i.MX6ULL System on Module",
+ "title_name": "System on Module",
+ "type_key": "module",
+ "type_label": "System on Module",
+ "proto_key": "som",
+ "proto_crumb": "SoM",
+ "proto_label": "NXP i.MX6ULL · Yocto Linux",
+ "badge": "System on Module",
+ "category": "Embedded System on Module",
+ "tagline": "Cost-effective, power-efficient NXP i.MX6ULL Cortex-A7 system on module with Yocto Linux BSP.",
+ "meta_desc": "SLS-SoM-MX6 system on module — NXP i.MX6ULL Arm Cortex-A7 up to 528 MHz, 512 MB DDR3L, 256 MB NAND, dual Ethernet, dual CAN, USB, Yocto Linux 5.15, -40 to +85 °C, 39 x 37 mm.",
+ "desc": "The SLS-SoM-i.MX6ULL is a high-performance, ultra-miniature, soldered system on module built on the NXP i.MX 6ULL applications processor family, featuring a single Arm Cortex-A7 core at up to 528 MHz. It integrates power management, system control, multimedia, memory, basic security and a variety of connectivity interfaces, and is designed for industrial automation and IoT application development.",
+ "cert_badges": [
+  "i.MX6ULL",
+  "Yocto Linux",
+  "-40 to +85 °C"
+ ],
+ "gallery": [
+  {
+   "file": "sls-som-mx6-module.jpg",
+   "alt": "SLS-SoM-MX6 system on module, top view with i.MX6ULL processor, DDR3L and NAND flash",
+   "label": "Module view"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "cpu",
+   "label": "Processor",
+   "value": "NXP i.MX6ULL · Arm Cortex-A7 up to 528 MHz"
+  },
+  {
+   "icon": "grid",
+   "label": "Memory",
+   "value": "512 MB DDR3L · up to 256 MB NAND"
+  },
+  {
+   "icon": "network",
+   "label": "Connectivity",
+   "value": "2× Ethernet · 2× CAN · USB Host + OTG"
+  },
+  {
+   "icon": "plug",
+   "label": "Expansion",
+   "value": "140-pin edge-plated holes, 1.0 mm pitch"
+  },
+  {
+   "icon": "thermo",
+   "label": "Temperature",
+   "value": "−40 °C to +85 °C"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size",
+   "value": "39 × 37 × 4 mm (5 mm with shield)"
+  }
+ ],
+ "stats": [
+  {
+   "num": "528 MHz",
+   "label": "Cortex-A7 clock"
+  },
+  {
+   "num": "512 MB",
+   "label": "DDR3L RAM"
+  },
+  {
+   "num": "140 pins",
+   "label": "Edge-plated expansion interface"
+  },
+  {
+   "num": "10+ years",
+   "label": "Availability & technical support"
+  }
+ ],
+ "overview": [
+  "The SLS-SoM-i.MX6ULL is a high-performance, ultra-miniature, soldered system on module built on the NXP i.MX 6ULL applications processor family, featuring an advanced implementation of a single Arm Cortex-A7 core operating at up to 528 MHz.",
+  "It integrates power management, system control, multimedia, memory, basic security modules and other hardware options along with a variety of connectivity interfaces for optimal flexibility and user experience.",
+  "The module ships with SLS-SoM-YBSP, a fully tested and validated board support package and device drivers with Yocto Linux support, for reliable long-term deployment in industrial applications. Its cost-optimised bill of material and single-sided assembly make it suited to cost-effective high-volume production."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Cost-efficient & low power",
+   "d": "UltraLite i.MX6ULL with hardware and software power management."
+  },
+  {
+   "t": "Rich connectivity",
+   "d": "Dual Ethernet, dual CAN, USB Host + OTG, 8 × UART, 4 × I2C, 4 × SPI and up to 97 GPIO."
+  },
+  {
+   "t": "Built-in security",
+   "d": "Arm TrustZone, AES-128 encryption, e-fuse, RNG and secure RTC."
+  },
+  {
+   "t": "Software ready",
+   "d": "Yocto Linux BSP (SLS-SoM-YBSP) with source code for drivers and bootloader."
+  },
+  {
+   "t": "Long lifecycle",
+   "d": "10+ years of product availability and global technical support."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Processor System",
+   "rows": [
+    [
+     "CPU",
+     "NXP i.MX6ULL — 1 × Arm Cortex-A7"
+    ],
+    [
+     "CPU Clock",
+     "Up to 528 MHz"
+    ],
+    [
+     "NEON",
+     "Yes"
+    ],
+    [
+     "L1 Instruction / Data Cache",
+     "32 KB / 32 KB"
+    ],
+    [
+     "L2 Cache",
+     "128 KB"
+    ]
+   ]
+  },
+  {
+   "group": "Memory",
+   "rows": [
+    [
+     "RAM",
+     "512 MB DDR3L, 16 bit"
+    ],
+    [
+     "Flash",
+     "Up to 256 MB NAND flash"
+    ]
+   ]
+  },
+  {
+   "group": "Multimedia",
+   "rows": [
+    [
+     "Display Controller",
+     "Single"
+    ],
+    [
+     "Digital Audio (I2S/SAI/AC97)",
+     "3 × up to 1.4 Mbps each"
+    ],
+    [
+     "Parallel RGB",
+     "1366 × 768 × 18 bpp"
+    ],
+    [
+     "Resistive Touch",
+     "4-wire"
+    ],
+    [
+     "Camera Parallel Interface",
+     "1 × 8/10/16/24 bit"
+    ],
+    [
+     "LCD (Digital Parallel)",
+     "1 × 24 bit"
+    ]
+   ]
+  },
+  {
+   "group": "Connectivity",
+   "rows": [
+    [
+     "USB 2.0",
+     "1 × Host, 1 × OTG"
+    ],
+    [
+     "Ethernet / Network",
+     "2 × Ethernet (1 × 10/100 Mbit/s PHY + 1 × RMII)"
+    ],
+    [
+     "I2C",
+     "4 × @ 400 kbps"
+    ],
+    [
+     "SPI",
+     "4 ×"
+    ],
+    [
+     "UART",
+     "8 ×"
+    ],
+    [
+     "IrDA",
+     "1 ×"
+    ],
+    [
+     "PWM",
+     "8 ×"
+    ],
+    [
+     "GPIO",
+     "Up to 97"
+    ],
+    [
+     "Analog Input",
+     "10 ×"
+    ],
+    [
+     "SDIO/SD/MMC",
+     "Up to 2 ×"
+    ],
+    [
+     "CAN",
+     "2 ×"
+    ],
+    [
+     "JTAG",
+     "1 ×"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical & Environmental",
+   "rows": [
+    [
+     "Input Supply Voltage",
+     "3.3 VDC, 0.7 A"
+    ],
+    [
+     "Power Dissipation",
+     "2.3 W"
+    ],
+    [
+     "Temperature",
+     "−40 °C to +85 °C"
+    ]
+   ]
+  },
+  {
+   "group": "Physical",
+   "rows": [
+    [
+     "Size",
+     "39 mm (L) × 37 mm (W) × 4 mm (H) without shield; 39 × 37 × 5 mm with shield"
+    ],
+    [
+     "Expansion Interface",
+     "1.0 mm pitch, 140-pin edge-plated holes"
+    ],
+    [
+     "PCB Design",
+     "8-layer PCB"
+    ],
+    [
+     "Product Availability",
+     "10+ years"
+    ],
+    [
+     "Warranty",
+     "1 year"
+    ]
+   ]
+  },
+  {
+   "group": "Software (SLS-SoM-YBSP)",
+   "rows": [
+    [
+     "Bootloader",
+     "U-Boot 2021.10 (source code provided)"
+    ],
+    [
+     "Linux Kernel",
+     "5.15.71 (Yocto 5.15 kirkstone)"
+    ],
+    [
+     "Drivers (source provided)",
+     "USB Host/OTG, I2C, SPI, Ethernet, eMMC/SD, cellular, PWM, ADC, RTC, GPIO, UART, CAN, RS485 (Modbus)"
+    ],
+    [
+     "File System Images",
+     "SLS-Image-Core (customised SLS BSP), IMX-Image-Core (i.MX default BSP)"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the SLS-SoM-MX6 brochure (version 1.0, April 2025).",
+ "features": [
+  {
+   "icon": "cpu",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "i.MX6ULL Cortex-A7",
+   "d": "Single Arm Cortex-A7 core up to 528 MHz with NEON."
+  },
+  {
+   "icon": "bolt",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Power Management",
+   "d": "Hardware and software support for low-power designs."
+  },
+  {
+   "icon": "lock",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Built-in Device Security",
+   "d": "Arm TrustZone, AES-128 encryption, e-fuse, RNG and secure RTC."
+  },
+  {
+   "icon": "grid",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "512 MB DDR3L + 256 MB NAND",
+   "d": "Memory on module, with an on-board Ethernet PHY and power supply circuit."
+  },
+  {
+   "icon": "network",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Dual LAN, Dual CAN",
+   "d": "Plus dual USB 2.0 (OTG & Host), UART, I2C, SPI and GPIO."
+  },
+  {
+   "icon": "eye",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "Multimedia Interfaces",
+   "d": "Camera, LCD and audio for graphics and video hardware acceleration."
+  },
+  {
+   "icon": "file",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "Yocto Linux BSP",
+   "d": "SLS-SoM-YBSP with Linux 5.15.71, U-Boot and ready-to-use APIs."
+  },
+  {
+   "icon": "plug",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "140-Pin Edge-Plated Holes",
+   "d": "1.0 mm pitch expansion interface for solderable, single-sided assembly."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "eye",
+   "t": "Sensor Interfaces",
+   "d": "Various types of sensor interface."
+  },
+  {
+   "icon": "server",
+   "t": "IoT Gateway",
+   "d": "Gateways running Linux."
+  },
+  {
+   "icon": "lock",
+   "t": "Access Control Panels",
+   "d": "Access-control terminals."
+  },
+  {
+   "icon": "cpu",
+   "t": "Human Machine Interfaces (HMI)",
+   "d": "Panels and HMIs with LCD and touch."
+  },
+  {
+   "icon": "gauge",
+   "t": "Portable Medical & Health Care",
+   "d": "Portable medical and health-care devices."
+  },
+  {
+   "icon": "home",
+   "t": "Smart Appliances",
+   "d": "Connected appliances."
+  },
+  {
+   "icon": "file",
+   "t": "eReaders",
+   "d": "eReader devices."
+  },
+  {
+   "icon": "box",
+   "t": "Portable Handheld Devices",
+   "d": "Portable handheld devices."
+  }
+ ],
+ "part_rows": [
+  [
+   "SLS-SoM-MX6ULL",
+   "System on Module — NXP i.MX6ULL, 512 MB DDR3L, up to 256 MB NAND, 140-pin edge-plated holes"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "SLS-SoM-MX6 Brochure",
+   "path": "./assets/docs/SLS-SoM-MX6_Brochure.pdf",
+   "sub": "PDF · Product brochure, April 2025"
+  }
+ ],
+ "related": [
+  "nln0721",
+  "nlg8600"
+ ],
+ "primary_doc": "./assets/docs/SLS-SoM-MX6_Brochure.pdf"
+}
