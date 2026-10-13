@@ -313,7 +313,7 @@
               subLabel,
             '</div>',
             '<div class="atl-prod-actions" style="margin-top:.75rem;">',
-              '<a class="atl-btn-detail" href="service-detail.html?id=' + esc(p.id) + '&type=service" target="_blank">Details →</a>',
+              '<a class="atl-btn-detail" href="' + (document.body.getAttribute('data-pd-base') || '') + 'service-detail.html?id=' + esc(p.id) + '&type=service" target="_blank">Details →</a>',
               '<button class="atl-btn-buy"    data-action="buy"    data-id="' + esc(p.id) + '">&#x1F6D2; Buy / Quote</button>',
             '</div>',
           '</div>',

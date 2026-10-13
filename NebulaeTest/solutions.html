@@ -26,10 +26,13 @@
   <link rel="stylesheet" href="./assets/css/nebulae-nav.css">
   <!-- Solutions page styles -->
   <link rel="stylesheet" href="./assets/css/solutions.css">
+  <style>html,body{max-width:100%;overflow-x:clip}</style>
 </head>
 <body>
-<div id="nblProgressBar"></div>
-<button id="nblBackTop" aria-label="Back to top">
+<div id="nblProgressBar" role="progressbar" aria-label="Page scroll progress"></div>
+ 
+<!-- <button id="nblThemeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode"></button> -->
+<button id="nblBackTop" aria-label="Back to top" title="Back to top">
   <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
 </button>
 
@@ -134,56 +137,56 @@
                   <div class="atl-prod-panel__body atl-prod-panel__body--active" data-panel="module">
                     <p class="atl-prod-panel__label">Module — Choose a protocol</p>
                     <div class="atl-prod-panel__grid">
-                      <a href="products/lora-module.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
-                      <a href="products/wisun-module.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
-                      <a href="products/zigbee-module.html" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
-                      <a href="products/wifi-module.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
-                      <a href="products/som-module.html" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span><span class="atl-prod-card__name">SOM</span><span class="atl-prod-card__desc">System on Module</span></a>
+                      <a href="products.html?proto=lora&amp;type=module" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products.html?proto=wisun&amp;type=module" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products.html?proto=zigbee&amp;type=module" class="atl-prod-card atl-prod-card--orange"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="atl-prod-card__name">Zigbee</span><span class="atl-prod-card__desc">Mesh Networking</span></a>
+                      <a href="products.html?proto=wifi&amp;type=module" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-Fi</span><span class="atl-prod-card__desc">Wireless LAN</span></a>
+                      <a href="products.html?proto=som&amp;type=module" class="atl-prod-card atl-prod-card--purple"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span><span class="atl-prod-card__name">SOM</span><span class="atl-prod-card__desc">System on Module</span></a>
                     </div>
                   </div>
                   <!-- Gateway -->
                   <div class="atl-prod-panel__body" data-panel="gateway">
                     <p class="atl-prod-panel__label">Gateway — Choose a protocol</p>
                     <div class="atl-prod-panel__grid">
-                      <a href="products/lora-gateway.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
-                      <a href="products/wisun-gateway.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
-                      <a href="products/gsm-gateway.html" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">LTE</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
+                      <a href="products.html?proto=lora&amp;type=gateway" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products.html?proto=wisun&amp;type=gateway" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products.html?proto=gsm&amp;type=gateway" class="atl-prod-card atl-prod-card--red"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="atl-prod-card__name">LTE</span><span class="atl-prod-card__desc">Cellular IoT</span></a>
                     </div>
                   </div>
                   <!-- Filter -->
                   <div class="atl-prod-panel__body" data-panel="filter">
                     <p class="atl-prod-panel__label">Filter — Choose a protocol</p>
                     <div class="atl-prod-panel__grid">
-                      <a href="products/lora-filter.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products.html?proto=lora&amp;type=filter" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
                     </div>
                   </div>
                   <!-- EVK -->
                   <div class="atl-prod-panel__body" data-panel="evk">
                     <p class="atl-prod-panel__label">EVK — Choose a protocol</p>
                     <div class="atl-prod-panel__grid">
-                      <a href="products/lora-evk.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products.html?proto=lora&amp;type=evk" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
                     </div>
                   </div>
                   <!-- Concentrator -->
                   <div class="atl-prod-panel__body" data-panel="concentrator">
                     <p class="atl-prod-panel__label">Concentrator — Choose a protocol</p>
                     <div class="atl-prod-panel__grid">
-                      <a href="products/lora-concentrator.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products.html?proto=lora&amp;type=concentrator" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
                     </div>
                   </div>
                   <!-- Node -->
                   <div class="atl-prod-panel__body" data-panel="node">
                     <p class="atl-prod-panel__label">Node — Choose a protocol</p>
                     <div class="atl-prod-panel__grid">
-                      <a href="products/lora-node.html" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
-                      <a href="products/wisun-node.html" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
+                      <a href="products.html?proto=lora&amp;type=node" class="atl-prod-card atl-prod-card--blue"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">LoRa</span><span class="atl-prod-card__desc">Long Range IoT</span></a>
+                      <a href="products.html?proto=wisun&amp;type=node" class="atl-prod-card atl-prod-card--teal"><span class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8.5 8.5a5 5 0 0 0 7 7"/><path d="M5 5a9 9 0 0 0 13 13"/><path d="M2 2a13 13 0 0 0 19 19"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span class="atl-prod-card__name">Wi-SUN</span><span class="atl-prod-card__desc">Smart Utility Network</span></a>
                     </div>
                   </div>
                   <!-- Add to Panels section (after EVK panel) -->
                   <div class="atl-prod-panel__body" data-panel="dataconnector">
                     <p class="atl-prod-panel__label">Data Connector — Choose a protocol</p>
                     <div class="atl-prod-panel__grid">
-                      <a href="products/lora-dataconnector.html" class="atl-prod-card atl-prod-card--blue"><span
+                      <a href="products.html?proto=lora&amp;type=dataconnector" class="atl-prod-card atl-prod-card--blue"><span
                           class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <path d="M1.42 9a16 16 0 0121.16 0" />
@@ -192,7 +195,7 @@
                             <circle cx="12" cy="20" r="1" fill="currentColor" />
                           </svg></span><span class="atl-prod-card__name">RS485 To LoRa</span><span class="atl-prod-card__desc">Long Range
                           IoT</span></a>
-                      <a href="products/wisun-dataconnector.html" class="atl-prod-card atl-prod-card--teal"><span
+                      <a href="products.html?proto=wisun&amp;type=dataconnector" class="atl-prod-card atl-prod-card--teal"><span
                           class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <path d="M8.5 8.5a5 5 0 0 0 7 7" />
@@ -201,13 +204,13 @@
                             <circle cx="12" cy="12" r="1" fill="currentColor" />
                           </svg></span><span class="atl-prod-card__name">RS485 To Wi-SUN</span><span class="atl-prod-card__desc">Smart
                           Utility Network</span></a>
-                      <a href="products/zigbee-dataconnector.html" class="atl-prod-card atl-prod-card--orange"><span
+                      <a href="products.html?proto=zigbee&amp;type=dataconnector" class="atl-prod-card atl-prod-card--orange"><span
                           class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                           </svg></span><span class="atl-prod-card__name">RS485 To Zigbee</span><span class="atl-prod-card__desc">Mesh
                           Networking</span></a>
-                      <a href="products/wifi-dataconnector.html" class="atl-prod-card atl-prod-card--blue"><span
+                      <a href="products.html?proto=wifi&amp;type=dataconnector" class="atl-prod-card atl-prod-card--blue"><span
                           class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <path d="M5 12.55a11 11 0 0114.08 0" />
@@ -216,7 +219,7 @@
                             <circle cx="12" cy="20" r="1" fill="currentColor" />
                           </svg></span><span class="atl-prod-card__name">RS485 To Wi-Fi</span><span class="atl-prod-card__desc">RS485 Wireless
                           LAN</span></a>
-                      <a href="products/gsm-dataconnector.html" class="atl-prod-card atl-prod-card--red"><span
+                      <a href="products.html?proto=gsm&amp;type=dataconnector" class="atl-prod-card atl-prod-card--red"><span
                           class="atl-prod-card__icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
@@ -332,11 +335,9 @@
                     <p class="atl-mega__feature-name">Technologies We Use</p>
                     <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;margin:0.75rem 0;">
                       <img src="./assets/images/SupportedTech/LoRaWAN.png" alt="Technology 4" style="max-width:80px;height:auto;">
-                      <img src="./assets/images/SupportedTech/Wi-SUN-Main-Logo.png" alt="Technology 3" style="max-width:80px;height:auto;">
                       <img src="./assets/images/SupportedTech/zigbee.png" alt="Technology 1" style="max-width:80px;height:auto;">
                       <img src="./assets/images/SupportedTech/Bluetooth.png" alt="Technology 2" style="max-width:80px;height:auto;">
                       <img src="./assets/images/SupportedTech/WiFi.png" alt="Technology 3" style="max-width:80px;height:auto;">
-                      <img src="./assets/images/SupportedTech/NB-IoT.png" alt="Technology 3" style="max-width:80px;height:auto;">
                     </div>
                     <a href="services.html" class="atl-mega__feature-link">View All Services →</a>
                 
@@ -511,6 +512,7 @@
       </ul>
 
       <!-- Right: CTA -->
+        <div class="atl-nav__right"><button class="atl-nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
      
     </div>
 
@@ -523,23 +525,23 @@
         </button>
       </div>
 
-      <a class="atl-nav__mlink" href="#home">Home</a>
+      <a class="atl-nav__mlink" href="index.html">Home</a>
 
       <div class="atl-nav__macc">
         <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">Products<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="atl-nav__macc-body">
           <div class="atl-nav__macc-section">LoRa</div>
-          <a class="atl-nav__msublink" href="products/lora-module.html">Module</a><a class="atl-nav__msublink" href="products/lora-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/lora-filter.html">Filter</a><a class="atl-nav__msublink" href="products/lora-evk.html">EVK</a><a class="atl-nav__msublink" href="products/lora-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/lora-node.html">Node</a>
+          <a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=lora&amp;type=node">Node</a>
           <div class="atl-nav__macc-section">Wi-SUN</div>
-          <a class="atl-nav__msublink" href="products/wisun-module.html">Module</a><a class="atl-nav__msublink" href="products/wisun-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/wisun-filter.html">Filter</a><a class="atl-nav__msublink" href="products/wisun-evk.html">EVK</a><a class="atl-nav__msublink" href="products/wisun-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/wisun-node.html">Node</a>
+          <a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=wisun&amp;type=node">Node</a>
           <div class="atl-nav__macc-section">Zigbee</div>
-          <a class="atl-nav__msublink" href="products/zigbee-module.html">Module</a><a class="atl-nav__msublink" href="products/zigbee-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/zigbee-filter.html">Filter</a><a class="atl-nav__msublink" href="products/zigbee-evk.html">EVK</a><a class="atl-nav__msublink" href="products/zigbee-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/zigbee-node.html">Node</a>
+          <a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=zigbee&amp;type=node">Node</a>
           <div class="atl-nav__macc-section">Wi-Fi</div>
-          <a class="atl-nav__msublink" href="products/wifi-module.html">Module</a><a class="atl-nav__msublink" href="products/wifi-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/wifi-filter.html">Filter</a><a class="atl-nav__msublink" href="products/wifi-evk.html">EVK</a><a class="atl-nav__msublink" href="products/wifi-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/wifi-node.html">Node</a>
+          <a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=wifi&amp;type=node">Node</a>
           <div class="atl-nav__macc-section">LTE</div>
-          <a class="atl-nav__msublink" href="products/gsm-module.html">Module</a><a class="atl-nav__msublink" href="products/gsm-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/gsm-filter.html">Filter</a><a class="atl-nav__msublink" href="products/gsm-evk.html">EVK</a><a class="atl-nav__msublink" href="products/gsm-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/gsm-node.html">Node</a>
+          <a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=gsm&amp;type=node">Node</a>
           <div class="atl-nav__macc-section">BLE</div>
-          <a class="atl-nav__msublink" href="products/ble-module.html">Module</a><a class="atl-nav__msublink" href="products/ble-gateway.html">Gateway</a><a class="atl-nav__msublink" href="products/ble-filter.html">Filter</a><a class="atl-nav__msublink" href="products/ble-evk.html">EVK</a><a class="atl-nav__msublink" href="products/ble-concentrator.html">Concentrator</a><a class="atl-nav__msublink" href="products/ble-node.html">Node</a>
+          <a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=module">Module</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=gateway">Gateway</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=filter">Filter</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=evk">EVK</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=concentrator">Concentrator</a><a class="atl-nav__msublink" href="products.html?proto=ble&amp;type=node">Node</a>
         </div>
       </div>
 
@@ -617,7 +619,7 @@
         <nav class="sl-breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,.7)">Solutions</span></nav>
         <div class="sl-eyebrow">Industry Solutions</div>
         <h1 class="sl-hero__title">IoT Solutions Built for<br><span>India's Infrastructure</span></h1>
-        <p class="sl-hero__desc">From RDSS-compliant smart metering to Smart City Mission deployments — Nebulae delivers complete, certified IoT solutions across 8 industry verticals, powered by LoRa, Wi-SUN, and Zigbee.</p>
+        <p class="sl-hero__desc">From smart electricity, gas and water metering to street lighting and transformer monitoring — Nebulae delivers complete IoT solutions across 8 industry verticals, powered by LoRa, Wi-SUN, and Zigbee.</p>
         <div style="display:flex;gap:.85rem;flex-wrap:wrap;">
           <a href="contact.html" style="display:inline-flex;align-items:center;gap:.45rem;padding:.85rem 1.85rem;border-radius:10px;background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;font-size:.9rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;box-shadow:0 8px 28px rgba(79,70,229,.35);transition:all .25s;">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -678,7 +680,7 @@
           </div>
           <div class="sl-overview-card__body">
             <div class="sl-overview-card__title">Smart Metering (AMI)</div>
-            <div class="sl-overview-card__desc">LoRa &amp; Wi-SUN based AMI for electricity, water &amp; gas — IS 16444 &amp; RDSS compliant.</div>
+            <div class="sl-overview-card__desc">Wi-SUN and LoRaWAN metering for electricity, water &amp; gas — modules, DCUs, AMR and HES (IS 16444).</div>
             <div class="sl-overview-card__arrow">Learn More <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></div>
           </div>
         </a>
@@ -692,7 +694,7 @@
           </div>
           <div class="sl-overview-card__body">
             <div class="sl-overview-card__title">Smart City Infrastructure</div>
-            <div class="sl-overview-card__desc">Street lighting, env monitoring, transformer monitoring &amp; parking sensors.</div>
+            <div class="sl-overview-card__desc">Street lighting, CCMS, LMS, EV charging and transformer monitoring.</div>
             <div class="sl-overview-card__arrow">Learn More <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></div>
           </div>
         </a>
@@ -793,28 +795,28 @@
         <div class="sl-img-card">
           <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=700&q=80" alt="Smart Metering AMI" loading="lazy"/>
           <div class="sl-img-card__stat">
-            <div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">50K+</span><span class="sl-img-card__stat-label">Meters Deployed</span></div>
-            <div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">99.9%</span><span class="sl-img-card__stat-label">Read Success</span></div>
-            <div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">25%</span><span class="sl-img-card__stat-label">T&D Loss Reduction</span></div>
+            <div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">250</span><span class="sl-img-card__stat-label">Nodes per Wi-SUN DCU</span></div>
+            <div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">~10 km</span><span class="sl-img-card__stat-label">LoRaWAN AMR Range (LoS)</span></div>
+            <div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">5+ yr</span><span class="sl-img-card__stat-label">AMR Battery Life</span></div>
           </div>
         </div>
       </div>
       <div class="col-lg-6" data-sl="right">
         <span class="sl-solution__tag" style="background:rgba(37,99,235,.1);color:#2563eb;">Advanced Metering Infrastructure</span>
         <h2 class="sl-solution__title" style="color:#111827;">Smart Metering Solution</h2>
-        <p class="sl-solution__desc" style="color:#374151;">Nebulae's AMI solution delivers two-way communication between smart meters and the head-end system using LoRaWAN and Wi-SUN FAN protocols. Fully compliant with India's RDSS scheme and IS 16444 standard — covering electricity, water, and gas utilities at any scale.</p>
+        <p class="sl-solution__desc" style="color:#374151;">Nebulae supplies the hardware and software for smart electricity, gas and water metering: Wi-SUN modules, RF NIC cards and DCUs, LoRaWAN AMR devices and the Pravah 15 smart water meter, with Network Management, Head End System and mobile-app software. Electricity meters follow IS 16444 (DLMS/COSEM).</p>
         <div class="sl-metrics">
-          <div class="sl-metric"><span class="sl-metric__val">15 min</span><span class="sl-metric__label">Data Interval</span></div>
-          <div class="sl-metric"><span class="sl-metric__val">15 km</span><span class="sl-metric__label">LoRa Range</span></div>
-          <div class="sl-metric"><span class="sl-metric__val">10 yr</span><span class="sl-metric__label">Battery Life</span></div>
+          <div class="sl-metric"><span class="sl-metric__val">Wi-SUN</span><span class="sl-metric__label">Electricity AMI</span></div>
+          <div class="sl-metric"><span class="sl-metric__val">LoRaWAN</span><span class="sl-metric__label">Gas &amp; Water AMR</span></div>
+          <div class="sl-metric"><span class="sl-metric__val">5+ yr</span><span class="sl-metric__label">AMR Battery Life</span></div>
           <div class="sl-metric"><span class="sl-metric__val">IS 16444</span><span class="sl-metric__label">Compliant</span></div>
         </div>
         <ul class="sl-feat-list">
-          <li><div class="sl-feat-list__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Two-way AMI</strong> — 15-min interval data, TOU tariff, demand response commands</span></li>
-          <li><div class="sl-feat-list__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Remote Disconnect / Reconnect</strong> — OTA-triggered load switch for non-payment</span></li>
-          <li><div class="sl-feat-list__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Tamper Detection</strong> — Magnetic field, cover-open, reverse energy, neutral disturbance</span></li>
-          <li><div class="sl-feat-list__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>MDMS Integration</strong> — DLMS/COSEM, REST API, and MQTT for any DISCOM HES backend</span></li>
-          <li><div class="sl-feat-list__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>RDSS &amp; AMISP</strong> — Fully compliant with Ministry of Power smart meter rollout requirements</span></li>
+          <li><div class="sl-feat-list__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Electricity (Wi-SUN / RF)</strong> — NM0221-I module, RF NIC card, NLG8520 DCU, NMS, HES and Energy+ app — <a href="solutions/smart-electric-meter.html">details</a></span></li>
+          <li><div class="sl-feat-list__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Gas (LoRaWAN AMR)</strong> — plug-and-play retrofit with tamper and magnetic alerts — <a href="solutions/smart-gas-meter.html">details</a></span></li>
+          <li><div class="sl-feat-list__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Water (LoRa smart meter)</strong> — Nebulae Pravah 15, ISO 4064, with AMR retrofit option — <a href="solutions/smart-water-meter.html">details</a></span></li>
+          <li><div class="sl-feat-list__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Head End Systems</strong> — DLMS/COSEM acquisition and REST APIs to MDMS and billing — <a href="services/hes-electricity-metering.html">electricity</a>, <a href="services/hes-gas-metering.html">gas</a>, <a href="services/hes-water-metering.html">water</a></span></li>
+          <li><div class="sl-feat-list__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>IS 16444 meters</strong> — HES compatible with IS 16444 smart electricity meters</span></li>
         </ul>
         <div class="sl-products-strip">
           <a href="products.html" class="sl-product-chip">LoRa Module</a>
@@ -839,27 +841,27 @@
         <div class="sl-img-card">
           <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=700&q=80" alt="Smart City" loading="lazy"/>
           <div class="sl-img-card__stat">
-            <div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">8K+</span><span class="sl-img-card__stat-label">Streetlights</span></div>
-            <div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">3</span><span class="sl-img-card__stat-label">Cities Live</span></div>
-            <div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">42%</span><span class="sl-img-card__stat-label">Energy Saved</span></div>
+            <div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">30–50</span><span class="sl-img-card__stat-label">Poles per CCMS Panel</span></div>
+            <div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">LoRaWAN / 4G</span><span class="sl-img-card__stat-label">Lamp Controllers</span></div>
+            <div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">60</span><span class="sl-img-card__stat-label">Harmonics (DTMS)</span></div>
           </div>
         </div>
       </div>
       <div class="col-lg-6 order-lg-1" data-sl="left">
-        <span class="sl-solution__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Smart City Mission · AMRUT 2.0</span>
+        <span class="sl-solution__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Street Lighting · EV Charging · DT Monitoring</span>
         <h2 class="sl-solution__title" style="color:#111827;">Smart City Infrastructure Solution</h2>
-        <p class="sl-solution__desc" style="color:#374151;">Nebulae powers next-generation smart city deployments — from adaptive street lighting and parking sensors to environmental monitoring. Our LoRa and Wi-SUN networks connect thousands of city nodes on a single gateway, with centralised SCADA control and open API integration for Smart City Mission compliance.</p>
+        <p class="sl-solution__desc" style="color:#374151;">ViaLights street-light controllers (pole-mount, retrofit and NEMA, LoRaWAN or 4G), feeder CCMS panels, the cloud Lighting Management System, the CityCharge CCMS + EV charger, and the DTMS for distribution transformers.</p>
         <div class="sl-metrics">
-          <div class="sl-metric"><span class="sl-metric__val">42%</span><span class="sl-metric__label">Energy Savings</span></div>
-          <div class="sl-metric"><span class="sl-metric__val">10K</span><span class="sl-metric__label">Nodes/Gateway</span></div>
-          <div class="sl-metric"><span class="sl-metric__val">SCADA</span><span class="sl-metric__label">Ready</span></div>
-          <div class="sl-metric"><span class="sl-metric__val">Open API</span><span class="sl-metric__label">Integration</span></div>
+          <div class="sl-metric"><span class="sl-metric__val">0–10 V / PWM</span><span class="sl-metric__label">Dimming</span></div>
+          <div class="sl-metric"><span class="sl-metric__val">10 km</span><span class="sl-metric__label">LoRaWAN Range (LoS)</span></div>
+          <div class="sl-metric"><span class="sl-metric__val">LMS</span><span class="sl-metric__label">Cloud Platform</span></div>
+          <div class="sl-metric"><span class="sl-metric__val">Web API</span><span class="sl-metric__label">Integration</span></div>
         </div>
         <ul class="sl-feat-list">
-          <li><div class="sl-feat-list__icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Adaptive Street Lighting</strong> — Dimming schedules, fault detection, per-pole energy metering</span></li>
-          <li><div class="sl-feat-list__icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Environmental Monitoring</strong> — PM2.5, CO2, NO2, noise sensors for real-time pollution maps</span></li>
-          <li><div class="sl-feat-list__icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Transformer Monitoring</strong> — Current, voltage, temperature &amp; oil-level sensors for DISCOMs</span></li>
-          <li><div class="sl-feat-list__icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Smart Waste &amp; Parking</strong> — Ultrasonic fill sensors, parking occupancy, route optimisation</span></li>
+          <li><div class="sl-feat-list__icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Smart Street Lighting</strong> — dimming schedules, fault detection and per-lamp energy metering — <a href="solutions/smart-street-light.html">details</a></span></li>
+          <li><div class="sl-feat-list__icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>CityCharge CCMS + EV</strong> — street-light control panel with EV charging — <a href="services/cms-ev-charging-management-solution.html">details</a></span></li>
+          <li><div class="sl-feat-list__icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Transformer Monitoring</strong> — voltage, current, harmonics, oil level and temperature for DISCOMs — <a href="solutions/transformer-monitoring.html">details</a></span></li>
+          <li><div class="sl-feat-list__icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Lighting Management System</strong> — vendor-neutral cloud software for street lights — <a href="services/lora-management-system.html">details</a></span></li>
         </ul>
         <div class="sl-products-strip">
           <a href="products.html" class="sl-product-chip">Wi-SUN Module</a>
@@ -1257,11 +1259,11 @@
       <div class="col-12 col-md-3">
         <h6 class="atl-footer__heading">Products</h6>
         <ul class="atl-footer__list">
-          <li><a href="products/lora-module.html">LoRa — Module &amp; Gateway</a></li>
-          <li><a href="products/wisun-module.html">Wi-SUN — Module &amp; Gateway</a></li>
-          <li><a href="products/zigbee-module.html">Zigbee — Module &amp; Gateway</a></li>
-          <li><a href="products/gsm-module.html">GSM — Module &amp; Gateway</a></li>
-          <li><a href="products/ble-module.html">BLE — Module &amp; Gateway</a></li>
+          <li><a href="products.html?proto=lora&amp;type=module">LoRa — Module &amp; Gateway</a></li>
+          <li><a href="products.html?proto=wisun&amp;type=module">Wi-SUN — Module &amp; Gateway</a></li>
+          <li><a href="products.html?proto=zigbee&amp;type=module">Zigbee — Module &amp; Gateway</a></li>
+          <li><a href="products.html?proto=gsm&amp;type=module">GSM — Module &amp; Gateway</a></li>
+          <li><a href="products.html?proto=ble&amp;type=module">BLE — Module &amp; Gateway</a></li>
           <li><a href="products.html">View All Products →</a></li>
         </ul>
         <h6 class="atl-footer__heading mt-3">Contact</h6>
