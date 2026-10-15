@@ -1,0 +1,70 @@
+/* =====================================================================
+   nebulae-fixes.css — loaded LAST on every page (after page CSS).
+   1. One font site-wide: Poppins
+   2. Header offset so banners never hide under the fixed menu
+   3. Floating widgets on every page: Back-to-top, WhatsApp, Get-Quote drawer (with close button)
+   Edit here, not per page. Header height is measured by assets/js/nebulae-float.js into --nbl-hdr.
+===================================================================== */
+
+/* ── 1. FONT: Poppins everywhere (code stays monospace) ── */
+:root{--font:'Poppins',sans-serif;--fcond:'Poppins',sans-serif;--fmono:'Poppins',sans-serif;}
+html,body,button,input,select,textarea,optgroup{font-family:'Poppins',sans-serif;}
+body *:not(code):not(pre):not(kbd):not(samp):not(svg):not(svg *):not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not(.bi):not([class^="bi-"]){font-family:'Poppins',sans-serif!important;}
+
+/* ── 2. HEADER OFFSET (fixed menu = util bar + nav) ── */
+:root{--nbl-hdr:103px;}
+@media (max-width:991.98px){:root{--nbl-hdr:56px;}}
+/* hero/banner blocks that start at the very top of the page need room for the fixed menu */
+.pg-hero,.lg-hero,.aw-hero,.cp-hero,.pl-hero,.nf-wrap,.nbl-page-top{padding-top:calc(var(--nbl-hdr) + 2.25rem)!important;}
+.nf-wrap{min-height:calc(100vh - 120px);}
+main.pl-main,main:has(> .pl-hero){margin-top:0;}
+html{scroll-padding-top:calc(var(--nbl-hdr) + 12px);}
+:target{scroll-margin-top:calc(var(--nbl-hdr) + 12px);}
+@media (max-width:767.98px){.pg-hero,.lg-hero,.aw-hero,.cp-hero,.pl-hero,.nf-wrap{padding-top:calc(var(--nbl-hdr) + 1.5rem)!important;}}
+
+/* ── 3. FLOATING WIDGETS ── */
+/* back to top (above WhatsApp) */
+#nblBackTop{position:fixed;bottom:5.75rem;right:2rem;left:auto;top:auto;z-index:8887;width:44px;height:44px;padding:0;border-radius:50%;background:rgba(255,255,255,.95);border:1.5px solid #e5e7eb;box-shadow:0 4px 16px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#4f46e5;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .3s,transform .3s,background .2s,border-color .2s,visibility .3s;}
+#nblBackTop.visible{opacity:1;visibility:visible;transform:translateY(0);}
+#nblBackTop:hover{background:#4f46e5;border-color:#4f46e5;color:#fff;box-shadow:0 8px 24px rgba(79,70,229,.35);}
+#nblBackTop:focus-visible,.nbl-sticky-btn:focus-visible,.nbl-float-tab:focus-visible,.nbl-float-close:focus-visible{outline:3px solid #06b6d4;outline-offset:2px;}
+/* WhatsApp */
+.nbl-sticky-cta{position:fixed;bottom:2rem;right:2rem;z-index:8888;display:flex;flex-direction:column;gap:.5rem;align-items:flex-end;}
+.nbl-sticky-btn{display:inline-flex;align-items:center;gap:.55rem;padding:.8rem 1.4rem;border-radius:100px;font-size:.84rem;font-weight:700;cursor:pointer;border:none;transition:transform .25s,box-shadow .25s;text-decoration:none;box-shadow:0 8px 32px rgba(0,0,0,.25);line-height:1;}
+.nbl-sticky-btn--wa{background:#25d366;color:#fff;}
+.nbl-sticky-btn--wa:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(37,211,102,.45);color:#fff;}
+@media (max-width:767.98px){
+  .nbl-sticky-cta{bottom:1rem;right:1rem;}
+  .nbl-sticky-btn{padding:.75rem;width:48px;height:48px;justify-content:center;font-size:0;gap:0;}   /* icon-only on phones */
+  .nbl-sticky-btn svg{width:24px;height:24px;}
+  #nblBackTop{bottom:4.5rem;right:1rem;width:40px;height:40px;}
+}
+/* Get-Quote drawer */
+#nblFloatForm{position:fixed;right:0;top:50%;transform:translate(100%,-50%);z-index:8879;width:320px;max-width:calc(100vw - 44px);max-height:calc(100vh - 24px);background:#fff;border-radius:16px 0 0 16px;box-shadow:-8px 0 40px rgba(79,70,229,.15);border:1.5px solid #e5e7eb;border-right:none;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .3s;display:block;}
+#nblFloatForm.open{transform:translate(0,-50%);}
+#nblFloatForm .nbl-float-tab{position:absolute;left:-42px;top:50%;transform:translateY(-50%);background:#4f46e5;color:#fff;width:42px;height:96px;border-radius:10px 0 0 10px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;writing-mode:vertical-rl;box-shadow:-4px 0 16px rgba(79,70,229,.25);user-select:none;border:0;}
+#nblFloatForm .nbl-float-form-inner{padding:1.25rem 1.25rem 1.4rem;max-height:calc(100vh - 28px);overflow-y:auto;}
+#nblFloatForm .nbl-float-form-inner h4{font-size:1rem;font-weight:800;color:#111827;margin:0 2rem .9rem 0;}
+#nblFloatForm .nbl-float-close{position:absolute;top:.6rem;right:.6rem;width:32px;height:32px;border-radius:50%;border:1.5px solid #e5e7eb;background:#fff;color:#374151;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;line-height:1;transition:background .2s,color .2s,border-color .2s;}
+#nblFloatForm .nbl-float-close:hover{background:#4f46e5;border-color:#4f46e5;color:#fff;}
+#nblFloatForm .nbl-float-input{display:block;width:100%;border:1.5px solid #e5e7eb;border-radius:8px;padding:.6rem .9rem;font-size:.85rem;color:#111827;outline:none;margin-bottom:.65rem;background:#fff;}
+#nblFloatForm .nbl-float-input:focus{border-color:#4f46e5;box-shadow:0 0 0 3px rgba(79,70,229,.12);}
+#nblFloatForm .nbl-float-submit{width:100%;padding:.7rem;background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;border:none;border-radius:8px;font-size:.88rem;font-weight:700;cursor:pointer;}
+#nblFloatForm .nbl-float-submit:disabled{opacity:.7;cursor:wait;}
+@media (max-width:767.98px){
+  #nblFloatForm{display:block!important;width:min(320px,calc(100vw - 38px));max-width:none;}
+  #nblFloatForm .nbl-float-tab{left:-36px;width:36px;height:84px;font-size:.56rem;}
+}
+@media print{#nblBackTop,.nbl-sticky-cta,#nblFloatForm{display:none!important;}}
+
+/* ── resources.html (document library): app-style layout must start below the fixed menu ── */
+:root{--header-h:var(--nbl-hdr);}
+.lib-body{margin-top:var(--nbl-hdr)!important;height:calc(100vh - var(--nbl-hdr));}
+
+/* ── Responsive safety net ── */
+@media (max-width:991.98px){.g-5,.gx-5,.row.g-5{--bs-gutter-x:1.5rem;}.g-5,.gy-5{--bs-gutter-y:2rem;}}
+html,body{overflow-x:clip;max-width:100%;}
+img,video,svg{max-width:100%;}
+/* back-to-top / WhatsApp positions win over page-level rules */
+#nblBackTop{bottom:5.75rem!important;right:2rem!important;left:auto!important;top:auto!important;}
+@media (max-width:767.98px){#nblBackTop{bottom:4.5rem!important;right:1rem!important;}}

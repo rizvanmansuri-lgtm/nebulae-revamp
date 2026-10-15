@@ -2800,3 +2800,11 @@ nav#atlNav {
       justify-content: space-between;
     }
   }
+
+/* ═══ Services mega-menu · "Technologies We Use" — two-column logo grid (all pages) ═══ */
+.atl-mega__feature-card .nbl-logos-strip{overflow:visible;margin:.75rem 0;max-width:100%;}
+.atl-mega__feature-card .nbl-logos-track{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem;width:100%;animation:none;transform:none;}
+.atl-mega__feature-card .nbl-logo-item[aria-hidden="true"]{display:none;}   /* duplicate set is only needed for a scrolling loop */
+.atl-mega__feature-card .nbl-logo-item{display:flex;align-items:center;justify-content:center;min-width:0;height:46px;padding:.35rem .5rem;background:#f8f9ff;border:1px solid #e8eaf6;border-radius:8px;}
+.atl-mega__feature-card .nbl-logo-item:nth-child(9){grid-column:1 / -1;}
+.atl-mega__feature-card .nbl-logo-item img{max-width:100%;max-height:30px;width:auto;height:auto;object-fit:contain;display:block;}

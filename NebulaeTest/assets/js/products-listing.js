@@ -7,7 +7,9 @@
 (function () {
   'use strict';
   if (!document.body || !document.body.hasAttribute('data-pl-page')) return;
-  var cards = [].slice.call(document.querySelectorAll('.pl-card'));
+  /* cards are re-queried on every apply() so removing/adding a product (or marking one data-pl-off to switch it off) is always reflected */
+  function liveCards() { return [].slice.call(document.querySelectorAll('.pl-card:not([data-pl-off])')); }
+  var cards = liveCards();
   var chips = [].slice.call(document.querySelectorAll('.pl-chip'));
   var input = document.getElementById('plSearch');
   var countEl = document.getElementById('plCount');
@@ -19,10 +21,13 @@
   chips.forEach(function (c) { var g = c.getAttribute('data-group'), v = c.getAttribute('data-value'); if (v !== 'all') known[g][v] = 1; });
 
   var state = { proto: 'all', type: 'all', q: '' };
-  var params = new URLSearchParams(window.location.search);
-  ['proto', 'type'].forEach(function (k) { var v = (params.get(k) || '').toLowerCase(); if (v) state[k] = v; });
-  state.q = (params.get('q') || '').trim().toLowerCase();
-  if (input) input.value = params.get('q') || '';
+  function readUrl() {
+    var params = new URLSearchParams(window.location.search);
+    state = { proto: 'all', type: 'all', q: (params.get('q') || '').trim().toLowerCase() };
+    ['proto', 'type'].forEach(function (k) { var v = (params.get(k) || '').toLowerCase(); if (v) state[k] = v; });
+    if (input) input.value = params.get('q') || '';
+  }
+  readUrl();
 
   function syncUrl() {
     if (!window.history || !history.replaceState) return;
@@ -35,24 +40,29 @@
   }
 
   function apply() {
+    cards = liveCards(); total = cards.length;
     var shown = 0;
     cards.forEach(function (c) {
       var ok = (state.proto === 'all' || c.getAttribute('data-proto') === state.proto) &&
                (state.type === 'all' || c.getAttribute('data-type') === state.type) &&
-               (!state.q || c.getAttribute('data-search').indexOf(state.q) !== -1);
+               (!state.q || (c.getAttribute('data-search')||'').indexOf(state.q) !== -1);
       c.hidden = !ok;
       if (ok) shown++;
     });
+    /* highlight the active chip (no per-chip counters — the "Showing X of Y" line is the single source of truth) */
+    known = { proto: {}, type: {} };
+    cards.forEach(function (card) { known.proto[card.getAttribute('data-proto')] = 1; known.type[card.getAttribute('data-type')] = 1; });
     chips.forEach(function (c) {
       var g = c.getAttribute('data-group'), v = c.getAttribute('data-value');
-      c.setAttribute('aria-pressed', String(state[g] === v));
+      c.hidden = v !== 'all' && !known[g][v];
+      c.setAttribute('aria-pressed', String(state[g] === c.getAttribute('data-value')));
     });
     var filtered = state.proto !== 'all' || state.type !== 'all' || !!state.q;
-    countEl.innerHTML = 'Showing <b>' + shown + '</b> of <b>' + total + '</b> products';
-    clearBtn.hidden = !filtered;
+    if (countEl) countEl.innerHTML = 'Showing <b>' + shown + '</b> of <b>' + total + '</b> products';
+    if (clearBtn) clearBtn.hidden = !filtered;
     var unknown = (state.proto !== 'all' && !known.proto[state.proto]) || (state.type !== 'all' && !known.type[state.type]);
-    emptyEl.hidden = shown !== 0;
-    if (shown === 0) {
+    if (emptyEl) emptyEl.hidden = shown !== 0;
+    if (shown === 0 && emptyMsg) {
       emptyMsg.textContent = unknown
         ? 'We do not have products in this category yet. Browse the full range, or contact our sales team and we will help you find the right solution.'
         : 'No products match your current filters. Try removing a filter or searching with different words.';
@@ -72,8 +82,12 @@
     t = setTimeout(function () { state.q = input.value.trim().toLowerCase(); apply(); }, 120);
   });
   function reset() { state = { proto: 'all', type: 'all', q: '' }; if (input) input.value = ''; apply(); }
-  clearBtn.addEventListener('click', reset);
+  if (clearBtn) clearBtn.addEventListener('click', reset);
   var emptyClear = document.getElementById('plEmptyClear');
   if (emptyClear) emptyClear.addEventListener('click', reset);
   apply();
+  /* re-sync after bfcache restore / back-forward / tab return (browsers may restore stale input values or DOM) */
+  window.addEventListener('pageshow', function (e) { if (e.persisted) { readUrl(); apply(); } });
+  window.addEventListener('popstate', function () { readUrl(); apply(); });
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) apply(); });
 })();

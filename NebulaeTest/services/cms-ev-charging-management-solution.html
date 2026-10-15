@@ -13,7 +13,7 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/nebulae-nav.css">
   <link rel="stylesheet" href="../assets/css/solutions.css">
@@ -31,6 +31,7 @@
     .sl-rel-card__desc{font-size:.8rem;color:#6b7280;line-height:1.6}
     .sl-rel-card__arrow{font-size:.78rem;font-weight:700;color:#4f46e5;margin-top:.75rem;display:block}
   </style>
+  <link rel="stylesheet" href="../assets/css/nebulae-fixes.css">
 </head>
 <body>
 <div id="nblProgressBar" role="progressbar" aria-label="Page scroll progress"></div>
@@ -337,12 +338,69 @@
                 <div class="atl-mega__col atl-mega__col--feature">
                   <div class="atl-mega__feature-card">
                     <p class="atl-mega__feature-name">Technologies We Use</p>
-                    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;margin:0.75rem 0;">
-                      <img src="../assets/images/SupportedTech/LoRaWAN.png" alt="Technology 4" style="max-width:80px;height:auto;">
-                      <img src="../assets/images/SupportedTech/zigbee.png" alt="Technology 1" style="max-width:80px;height:auto;">
-                      <img src="../assets/images/SupportedTech/Bluetooth.png" alt="Technology 2" style="max-width:80px;height:auto;">
-                      <img src="../assets/images/SupportedTech/WiFi.png" alt="Technology 3" style="max-width:80px;height:auto;">
-                    </div>
+                    <div class="nbl-logos-strip">
+    <div class="nbl-logos-track">
+
+      <!-- ===== ORIGINAL SET ===== -->
+      <div class="nbl-logo-item" title="Bluetooth">
+        <img src="../assets/images/SupportedTech/Bluetooth.png" alt="Bluetooth">
+      </div>
+      <div class="nbl-logo-item" title="G3-PLC Alliance">
+        <img src="../assets/images/SupportedTech/G3-PLC.png" alt="G3-PLC Alliance">
+      </div>
+      <div class="nbl-logo-item" title="LoRaWAN">
+        <img src="../assets/images/SupportedTech/LoRaWAN.png" alt="LoRaWAN">
+      </div>
+      <div class="nbl-logo-item" title="LowPAN">
+        <img src="../assets/images/SupportedTech/LowPAN.png" alt="LowPAN">
+      </div>
+      <div class="nbl-logo-item" title="NB-IoT">
+        <img src="../assets/images/SupportedTech/NB-IoT.png" alt="NB-IoT">
+      </div>
+      <div class="nbl-logo-item" title="sigfox">
+        <img src="../assets/images/SupportedTech/sigfox.png" alt="sigfox">
+      </div>
+      <div class="nbl-logo-item" title="WiFi">
+        <img src="../assets/images/SupportedTech/WiFi.png" alt="WiFi">
+      </div>
+      <div class="nbl-logo-item" title="Wi-SUN Alliance">
+        <img src="../assets/images/SupportedTech/Wi-SUN-Main-Logo.png" alt="Wi-SUN Alliance">
+      </div>
+      <div class="nbl-logo-item" title="zigbee">
+        <img src="../assets/images/SupportedTech/zigbee.png" alt="zigbee">
+      </div>
+
+      <!-- ===== DUPLICATE SET (seamless loop) ===== -->
+      <div class="nbl-logo-item" title="Bluetooth" aria-hidden="true">
+        <img src="../assets/images/SupportedTech/Bluetooth.png" alt="Bluetooth">
+      </div>
+      <div class="nbl-logo-item" title="G3-PLC Alliance" aria-hidden="true">
+        <img src="../assets/images/SupportedTech/G3-PLC.png" alt="G3-PLC Alliance">
+      </div>
+      <div class="nbl-logo-item" title="LoRaWAN" aria-hidden="true">
+        <img src="../assets/images/SupportedTech/LoRaWAN.png" alt="LoRaWAN">
+      </div>
+      <div class="nbl-logo-item" title="LowPAN" aria-hidden="true">
+        <img src="../assets/images/SupportedTech/LowPAN.png" alt="LowPAN">
+      </div>
+      <div class="nbl-logo-item" title="NB-IoT" aria-hidden="true">
+        <img src="../assets/images/SupportedTech/NB-IoT.png" alt="NB-IoT">
+      </div>
+      <div class="nbl-logo-item" title="sigfox" aria-hidden="true">
+        <img src="../assets/images/SupportedTech/sigfox.png" alt="sigfox">
+      </div>
+      <div class="nbl-logo-item" title="WiFi" aria-hidden="true">
+        <img src="../assets/images/SupportedTech/WiFi.png" alt="WiFi">
+      </div>
+      <div class="nbl-logo-item" title="Wi-SUN Alliance" aria-hidden="true">
+        <img src="../assets/images/SupportedTech/Wi-SUN-Main-Logo.png" alt="Wi-SUN Alliance">
+      </div>
+      <div class="nbl-logo-item" title="zigbee" aria-hidden="true">
+        <img src="../assets/images/SupportedTech/zigbee.png" alt="zigbee">
+      </div>
+
+    </div>
+  </div>
                     <a href="../services.html" class="atl-mega__feature-link">View All Services →</a>
                 
                   </div>
@@ -590,7 +648,7 @@
         </div>
       </div>
 
-      <a class="atl-nav__mlink" href="../resource.html">Resources</a>
+      <a class="atl-nav__mlink" href="../resources.html">Resources</a>
 
       <div class="atl-nav__macc">
         <button class="atl-nav__mlink atl-nav__macc-btn" onclick="toggleMobileAcc(this)">About Us<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
@@ -647,7 +705,7 @@
         <p class="sl-solution__desc" style="color:#374151;">The CityCharge CCMS Unit leverages existing CCMS infrastructure to add EV charging without additional cabling or control systems. It turns lighting infrastructure into a revenue-generating platform through paid EV charging and socket usage.</p><p class="sl-solution__desc" style="color:#374151;">It suits smart-city projects that integrate smart lighting and smart mobility under one centralised platform.</p>
         <div class="sl-metrics"><div class="sl-metric"><span class="sl-metric__val">Plug &amp; charge</span><span class="sl-metric__label">RFID or mobile app</span></div><div class="sl-metric"><span class="sl-metric__val">Load mgmt</span><span class="sl-metric__label">EV vs CCMS</span></div><div class="sl-metric"><span class="sl-metric__val">Outdoor</span><span class="sl-metric__label">Weather-resistant</span></div></div>
         <ul class="sl-feat-list" id="features"><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>User-friendly</strong> — simple plug-and-charge with RFID or mobile-app access</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Dual utility sockets</strong> — two 3-pin and IEC sockets for light loads such as two-wheelers, e-rickshaws or EV cars</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Load management</strong> — intelligent power distribution between EV charger and CCMS prevents overload</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Durable design</strong> — weather-resistant with overload and short-circuit protection for outdoor installation</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Flexible deployment</strong> — public spaces, parking areas, residential complexes, campuses and commercial sites</span></li></ul>
-        <div class="sl-products-strip"><a href="../solutions/smart-street-light.html" class="sl-product-chip">Smart Street Light Solution</a><a href="../services/lora-management-system.html" class="sl-product-chip">Lighting Management System</a></div>
+        <div class="sl-products-strip"><a href="../solutions/smart-street-light.html" class="sl-product-chip">Smart Street Light Solution</a><a href="../services/lora-management-system.html" class="sl-product-chip">LoRa Management System</a></div>
         <div style="display:flex;gap:.75rem;margin-top:1.75rem;flex-wrap:wrap;">
           <a href="../contact.html" class="sl-sol-btn sl-sol-btn--primary">Get a Proposal</a>
           <a href="../contact.html" class="sl-sol-btn sl-sol-btn--outline">Request Datasheet</a>
@@ -660,7 +718,7 @@
 <section class="sl-section sl-section--surf" id="economics"><div class="container"><div class="sl-eyebrow-sm">Illustrative Economics</div><h2 class="sl-section-title">Revenue per Charger</h2><p class="sl-section-desc" style="max-width:760px;color:#4b5563">Figures from the CityCharge brochure, based on the stated assumptions. They illustrate the model and are not a guarantee.</p><div class="row g-4 mt-1"><div class="col-lg-6"><div class="slx-table-wrap"><table class="sl-compare-table"><thead><tr><th>Charger utilisation</th><th>6 hrs/day  ·  3 hrs/day</th></tr></thead><tbody><tr><td>Energy consumed per day</td><td>40 units  ·  20 units</td></tr><tr><td>Net income per day</td><td>₹160  ·  ₹80</td></tr><tr><td>Net income per month</td><td>₹4,800  ·  ₹2,400</td></tr><tr><td>Net income per year</td><td>₹57,600  ·  ₹28,800</td></tr><tr><td>Break-even period</td><td>Approx. 2.5 months  ·  4.5 months</td></tr></tbody></table></div><p class="slx-note">Assumptions: input energy ₹10/unit, CMS cost ₹1/unit, consumer tariff ₹15/unit. Additional cost of CityCharge CCMS vs a traditional CCMS: ₹10,000.</p></div><div class="col-lg-6"><h3 class="slx-sub">Shared infrastructure costs</h3><div class="slx-table-wrap"><table class="sl-compare-table"><thead><tr><th>Cost item</th><th>With combined CCMS + EV</th></tr></thead><tbody><tr><td>Grid connection / power upgrades</td><td>Shared</td></tr><tr><td>Cabling and trenching</td><td>Shared</td></tr><tr><td>Site preparation / civil works</td><td>Shared</td></tr><tr><td>Land or leasing</td><td>Shared</td></tr><tr><td>Permits, site lighting, safety equipment</td><td>Shared</td></tr><tr><td>Operational systems, networking, AMC</td><td>Shared</td></tr></tbody></table></div><p class="slx-note">For a CCMS or an AC EV charger setup, around 40–60 % of the total cost typically goes into infrastructure, installation and civil works — installing both together reduces the overall setup cost.</p></div></div></div></section>
 <section class="sl-section sl-section--surf" id="benefits"><div class="container slx-cards"><div class="sl-eyebrow-sm">Key Benefits</div><h2 class="sl-section-title">Why Combine CCMS and EV Charging</h2><div class="row g-3 mt-1"><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">1</div><h3>Optimum use of infrastructure</h3><p>Adds EV charging on top of the existing CCMS — no extra cabling or control system.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">2</div><h3>Revenue-generating asset</h3><p>Paid EV charging and socket usage turn lighting infrastructure into income.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">3</div><h3>Smart-city ready</h3><p>Smart lighting and smart mobility on one centralised platform.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">4</div><h3>Faster rollout</h3><p>CCMS and EV charging in one compact unit makes deployment simple and quick.</p></div></div></div></div></section>
 <section class="sl-section" id="platform"><div class="container slx-cards"><div class="sl-eyebrow-sm">UrbanLink Platform</div><h2 class="sl-section-title">Manage More Than Lights</h2><div class="row g-3 mt-1"><div class="col-12 col-sm-6 col-lg-4"><div class="slx-card"><div class="slx-card__n">1</div><h3>Smart City Management Platform</h3><p>UrbanLink is a secure, flexible, user-friendly SCMP that can be tailored to manage street lights and other smart-city assets.</p></div></div><div class="col-12 col-sm-6 col-lg-4"><div class="slx-card"><div class="slx-card__n">2</div><h3>Assets it can manage</h3><p>Smart street lights, billboards, smart poles, parking sensors, gateways, EV charging stations, cameras and environmental sensors.</p></div></div></div></div></section>
-<section class="sl-related"><div class="container"><p class="sl-related__title">Related Solutions</p><div class="row g-3"><div class="col-6 col-md-3"><a href="../solutions/smart-street-light.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Smart City</span><p class="sl-rel-card__name">Smart Street Light</p><p class="sl-rel-card__desc">Pole-mount, retrofit and NEMA controllers, CCMS panels and LMS software.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../services/lora-management-system.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Software</span><p class="sl-rel-card__name">Lighting Management System</p><p class="sl-rel-card__desc">Cloud platform to monitor and control street lights.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../solutions/transformer-monitoring.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(37,99,235,.1);color:#2563eb;">DISCOM</span><p class="sl-rel-card__name">Transformer Monitoring</p><p class="sl-rel-card__desc">DTMS: real-time electrical and sensor monitoring for distribution transformers.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../solutions/smart-electric-meter.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(234,88,12,.1);color:#ea580c;">AMI</span><p class="sl-rel-card__name">Smart Electric Meter</p><p class="sl-rel-card__desc">Wi-SUN / RF AMI for IS 16444 smart meters with NMS, HES and Energy+ app.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div></div></div></section>
+<section class="sl-related"><div class="container"><p class="sl-related__title">Related Solutions</p><div class="row g-3"><div class="col-6 col-md-3"><a href="../solutions/smart-street-light.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Smart City</span><p class="sl-rel-card__name">Smart Street Light</p><p class="sl-rel-card__desc">Pole-mount, retrofit and NEMA controllers, CCMS panels and LMS software.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../services/lora-management-system.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Software</span><p class="sl-rel-card__name">LoRa Management System</p><p class="sl-rel-card__desc">Cloud platform to monitor and control street lights.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../solutions/transformer-monitoring.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(37,99,235,.1);color:#2563eb;">DISCOM</span><p class="sl-rel-card__name">Transformer Monitoring</p><p class="sl-rel-card__desc">DTMS: real-time electrical and sensor monitoring for distribution transformers.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../solutions/smart-electric-meter.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(234,88,12,.1);color:#ea580c;">AMI</span><p class="sl-rel-card__name">Smart Electric Meter</p><p class="sl-rel-card__desc">Wi-SUN / RF AMI for IS 16444 smart meters with NMS, HES and Energy+ app.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div></div></div></section>
 <section style="padding:4rem 0;background:#fff;"><div class="container"><div class="sl-cta-wrap">
   <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:.75rem;">Turn Street-Light Panels into EV Charging Points</h2>
   <p style="color:rgba(255,255,255,.6);font-size:.97rem;max-width:560px;margin:0 auto 2rem;">Talk to us about CityCharge CCMS for your smart-city project.</p>
@@ -744,5 +802,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/nebulae-nav.js"></script>
 <script src="../assets/js/nebulae-page.js"></script>
+<script src="../assets/js/nebulae-float.js"></script>
 </body>
 </html>

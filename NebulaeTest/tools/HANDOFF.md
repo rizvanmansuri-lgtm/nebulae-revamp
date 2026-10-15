@@ -152,3 +152,46 @@ Known and accepted: the original `product-detail.html` has a phone overflow from
 ## Resume prompt for a fresh chat / another model
 "Continue the Nebulae product-pages project. Read tools/HANDOFF.md and tools/MANIFEST.md in the attached project zip, then build Batch N from the
 source PDFs (re-upload ProductPages_Upload.zip). Follow the per-batch workflow, run build_pages.py and test_pages.py, update HANDOFF/MANIFEST, and return the updated zip."
+
+## 2026-10-09 — Pages merged from NebulaeTest_DEPLOY_FINAL.zip
+Added (nothing existing overwritten): team, awards, careers, events, event-detail, news, news-detail, blog, blog-detail, privacy, 404 (.html),
+assets/css/site-pages-fix.css, robots.txt, sitemap.xml (new; lists all live pages; robots also points at sitemap-products.xml).
+Skipped on purpose: contact1.html, products/index.html, old product-detail/js/css, nebulae-dark*.css (dark mode is off in approved build).
+Each new page: header = index.html header (via same block as apply_index_header.py), footer = index.html footer, dark-css link removed.
+Content to confirm with owner: team/awards stats, news (RDSS 80,000-unit contract), blog stats, event details, careers roles - not verified.
+Newsletter forms (blog/events) and 404 depth: see final report.
+
+## 2026-10-09 — Solutions pages: dummy data replaced with real data (solutions_pdfs.zip, 17 PDFs)
+Generator: tools/build_solutions.py + tools/solutions_data.py (facts + source PDF noted per page); images in assets/images/solutions/ (cropped from the PDFs by tools/ crop script is NOT kept — re-crop from PDFs if needed); extra CSS assets/css/solutions-extra.css.
+Rebuilt (old dummy content discarded): solutions/smart-electric-meter, smart-gas-meter, smart-water-meter, smart-street-light, transformer-monitoring.
+New pages (were dead menu links): services/hes-electricity-metering, hes-gas-metering, hes-water-metering, lora-management-system (= Lighting Management System, LMS_V1.pdf), cms-ev-charging-management-solution (= CityCharge CCMS + EV, CityCharge-CCMS-Unit.pdf).
+solutions.html: metering and smart-city blocks updated (removed unverified stats: 50K+ meters, 99.9% read success, 42% energy saved, RDSS claims, 10-yr battery, 15 km range).
+Still without PDF (menu links dead): services/lorawan-network-server.html, industries/iot-logistics.html.
+Conflicts logged: Pravah 15 datasheet says NB-IoT while brochure says LoRa (page shows LoRa / NB-IoT note); gas AMR brochure lists LoRaWAN/Sigfox, datasheet LoRaWAN only; company facts differ between PDFs (6+ vs 7+ verticals, 1 vs 2 plants) so none used; menu label "LoRa Management System" vs PDF "Lighting Management System".
+Product brochures were NOT offered as downloads (buttons go to contact.html) — add PDFs to assets/docs if wanted.
+
+## 2026-10-10 — forms, filters, docs folder
+- assets/docs/ emptied (PDFs removed to keep the zip small); assets/docs/README.md lists the 32 file names to paste back. check_links.py will report them as missing until pasted.
+- ALL forms now go through one file: assets/js/nebulae-forms.js (EmailJS REST API). Set PUBLIC_KEY (+ verify SERVICE_ID / template IDs) in CONFIG; see tools/EMAILJS_SETUP.md. Wired: contact.html form (+ ?product=&qty=&type= prefill), index floating quote, Sample/EVK modal, 3 newsletter boxes (index, blog, events). Old inline submitContactForm removed from contact.html.
+- products-listing.js: filter chip counters are now faceted (recomputed from the other active filter + search); .pl-chip--zero dims empty chips.
+- Fixed typo link resource.html -> resources.html in 77 files and tools/templates/footer.html.
+
+## Oct 12 update
+- NEW placeholder pages (dummy copy, no specs claimed; replace when PDFs arrive): `services/lorawan-network-server.html`, `industries/iot-logistics.html` — edit in `tools/solutions_data.py`, run `python3 tools/build_solutions.py`.
+- LMS page renamed to "LoRa Management System (LMS)" (title/h1/breadcrumb/related cards/solutions.html/street-light page text).
+- REMOVED: indexold.html, products-old.html, test.html, doc-detail.html, doc-products.html (+ assets/css/doc-products.css, assets/js/doc-products.js). No page linked to them.
+- Filter counters hardened (`products-listing.js?v=20261012`): re-syncs on back/forward/bfcache restore, null-safe, cache-busted. Bump `?v=` after any future edit to that file.
+- team/awards/news/blog/events/careers content = placeholder (accepted).
+- sitemap.xml now 55 URLs.
+
+## Oct 15 update
+- NEW shared files, loaded LAST on every page: `assets/css/nebulae-fixes.css` + `assets/js/nebulae-float.js` (added/maintained by `tools/apply_shared_assets.py`, which the builders run automatically).
+  - Poppins is forced site-wide (Google-Fonts link trimmed to Poppins only).
+  - `--nbl-hdr` (measured header height) keeps banners/heros below the fixed menu (pg/lg/aw/cp/pl heroes, 404, resources library).
+  - WhatsApp button + Back-to-top on every page (same look as index; icon-only on phones).
+  - Get-Quote drawer: close (×) button, outside-click, Esc, ARIA; usable on phones.
+  - Responsive safety net (g-5 gutter on <992px, overflow-x clip).
+- Services mega-menu "Technologies We Use" = scrolling logo strip (index.html is the source; re-run `python3 tools/apply_index_header.py`, then `python3 tools/build_pages.py` and `python3 tools/build_solutions.py`).
+- Product filters: counters REMOVED. "Showing X of Y" and chips are computed live from the cards in the page; chips with no products hide themselves; add `data-pl-off` to a `.pl-card` to switch a product off without deleting it.
+- contact.html: inquiry-type buttons and protocol chips now work (mouse + keyboard), Enter submits, FAQ is keyboard-accessible. EmailJS keys set in `assets/js/nebulae-forms.js` (service_5evtjim / template_tdcdtb8 / public key KMz0CeGkUnJobJMhK).
+- build_pages.py no longer stops when PDFs are missing from assets/docs (warning only).

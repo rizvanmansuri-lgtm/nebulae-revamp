@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex, nofollow"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/nebulae-nav.css">
   <link rel="stylesheet" href="./assets/css/site-pages-fix.css">
@@ -387,6 +387,7 @@
       .nf-btn-primary, .nf-btn-outline { width: 100%; justify-content: center; }
     }
   </style>
+  <link rel="stylesheet" href="./assets/css/nebulae-fixes.css">
 </head>
 <body>
 
@@ -701,12 +702,69 @@
                 <div class="atl-mega__col atl-mega__col--feature">
                   <div class="atl-mega__feature-card">
                     <p class="atl-mega__feature-name">Technologies We Use</p>
-                    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;margin:0.75rem 0;">
-                      <img src="./assets/images/SupportedTech/LoRaWAN.png" alt="Technology 4" style="max-width:80px;height:auto;">
-                      <img src="./assets/images/SupportedTech/zigbee.png" alt="Technology 1" style="max-width:80px;height:auto;">
-                      <img src="./assets/images/SupportedTech/Bluetooth.png" alt="Technology 2" style="max-width:80px;height:auto;">
-                      <img src="./assets/images/SupportedTech/WiFi.png" alt="Technology 3" style="max-width:80px;height:auto;">
-                    </div>
+                    <div class="nbl-logos-strip">
+    <div class="nbl-logos-track">
+
+      <!-- ===== ORIGINAL SET ===== -->
+      <div class="nbl-logo-item" title="Bluetooth">
+        <img src="./assets/images/SupportedTech/Bluetooth.png" alt="Bluetooth">
+      </div>
+      <div class="nbl-logo-item" title="G3-PLC Alliance">
+        <img src="./assets/images/SupportedTech/G3-PLC.png" alt="G3-PLC Alliance">
+      </div>
+      <div class="nbl-logo-item" title="LoRaWAN">
+        <img src="./assets/images/SupportedTech/LoRaWAN.png" alt="LoRaWAN">
+      </div>
+      <div class="nbl-logo-item" title="LowPAN">
+        <img src="./assets/images/SupportedTech/LowPAN.png" alt="LowPAN">
+      </div>
+      <div class="nbl-logo-item" title="NB-IoT">
+        <img src="./assets/images/SupportedTech/NB-IoT.png" alt="NB-IoT">
+      </div>
+      <div class="nbl-logo-item" title="sigfox">
+        <img src="./assets/images/SupportedTech/sigfox.png" alt="sigfox">
+      </div>
+      <div class="nbl-logo-item" title="WiFi">
+        <img src="./assets/images/SupportedTech/WiFi.png" alt="WiFi">
+      </div>
+      <div class="nbl-logo-item" title="Wi-SUN Alliance">
+        <img src="./assets/images/SupportedTech/Wi-SUN-Main-Logo.png" alt="Wi-SUN Alliance">
+      </div>
+      <div class="nbl-logo-item" title="zigbee">
+        <img src="./assets/images/SupportedTech/zigbee.png" alt="zigbee">
+      </div>
+
+      <!-- ===== DUPLICATE SET (seamless loop) ===== -->
+      <div class="nbl-logo-item" title="Bluetooth" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/Bluetooth.png" alt="Bluetooth">
+      </div>
+      <div class="nbl-logo-item" title="G3-PLC Alliance" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/G3-PLC.png" alt="G3-PLC Alliance">
+      </div>
+      <div class="nbl-logo-item" title="LoRaWAN" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/LoRaWAN.png" alt="LoRaWAN">
+      </div>
+      <div class="nbl-logo-item" title="LowPAN" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/LowPAN.png" alt="LowPAN">
+      </div>
+      <div class="nbl-logo-item" title="NB-IoT" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/NB-IoT.png" alt="NB-IoT">
+      </div>
+      <div class="nbl-logo-item" title="sigfox" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/sigfox.png" alt="sigfox">
+      </div>
+      <div class="nbl-logo-item" title="WiFi" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/WiFi.png" alt="WiFi">
+      </div>
+      <div class="nbl-logo-item" title="Wi-SUN Alliance" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/Wi-SUN-Main-Logo.png" alt="Wi-SUN Alliance">
+      </div>
+      <div class="nbl-logo-item" title="zigbee" aria-hidden="true">
+        <img src="./assets/images/SupportedTech/zigbee.png" alt="zigbee">
+      </div>
+
+    </div>
+  </div>
                     <a href="services.html" class="atl-mega__feature-link">View All Services →</a>
                 
                   </div>
@@ -1224,5 +1282,6 @@ searchInput.addEventListener('keydown', function (e) {
 const urlQ = new URLSearchParams(window.location.search).get('q');
 if (urlQ) { searchInput.value = urlQ; searchInput.dispatchEvent(new Event('input')); }
 </script>
+<script src="./assets/js/nebulae-float.js"></script>
 </body>
 </html>

@@ -15,3 +15,10 @@ html,body{max-width:100%;overflow-x:clip}
 }
 /* wide tables scroll inside their own box instead of the page */
 .aw-matrix{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* newsletter strip: stack below 992px so the form never collapses to 3px (seen at 768px) */
+@media (max-width:991.98px){
+  .pg-newsletter{flex-direction:column;align-items:stretch;}
+  .pg-newsletter .pg-newsletter__form{flex:0 0 auto;width:100%;}
+  .pg-newsletter .pg-newsletter__input{flex:1 1 200px;width:auto;min-width:0;}
+}

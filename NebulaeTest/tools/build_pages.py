@@ -436,10 +436,10 @@ def build_listing(ALL):
           <a class="pl-card__cta" href="{href}" aria-label="View details of {e(p["model"], quote=True)}">View details {arrow}</a>
         </div>
       </article>''')
-    pchips = f'<button type="button" class="pl-chip" data-group="proto" data-value="all" aria-pressed="true">All <i>{n}</i></button>' + ''.join(
-        f'<button type="button" class="pl-chip" data-group="proto" data-value="{k}" aria-pressed="false">{PROTO_NAME[k]} <i>{pc[k]}</i></button>' for k in PROTO_ORDER if pc[k])
-    tchips = f'<button type="button" class="pl-chip" data-group="type" data-value="all" aria-pressed="true">All types <i>{n}</i></button>' + ''.join(
-        f'<button type="button" class="pl-chip" data-group="type" data-value="{k}" aria-pressed="false">{TYPE_NAME[k]} <i>{tc[k]}</i></button>' for k in TYPE_ORDER if tc[k])
+    pchips = f'<button type="button" class="pl-chip" data-group="proto" data-value="all" aria-pressed="true">All</button>' + ''.join(
+        f'<button type="button" class="pl-chip" data-group="proto" data-value="{k}" aria-pressed="false">{PROTO_NAME[k]}</button>' for k in PROTO_ORDER if pc[k])
+    tchips = f'<button type="button" class="pl-chip" data-group="type" data-value="all" aria-pressed="true">All types</button>' + ''.join(
+        f'<button type="button" class="pl-chip" data-group="type" data-value="{k}" aria-pressed="false">{TYPE_NAME[k]}</button>' for k in TYPE_ORDER if tc[k])
     fam = sum(1 for k in PROTO_ORDER if pc[k] and k not in ('other', 'som'))
     ld = {"@context": "https://schema.org", "@type": "ItemList", "name": "Nebulae IoT Products", "numberOfItems": n,
           "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE}/products/{p['slug']}.html", "name": p['full']} for i, p in enumerate(items)]}
@@ -466,7 +466,7 @@ def build_listing(ALL):
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/nebulae-nav.css">
-  <link rel="stylesheet" href="./assets/css/products-listing.css">
+  <link rel="stylesheet" href="./assets/css/products-listing.css?v=20261015b">
 </head>
 <body data-pl-page>
 {HEADER_ROOT}
@@ -525,7 +525,7 @@ def build_listing(ALL):
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/nebulae-nav.js"></script>
-<script src="./assets/js/products-listing.js"></script>
+<script src="./assets/js/products-listing.js?v=20261015b"></script>
 </body>
 </html>
 '''
@@ -555,7 +555,8 @@ if __name__ == '__main__':
     bad = False
     for s, p in ALL.items():
         m = validate(p)
-        if m: print('!!', s, m); bad = True
+        hard = [x for x in m if not x.startswith('doc:')]   # missing PDFs are expected until pasted into assets/docs
+        if hard: print('!!', s, hard); bad = True
     if bad: sys.exit('fix the above, then rebuild')
     index = []
     for s, p in ALL.items():
@@ -566,3 +567,4 @@ if __name__ == '__main__':
     build_listing(ALL); build_sitemap(ALL)
     json.dump(index, open(ROOT + 'tools/products_index.json', 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
     print(len(index), 'products')
+    import subprocess; subprocess.call([sys.executable, ROOT + "tools/apply_shared_assets.py"])
