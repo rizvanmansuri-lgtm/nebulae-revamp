@@ -328,3 +328,9 @@ PAGES.append(dict(dir='industries', slug='iot-logistics', parent=('Industries', 
  cards=[dict(id='benefits', eyebrow='Benefits', title='Why IoT for Logistics', cols=3, items=[
    ('Live visibility', 'See assets and shipments as they move.'), ('Fewer losses', 'Spot problems early and act on them.'), ('Better planning', 'Use movement data to improve routes and schedules.'), ('Accountability', 'Keep a record of what happened and when.'), ('Scalable', 'Start small and grow the network.'), ('Tailored to you', 'Hardware and software built around your operation.')])],
  related=['lns', 'lms', 'electric', 'street'], cta=('Talk to Us About Logistics IoT', 'Tell us what you need to track and we will propose a solution.'), accent='#ea580c'))
+
+
+# ═════════ Industry pages live in tools/industries_data.py (replaces the earlier placeholder iot-logistics entry)
+from industries_data import IND_PAGES, IND_RELATED
+RELATED.update(IND_RELATED)
+PAGES[:] = [p for p in PAGES if p['dir'] != 'industries'] + IND_PAGES

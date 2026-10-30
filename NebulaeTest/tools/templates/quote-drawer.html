@@ -1,0 +1,12 @@
+<!-- ═══ FLOATING QUOTE FORM (same on every page; wired by nebulae-forms.js + nebulae-float.js) ═══ -->
+<div id="nblFloatForm" role="dialog" aria-label="Quick quote form">
+  <div class="nbl-float-tab" aria-label="Toggle quote form">Get Quote</div>
+  <div class="nbl-float-form-inner">
+    <h4>Quick Quote Request</h4>
+    <input class="nbl-float-input" id="ffName" type="text" placeholder="Your Name" aria-label="Your name" autocomplete="name">
+    <input class="nbl-float-input" id="ffEmail" type="email" placeholder="Work Email" aria-label="Work email" autocomplete="email">
+    <input class="nbl-float-input" id="ffPhone" type="tel" placeholder="Phone Number" aria-label="Phone number" autocomplete="tel">
+    <textarea class="nbl-float-input" id="ffMsg" rows="3" placeholder="Tell us about your project..." aria-label="Project details" style="resize:vertical;"></textarea>
+    <button class="nbl-float-submit" type="button" onclick="submitFloatForm()">Send Request</button>
+  </div>
+</div>

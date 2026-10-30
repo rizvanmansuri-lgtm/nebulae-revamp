@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Industries | Nebulae IoT — Solutions Across 12 Verticals</title>
+  <title>Industries | Nebulae IoT — Solutions Across 13 Industries</title>
   <meta name="description" content="Nebulae IoT solutions for smart city, agriculture, utilities, industrial, healthcare, defence, consumer electronics and more — LoRaWAN, Wi-SUN, Zigbee, BLE hardware and end-to-end deployment."/>
   <meta name="robots" content="index, follow"/>
   <link rel="canonical" href="https://www.nebulae.io/industries.html"/>
-  <meta property="og:title" content="Industries | Nebulae IoT — Solutions Across 12 Verticals"/>
+  <meta property="og:title" content="Industries | Nebulae IoT — Solutions Across 13 Industries"/>
   <meta property="og:description" content="Nebulae IoT solutions for smart city, agriculture, utilities, industrial, healthcare, defence, consumer electronics and more — LoRaWAN, Wi-SUN, Zigbee, BLE hardware and end-to-end deployment."/>
   <meta property="og:type" content="website"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,9 +15,248 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/nebulae-nav.css">
-  <link rel="stylesheet" href="./assets/css/nebulae-dark.css">
   
   <link rel="stylesheet" href="./assets/css/nebulae-fixes.css">
+<style>
+/* ── Hero ── */
+.pg-hero{background:linear-gradient(135deg,#03031a 0%,#07072a 50%,#0d0d3a 100%);padding:5.5rem 0 4.5rem;position:relative;overflow:hidden;}
+.pg-hero__grid{position:absolute;inset:0;background-image:linear-gradient(rgba(6,182,212,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(6,182,212,.055) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+.pg-hero__orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;}
+.pg-hero__orb--1{width:460px;height:460px;background:radial-gradient(circle,rgba(79,70,229,.28),transparent 70%);top:-120px;left:-80px;}
+.pg-hero__orb--2{width:340px;height:340px;background:radial-gradient(circle,rgba(6,182,212,.22),transparent 70%);bottom:-60px;right:-60px;}
+.pg-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(6,182,212,.12);border:1px solid rgba(6,182,212,.3);color:#06b6d4;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.35rem .9rem;border-radius:100px;margin-bottom:1.1rem;}
+.pg-hero__title{font-family:'Outfit',sans-serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;color:#fff;line-height:1.08;letter-spacing:-.025em;margin-bottom:.9rem;}
+.pg-hero__title span{background:linear-gradient(120deg,#06b6d4,#818cf8,#4f46e5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.pg-hero__desc{font-size:1rem;color:rgba(255,255,255,.62);line-height:1.78;max-width:600px;margin-bottom:2rem;}
+.pg-breadcrumb{display:flex;align-items:center;gap:.5rem;margin-bottom:1.5rem;font-size:.78rem;color:rgba(255,255,255,.4);}
+.pg-breadcrumb a{color:rgba(255,255,255,.4);text-decoration:none;}
+.pg-breadcrumb a:hover{color:#06b6d4;}
+
+/* ── Sections ── */
+.pg-section{padding:4.5rem 0;}
+.pg-section--surf{background:#f5f7ff;}
+.pg-section--dark{background:linear-gradient(135deg,#07071e,#0e0e38);}
+body.dark-mode .pg-section{background:#0a0a1e;}
+body.dark-mode .pg-section--surf{background:#0f0f28 !important;}
+
+/* ── Cards ── */
+.pg-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s;height:100%;display:flex;flex-direction:column;}
+.pg-card:hover{transform:translateY(-5px);box-shadow:0 20px 56px rgba(79,70,229,.12);border-color:rgba(79,70,229,.25);}
+body.dark-mode .pg-card{background:#1a1a3e !important;border-color:rgba(255,255,255,.08) !important;}
+.pg-card__img{width:100%;height:200px;object-fit:cover;display:block;background:#f0f3ff;}
+.pg-card__body{padding:1.5rem;flex:1;display:flex;flex-direction:column;}
+.pg-card__tag{font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:100px;display:inline-block;margin-bottom:.75rem;}
+.pg-card__title{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:800;color:#111827;margin-bottom:.5rem;line-height:1.3;}
+body.dark-mode .pg-card__title{color:#f1f5f9 !important;}
+.pg-card__desc{font-size:.85rem;color:#6b7280;line-height:1.7;flex:1;margin-bottom:1rem;}
+body.dark-mode .pg-card__desc{color:rgba(255,255,255,.55) !important;}
+.pg-card__meta{font-size:.75rem;color:#9ca3af;display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.85rem;}
+body.dark-mode .pg-card__meta{color:rgba(255,255,255,.35) !important;}
+.pg-card__link{display:inline-flex;align-items:center;gap:.4rem;font-size:.84rem;font-weight:700;color:#4f46e5;text-decoration:none;margin-top:auto;}
+.pg-card__link:hover{color:#06b6d4;}
+
+/* ── Filter bar ── */
+.pg-filter{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem;}
+.pg-filter-btn{padding:.45rem 1.1rem;border-radius:100px;border:1.5px solid #e5e7eb;background:#fff;font-size:.8rem;font-weight:600;color:#374151;cursor:pointer;transition:all .2s;}
+.pg-filter-btn:hover,.pg-filter-btn.active{background:#4f46e5;border-color:#4f46e5;color:#fff;}
+body.dark-mode .pg-filter-btn{background:#1a1a3e !important;border-color:rgba(255,255,255,.1) !important;color:rgba(255,255,255,.65) !important;}
+body.dark-mode .pg-filter-btn.active{background:#4f46e5 !important;border-color:#4f46e5 !important;color:#fff !important;}
+
+/* ── Section title ── */
+.pg-section-eyebrow{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#4f46e5;background:rgba(79,70,229,.08);padding:.3rem .85rem;border-radius:100px;margin-bottom:.75rem;}
+.pg-section-title{font-family:'Outfit',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:#0a0a1e;line-height:1.1;letter-spacing:-.02em;margin-bottom:.75rem;}
+body.dark-mode .pg-section-title{color:#f1f5f9 !important;}
+.pg-section-desc{font-size:.95rem;color:#6b7280;line-height:1.78;max-width:600px;}
+body.dark-mode .pg-section-desc{color:rgba(255,255,255,.55) !important;}
+
+/* ── CTA ── */
+.pg-cta-wrap{background:linear-gradient(135deg,#0a0a2e,#1a1a6e);border-radius:28px;padding:4.5rem 3rem;text-align:center;position:relative;overflow:hidden;}
+.pg-cta-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(6,182,212,.18),transparent 50%),radial-gradient(circle at 80% 50%,rgba(79,70,229,.22),transparent 50%);pointer-events:none;}
+.pg-btn-primary{display:inline-flex;align-items:center;gap:.45rem;padding:.85rem 1.85rem;border-radius:10px;background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;font-size:.9rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 8px 28px rgba(79,70,229,.35);}
+.pg-btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(79,70,229,.5);color:#fff;}
+.pg-btn-outline{display:inline-flex;align-items:center;gap:.45rem;padding:.82rem 1.75rem;border-radius:10px;background:transparent;color:rgba(255,255,255,.82);border:1.5px solid rgba(255,255,255,.25);font-size:.9rem;font-weight:600;font-family:'Outfit',sans-serif;text-decoration:none;transition:all .25s;}
+.pg-btn-outline:hover{border-color:#06b6d4;color:#06b6d4;}
+
+/* ── Stat chips ── */
+.pg-stat-strip{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem;}
+.pg-stat-chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.65rem 1.25rem;text-align:center;}
+.pg-stat-chip__num{font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:800;color:#fff;display:block;line-height:1;}
+.pg-stat-chip__label{font-size:.68rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em;margin-top:.2rem;display:block;}
+
+/* ── Pagination ── */
+.pg-pagination{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:3rem;}
+.pg-page-btn{width:40px;height:40px;border-radius:10px;border:1.5px solid #e5e7eb;background:#fff;font-size:.85rem;font-weight:600;color:#374151;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;}
+.pg-page-btn:hover,.pg-page-btn.active{background:#4f46e5;border-color:#4f46e5;color:#fff;}
+body.dark-mode .pg-page-btn{background:#1a1a3e !important;border-color:rgba(255,255,255,.1) !important;color:rgba(255,255,255,.65) !important;}
+body.dark-mode .pg-page-btn.active{background:#4f46e5 !important;color:#fff !important;}
+
+/* ── Newsletter ── */
+.pg-newsletter{background:linear-gradient(135deg,#4f46e5,#06b6d4);border-radius:24px;padding:3rem 2.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
+.pg-newsletter__text h3{font-family:'Outfit',sans-serif;font-size:1.35rem;font-weight:800;color:#fff;margin-bottom:.35rem;}
+.pg-newsletter__text p{font-size:.88rem;color:rgba(255,255,255,.7);margin:0;}
+.pg-newsletter__form{display:flex;gap:.75rem;flex:1;min-width:260px;flex-wrap:wrap;}
+.pg-newsletter__input{flex:1;min-width:200px;padding:.72rem 1.1rem;border-radius:10px;border:none;font-size:.88rem;outline:none;font-family:'Poppins',sans-serif;}
+.pg-newsletter__btn{padding:.72rem 1.5rem;border-radius:10px;background:#fff;color:#4f46e5;font-size:.88rem;font-weight:700;font-family:'Outfit',sans-serif;border:none;cursor:pointer;white-space:nowrap;transition:opacity .2s;}
+.pg-newsletter__btn:hover{opacity:.9;}
+
+/* ── Featured post (blog) ── */
+.pg-featured{background:#fff;border:1.5px solid #e5e7eb;border-radius:24px;overflow:hidden;margin-bottom:3rem;}
+body.dark-mode .pg-featured{background:#1a1a3e !important;border-color:rgba(255,255,255,.08) !important;}
+.pg-featured__img{width:100%;height:380px;object-fit:cover;display:block;}
+.pg-featured__body{padding:2.5rem;}
+.pg-featured__title{font-family:'Outfit',sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;color:#111827;margin-bottom:.75rem;line-height:1.15;}
+body.dark-mode .pg-featured__title{color:#f1f5f9 !important;}
+.pg-featured__desc{font-size:.95rem;color:#374151;line-height:1.78;margin-bottom:1.5rem;}
+body.dark-mode .pg-featured__desc{color:rgba(255,255,255,.6) !important;}
+
+/* ── Detail page ── */
+.pg-detail-wrap{max-width:820px;margin:0 auto;}
+.pg-detail-header{margin-bottom:2.5rem;}
+.pg-detail-title{font-family:'Outfit',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#0a0a1e;line-height:1.1;letter-spacing:-.025em;margin-bottom:1rem;}
+body.dark-mode .pg-detail-title{color:#f1f5f9 !important;}
+.pg-detail-meta{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;font-size:.82rem;color:#6b7280;margin-bottom:1.5rem;}
+body.dark-mode .pg-detail-meta{color:rgba(255,255,255,.4) !important;}
+.pg-detail-cover{width:100%;height:420px;object-fit:cover;border-radius:20px;margin-bottom:2.5rem;display:block;}
+.pg-detail-body{font-size:.97rem;color:#374151;line-height:1.88;}
+body.dark-mode .pg-detail-body{color:rgba(255,255,255,.65) !important;}
+.pg-detail-body h2{font-family:'Outfit',sans-serif;font-size:1.55rem;font-weight:800;color:#111827;margin-top:2.5rem;margin-bottom:.9rem;}
+body.dark-mode .pg-detail-body h2{color:#f1f5f9 !important;}
+.pg-detail-body h3{font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:700;color:#111827;margin-top:2rem;margin-bottom:.65rem;}
+body.dark-mode .pg-detail-body h3{color:#f1f5f9 !important;}
+.pg-detail-body p{margin-bottom:1.25rem;}
+.pg-detail-body ul{margin-bottom:1.25rem;padding-left:1.25rem;}
+.pg-detail-body ul li{margin-bottom:.45rem;}
+.pg-detail-body blockquote{border-left:3px solid #4f46e5;padding:.75rem 1.25rem;background:#f0f3ff;border-radius:0 10px 10px 0;margin:1.75rem 0;font-style:italic;color:#374151;}
+body.dark-mode .pg-detail-body blockquote{background:rgba(79,70,229,.1) !important;color:rgba(255,255,255,.65) !important;}
+.pg-detail-body .pg-callout{background:linear-gradient(135deg,rgba(79,70,229,.08),rgba(6,182,212,.06));border:1.5px solid rgba(79,70,229,.15);border-radius:16px;padding:1.5rem 1.75rem;margin:1.75rem 0;}
+body.dark-mode .pg-detail-body .pg-callout{background:rgba(79,70,229,.12) !important;border-color:rgba(79,70,229,.25) !important;}
+.pg-detail-body .pg-callout strong{color:#4f46e5;}
+.pg-author-card{background:#f8f9ff;border:1.5px solid #e5e7eb;border-radius:16px;padding:1.5rem;display:flex;align-items:center;gap:1.25rem;margin-top:2.5rem;}
+body.dark-mode .pg-author-card{background:#1a1a3e !important;border-color:rgba(255,255,255,.08) !important;}
+.pg-author-card__avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;background:#c7d2fe;}
+.pg-author-card__name{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:800;color:#111827;}
+body.dark-mode .pg-author-card__name{color:#f1f5f9 !important;}
+.pg-author-card__role{font-size:.8rem;color:#6b7280;}
+body.dark-mode .pg-author-card__role{color:rgba(255,255,255,.45) !important;}
+.pg-share-bar{display:flex;align-items:center;gap:.65rem;margin-top:2rem;padding-top:1.5rem;border-top:1.5px solid #e5e7eb;flex-wrap:wrap;}
+body.dark-mode .pg-share-bar{border-color:rgba(255,255,255,.08) !important;}
+.pg-share-btn{padding:.5rem 1.1rem;border-radius:8px;border:1.5px solid #e5e7eb;background:#fff;font-size:.8rem;font-weight:600;color:#374151;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:.4rem;}
+body.dark-mode .pg-share-btn{background:#1a1a3e !important;border-color:rgba(255,255,255,.08) !important;color:rgba(255,255,255,.65) !important;}
+.pg-share-btn:hover{border-color:#4f46e5;color:#4f46e5;}
+
+/* ── Event card ── */
+.pg-event-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s;display:flex;flex-direction:column;}
+body.dark-mode .pg-event-card{background:#1a1a3e !important;border-color:rgba(255,255,255,.08) !important;}
+.pg-event-card:hover{transform:translateY(-5px);box-shadow:0 20px 56px rgba(79,70,229,.12);border-color:rgba(79,70,229,.25);}
+.pg-event-card__date-band{background:linear-gradient(135deg,#4f46e5,#06b6d4);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;}
+.pg-event-card__day{font-family:'Outfit',sans-serif;font-size:2.2rem;font-weight:800;color:#fff;line-height:1;}
+.pg-event-card__month-year{display:flex;flex-direction:column;}
+.pg-event-card__month{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.7);}
+.pg-event-card__year{font-size:.8rem;color:rgba(255,255,255,.55);}
+.pg-event-card__body{padding:1.5rem;flex:1;display:flex;flex-direction:column;}
+.pg-event-card__type{font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:100px;display:inline-block;margin-bottom:.65rem;}
+.pg-event-card__title{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:800;color:#111827;margin-bottom:.5rem;line-height:1.3;}
+body.dark-mode .pg-event-card__title{color:#f1f5f9 !important;}
+.pg-event-card__info{font-size:.8rem;color:#6b7280;display:flex;flex-direction:column;gap:.3rem;margin-bottom:1rem;}
+body.dark-mode .pg-event-card__info{color:rgba(255,255,255,.45) !important;}
+.pg-event-card__desc{font-size:.85rem;color:#374151;line-height:1.65;flex:1;margin-bottom:1rem;}
+body.dark-mode .pg-event-card__desc{color:rgba(255,255,255,.55) !important;}
+
+/* ── Timeline (event detail) ── */
+.pg-timeline{position:relative;padding-left:2rem;}
+.pg-timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,#4f46e5,#06b6d4);}
+.pg-timeline-item{position:relative;margin-bottom:2rem;}
+.pg-timeline-item::before{content:'';position:absolute;left:-2.35rem;top:.35rem;width:14px;height:14px;border-radius:50%;background:#4f46e5;border:2px solid #fff;box-shadow:0 0 0 3px rgba(79,70,229,.2);}
+body.dark-mode .pg-timeline-item::before{border-color:#0a0a1e !important;}
+.pg-timeline-time{font-size:.78rem;font-weight:700;color:#4f46e5;margin-bottom:.25rem;}
+.pg-timeline-title{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:800;color:#111827;margin-bottom:.35rem;}
+body.dark-mode .pg-timeline-title{color:#f1f5f9 !important;}
+.pg-timeline-desc{font-size:.86rem;color:#6b7280;line-height:1.65;}
+body.dark-mode .pg-timeline-desc{color:rgba(255,255,255,.5) !important;}
+
+/* ── Team card ── */
+.pg-team-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:22px;overflow:hidden;transition:transform .25s,box-shadow .25s;text-align:center;}
+body.dark-mode .pg-team-card{background:#1a1a3e !important;border-color:rgba(255,255,255,.08) !important;}
+.pg-team-card:hover{transform:translateY(-5px);box-shadow:0 20px 56px rgba(79,70,229,.12);}
+.pg-team-card__img-wrap{height:220px;overflow:hidden;position:relative;}
+.pg-team-card__img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.pg-team-card:hover .pg-team-card__img{transform:scale(1.04);}
+.pg-team-card__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,30,.7),transparent);opacity:0;transition:opacity .3s;}
+.pg-team-card:hover .pg-team-card__overlay{opacity:1;}
+.pg-team-card__social{position:absolute;bottom:1rem;left:0;right:0;display:flex;justify-content:center;gap:.5rem;opacity:0;transform:translateY(10px);transition:all .3s;}
+.pg-team-card:hover .pg-team-card__social{opacity:1;transform:translateY(0);}
+.pg-team-card__social-link{width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .2s;}
+.pg-team-card__social-link:hover{background:rgba(79,70,229,.7);}
+.pg-team-card__body{padding:1.25rem 1rem;}
+.pg-team-card__name{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:800;color:#111827;margin-bottom:.2rem;}
+body.dark-mode .pg-team-card__name{color:#f1f5f9 !important;}
+.pg-team-card__role{font-size:.8rem;color:#4f46e5;font-weight:700;margin-bottom:.35rem;}
+.pg-team-card__dept{font-size:.74rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;}
+body.dark-mode .pg-team-card__dept{color:rgba(255,255,255,.35) !important;}
+
+/* ── Dept filter tabs ── */
+.pg-dept-tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem;}
+.pg-dept-tab{padding:.45rem 1.1rem;border-radius:100px;border:1.5px solid #e5e7eb;background:#fff;font-size:.8rem;font-weight:600;color:#374151;cursor:pointer;transition:all .2s;}
+.pg-dept-tab:hover,.pg-dept-tab.active{background:#4f46e5;border-color:#4f46e5;color:#fff;}
+body.dark-mode .pg-dept-tab{background:#1a1a3e !important;border-color:rgba(255,255,255,.1) !important;color:rgba(255,255,255,.65) !important;}
+body.dark-mode .pg-dept-tab.active{background:#4f46e5 !important;border-color:#4f46e5 !important;color:#fff !important;}
+
+/* ── Stat counter band ── */
+.pg-counter-band{background:linear-gradient(135deg,#0a0a2e,#1a1a6e);padding:3rem 0;}
+.pg-counter-item{text-align:center;}
+.pg-counter-num{font-family:'Outfit',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;line-height:1;display:block;}
+.pg-counter-label{font-size:.82rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.1em;margin-top:.35rem;display:block;}
+
+/* ── Industries grid card ── */
+.pg-ind-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:1.75rem;height:100%;transition:transform .25s,box-shadow .25s,border-color .25s;display:flex;flex-direction:column;text-decoration:none;}
+body.dark-mode .pg-ind-card{background:#1a1a3e !important;border-color:rgba(255,255,255,.08) !important;}
+.pg-ind-card:hover{transform:translateY(-5px);box-shadow:0 20px 56px rgba(79,70,229,.12);border-color:rgba(79,70,229,.25);text-decoration:none;}
+.pg-ind-card__icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;}
+.pg-ind-card__title{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:800;color:#111827;margin-bottom:.45rem;}
+body.dark-mode .pg-ind-card__title{color:#f1f5f9 !important;}
+.pg-ind-card__desc{font-size:.84rem;color:#6b7280;line-height:1.65;flex:1;margin-bottom:1rem;}
+body.dark-mode .pg-ind-card__desc{color:rgba(255,255,255,.5) !important;}
+.pg-ind-card__link{font-size:.82rem;font-weight:700;color:#4f46e5;display:inline-flex;align-items:center;gap:.35rem;margin-top:auto;}
+.pg-ind-card:hover .pg-ind-card__link{color:#06b6d4;}
+.pg-ind-card__tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.85rem;}
+.pg-ind-card__tag-chip{font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:100px;background:rgba(79,70,229,.08);color:#4f46e5;}
+body.dark-mode .pg-ind-card__tag-chip{background:rgba(79,70,229,.18) !important;color:#818cf8 !important;}
+
+/* ── Map / globe section ── */
+.pg-globe-section{background:linear-gradient(135deg,#07071e,#0e0e38);padding:4rem 0;position:relative;overflow:hidden;}
+.pg-globe-section::after{content:'';position:absolute;width:600px;height:600px;border-radius:50%;border:1px solid rgba(79,70,229,.12);top:50%;left:50%;transform:translate(-50%,-50%);}
+.pg-globe-section::before{content:'';position:absolute;width:400px;height:400px;border-radius:50%;border:1px solid rgba(6,182,212,.1);top:50%;left:50%;transform:translate(-50%,-50%);z-index:1;}
+.pg-globe-inner{position:relative;z-index:2;}
+
+/* ── TOC sidebar (detail pages) ── */
+.pg-toc{background:#f8f9ff;border:1.5px solid #e5e7eb;border-radius:16px;padding:1.5rem;position:sticky;top:90px;}
+body.dark-mode .pg-toc{background:#1a1a3e !important;border-color:rgba(255,255,255,.08) !important;}
+.pg-toc__title{font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:800;color:#111827;margin-bottom:.85rem;text-transform:uppercase;letter-spacing:.08em;}
+body.dark-mode .pg-toc__title{color:#f1f5f9 !important;}
+.pg-toc__list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.4rem;}
+.pg-toc__link{font-size:.82rem;color:#6b7280;text-decoration:none;padding:.35rem .65rem;border-radius:7px;display:block;transition:all .2s;}
+.pg-toc__link:hover,.pg-toc__link.active{background:rgba(79,70,229,.08);color:#4f46e5;}
+body.dark-mode .pg-toc__link{color:rgba(255,255,255,.45) !important;}
+body.dark-mode .pg-toc__link:hover,.pg-toc__link.active{background:rgba(79,70,229,.15) !important;color:#818cf8 !important;}
+
+/* ── Related posts ── */
+.pg-related-section{background:#f5f7ff;padding:4rem 0;}
+body.dark-mode .pg-related-section{background:#0f0f28 !important;}
+
+/* ── News badge ── */
+.pg-news-badge{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .85rem;border-radius:100px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
+
+/* ── Responsive ── */
+@media(max-width:767px){
+  .pg-hero{padding:4rem 0 3rem;}
+  .pg-featured__img{height:220px;}
+  .pg-detail-cover{height:240px;}
+  .pg-toc{display:none;}
+  .pg-newsletter{flex-direction:column;}
+  .pg-team-card__social{opacity:1;transform:translateY(0);}
+}
+</style>
+  <link rel="icon" type="image/png" href="./favicon.png">
 </head>
 <body>
 <div id="nblProgressBar" role="progressbar" aria-label="Page scroll progress"></div>
@@ -481,6 +720,7 @@
                     
                     <li><a href="about.html#team"><span class="atl-mega__dot"></span>Our Team</a></li>
                     <li><a href="about.html#partners"><span class="atl-mega__dot"></span>Partners &amp; Certifications</a></li>
+                    <li><a href="faq.html"><span class="atl-mega__dot"></span>FAQ</a></li>
                   </ul>
                 </div>
                 <div class="atl-mega__col">
@@ -602,6 +842,7 @@
           <a class="atl-nav__msublink" href="about.html">About Nebulae</a>
           <a class="atl-nav__msublink" href="about.html#mission">Our Mission &amp; Vision</a>
           <a class="atl-nav__msublink" href="about.html#team">Our Team</a>
+          <a class="atl-nav__msublink" href="faq.html">FAQ</a>
           <a class="atl-nav__msublink" href="blog.html">Blog</a>
           <a class="atl-nav__msublink" href="careers.html">Careers</a>
           <a class="atl-nav__msublink" href="events.html">Upcoming Events</a>
@@ -620,11 +861,11 @@
   <div class="pg-hero__orb pg-hero__orb--2"></div>
   <div class="container" style="position:relative;z-index:2;">
     <nav class="pg-breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,.65);">Industries</span></nav>
-    <div class="pg-eyebrow">12 Industries · IoT Solutions</div>
+    <div class="pg-eyebrow">13 Industries · IoT Solutions</div>
     <h1 class="pg-hero__title">IoT Solutions for <span>Every Industry</span></h1>
-    <p class="pg-hero__desc">From smart city infrastructure to precision agriculture, defence, and consumer electronics — Nebulae's wireless IoT modules and end-to-end solutions are deployed across 12 verticals in India and beyond.</p>
+    <p class="pg-hero__desc">From smart city infrastructure to precision agriculture, defence, and consumer electronics — Nebulae's wireless IoT modules, gateways and end-to-end solutions are built for 13 industries.</p>
     <div class="pg-stat-strip">
-      <div class="pg-stat-chip"><span class="pg-stat-chip__num">12+</span><span class="pg-stat-chip__label">Industries Served</span></div><div class="pg-stat-chip"><span class="pg-stat-chip__num">50K+</span><span class="pg-stat-chip__label">Devices Deployed</span></div><div class="pg-stat-chip"><span class="pg-stat-chip__num">6</span><span class="pg-stat-chip__label">Protocol Options</span></div><div class="pg-stat-chip"><span class="pg-stat-chip__num">WPC/BIS</span><span class="pg-stat-chip__label">Certified</span></div>
+      <div class="pg-stat-chip"><span class="pg-stat-chip__num">13</span><span class="pg-stat-chip__label">Industries</span></div><div class="pg-stat-chip"><span class="pg-stat-chip__num">28</span><span class="pg-stat-chip__label">Products</span></div><div class="pg-stat-chip"><span class="pg-stat-chip__num">5</span><span class="pg-stat-chip__label">Solutions</span></div><div class="pg-stat-chip"><span class="pg-stat-chip__num">6</span><span class="pg-stat-chip__label">Protocol Options</span></div>
     </div>
   </div>
 </section>
@@ -635,104 +876,125 @@
       <span class="pg-section-eyebrow">Browse by Vertical</span>
       <h2 class="pg-section-title">All Industries</h2>
     </div>
-    <div class="pg-filter"><button class="pg-filter-btn active" data-filter="all">All Industries</button><button class="pg-filter-btn" data-filter="Smart City">Smart City</button><button class="pg-filter-btn" data-filter="Agriculture">Agriculture</button><button class="pg-filter-btn" data-filter="Utilities">Utilities</button><button class="pg-filter-btn" data-filter="Industrial">Industrial</button><button class="pg-filter-btn" data-filter="Healthcare">Healthcare</button><button class="pg-filter-btn" data-filter="Automotive">Automotive</button><button class="pg-filter-btn" data-filter="Consumer">Consumer</button><button class="pg-filter-btn" data-filter="Defence">Defence</button><button class="pg-filter-btn" data-filter="Safety">Safety</button><button class="pg-filter-btn" data-filter="Commercial">Commercial</button></div>
+    <div class="pg-filter"><button class="pg-filter-btn active" data-filter="all">All Industries</button><button class="pg-filter-btn" data-filter="Smart City">Smart City</button><button class="pg-filter-btn" data-filter="Agriculture">Agriculture</button><button class="pg-filter-btn" data-filter="Utilities">Utilities</button><button class="pg-filter-btn" data-filter="Industrial">Industrial</button><button class="pg-filter-btn" data-filter="Healthcare">Healthcare</button><button class="pg-filter-btn" data-filter="Automotive">Automotive</button><button class="pg-filter-btn" data-filter="Consumer">Consumer</button><button class="pg-filter-btn" data-filter="Defence">Defence</button><button class="pg-filter-btn" data-filter="Safety">Safety</button><button class="pg-filter-btn" data-filter="Commercial">Commercial</button><button class="pg-filter-btn" data-filter="Logistics">Logistics</button></div>
     <div class="row g-4 pg-filter-grid"><div class="col-md-6 col-lg-4" data-cat="Smart City">
         <a href="industries/home-security-automation.html" class="pg-ind-card">
           <div class="pg-ind-card__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
           <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">Zigbee</span><span class="pg-ind-card__tag-chip">BLE</span><span class="pg-ind-card__tag-chip">Wi-Fi</span></div>
-          <h3 class="pg-ind-card__title">Home Security & Automation</h3>
-          <p class="pg-ind-card__desc">Wireless intrusion detection, smart locks, adaptive lighting, and energy management on Zigbee/BLE/Wi-Fi.</p>
+          <h3 class="pg-ind-card__title">Home Security &amp; Automation</h3>
+          <p class="pg-ind-card__desc">Wireless modules for door and window sensors, sirens, hubs and smart-home controls.</p>
           <span class="pg-ind-card__link">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
         </a>
-      </div><div class="col-md-6 col-lg-4" data-cat="Safety">
+      </div>
+<div class="col-md-6 col-lg-4" data-cat="Safety">
         <a href="industries/sos-devices.html" class="pg-ind-card">
           <div class="pg-ind-card__icon" style="background:rgba(220,38,38,.1);color:#dc2626;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRaWAN</span><span class="pg-ind-card__tag-chip">GPS</span><span class="pg-ind-card__tag-chip">BLE</span></div>
-          <h3 class="pg-ind-card__title">SOS & Personal Safety Devices</h3>
-          <p class="pg-ind-card__desc">GPS/LoRa panic buttons, fall detection wearables, and real-time alert dispatch for elderly and lone workers.</p>
+          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRa</span><span class="pg-ind-card__tag-chip">BLE</span><span class="pg-ind-card__tag-chip">4G</span></div>
+          <h3 class="pg-ind-card__title">SOS &amp; Personal Safety Devices</h3>
+          <p class="pg-ind-card__desc">Radio modules and gateways for panic buttons, lone-worker devices and emergency alerts.</p>
           <span class="pg-ind-card__link">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
         </a>
-      </div><div class="col-md-6 col-lg-4" data-cat="Smart City">
+      </div>
+<div class="col-md-6 col-lg-4" data-cat="Smart City">
         <a href="industries/smart-city-solutions.html" class="pg-ind-card">
           <div class="pg-ind-card__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRaWAN</span><span class="pg-ind-card__tag-chip">Wi-SUN</span><span class="pg-ind-card__tag-chip">AMRUT 2.0</span></div>
+          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRaWAN</span><span class="pg-ind-card__tag-chip">Wi-SUN</span></div>
           <h3 class="pg-ind-card__title">Smart City Solutions</h3>
-          <p class="pg-ind-card__desc">LoRaWAN/Wi-SUN network for street lighting, parking, waste, air quality, and water metering.</p>
+          <p class="pg-ind-card__desc">Street-light control, EV charging, utility metering and city-wide LoRaWAN connectivity.</p>
           <span class="pg-ind-card__link">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
         </a>
-      </div><div class="col-md-6 col-lg-4" data-cat="Commercial">
+      </div>
+<div class="col-md-6 col-lg-4" data-cat="Commercial">
         <a href="industries/building-management-system.html" class="pg-ind-card">
           <div class="pg-ind-card__icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
-          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRaWAN</span><span class="pg-ind-card__tag-chip">Zigbee</span><span class="pg-ind-card__tag-chip">Modbus</span></div>
+          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">Zigbee</span><span class="pg-ind-card__tag-chip">BLE</span><span class="pg-ind-card__tag-chip">Wi-Fi</span></div>
           <h3 class="pg-ind-card__title">Building Management System</h3>
-          <p class="pg-ind-card__desc">HVAC, energy sub-metering, IAQ, access control, and occupancy analytics — wireless, no rewiring.</p>
+          <p class="pg-ind-card__desc">Wireless connectivity for lighting, HVAC and energy sensing in commercial buildings.</p>
           <span class="pg-ind-card__link">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
         </a>
-      </div><div class="col-md-6 col-lg-4" data-cat="Agriculture">
+      </div>
+<div class="col-md-6 col-lg-4" data-cat="Agriculture">
         <a href="industries/smart-agriculture.html" class="pg-ind-card">
           <div class="pg-ind-card__icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 22 16 8M22 2C22 2 10 4 6 10c-4 6-2 12-2 12s6 2 12-2c6-4 8-16 8-16z"/></svg></div>
-          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRaWAN</span><span class="pg-ind-card__tag-chip">GPS</span><span class="pg-ind-card__tag-chip">NB-IoT</span></div>
+          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRaWAN</span></div>
           <h3 class="pg-ind-card__title">Smart Agriculture</h3>
-          <p class="pg-ind-card__desc">Soil moisture, weather, automated irrigation, crop health, and livestock tracking on long-range LoRa.</p>
+          <p class="pg-ind-card__desc">Long-range, low-power LoRaWAN networks for monitoring fields, water and equipment.</p>
           <span class="pg-ind-card__link">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
         </a>
-      </div><div class="col-md-6 col-lg-4" data-cat="Agriculture">
+      </div>
+<div class="col-md-6 col-lg-4" data-cat="Agriculture">
         <a href="industries/farm-animal-management.html" class="pg-ind-card">
           <div class="pg-ind-card__icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 22 16 8M22 2C22 2 10 4 6 10c-4 6-2 12-2 12s6 2 12-2c6-4 8-16 8-16z"/></svg></div>
-          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">GPS</span><span class="pg-ind-card__tag-chip">LoRaWAN</span><span class="pg-ind-card__tag-chip">BLE</span></div>
+          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRa</span><span class="pg-ind-card__tag-chip">434 MHz</span></div>
           <h3 class="pg-ind-card__title">Farm Animal Management</h3>
-          <p class="pg-ind-card__desc">GPS/LoRa ear tags and collars for herd tracking, estrus detection, health, and geo-fence alerts.</p>
+          <p class="pg-ind-card__desc">Small, low-power radio modules and gateways for tracking and monitoring animals.</p>
           <span class="pg-ind-card__link">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
         </a>
-      </div><div class="col-md-6 col-lg-4" data-cat="Utilities">
+      </div>
+<div class="col-md-6 col-lg-4" data-cat="Utilities">
         <a href="industries/iot-energy-utilities.html" class="pg-ind-card">
           <div class="pg-ind-card__icon" style="background:rgba(234,88,12,.1);color:#ea580c;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRaWAN</span><span class="pg-ind-card__tag-chip">Wi-SUN</span><span class="pg-ind-card__tag-chip">RDSS</span></div>
-          <h3 class="pg-ind-card__title">IoT in Energy & Utilities</h3>
-          <p class="pg-ind-card__desc">Smart electricity, water, and gas metering; DT monitoring; feeder fault detection — RDSS compliant.</p>
+          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRaWAN</span><span class="pg-ind-card__tag-chip">Wi-SUN</span></div>
+          <h3 class="pg-ind-card__title">IoT in Energy &amp; Utilities</h3>
+          <p class="pg-ind-card__desc">Smart electricity, gas and water metering, with transformer monitoring and a Head End System.</p>
           <span class="pg-ind-card__link">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
         </a>
-      </div><div class="col-md-6 col-lg-4" data-cat="Industrial">
+      </div>
+<div class="col-md-6 col-lg-4" data-cat="Industrial">
         <a href="industries/industrial-iot.html" class="pg-ind-card">
           <div class="pg-ind-card__icon" style="background:rgba(217,119,6,.1);color:#d97706;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
-          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRa</span><span class="pg-ind-card__tag-chip">Wi-Fi</span><span class="pg-ind-card__tag-chip">Modbus</span></div>
+          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRa</span><span class="pg-ind-card__tag-chip">4G</span><span class="pg-ind-card__tag-chip">Wi-Fi</span></div>
           <h3 class="pg-ind-card__title">Industrial IoT</h3>
-          <p class="pg-ind-card__desc">Predictive maintenance, OEE tracking, energy sub-metering, and Modbus/OPC-UA to cloud bridge.</p>
+          <p class="pg-ind-card__desc">Rugged gateways and wireless modules that connect plant equipment and remote sites.</p>
           <span class="pg-ind-card__link">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
         </a>
-      </div><div class="col-md-6 col-lg-4" data-cat="Healthcare">
+      </div>
+<div class="col-md-6 col-lg-4" data-cat="Healthcare">
         <a href="industries/iot-healthcare.html" class="pg-ind-card">
           <div class="pg-ind-card__icon" style="background:rgba(220,38,38,.1);color:#dc2626;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">BLE</span><span class="pg-ind-card__tag-chip">LoRaWAN</span><span class="pg-ind-card__tag-chip">UWB</span></div>
+          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">BLE</span><span class="pg-ind-card__tag-chip">Wi-Fi</span><span class="pg-ind-card__tag-chip">LoRa</span></div>
           <h3 class="pg-ind-card__title">IoT in Healthcare</h3>
-          <p class="pg-ind-card__desc">Remote patient monitoring, hospital RTLS, vaccine cold chain, and nurse call — HL7/FHIR ready.</p>
+          <p class="pg-ind-card__desc">Compact wireless modules for connected health devices and hospital equipment.</p>
           <span class="pg-ind-card__link">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
         </a>
-      </div><div class="col-md-6 col-lg-4" data-cat="Automotive">
+      </div>
+<div class="col-md-6 col-lg-4" data-cat="Automotive">
         <a href="industries/telematics-fleet.html" class="pg-ind-card">
           <div class="pg-ind-card__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">GPS</span><span class="pg-ind-card__tag-chip">4G/LTE</span><span class="pg-ind-card__tag-chip">AIS-140</span></div>
-          <h3 class="pg-ind-card__title">Telematics & Fleet</h3>
-          <p class="pg-ind-card__desc">AIS-140 VLTD, GPS fleet tracking, driver behaviour, fuel management, and cold chain logistics.</p>
+          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">4G</span><span class="pg-ind-card__tag-chip">LoRa</span></div>
+          <h3 class="pg-ind-card__title">Telematics &amp; Fleet Management</h3>
+          <p class="pg-ind-card__desc">Cellular, GPS and LoRa building blocks for vehicle and asset tracking devices.</p>
           <span class="pg-ind-card__link">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
         </a>
-      </div><div class="col-md-6 col-lg-4" data-cat="Consumer">
+      </div>
+<div class="col-md-6 col-lg-4" data-cat="Consumer">
         <a href="industries/consumer-iot.html" class="pg-ind-card">
           <div class="pg-ind-card__icon" style="background:rgba(234,88,12,.1);color:#ea580c;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
           <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">Zigbee</span><span class="pg-ind-card__tag-chip">BLE</span><span class="pg-ind-card__tag-chip">Wi-Fi</span></div>
-          <h3 class="pg-ind-card__title">Consumer IoT</h3>
-          <p class="pg-ind-card__desc">Smart home devices, wearables, connected appliances — Tuya/Matter/BLE from concept to retail.</p>
+          <h3 class="pg-ind-card__title">Consumer IoT Solutions</h3>
+          <p class="pg-ind-card__desc">Wireless modules and engineering services for connected consumer products.</p>
           <span class="pg-ind-card__link">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
         </a>
-      </div><div class="col-md-6 col-lg-4" data-cat="Defence">
+      </div>
+<div class="col-md-6 col-lg-4" data-cat="Defence">
         <a href="industries/iot-in-defence.html" class="pg-ind-card">
           <div class="pg-ind-card__icon" style="background:rgba(30,64,175,.1);color:#1e40af;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRaWAN</span><span class="pg-ind-card__tag-chip">BLE</span><span class="pg-ind-card__tag-chip">AES-256</span></div>
+          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRa</span><span class="pg-ind-card__tag-chip">4G</span></div>
           <h3 class="pg-ind-card__title">IoT in Defence</h3>
-          <p class="pg-ind-card__desc">Ruggedised AES-256 encrypted sensor networks, soldier wearables, and remote installation monitoring.</p>
+          <p class="pg-ind-card__desc">Long-range wireless links, rugged gateways and embedded computing for field monitoring.</p>
           <span class="pg-ind-card__link">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
         </a>
-      </div></div>
+      </div>
+<div class="col-md-6 col-lg-4" data-cat="Logistics">
+        <a href="industries/iot-logistics.html" class="pg-ind-card">
+          <div class="pg-ind-card__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <div class="pg-ind-card__tags"><span class="pg-ind-card__tag-chip">LoRaWAN</span><span class="pg-ind-card__tag-chip">4G</span></div>
+          <h3 class="pg-ind-card__title">IoT in Logistics</h3>
+          <p class="pg-ind-card__desc">Connected nodes, tags and gateways for live visibility of assets, warehouses and yards.</p>
+          <span class="pg-ind-card__link">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
+        </a>
+      </div>
+</div>
   </div>
 </section>
 
@@ -740,11 +1002,11 @@
   <div class="container pg-globe-inner">
     <div class="row align-items-center g-5">
       <div class="col-lg-6">
-        <span class="pg-section-eyebrow" style="background:rgba(6,182,212,.12);color:#06b6d4;">Global Reach · Made in India</span>
+        <span class="pg-section-eyebrow" style="background:rgba(6,182,212,.12);color:#06b6d4;">Designed in India</span>
         <h2 class="pg-section-title" style="color:#fff;">IoT That Works in the Real World</h2>
-        <p style="color:rgba(255,255,255,.6);font-size:.95rem;line-height:1.78;margin-bottom:2rem;">From remote Gujarat farmlands to dense Mumbai utility grids, Nebulae IoT hardware has been deployed and proven in India's most challenging environments — and exported to 12 countries.</p>
+        <p style="color:rgba(255,255,255,.6);font-size:.95rem;line-height:1.78;margin-bottom:2rem;">Nebulae designs radio modules, gateways and software for deployments in demanding field conditions — from remote farms to dense utility networks.</p>
         <div class="row g-3">
-          <div class="col-6"><div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.1rem 1.25rem;"><span style="font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:800;color:#fff;display:block;">12+</span><span style="font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;">Industries Served</span></div></div><div class="col-6"><div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.1rem 1.25rem;"><span style="font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:800;color:#fff;display:block;">50K+</span><span style="font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;">Devices Deployed</span></div></div><div class="col-6"><div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.1rem 1.25rem;"><span style="font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:800;color:#fff;display:block;">12</span><span style="font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;">Export Countries</span></div></div><div class="col-6"><div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.1rem 1.25rem;"><span style="font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:800;color:#fff;display:block;">99.9%</span><span style="font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;">Network Uptime</span></div></div>
+          <div class="col-6"><div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.1rem 1.25rem;"><span style="font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:800;color:#fff;display:block;">13</span><span style="font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;">Industries</span></div></div><div class="col-6"><div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.1rem 1.25rem;"><span style="font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:800;color:#fff;display:block;">28</span><span style="font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;">Products</span></div></div><div class="col-6"><div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.1rem 1.25rem;"><span style="font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:800;color:#fff;display:block;">5</span><span style="font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;">Solutions</span></div></div><div class="col-6"><div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.1rem 1.25rem;"><span style="font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:800;color:#fff;display:block;">6</span><span style="font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;">Protocols</span></div></div>
         </div>
       </div>
       <div class="col-lg-6 text-center">
@@ -752,8 +1014,8 @@
           <div style="width:180px;height:180px;border-radius:50%;background:linear-gradient(135deg,rgba(79,70,229,.4),rgba(6,182,212,.3));margin:0 auto;display:flex;align-items:center;justify-content:center;box-shadow:0 0 80px rgba(79,70,229,.3);">
             <svg width="72" height="72" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
           </div>
-          <div style="position:absolute;top:1.5rem;right:1.5rem;background:rgba(79,70,229,.8);border-radius:10px;padding:.5rem .85rem;font-size:.72rem;font-weight:700;color:#fff;">India Manufactured</div>
-          <p style="color:rgba(255,255,255,.5);font-size:.82rem;margin-top:1.5rem;">Anand, Gujarat HQ · WPC · BIS · CE Certified</p>
+          <div style="position:absolute;top:1.5rem;right:1.5rem;background:rgba(79,70,229,.8);border-radius:10px;padding:.5rem .85rem;font-size:.72rem;font-weight:700;color:#fff;">Design to Connect</div>
+          <p style="color:rgba(255,255,255,.5);font-size:.82rem;margin-top:1.5rem;">Anand, Gujarat, India</p>
         </div>
       </div>
     </div>
@@ -776,8 +1038,8 @@
       </div><div class="col-md-6 col-lg-3">
         <div style="background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:1.75rem;height:100%;" class="pg-card">
           <div style="width:44px;height:44px;border-radius:12px;background:rgba(79,70,229,.1);color:#4f46e5;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
-          <h4 style="font-family:'Outfit',sans-serif;font-size:1rem;font-weight:800;color:#111827;margin-bottom:.4rem;">Compliance Built-In</h4>
-          <p style="font-size:.84rem;color:#6b7280;line-height:1.65;margin:0;">IS 16444, IS 15500, RDSS, WPC, BIS, AIS-140 — we know the standards and build to them from day one.</p>
+          <h4 style="font-family:'Outfit',sans-serif;font-size:1rem;font-weight:800;color:#111827;margin-bottom:.4rem;">Standards-Aware Design</h4>
+          <p style="font-size:.84rem;color:#6b7280;line-height:1.65;margin:0;">We design with the relevant regional standards in mind and confirm the requirements for your industry at the start of each project.</p>
         </div>
       </div><div class="col-md-6 col-lg-3">
         <div style="background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:1.75rem;height:100%;" class="pg-card">
@@ -788,8 +1050,8 @@
       </div><div class="col-md-6 col-lg-3">
         <div style="background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:1.75rem;height:100%;" class="pg-card">
           <div style="width:44px;height:44px;border-radius:12px;background:rgba(13,148,136,.1);color:#0d9488;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-          <h4 style="font-family:'Outfit',sans-serif;font-size:1rem;font-weight:800;color:#111827;margin-bottom:.4rem;">India Field Experience</h4>
-          <p style="font-size:.84rem;color:#6b7280;line-height:1.65;margin:0;">50,000+ deployed devices across utilities, smart cities, and industrial plants in India's real conditions.</p>
+          <h4 style="font-family:'Outfit',sans-serif;font-size:1rem;font-weight:800;color:#111827;margin-bottom:.4rem;">Built for the Field</h4>
+          <p style="font-size:.84rem;color:#6b7280;line-height:1.65;margin:0;">Metering, street-light and transformer-monitoring solutions built for real field conditions.</p>
         </div>
       </div>
     </div>
@@ -821,7 +1083,7 @@
 
       <!-- Navigate -->
       <div class="col-6 col-md-2">
-        <h6 class="atl-footer__heading">Navigate</h6>
+        <p class="atl-footer__heading">Navigate</p>
         <ul class="atl-footer__list">
           <li><a href="#home" onclick="return navClick('home')">Home</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -830,13 +1092,14 @@
           <li><a href="solutions.html">Solutions</a></li>
           <li><a href="industries.html">Industries</a></li>
           <li><a href="./resources.html">Resources</a></li>
+          <li><a href="faq.html">FAQ</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
 
       <!-- Services & Solutions -->
       <div class="col-6 col-md-3">
-        <h6 class="atl-footer__heading">Services</h6>
+        <p class="atl-footer__heading">Services</p>
         <ul class="atl-footer__list">
           <li><a href="services/iot-product-development.html">IoT Product Development</a></li>
           <li><a href="services/embedded-hardware-design.html">Embedded Hardware Design</a></li>
@@ -845,7 +1108,7 @@
           <li><a href="services/pcb-design-services.html">PCB Design Services</a></li>
           <li><a href="services/iot-consulting.html">IoT Consulting</a></li>
         </ul>
-        <h6 class="atl-footer__heading mt-3">Solutions</h6>
+        <p class="atl-footer__heading mt-3">Solutions</p>
         <ul class="atl-footer__list">
           <li><a href="solutions/smart-water-meter.html">Smart Water Meter</a></li>
           <li><a href="solutions/smart-electric-meter.html">Smart Electric Meter</a></li>
@@ -856,7 +1119,7 @@
 
       <!-- Products & Contact -->
       <div class="col-12 col-md-3">
-        <h6 class="atl-footer__heading">Products</h6>
+        <p class="atl-footer__heading">Products</p>
         <ul class="atl-footer__list">
           <li><a href="products.html?proto=lora&amp;type=module">LoRa — Module &amp; Gateway</a></li>
           <li><a href="products.html?proto=wisun&amp;type=module">Wi-SUN — Module &amp; Gateway</a></li>
@@ -865,7 +1128,7 @@
           <li><a href="products.html?proto=ble&amp;type=module">BLE — Module &amp; Gateway</a></li>
           <li><a href="products.html">View All Products →</a></li>
         </ul>
-        <h6 class="atl-footer__heading mt-3">Contact</h6>
+        <p class="atl-footer__heading mt-3">Contact</p>
         <ul class="atl-footer__list">
           <li><a href="tel:+9102692232501">+91-02692-232501 / 232502</a></li>
           <li><a href="mailto:sales@nebulae.io">sales@nebulae.io</a></li>
@@ -916,5 +1179,19 @@ window.addEventListener('resize', setOffset);
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/nebulae-nav.js"></script>
 
+<!-- ═══ FLOATING QUOTE FORM (same on every page; wired by nebulae-forms.js + nebulae-float.js) ═══ -->
+<div id="nblFloatForm" role="dialog" aria-label="Quick quote form">
+  <div class="nbl-float-tab" aria-label="Toggle quote form">Get Quote</div>
+  <div class="nbl-float-form-inner">
+    <h4>Quick Quote Request</h4>
+    <input class="nbl-float-input" id="ffName" type="text" placeholder="Your Name" aria-label="Your name" autocomplete="name">
+    <input class="nbl-float-input" id="ffEmail" type="email" placeholder="Work Email" aria-label="Work email" autocomplete="email">
+    <input class="nbl-float-input" id="ffPhone" type="tel" placeholder="Phone Number" aria-label="Phone number" autocomplete="tel">
+    <textarea class="nbl-float-input" id="ffMsg" rows="3" placeholder="Tell us about your project..." aria-label="Project details" style="resize:vertical;"></textarea>
+    <button class="nbl-float-submit" type="button" onclick="submitFloatForm()">Send Request</button>
+  </div>
+</div>
+
+<script src="./assets/js/nebulae-forms.js"></script>
 <script src="./assets/js/nebulae-float.js"></script>
 </body></html>

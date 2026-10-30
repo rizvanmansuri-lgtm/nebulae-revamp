@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IoT in Logistics — Asset Tracking &amp; Monitoring | Nebulae</title>
-  <meta name="description" content="IoT for logistics: connected tracking and condition monitoring for assets, shipments and fleets, from Nebulae IoT hardware and software." />
-  <meta name="keywords" content="IoT logistics, asset tracking, cold chain monitoring, shipment tracking, supply chain IoT, Nebulae" />
+  <meta name="description" content="IoT for logistics: LoRaWAN and 4G gateways with GPS, low-power nodes and tag modules for tracking assets and shipments." />
+  <meta name="keywords" content="IoT logistics, asset tracking, shipment tracking, LoRaWAN, GPS gateway, supply chain IoT, Nebulae" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.nebulae.io/industries/iot-logistics.html" />
   <meta property="og:title" content="IoT in Logistics — Asset Tracking &amp; Monitoring | Nebulae" />
-  <meta property="og:description" content="IoT for logistics: connected tracking and condition monitoring for assets, shipments and fleets, from Nebulae IoT hardware and software." />
+  <meta property="og:description" content="IoT for logistics: LoRaWAN and 4G gateways with GPS, low-power nodes and tag modules for tracking assets and shipments." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +31,8 @@
     .sl-rel-card__desc{font-size:.8rem;color:#6b7280;line-height:1.6}
     .sl-rel-card__arrow{font-size:.78rem;font-weight:700;color:#4f46e5;margin-top:.75rem;display:block}
   </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How far do the LoRa tags reach?", "acceptedAnswer": {"@type": "Answer", "text": "The NLN500a is rated up to 10 km line of sight. Indoors and in dense yards, the range is less, so the gateway layout matters."}}, {"@type": "Question", "name": "Can tags run on batteries?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. LoRa nodes are designed for low power, and battery life depends on how often a tag reports."}}, {"@type": "Question", "name": "Can we connect to our WMS or TMS?", "acceptedAnswer": {"@type": "Answer", "text": "A LoRaWAN network server delivers device data to your application over standard interfaces. Tell us the system and we will confirm the route."}}, {"@type": "Question", "name": "Do you build custom tags?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Nebulae offers hardware and firmware design to build tags around your requirements."}}]}</script>
+  <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="stylesheet" href="../assets/css/nebulae-fixes.css">
 </head>
 <body>
@@ -495,6 +497,7 @@
                     
                     <li><a href="../about.html#team"><span class="atl-mega__dot"></span>Our Team</a></li>
                     <li><a href="../about.html#partners"><span class="atl-mega__dot"></span>Partners &amp; Certifications</a></li>
+                    <li><a href="../faq.html"><span class="atl-mega__dot"></span>FAQ</a></li>
                   </ul>
                 </div>
                 <div class="atl-mega__col">
@@ -616,6 +619,7 @@
           <a class="atl-nav__msublink" href="../about.html">About Nebulae</a>
           <a class="atl-nav__msublink" href="../about.html#mission">Our Mission &amp; Vision</a>
           <a class="atl-nav__msublink" href="../about.html#team">Our Team</a>
+          <a class="atl-nav__msublink" href="../faq.html">FAQ</a>
           <a class="atl-nav__msublink" href="../blog.html">Blog</a>
           <a class="atl-nav__msublink" href="../careers.html">Careers</a>
           <a class="atl-nav__msublink" href="../events.html">Upcoming Events</a>
@@ -643,8 +647,8 @@
       </nav>
       <div class="sl-eyebrow">Industry · Logistics</div>
       <h1 class="sl-hero__title">IoT in Logistics</h1>
-      <p class="sl-hero__desc">Connected devices give logistics teams live visibility of assets and shipments across the supply chain.</p>
-      <div class="sl-jump-pills"><a href="#overview" class="sl-jump-pill">Overview</a><a href="#benefits" class="sl-jump-pill">Benefits</a><a href="../contact.html" class="sl-jump-pill">Get a Proposal</a></div>
+      <p class="sl-hero__desc">Connected nodes, tags and gateways that give logistics teams live visibility of assets, warehouses and yards.</p>
+      <div class="sl-jump-pills"><a href="#overview" class="sl-jump-pill">Overview</a><a href="#challenges" class="sl-jump-pill">Challenges</a><a href="#products" class="sl-jump-pill">Products</a><a href="#usecases" class="sl-jump-pill">Use cases</a><a href="#arch" class="sl-jump-pill">System</a><a href="#faq" class="sl-jump-pill">FAQ</a><a href="#proposal" class="sl-jump-pill">Get a Proposal</a></div>
     </div>
   </div>
 </section>
@@ -655,27 +659,41 @@
     <div class="row align-items-center g-5">
       <div class="col-lg-6">
         <div class="slx-hero-img">
-          <img src="../assets/images/solutions/elec-hw-lineup.jpg" alt="Nebulae IoT hardware" width="900" height="560"/>
-          <div class="sl-img-card__stat"><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">Track</span><span class="sl-img-card__stat-label">Assets &amp; shipments</span></div><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">Monitor</span><span class="sl-img-card__stat-label">Conditions in transit</span></div><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">Alert</span><span class="sl-img-card__stat-label">Exceptions in real time</span></div></div>
+          <img src="../assets/images/products/nln500a-board.jpg" alt="NLN500a LoRaWAN node" width="900" height="560"/>
+          <div class="sl-img-card__stat"><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">10 km</span><span class="sl-img-card__stat-label">LoRaWAN line of sight</span></div><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">4G + GPS</span><span class="sl-img-card__stat-label">NLG7644 gateway</span></div><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">434 MHz</span><span class="sl-img-card__stat-label">Tag module</span></div></div>
         </div>
       </div>
       <div class="col-lg-6">
-        <span class="sl-solution__tag" style="background:rgba(79,70,229,.1);color:#ea580c;">Logistics · Placeholder content</span>
-        <h2 class="sl-solution__title" style="color:#111827;">Visibility Across the Supply Chain</h2>
-        <p class="sl-solution__desc" style="color:#374151;">IoT devices report location and condition data from vehicles, containers and goods, helping teams plan better and react faster when something goes off-plan.</p><p class="sl-solution__desc" style="color:#374151;">Detailed solution information for logistics will be published here shortly. Contact our team to discuss your requirements.</p>
-        <div class="sl-metrics"><div class="sl-metric"><span class="sl-metric__val">Location</span><span class="sl-metric__label">Where assets are</span></div><div class="sl-metric"><span class="sl-metric__val">Condition</span><span class="sl-metric__label">How goods are stored</span></div><div class="sl-metric"><span class="sl-metric__val">Alerts</span><span class="sl-metric__label">When to act</span></div></div>
-        <ul class="sl-feat-list" id="features"><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#ea580c;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Asset tracking</strong> — know where vehicles, containers and equipment are</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#ea580c;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Condition monitoring</strong> — track conditions that matter for your goods</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#ea580c;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Real-time alerts</strong> — be notified of delays or exceptions</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#ea580c;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Reports</strong> — review movement and performance history</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#ea580c;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Custom hardware</strong> — Nebulae can design devices for your use case</span></li></ul>
-        <div class="sl-products-strip"><a href="../products.html" class="sl-product-chip">Products</a><a href="../services/iot-product-development.html" class="sl-product-chip">IoT Product Development</a><a href="telematics-fleet.html" class="sl-product-chip">Telematics &amp; Fleet</a></div>
+        <span class="sl-solution__tag" style="background:rgba(79,70,229,.1);color:#ea580c;">Logistics</span>
+        <h2 class="sl-solution__title" style="color:#111827;">Visibility Across Warehouses and Yards</h2>
+        <p class="sl-solution__desc" style="color:#374151;">Small LoRaWAN nodes and 434 MHz tag modules report from assets, while gateways with 4G LTE and GPS move data to the cloud from warehouses, yards and vehicles.</p><p class="sl-solution__desc" style="color:#374151;">Because LoRa links are low-power and long-range, a few gateways can cover a large site.</p>
+        <div class="sl-metrics"><div class="sl-metric"><span class="sl-metric__val">Nodes</span><span class="sl-metric__label">Battery-powered</span></div><div class="sl-metric"><span class="sl-metric__val">Gateways</span><span class="sl-metric__label">4G + GPS</span></div><div class="sl-metric"><span class="sl-metric__val">Tags</span><span class="sl-metric__label">Low cost</span></div></div>
+        <ul class="sl-feat-list" id="features"><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#ea580c;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>LoRaWAN nodes</strong> — compact STM32WL nodes, up to 10 km LoS</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#ea580c;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>4G + GPS gateway</strong> — NLG7644 for yards and vehicles</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#ea580c;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>434 MHz tags</strong> — EZR32HG220 module, up to −133 dBm sensitivity</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#ea580c;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Point-to-point links</strong> — single-channel LoRa gateway</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#ea580c;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Field testing</strong> — handheld LoRaWAN gateway</span></li></ul>
+        <div class="sl-products-strip"><a href="../products.html?proto=lora&amp;type=gateway" class="sl-product-chip">LoRaWAN Gateways</a><a href="../products.html?proto=lora" class="sl-product-chip">LoRa Nodes &amp; Modules</a><a href="../products.html?proto=gsm" class="sl-product-chip">4G / Cellular Gateways</a></div>
         <div style="display:flex;gap:.75rem;margin-top:1.75rem;flex-wrap:wrap;">
-          <a href="../contact.html" class="sl-sol-btn sl-sol-btn--primary">Get a Proposal</a>
-          <a href="../contact.html" class="sl-sol-btn sl-sol-btn--outline">Request Datasheet</a>
+          <a href="#proposal" class="sl-sol-btn sl-sol-btn--primary">Get a Proposal</a>
+          <a href="#products" class="sl-sol-btn sl-sol-btn--outline">View Products</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="sl-section sl-section--surf" id="benefits"><div class="container slx-cards"><div class="sl-eyebrow-sm">Benefits</div><h2 class="sl-section-title">Why IoT for Logistics</h2><div class="row g-3 mt-1"><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">1</div><h3>Live visibility</h3><p>See assets and shipments as they move.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">2</div><h3>Fewer losses</h3><p>Spot problems early and act on them.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">3</div><h3>Better planning</h3><p>Use movement data to improve routes and schedules.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">4</div><h3>Accountability</h3><p>Keep a record of what happened and when.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">5</div><h3>Scalable</h3><p>Start small and grow the network.</p></div></div><div class="col-12 col-sm-6 col-lg-3"><div class="slx-card"><div class="slx-card__n">6</div><h3>Tailored to you</h3><p>Hardware and software built around your operation.</p></div></div></div></div></section>
-<section class="sl-related"><div class="container"><p class="sl-related__title">Related Solutions</p><div class="row g-3"><div class="col-6 col-md-3"><a href="../services/lorawan-network-server.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(124,58,237,.1);color:#7c3aed;">Software</span><p class="sl-rel-card__name">LoRaWAN Network Server</p><p class="sl-rel-card__desc">Network server to onboard, manage and secure LoRaWAN gateways and devices.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../services/lora-management-system.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Software</span><p class="sl-rel-card__name">LoRa Management System</p><p class="sl-rel-card__desc">Cloud platform to monitor and control street lights.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../solutions/smart-electric-meter.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(234,88,12,.1);color:#ea580c;">AMI</span><p class="sl-rel-card__name">Smart Electric Meter</p><p class="sl-rel-card__desc">Wi-SUN / RF AMI for IS 16444 smart meters with NMS, HES and Energy+ app.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../solutions/smart-street-light.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Smart City</span><p class="sl-rel-card__name">Smart Street Light</p><p class="sl-rel-card__desc">Pole-mount, retrofit and NEMA controllers, CCMS panels and LMS software.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div></div></div></section>
+<section class="sl-section" id="challenges"><div class="container"><div class="sl-eyebrow-sm">Why it matters</div><h2 class="sl-section-title">Challenges We Help Solve</h2><div class="row g-3 mt-1"><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">1</span><h3>Assets go missing inside large sites</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>Low-power LoRa tags (NLN500a / NLN500b / OTAG-433) report to a gateway covering the whole warehouse or yard.</p></div></div><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">2</span><h3>Tags must last without maintenance</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>LoRa radios are designed for low power, so battery-powered tags are practical for long deployments.</p></div></div><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">3</span><h3>Handover points lack visibility</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>Cellular gateways with GPS (NLG7644) report position at transit points and vehicles.</p></div></div><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">4</span><h3>Planning gateway placement</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>The portable NLG8140 lets you test LoRaWAN coverage on site before installation.</p></div></div></div></div></section>
+<section class="sl-section sl-section--surf" id="products"><div class="container"><div class="sl-eyebrow-sm">Our Products</div><h2 class="sl-section-title">Products for this industry</h2><div class="row g-3 mt-1"><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nln500a.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nln500a-board.jpg" alt="NLN500a"/></div><div class="slx-prod__b"><span class="slx-prod__t">Node</span><h3>NLN500a</h3><p>Compact LoRaWAN node, 16 × 32.6 mm, up to 10 km LoS.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nln500b.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nln500b-coin-scale.png" alt="NLN500b"/></div><div class="slx-prod__b"><span class="slx-prod__t">Module</span><h3>NLN500b</h3><p>Smallest LoRaWAN / Sigfox module, 26.68 × 16 mm.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/otag433.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/otag433-module.jpg" alt="OTAG-433"/></div><div class="slx-prod__b"><span class="slx-prod__t">Module</span><h3>OTAG-433</h3><p>434 MHz proprietary-protocol module for low-cost tags.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nlg7644.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nlg7644-gateway.jpg" alt="NLG7644"/></div><div class="slx-prod__b"><span class="slx-prod__t">Gateway</span><h3>NLG7644</h3><p>LoRaWAN gateway with 4G LTE and GPS.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/p2p-gateway.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/p2p-gateway-kit.jpg" alt="P2P Gateway"/></div><div class="slx-prod__b"><span class="slx-prod__t">Gateway</span><h3>P2P Gateway</h3><p>Single-channel LoRa gateway with 4G LTE backhaul.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nlg8140.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nlg8140.jpg" alt="NLG8140"/></div><div class="slx-prod__b"><span class="slx-prod__t">Gateway</span><h3>NLG8140</h3><p>Handheld LoRaWAN gateway for coverage testing.</p><span class="slx-prod__a">View product →</span></div></a></div></div></div></section>
+<section class="sl-section" id="usecases"><div class="container"><div class="sl-eyebrow-sm">Where it fits</div><h2 class="sl-section-title">Typical Applications</h2><div class="row g-3 mt-1"><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Warehouse asset tracking</h3><dl><dt>Senses</dt><dd>Location of pallets, roll cages and equipment</dd><dt>Connects with</dt><dd>LoRa tags to a LoRaWAN gateway</dd><dt>You get</dt><dd>Fewer lost assets and faster searches.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Yard management</h3><dl><dt>Senses</dt><dd>Which trailer or container is in which bay</dd><dt>Connects with</dt><dd>Tags and a yard gateway with 4G backhaul</dd><dt>You get</dt><dd>A clearer yard picture for dispatch.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Vehicle visibility</h3><dl><dt>Senses</dt><dd>Vehicle position</dd><dt>Connects with</dt><dd>NLG7644 with GPS and 4G LTE</dd><dt>You get</dt><dd>Live position through the shipment.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Condition monitoring</h3><dl><dt>Senses</dt><dd>Temperature or shock values from attached sensors</dd><dt>Connects with</dt><dd>LoRa nodes with your sensors</dd><dt>You get</dt><dd>Alerts when conditions go out of range.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Point-to-point links</h3><dl><dt>Senses</dt><dd>Data between two fixed locations</dd><dt>Connects with</dt><dd>Single-channel P2P gateway</dd><dt>You get</dt><dd>A low-cost link where no network exists.</dd></dl></div></div></div><p class="slx-note">These are typical applications for this industry, shown to help you plan. Your project details decide the final design.</p></div></section>
+<section class="sl-section" id="architecture"><div class="container"><div class="row g-5 align-items-start"><div class="col-lg-6"><div class="sl-eyebrow-sm">How it fits together</div><h2 class="sl-section-title">Typical System</h2><div class="sl-arch-card"><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#ea580c;font:800 .85rem Outfit,sans-serif;">1</div><span class="sl-arch-layer__label">Assets and vehicles</span><span class="sl-arch-layer__desc">Pallets, containers, trailers, vehicles</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#ea580c;font:800 .85rem Outfit,sans-serif;">2</div><span class="sl-arch-layer__label">Tags and trackers</span><span class="sl-arch-layer__desc">LoRa nodes, 434 MHz tags, GPS + 4G gateway</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#ea580c;font:800 .85rem Outfit,sans-serif;">3</div><span class="sl-arch-layer__label">Site gateways</span><span class="sl-arch-layer__desc">LoRaWAN gateway at warehouse or yard</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#ea580c;font:800 .85rem Outfit,sans-serif;">4</div><span class="sl-arch-layer__label">Network server</span><span class="sl-arch-layer__desc">LoRaWAN Network Server (LoRa Management System)</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#ea580c;font:800 .85rem Outfit,sans-serif;">5</div><span class="sl-arch-layer__label">Logistics software</span><span class="sl-arch-layer__desc">WMS / TMS or a dashboard</span></div></div></div><div class="col-lg-6"></div></div></div></section>
+<!-- ADD WHEN AVAILABLE: case study (key case_study) and certifications (key certs) in tools/industries_extra.py -->
+<section class="sl-section sl-section--surf" id="faq"><div class="container"><div class="row g-4"><div class="col-lg-4"><div class="sl-eyebrow-sm">FAQ</div><h2 class="sl-section-title">Common Questions</h2><p class="slx-note">More answers are in our <a href="../faq.html">full FAQ</a>, or <a href="../contact.html">ask our team</a>.</p></div><div class="col-lg-8"><div class="slx-faq"><details><summary>How far do the LoRa tags reach?</summary><p>The NLN500a is rated up to 10 km line of sight. Indoors and in dense yards, the range is less, so the gateway layout matters.</p></details><details><summary>Can tags run on batteries?</summary><p>Yes. LoRa nodes are designed for low power, and battery life depends on how often a tag reports.</p></details><details><summary>Can we connect to our WMS or TMS?</summary><p>A LoRaWAN network server delivers device data to your application over standard interfaces. Tell us the system and we will confirm the route.</p></details><details><summary>Do you build custom tags?</summary><p>Yes. Nebulae offers hardware and firmware design to build tags around your requirements.</p></details></div></div></div></div></section>
+<section class="sl-section" id="proposal"><div class="container"><div class="row g-4 align-items-start"><div class="col-lg-5"><div class="sl-eyebrow-sm">Get a proposal · IoT in Logistics</div><h2 class="sl-section-title">Tell Us About Your Project</h2>
+<p class="slx-note">Share a few details and our team will reply with product suggestions and next steps. Prefer e-mail? Write to <a href="mailto:sales@nebulae.io">sales@nebulae.io</a>.</p></div>
+<div class="col-lg-7"><form class="slx-form" data-nbl-proposal data-industry="IoT in Logistics" novalidate>
+<div class="row g-3"><div class="col-sm-6"><label for="pfName">Name *</label><input id="pfName" name="name" type="text" autocomplete="name" required></div>
+<div class="col-sm-6"><label for="pfEmail">Work e-mail *</label><input id="pfEmail" name="email" type="email" autocomplete="email" required></div>
+<div class="col-sm-6"><label for="pfCompany">Company</label><input id="pfCompany" name="company" type="text" autocomplete="organization"></div>
+<div class="col-sm-6"><label for="pfPhone">Phone</label><input id="pfPhone" name="phone" type="tel" autocomplete="tel"></div>
+<div class="col-12"><label for="pfMsg">Your project</label><textarea id="pfMsg" name="message" rows="4" placeholder="What do you want to connect, how many devices, and where?"></textarea></div>
+<div class="col-12"><button type="submit" class="sl-sol-btn sl-sol-btn--primary">Request Proposal</button></div></div></form></div></div></div></section>
+<section class="sl-related"><div class="container"><p class="sl-related__title">Related Solutions</p><div class="row g-3"><div class="col-6 col-md-3"><a href="../industries/telematics-fleet.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(234,88,12,.1);color:#ea580c;">Industry</span><p class="sl-rel-card__name">Telematics &amp; Fleet</p><p class="sl-rel-card__desc">Cellular and LoRa tracking hardware for vehicles and fleets.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../industries/industrial-iot.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(124,58,237,.1);color:#7c3aed;">Industry</span><p class="sl-rel-card__name">Industrial IoT</p><p class="sl-rel-card__desc">SCADA RTUs, industrial gateways and wireless sensor networks.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../services/lorawan-network-server.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(124,58,237,.1);color:#7c3aed;">Software</span><p class="sl-rel-card__name">LoRaWAN Network Server</p><p class="sl-rel-card__desc">Network server to onboard, manage and secure LoRaWAN gateways and devices.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../services/lora-management-system.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Software</span><p class="sl-rel-card__name">LoRa Management System</p><p class="sl-rel-card__desc">Cloud platform to monitor and control street lights.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div></div></div></section>
 <section style="padding:4rem 0;background:#fff;"><div class="container"><div class="sl-cta-wrap">
   <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:.75rem;">Talk to Us About Logistics IoT</h2>
   <p style="color:rgba(255,255,255,.6);font-size:.97rem;max-width:560px;margin:0 auto 2rem;">Tell us what you need to track and we will propose a solution.</p>
@@ -697,7 +715,7 @@
 
       <!-- Navigate -->
       <div class="col-6 col-md-2">
-        <h6 class="atl-footer__heading">Navigate</h6>
+        <p class="atl-footer__heading">Navigate</p>
         <ul class="atl-footer__list">
           <li><a href="#home" onclick="return navClick('home')">Home</a></li>
           <li><a href="../about.html">About Us</a></li>
@@ -706,13 +724,14 @@
           <li><a href="../solutions.html">Solutions</a></li>
           <li><a href="../industries.html">Industries</a></li>
            <li><a href="../resources.html">Resources</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
           <li><a href="../contact.html">Contact Us</a></li>
         </ul>
       </div>
 
       <!-- Services & Solutions -->
       <div class="col-6 col-md-3">
-        <h6 class="atl-footer__heading">Services</h6>
+        <p class="atl-footer__heading">Services</p>
         <ul class="atl-footer__list">
           <li><a href="../services/iot-product-development.html">IoT Product Development</a></li>
           <li><a href="../services/embedded-hardware-design.html">Embedded Hardware Design</a></li>
@@ -721,7 +740,7 @@
           <li><a href="../services/pcb-design-services.html">PCB Design Services</a></li>
           <li><a href="../services/iot-consulting.html">IoT Consulting</a></li>
         </ul>
-        <h6 class="atl-footer__heading mt-3">Solutions</h6>
+        <p class="atl-footer__heading mt-3">Solutions</p>
         <ul class="atl-footer__list">
           <li><a href="../solutions/smart-water-meter.html">Smart Water Meter</a></li>
           <li><a href="../solutions/smart-electric-meter.html">Smart Electric Meter</a></li>
@@ -732,7 +751,7 @@
 
       <!-- Products & Contact -->
       <div class="col-12 col-md-3">
-        <h6 class="atl-footer__heading">Products</h6>
+        <p class="atl-footer__heading">Products</p>
         <ul class="atl-footer__list">
           <li><a href="../products.html?proto=lora&amp;type=module">LoRa — Module &amp; Gateway</a></li>
           <li><a href="../products.html?proto=wisun&amp;type=module">Wi-SUN — Module &amp; Gateway</a></li>
@@ -741,7 +760,7 @@
           <li><a href="../products.html?proto=ble&amp;type=module">BLE — Module &amp; Gateway</a></li>
           <li><a href="../products.html">View All Products →</a></li>
         </ul>
-        <h6 class="atl-footer__heading mt-3">Contact</h6>
+        <p class="atl-footer__heading mt-3">Contact</p>
         <ul class="atl-footer__list">
           <li><a href="tel:+9102692232501">+91-02692-232501 / 232502</a></li>
           <li><a href="mailto:sales@nebulae.io">sales@nebulae.io</a></li>
@@ -759,6 +778,20 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/nebulae-nav.js"></script>
 <script src="../assets/js/nebulae-page.js"></script>
+<!-- ═══ FLOATING QUOTE FORM (same on every page; wired by nebulae-forms.js + nebulae-float.js) ═══ -->
+<div id="nblFloatForm" role="dialog" aria-label="Quick quote form">
+  <div class="nbl-float-tab" aria-label="Toggle quote form">Get Quote</div>
+  <div class="nbl-float-form-inner">
+    <h4>Quick Quote Request</h4>
+    <input class="nbl-float-input" id="ffName" type="text" placeholder="Your Name" aria-label="Your name" autocomplete="name">
+    <input class="nbl-float-input" id="ffEmail" type="email" placeholder="Work Email" aria-label="Work email" autocomplete="email">
+    <input class="nbl-float-input" id="ffPhone" type="tel" placeholder="Phone Number" aria-label="Phone number" autocomplete="tel">
+    <textarea class="nbl-float-input" id="ffMsg" rows="3" placeholder="Tell us about your project..." aria-label="Project details" style="resize:vertical;"></textarea>
+    <button class="nbl-float-submit" type="button" onclick="submitFloatForm()">Send Request</button>
+  </div>
+</div>
+
+<script src="../assets/js/nebulae-forms.js"></script>
 <script src="../assets/js/nebulae-float.js"></script>
 </body>
 </html>

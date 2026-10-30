@@ -252,7 +252,25 @@
     };
   }
 
-  function init() { initContact(); initNewsletters(); initFloat(); initSample(); }
+  /* ═════════ 5. INDUSTRY PROPOSAL FORM  (form[data-nbl-proposal] on industries/*.html) ═════════ */
+  function initProposal() {
+    [].slice.call(document.querySelectorAll('form[data-nbl-proposal]')).forEach(function (form) {
+      addHoneypot(form);
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var g = function (n) { var f = form.elements[n]; return f ? String(f.value || '').trim() : ''; };
+        var btn = form.querySelector('button[type=submit]'), name = g('name'), email = g('email'), ind = form.getAttribute('data-industry') || 'Industry';
+        if (!name) { toast('Please enter your name.', true); form.elements.name.focus(); return; }
+        if (!EMAIL_RE.test(email)) { toast('Please enter a valid work email.', true); form.elements.email.focus(); return; }
+        if (trapped(form)) return;
+        var label = btn.textContent; btn.disabled = true; btn.textContent = 'Sending…';
+        send('quote', { form_type: 'Industry proposal request — ' + ind, subject: 'Proposal request (' + ind + ') — ' + name, from_name: name, from_email: email, phone: g('phone'), company: g('company'), product: ind, message: g('message') || '(no message)' })
+          .then(function () { form.reset(); btn.textContent = '✓ Sent!'; toast('Thank you — we will get back to you soon.'); setTimeout(function () { btn.textContent = label; btn.disabled = false; }, 2500); },
+                function (err) { if (!err || err.message !== 'cooldown') console.error('[nebulae-forms]', err); toast(friendly(err), true); btn.disabled = false; btn.textContent = label; });
+      });
+    });
+  }
+  function init() { initContact(); initNewsletters(); initFloat(); initSample(); initProposal(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 
   window.NebulaeForms = { send: send, config: CONFIG };

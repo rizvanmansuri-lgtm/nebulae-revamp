@@ -31,6 +31,7 @@
     .sl-rel-card__desc{font-size:.8rem;color:#6b7280;line-height:1.6}
     .sl-rel-card__arrow{font-size:.78rem;font-weight:700;color:#4f46e5;margin-top:.75rem;display:block}
   </style>
+  <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="stylesheet" href="../assets/css/nebulae-fixes.css">
 </head>
 <body>
@@ -495,6 +496,7 @@
                     
                     <li><a href="../about.html#team"><span class="atl-mega__dot"></span>Our Team</a></li>
                     <li><a href="../about.html#partners"><span class="atl-mega__dot"></span>Partners &amp; Certifications</a></li>
+                    <li><a href="../faq.html"><span class="atl-mega__dot"></span>FAQ</a></li>
                   </ul>
                 </div>
                 <div class="atl-mega__col">
@@ -616,6 +618,7 @@
           <a class="atl-nav__msublink" href="../about.html">About Nebulae</a>
           <a class="atl-nav__msublink" href="../about.html#mission">Our Mission &amp; Vision</a>
           <a class="atl-nav__msublink" href="../about.html#team">Our Team</a>
+          <a class="atl-nav__msublink" href="../faq.html">FAQ</a>
           <a class="atl-nav__msublink" href="../blog.html">Blog</a>
           <a class="atl-nav__msublink" href="../careers.html">Careers</a>
           <a class="atl-nav__msublink" href="../events.html">Upcoming Events</a>
@@ -679,6 +682,7 @@
 <section class="sl-section" id="wisun"><div class="container"><div class="sl-eyebrow-sm">Wi-SUN Hardware</div><h2 class="sl-section-title">Module and DCU Comparison</h2><div class="row g-4 mt-1"><div class="col-lg-6"><h3 class="slx-sub">Wi-SUN modules</h3><div class="slx-table-wrap"><table class="sl-compare-table"><thead><tr><th>Parameter</th><th>NM0221-I  /  NLN0725-IS</th></tr></thead><tbody><tr><td>Frequency band</td><td>863 – 876 MHz (both)</td></tr><tr><td>Modulation</td><td>2/4 (G)FSK with configurable shaping, OQPSK DSSS, (G)MSK, OOK TX</td></tr><tr><td>Standard</td><td>IEEE 802.15.4 compliant</td></tr><tr><td>Memory</td><td>Up to 1024 kB flash, 256 kB RAM</td></tr><tr><td>Firmware update</td><td>Over-the-air (OTA)</td></tr><tr><td>Antenna</td><td>U.FL connector for external antenna / PCB antenna feedline</td></tr><tr><td>TX power</td><td>NLN0725-IS: up to +27/30 dBm</td></tr><tr><td>Certification</td><td>NM0221-I: WPC certified</td></tr></tbody></table></div></div><div class="col-lg-6"><h3 class="slx-sub">Wi-SUN DCU NLG8520</h3><div class="slx-table-wrap"><table class="sl-compare-table"><thead><tr><th>Parameter</th><th>Specification</th></tr></thead><tbody><tr><td>Network size</td><td>Up to 250 nodes on one DCU</td></tr><tr><td>Operating system</td><td>Open-source embedded Linux</td></tr><tr><td>Antenna</td><td>External fibre-glass, 5 dBi gain</td></tr><tr><td>Backhaul</td><td>LTE and Ethernet</td></tr><tr><td>Battery backup</td><td>Up to 6 hours</td></tr><tr><td>Surge protection</td><td>10 kV</td></tr><tr><td>Enclosure</td><td>IP65, fire-retardant case</td></tr><tr><td>Input supply</td><td>Wide input range — no extra over-voltage protection needed</td></tr></tbody></table></div></div></div></div></section>
 <section class="sl-section" id="architecture"><div class="container"><div class="row g-5 align-items-start"><div class="col-lg-6"><div class="sl-eyebrow-sm">System Architecture</div><h2 class="sl-section-title">From Smart Meter to Billing</h2><div class="sl-arch-card"><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;font:800 .85rem Outfit,sans-serif;">1</div><span class="sl-arch-layer__label">Smart meters + Wi-SUN module / NIC card</span><span class="sl-arch-layer__desc">IS 16444 meters, sub-GHz RF</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;font:800 .85rem Outfit,sans-serif;">2</div><span class="sl-arch-layer__label">Wi-SUN DCU NLG8520</span><span class="sl-arch-layer__desc">Mesh gateway, up to 250 nodes, LTE / Ethernet</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;font:800 .85rem Outfit,sans-serif;">3</div><span class="sl-arch-layer__label">Network Management System (NMS)</span><span class="sl-arch-layer__desc">Dashboard and RF-level network graph</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;font:800 .85rem Outfit,sans-serif;">4</div><span class="sl-arch-layer__label">Head End System (HES)</span><span class="sl-arch-layer__desc">DLMS/COSEM acquisition, REST APIs to MDMS and billing</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;font:800 .85rem Outfit,sans-serif;">5</div><span class="sl-arch-layer__label">Energy+ mobile app</span><span class="sl-arch-layer__desc">Consumption and recharge for end users</span></div></div><p class=slx-note>Diagram: Energy AMI architecture from the Nebulae Smart Electricity Metering brochure.</p></div><div class="col-lg-6"><div class="slx-arch-img"><img loading="lazy" src="../assets/images/solutions/elec-ami-arch.jpg" alt="From Smart Meter to Billing"/></div></div></div></div></section>
 <section class="sl-section sl-section--surf" id="software"><div class="container slx-cards"><div class="sl-eyebrow-sm">Software Offerings</div><h2 class="sl-section-title">NMS, HES and Energy+ App</h2><div class="row g-3 mt-1 mb-3"><div class="col-6 col-md-4"><div class="slx-stat"><b>20,000+</b><span>Meters on HES</span></div></div><div class="col-6 col-md-4"><div class="slx-stat"><b>1+ Lakh MW</b><span>Energy managed</span></div></div><div class="col-6 col-md-4"><div class="slx-stat"><b>10+ Crore</b><span>Recharges handled</span></div></div></div><div class="row g-3 mt-1"><div class="col-12 col-sm-6 col-lg-4"><div class="slx-card"><div class="slx-card__n">1</div><h3>Network Management System</h3><p>Dashboard overview of the field network and an RF-level network graph for the Wi-SUN mesh.</p></div></div><div class="col-12 col-sm-6 col-lg-4"><div class="slx-card"><div class="slx-card__n">2</div><h3>Head End System (HES)</h3><p>Centralised interface for all meter data; compatible with IS 16444 meters; GPRS and RF interfaces; prepaid and postpaid billing including net and gross metering; grid and DG consumption history; integrates with MDMS and third-party utility systems.</p></div></div><div class="col-12 col-sm-6 col-lg-4"><div class="slx-card"><div class="slx-card__n">3</div><h3>Energy+ mobile app</h3><p>Consumption and recharge information for consumers on a smartphone.</p></div></div><div class="col-12 col-sm-6 col-lg-4"><div class="slx-card"><div class="slx-card__n">4</div><h3>Modules for any meter</h3><p>Sub-GHz RF NIC cards give existing energy meters a communication path to the DCU and HES.</p></div></div></div><p class="slx-note">HES figures as printed in the Nebulae Smart Electricity Metering brochure.</p></div></section>
+<!-- ADD WHEN AVAILABLE: case study (key case_study) and certifications (key certs) in tools/industries_extra.py -->
 <section class="sl-related"><div class="container"><p class="sl-related__title">Related Solutions</p><div class="row g-3"><div class="col-6 col-md-3"><a href="../solutions/smart-water-meter.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(37,99,235,.1);color:#2563eb;">AMI</span><p class="sl-rel-card__name">Smart Water Meter</p><p class="sl-rel-card__desc">LoRa smart water meter (Nebulae Pravah 15) with AMR, gateway and HES.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../solutions/smart-gas-meter.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(124,58,237,.1);color:#7c3aed;">AMR</span><p class="sl-rel-card__name">Smart Gas Meter</p><p class="sl-rel-card__desc">Battery-powered LoRaWAN AMR retrofit for diaphragm gas meters.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../solutions/smart-street-light.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Smart City</span><p class="sl-rel-card__name">Smart Street Light</p><p class="sl-rel-card__desc">Pole-mount, retrofit and NEMA controllers, CCMS panels and LMS software.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../solutions/transformer-monitoring.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(37,99,235,.1);color:#2563eb;">DISCOM</span><p class="sl-rel-card__name">Transformer Monitoring</p><p class="sl-rel-card__desc">DTMS: real-time electrical and sensor monitoring for distribution transformers.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div></div></div></section>
 <section style="padding:4rem 0;background:#fff;"><div class="container"><div class="sl-cta-wrap">
   <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:.75rem;">Roll Out Wi-SUN Smart Metering</h2>
@@ -701,7 +705,7 @@
 
       <!-- Navigate -->
       <div class="col-6 col-md-2">
-        <h6 class="atl-footer__heading">Navigate</h6>
+        <p class="atl-footer__heading">Navigate</p>
         <ul class="atl-footer__list">
           <li><a href="#home" onclick="return navClick('home')">Home</a></li>
           <li><a href="../about.html">About Us</a></li>
@@ -710,13 +714,14 @@
           <li><a href="../solutions.html">Solutions</a></li>
           <li><a href="../industries.html">Industries</a></li>
            <li><a href="../resources.html">Resources</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
           <li><a href="../contact.html">Contact Us</a></li>
         </ul>
       </div>
 
       <!-- Services & Solutions -->
       <div class="col-6 col-md-3">
-        <h6 class="atl-footer__heading">Services</h6>
+        <p class="atl-footer__heading">Services</p>
         <ul class="atl-footer__list">
           <li><a href="../services/iot-product-development.html">IoT Product Development</a></li>
           <li><a href="../services/embedded-hardware-design.html">Embedded Hardware Design</a></li>
@@ -725,7 +730,7 @@
           <li><a href="../services/pcb-design-services.html">PCB Design Services</a></li>
           <li><a href="../services/iot-consulting.html">IoT Consulting</a></li>
         </ul>
-        <h6 class="atl-footer__heading mt-3">Solutions</h6>
+        <p class="atl-footer__heading mt-3">Solutions</p>
         <ul class="atl-footer__list">
           <li><a href="../solutions/smart-water-meter.html">Smart Water Meter</a></li>
           <li><a href="../solutions/smart-electric-meter.html">Smart Electric Meter</a></li>
@@ -736,7 +741,7 @@
 
       <!-- Products & Contact -->
       <div class="col-12 col-md-3">
-        <h6 class="atl-footer__heading">Products</h6>
+        <p class="atl-footer__heading">Products</p>
         <ul class="atl-footer__list">
           <li><a href="../products.html?proto=lora&amp;type=module">LoRa — Module &amp; Gateway</a></li>
           <li><a href="../products.html?proto=wisun&amp;type=module">Wi-SUN — Module &amp; Gateway</a></li>
@@ -745,7 +750,7 @@
           <li><a href="../products.html?proto=ble&amp;type=module">BLE — Module &amp; Gateway</a></li>
           <li><a href="../products.html">View All Products →</a></li>
         </ul>
-        <h6 class="atl-footer__heading mt-3">Contact</h6>
+        <p class="atl-footer__heading mt-3">Contact</p>
         <ul class="atl-footer__list">
           <li><a href="tel:+9102692232501">+91-02692-232501 / 232502</a></li>
           <li><a href="mailto:sales@nebulae.io">sales@nebulae.io</a></li>
@@ -763,6 +768,20 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/nebulae-nav.js"></script>
 <script src="../assets/js/nebulae-page.js"></script>
+<!-- ═══ FLOATING QUOTE FORM (same on every page; wired by nebulae-forms.js + nebulae-float.js) ═══ -->
+<div id="nblFloatForm" role="dialog" aria-label="Quick quote form">
+  <div class="nbl-float-tab" aria-label="Toggle quote form">Get Quote</div>
+  <div class="nbl-float-form-inner">
+    <h4>Quick Quote Request</h4>
+    <input class="nbl-float-input" id="ffName" type="text" placeholder="Your Name" aria-label="Your name" autocomplete="name">
+    <input class="nbl-float-input" id="ffEmail" type="email" placeholder="Work Email" aria-label="Work email" autocomplete="email">
+    <input class="nbl-float-input" id="ffPhone" type="tel" placeholder="Phone Number" aria-label="Phone number" autocomplete="tel">
+    <textarea class="nbl-float-input" id="ffMsg" rows="3" placeholder="Tell us about your project..." aria-label="Project details" style="resize:vertical;"></textarea>
+    <button class="nbl-float-submit" type="button" onclick="submitFloatForm()">Send Request</button>
+  </div>
+</div>
+
+<script src="../assets/js/nebulae-forms.js"></script>
 <script src="../assets/js/nebulae-float.js"></script>
 </body>
 </html>

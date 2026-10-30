@@ -50,6 +50,7 @@
   <!-- Product Detail page styles -->
   <link rel="stylesheet" href="./assets/css/product-detail.css">
   <link rel="stylesheet" href="./assets/css/nebulae-fixes.css">
+  <link rel="icon" type="image/png" href="./favicon.png">
 </head>
 <body>
 <div id="nblProgressBar" role="progressbar" aria-label="Page scroll progress"></div>
@@ -513,6 +514,7 @@
                     
                     <li><a href="about.html#team"><span class="atl-mega__dot"></span>Our Team</a></li>
                     <li><a href="about.html#partners"><span class="atl-mega__dot"></span>Partners &amp; Certifications</a></li>
+                    <li><a href="faq.html"><span class="atl-mega__dot"></span>FAQ</a></li>
                   </ul>
                 </div>
                 <div class="atl-mega__col">
@@ -634,6 +636,7 @@
           <a class="atl-nav__msublink" href="about.html">About Nebulae</a>
           <a class="atl-nav__msublink" href="about.html#mission">Our Mission &amp; Vision</a>
           <a class="atl-nav__msublink" href="about.html#team">Our Team</a>
+          <a class="atl-nav__msublink" href="faq.html">FAQ</a>
           <a class="atl-nav__msublink" href="blog.html">Blog</a>
           <a class="atl-nav__msublink" href="careers.html">Careers</a>
           <a class="atl-nav__msublink" href="events.html">Upcoming Events</a>
@@ -1336,6 +1339,20 @@ function announceCopied() {
   });
 })();
 </script>
+<!-- ═══ FLOATING QUOTE FORM (same on every page; wired by nebulae-forms.js + nebulae-float.js) ═══ -->
+<div id="nblFloatForm" role="dialog" aria-label="Quick quote form">
+  <div class="nbl-float-tab" aria-label="Toggle quote form">Get Quote</div>
+  <div class="nbl-float-form-inner">
+    <h4>Quick Quote Request</h4>
+    <input class="nbl-float-input" id="ffName" type="text" placeholder="Your Name" aria-label="Your name" autocomplete="name">
+    <input class="nbl-float-input" id="ffEmail" type="email" placeholder="Work Email" aria-label="Work email" autocomplete="email">
+    <input class="nbl-float-input" id="ffPhone" type="tel" placeholder="Phone Number" aria-label="Phone number" autocomplete="tel">
+    <textarea class="nbl-float-input" id="ffMsg" rows="3" placeholder="Tell us about your project..." aria-label="Project details" style="resize:vertical;"></textarea>
+    <button class="nbl-float-submit" type="button" onclick="submitFloatForm()">Send Request</button>
+  </div>
+</div>
+
+<script src="./assets/js/nebulae-forms.js"></script>
 <script src="./assets/js/nebulae-float.js"></script>
 </body>
 </html>

@@ -59,6 +59,15 @@
     function ctaVis() { var s = (window.pageYOffset || doc.documentElement.scrollTop) > 400; cta.style.opacity = s ? '1' : '0'; cta.style.pointerEvents = s ? 'auto' : 'none'; cta.style.transform = s ? 'translateY(0)' : 'translateY(20px)'; cta.style.transition = 'opacity .3s,transform .3s'; }
     window.addEventListener('scroll', ctaVis, { passive: true }); ctaVis();
 
+    /* 3b ─ accessibility: tie every orphan <label> to its field (same .fld wrapper) */
+    var uid = 0;
+    [].slice.call(doc.querySelectorAll('label:not([for])')).forEach(function (lb) {
+      if (lb.querySelector('input,select,textarea')) return;
+      var wrap = lb.parentElement, ctl = wrap && wrap.querySelector('input,select,textarea'); if (!ctl) return;
+      if (!ctl.id) ctl.id = 'nblf' + (++uid);
+      lb.setAttribute('for', ctl.id);
+    });
+
     /* 4 ─ Get-Quote drawer */
     var box = doc.getElementById('nblFloatForm');
     if (box) {
@@ -74,7 +83,7 @@
       function setOpen(o) {
         box.classList.toggle('open', o);
         if (tab) tab.setAttribute('aria-expanded', o ? 'true' : 'false');
-        box.setAttribute('aria-hidden', o ? 'false' : 'true');
+        box.setAttribute('aria-hidden', o ? 'false' : 'true'); if (inner) { if (o) inner.removeAttribute('inert'); else inner.setAttribute('inert', ''); }
         if (o) { var f = box.querySelector('input,textarea'); if (f) setTimeout(function () { try { f.focus({ preventScroll: true }); } catch (e) {} }, 350); }
       }
       setOpen(false);
@@ -88,7 +97,7 @@
       doc.addEventListener('click', function (e) { if (box.classList.contains('open') && !box.contains(e.target)) setOpen(false); });
       doc.addEventListener('keydown', function (e) { if (e.key === 'Escape' && box.classList.contains('open')) { setOpen(false); if (tab) tab.focus(); } });
       /* other scripts that remove .open (e.g. after a successful send) keep aria in sync */
-      new MutationObserver(function () { var o = box.classList.contains('open'); if (tab) tab.setAttribute('aria-expanded', o ? 'true' : 'false'); box.setAttribute('aria-hidden', o ? 'false' : 'true'); }).observe(box, { attributes: true, attributeFilter: ['class'] });
+      new MutationObserver(function () { var o = box.classList.contains('open'); if (tab) tab.setAttribute('aria-expanded', o ? 'true' : 'false'); box.setAttribute('aria-hidden', o ? 'false' : 'true'); if (inner) { if (o) inner.removeAttribute('inert'); else inner.setAttribute('inert', ''); } }).observe(box, { attributes: true, attributeFilter: ['class'] });
     }
   });
 })();

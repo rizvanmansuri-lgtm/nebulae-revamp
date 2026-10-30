@@ -3,77 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart City Solutions | Nebulae — IoT for Urban Infrastructure</title>
-  <meta name="description" content="Nebulae IoT solutions for smart city deployments — smart street lighting, parking sensors, waste management, air quality monitoring, traffic management, and city-wide LoRaWAN networks."/>
-  <meta name="keywords" content="smart city IoT India, smart street light, parking sensor LoRa, air quality monitoring, Smart City Mission IoT"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://www.nebulae.io/industries/smart-city-solutions.html"/>
-  <meta property="og:title" content="Smart City Solutions | Nebulae — IoT for Urban Infrastructure"/>
-  <meta property="og:description" content="Nebulae IoT solutions for smart city deployments — smart street lighting, parking sensors, waste management, air quality monitoring, traffic management, and city-wide LoRaWAN networks."/>
-  <meta property="og:type" content="website"/>
+  <title>Smart City IoT — Street Lighting, EV Charging &amp; City Networks | Nebulae</title>
+  <meta name="description" content="Nebulae smart-city IoT: LoRa smart street lighting, CCMS panels, CityCharge EV charging, transformer monitoring and LoRaWAN gateways." />
+  <meta name="keywords" content="smart city IoT, smart street light, CCMS, EV charging, LoRaWAN gateway, LoRa management system" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.nebulae.io/industries/smart-city-solutions.html" />
+  <meta property="og:title" content="Smart City IoT — Street Lighting, EV Charging &amp; City Networks | Nebulae" />
+  <meta property="og:description" content="Nebulae smart-city IoT: LoRa smart street lighting, CCMS panels, CityCharge EV charging, transformer monitoring and LoRaWAN gateways." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/nebulae-nav.css">
   <link rel="stylesheet" href="../assets/css/solutions.css">
+  <link rel="stylesheet" href="../assets/css/solutions-extra.css">
   <style>
-    .ind-hero{background:linear-gradient(135deg,#03031a 0%,#07072a 50%,#0d0d3a 100%);padding:5rem 0 4rem;position:relative;overflow:hidden;}
-    .ind-hero__grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(6,182,212,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(6,182,212,.055) 1px,transparent 1px);background-size:60px 60px;}
-    .ind-hero__orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;}
-    .ind-hero__orb--1{width:460px;height:460px;background:radial-gradient(circle,rgba(79,70,229,.28),transparent 70%);top:-100px;left:-60px;}
-    .ind-hero__orb--2{width:360px;height:360px;background:radial-gradient(circle,rgba(6,182,212,.22),transparent 70%);top:20%;right:-60px;}
-    .ind-breadcrumb{display:flex;align-items:center;gap:.5rem;margin-bottom:1.25rem;font-size:.78rem;color:rgba(255,255,255,.4);}
-    .ind-breadcrumb a{color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;}
-    .ind-breadcrumb a:hover{color:#06b6d4;}
-    .ind-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(6,182,212,.12);border:1px solid rgba(6,182,212,.3);color:#06b6d4;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.35rem .9rem;border-radius:100px;margin-bottom:1.1rem;}
-    .ind-hero__title{font-family:'Outfit',sans-serif;font-size:clamp(2rem,4.5vw,3.6rem);font-weight:800;color:#fff;line-height:1.08;letter-spacing:-.025em;margin-bottom:.9rem;}
-    .ind-hero__title span{background:linear-gradient(120deg,#06b6d4,#818cf8,#4f46e5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-    .ind-hero__desc{font-size:.98rem;color:rgba(255,255,255,.62);line-height:1.78;max-width:580px;margin-bottom:2rem;}
-    .ind-pill{display:inline-flex;align-items:center;gap:.4rem;padding:.38rem .95rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:100px;font-size:.76rem;font-weight:600;color:rgba(255,255,255,.65);text-decoration:none;transition:all .22s;margin:.2rem;}
-    .ind-pill:hover{background:rgba(6,182,212,.15);border-color:rgba(6,182,212,.4);color:#06b6d4;}
-    .ind-section{padding:5rem 0;}
-    .ind-section--surf{background:#f5f7ff;}
-    .ind-section--dark{background:linear-gradient(135deg,#07071e,#0e0e38);}
-    .ind-feat-list{list-style:none;margin:0 0 1.75rem;padding:0;display:flex;flex-direction:column;gap:.65rem;}
-    .ind-feat-list li{display:flex;align-items:flex-start;gap:.75rem;font-size:.9rem;color:#374151;}
-    .ind-feat-icon{width:22px;height:22px;border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;}
-    .ind-metric{background:#f0f3ff;border:1.5px solid #c7d2fe;border-radius:12px;padding:.65rem 1.1rem;text-align:center;min-width:110px;}
-    .ind-metric__val{font-family:'Outfit',sans-serif;font-size:1.4rem;font-weight:800;color:#4f46e5;line-height:1;display:block;}
-    .ind-metric__label{font-size:.68rem;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-top:.2rem;display:block;}
-    .ind-metrics{display:flex;flex-wrap:wrap;gap:.65rem;margin-bottom:1.75rem;}
-    .ind-img-card{border-radius:22px;overflow:hidden;position:relative;box-shadow:0 24px 64px rgba(79,70,229,.14);}
-    .ind-img-card img{width:100%;height:380px;object-fit:cover;display:block;}
-    .ind-img-card__stat{position:absolute;bottom:1.25rem;left:1.25rem;right:1.25rem;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-radius:14px;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;box-shadow:0 8px 32px rgba(0,0,0,.12);}
-    .ind-img-card__stat-item{text-align:center;flex:1;min-width:70px;}
-    .ind-img-card__stat-num{font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:800;color:#4f46e5;display:block;}
-    .ind-img-card__stat-label{font-size:.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;font-weight:600;}
-    .ind-table{width:100%;border-collapse:collapse;border-radius:16px;overflow:hidden;border:1.5px solid #e5e7eb;}
-    .ind-table th{padding:.9rem 1.1rem;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;background:#f8f9ff;border-bottom:2px solid #e5e7eb;}
-    .ind-table td{padding:.8rem 1.1rem;font-size:.84rem;color:#374151;border-bottom:1px solid #f3f4f6;}
-    .ind-table td:first-child{font-weight:700;color:#111827;background:#fafafe;}
-    .ind-table tr:last-child td{border-bottom:none;}
-    .ind-tag{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:.75rem;}
-    .ind-rel-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:1.5rem;display:block;text-decoration:none;transition:all .25s;height:100%;}
-    .ind-rel-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(79,70,229,.1);border-color:rgba(79,70,229,.25);}
-    .ind-rel-card__name{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:700;color:#111827;margin-bottom:.4rem;}
-    .ind-rel-card__desc{font-size:.8rem;color:#6b7280;line-height:1.6;}
-    .ind-rel-card__arrow{font-size:.78rem;font-weight:700;color:#4f46e5;margin-top:.75rem;display:block;}
-    .ind-cta-wrap{background:linear-gradient(135deg,#0a0a2e,#1a1a6e);border-radius:28px;padding:4.5rem 3rem;text-align:center;position:relative;overflow:hidden;}
-    .ind-cta-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(6,182,212,.18),transparent 50%),radial-gradient(circle at 80% 50%,rgba(79,70,229,.22),transparent 50%);pointer-events:none;}
-    .ind-btn-primary{display:inline-flex;align-items:center;gap:.45rem;padding:.85rem 1.85rem;border-radius:10px;background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;font-size:.9rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 8px 28px rgba(79,70,229,.35);}
-    .ind-btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(79,70,229,.5);color:#fff;}
-    .ind-btn-outline{display:inline-flex;align-items:center;gap:.45rem;padding:.82rem 1.75rem;border-radius:10px;background:transparent;color:rgba(255,255,255,.82);border:1.5px solid rgba(255,255,255,.25);font-size:.9rem;font-weight:600;font-family:'Outfit',sans-serif;text-decoration:none;transition:all .25s;}
-    .ind-btn-outline:hover{border-color:#06b6d4;color:#06b6d4;}
-    .ind-eyebrow-sm{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#4f46e5;background:rgba(79,70,229,.08);padding:.3rem .85rem;border-radius:100px;margin-bottom:.75rem;}
-    .ind-section-title{font-family:'Outfit',sans-serif;font-size:clamp(1.75rem,3.5vw,2.6rem);font-weight:800;color:#0a0a1e;line-height:1.1;letter-spacing:-.02em;margin-bottom:.75rem;}
-    .ind-chip{display:inline-flex;align-items:center;gap:.45rem;padding:.45rem 1rem;background:#fff;border:1.5px solid #e5e7eb;border-radius:100px;font-size:.78rem;font-weight:600;color:#374151;margin:.2rem;}
-    .ind-use-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:1.5rem;height:100%;transition:transform .25s,box-shadow .25s,border-color .25s;}
-    .ind-use-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(79,70,229,.08);border-color:rgba(79,70,229,.2);}
-    .ind-use-card__icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
-    .ind-use-card__title{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:800;color:#111827;margin-bottom:.4rem;}
-    .ind-use-card__desc{font-size:.82rem;color:#6b7280;line-height:1.65;}
+    .sl-hero{padding:5rem 0 4rem}
+    .sl-arch-card{margin-top:1.25rem}
+    .sl-arch-arrow:last-child{display:none}
+    .sl-related{padding:4rem 0;background:#f5f7ff}
+    .sl-related__title{font-family:'Outfit',sans-serif;font-size:1.35rem;font-weight:800;color:#111827;margin-bottom:1.5rem}
+    .sl-rel-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:1.5rem;display:block;text-decoration:none;transition:all .25s;height:100%}
+    .sl-rel-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(79,70,229,.1);border-color:rgba(79,70,229,.25)}
+    .sl-rel-card__tag{font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:.75rem;display:inline-block}
+    .sl-rel-card__name{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:700;color:#111827;margin-bottom:.4rem}
+    .sl-rel-card__desc{font-size:.8rem;color:#6b7280;line-height:1.6}
+    .sl-rel-card__arrow{font-size:.78rem;font-weight:700;color:#4f46e5;margin-top:.75rem;display:block}
   </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which platform controls the street lights?", "acceptedAnswer": {"@type": "Answer", "text": "The LoRa Management System: a cloud-based platform with a live map, individual and group control, a light planner, ticket management, alerts and reports."}}, {"@type": "Question", "name": "Can the same LoRaWAN network carry other devices?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A LoRaWAN gateway network can also carry sensor nodes such as environmental or parking sensors, and AMR devices for meters, because it is a standard protocol."}}, {"@type": "Question", "name": "What gateways are suitable for outdoor use?", "acceptedAnswer": {"@type": "Answer", "text": "The NLG6X40H-IN is IP67 and the NLG6X40G-IN is IP65. Both are 8-channel industrial LoRaWAN gateways with an 85–528 VAC input."}}, {"@type": "Question", "name": "How do we check coverage before installing?", "acceptedAnswer": {"@type": "Answer", "text": "Use the portable NLG8140 8-channel LoRaWAN concentrator for field testing, or ask us to plan a survey."}}, {"@type": "Question", "name": "Can the platforms connect to our existing city systems?", "acceptedAnswer": {"@type": "Answer", "text": "The Head End and management platforms offer REST APIs. Tell us the systems you use and we will confirm the integration route."}}]}</script>
+  <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="stylesheet" href="../assets/css/nebulae-fixes.css">
 </head>
 <body>
@@ -538,6 +497,7 @@
                     
                     <li><a href="../about.html#team"><span class="atl-mega__dot"></span>Our Team</a></li>
                     <li><a href="../about.html#partners"><span class="atl-mega__dot"></span>Partners &amp; Certifications</a></li>
+                    <li><a href="../faq.html"><span class="atl-mega__dot"></span>FAQ</a></li>
                   </ul>
                 </div>
                 <div class="atl-mega__col">
@@ -659,6 +619,7 @@
           <a class="atl-nav__msublink" href="../about.html">About Nebulae</a>
           <a class="atl-nav__msublink" href="../about.html#mission">Our Mission &amp; Vision</a>
           <a class="atl-nav__msublink" href="../about.html#team">Our Team</a>
+          <a class="atl-nav__msublink" href="../faq.html">FAQ</a>
           <a class="atl-nav__msublink" href="../blog.html">Blog</a>
           <a class="atl-nav__msublink" href="../careers.html">Careers</a>
           <a class="atl-nav__msublink" href="../events.html">Upcoming Events</a>
@@ -672,122 +633,75 @@
 </div><!-- /.atl-sticky-header -->
 </header>
 
-<section class="ind-hero">
-  <div class="ind-hero__grid"></div>
-  <div class="ind-hero__orb ind-hero__orb--1" style="background:radial-gradient(circle,rgba(37,99,235,.28),transparent 70%);"></div>
-  <div class="ind-hero__orb ind-hero__orb--2" style="background:radial-gradient(circle,rgba(6,182,212,.22),transparent 70%);"></div>
+<!-- HERO -->
+<section class="sl-hero">
+  <div class="sl-hero__grid"></div>
+  <div class="sl-hero__orb sl-hero__orb--1"></div>
+  <div class="sl-hero__orb sl-hero__orb--2"></div>
   <div class="container">
-    <div style="position:relative;z-index:2;">
-      <nav class="ind-breadcrumb">
+    <div class="sl-hero__inner">
+      <nav class="sl-breadcrumb" aria-label="breadcrumb">
         <a href="../index.html">Home</a><span>›</span>
         <a href="../industries.html">Industries</a><span>›</span>
         <span style="color:rgba(255,255,255,.65);">Smart City Solutions</span>
       </nav>
-      <div class="ind-eyebrow">Smart City · Urban IoT · AMRUT 2.0</div>
-      <h1 class="ind-hero__title">Smart City <span>IoT Solutions</span></h1>
-      <p class="ind-hero__desc">City-wide IoT infrastructure for Smart City Mission and AMRUT 2.0 — smart street lighting, parking, waste management, air quality, and traffic monitoring on LoRaWAN and Wi-SUN.</p>
-      <div style="display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:1.5rem;">
-        <a href="../contact.html" class="ind-btn-primary">Discuss Your Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
-        <a href="../solutions.html" class="ind-btn-outline">View Solutions</a>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.5rem;"><a href="#apps" class="ind-pill">Applications</a><a href="#network" class="ind-pill">Network</a><a href="#integrations" class="ind-pill">Integrations</a></div>
+      <div class="sl-eyebrow">Industry · Smart City</div>
+      <h1 class="sl-hero__title">Smart City IoT Solutions</h1>
+      <p class="sl-hero__desc">Street-light control, EV charging, utility metering and city-wide LoRaWAN connectivity from one set of hardware and software.</p>
+      <div class="sl-jump-pills"><a href="#overview" class="sl-jump-pill">Overview</a><a href="#challenges" class="sl-jump-pill">Challenges</a><a href="#products" class="sl-jump-pill">Products</a><a href="#usecases" class="sl-jump-pill">Use cases</a><a href="#arch" class="sl-jump-pill">System</a><a href="#faq" class="sl-jump-pill">FAQ</a><a href="#proposal" class="sl-jump-pill">Get a Proposal</a></div>
     </div>
   </div>
 </section>
-<section class="ind-section" id="overview">
+
+<!-- OVERVIEW -->
+<section class="sl-section" id="overview">
   <div class="container">
     <div class="row align-items-center g-5">
-      <div class="col-lg-6 order-lg-2">
-        <div class="ind-img-card">
-          <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=700&q=80" alt="Smart City IoT" loading="lazy"/>
-          <div class="ind-img-card__stat"><div class="ind-img-card__stat-item"><span class="ind-img-card__stat-num">LoRa</span><span class="ind-img-card__stat-label">Wi-SUN FAN</span></div><div class="ind-img-card__stat-item"><span class="ind-img-card__stat-num">15 km</span><span class="ind-img-card__stat-label">Coverage</span></div><div class="ind-img-card__stat-item"><span class="ind-img-card__stat-num">10K+</span><span class="ind-img-card__stat-label">Sensors/GW</span></div></div>
-        </div>
-      </div>
-      <div class="col-lg-6 order-lg-1">
-        <span class="ind-tag" style="background:rgba(37,99,235,.1);color:#2563eb;">Smart City Mission · AMRUT 2.0</span>
-        <h2 class="ind-section-title">LoRaWAN & Wi-SUN Smart City Network</h2>
-        <p style="font-size:.95rem;color:#374151;line-height:1.8;margin-bottom:1.5rem;">Nebulae's LoRaWAN and Wi-SUN infrastructure underpins smart city deployments across India — providing a single wireless network that connects street lights, parking sensors, waste bins, air quality monitors, and water meters to a unified city dashboard. Aligned with Smart City Mission and AMRUT 2.0 guidelines.</p>
-        <div class="ind-metrics"><div class="ind-metric" style="border-color:rgba(79,70,229,.25);"><span class="ind-metric__val" style="color:#4f46e5;">LoRaWAN</span><span class="ind-metric__label">Wi-SUN FAN</span></div><div class="ind-metric" style="border-color:rgba(79,70,229,.25);"><span class="ind-metric__val" style="color:#4f46e5;">15 km</span><span class="ind-metric__label">Range</span></div><div class="ind-metric" style="border-color:rgba(79,70,229,.25);"><span class="ind-metric__val" style="color:#4f46e5;">10K</span><span class="ind-metric__label">Sensors/GW</span></div><div class="ind-metric" style="border-color:rgba(79,70,229,.25);"><span class="ind-metric__val" style="color:#4f46e5;">SCADA</span><span class="ind-metric__label">Dashboard</span></div></div>
-        <ul class="ind-feat-list"><li><div class="ind-feat-icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Smart Street Lighting</strong> — Adaptive dimming, fault detection, energy metering — up to 42% energy saving</span></li><li><div class="ind-feat-icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Smart Parking</strong> — Ultrasonic / magnetometer slot sensors; real-time availability map; revenue system</span></li><li><div class="ind-feat-icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Waste Management</strong> — Fill-level sensors in bins; dynamic collection routing; cost and carbon reporting</span></li><li><div class="ind-feat-icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Air Quality Monitoring</strong> — PM2.5, PM10, CO, NO₂, SO₂, O₃, temperature, humidity — public display and alert</span></li><li><div class="ind-feat-icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Traffic & Crowd Monitoring</strong> — Radar-based vehicle count, queue length, pedestrian density — adaptive signal control</span></li></ul>
-        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;"><span class="ind-chip">LoRaWAN</span><span class="ind-chip">Wi-SUN FAN</span><span class="ind-chip">NB-IoT</span><span class="ind-chip">Zigbee</span><span class="ind-chip">Smart City Mission</span><span class="ind-chip">AMRUT 2.0</span></div>
-        <div style="display:flex;gap:.75rem;margin-top:1.75rem;flex-wrap:wrap;">
-          <a href="../contact.html" class="ind-btn-primary">Get a Proposal <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
-          <a href="../solutions.html" class="ind-btn-outline" style="background:transparent;color:#4f46e5;border-color:#c7d2fe;">View Solutions</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="ind-section ind-section--surf" id="apps">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="ind-eyebrow-sm">City Applications</span>
-      <h2 class="ind-section-title">What We Connect</h2>
-    </div>
-    <div class="row g-3">
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div><p class="ind-use-card__title">Smart Street Lighting</p><p class="ind-use-card__desc">Adaptive dimming, fault alert, energy metering per pole. Up to 42% energy saving.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><p class="ind-use-card__title">Smart Parking</p><p class="ind-use-card__desc">Real-time slot availability; guidance signage; revenue collection integration.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 22 16 8M22 2C22 2 10 4 6 10c-4 6-2 12-2 12s6 2 12-2c6-4 8-16 8-16z"/></svg></div><p class="ind-use-card__title">Waste Management</p><p class="ind-use-card__desc">Smart bin fill-level sensors; optimised collection routes; overflow prevention.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(6,182,212,.1);color:#06b6d4;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div><p class="ind-use-card__title">Air Quality Monitoring</p><p class="ind-use-card__desc">PM2.5/PM10/CO/NOₓ network; CPCB-aligned data; public display boards.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div><p class="ind-use-card__title">Smart Water Metering</p><p class="ind-use-card__desc">LoRaWAN AMI — IS 15500 compliant, remote valve, tamper detection.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(234,88,12,.1);color:#ea580c;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><p class="ind-use-card__title">Traffic Monitoring</p><p class="ind-use-card__desc">Radar vehicle count, queue detection, and adaptive signal timing.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><p class="ind-use-card__title">Public Safety</p><p class="ind-use-card__desc">Gunshot detection, panic poles, CCTV integration, and SOS kiosks.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(99,102,241,.1);color:#6366f1;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div><p class="ind-use-card__title">City Command Centre</p><p class="ind-use-card__desc">Unified SCADA dashboard — all city sensors on one GIS map.</p></div></div>
-    </div>
-  </div>
-</section>
-<section class="ind-section" id="network">
-  <div class="container">
-    <div class="row g-5">
       <div class="col-lg-6">
-        <span class="ind-eyebrow-sm">Network Architecture</span>
-        <h2 class="ind-section-title">One Network, All City Sensors</h2>
-        <p style="font-size:.9rem;color:#374151;line-height:1.75;margin-bottom:1.5rem;">A single LoRaWAN or Wi-SUN network can serve all city sensor applications — eliminating per-application SIM costs and providing a city-owned, sovereign network infrastructure.</p>
-        <div style="overflow-x:auto;">
-          <table class="ind-table">
-            <thead><tr><th>Parameter</th><th>LoRaWAN</th><th>Wi-SUN FAN</th></tr></thead>
-            <tbody>
-              <tr><td>Coverage per GW</td><td>2–15 km</td><td>Mesh — no limit</td></tr>
-              <tr><td>Sensors per GW</td><td>10,000+</td><td>Mesh (scalable)</td></tr>
-              <tr><td>Battery Life</td><td>5–10 years</td><td>3–7 years</td></tr>
-              <tr><td>Best for</td><td>Wide area, battery nodes</td><td>Dense mesh, smart meters</td></tr>
-              <tr><td>Smart City Mission</td><td>✓ Compliant</td><td>✓ Compliant</td></tr>
-            </tbody>
-          </table>
+        <div class="slx-hero-img">
+          <img src="../assets/images/solutions/sl-cover.jpg" alt="Smart street light with Nebulae controller" width="900" height="560"/>
+          <div class="sl-img-card__stat"><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">LoRaWAN</span><span class="sl-img-card__stat-label">City-scale network</span></div><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">CCMS</span><span class="sl-img-card__stat-label">Feeder panels</span></div><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">EV</span><span class="sl-img-card__stat-label">Charging on the pole</span></div></div>
         </div>
       </div>
-      <div class="col-lg-6" id="integrations">
-        <span class="ind-eyebrow-sm">Platform Integrations</span>
-        <h2 class="ind-section-title">ICCC & SCADA Ready</h2>
-        <ul class="ind-feat-list" style="margin-top:1.25rem;">
-          <li><div class="ind-feat-icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>ICCC Integration</strong> — Open API for Smart City Mission ICCC — REST, MQTT, WebSocket data feeds</span></li>
-          <li><div class="ind-feat-icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>GIS City Map</strong> — All sensors on a live GIS map with zone filters and drill-down detail</span></li>
-          <li><div class="ind-feat-icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>ERMS / Helpdesk</strong> — Automatic ticket creation from sensor alerts; field crew dispatch workflow</span></li>
-          <li><div class="ind-feat-icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Energy Analytics</strong> — Per-asset and per-zone kWh; carbon footprint; Smart City KPI reports</span></li>
-          <li><div class="ind-feat-icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>MoHUA Compliance</strong> — Data formats and KPI reporting aligned with MoHUA Smart City guidelines</span></li>
-        </ul>
+      <div class="col-lg-6">
+        <span class="sl-solution__tag" style="background:rgba(79,70,229,.1);color:#0d9488;">Urban infrastructure</span>
+        <h2 class="sl-solution__title" style="color:#111827;">Connect City Assets on One Platform</h2>
+        <p class="sl-solution__desc" style="color:#374151;">Cities use Nebulae controllers, CCMS panels and gateways to run lighting, EV charging and metering networks that report to a common management platform.</p><p class="sl-solution__desc" style="color:#374151;">The LoRa Management System controls street lights from a map, and the CityCharge unit adds EV charging to existing lighting infrastructure.</p>
+        <div class="sl-metrics"><div class="sl-metric"><span class="sl-metric__val">Lights</span><span class="sl-metric__label">Pole, retrofit, NEMA</span></div><div class="sl-metric"><span class="sl-metric__val">EV</span><span class="sl-metric__label">CityCharge unit</span></div><div class="sl-metric"><span class="sl-metric__val">Grid</span><span class="sl-metric__label">DTMS monitoring</span></div></div>
+        <ul class="sl-feat-list" id="features"><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#0d9488;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Smart street lighting</strong> — controllers, CCMS panels and cloud management</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#0d9488;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>EV charging</strong> — CityCharge CCMS + AC charger in one unit</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#0d9488;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>City-wide LoRaWAN</strong> — multi-channel gateways, IP65 and IP67</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#0d9488;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Utility metering</strong> — water, gas and electricity AMR/AMI</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#0d9488;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Transformer monitoring</strong> — DTMS for distribution transformers</span></li></ul>
+        <div class="sl-products-strip"><a href="../products.html?proto=lora&amp;type=gateway" class="sl-product-chip">LoRaWAN Gateways</a><a href="../solutions/smart-street-light.html" class="sl-product-chip">Smart Street Light</a><a href="../services/lora-management-system.html" class="sl-product-chip">LoRa Management System</a><a href="../services/cms-ev-charging-management-solution.html" class="sl-product-chip">CityCharge CCMS</a></div>
+        <div style="display:flex;gap:.75rem;margin-top:1.75rem;flex-wrap:wrap;">
+          <a href="#proposal" class="sl-sol-btn sl-sol-btn--primary">Get a Proposal</a>
+          <a href="#products" class="sl-sol-btn sl-sol-btn--outline">View Products</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
-<section class="ind-section ind-section--surf">
-  <div class="container">
-    <p style="font-family:'Outfit',sans-serif;font-size:1.35rem;font-weight:800;color:#111827;margin-bottom:1.5rem;">Related Industries</p>
-    <div class="row g-3"><div class="col-6 col-md-3"><a href="building-management-system.html" class="ind-rel-card"><span class="ind-tag" style="background:rgba(13,148,136,.1);color:#0d9488;">BMS</span><p class="ind-rel-card__name">Building Management System</p><p class="ind-rel-card__desc">Commercial BMS — HVAC, access, energy on one IoT platform.</p><span class="ind-rel-card__arrow">Explore →</span></a></div><div class="col-6 col-md-3"><a href="iot-energy-utilities.html" class="ind-rel-card"><span class="ind-tag" style="background:rgba(234,88,12,.1);color:#ea580c;">Utilities</span><p class="ind-rel-card__name">IoT in Energy & Utilities</p><p class="ind-rel-card__desc">Smart metering, grid monitoring, and utility automation.</p><span class="ind-rel-card__arrow">Explore →</span></a></div><div class="col-6 col-md-3"><a href="industrial-iot.html" class="ind-rel-card"><span class="ind-tag" style="background:rgba(217,119,6,.1);color:#d97706;">IIoT</span><p class="ind-rel-card__name">Industrial IoT</p><p class="ind-rel-card__desc">Factory automation, predictive maintenance, and asset tracking.</p><span class="ind-rel-card__arrow">Explore →</span></a></div><div class="col-6 col-md-3"><a href="home-security-automation.html" class="ind-rel-card"><span class="ind-tag" style="background:rgba(79,70,229,.1);color:#4f46e5;">Smart Home</span><p class="ind-rel-card__name">Home Security</p><p class="ind-rel-card__desc">Residential security and smart automation IoT solutions.</p><span class="ind-rel-card__arrow">Explore →</span></a></div></div>
-  </div>
-</section>
-<section class="ind-section" style="background:#fff;">
-  <div class="container">
-    <div class="ind-cta-wrap">
-      <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:.75rem;position:relative;z-index:1;">Deploy Smart City IoT in Your Municipality</h2>
-      <p style="color:rgba(255,255,255,.6);font-size:.97rem;max-width:520px;margin:0 auto 2rem;position:relative;z-index:1;">Nebulae provides end-to-end Smart City IoT — LoRaWAN network, sensor hardware, ICCC integration, and Smart City Mission documentation.</p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;">
-        <a href="../contact.html" class="ind-btn-primary">Start a Conversation <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
-        <a href="../products.html" class="ind-btn-outline">Browse Products</a>
-      </div>
-    </div>
-  </div>
-</section><footer class="atl-footer">
+<section class="sl-section" id="challenges"><div class="container"><div class="sl-eyebrow-sm">Why it matters</div><h2 class="sl-section-title">Challenges We Help Solve</h2><div class="row g-3 mt-1"><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">1</span><h3>Many separate systems, many dashboards</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>Street lighting, EV charging, metering and transformer monitoring can all report to one set of Nebulae management platforms.</p></div></div><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">2</span><h3>Wiring a whole city is slow and costly</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>Long-range LoRaWAN gateways cover large areas, and Wi-SUN builds a mesh where devices are dense.</p></div></div><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">3</span><h3>Light faults are found by complaints, not data</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>Controllers and CCMS panels report lamp burnout, abnormal power and low power factor to the cloud, with e-mail or SMS alerts.</p></div></div><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">4</span><h3>Adding EV charging needs new infrastructure</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>The CityCharge unit adds EV charging to an existing street-lighting control panel, with load management between charger and CCMS.</p></div></div></div></div></section>
+<section class="sl-section sl-section--surf" id="products"><div class="container"><div class="sl-eyebrow-sm">Our Products</div><h2 class="sl-section-title">Products for this industry</h2><div class="row g-3 mt-1"><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nlg6x40h-in.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nlg6x40h-in.jpg" alt="NLG6X40H-IN"/></div><div class="slx-prod__b"><span class="slx-prod__t">Gateway</span><h3>NLG6X40H-IN</h3><p>IP67 8-channel LoRaWAN gateway for outdoor city coverage.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nlg6x40g-in.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nlg6x40g-in.jpg" alt="NLG6X40G-IN"/></div><div class="slx-prod__b"><span class="slx-prod__t">Gateway</span><h3>NLG6X40G-IN</h3><p>IP65 8-channel industrial LoRaWAN gateway, 85–528 VAC.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nlg7644.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nlg7644-gateway.jpg" alt="NLG7644"/></div><div class="slx-prod__b"><span class="slx-prod__t">Gateway</span><h3>NLG7644</h3><p>LoRaWAN gateway with 4G LTE backhaul and GPS.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nlg8140.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nlg8140.jpg" alt="NLG8140"/></div><div class="slx-prod__b"><span class="slx-prod__t">Gateway</span><h3>NLG8140</h3><p>Handheld LoRaWAN gateway for site surveys and field tests.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/afl0003.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/afl0003-filter.jpg" alt="AFL0003"/></div><div class="slx-prod__b"><span class="slx-prod__t">Filter</span><h3>AFL0003</h3><p>IP67 band-pass filter for the 865 MHz Indian ISM band.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nln500a.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nln500a-board.jpg" alt="NLN500a"/></div><div class="slx-prod__b"><span class="slx-prod__t">Node</span><h3>NLN500a</h3><p>Compact LoRaWAN node, up to 10 km line of sight.</p><span class="slx-prod__a">View product →</span></div></a></div></div></div></section>
+<section class="sl-section" id="usecases"><div class="container"><div class="sl-eyebrow-sm">Where it fits</div><h2 class="sl-section-title">Typical Applications</h2><div class="row g-3 mt-1"><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Street lighting control</h3><dl><dt>Senses</dt><dd>Lamp status, voltage, current, power and kWh</dd><dt>Connects with</dt><dd>Pole controllers and CCMS panels on LoRaWAN, managed from the LoRa Management System map</dd><dt>You get</dt><dd>Scheduled ON / OFF / dimming, group control and fault alerts for the whole city.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>EV charging at light poles</h3><dl><dt>Senses</dt><dd>Charger load and CCMS load</dd><dt>Connects with</dt><dd>CityCharge unit with dual utility sockets, RFID or app access</dd><dt>You get</dt><dd>Charging points on existing infrastructure for two-wheelers, e-rickshaws or cars.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>City utility metering</h3><dl><dt>Senses</dt><dd>Gas, water and electricity meter readings</dd><dt>Connects with</dt><dd>AMR devices and Wi-SUN / LoRaWAN networks into the Head End</dd><dt>You get</dt><dd>One reading network for several utilities.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Transformer monitoring</h3><dl><dt>Senses</dt><dd>Electrical and physical transformer parameters</dd><dt>Connects with</dt><dd>DTMS with GSM, GPS and RS-485</dd><dt>You get</dt><dd>Live asset health instead of periodic inspection visits.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Coverage surveys</h3><dl><dt>Senses</dt><dd>LoRaWAN signal quality on site</dd><dt>Connects with</dt><dd>Handheld NLG8140 concentrator and AFL0003 filter for the 865 MHz Indian band</dd><dt>You get</dt><dd>A proper coverage check before gateways are installed.</dd></dl></div></div></div><p class="slx-note">These are typical applications for this industry, shown to help you plan. Your project details decide the final design.</p></div></section>
+<section class="sl-section" id="architecture"><div class="container"><div class="row g-5 align-items-start"><div class="col-lg-6"><div class="sl-eyebrow-sm">Architecture</div><h2 class="sl-section-title">City Network</h2><div class="sl-arch-card"><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#0d9488;font:800 .85rem Outfit,sans-serif;">1</div><span class="sl-arch-layer__label">Field devices</span><span class="sl-arch-layer__desc">Light controllers, meters, sensors, EV chargers</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#0d9488;font:800 .85rem Outfit,sans-serif;">2</div><span class="sl-arch-layer__label">LoRaWAN / Wi-SUN radio</span><span class="sl-arch-layer__desc">Long-range sub-GHz links</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#0d9488;font:800 .85rem Outfit,sans-serif;">3</div><span class="sl-arch-layer__label">Gateways</span><span class="sl-arch-layer__desc">LoRaWAN gateways with 4G backhaul</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#0d9488;font:800 .85rem Outfit,sans-serif;">4</div><span class="sl-arch-layer__label">Management platform</span><span class="sl-arch-layer__desc">LoRa Management System, HES, UrbanLink</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#0d9488;font:800 .85rem Outfit,sans-serif;">5</div><span class="sl-arch-layer__label">City operations</span><span class="sl-arch-layer__desc">Command centre and integrations</span></div></div></div><div class="col-lg-6"></div></div></div></section>
+<!-- ADD WHEN AVAILABLE: case study (key case_study) and certifications (key certs) in tools/industries_extra.py -->
+<section class="sl-section sl-section--surf" id="faq"><div class="container"><div class="row g-4"><div class="col-lg-4"><div class="sl-eyebrow-sm">FAQ</div><h2 class="sl-section-title">Common Questions</h2><p class="slx-note">More answers are in our <a href="../faq.html">full FAQ</a>, or <a href="../contact.html">ask our team</a>.</p></div><div class="col-lg-8"><div class="slx-faq"><details><summary>Which platform controls the street lights?</summary><p>The LoRa Management System: a cloud-based platform with a live map, individual and group control, a light planner, ticket management, alerts and reports.</p></details><details><summary>Can the same LoRaWAN network carry other devices?</summary><p>Yes. A LoRaWAN gateway network can also carry sensor nodes such as environmental or parking sensors, and AMR devices for meters, because it is a standard protocol.</p></details><details><summary>What gateways are suitable for outdoor use?</summary><p>The NLG6X40H-IN is IP67 and the NLG6X40G-IN is IP65. Both are 8-channel industrial LoRaWAN gateways with an 85–528 VAC input.</p></details><details><summary>How do we check coverage before installing?</summary><p>Use the portable NLG8140 8-channel LoRaWAN concentrator for field testing, or ask us to plan a survey.</p></details><details><summary>Can the platforms connect to our existing city systems?</summary><p>The Head End and management platforms offer REST APIs. Tell us the systems you use and we will confirm the integration route.</p></details></div></div></div></div></section>
+<section class="sl-section" id="proposal"><div class="container"><div class="row g-4 align-items-start"><div class="col-lg-5"><div class="sl-eyebrow-sm">Get a proposal · Smart City Solutions</div><h2 class="sl-section-title">Tell Us About Your Project</h2>
+<p class="slx-note">Share a few details and our team will reply with product suggestions and next steps. Prefer e-mail? Write to <a href="mailto:sales@nebulae.io">sales@nebulae.io</a>.</p></div>
+<div class="col-lg-7"><form class="slx-form" data-nbl-proposal data-industry="Smart City Solutions" novalidate>
+<div class="row g-3"><div class="col-sm-6"><label for="pfName">Name *</label><input id="pfName" name="name" type="text" autocomplete="name" required></div>
+<div class="col-sm-6"><label for="pfEmail">Work e-mail *</label><input id="pfEmail" name="email" type="email" autocomplete="email" required></div>
+<div class="col-sm-6"><label for="pfCompany">Company</label><input id="pfCompany" name="company" type="text" autocomplete="organization"></div>
+<div class="col-sm-6"><label for="pfPhone">Phone</label><input id="pfPhone" name="phone" type="tel" autocomplete="tel"></div>
+<div class="col-12"><label for="pfMsg">Your project</label><textarea id="pfMsg" name="message" rows="4" placeholder="What do you want to connect, how many devices, and where?"></textarea></div>
+<div class="col-12"><button type="submit" class="sl-sol-btn sl-sol-btn--primary">Request Proposal</button></div></div></form></div></div></div></section>
+<section class="sl-related"><div class="container"><p class="sl-related__title">Related Solutions</p><div class="row g-3"><div class="col-6 col-md-3"><a href="../solutions/smart-street-light.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Smart City</span><p class="sl-rel-card__name">Smart Street Light</p><p class="sl-rel-card__desc">Pole-mount, retrofit and NEMA controllers, CCMS panels and LMS software.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../services/cms-ev-charging-management-solution.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(16,185,129,.1);color:#059669;">Smart City</span><p class="sl-rel-card__name">CityCharge CCMS + EV</p><p class="sl-rel-card__desc">Street-light control panel with built-in EV charging.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../services/lora-management-system.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Software</span><p class="sl-rel-card__name">LoRa Management System</p><p class="sl-rel-card__desc">Cloud platform to monitor and control street lights.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../solutions/transformer-monitoring.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(37,99,235,.1);color:#2563eb;">DISCOM</span><p class="sl-rel-card__name">Transformer Monitoring</p><p class="sl-rel-card__desc">DTMS: real-time electrical and sensor monitoring for distribution transformers.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div></div></div></section>
+<section style="padding:4rem 0;background:#fff;"><div class="container"><div class="sl-cta-wrap">
+  <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:.75rem;">Build Your Smart City Network</h2>
+  <p style="color:rgba(255,255,255,.6);font-size:.97rem;max-width:560px;margin:0 auto 2rem;">Tell us what your city needs to connect.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <a href="../contact.html" class="sl-sol-btn sl-sol-btn--primary">Start a Conversation</a>
+    <a href="../products.html" class="sl-sol-btn sl-sol-btn--dark-outline">Browse Products →</a>
+  </div></div></div></section>
+<footer class="atl-footer">
   <div class="container">
     <div class="row g-4 align-items-start">
 
@@ -801,22 +715,23 @@
 
       <!-- Navigate -->
       <div class="col-6 col-md-2">
-        <h6 class="atl-footer__heading">Navigate</h6>
+        <p class="atl-footer__heading">Navigate</p>
         <ul class="atl-footer__list">
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="#home" onclick="return navClick('home')">Home</a></li>
           <li><a href="../about.html">About Us</a></li>
           <li><a href="../services.html">Services</a></li>
           <li><a href="../products.html">Products</a></li>
           <li><a href="../solutions.html">Solutions</a></li>
           <li><a href="../industries.html">Industries</a></li>
-          <li><a href="../resources.html">Resources</a></li>
+           <li><a href="../resources.html">Resources</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
           <li><a href="../contact.html">Contact Us</a></li>
         </ul>
       </div>
 
       <!-- Services & Solutions -->
       <div class="col-6 col-md-3">
-        <h6 class="atl-footer__heading">Services</h6>
+        <p class="atl-footer__heading">Services</p>
         <ul class="atl-footer__list">
           <li><a href="../services/iot-product-development.html">IoT Product Development</a></li>
           <li><a href="../services/embedded-hardware-design.html">Embedded Hardware Design</a></li>
@@ -825,7 +740,7 @@
           <li><a href="../services/pcb-design-services.html">PCB Design Services</a></li>
           <li><a href="../services/iot-consulting.html">IoT Consulting</a></li>
         </ul>
-        <h6 class="atl-footer__heading mt-3">Solutions</h6>
+        <p class="atl-footer__heading mt-3">Solutions</p>
         <ul class="atl-footer__list">
           <li><a href="../solutions/smart-water-meter.html">Smart Water Meter</a></li>
           <li><a href="../solutions/smart-electric-meter.html">Smart Electric Meter</a></li>
@@ -836,16 +751,16 @@
 
       <!-- Products & Contact -->
       <div class="col-12 col-md-3">
-        <h6 class="atl-footer__heading">Products</h6>
+        <p class="atl-footer__heading">Products</p>
         <ul class="atl-footer__list">
           <li><a href="../products.html?proto=lora&amp;type=module">LoRa — Module &amp; Gateway</a></li>
           <li><a href="../products.html?proto=wisun&amp;type=module">Wi-SUN — Module &amp; Gateway</a></li>
           <li><a href="../products.html?proto=zigbee&amp;type=module">Zigbee — Module &amp; Gateway</a></li>
-          <li><a href="../products.html?proto=gsm&amp;type=module">GSM — Module &amp; Gateway</a></li>
+          <li><a href="../products.html?proto=gsm&amp;type=module">LTE — Module &amp; Gateway</a></li>
           <li><a href="../products.html?proto=ble&amp;type=module">BLE — Module &amp; Gateway</a></li>
           <li><a href="../products.html">View All Products →</a></li>
         </ul>
-        <h6 class="atl-footer__heading mt-3">Contact</h6>
+        <p class="atl-footer__heading mt-3">Contact</p>
         <ul class="atl-footer__list">
           <li><a href="tel:+9102692232501">+91-02692-232501 / 232502</a></li>
           <li><a href="mailto:sales@nebulae.io">sales@nebulae.io</a></li>
@@ -860,12 +775,23 @@
     </div>
   </div>
 </footer>
-
-<!-- Bootstrap JS -->
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/nebulae-nav.js"></script>
 <script src="../assets/js/nebulae-page.js"></script>
+<!-- ═══ FLOATING QUOTE FORM (same on every page; wired by nebulae-forms.js + nebulae-float.js) ═══ -->
+<div id="nblFloatForm" role="dialog" aria-label="Quick quote form">
+  <div class="nbl-float-tab" aria-label="Toggle quote form">Get Quote</div>
+  <div class="nbl-float-form-inner">
+    <h4>Quick Quote Request</h4>
+    <input class="nbl-float-input" id="ffName" type="text" placeholder="Your Name" aria-label="Your name" autocomplete="name">
+    <input class="nbl-float-input" id="ffEmail" type="email" placeholder="Work Email" aria-label="Work email" autocomplete="email">
+    <input class="nbl-float-input" id="ffPhone" type="tel" placeholder="Phone Number" aria-label="Phone number" autocomplete="tel">
+    <textarea class="nbl-float-input" id="ffMsg" rows="3" placeholder="Tell us about your project..." aria-label="Project details" style="resize:vertical;"></textarea>
+    <button class="nbl-float-submit" type="button" onclick="submitFloatForm()">Send Request</button>
+  </div>
+</div>
+
+<script src="../assets/js/nebulae-forms.js"></script>
 <script src="../assets/js/nebulae-float.js"></script>
 </body>
 </html>

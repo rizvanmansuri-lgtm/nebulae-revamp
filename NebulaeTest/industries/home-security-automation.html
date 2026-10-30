@@ -3,77 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Security & Automation | Nebulae — Smart Home IoT Solutions</title>
-  <meta name="description" content="Nebulae IoT solutions for home security and automation — wireless sensors, smart locks, video integration, BLE/Wi-Fi/Zigbee protocols, and cloud-connected control via mobile app."/>
-  <meta name="keywords" content="home security IoT India, smart home automation, wireless security sensor, Zigbee home automation, BLE smart lock"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://www.nebulae.io/industries/home-security-automation.html"/>
-  <meta property="og:title" content="Home Security & Automation | Nebulae — Smart Home IoT Solutions"/>
-  <meta property="og:description" content="Nebulae IoT solutions for home security and automation — wireless sensors, smart locks, video integration, BLE/Wi-Fi/Zigbee protocols, and cloud-connected control via mobile app."/>
-  <meta property="og:type" content="website"/>
+  <title>Home Security &amp; Automation — Zigbee, Matter &amp; Wi-Fi Modules | Nebulae</title>
+  <meta name="description" content="Radio modules for smart-home and security devices: Zigbee, Matter / OpenThread, Bluetooth 5 and Wi-Fi modules, and LoRa for long-range sensors." />
+  <meta name="keywords" content="home automation IoT, Zigbee module, Matter module, security sensor radio, smart home hardware, Nebulae" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.nebulae.io/industries/home-security-automation.html" />
+  <meta property="og:title" content="Home Security &amp; Automation — Zigbee, Matter &amp; Wi-Fi Modules | Nebulae" />
+  <meta property="og:description" content="Radio modules for smart-home and security devices: Zigbee, Matter / OpenThread, Bluetooth 5 and Wi-Fi modules, and LoRa for long-range sensors." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/nebulae-nav.css">
   <link rel="stylesheet" href="../assets/css/solutions.css">
+  <link rel="stylesheet" href="../assets/css/solutions-extra.css">
   <style>
-    .ind-hero{background:linear-gradient(135deg,#03031a 0%,#07072a 50%,#0d0d3a 100%);padding:5rem 0 4rem;position:relative;overflow:hidden;}
-    .ind-hero__grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(6,182,212,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(6,182,212,.055) 1px,transparent 1px);background-size:60px 60px;}
-    .ind-hero__orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;}
-    .ind-hero__orb--1{width:460px;height:460px;background:radial-gradient(circle,rgba(79,70,229,.28),transparent 70%);top:-100px;left:-60px;}
-    .ind-hero__orb--2{width:360px;height:360px;background:radial-gradient(circle,rgba(6,182,212,.22),transparent 70%);top:20%;right:-60px;}
-    .ind-breadcrumb{display:flex;align-items:center;gap:.5rem;margin-bottom:1.25rem;font-size:.78rem;color:rgba(255,255,255,.4);}
-    .ind-breadcrumb a{color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;}
-    .ind-breadcrumb a:hover{color:#06b6d4;}
-    .ind-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(6,182,212,.12);border:1px solid rgba(6,182,212,.3);color:#06b6d4;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.35rem .9rem;border-radius:100px;margin-bottom:1.1rem;}
-    .ind-hero__title{font-family:'Outfit',sans-serif;font-size:clamp(2rem,4.5vw,3.6rem);font-weight:800;color:#fff;line-height:1.08;letter-spacing:-.025em;margin-bottom:.9rem;}
-    .ind-hero__title span{background:linear-gradient(120deg,#06b6d4,#818cf8,#4f46e5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-    .ind-hero__desc{font-size:.98rem;color:rgba(255,255,255,.62);line-height:1.78;max-width:580px;margin-bottom:2rem;}
-    .ind-pill{display:inline-flex;align-items:center;gap:.4rem;padding:.38rem .95rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:100px;font-size:.76rem;font-weight:600;color:rgba(255,255,255,.65);text-decoration:none;transition:all .22s;margin:.2rem;}
-    .ind-pill:hover{background:rgba(6,182,212,.15);border-color:rgba(6,182,212,.4);color:#06b6d4;}
-    .ind-section{padding:5rem 0;}
-    .ind-section--surf{background:#f5f7ff;}
-    .ind-section--dark{background:linear-gradient(135deg,#07071e,#0e0e38);}
-    .ind-feat-list{list-style:none;margin:0 0 1.75rem;padding:0;display:flex;flex-direction:column;gap:.65rem;}
-    .ind-feat-list li{display:flex;align-items:flex-start;gap:.75rem;font-size:.9rem;color:#374151;}
-    .ind-feat-icon{width:22px;height:22px;border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;}
-    .ind-metric{background:#f0f3ff;border:1.5px solid #c7d2fe;border-radius:12px;padding:.65rem 1.1rem;text-align:center;min-width:110px;}
-    .ind-metric__val{font-family:'Outfit',sans-serif;font-size:1.4rem;font-weight:800;color:#4f46e5;line-height:1;display:block;}
-    .ind-metric__label{font-size:.68rem;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-top:.2rem;display:block;}
-    .ind-metrics{display:flex;flex-wrap:wrap;gap:.65rem;margin-bottom:1.75rem;}
-    .ind-img-card{border-radius:22px;overflow:hidden;position:relative;box-shadow:0 24px 64px rgba(79,70,229,.14);}
-    .ind-img-card img{width:100%;height:380px;object-fit:cover;display:block;}
-    .ind-img-card__stat{position:absolute;bottom:1.25rem;left:1.25rem;right:1.25rem;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-radius:14px;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;box-shadow:0 8px 32px rgba(0,0,0,.12);}
-    .ind-img-card__stat-item{text-align:center;flex:1;min-width:70px;}
-    .ind-img-card__stat-num{font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:800;color:#4f46e5;display:block;}
-    .ind-img-card__stat-label{font-size:.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;font-weight:600;}
-    .ind-table{width:100%;border-collapse:collapse;border-radius:16px;overflow:hidden;border:1.5px solid #e5e7eb;}
-    .ind-table th{padding:.9rem 1.1rem;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;background:#f8f9ff;border-bottom:2px solid #e5e7eb;}
-    .ind-table td{padding:.8rem 1.1rem;font-size:.84rem;color:#374151;border-bottom:1px solid #f3f4f6;}
-    .ind-table td:first-child{font-weight:700;color:#111827;background:#fafafe;}
-    .ind-table tr:last-child td{border-bottom:none;}
-    .ind-tag{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:.75rem;}
-    .ind-rel-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:1.5rem;display:block;text-decoration:none;transition:all .25s;height:100%;}
-    .ind-rel-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(79,70,229,.1);border-color:rgba(79,70,229,.25);}
-    .ind-rel-card__name{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:700;color:#111827;margin-bottom:.4rem;}
-    .ind-rel-card__desc{font-size:.8rem;color:#6b7280;line-height:1.6;}
-    .ind-rel-card__arrow{font-size:.78rem;font-weight:700;color:#4f46e5;margin-top:.75rem;display:block;}
-    .ind-cta-wrap{background:linear-gradient(135deg,#0a0a2e,#1a1a6e);border-radius:28px;padding:4.5rem 3rem;text-align:center;position:relative;overflow:hidden;}
-    .ind-cta-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(6,182,212,.18),transparent 50%),radial-gradient(circle at 80% 50%,rgba(79,70,229,.22),transparent 50%);pointer-events:none;}
-    .ind-btn-primary{display:inline-flex;align-items:center;gap:.45rem;padding:.85rem 1.85rem;border-radius:10px;background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;font-size:.9rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 8px 28px rgba(79,70,229,.35);}
-    .ind-btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(79,70,229,.5);color:#fff;}
-    .ind-btn-outline{display:inline-flex;align-items:center;gap:.45rem;padding:.82rem 1.75rem;border-radius:10px;background:transparent;color:rgba(255,255,255,.82);border:1.5px solid rgba(255,255,255,.25);font-size:.9rem;font-weight:600;font-family:'Outfit',sans-serif;text-decoration:none;transition:all .25s;}
-    .ind-btn-outline:hover{border-color:#06b6d4;color:#06b6d4;}
-    .ind-eyebrow-sm{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#4f46e5;background:rgba(79,70,229,.08);padding:.3rem .85rem;border-radius:100px;margin-bottom:.75rem;}
-    .ind-section-title{font-family:'Outfit',sans-serif;font-size:clamp(1.75rem,3.5vw,2.6rem);font-weight:800;color:#0a0a1e;line-height:1.1;letter-spacing:-.02em;margin-bottom:.75rem;}
-    .ind-chip{display:inline-flex;align-items:center;gap:.45rem;padding:.45rem 1rem;background:#fff;border:1.5px solid #e5e7eb;border-radius:100px;font-size:.78rem;font-weight:600;color:#374151;margin:.2rem;}
-    .ind-use-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:1.5rem;height:100%;transition:transform .25s,box-shadow .25s,border-color .25s;}
-    .ind-use-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(79,70,229,.08);border-color:rgba(79,70,229,.2);}
-    .ind-use-card__icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
-    .ind-use-card__title{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:800;color:#111827;margin-bottom:.4rem;}
-    .ind-use-card__desc{font-size:.82rem;color:#6b7280;line-height:1.65;}
+    .sl-hero{padding:5rem 0 4rem}
+    .sl-arch-card{margin-top:1.25rem}
+    .sl-arch-arrow:last-child{display:none}
+    .sl-related{padding:4rem 0;background:#f5f7ff}
+    .sl-related__title{font-family:'Outfit',sans-serif;font-size:1.35rem;font-weight:800;color:#111827;margin-bottom:1.5rem}
+    .sl-rel-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:1.5rem;display:block;text-decoration:none;transition:all .25s;height:100%}
+    .sl-rel-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(79,70,229,.1);border-color:rgba(79,70,229,.25)}
+    .sl-rel-card__tag{font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:.75rem;display:inline-block}
+    .sl-rel-card__name{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:700;color:#111827;margin-bottom:.4rem}
+    .sl-rel-card__desc{font-size:.8rem;color:#6b7280;line-height:1.6}
+    .sl-rel-card__arrow{font-size:.78rem;font-weight:700;color:#4f46e5;margin-top:.75rem;display:block}
   </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which radio is best for door and window sensors?", "acceptedAnswer": {"@type": "Answer", "text": "Zigbee or Thread on the NLN111P / NLN811P modules, because they are low-power and widely supported."}}, {"@type": "Question", "name": "Can the hub use Wi-Fi?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The NM0442-P is a 2.4 GHz Wi-Fi module, and the SLS-SoM-MX6 can power a Linux-based hub."}}, {"@type": "Question", "name": "How do I cover a large property?", "acceptedAnswer": {"@type": "Answer", "text": "Use LoRa nodes and a LoRaWAN gateway for outbuildings and gates that are out of Zigbee range."}}, {"@type": "Question", "name": "Do you design the finished product?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Nebulae provides hardware and firmware design alongside the modules."}}]}</script>
+  <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="stylesheet" href="../assets/css/nebulae-fixes.css">
 </head>
 <body>
@@ -538,6 +497,7 @@
                     
                     <li><a href="../about.html#team"><span class="atl-mega__dot"></span>Our Team</a></li>
                     <li><a href="../about.html#partners"><span class="atl-mega__dot"></span>Partners &amp; Certifications</a></li>
+                    <li><a href="../faq.html"><span class="atl-mega__dot"></span>FAQ</a></li>
                   </ul>
                 </div>
                 <div class="atl-mega__col">
@@ -659,6 +619,7 @@
           <a class="atl-nav__msublink" href="../about.html">About Nebulae</a>
           <a class="atl-nav__msublink" href="../about.html#mission">Our Mission &amp; Vision</a>
           <a class="atl-nav__msublink" href="../about.html#team">Our Team</a>
+          <a class="atl-nav__msublink" href="../faq.html">FAQ</a>
           <a class="atl-nav__msublink" href="../blog.html">Blog</a>
           <a class="atl-nav__msublink" href="../careers.html">Careers</a>
           <a class="atl-nav__msublink" href="../events.html">Upcoming Events</a>
@@ -672,125 +633,75 @@
 </div><!-- /.atl-sticky-header -->
 </header>
 
-<section class="ind-hero">
-  <div class="ind-hero__grid"></div>
-  <div class="ind-hero__orb ind-hero__orb--1" style="background:radial-gradient(circle,rgba(79,70,229,.28),transparent 70%);"></div>
-  <div class="ind-hero__orb ind-hero__orb--2" style="background:radial-gradient(circle,rgba(6,182,212,.22),transparent 70%);"></div>
+<!-- HERO -->
+<section class="sl-hero">
+  <div class="sl-hero__grid"></div>
+  <div class="sl-hero__orb sl-hero__orb--1"></div>
+  <div class="sl-hero__orb sl-hero__orb--2"></div>
   <div class="container">
-    <div style="position:relative;z-index:2;">
-      <nav class="ind-breadcrumb">
+    <div class="sl-hero__inner">
+      <nav class="sl-breadcrumb" aria-label="breadcrumb">
         <a href="../index.html">Home</a><span>›</span>
         <a href="../industries.html">Industries</a><span>›</span>
-        <span style="color:rgba(255,255,255,.65);">Home Security & Automation</span>
+        <span style="color:rgba(255,255,255,.65);">Home Security &amp; Automation</span>
       </nav>
-      <div class="ind-eyebrow">Smart City · Home · Automation</div>
-      <h1 class="ind-hero__title">Home Security &amp; <span>Automation</span></h1>
-      <p class="ind-hero__desc">Connected home security and smart automation — wireless sensors, smart locks, intelligent lighting, and energy management on Zigbee, BLE, and Wi-Fi using Nebulae IoT modules.</p>
-      <div style="display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:1.5rem;">
-        <a href="../contact.html" class="ind-btn-primary">Discuss Your Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
-        <a href="../solutions.html" class="ind-btn-outline">View Solutions</a>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.5rem;"><a href="#usecases" class="ind-pill">Use Cases</a><a href="#protocols" class="ind-pill">Protocols</a><a href="#arch" class="ind-pill">Architecture</a></div>
+      <div class="sl-eyebrow">Industry · Smart Home</div>
+      <h1 class="sl-hero__title">Home Security &amp; Automation</h1>
+      <p class="sl-hero__desc">Low-power wireless modules for door and window sensors, sirens, hubs and smart-home controls.</p>
+      <div class="sl-jump-pills"><a href="#overview" class="sl-jump-pill">Overview</a><a href="#challenges" class="sl-jump-pill">Challenges</a><a href="#products" class="sl-jump-pill">Products</a><a href="#usecases" class="sl-jump-pill">Use cases</a><a href="#arch" class="sl-jump-pill">System</a><a href="#faq" class="sl-jump-pill">FAQ</a><a href="#proposal" class="sl-jump-pill">Get a Proposal</a></div>
     </div>
   </div>
 </section>
-<section class="ind-section" id="overview">
+
+<!-- OVERVIEW -->
+<section class="sl-section" id="overview">
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-6">
-        <div class="ind-img-card">
-          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=700&q=80" alt="Smart Home IoT" loading="lazy"/>
-          <div class="ind-img-card__stat"><div class="ind-img-card__stat-item"><span class="ind-img-card__stat-num">Zigbee</span><span class="ind-img-card__stat-label">BLE · Wi-Fi</span></div><div class="ind-img-card__stat-item"><span class="ind-img-card__stat-num">128-bit</span><span class="ind-img-card__stat-label">AES Encryption</span></div></div>
+        <div class="slx-hero-img">
+          <img src="../assets/images/products/nln111p-module.jpg" alt="NLN111P Zigbee module" width="900" height="560"/>
+          <div class="sl-img-card__stat"><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">Zigbee</span><span class="sl-img-card__stat-label">Mesh networking</span></div><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">Matter</span><span class="sl-img-card__stat-label">On NLN811P</span></div><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">BLE 5</span><span class="sl-img-card__stat-label">Setup and sensors</span></div></div>
         </div>
       </div>
       <div class="col-lg-6">
-        <span class="ind-tag" style="background:rgba(79,70,229,.1);color:#4f46e5;">Smart City · Residential</span>
-        <h2 class="ind-section-title">IoT-Connected Home Security & Smart Living</h2>
-        <p style="font-size:.95rem;color:#374151;line-height:1.8;margin-bottom:1.5rem;">Nebulae's Zigbee, BLE, and Wi-Fi modules power next-generation smart home products — from wireless door and window sensors to smart locks, adaptive lighting, and occupancy-based energy management. Our modules are pre-integrated with popular smart home ecosystems and ship with production-grade firmware.</p>
-        <div class="ind-metrics"><div class="ind-metric" style="border-color:rgba(79,70,229,.25);"><span class="ind-metric__val" style="color:#4f46e5;">Zigbee</span><span class="ind-metric__label">Z3.0 / BLE</span></div><div class="ind-metric" style="border-color:rgba(79,70,229,.25);"><span class="ind-metric__val" style="color:#4f46e5;">AES-128</span><span class="ind-metric__label">Encryption</span></div><div class="ind-metric" style="border-color:rgba(79,70,229,.25);"><span class="ind-metric__val" style="color:#4f46e5;">10 yr</span><span class="ind-metric__label">Battery</span></div><div class="ind-metric" style="border-color:rgba(79,70,229,.25);"><span class="ind-metric__val" style="color:#4f46e5;">Tuya</span><span class="ind-metric__label">Compatible</span></div></div>
-        <ul class="ind-feat-list"><li><div class="ind-feat-icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Intrusion Detection</strong> — Door, window, motion, glass-break, and vibration sensors on Zigbee mesh</span></li><li><div class="ind-feat-icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Smart Lock Integration</strong> — BLE and Zigbee smart locks — OTA firmware, pin management, access logs</span></li><li><div class="ind-feat-icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Adaptive Lighting</strong> — Occupancy + lux-sensor dimming; Zigbee scenes and schedules from mobile app</span></li><li><div class="ind-feat-icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Energy Monitoring</strong> — Per-plug metering; load scheduling; solar + grid usage tracking</span></li><li><div class="ind-feat-icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Video Doorbell & Camera</strong> — RTSP/WebRTC integration; motion-triggered recording; cloud + local NVR</span></li></ul>
-        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;"><span class="ind-chip">Zigbee 3.0</span><span class="ind-chip">BLE 5.x</span><span class="ind-chip">Wi-Fi</span><span class="ind-chip">Tuya SDK</span><span class="ind-chip">Matter</span><span class="ind-chip">Amazon Alexa</span><span class="ind-chip">Google Home</span></div>
+        <span class="sl-solution__tag" style="background:rgba(79,70,229,.1);color:#2563eb;">Smart home</span>
+        <h2 class="sl-solution__title" style="color:#111827;">Radios for Sensors, Hubs and Controls</h2>
+        <p class="sl-solution__desc" style="color:#374151;">Home security and automation devices rely on low-power mesh radios. Nebulae offers Zigbee, Thread and Matter modules, Bluetooth 5 for easy setup, a Wi-Fi module for hubs, and LoRa nodes where signals must travel further than a single home.</p><p class="sl-solution__desc" style="color:#374151;">Nebulae&#x27;s product-development services can take a device from design to production.</p>
+        <div class="sl-metrics"><div class="sl-metric"><span class="sl-metric__val">Zigbee</span><span class="sl-metric__label">Sensors</span></div><div class="sl-metric"><span class="sl-metric__val">Matter</span><span class="sl-metric__label">Interop</span></div><div class="sl-metric"><span class="sl-metric__val">Wi-Fi</span><span class="sl-metric__label">Hub</span></div></div>
+        <ul class="sl-feat-list" id="features"><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Zigbee / Thread / BLE</strong> — NLN111P module with PCB antenna</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Matter-ready</strong> — NLN811P with AI/ML accelerator</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Wi-Fi hub connectivity</strong> — NM0442-P</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>LoRa for outbuildings</strong> — long-range nodes and gateways</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>System on module</strong> — i.MX6ULL for hub products</span></li></ul>
+        <div class="sl-products-strip"><a href="../products.html?proto=zigbee" class="sl-product-chip">Zigbee / BLE Modules</a><a href="../products.html?proto=wifi" class="sl-product-chip">Wi-Fi Module</a><a href="../products.html?proto=lora" class="sl-product-chip">LoRa Nodes &amp; Modules</a></div>
         <div style="display:flex;gap:.75rem;margin-top:1.75rem;flex-wrap:wrap;">
-          <a href="../contact.html" class="ind-btn-primary">Get a Proposal <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
-          <a href="../solutions.html" class="ind-btn-outline" style="background:transparent;color:#4f46e5;border-color:#c7d2fe;">View Solutions</a>
+          <a href="#proposal" class="sl-sol-btn sl-sol-btn--primary">Get a Proposal</a>
+          <a href="#products" class="sl-sol-btn sl-sol-btn--outline">View Products</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="ind-section ind-section--surf" id="usecases">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="ind-eyebrow-sm">Use Cases</span>
-      <h2 class="ind-section-title">Smart Home Applications</h2>
-    </div>
-    <div class="row g-3">
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><p class="ind-use-card__title">Perimeter Security</p><p class="ind-use-card__desc">Wireless door/window/motion sensors with instant push alert and siren trigger.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><p class="ind-use-card__title">Smart Access Control</p><p class="ind-use-card__desc">BLE/Zigbee smart locks; PIN, card, and app-based entry; time-limited guest access.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(234,88,12,.1);color:#ea580c;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div><p class="ind-use-card__title">Adaptive Lighting</p><p class="ind-use-card__desc">Occupancy-triggered scenes, lux-sensor dimming, circadian lighting schedules.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><p class="ind-use-card__title">Energy Management</p><p class="ind-use-card__desc">Smart plugs with metering; appliance scheduling; solar integration dashboard.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(6,182,212,.1);color:#06b6d4;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M10.54 17a6 6 0 012.92 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div><p class="ind-use-card__title">Environment Sensing</p><p class="ind-use-card__desc">Temperature, humidity, CO₂, LPG, smoke — multi-parameter Zigbee sensor nodes.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(220,38,38,.1);color:#dc2626;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div><p class="ind-use-card__title">Emergency Alerts</p><p class="ind-use-card__desc">Panic button, medical alert, flood sensor — push alert to family and monitoring centre.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(99,102,241,.1);color:#6366f1;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div><p class="ind-use-card__title">Video Surveillance</p><p class="ind-use-card__desc">Wi-Fi cameras with motion zone detection, cloud archive, and event timeline.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><p class="ind-use-card__title">Mobile App Control</p><p class="ind-use-card__desc">Flutter-based app — arm/disarm, scene control, live camera, energy dashboard.</p></div></div>
-    </div>
-  </div>
-</section>
-<section class="ind-section" id="protocols">
-  <div class="container">
-    <div class="row g-5">
-      <div class="col-lg-6">
-        <span class="ind-eyebrow-sm">Protocol Selection</span>
-        <h2 class="ind-section-title">Zigbee, BLE, or Wi-Fi?</h2>
-        <div style="overflow-x:auto;margin-top:1.25rem;">
-          <table class="ind-table">
-            <thead><tr><th>Feature</th><th>Zigbee</th><th>BLE</th><th>Wi-Fi</th></tr></thead>
-            <tbody>
-              <tr><td>Range</td><td>10–30 m mesh</td><td>10–50 m</td><td>30–100 m</td></tr>
-              <tr><td>Battery Life</td><td>2–5 years</td><td>1–3 years</td><td>Months</td></tr>
-              <tr><td>Mesh Support</td><td>✓ Native</td><td>✓ BLE Mesh</td><td>✗</td></tr>
-              <tr><td>Device Capacity</td><td>65,000/network</td><td>~100</td><td>~50</td></tr>
-              <tr><td>Cloud Dependency</td><td>Low</td><td>Low</td><td>High</td></tr>
-              <tr><td>Best For</td><td>Sensors, lighting</td><td>Locks, wearables</td><td>Cameras, hubs</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="col-lg-6" id="arch">
-        <span class="ind-eyebrow-sm">System Architecture</span>
-        <h2 class="ind-section-title">From Sensor to App</h2>
-        <ul class="ind-feat-list" style="margin-top:1.25rem;">
-          <li><div class="ind-feat-icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Zigbee Mesh Layer</strong> — Sensors and actuators form a self-healing mesh — up to 65K devices per network</span></li>
-          <li><div class="ind-feat-icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Home Gateway / Hub</strong> — Nebulae Zigbee gateway bridges mesh to Wi-Fi; runs local rule engine offline</span></li>
-          <li><div class="ind-feat-icon" style="background:rgba(6,182,212,.1);color:#06b6d4;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Cloud Backend</strong> — MQTT/REST — event push, remote access, scene sync, and OTA update</span></li>
-          <li><div class="ind-feat-icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Mobile App</strong> — Flutter iOS/Android — live status, arm/disarm, camera feed, energy charts</span></li>
-          <li><div class="ind-feat-icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Voice Assistant</strong> — Alexa, Google Home, and Apple HomeKit / Matter integration</span></li>
-        </ul>
-        <div style="margin-top:1.5rem;">
-          <a href="../services/iot-mobile-app.html" style="font-size:.85rem;font-weight:700;color:#4f46e5;text-decoration:none;">See IoT Mobile App Service →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="ind-section ind-section--surf">
-  <div class="container">
-    <p style="font-family:'Outfit',sans-serif;font-size:1.35rem;font-weight:800;color:#111827;margin-bottom:1.5rem;">Related Industries</p>
-    <div class="row g-3"><div class="col-6 col-md-3"><a href="sos-devices.html" class="ind-rel-card"><span class="ind-tag" style="background:rgba(220,38,38,.1);color:#dc2626;">Smart City</span><p class="ind-rel-card__name">SOS Devices</p><p class="ind-rel-card__desc">Personal safety IoT — panic buttons and real-time location alerts.</p><span class="ind-rel-card__arrow">Explore →</span></a></div><div class="col-6 col-md-3"><a href="smart-city-solutions.html" class="ind-rel-card"><span class="ind-tag" style="background:rgba(79,70,229,.1);color:#4f46e5;">Smart City</span><p class="ind-rel-card__name">Smart City Solutions</p><p class="ind-rel-card__desc">City-wide IoT infrastructure — lighting, parking, and civic monitoring.</p><span class="ind-rel-card__arrow">Explore →</span></a></div><div class="col-6 col-md-3"><a href="building-management-system.html" class="ind-rel-card"><span class="ind-tag" style="background:rgba(13,148,136,.1);color:#0d9488;">BMS</span><p class="ind-rel-card__name">Building Management System</p><p class="ind-rel-card__desc">Commercial BMS — HVAC, access, energy, and security on one platform.</p><span class="ind-rel-card__arrow">Explore →</span></a></div><div class="col-6 col-md-3"><a href="consumer-iot.html" class="ind-rel-card"><span class="ind-tag" style="background:rgba(234,88,12,.1);color:#ea580c;">Consumer</span><p class="ind-rel-card__name">Consumer IoT</p><p class="ind-rel-card__desc">Mass-market connected product development — from concept to retail.</p><span class="ind-rel-card__arrow">Explore →</span></a></div></div>
-  </div>
-</section>
-<section class="ind-section" style="background:#fff;">
-  <div class="container">
-    <div class="ind-cta-wrap">
-      <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:.75rem;position:relative;z-index:1;">Build Your Smart Home IoT Product</h2>
-      <p style="color:rgba(255,255,255,.6);font-size:.97rem;max-width:520px;margin:0 auto 2rem;position:relative;z-index:1;">Nebulae provides Zigbee/BLE modules, firmware, cloud backend, and mobile app — full stack for your smart home product.</p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;">
-        <a href="../contact.html" class="ind-btn-primary">Start a Conversation <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
-        <a href="../products.html" class="ind-btn-outline">Browse Products</a>
-      </div>
-    </div>
-  </div>
-</section><footer class="atl-footer">
+<section class="sl-section" id="challenges"><div class="container"><div class="sl-eyebrow-sm">Why it matters</div><h2 class="sl-section-title">Challenges We Help Solve</h2><div class="row g-3 mt-1"><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">1</span><h3>Many devices need to cooperate</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>Zigbee, Thread and Matter support on the EFR32 modules helps sensors, sirens and hubs work together.</p></div></div><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">2</span><h3>Battery-powered sensors must last</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>Low-power radios suit door, window and motion sensors that run on small batteries.</p></div></div><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">3</span><h3>Large properties and outbuildings</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>LoRa nodes and gateways reach gates, sheds and distant buildings.</p></div></div><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">4</span><h3>Installers want quick setup</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>Bluetooth 5 on the modules supports set-up from a phone.</p></div></div></div></div></section>
+<section class="sl-section sl-section--surf" id="products"><div class="container"><div class="sl-eyebrow-sm">Our Products</div><h2 class="sl-section-title">Products for this industry</h2><div class="row g-3 mt-1"><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nln111p.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nln111p-module.jpg" alt="NLN111P"/></div><div class="slx-prod__b"><span class="slx-prod__t">Module</span><h3>NLN111P</h3><p>MG21 Zigbee / Thread / Bluetooth 5 module.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nln811p.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nln811p-module.jpg" alt="NLN811P"/></div><div class="slx-prod__b"><span class="slx-prod__t">Module</span><h3>NLN811P</h3><p>MG24 module with Matter, OpenThread, Zigbee and BLE 5.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nm0442p.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nm0442p-module.jpg" alt="NM0442-P"/></div><div class="slx-prod__b"><span class="slx-prod__t">Module</span><h3>NM0442-P</h3><p>2.4 GHz Wi-Fi module.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nln500a.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nln500a-board.jpg" alt="NLN500a"/></div><div class="slx-prod__b"><span class="slx-prod__t">Node</span><h3>NLN500a</h3><p>LoRaWAN node for long-range outbuilding sensors.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nlg6x40g-in.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nlg6x40g-in.jpg" alt="NLG6X40G-IN"/></div><div class="slx-prod__b"><span class="slx-prod__t">Gateway</span><h3>NLG6X40G-IN</h3><p>LoRaWAN gateway for larger properties.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/sls-som-mx6.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/sls-som-mx6-module.jpg" alt="SLS-SoM-MX6"/></div><div class="slx-prod__b"><span class="slx-prod__t">System on Module</span><h3>SLS-SoM-MX6</h3><p>System on module for hub controllers.</p><span class="slx-prod__a">View product →</span></div></a></div></div></div></section>
+<section class="sl-section" id="usecases"><div class="container"><div class="sl-eyebrow-sm">Where it fits</div><h2 class="sl-section-title">Typical Applications</h2><div class="row g-3 mt-1"><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Door and window sensors</h3><dl><dt>Senses</dt><dd>Open / closed state</dd><dt>Connects with</dt><dd>Zigbee or Thread sensor on the NLN111P / NLN811P</dd><dt>You get</dt><dd>Instant alerts when something opens.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Sirens and alarms</h3><dl><dt>Senses</dt><dd>Alarm commands</dd><dt>Connects with</dt><dd>Zigbee or Wi-Fi module</dd><dt>You get</dt><dd>Local sirens triggered by the hub.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Smart switches and plugs</h3><dl><dt>Senses</dt><dd>Power state</dd><dt>Connects with</dt><dd>Matter / Zigbee module</dd><dt>You get</dt><dd>Control from a phone or by schedule.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Hubs and gateways</h3><dl><dt>Senses</dt><dd>All device traffic</dd><dt>Connects with</dt><dd>NM0442-P Wi-Fi plus Zigbee / Thread modules, or SLS-SoM-MX6</dd><dt>You get</dt><dd>A hub that connects devices to the internet.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Large-property sensing</h3><dl><dt>Senses</dt><dd>Gate or outbuilding sensors</dd><dt>Connects with</dt><dd>LoRa node (NLN500a) and LoRaWAN gateway</dd><dt>You get</dt><dd>Coverage beyond Zigbee range.</dd></dl></div></div></div><p class="slx-note">These are typical applications for this industry, shown to help you plan. Your project details decide the final design.</p></div></section>
+<section class="sl-section" id="architecture"><div class="container"><div class="row g-5 align-items-start"><div class="col-lg-6"><div class="sl-eyebrow-sm">How it fits together</div><h2 class="sl-section-title">Typical System</h2><div class="sl-arch-card"><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#2563eb;font:800 .85rem Outfit,sans-serif;">1</div><span class="sl-arch-layer__label">Home devices</span><span class="sl-arch-layer__desc">Sensors, sirens, switches, locks</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#2563eb;font:800 .85rem Outfit,sans-serif;">2</div><span class="sl-arch-layer__label">Wireless modules</span><span class="sl-arch-layer__desc">Zigbee, Thread / Matter, BLE 5, Wi-Fi, LoRa</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#2563eb;font:800 .85rem Outfit,sans-serif;">3</div><span class="sl-arch-layer__label">Hub or gateway</span><span class="sl-arch-layer__desc">Wi-Fi hub or LoRaWAN gateway</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#2563eb;font:800 .85rem Outfit,sans-serif;">4</div><span class="sl-arch-layer__label">Cloud</span><span class="sl-arch-layer__desc">Your service</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#2563eb;font:800 .85rem Outfit,sans-serif;">5</div><span class="sl-arch-layer__label">Home-owner app</span><span class="sl-arch-layer__desc">Notifications and control</span></div></div></div><div class="col-lg-6"></div></div></div></section>
+<!-- ADD WHEN AVAILABLE: case study (key case_study) and certifications (key certs) in tools/industries_extra.py -->
+<section class="sl-section sl-section--surf" id="faq"><div class="container"><div class="row g-4"><div class="col-lg-4"><div class="sl-eyebrow-sm">FAQ</div><h2 class="sl-section-title">Common Questions</h2><p class="slx-note">More answers are in our <a href="../faq.html">full FAQ</a>, or <a href="../contact.html">ask our team</a>.</p></div><div class="col-lg-8"><div class="slx-faq"><details><summary>Which radio is best for door and window sensors?</summary><p>Zigbee or Thread on the NLN111P / NLN811P modules, because they are low-power and widely supported.</p></details><details><summary>Can the hub use Wi-Fi?</summary><p>Yes. The NM0442-P is a 2.4 GHz Wi-Fi module, and the SLS-SoM-MX6 can power a Linux-based hub.</p></details><details><summary>How do I cover a large property?</summary><p>Use LoRa nodes and a LoRaWAN gateway for outbuildings and gates that are out of Zigbee range.</p></details><details><summary>Do you design the finished product?</summary><p>Yes. Nebulae provides hardware and firmware design alongside the modules.</p></details></div></div></div></div></section>
+<section class="sl-section" id="proposal"><div class="container"><div class="row g-4 align-items-start"><div class="col-lg-5"><div class="sl-eyebrow-sm">Get a proposal · Home Security &amp; Automation</div><h2 class="sl-section-title">Tell Us About Your Project</h2>
+<p class="slx-note">Share a few details and our team will reply with product suggestions and next steps. Prefer e-mail? Write to <a href="mailto:sales@nebulae.io">sales@nebulae.io</a>.</p></div>
+<div class="col-lg-7"><form class="slx-form" data-nbl-proposal data-industry="Home Security &amp; Automation" novalidate>
+<div class="row g-3"><div class="col-sm-6"><label for="pfName">Name *</label><input id="pfName" name="name" type="text" autocomplete="name" required></div>
+<div class="col-sm-6"><label for="pfEmail">Work e-mail *</label><input id="pfEmail" name="email" type="email" autocomplete="email" required></div>
+<div class="col-sm-6"><label for="pfCompany">Company</label><input id="pfCompany" name="company" type="text" autocomplete="organization"></div>
+<div class="col-sm-6"><label for="pfPhone">Phone</label><input id="pfPhone" name="phone" type="tel" autocomplete="tel"></div>
+<div class="col-12"><label for="pfMsg">Your project</label><textarea id="pfMsg" name="message" rows="4" placeholder="What do you want to connect, how many devices, and where?"></textarea></div>
+<div class="col-12"><button type="submit" class="sl-sol-btn sl-sol-btn--primary">Request Proposal</button></div></div></form></div></div></div></section>
+<section class="sl-related"><div class="container"><p class="sl-related__title">Related Solutions</p><div class="row g-3"><div class="col-6 col-md-3"><a href="../industries/consumer-iot.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Industry</span><p class="sl-rel-card__name">Consumer IoT</p><p class="sl-rel-card__desc">Matter, Zigbee, BLE and Wi-Fi modules for connected products.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../industries/building-management-system.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(37,99,235,.1);color:#2563eb;">Industry</span><p class="sl-rel-card__name">Building Management System</p><p class="sl-rel-card__desc">Wireless sensing and control for commercial buildings.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../industries/sos-devices.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(234,88,12,.1);color:#ea580c;">Industry</span><p class="sl-rel-card__name">SOS &amp; Personal Safety</p><p class="sl-rel-card__desc">Compact radio modules for emergency alert devices.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../industries/iot-healthcare.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(37,99,235,.1);color:#2563eb;">Industry</span><p class="sl-rel-card__name">IoT in Healthcare</p><p class="sl-rel-card__desc">BLE, Wi-Fi and Zigbee connectivity for health and hospital devices.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div></div></div></section>
+<section style="padding:4rem 0;background:#fff;"><div class="container"><div class="sl-cta-wrap">
+  <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:.75rem;">Build a Smart-Home Product</h2>
+  <p style="color:rgba(255,255,255,.6);font-size:.97rem;max-width:560px;margin:0 auto 2rem;">Tell us about your device and we will suggest the right module.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <a href="../contact.html" class="sl-sol-btn sl-sol-btn--primary">Start a Conversation</a>
+    <a href="../products.html" class="sl-sol-btn sl-sol-btn--dark-outline">Browse Products →</a>
+  </div></div></div></section>
+<footer class="atl-footer">
   <div class="container">
     <div class="row g-4 align-items-start">
 
@@ -804,22 +715,23 @@
 
       <!-- Navigate -->
       <div class="col-6 col-md-2">
-        <h6 class="atl-footer__heading">Navigate</h6>
+        <p class="atl-footer__heading">Navigate</p>
         <ul class="atl-footer__list">
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="#home" onclick="return navClick('home')">Home</a></li>
           <li><a href="../about.html">About Us</a></li>
           <li><a href="../services.html">Services</a></li>
           <li><a href="../products.html">Products</a></li>
           <li><a href="../solutions.html">Solutions</a></li>
           <li><a href="../industries.html">Industries</a></li>
-          <li><a href="../resources.html">Resources</a></li>
+           <li><a href="../resources.html">Resources</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
           <li><a href="../contact.html">Contact Us</a></li>
         </ul>
       </div>
 
       <!-- Services & Solutions -->
       <div class="col-6 col-md-3">
-        <h6 class="atl-footer__heading">Services</h6>
+        <p class="atl-footer__heading">Services</p>
         <ul class="atl-footer__list">
           <li><a href="../services/iot-product-development.html">IoT Product Development</a></li>
           <li><a href="../services/embedded-hardware-design.html">Embedded Hardware Design</a></li>
@@ -828,7 +740,7 @@
           <li><a href="../services/pcb-design-services.html">PCB Design Services</a></li>
           <li><a href="../services/iot-consulting.html">IoT Consulting</a></li>
         </ul>
-        <h6 class="atl-footer__heading mt-3">Solutions</h6>
+        <p class="atl-footer__heading mt-3">Solutions</p>
         <ul class="atl-footer__list">
           <li><a href="../solutions/smart-water-meter.html">Smart Water Meter</a></li>
           <li><a href="../solutions/smart-electric-meter.html">Smart Electric Meter</a></li>
@@ -839,16 +751,16 @@
 
       <!-- Products & Contact -->
       <div class="col-12 col-md-3">
-        <h6 class="atl-footer__heading">Products</h6>
+        <p class="atl-footer__heading">Products</p>
         <ul class="atl-footer__list">
           <li><a href="../products.html?proto=lora&amp;type=module">LoRa — Module &amp; Gateway</a></li>
           <li><a href="../products.html?proto=wisun&amp;type=module">Wi-SUN — Module &amp; Gateway</a></li>
           <li><a href="../products.html?proto=zigbee&amp;type=module">Zigbee — Module &amp; Gateway</a></li>
-          <li><a href="../products.html?proto=gsm&amp;type=module">GSM — Module &amp; Gateway</a></li>
+          <li><a href="../products.html?proto=gsm&amp;type=module">LTE — Module &amp; Gateway</a></li>
           <li><a href="../products.html?proto=ble&amp;type=module">BLE — Module &amp; Gateway</a></li>
           <li><a href="../products.html">View All Products →</a></li>
         </ul>
-        <h6 class="atl-footer__heading mt-3">Contact</h6>
+        <p class="atl-footer__heading mt-3">Contact</p>
         <ul class="atl-footer__list">
           <li><a href="tel:+9102692232501">+91-02692-232501 / 232502</a></li>
           <li><a href="mailto:sales@nebulae.io">sales@nebulae.io</a></li>
@@ -863,12 +775,23 @@
     </div>
   </div>
 </footer>
-
-<!-- Bootstrap JS -->
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/nebulae-nav.js"></script>
 <script src="../assets/js/nebulae-page.js"></script>
+<!-- ═══ FLOATING QUOTE FORM (same on every page; wired by nebulae-forms.js + nebulae-float.js) ═══ -->
+<div id="nblFloatForm" role="dialog" aria-label="Quick quote form">
+  <div class="nbl-float-tab" aria-label="Toggle quote form">Get Quote</div>
+  <div class="nbl-float-form-inner">
+    <h4>Quick Quote Request</h4>
+    <input class="nbl-float-input" id="ffName" type="text" placeholder="Your Name" aria-label="Your name" autocomplete="name">
+    <input class="nbl-float-input" id="ffEmail" type="email" placeholder="Work Email" aria-label="Work email" autocomplete="email">
+    <input class="nbl-float-input" id="ffPhone" type="tel" placeholder="Phone Number" aria-label="Phone number" autocomplete="tel">
+    <textarea class="nbl-float-input" id="ffMsg" rows="3" placeholder="Tell us about your project..." aria-label="Project details" style="resize:vertical;"></textarea>
+    <button class="nbl-float-submit" type="button" onclick="submitFloatForm()">Send Request</button>
+  </div>
+</div>
+
+<script src="../assets/js/nebulae-forms.js"></script>
 <script src="../assets/js/nebulae-float.js"></script>
 </body>
 </html>

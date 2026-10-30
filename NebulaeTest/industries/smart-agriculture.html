@@ -3,77 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Agriculture System | Nebulae — IoT Precision Farming India</title>
-  <meta name="description" content="Nebulae IoT solutions for precision agriculture — soil moisture, weather, crop health, irrigation automation, livestock tracking, and LoRaWAN farm sensor networks across India."/>
-  <meta name="keywords" content="smart agriculture IoT India, precision farming IoT, soil moisture sensor LoRa, irrigation automation, crop monitoring"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://www.nebulae.io/industries/smart-agriculture.html"/>
-  <meta property="og:title" content="Smart Agriculture System | Nebulae — IoT Precision Farming India"/>
-  <meta property="og:description" content="Nebulae IoT solutions for precision agriculture — soil moisture, weather, crop health, irrigation automation, livestock tracking, and LoRaWAN farm sensor networks across India."/>
-  <meta property="og:type" content="website"/>
+  <title>Smart Agriculture IoT — Long-Range LoRaWAN Sensing | Nebulae</title>
+  <meta name="description" content="Smart agriculture with LoRaWAN: low-power nodes, long-range gateways and water-meter AMR for farms, irrigation and remote monitoring." />
+  <meta name="keywords" content="smart agriculture IoT, LoRaWAN farm sensors, irrigation monitoring, precision farming, Nebulae" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.nebulae.io/industries/smart-agriculture.html" />
+  <meta property="og:title" content="Smart Agriculture IoT — Long-Range LoRaWAN Sensing | Nebulae" />
+  <meta property="og:description" content="Smart agriculture with LoRaWAN: low-power nodes, long-range gateways and water-meter AMR for farms, irrigation and remote monitoring." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/nebulae-nav.css">
   <link rel="stylesheet" href="../assets/css/solutions.css">
+  <link rel="stylesheet" href="../assets/css/solutions-extra.css">
   <style>
-    .ind-hero{background:linear-gradient(135deg,#03031a 0%,#07072a 50%,#0d0d3a 100%);padding:5rem 0 4rem;position:relative;overflow:hidden;}
-    .ind-hero__grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(6,182,212,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(6,182,212,.055) 1px,transparent 1px);background-size:60px 60px;}
-    .ind-hero__orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;}
-    .ind-hero__orb--1{width:460px;height:460px;background:radial-gradient(circle,rgba(79,70,229,.28),transparent 70%);top:-100px;left:-60px;}
-    .ind-hero__orb--2{width:360px;height:360px;background:radial-gradient(circle,rgba(6,182,212,.22),transparent 70%);top:20%;right:-60px;}
-    .ind-breadcrumb{display:flex;align-items:center;gap:.5rem;margin-bottom:1.25rem;font-size:.78rem;color:rgba(255,255,255,.4);}
-    .ind-breadcrumb a{color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;}
-    .ind-breadcrumb a:hover{color:#06b6d4;}
-    .ind-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(6,182,212,.12);border:1px solid rgba(6,182,212,.3);color:#06b6d4;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.35rem .9rem;border-radius:100px;margin-bottom:1.1rem;}
-    .ind-hero__title{font-family:'Outfit',sans-serif;font-size:clamp(2rem,4.5vw,3.6rem);font-weight:800;color:#fff;line-height:1.08;letter-spacing:-.025em;margin-bottom:.9rem;}
-    .ind-hero__title span{background:linear-gradient(120deg,#06b6d4,#818cf8,#4f46e5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-    .ind-hero__desc{font-size:.98rem;color:rgba(255,255,255,.62);line-height:1.78;max-width:580px;margin-bottom:2rem;}
-    .ind-pill{display:inline-flex;align-items:center;gap:.4rem;padding:.38rem .95rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:100px;font-size:.76rem;font-weight:600;color:rgba(255,255,255,.65);text-decoration:none;transition:all .22s;margin:.2rem;}
-    .ind-pill:hover{background:rgba(6,182,212,.15);border-color:rgba(6,182,212,.4);color:#06b6d4;}
-    .ind-section{padding:5rem 0;}
-    .ind-section--surf{background:#f5f7ff;}
-    .ind-section--dark{background:linear-gradient(135deg,#07071e,#0e0e38);}
-    .ind-feat-list{list-style:none;margin:0 0 1.75rem;padding:0;display:flex;flex-direction:column;gap:.65rem;}
-    .ind-feat-list li{display:flex;align-items:flex-start;gap:.75rem;font-size:.9rem;color:#374151;}
-    .ind-feat-icon{width:22px;height:22px;border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;}
-    .ind-metric{background:#f0f3ff;border:1.5px solid #c7d2fe;border-radius:12px;padding:.65rem 1.1rem;text-align:center;min-width:110px;}
-    .ind-metric__val{font-family:'Outfit',sans-serif;font-size:1.4rem;font-weight:800;color:#4f46e5;line-height:1;display:block;}
-    .ind-metric__label{font-size:.68rem;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-top:.2rem;display:block;}
-    .ind-metrics{display:flex;flex-wrap:wrap;gap:.65rem;margin-bottom:1.75rem;}
-    .ind-img-card{border-radius:22px;overflow:hidden;position:relative;box-shadow:0 24px 64px rgba(79,70,229,.14);}
-    .ind-img-card img{width:100%;height:380px;object-fit:cover;display:block;}
-    .ind-img-card__stat{position:absolute;bottom:1.25rem;left:1.25rem;right:1.25rem;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-radius:14px;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;box-shadow:0 8px 32px rgba(0,0,0,.12);}
-    .ind-img-card__stat-item{text-align:center;flex:1;min-width:70px;}
-    .ind-img-card__stat-num{font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:800;color:#4f46e5;display:block;}
-    .ind-img-card__stat-label{font-size:.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;font-weight:600;}
-    .ind-table{width:100%;border-collapse:collapse;border-radius:16px;overflow:hidden;border:1.5px solid #e5e7eb;}
-    .ind-table th{padding:.9rem 1.1rem;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;background:#f8f9ff;border-bottom:2px solid #e5e7eb;}
-    .ind-table td{padding:.8rem 1.1rem;font-size:.84rem;color:#374151;border-bottom:1px solid #f3f4f6;}
-    .ind-table td:first-child{font-weight:700;color:#111827;background:#fafafe;}
-    .ind-table tr:last-child td{border-bottom:none;}
-    .ind-tag{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:.75rem;}
-    .ind-rel-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:1.5rem;display:block;text-decoration:none;transition:all .25s;height:100%;}
-    .ind-rel-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(79,70,229,.1);border-color:rgba(79,70,229,.25);}
-    .ind-rel-card__name{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:700;color:#111827;margin-bottom:.4rem;}
-    .ind-rel-card__desc{font-size:.8rem;color:#6b7280;line-height:1.6;}
-    .ind-rel-card__arrow{font-size:.78rem;font-weight:700;color:#4f46e5;margin-top:.75rem;display:block;}
-    .ind-cta-wrap{background:linear-gradient(135deg,#0a0a2e,#1a1a6e);border-radius:28px;padding:4.5rem 3rem;text-align:center;position:relative;overflow:hidden;}
-    .ind-cta-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(6,182,212,.18),transparent 50%),radial-gradient(circle at 80% 50%,rgba(79,70,229,.22),transparent 50%);pointer-events:none;}
-    .ind-btn-primary{display:inline-flex;align-items:center;gap:.45rem;padding:.85rem 1.85rem;border-radius:10px;background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;font-size:.9rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 8px 28px rgba(79,70,229,.35);}
-    .ind-btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(79,70,229,.5);color:#fff;}
-    .ind-btn-outline{display:inline-flex;align-items:center;gap:.45rem;padding:.82rem 1.75rem;border-radius:10px;background:transparent;color:rgba(255,255,255,.82);border:1.5px solid rgba(255,255,255,.25);font-size:.9rem;font-weight:600;font-family:'Outfit',sans-serif;text-decoration:none;transition:all .25s;}
-    .ind-btn-outline:hover{border-color:#06b6d4;color:#06b6d4;}
-    .ind-eyebrow-sm{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#4f46e5;background:rgba(79,70,229,.08);padding:.3rem .85rem;border-radius:100px;margin-bottom:.75rem;}
-    .ind-section-title{font-family:'Outfit',sans-serif;font-size:clamp(1.75rem,3.5vw,2.6rem);font-weight:800;color:#0a0a1e;line-height:1.1;letter-spacing:-.02em;margin-bottom:.75rem;}
-    .ind-chip{display:inline-flex;align-items:center;gap:.45rem;padding:.45rem 1rem;background:#fff;border:1.5px solid #e5e7eb;border-radius:100px;font-size:.78rem;font-weight:600;color:#374151;margin:.2rem;}
-    .ind-use-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:1.5rem;height:100%;transition:transform .25s,box-shadow .25s,border-color .25s;}
-    .ind-use-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(79,70,229,.08);border-color:rgba(79,70,229,.2);}
-    .ind-use-card__icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
-    .ind-use-card__title{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:800;color:#111827;margin-bottom:.4rem;}
-    .ind-use-card__desc{font-size:.82rem;color:#6b7280;line-height:1.65;}
+    .sl-hero{padding:5rem 0 4rem}
+    .sl-arch-card{margin-top:1.25rem}
+    .sl-arch-arrow:last-child{display:none}
+    .sl-related{padding:4rem 0;background:#f5f7ff}
+    .sl-related__title{font-family:'Outfit',sans-serif;font-size:1.35rem;font-weight:800;color:#111827;margin-bottom:1.5rem}
+    .sl-rel-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:1.5rem;display:block;text-decoration:none;transition:all .25s;height:100%}
+    .sl-rel-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(79,70,229,.1);border-color:rgba(79,70,229,.25)}
+    .sl-rel-card__tag{font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:.75rem;display:inline-block}
+    .sl-rel-card__name{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:700;color:#111827;margin-bottom:.4rem}
+    .sl-rel-card__desc{font-size:.8rem;color:#6b7280;line-height:1.6}
+    .sl-rel-card__arrow{font-size:.78rem;font-weight:700;color:#4f46e5;margin-top:.75rem;display:block}
   </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many gateways does a farm need?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on terrain and layout. LoRa reaches up to 10 km line of sight for the NLN500a, so one gateway often covers a large area. We can plan the layout with you."}}, {"@type": "Question", "name": "Do the sensors need mains power?", "acceptedAnswer": {"@type": "Answer", "text": "No. The LoRaWAN nodes are low-power and battery-friendly. Gateways run on mains, and the IP65 model has battery backup."}}, {"@type": "Question", "name": "Can I try a prototype first?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The NLN0651-i evaluation kit is based on the NLN500a and works with the Arduino IDE."}}, {"@type": "Question", "name": "Does the gateway need internet?", "acceptedAnswer": {"@type": "Answer", "text": "Gateways connect through Ethernet or 4G LTE (on some models) to reach the network server."}}]}</script>
+  <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="stylesheet" href="../assets/css/nebulae-fixes.css">
 </head>
 <body>
@@ -538,6 +497,7 @@
                     
                     <li><a href="../about.html#team"><span class="atl-mega__dot"></span>Our Team</a></li>
                     <li><a href="../about.html#partners"><span class="atl-mega__dot"></span>Partners &amp; Certifications</a></li>
+                    <li><a href="../faq.html"><span class="atl-mega__dot"></span>FAQ</a></li>
                   </ul>
                 </div>
                 <div class="atl-mega__col">
@@ -659,6 +619,7 @@
           <a class="atl-nav__msublink" href="../about.html">About Nebulae</a>
           <a class="atl-nav__msublink" href="../about.html#mission">Our Mission &amp; Vision</a>
           <a class="atl-nav__msublink" href="../about.html#team">Our Team</a>
+          <a class="atl-nav__msublink" href="../faq.html">FAQ</a>
           <a class="atl-nav__msublink" href="../blog.html">Blog</a>
           <a class="atl-nav__msublink" href="../careers.html">Careers</a>
           <a class="atl-nav__msublink" href="../events.html">Upcoming Events</a>
@@ -672,121 +633,75 @@
 </div><!-- /.atl-sticky-header -->
 </header>
 
-<section class="ind-hero">
-  <div class="ind-hero__grid"></div>
-  <div class="ind-hero__orb ind-hero__orb--1" style="background:radial-gradient(circle,rgba(5,150,105,.28),transparent 70%);"></div>
-  <div class="ind-hero__orb ind-hero__orb--2" style="background:radial-gradient(circle,rgba(6,182,212,.22),transparent 70%);"></div>
+<!-- HERO -->
+<section class="sl-hero">
+  <div class="sl-hero__grid"></div>
+  <div class="sl-hero__orb sl-hero__orb--1"></div>
+  <div class="sl-hero__orb sl-hero__orb--2"></div>
   <div class="container">
-    <div style="position:relative;z-index:2;">
-      <nav class="ind-breadcrumb">
+    <div class="sl-hero__inner">
+      <nav class="sl-breadcrumb" aria-label="breadcrumb">
         <a href="../index.html">Home</a><span>›</span>
         <a href="../industries.html">Industries</a><span>›</span>
-        <span style="color:rgba(255,255,255,.65);">Smart Agriculture System</span>
+        <span style="color:rgba(255,255,255,.65);">Smart Agriculture</span>
       </nav>
-      <div class="ind-eyebrow">Agriculture · Precision Farming · LoRa</div>
-      <h1 class="ind-hero__title">Smart Agriculture <span>IoT System</span></h1>
-      <p class="ind-hero__desc">IoT-powered precision farming — soil moisture, weather monitoring, crop health sensing, automated irrigation, and livestock tracking on long-range LoRaWAN networks across India's diverse farm topographies.</p>
-      <div style="display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:1.5rem;">
-        <a href="../contact.html" class="ind-btn-primary">Discuss Your Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
-        <a href="../solutions.html" class="ind-btn-outline">View Solutions</a>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.5rem;"><a href="#apps" class="ind-pill">Applications</a><a href="#sensors" class="ind-pill">Sensors</a><a href="#network" class="ind-pill">Network</a></div>
+      <div class="sl-eyebrow">Industry · Agriculture</div>
+      <h1 class="sl-hero__title">Smart Agriculture System</h1>
+      <p class="sl-hero__desc">Long-range, low-power LoRaWAN networks for monitoring fields, water and equipment across farms.</p>
+      <div class="sl-jump-pills"><a href="#overview" class="sl-jump-pill">Overview</a><a href="#challenges" class="sl-jump-pill">Challenges</a><a href="#products" class="sl-jump-pill">Products</a><a href="#usecases" class="sl-jump-pill">Use cases</a><a href="#arch" class="sl-jump-pill">System</a><a href="#faq" class="sl-jump-pill">FAQ</a><a href="#proposal" class="sl-jump-pill">Get a Proposal</a></div>
     </div>
   </div>
 </section>
-<section class="ind-section" id="overview">
+
+<!-- OVERVIEW -->
+<section class="sl-section" id="overview">
   <div class="container">
     <div class="row align-items-center g-5">
-      <div class="col-lg-6 order-lg-2">
-        <div class="ind-img-card">
-          <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=700&q=80" alt="Smart Agriculture IoT" loading="lazy"/>
-          <div class="ind-img-card__stat"><div class="ind-img-card__stat-item"><span class="ind-img-card__stat-num">30%</span><span class="ind-img-card__stat-label">Water Saving</span></div><div class="ind-img-card__stat-item"><span class="ind-img-card__stat-num">15 km</span><span class="ind-img-card__stat-label">LoRa Range</span></div><div class="ind-img-card__stat-item"><span class="ind-img-card__stat-num">10 yr</span><span class="ind-img-card__stat-label">Battery Life</span></div></div>
-        </div>
-      </div>
-      <div class="col-lg-6 order-lg-1">
-        <span class="ind-tag" style="background:rgba(5,150,105,.1);color:#059669;">Precision Farming · Smart Irrigation</span>
-        <h2 class="ind-section-title">IoT Precision Farming from Soil to Cloud</h2>
-        <p style="font-size:.95rem;color:#374151;line-height:1.8;margin-bottom:1.5rem;">Nebulae's long-range LoRaWAN sensor networks give farmers real-time insight into soil conditions, micro-weather, crop health, and water usage — enabling precision irrigation, early pest and disease alerts, and data-driven decisions that reduce input costs and increase yield.</p>
-        <div class="ind-metrics"><div class="ind-metric" style="border-color:rgba(79,70,229,.25);"><span class="ind-metric__val" style="color:#4f46e5;">30%</span><span class="ind-metric__label">Water Saved</span></div><div class="ind-metric" style="border-color:rgba(79,70,229,.25);"><span class="ind-metric__val" style="color:#4f46e5;">15 km</span><span class="ind-metric__label">LoRa Range</span></div><div class="ind-metric" style="border-color:rgba(79,70,229,.25);"><span class="ind-metric__val" style="color:#4f46e5;">10 yr</span><span class="ind-metric__label">Battery</span></div><div class="ind-metric" style="border-color:rgba(79,70,229,.25);"><span class="ind-metric__val" style="color:#4f46e5;">PM-KISAN</span><span class="ind-metric__label">Aligned</span></div></div>
-        <ul class="ind-feat-list"><li><div class="ind-feat-icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Soil Monitoring</strong> — Moisture, EC, pH, temperature at multiple depths — zone-level irrigation triggers</span></li><li><div class="ind-feat-icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Micro-Weather Station</strong> — Temperature, humidity, wind speed/direction, rainfall, solar radiation per farm</span></li><li><div class="ind-feat-icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Automated Irrigation</strong> — Soil-moisture-triggered valve control; water flow metering; pump health monitoring</span></li><li><div class="ind-feat-icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Crop Health Sensing</strong> — NDVI imaging, canopy temperature, leaf wetness — early disease and stress detection</span></li><li><div class="ind-feat-icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Livestock Tracking</strong> — GPS + LoRa ear-tag trackers; geo-fence alerts; health and activity monitoring</span></li></ul>
-        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;"><span class="ind-chip">LoRaWAN</span><span class="ind-chip">NB-IoT</span><span class="ind-chip">Soil Sensors</span><span class="ind-chip">Weather Station</span><span class="ind-chip">GPS Tracker</span><span class="ind-chip">FreeRTOS</span></div>
-        <div style="display:flex;gap:.75rem;margin-top:1.75rem;flex-wrap:wrap;">
-          <a href="../contact.html" class="ind-btn-primary">Get a Proposal <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
-          <a href="../solutions.html" class="ind-btn-outline" style="background:transparent;color:#4f46e5;border-color:#c7d2fe;">View Solutions</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="ind-section ind-section--surf" id="apps">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="ind-eyebrow-sm">Farm Applications</span>
-      <h2 class="ind-section-title">What We Monitor</h2>
-    </div>
-    <div class="row g-3">
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div><p class="ind-use-card__title">Soil Moisture</p><p class="ind-use-card__desc">Multi-depth soil moisture, EC, and temperature — zone-level irrigation decisions.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(6,182,212,.1);color:#06b6d4;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div><p class="ind-use-card__title">Weather Monitoring</p><p class="ind-use-card__desc">On-farm micro-weather — temperature, humidity, wind, rain, and solar radiation.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(234,88,12,.1);color:#ea580c;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><p class="ind-use-card__title">Automated Irrigation</p><p class="ind-use-card__desc">Valve control triggered by soil VWC — flow metering and pump health monitoring.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 22 16 8M22 2C22 2 10 4 6 10c-4 6-2 12-2 12s6 2 12-2c6-4 8-16 8-16z"/></svg></div><p class="ind-use-card__title">Crop Health</p><p class="ind-use-card__desc">Leaf wetness, canopy temperature, NDVI — early disease, frost, and stress alert.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(79,70,229,.1);color:#4f46e5;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><p class="ind-use-card__title">Livestock Tracking</p><p class="ind-use-card__desc">GPS + LoRa ear tags — real-time herd map, geo-fence, and health monitoring.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(37,99,235,.1);color:#2563eb;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div><p class="ind-use-card__title">Cold Chain</p><p class="ind-use-card__desc">Temperature loggers for produce storage and transport — FSSAI compliance.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(220,38,38,.1);color:#dc2626;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><p class="ind-use-card__title">Pest & Disease Alert</p><p class="ind-use-card__desc">Trap sensors and environmental model — early warning before outbreak.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ind-use-card"><div class="ind-use-card__icon" style="background:rgba(13,148,136,.1);color:#0d9488;"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><p class="ind-use-card__title">Farm Dashboard</p><p class="ind-use-card__desc">Web and mobile app — field map, sensor data, irrigation log, yield tracking.</p></div></div>
-    </div>
-  </div>
-</section>
-<section class="ind-section" id="sensors">
-  <div class="container">
-    <div class="row g-5">
       <div class="col-lg-6">
-        <span class="ind-eyebrow-sm">Sensor Hardware</span>
-        <h2 class="ind-section-title">Field-Hardened Sensors</h2>
-        <div style="overflow-x:auto;margin-top:1.25rem;">
-          <table class="ind-table">
-            <thead><tr><th>Sensor</th><th>Parameters</th><th>Battery</th></tr></thead>
-            <tbody>
-              <tr><td>Soil Node</td><td>Moisture, EC, pH, Temp</td><td>5–7 years</td></tr>
-              <tr><td>Weather Station</td><td>Temp, RH, Wind, Rain, Solar</td><td>Mains + solar</td></tr>
-              <tr><td>Canopy Sensor</td><td>Leaf wetness, canopy temp</td><td>3–5 years</td></tr>
-              <tr><td>Flow Meter</td><td>Irrigation flow (m³/hr)</td><td>3–5 years</td></tr>
-              <tr><td>Livestock Tag</td><td>GPS, activity, temperature</td><td>1–2 years</td></tr>
-              <tr><td>Cold Chain Logger</td><td>Temperature, humidity</td><td>1–2 years</td></tr>
-            </tbody>
-          </table>
+        <div class="slx-hero-img">
+          <img src="../assets/images/products/nlg6x40h-in.jpg" alt="NLG6X40H-IN outdoor LoRaWAN gateway" width="900" height="560"/>
+          <div class="sl-img-card__stat"><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">10 km</span><span class="sl-img-card__stat-label">Node range (LoS)</span></div><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">IP67</span><span class="sl-img-card__stat-label">Outdoor gateway</span></div><div class="sl-img-card__stat-item"><span class="sl-img-card__stat-num">−135 dBm</span><span class="sl-img-card__stat-label">Node sensitivity, SF12</span></div></div>
         </div>
       </div>
-      <div class="col-lg-6" id="network">
-        <span class="ind-eyebrow-sm">Farm Network Design</span>
-        <h2 class="ind-section-title">15 km Range — No SIM Cost</h2>
-        <p style="font-size:.9rem;color:#374151;line-height:1.75;margin-bottom:1.25rem;">A single LoRaWAN gateway covers 5–15 km radius in open farmland — one gateway serving 500–1000 sensor nodes with no per-SIM data cost. Solar-powered gateways with 4G backhaul provide truly off-grid connectivity.</p>
-        <ul class="ind-feat-list">
-          <li><div class="ind-feat-icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Solar Gateway</strong> — Solar + battery powered LoRa gateway — fully off-grid, zero electricity cost</span></li>
-          <li><div class="ind-feat-icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>4G / Satellite Backhaul</strong> — 4G backhaul with Starlink fallback for remote areas with no cellular coverage</span></li>
-          <li><div class="ind-feat-icon" style="background:rgba(5,150,105,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Kisan App</strong> — Farmer mobile app — vernacular language alerts, irrigation schedules, crop advisory</span></li>
-        </ul>
+      <div class="col-lg-6">
+        <span class="sl-solution__tag" style="background:rgba(79,70,229,.1);color:#059669;">LoRaWAN · Farms</span>
+        <h2 class="sl-solution__title" style="color:#111827;">Connect Fields Without Cabling</h2>
+        <p class="sl-solution__desc" style="color:#374151;">Farms cover large areas with little infrastructure. LoRaWAN lets battery-powered nodes report over long distances to a single outdoor gateway.</p><p class="sl-solution__desc" style="color:#374151;">Nebulae nodes, modules and IP65 / IP67 gateways provide the radio network, and water-meter AMR devices can report irrigation usage.</p>
+        <div class="sl-metrics"><div class="sl-metric"><span class="sl-metric__val">LoRaWAN</span><span class="sl-metric__label">Long range</span></div><div class="sl-metric"><span class="sl-metric__val">Battery</span><span class="sl-metric__label">Low power</span></div><div class="sl-metric"><span class="sl-metric__val">IP67</span><span class="sl-metric__label">Gateway housing</span></div></div>
+        <ul class="sl-feat-list" id="features"><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Compact LoRaWAN nodes</strong> — STM32WL, −135 dBm at SF12, up to 10 km LoS</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Outdoor gateways</strong> — IP65 / IP67, 85–528 VAC, battery backup option</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Evaluation kit</strong> — Arduino-compatible LoRa EVK for prototyping</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Water AMR</strong> — meter reading for irrigation lines</span></li><li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:#059669;"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Band-pass filters</strong> — IP67 filters for the 865 MHz Indian ISM band</span></li></ul>
+        <div class="sl-products-strip"><a href="../products.html?proto=lora&amp;type=gateway" class="sl-product-chip">LoRaWAN Gateways</a><a href="../products.html?proto=lora" class="sl-product-chip">LoRa Nodes &amp; Modules</a><a href="../products.html?proto=lora&amp;type=evk" class="sl-product-chip">LoRa EVK</a></div>
+        <div style="display:flex;gap:.75rem;margin-top:1.75rem;flex-wrap:wrap;">
+          <a href="#proposal" class="sl-sol-btn sl-sol-btn--primary">Get a Proposal</a>
+          <a href="#products" class="sl-sol-btn sl-sol-btn--outline">View Products</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
-<section class="ind-section ind-section--surf">
-  <div class="container">
-    <p style="font-family:'Outfit',sans-serif;font-size:1.35rem;font-weight:800;color:#111827;margin-bottom:1.5rem;">Related Industries</p>
-    <div class="row g-3"><div class="col-6 col-md-3"><a href="farm-animal-management.html" class="ind-rel-card"><span class="ind-tag" style="background:rgba(5,150,105,.1);color:#059669;">Agriculture</span><p class="ind-rel-card__name">Farm Animal Management</p><p class="ind-rel-card__desc">Livestock health, herd tracking, and breeding management IoT.</p><span class="ind-rel-card__arrow">Explore →</span></a></div><div class="col-6 col-md-3"><a href="iot-energy-utilities.html" class="ind-rel-card"><span class="ind-tag" style="background:rgba(234,88,12,.1);color:#ea580c;">Utilities</span><p class="ind-rel-card__name">IoT in Energy & Utilities</p><p class="ind-rel-card__desc">Smart water metering and irrigation pump energy monitoring.</p><span class="ind-rel-card__arrow">Explore →</span></a></div><div class="col-6 col-md-3"><a href="smart-city-solutions.html" class="ind-rel-card"><span class="ind-tag" style="background:rgba(37,99,235,.1);color:#2563eb;">Smart City</span><p class="ind-rel-card__name">Smart City Solutions</p><p class="ind-rel-card__desc">Extend farm IoT into the city supply chain with cold-chain tracking.</p><span class="ind-rel-card__arrow">Explore →</span></a></div><div class="col-6 col-md-3"><a href="industrial-iot.html" class="ind-rel-card"><span class="ind-tag" style="background:rgba(217,119,6,.1);color:#d97706;">IIoT</span><p class="ind-rel-card__name">Industrial IoT</p><p class="ind-rel-card__desc">Food processing plant monitoring and cold-chain automation.</p><span class="ind-rel-card__arrow">Explore →</span></a></div></div>
-  </div>
-</section>
-<section class="ind-section" style="background:#fff;">
-  <div class="container">
-    <div class="ind-cta-wrap">
-      <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:.75rem;position:relative;z-index:1;">Deploy Precision Farming IoT on Your Farm</h2>
-      <p style="color:rgba(255,255,255,.6);font-size:.97rem;max-width:520px;margin:0 auto 2rem;position:relative;z-index:1;">Nebulae provides LoRaWAN sensor nodes, solar gateways, and a Kisan mobile app — end-to-end farm IoT.</p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;">
-        <a href="../contact.html" class="ind-btn-primary">Start a Conversation <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></a>
-        <a href="../products.html" class="ind-btn-outline">Browse Products</a>
-      </div>
-    </div>
-  </div>
-</section><footer class="atl-footer">
+<section class="sl-section" id="challenges"><div class="container"><div class="sl-eyebrow-sm">Why it matters</div><h2 class="sl-section-title">Challenges We Help Solve</h2><div class="row g-3 mt-1"><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">1</span><h3>Fields are far from mains and networks</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>Battery-powered LoRaWAN nodes and a solar or mains-powered gateway cover wide areas with a few gateways.</p></div></div><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">2</span><h3>Cellular coverage is patchy</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>A gateway with a 4G backhaul at one good-signal point serves many nodes across the farm.</p></div></div><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">3</span><h3>Water management needs timely data</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>Sensors on tanks, pumps and water meters report regularly, so irrigation decisions use data.</p></div></div><div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">4</span><h3>Teams want to try ideas quickly</h3></div><p class="slx-ch__a"><strong>How Nebulae helps</strong>The NLN0651-i LoRa evaluation kit supports fast prototyping with the Arduino IDE.</p></div></div></div></div></section>
+<section class="sl-section sl-section--surf" id="products"><div class="container"><div class="sl-eyebrow-sm">Our Products</div><h2 class="sl-section-title">Products for this industry</h2><div class="row g-3 mt-1"><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nln500a.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nln500a-board.jpg" alt="NLN500a"/></div><div class="slx-prod__b"><span class="slx-prod__t">Node</span><h3>NLN500a</h3><p>Compact LoRaWAN node for field sensors.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nln500b.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nln500b-coin-scale.png" alt="NLN500b"/></div><div class="slx-prod__b"><span class="slx-prod__t">Module</span><h3>NLN500b</h3><p>Small LoRaWAN / Sigfox module for custom sensor boards.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nlg6x40h-in.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nlg6x40h-in.jpg" alt="NLG6X40H-IN"/></div><div class="slx-prod__b"><span class="slx-prod__t">Gateway</span><h3>NLG6X40H-IN</h3><p>IP67 8-channel LoRaWAN gateway for outdoor farms.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nlg6x40g-in.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nlg6x40g-in.jpg" alt="NLG6X40G-IN"/></div><div class="slx-prod__b"><span class="slx-prod__t">Gateway</span><h3>NLG6X40G-IN</h3><p>IP65 8-channel gateway with battery backup.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/nln0651i.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/nln0651i-board.jpg" alt="NLN0651-i"/></div><div class="slx-prod__b"><span class="slx-prod__t">EVK</span><h3>NLN0651-i</h3><p>Arduino-compatible LoRa evaluation kit.</p><span class="slx-prod__a">View product →</span></div></a></div><div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/amr-water.html"><div class="slx-prod__img"><img loading="lazy" src="../assets/images/products/amr-water-device.jpg" alt="Water Meter AMR"/></div><div class="slx-prod__b"><span class="slx-prod__t">AMR Node</span><h3>Water Meter AMR</h3><p>AMR for water meters, LoRaWAN / Sigfox.</p><span class="slx-prod__a">View product →</span></div></a></div></div></div></section>
+<section class="sl-section" id="usecases"><div class="container"><div class="sl-eyebrow-sm">Where it fits</div><h2 class="sl-section-title">Typical Applications</h2><div class="row g-3 mt-1"><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Soil and weather sensing</h3><dl><dt>Senses</dt><dd>Soil moisture, temperature, rainfall</dd><dt>Connects with</dt><dd>LoRaWAN nodes (NLN500a) with sensors to an IP67 gateway</dd><dt>You get</dt><dd>Irrigation planned from measured conditions.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Irrigation monitoring</h3><dl><dt>Senses</dt><dd>Pump status and tank levels</dd><dt>Connects with</dt><dd>LoRaWAN nodes or RTU</dd><dt>You get</dt><dd>Know whether pumps ran and tanks are full.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Remote pump control</h3><dl><dt>Senses</dt><dd>Pump on / off commands</dd><dt>Connects with</dt><dd>RTU or LoRa actuator nodes</dd><dt>You get</dt><dd>Fewer trips to switch pumps.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Greenhouse monitoring</h3><dl><dt>Senses</dt><dd>Temperature and humidity</dd><dt>Connects with</dt><dd>Low-power LoRa sensors</dd><dt>You get</dt><dd>Alerts when conditions drift.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Cold storage monitoring</h3><dl><dt>Senses</dt><dd>Storage temperature</dd><dt>Connects with</dt><dd>LoRa temperature nodes</dd><dt>You get</dt><dd>Alerts before produce is affected.</dd></dl></div></div><div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>Water usage</h3><dl><dt>Senses</dt><dd>Consumption from water meters</dd><dt>Connects with</dt><dd>Water Meter AMR on LoRaWAN</dd><dt>You get</dt><dd>Usage data per block or user.</dd></dl></div></div></div><p class="slx-note">These are typical applications for this industry, shown to help you plan. Your project details decide the final design.</p></div></section>
+<section class="sl-section" id="architecture"><div class="container"><div class="row g-5 align-items-start"><div class="col-lg-6"><div class="sl-eyebrow-sm">How it fits together</div><h2 class="sl-section-title">Typical System</h2><div class="sl-arch-card"><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#059669;font:800 .85rem Outfit,sans-serif;">1</div><span class="sl-arch-layer__label">Field sensors</span><span class="sl-arch-layer__desc">Soil, weather, tank, pump and meter signals</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#059669;font:800 .85rem Outfit,sans-serif;">2</div><span class="sl-arch-layer__label">LoRa nodes</span><span class="sl-arch-layer__desc">NLN500a / NLN500b battery-powered nodes</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#059669;font:800 .85rem Outfit,sans-serif;">3</div><span class="sl-arch-layer__label">Farm gateway</span><span class="sl-arch-layer__desc">IP65 / IP67 LoRaWAN gateway with 4G backhaul</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#059669;font:800 .85rem Outfit,sans-serif;">4</div><span class="sl-arch-layer__label">Network server</span><span class="sl-arch-layer__desc">LoRaWAN Network Server</span></div><div class="sl-arch-arrow">↓</div><div class="sl-arch-layer"><div class="sl-arch-layer__icon" style="background:rgba(79,70,229,.1);color:#059669;font:800 .85rem Outfit,sans-serif;">5</div><span class="sl-arch-layer__label">Farm dashboard</span><span class="sl-arch-layer__desc">Alerts, trends and reports</span></div></div></div><div class="col-lg-6"></div></div></div></section>
+<!-- ADD WHEN AVAILABLE: case study (key case_study) and certifications (key certs) in tools/industries_extra.py -->
+<section class="sl-section sl-section--surf" id="faq"><div class="container"><div class="row g-4"><div class="col-lg-4"><div class="sl-eyebrow-sm">FAQ</div><h2 class="sl-section-title">Common Questions</h2><p class="slx-note">More answers are in our <a href="../faq.html">full FAQ</a>, or <a href="../contact.html">ask our team</a>.</p></div><div class="col-lg-8"><div class="slx-faq"><details><summary>How many gateways does a farm need?</summary><p>It depends on terrain and layout. LoRa reaches up to 10 km line of sight for the NLN500a, so one gateway often covers a large area. We can plan the layout with you.</p></details><details><summary>Do the sensors need mains power?</summary><p>No. The LoRaWAN nodes are low-power and battery-friendly. Gateways run on mains, and the IP65 model has battery backup.</p></details><details><summary>Can I try a prototype first?</summary><p>Yes. The NLN0651-i evaluation kit is based on the NLN500a and works with the Arduino IDE.</p></details><details><summary>Does the gateway need internet?</summary><p>Gateways connect through Ethernet or 4G LTE (on some models) to reach the network server.</p></details></div></div></div></div></section>
+<section class="sl-section" id="proposal"><div class="container"><div class="row g-4 align-items-start"><div class="col-lg-5"><div class="sl-eyebrow-sm">Get a proposal · Smart Agriculture</div><h2 class="sl-section-title">Tell Us About Your Project</h2>
+<p class="slx-note">Share a few details and our team will reply with product suggestions and next steps. Prefer e-mail? Write to <a href="mailto:sales@nebulae.io">sales@nebulae.io</a>.</p></div>
+<div class="col-lg-7"><form class="slx-form" data-nbl-proposal data-industry="Smart Agriculture" novalidate>
+<div class="row g-3"><div class="col-sm-6"><label for="pfName">Name *</label><input id="pfName" name="name" type="text" autocomplete="name" required></div>
+<div class="col-sm-6"><label for="pfEmail">Work e-mail *</label><input id="pfEmail" name="email" type="email" autocomplete="email" required></div>
+<div class="col-sm-6"><label for="pfCompany">Company</label><input id="pfCompany" name="company" type="text" autocomplete="organization"></div>
+<div class="col-sm-6"><label for="pfPhone">Phone</label><input id="pfPhone" name="phone" type="tel" autocomplete="tel"></div>
+<div class="col-12"><label for="pfMsg">Your project</label><textarea id="pfMsg" name="message" rows="4" placeholder="What do you want to connect, how many devices, and where?"></textarea></div>
+<div class="col-12"><button type="submit" class="sl-sol-btn sl-sol-btn--primary">Request Proposal</button></div></div></form></div></div></div></section>
+<section class="sl-related"><div class="container"><p class="sl-related__title">Related Solutions</p><div class="row g-3"><div class="col-6 col-md-3"><a href="../industries/farm-animal-management.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(16,185,129,.1);color:#059669;">Industry</span><p class="sl-rel-card__name">Farm &amp; Animal Management</p><p class="sl-rel-card__desc">Compact LoRa and 434 MHz tags for livestock monitoring.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../solutions/smart-water-meter.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(37,99,235,.1);color:#2563eb;">AMI</span><p class="sl-rel-card__name">Smart Water Meter</p><p class="sl-rel-card__desc">LoRa smart water meter (Nebulae Pravah 15) with AMR, gateway and HES.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../services/lorawan-network-server.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(124,58,237,.1);color:#7c3aed;">Software</span><p class="sl-rel-card__name">LoRaWAN Network Server</p><p class="sl-rel-card__desc">Network server to onboard, manage and secure LoRaWAN gateways and devices.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div><div class="col-6 col-md-3"><a href="../industries/smart-city-solutions.html" class="sl-rel-card"><span class="sl-rel-card__tag" style="background:rgba(13,148,136,.1);color:#0d9488;">Industry</span><p class="sl-rel-card__name">Smart City Solutions</p><p class="sl-rel-card__desc">Street lighting, EV charging and city-wide LoRaWAN connectivity.</p><span class="sl-rel-card__arrow">Learn more →</span></a></div></div></div></section>
+<section style="padding:4rem 0;background:#fff;"><div class="container"><div class="sl-cta-wrap">
+  <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:.75rem;">Plan a Farm Network</h2>
+  <p style="color:rgba(255,255,255,.6);font-size:.97rem;max-width:560px;margin:0 auto 2rem;">Tell us about your farm and we will suggest the right nodes and gateways.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <a href="../contact.html" class="sl-sol-btn sl-sol-btn--primary">Start a Conversation</a>
+    <a href="../products.html" class="sl-sol-btn sl-sol-btn--dark-outline">Browse Products →</a>
+  </div></div></div></section>
+<footer class="atl-footer">
   <div class="container">
     <div class="row g-4 align-items-start">
 
@@ -800,22 +715,23 @@
 
       <!-- Navigate -->
       <div class="col-6 col-md-2">
-        <h6 class="atl-footer__heading">Navigate</h6>
+        <p class="atl-footer__heading">Navigate</p>
         <ul class="atl-footer__list">
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="#home" onclick="return navClick('home')">Home</a></li>
           <li><a href="../about.html">About Us</a></li>
           <li><a href="../services.html">Services</a></li>
           <li><a href="../products.html">Products</a></li>
           <li><a href="../solutions.html">Solutions</a></li>
           <li><a href="../industries.html">Industries</a></li>
-          <li><a href="../resources.html">Resources</a></li>
+           <li><a href="../resources.html">Resources</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
           <li><a href="../contact.html">Contact Us</a></li>
         </ul>
       </div>
 
       <!-- Services & Solutions -->
       <div class="col-6 col-md-3">
-        <h6 class="atl-footer__heading">Services</h6>
+        <p class="atl-footer__heading">Services</p>
         <ul class="atl-footer__list">
           <li><a href="../services/iot-product-development.html">IoT Product Development</a></li>
           <li><a href="../services/embedded-hardware-design.html">Embedded Hardware Design</a></li>
@@ -824,7 +740,7 @@
           <li><a href="../services/pcb-design-services.html">PCB Design Services</a></li>
           <li><a href="../services/iot-consulting.html">IoT Consulting</a></li>
         </ul>
-        <h6 class="atl-footer__heading mt-3">Solutions</h6>
+        <p class="atl-footer__heading mt-3">Solutions</p>
         <ul class="atl-footer__list">
           <li><a href="../solutions/smart-water-meter.html">Smart Water Meter</a></li>
           <li><a href="../solutions/smart-electric-meter.html">Smart Electric Meter</a></li>
@@ -835,16 +751,16 @@
 
       <!-- Products & Contact -->
       <div class="col-12 col-md-3">
-        <h6 class="atl-footer__heading">Products</h6>
+        <p class="atl-footer__heading">Products</p>
         <ul class="atl-footer__list">
           <li><a href="../products.html?proto=lora&amp;type=module">LoRa — Module &amp; Gateway</a></li>
           <li><a href="../products.html?proto=wisun&amp;type=module">Wi-SUN — Module &amp; Gateway</a></li>
           <li><a href="../products.html?proto=zigbee&amp;type=module">Zigbee — Module &amp; Gateway</a></li>
-          <li><a href="../products.html?proto=gsm&amp;type=module">GSM — Module &amp; Gateway</a></li>
+          <li><a href="../products.html?proto=gsm&amp;type=module">LTE — Module &amp; Gateway</a></li>
           <li><a href="../products.html?proto=ble&amp;type=module">BLE — Module &amp; Gateway</a></li>
           <li><a href="../products.html">View All Products →</a></li>
         </ul>
-        <h6 class="atl-footer__heading mt-3">Contact</h6>
+        <p class="atl-footer__heading mt-3">Contact</p>
         <ul class="atl-footer__list">
           <li><a href="tel:+9102692232501">+91-02692-232501 / 232502</a></li>
           <li><a href="mailto:sales@nebulae.io">sales@nebulae.io</a></li>
@@ -859,12 +775,23 @@
     </div>
   </div>
 </footer>
-
-<!-- Bootstrap JS -->
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/nebulae-nav.js"></script>
 <script src="../assets/js/nebulae-page.js"></script>
+<!-- ═══ FLOATING QUOTE FORM (same on every page; wired by nebulae-forms.js + nebulae-float.js) ═══ -->
+<div id="nblFloatForm" role="dialog" aria-label="Quick quote form">
+  <div class="nbl-float-tab" aria-label="Toggle quote form">Get Quote</div>
+  <div class="nbl-float-form-inner">
+    <h4>Quick Quote Request</h4>
+    <input class="nbl-float-input" id="ffName" type="text" placeholder="Your Name" aria-label="Your name" autocomplete="name">
+    <input class="nbl-float-input" id="ffEmail" type="email" placeholder="Work Email" aria-label="Work email" autocomplete="email">
+    <input class="nbl-float-input" id="ffPhone" type="tel" placeholder="Phone Number" aria-label="Phone number" autocomplete="tel">
+    <textarea class="nbl-float-input" id="ffMsg" rows="3" placeholder="Tell us about your project..." aria-label="Project details" style="resize:vertical;"></textarea>
+    <button class="nbl-float-submit" type="button" onclick="submitFloatForm()">Send Request</button>
+  </div>
+</div>
+
+<script src="../assets/js/nebulae-forms.js"></script>
 <script src="../assets/js/nebulae-float.js"></script>
 </body>
 </html>

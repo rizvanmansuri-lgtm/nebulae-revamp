@@ -7,7 +7,7 @@ Header = index.html header block, footer = index.html footer (same as every othe
 Usage (from project root):  python3 tools/build_solutions.py
 Edit text/specs in tools/solutions_data.py, re-run. Images live in assets/images/solutions/.
 """
-import os, re, sys, html, importlib.util
+import os, re, sys, html, json as _json, importlib.util
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..')) + os.sep
 sys.path.insert(0, os.path.dirname(__file__))
 from solutions_data import PAGES, RELATED
@@ -19,6 +19,10 @@ HEADER, FOOTER = aih.prefix_links(HEADER_ROOT, '../'), aih.prefix_links(FOOTER_R
 E = lambda s: html.escape(str(s), quote=True)
 CHECK = '<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>'
 IMG = '../assets/images/solutions/'
+import json
+PROD = {x['slug']: x for x in json.load(open(ROOT + 'tools/products_index.json', encoding='utf-8'))}
+def imgsrc(n):
+    return '../assets/images/products/' + n[2:] if n.startswith('p:') else IMG + n
 
 def table(rows, head=('Parameter', 'Specification')):
     b = ''.join(f'<tr><td>{E(k)}</td><td>{E(v)}</td></tr>' for k, v in rows)
@@ -58,6 +62,24 @@ def section_tables(p, n):
 
 def build(p):
     sub = p['dir']; slug = p['slug']; ov = p['overview']; acc = p.get('accent', '#4f46e5')
+    # industries: a scene photo (assets/images/industries/<slug>.jpg) leads the overview; the product shot is the fallback
+    _ph = None
+    if sub == 'industries':
+        for _e in ('jpg', 'webp', 'png'):
+            if os.path.exists(f'{ROOT}assets/images/industries/{slug}.{_e}'): _ph = f'../assets/images/industries/{slug}.{_e}'; break
+    if _ph:
+        _pr = imgsrc(ov['img'])
+        hero_img = (f'<img class="slx-scene" src="{_ph}" alt="{E(p["crumb"])} — IoT deployment" width="900" height="560"/>'
+                    f'<img class="slx-scene-prod" src="{_pr}" alt="{E(ov["alt"])}" width="240" height="160" loading="lazy"/>')
+    else:
+        hero_img = f'<img src="{imgsrc(ov["img"])}" alt="{E(ov["alt"])}" width="900" height="560"/>'
+    if sub == 'industries' and p.get('ch'):
+        pl = [('overview', 'Overview'), ('challenges', 'Challenges'), ('products', 'Products'), ('usecases', 'Use cases')]
+        if p.get('arch') or p.get('flow'): pl.append(('arch', 'System'))
+        pl += [('faq', 'FAQ')]
+        p['pills'] = pl
+    PROP = '#proposal' if sub == 'industries' else '../contact.html'
+    SEC2 = ('#products', 'View Products') if sub == 'industries' else ('../contact.html', 'Request Datasheet')
     pill_html = ''.join(f'<a href="#{i}" class="sl-jump-pill">{E(l)}</a>' for i, l in p['pills'])
     feats = ''.join(f'<li><div class="sl-feat-list__icon" style="background:rgba(79,70,229,.1);color:{acc};">{CHECK}</div>'
                     f'<span><strong>{E(a)}</strong> — {E(b)}</span></li>' for a, b in ov['features'])
@@ -117,7 +139,7 @@ def build(p):
       <div class="sl-eyebrow">{E(p['eyebrow'])}</div>
       <h1 class="sl-hero__title">{E(p['h1'])}</h1>
       <p class="sl-hero__desc">{E(p['lead'])}</p>
-      <div class="sl-jump-pills">{pill_html}<a href="../contact.html" class="sl-jump-pill">Get a Proposal</a></div>
+      <div class="sl-jump-pills">{pill_html}<a href="{PROP}" class="sl-jump-pill">Get a Proposal</a></div>
     </div>
   </div>
 </section>
@@ -128,7 +150,7 @@ def build(p):
     <div class="row align-items-center g-5">
       <div class="col-lg-6">
         <div class="slx-hero-img">
-          <img src="{IMG}{ov['img']}" alt="{E(ov['alt'])}" width="900" height="560"/>
+          {hero_img}
           <div class="sl-img-card__stat">{stats}</div>
         </div>
       </div>
@@ -140,14 +162,39 @@ def build(p):
         <ul class="sl-feat-list" id="features">{feats}</ul>
         <div class="sl-products-strip">{chips}</div>
         <div style="display:flex;gap:.75rem;margin-top:1.75rem;flex-wrap:wrap;">
-          <a href="../contact.html" class="sl-sol-btn sl-sol-btn--primary">Get a Proposal</a>
-          <a href="../contact.html" class="sl-sol-btn sl-sol-btn--outline">Request Datasheet</a>
+          <a href="{PROP}" class="sl-sol-btn sl-sol-btn--primary">Get a Proposal</a>
+          <a href="{SEC2[0]}" class="sl-sol-btn sl-sol-btn--outline">{SEC2[1]}</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 '''
+    # challenges (industries)
+    if p.get('ch'):
+        h += '<section class="sl-section" id="challenges"><div class="container"><div class="sl-eyebrow-sm">Why it matters</div><h2 class="sl-section-title">Challenges We Help Solve</h2><div class="row g-3 mt-1">'
+        for i, (c, how) in enumerate(p['ch']):
+            h += (f'<div class="col-12 col-md-6"><div class="slx-ch"><div class="slx-ch__q"><span class="slx-ch__n">{i+1}</span><h3>{E(c)}</h3></div>'
+                  f'<p class="slx-ch__a"><strong>How Nebulae helps</strong>{E(how)}</p></div></div>')
+        h += '</div></div></section>\n'
+    # products used in this industry
+    pr = p.get('products')
+    if pr:
+        h += '<section class="sl-section sl-section--surf" id="products"><div class="container"><div class="sl-eyebrow-sm">Our Products</div><h2 class="sl-section-title">Products for this industry</h2><div class="row g-3 mt-1">'
+        for slug_, why in pr:
+            pd = PROD.get(slug_)
+            if not pd:
+                print('WARN missing product', slug_); continue
+            h += (f'<div class="col-12 col-sm-6 col-lg-3"><a class="slx-prod" href="../products/{slug_}.html"><div class="slx-prod__img"><img loading="lazy" src="../{pd["image"]}" alt="{E(pd["model"])}"/></div>'
+                  f'<div class="slx-prod__b"><span class="slx-prod__t">{E(pd["type_label"])}</span><h3>{E(pd["model"])}</h3><p>{E(why)}</p><span class="slx-prod__a">View product →</span></div></a></div>')
+        h += '</div></div></section>\n'
+    # detailed use cases (industries)
+    if p.get('uc'):
+        h += '<section class="sl-section" id="usecases"><div class="container"><div class="sl-eyebrow-sm">Where it fits</div><h2 class="sl-section-title">Typical Applications</h2><div class="row g-3 mt-1">'
+        for t, sense, conn, out in p['uc']:
+            h += (f'<div class="col-12 col-md-6 col-lg-4"><div class="slx-uc"><h3>{E(t)}</h3><dl>'
+                  f'<dt>Senses</dt><dd>{E(sense)}</dd><dt>Connects with</dt><dd>{E(conn)}</dd><dt>You get</dt><dd>{E(out)}</dd></dl></div></div>')
+        h += '</div><p class="slx-note">These are typical applications for this industry, shown to help you plan. Your project details decide the final design.</p></div></section>\n'
     # gallery
     g = p.get('gallery')
     if g:
@@ -160,6 +207,8 @@ def build(p):
     h += section_tables(p, 0)
     # architecture
     a = p.get('arch')
+    if not a and p.get('flow'):
+        a = dict(eyebrow='How it fits together', title='Typical System', layers=p['flow'])
     if a:
         layers = ''
         for i, (lab, desc) in enumerate(a['layers']):
@@ -173,6 +222,7 @@ def build(p):
               f'{"<p class=slx-note>"+E(a["note"])+"</p>" if a.get("note") else ""}</div><div class="col-lg-6">{img}</div></div></div></section>\n')
     # cards
     for ci, c in enumerate(p.get('cards', [])):
+        if p.get('uc') and c.get('id') == 'usecases': continue
         h += f'<section class="sl-section{" sl-section--surf" if ci % 2 == 0 else ""}" id="{c.get("id","benefits")}"><div class="container slx-cards"><div class="sl-eyebrow-sm">{E(c["eyebrow"])}</div><h2 class="sl-section-title">{E(c["title"])}</h2>'
         if c.get('stats'):
             h += '<div class="row g-3 mt-1 mb-3">' + ''.join(f'<div class="col-6 col-md-4"><div class="slx-stat"><b>{E(v)}</b><span>{E(l)}</span></div></div>' for v, l in c['stats']) + '</div>'
@@ -182,6 +232,33 @@ def build(p):
         h += '</div>'
         if c.get('note'): h += f'<p class="slx-note">{E(c["note"])}</p>'
         h += '</div></section>\n'
+    # optional case study / certifications — render only when data exists (otherwise nothing, no placeholder text on the site)
+    h += '<!-- ADD WHEN AVAILABLE: case study (key case_study) and certifications (key certs) in tools/industries_extra.py -->\n'
+    cs = p.get('case_study')
+    if cs:
+        h += (f'<section class="sl-section sl-section--surf" id="case-study"><div class="container"><div class="sl-eyebrow-sm">Case study</div><h2 class="sl-section-title">{E(cs["title"])}</h2>'
+              f'<p class="slx-note" style="max-width:760px">{E(cs["text"])}</p>' + (f'<a class="sl-sol-btn sl-sol-btn--primary" href="{E(cs["link"])}">Read more</a>' if cs.get('link') else '') + '</div></section>\n')
+    if p.get('certs'):
+        h += '<section class="sl-section" id="certifications"><div class="container"><div class="sl-eyebrow-sm">Compliance</div><h2 class="sl-section-title">Certifications</h2><div class="row g-3 mt-1">' + ''.join(f'<div class="col-6 col-lg-3"><div class="slx-card"><h3>{E(a)}</h3><p>{E(b)}</p></div></div>' for a, b in p['certs']) + '</div></div></section>\n'
+    # FAQ (industries)
+    if p.get('faq'):
+        h += '<section class="sl-section sl-section--surf" id="faq"><div class="container"><div class="row g-4"><div class="col-lg-4"><div class="sl-eyebrow-sm">FAQ</div><h2 class="sl-section-title">Common Questions</h2><p class="slx-note">More answers are in our <a href="../faq.html">full FAQ</a>, or <a href="../contact.html">ask our team</a>.</p></div><div class="col-lg-8"><div class="slx-faq">'
+        for q, a in p['faq']:
+            h += f'<details><summary>{E(q)}</summary><p>{E(a)}</p></details>'
+        h += '</div></div></div></div></section>\n'
+        ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in p['faq']]}
+        h = h.replace('</head>', '<script type="application/ld+json">' + _json.dumps(ld, ensure_ascii=False).replace('</', '<\\/') + '</script>\n</head>', 1)
+    # proposal form (industries)
+    if sub == 'industries':
+        h += f'''<section class="sl-section" id="proposal"><div class="container"><div class="row g-4 align-items-start"><div class="col-lg-5"><div class="sl-eyebrow-sm">Get a proposal · {E(p["crumb"])}</div><h2 class="sl-section-title">Tell Us About Your Project</h2>
+<p class="slx-note">Share a few details and our team will reply with product suggestions and next steps. Prefer e-mail? Write to <a href="mailto:sales@nebulae.io">sales@nebulae.io</a>.</p></div>
+<div class="col-lg-7"><form class="slx-form" data-nbl-proposal data-industry="{E(p["crumb"])}" novalidate>
+<div class="row g-3"><div class="col-sm-6"><label for="pfName">Name *</label><input id="pfName" name="name" type="text" autocomplete="name" required></div>
+<div class="col-sm-6"><label for="pfEmail">Work e-mail *</label><input id="pfEmail" name="email" type="email" autocomplete="email" required></div>
+<div class="col-sm-6"><label for="pfCompany">Company</label><input id="pfCompany" name="company" type="text" autocomplete="organization"></div>
+<div class="col-sm-6"><label for="pfPhone">Phone</label><input id="pfPhone" name="phone" type="tel" autocomplete="tel"></div>
+<div class="col-12"><label for="pfMsg">Your project</label><textarea id="pfMsg" name="message" rows="4" placeholder="What do you want to connect, how many devices, and where?"></textarea></div>
+<div class="col-12"><button type="submit" class="sl-sol-btn sl-sol-btn--primary">Request Proposal</button></div></div></form></div></div></div></section>\n'''
     # related
     rel = ''
     for k in p['related']:

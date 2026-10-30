@@ -68,3 +68,25 @@ img,video,svg{max-width:100%;}
 /* back-to-top / WhatsApp positions win over page-level rules */
 #nblBackTop{bottom:5.75rem!important;right:2rem!important;left:auto!important;top:auto!important;}
 @media (max-width:767.98px){#nblBackTop{bottom:4.5rem!important;right:1rem!important;}}
+
+/* a11y: text contrast (WCAG AA) */
+.nbl-logos-label,.nbl-uc-product__sub,.pd-info__type,.pd-qs-label{color:#5b6472!important}
+.pd-info__proto,.sl-solution__tag{color:#1d4ed8!important}
+.sl-metric__label{color:#4b5563!important}
+.atl-footer__desc{color:#c4c4e0!important}
+.atl-footer__heading{color:rgba(255,255,255,.72)!important}
+.nbl-uc-result p[style*="9ca3af"],.nbl-uc-result p[style*="156, 163, 175"]{color:#5b6472!important}
+/* Engineering Expertise: darker grey ONLY on the light (inactive) cards — the active / hovered blue card keeps its white text (rules in nebulae-page.css) */
+.nbl-exp-card:not(.nbl-exp-active) .nbl-exp-list li,.nbl-exp-card:not(.nbl-exp-active) .nbl-exp-list li::before,
+.nbl-exp-row:has(.nbl-exp-card:hover) .nbl-exp-card.nbl-exp-active:not(:hover) .nbl-exp-list li,
+.nbl-exp-row:has(.nbl-exp-card:hover) .nbl-exp-card.nbl-exp-active:not(:hover) .nbl-exp-list li::before{color:#4b5563}
+.atl-footer__bottom span,.atl-footer__bottom a{color:#c4c4e0!important}
+.sl-rel-card__tag{filter:brightness(.72)}
+
+/* a11y: faint grey meta text on light backgrounds (axe contrast audit, Oct 21) */
+.pg-card__meta,.pg-team-card__dept,.aw-cert-card__meta-label,.aw-award-card__year,.ct-privacy-note,.pd-info__reviews,.nbl-case-metric__label{color:#6b7280!important}
+.subcat-heading{color:#5b6f84!important}
+.lg-toc__link.active{color:#4338ca!important}
+.pg-card__tag,.sv-rel-card__tag{filter:brightness(.7)}
+th[style*="06b6d4"]{color:#0e7490!important}
+[style*="9ca3af"]:not(footer *):not(header *):not([class*="--dark"] *):not(.pg-globe-section *):not(.nbl-why-section *):not(.ct-info-wrap *):not(.nbl-industries-section *):not(.nbl-products-section *):not(.nbl-map-section *){color:#6b7280!important}
