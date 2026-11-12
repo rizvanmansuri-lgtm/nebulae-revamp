@@ -386,7 +386,7 @@ img { max-width:100%; padding:5px; border:5px solid #fff; box-sizing:border-box;
 .atl-mega__list a:hover .atl-mega__dot { opacity: 1; }
 
 /* ── Feature column (4th col) ────────────────────── */
-.atl-mega__col--feature { background: var(--surf); border-radius: 0 0 14px 0; }
+.atl-mega__col--feature { border-radius: 0 0 14px 0; }
 .atl-mega__feature-card { padding: .25rem .5rem; }
 .atl-mega__new-tag {
   display: inline-flex; align-items: center;
@@ -1286,7 +1286,7 @@ img { max-width:100%; padding:5px; border:5px solid #fff; box-sizing:border-box;
   }
   /* Remove white space above header on mobile */
   body > *:first-child { margin-top: 0 !important; }
-}
+ 
 
 /* ── Back to Home button (products & services pages) ── */
 .atl-btn-back-home {
