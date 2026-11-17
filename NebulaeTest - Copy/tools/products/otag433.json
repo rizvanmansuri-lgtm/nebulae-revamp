@@ -1,0 +1,283 @@
+{
+ "slug": "otag433",
+ "model": "OTAG-433",
+ "full": "OTAG-433 MHz Module",
+ "title_name": "434 MHz Wireless Module",
+ "type_key": "module",
+ "type_label": "Module",
+ "proto_key": "other",
+ "proto_crumb": "Sub-GHz 433 MHz",
+ "proto_label": "434 MHz Proprietary",
+ "badge": "434 MHz Module",
+ "category": "434 MHz Proprietary Sub-GHz Module",
+ "tagline": "Low-cost 434 MHz proprietary-protocol module on the EZR32HG220 (Cortex-M0+) with up to -133 dBm sensitivity.",
+ "meta_desc": "Nebulae OTAG-433 module — 434 MHz proprietary sub-GHz wireless module on Silicon Labs EZR32HG220 (Cortex-M0+): up to -133 dBm sensitivity, 18 mA TX @ +10 dBm, AES-128, 40 x 15.5 mm.",
+ "desc": "The OTAG-433 module provides a means for any electronic device to implement low-cost wireless connectivity. It operates on the 434 MHz custom band with a proprietary protocol, and is ideal where longer battery life and range are required. It is built around the Silicon Labs EZR32HG220 wireless MCU with an ARM Cortex-M0+ core, sub-GHz radio and 64 kB of flash.",
+ "cert_badges": [
+  "434 MHz",
+  "AES-128",
+  "Low Power"
+ ],
+ "gallery": [
+  {
+   "file": "otag433-module.jpg",
+   "alt": "OTAG-433 434 MHz wireless module, top view",
+   "label": "Module view"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Band & Protocol",
+   "value": "434 MHz · proprietary (Orion network)"
+  },
+  {
+   "icon": "range",
+   "label": "RX Sensitivity",
+   "value": "Up to −133 dBm"
+  },
+  {
+   "icon": "bolt",
+   "label": "Current",
+   "value": "TX 18 mA @ +10 dBm · RX 13 mA"
+  },
+  {
+   "icon": "chip",
+   "label": "Core & Memory",
+   "value": "Cortex-M0+ up to 25 MHz · 64 kB flash / 8 kB RAM"
+  },
+  {
+   "icon": "plug",
+   "label": "Supply Voltage",
+   "value": "2.5 V to 5 V DC"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size (L × W × H)",
+   "value": "40 × 15.5 × 4 mm"
+  }
+ ],
+ "stats": [
+  {
+   "num": "−133 dBm",
+   "label": "Maximum RX sensitivity"
+  },
+  {
+   "num": "18 mA",
+   "label": "TX current @ +10 dBm"
+  },
+  {
+   "num": "Up to 1 Mbps",
+   "label": "Data rate"
+  },
+  {
+   "num": "40 × 15.5 mm",
+   "label": "Module footprint"
+  }
+ ],
+ "overview": [
+  "The OTAG-433 module provides a means for any electronic device to implement low-cost wireless connectivity. The module operates on the 434 MHz custom band with a proprietary protocol.",
+  "It is ideal for applications where longer battery life and range are required. The module is built around the Silicon Labs EZR32HG220 wireless MCU family, combining an ARM Cortex-M0+ with a sub-GHz radio and an energy-efficient 32-bit microcontroller with 64 kB of flash. The architecture isolates the wireless software without sacrificing RF performance or security for applications.",
+  "A rich set of hardware peripherals such as GPIO, UART and timers, low transmit and receive currents, ultra-low-power standby and sleep modes, fast wake-up time and an AES accelerator with 128-bit keys make it a great choice for battery-oriented applications, and it supports deployment of dense networks with long coverage."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Long range",
+   "d": "Receive sensitivity of up to −133 dBm on the 434 MHz band."
+  },
+  {
+   "t": "Battery friendly",
+   "d": "Low TX and RX currents, ultra-low-power standby and sleep modes, fast wake-up."
+  },
+  {
+   "t": "Proprietary network",
+   "d": "Proprietary 434.212 MHz Orion network connectivity."
+  },
+  {
+   "t": "Secure",
+   "d": "AES accelerator with 128-bit keys."
+  },
+  {
+   "t": "Dense deployments",
+   "d": "Supports dense networks with long coverage."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Performance",
+   "rows": [
+    [
+     "Data Rate",
+     "Up to 1 Mbps"
+    ],
+    [
+     "TX Current Consumption",
+     "18 mA @ +10 dBm"
+    ],
+    [
+     "RX Current Consumption",
+     "13 mA"
+    ],
+    [
+     "RX Sensitivity",
+     "Up to −133 dBm"
+    ]
+   ]
+  },
+  {
+   "group": "Features",
+   "rows": [
+    [
+     "Processor",
+     "ARM Cortex-M0+"
+    ],
+    [
+     "Clock / Speed",
+     "Up to 25 MHz"
+    ],
+    [
+     "Memory",
+     "64 kB Flash, 8 kB RAM"
+    ],
+    [
+     "Modes",
+     "Run, Stop, Shutoff"
+    ],
+    [
+     "Serial Interface",
+     "1 × UART"
+    ],
+    [
+     "Antenna Options",
+     "Solder pad and through-hole 2 mm pitch connector"
+    ],
+    [
+     "Size (L × W × H)",
+     "40 × 15.5 × 4 mm"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical Specification",
+   "rows": [
+    [
+     "Supply Voltage",
+     "2.5 V to 5 V DC"
+    ],
+    [
+     "Operating Temperature",
+     "0 °C to 40 °C"
+    ]
+   ]
+  },
+  {
+   "group": "Networking",
+   "rows": [
+    [
+     "Band",
+     "434 MHz custom band"
+    ],
+    [
+     "Protocol",
+     "Proprietary 434.212 MHz Orion network"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the OTAG-433 product brochure (br_otag433_1.0).",
+ "features": [
+  {
+   "icon": "network",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Orion Network Connectivity",
+   "d": "Proprietary 434.212 MHz Orion network connectivity."
+  },
+  {
+   "icon": "battery",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Low Transmit & Receive Currents",
+   "d": "18 mA TX at +10 dBm and 13 mA RX."
+  },
+  {
+   "icon": "bolt",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Ultra-Low-Power Modes",
+   "d": "Standby, sleep (Run, Stop, Shutoff) and fast wake-up time."
+  },
+  {
+   "icon": "lock",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "AES-128 Accelerator",
+   "d": "Hardware AES accelerator with 128-bit keys."
+  },
+  {
+   "icon": "chip",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Cortex-M0+ MCU",
+   "d": "Energy-efficient 32-bit MCU with 64 kB flash and 8 kB RAM."
+  },
+  {
+   "icon": "grid",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "Rich Peripherals",
+   "d": "GPIO, UART and timers."
+  },
+  {
+   "icon": "range",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "Long Coverage",
+   "d": "Up to −133 dBm sensitivity for dense, long-range networks."
+  },
+  {
+   "icon": "plug",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Flexible Antenna Options",
+   "d": "Solder pad or through-hole 2 mm pitch connector."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "battery",
+   "t": "Battery-Powered Devices",
+   "d": "Devices that need long battery life and range."
+  },
+  {
+   "icon": "network",
+   "t": "Dense Wireless Networks",
+   "d": "Dense deployments with long coverage."
+  },
+  {
+   "icon": "cpu",
+   "t": "Low-Cost Wireless Connectivity",
+   "d": "Adding wireless connectivity to any electronic device."
+  }
+ ],
+ "part_rows": [
+  [
+   "OTAG-433",
+   "OTAG-433 MHz module — EZR32HG220, 434 MHz proprietary protocol"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "OTAG-433 Brochure",
+   "path": "./assets/docs/OTAG-433_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  }
+ ],
+ "related": [
+  "nm0221i",
+  "nln500a"
+ ],
+ "primary_doc": "./assets/docs/OTAG-433_Brochure.pdf"
+}

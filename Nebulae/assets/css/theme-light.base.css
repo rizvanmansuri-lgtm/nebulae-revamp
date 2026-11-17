@@ -1,0 +1,140 @@
+/* ============================================================
+   NEBULAE — LIGHT VERSION (base). Header and footer are NOT changed.
+   Placeholders /*{HERO}*/ etc. are replaced by tools/build_theme_light.py
+   with the list of dark sections it finds on the site.
+   ============================================================ */
+
+/* ── dark SECTIONS → light gradient ───────────────────────── */
+/*{SECTION}*/{
+  background:
+    radial-gradient(620px 360px at 4% 0%,rgba(99,102,241,.10),transparent 68%),
+    radial-gradient(560px 340px at 98% 100%,rgba(6,182,212,.10),transparent 68%),
+    linear-gradient(135deg,#f8faff 0%,#eef2ff 50%,#f5f7ff 100%)!important;
+  color:#0f172a;
+  border-top:1px solid rgba(79,70,229,.08);
+}
+/* ── dark BANDS (stats / CTA strips) → slightly stronger indigo tint so they still stand out ── */
+/*{BAND}*/{
+  background:
+    radial-gradient(520px 260px at 100% 0%,rgba(99,102,241,.16),transparent 65%),
+    radial-gradient(480px 240px at 0% 100%,rgba(6,182,212,.14),transparent 65%),
+    linear-gradient(135deg,#e8edff 0%,#dde5ff 52%,#ebe6ff 100%)!important;
+  border-block:1px solid rgba(79,70,229,.12);
+  color:#0f172a;
+}
+/* ── dark CARDS (featured card, small panels) ───────────────── */
+/*{CARD}*/{
+  background:linear-gradient(135deg,#f4f6ff 0%,#e7ecff 100%)!important;
+  border:1px solid rgba(79,70,229,.18)!important;
+  box-shadow:0 14px 34px rgba(79,70,229,.12)!important;
+  color:#0f172a;
+}
+
+/* ── BANNERS ─ light "signal" hero: colour glows + dot grid + gateway/mesh motif ───── */
+/*{HERO}*/{
+  background:
+    radial-gradient(640px 420px at 92% 6%,rgba(99,102,241,.24),transparent 62%),
+    radial-gradient(560px 380px at 3% 104%,rgba(6,182,212,.22),transparent 62%),
+    radial-gradient(360px 240px at 56% 92%,rgba(168,85,247,.12),transparent 70%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 520' fill='none'><g stroke='%234f46e5' stroke-opacity='.30' stroke-width='1.3'><circle cx='430' cy='260' r='62'/><circle cx='430' cy='260' r='124'/><circle cx='430' cy='260' r='186'/><circle cx='430' cy='260' r='248' stroke-dasharray='3 9'/><path d='M430 260 300 128 168 196 118 340 262 410 430 260M300 128 430 64 562 136 430 260 566 340 520 462 430 260M168 196 90 120M118 340 40 400'/></g><g stroke='%2306b6d4' stroke-opacity='.45' stroke-width='1.3'><path d='M430 260 520 160M430 260 360 380M430 260 330 250' stroke-dasharray='5 6'/></g><g fill='%2306b6d4' fill-opacity='.7'><circle cx='300' cy='128' r='6'/><circle cx='562' cy='136' r='6'/><circle cx='262' cy='410' r='6'/><circle cx='520' cy='462' r='5'/><circle cx='520' cy='160' r='4'/></g><g fill='%234f46e5' fill-opacity='.55'><circle cx='168' cy='196' r='6'/><circle cx='118' cy='340' r='6'/><circle cx='430' cy='64' r='5'/><circle cx='566' cy='340' r='6'/><circle cx='360' cy='380' r='4'/><circle cx='90' cy='120' r='4'/></g><circle cx='430' cy='260' r='11' fill='%234f46e5' fill-opacity='.75'/><circle cx='430' cy='260' r='20' stroke='%234f46e5' stroke-opacity='.35' stroke-width='1.5'/></svg>") no-repeat right 3% center/min(48vw,640px),
+    radial-gradient(rgba(79,70,229,.17) 1.2px,transparent 1.5px) 0 0/26px 26px,
+    linear-gradient(135deg,#f8faff 0%,#eef2ff 55%,#f4f1ff 100%)!important;
+  color:#0f172a;
+  border-bottom:1px solid rgba(79,70,229,.14);
+  box-shadow:inset 0 -60px 80px -60px rgba(79,70,229,.10);
+}
+@media(max-width:991px){
+  /*{HERO}*/{background-position:0 0,0 0,0 0,right -120px bottom -40px,0 0,0 0!important;background-size:auto,auto,auto,420px,26px 26px,auto!important}
+}
+/* the existing decorative layers keep working but are softened for a light surface */
+.pg-hero__orb,.nbl-hero__orb{opacity:.55}
+.pg-hero__grid,.nbl-hero__grid{opacity:.55}
+.nbl-hero__img-overlay,.nbl-hero__bg-slider{opacity:.10}
+.nbl-hero__bg-slider img,.nbl-hero__img-overlay img{mix-blend-mode:multiply}
+
+/* breadcrumb / eyebrow chips on the light banner */
+.pg-breadcrumb a,.pg-breadcrumb span{color:#475569!important}
+.pg-breadcrumb a:hover{color:#4f46e5!important}
+.pg-eyebrow,.nbl-hero__eyebrow,.sl-hero__eyebrow,.sv-hero__eyebrow{background:rgba(79,70,229,.09)!important;border:1px solid rgba(79,70,229,.22)!important;color:#4338ca!important}
+.pg-stat-chip,.sl-hero__pill,.sl-jump-pill{background:rgba(255,255,255,.8)!important;border:1px solid rgba(79,70,229,.16)!important;box-shadow:0 6px 18px rgba(79,70,229,.08)}
+.sl-jump-pill{color:#334155!important}.sl-jump-pill:hover{color:#4f46e5!important;border-color:#4f46e5!important}
+
+/* secondary / outline buttons that were white-on-dark */
+.pg-btn-outline,.sl-sol-btn--dark-outline,.nbl-btn-outline{color:#4338ca!important;border-color:rgba(79,70,229,.45)!important;background:rgba(255,255,255,.7)!important}
+.pg-btn-outline:hover,.sl-sol-btn--dark-outline:hover,.nbl-btn-outline:hover{background:#4f46e5!important;color:#fff!important}
+
+/* products listing hero (not auto-detected) */
+.pl-hero::after{background:radial-gradient(circle,rgba(79,70,229,.14),rgba(79,70,229,0) 70%)!important}
+.pl-hero__eyebrow{color:#4338ca!important}
+.pl-hero__title{color:#0f172a!important}
+.pl-hero__sub{color:#475569!important}
+.pl-hero__stat-num,.pl-hero__stat strong,.pl-hero__stat b{color:#4338ca!important}
+.pl-hero__stat span,.pl-hero__stat small,.pl-hero__stat-label{color:#475569!important}
+
+/* coloured status chips / tags: darker ink so AA contrast holds on pale tints */
+.nbl-cb--green,.aw-cert-card__status--active,.slx-ch__a strong{color:#047857!important}
+.nbl-cb--orange{color:#b45309!important}
+.nbl-cb--red,.nbl-proto-link--gsm{color:#b91c1c!important}
+.nbl-cb--blue{color:#1d4ed8!important}
+.nbl-cb--gray{color:#4b5563!important}
+.nbl-proto-link--zigbee{color:#b45309!important}
+.nbl-proto-link--wisun{color:#0f766e!important}
+.pg-toc__link.active{color:#4338ca!important}
+.sidebar-label{color:#64748b!important}
+.nbl-case-metric__label,.nbl-tech-card__desc,.nbl-case-card__desc{color:#5b6573!important}
+.slx-note a{color:#4338ca!important}
+.nbl-skip-link{color:#3730a3!important}
+.pg-card__tag[style*="color:#2563eb"],.sv-rel-card__tag[style*="color:#2563eb"],.sl-rel-card__tag[style*="color:#2563eb"],.lg-job-card__dept[style*="color:#2563eb"],.nbl-case-card__tag[style*="color:#2563eb"]{color:#1d4ed8!important}
+.pg-card__tag[style*="color:#7c3aed"],.sv-rel-card__tag[style*="color:#7c3aed"],.sl-rel-card__tag[style*="color:#7c3aed"],.lg-job-card__dept[style*="color:#7c3aed"],.nbl-case-card__tag[style*="color:#7c3aed"]{color:#6d28d9!important}
+.pg-card__tag[style*="color:#ea580c"],.sv-rel-card__tag[style*="color:#ea580c"],.sl-rel-card__tag[style*="color:#ea580c"],.lg-job-card__dept[style*="color:#ea580c"],.nbl-case-card__tag[style*="color:#ea580c"]{color:#9a3412!important}
+.pg-card__tag[style*="color:#0d9488"],.sv-rel-card__tag[style*="color:#0d9488"],.sl-rel-card__tag[style*="color:#0d9488"],.lg-job-card__dept[style*="color:#0d9488"],.nbl-case-card__tag[style*="color:#0d9488"]{color:#0f766e!important}
+.pg-card__tag[style*="color:#4f46e5"],.sv-rel-card__tag[style*="color:#4f46e5"],.sl-rel-card__tag[style*="color:#4f46e5"],.lg-job-card__dept[style*="color:#4f46e5"],.nbl-case-card__tag[style*="color:#4f46e5"]{color:#4338ca!important}
+.pg-card__tag[style*="color:#06b6d4"],.sv-rel-card__tag[style*="color:#06b6d4"],.sl-rel-card__tag[style*="color:#06b6d4"],.lg-job-card__dept[style*="color:#06b6d4"],.nbl-case-card__tag[style*="color:#06b6d4"]{color:#0e7490!important}
+.pg-card__tag[style*="color:#d97706"],.sv-rel-card__tag[style*="color:#d97706"],.sl-rel-card__tag[style*="color:#d97706"],.lg-job-card__dept[style*="color:#d97706"],.nbl-case-card__tag[style*="color:#d97706"]{color:#92400e!important}
+.pg-card__tag[style*="color:#059669"],.sv-rel-card__tag[style*="color:#059669"],.sl-rel-card__tag[style*="color:#059669"],.lg-job-card__dept[style*="color:#059669"],.nbl-case-card__tag[style*="color:#059669"]{color:#047857!important}
+.pg-card__tag[style*="color:#dc2626"],.sv-rel-card__tag[style*="color:#dc2626"],.sl-rel-card__tag[style*="color:#dc2626"],.lg-job-card__dept[style*="color:#dc2626"],.nbl-case-card__tag[style*="color:#dc2626"]{color:#b91c1c!important}
+.pg-toc__link.pg-toc__link.active,.pg-toc a.active{color:#3730a3!important}
+td .nbl-cb.nbl-cb--orange{color:#92400e!important}
+.sb-badge{color:#475569!important}
+#tab-general>span,.fq-tab.active>span,.fq-tab[aria-selected="true"]>span{background:#4338ca!important;color:#fff!important}
+
+/* ── LIGHT polish: hero clarity, card depth, hover life ───────────────────────── */
+.nbl-hero__bg-slider,.nbl-hero__img-overlay{opacity:0!important}
+.nbl-hero__title,.nbl-hero h1{text-shadow:none}
+.nbl-ind-card,.nbl-why-card,.nbl-case-card,.nbl-tech-card,.nbl-prod-card,.nbl-stat-card{
+  background:linear-gradient(180deg,#fff 0%,#f7f8ff 100%)!important;
+  border:1px solid rgba(79,70,229,.14)!important;
+  box-shadow:0 1px 2px rgba(15,23,42,.04),0 10px 28px -12px rgba(79,70,229,.22)!important;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.nbl-ind-card:hover,.nbl-why-card:hover,.nbl-case-card:hover,.nbl-tech-card:hover{
+  transform:translateY(-4px);border-color:rgba(79,70,229,.38)!important;
+  box-shadow:0 2px 4px rgba(15,23,42,.05),0 22px 40px -14px rgba(79,70,229,.35)!important;
+}
+.nbl-ind-card__icon,.nbl-why-card__icon{background:linear-gradient(135deg,#e0e7ff,#cffafe)!important;color:#4338ca!important;border:1px solid rgba(79,70,229,.15)!important}
+.nbl-ind-card__title,.nbl-why-card__title,.nbl-case-card__title{color:#0f172a!important}
+.nbl-ind-card__desc,.nbl-why-card__desc{color:#475569!important}
+.nbl-ind-card__arrow{color:#4f46e5!important}
+/* section headings: small gradient rule under the title */
+.nbl-products-section .nbl-section-title::after,.nbl-industries-section .nbl-section-title::after,.nbl-why-section .nbl-section-title::after,
+.nbl-products-section h2::after,.nbl-industries-section h2::after,.nbl-why-section h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;margin:.8rem auto 0;background:linear-gradient(90deg,#4f46e5,#06b6d4)}
+/* alternate sections get a white base so the page has rhythm instead of one long tint */
+.nbl-industries-section{background:
+    radial-gradient(700px 380px at 100% 0%,rgba(168,85,247,.09),transparent 68%),
+    radial-gradient(600px 360px at 0% 100%,rgba(6,182,212,.10),transparent 68%),
+    #ffffff!important}
+.nbl-why-section{background:
+    radial-gradient(640px 360px at 0% 0%,rgba(6,182,212,.12),transparent 68%),
+    radial-gradient(600px 360px at 100% 100%,rgba(99,102,241,.13),transparent 68%),
+    linear-gradient(135deg,#eef2ff,#f5f7ff)!important}
+
+/* originally-light sections: give the page rhythm (tint / white alternation with soft glows) */
+.section-wrapper{background:transparent!important}
+.nbl-tech-section,.nbl-usecase-section,.nbl-cases-section{background:
+    radial-gradient(560px 320px at 100% 0%,rgba(99,102,241,.08),transparent 70%),
+    radial-gradient(520px 300px at 0% 100%,rgba(6,182,212,.08),transparent 70%),#f5f7ff!important}
+.nbl-compare-section{background:linear-gradient(180deg,#fff,#f3f5ff)!important}
+.nbl-updates-section,.nbl-testi-section,.nbl-exp-section{background:
+    radial-gradient(520px 300px at 0% 0%,rgba(168,85,247,.06),transparent 70%),#fff!important}
+.nbl-exp-card:not(.nbl-exp-active){background:linear-gradient(160deg,#ffffff,#eaefff)!important;border:1px solid rgba(79,70,229,.14);box-shadow:0 10px 26px -14px rgba(79,70,229,.3)}
+.nbl-press-section{background:linear-gradient(180deg,#fff,#f5f7ff)!important}

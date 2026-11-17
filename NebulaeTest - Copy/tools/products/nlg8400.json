@@ -1,0 +1,319 @@
+{
+ "slug": "nlg8400",
+ "model": "NLG8400",
+ "full": "NebuLink SCADA RTU Gateway NLG8400",
+ "title_name": "SCADA RTU Gateway",
+ "type_key": "gateway",
+ "type_label": "Gateway",
+ "proto_key": "gsm",
+ "proto_crumb": "GSM / Cellular",
+ "proto_label": "4G LTE · SCADA RTU",
+ "badge": "SCADA RTU",
+ "category": "Cellular SCADA RTU Gateway",
+ "tagline": "Cortex-A7 SCADA RTU with 4G LTE, RS232/RS485, analog and digital I/O for remote logic control and monitoring.",
+ "meta_desc": "Nebulae NLG8400 SCADA RTU gateway — Cortex-A7 1.2 GHz, 4G LTE, RS232, RS485, 2 analog inputs, digital I/O, relay output, QuecOpen with Modbus RTU/TCP and DLMS, -40 to +85 C, 6-24 VDC.",
+ "desc": "NebuLink Gateway NLG8400 is a SCADA RTU unit for remote logic control and monitoring in industrial applications. It is powered by an ARM Cortex-A7 processor with RS232, RS485, cellular, analog and digital I/O interfaces, and lets users implement control logic on the controller using the pre-programmed QuecOpen OS.",
+ "cert_badges": [
+  "SCADA RTU",
+  "4G LTE",
+  "2-Year Warranty"
+ ],
+ "gallery": [
+  {
+   "file": "nlg8400-board.jpg",
+   "alt": "NLG8400 SCADA RTU board with screw terminals and external cellular antenna",
+   "label": "Board view"
+  },
+  {
+   "file": "nlg8400-application.png",
+   "alt": "NLG8400 application diagram showing connected field devices, cloud and user applications",
+   "label": "Application diagram"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "cpu",
+   "label": "Processor & Memory",
+   "value": "Cortex-A7 1.2 GHz · 256 MB RAM / 512 MB flash"
+  },
+  {
+   "icon": "network",
+   "label": "Cellular",
+   "value": "FDD-LTE · TDD-LTE · HSPA/UMTS · GSM/GPRS/EDGE"
+  },
+  {
+   "icon": "plug",
+   "label": "Serial & Bus",
+   "value": "RS232 · RS485 · I2C · SPI"
+  },
+  {
+   "icon": "grid",
+   "label": "I/O",
+   "value": "2 analog in · digital in/out · relay output"
+  },
+  {
+   "icon": "bolt",
+   "label": "Power",
+   "value": "6 – 24 VDC @ 4 A · battery 3.7/4.2 V"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size (L × W × H)",
+   "value": "102 × 107 × 15 mm"
+  }
+ ],
+ "stats": [
+  {
+   "num": "1.2 GHz",
+   "label": "ARM Cortex-A7"
+  },
+  {
+   "num": "−40 to +85 °C",
+   "label": "Operating temperature"
+  },
+  {
+   "num": "2",
+   "label": "Analog inputs (0-10 V / 4-20 mA)"
+  },
+  {
+   "num": "2 years",
+   "label": "Warranty"
+  }
+ ],
+ "overview": [
+  "NebuLink Gateway NLG8400 is a SCADA RTU unit for remote logic control and monitoring in various industrial applications. It is powered by an ARM Cortex-A7 processor with multiple interfaces: RS232, RS485, cellular, analog and digital I/Os.",
+  "It offers easy, user-friendly development support that allows users to implement control logic on the controller using the pre-programmed QuecOpen OS. The QuecOpen SDK includes validated Modbus RTU, Modbus TCP and DLMS stacks.",
+  "The NLG8400 is designed specifically for low-cost, battery-enabled M2M applications, providing a long, stable life cycle and easy deployment. A built-in lightweight web server supports remote monitoring and the unit integrates seamlessly with SCADA applications; it is covered by a two-year warranty."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Remote logic control",
+   "d": "Implement control logic directly on the controller with the pre-programmed QuecOpen OS."
+  },
+  {
+   "t": "Industrial protocols",
+   "d": "Validated Modbus RTU, Modbus TCP and DLMS stacks."
+  },
+  {
+   "t": "Rich I/O",
+   "d": "Analog inputs, isolated digital inputs and outputs, relay output and general-purpose I/O."
+  },
+  {
+   "t": "Built for M2M",
+   "d": "Low-cost, battery-enabled design with a long stable life cycle."
+  },
+  {
+   "t": "Two-year warranty",
+   "d": "Covered by a two-year warranty."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Processor & Storage",
+   "rows": [
+    [
+     "Processor",
+     "ARM Cortex-A7"
+    ],
+    [
+     "Frequency",
+     "1.2 GHz"
+    ],
+    [
+     "Memory",
+     "256 MB RAM, 512 MB flash (20 MB for end application), up to 32 GB microSD"
+    ],
+    [
+     "Software Stack",
+     "QuecOpen SDK with validated Modbus RTU, Modbus TCP, DLMS stack"
+    ]
+   ]
+  },
+  {
+   "group": "I/O Interface",
+   "rows": [
+    [
+     "Analog Input",
+     "2 channels, 0-10 V / 4-20 mA"
+    ],
+    [
+     "Digital Input / Counter",
+     "Isolated 2 channels / 16 bits, max input frequency 50 Hz, min pulse width 10 ms, 12 VDC"
+    ],
+    [
+     "Digital Relay Output",
+     "Isolated 1 channel, 2 A 250 VAC, 220 VDC max"
+    ],
+    [
+     "Digital Output",
+     "Isolated 2 channels, 12 VDC"
+    ],
+    [
+     "General Purpose",
+     "6 channels, 3.3 VDC"
+    ]
+   ]
+  },
+  {
+   "group": "Communication Interface",
+   "rows": [
+    [
+     "Cellular",
+     "FDD-LTE: B1/B2/B3/B5/B7/B8/B20 · TDD-LTE: B38/B40 · HSPA/UMTS: 900/850/1800/1900/2100 MHz · GSM/GPRS/EDGE: 850/900/1800/1900 MHz"
+    ],
+    [
+     "Serial",
+     "1 × RS232, 1 × RS485, 1 × I2C, 1 × SPI"
+    ],
+    [
+     "GPS",
+     "Optional"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical & Environmental",
+   "rows": [
+    [
+     "Power Supply",
+     "6 – 24 VDC @ 4 A"
+    ],
+    [
+     "Supported Battery Supply",
+     "3.7 / 4.2 V, 2000 mAh"
+    ],
+    [
+     "Operating Temperature",
+     "−40 to 85 °C"
+    ],
+    [
+     "Humidity",
+     "Relative humidity 15% to 93% non-condensing"
+    ]
+   ]
+  },
+  {
+   "group": "General & Mechanical",
+   "rows": [
+    [
+     "LEDs",
+     "3 × status LED"
+    ],
+    [
+     "Dimensions (L × W × H)",
+     "102 × 107 × 15 mm"
+    ],
+    [
+     "Antennas",
+     "1 × cellular, 1 × GPS (optional), 1 × diversity (optional)"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NLG8400 brochure.",
+ "features": [
+  {
+   "icon": "cpu",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Cortex-A7 at 1.2 GHz",
+   "d": "Powerful ARM processor with 256 MB RAM and 512 MB flash."
+  },
+  {
+   "icon": "network",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "4G LTE + RS232 + RS485",
+   "d": "Multiple communication interfaces for field devices."
+  },
+  {
+   "icon": "gauge",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Analog & Digital I/O",
+   "d": "Analog inputs, isolated digital I/O, relay output and general-purpose I/O."
+  },
+  {
+   "icon": "file",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Modbus RTU / TCP & DLMS",
+   "d": "Validated protocol stacks in the QuecOpen SDK."
+  },
+  {
+   "icon": "server",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Built-in Web Server",
+   "d": "Lightweight web server for remote monitoring."
+  },
+  {
+   "icon": "plug",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "SCADA Integration",
+   "d": "Seamless integration with SCADA applications."
+  },
+  {
+   "icon": "battery",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "Battery-Enabled M2M",
+   "d": "Designed for low-cost battery-enabled M2M applications."
+  },
+  {
+   "icon": "thermo",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "−40 to +85 °C",
+   "d": "Industrial operating temperature range."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "city",
+   "t": "Infrastructure",
+   "d": "ITS, utility, AMR and lighting."
+  },
+  {
+   "icon": "eye",
+   "t": "Security",
+   "d": "Surveillance, environment and disaster monitoring."
+  },
+  {
+   "icon": "factory",
+   "t": "Industry",
+   "d": "Livestock, agriculture and heavy industry."
+  },
+  {
+   "icon": "gauge",
+   "t": "Device SCADA",
+   "d": "PLC, IED, generator and sensor monitoring."
+  },
+  {
+   "icon": "building",
+   "t": "Building",
+   "d": "Security, energy, management, facility and lighting."
+  }
+ ],
+ "part_rows": [
+  [
+   "NLG8400",
+   "NebuLink SCADA RTU Gateway — Cortex-A7, 4G LTE, RS232 / RS485, analog & digital I/O"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLG8400 Brochure",
+   "path": "./assets/docs/NLG8400_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  }
+ ],
+ "related": [
+  "nlg7644",
+  "nlg8140"
+ ],
+ "primary_doc": "./assets/docs/NLG8400_Brochure.pdf"
+}

@@ -1,0 +1,284 @@
+{
+ "slug": "afl0003",
+ "model": "AFL0003",
+ "full": "Band Pass Filter AFL0003 (ATL0003) — 865–867 MHz",
+ "title_name": "865–867 MHz Band Pass Filter",
+ "type_key": "filter",
+ "type_label": "Filter",
+ "proto_key": "lora",
+ "proto_crumb": "LoRa",
+ "proto_label": "865–867 MHz IN ISM",
+ "badge": "Band Pass Filter",
+ "category": "RF Band Pass Filter",
+ "tagline": "IP67 band pass filter for the 865 MHz Indian ISM band — 865–867 MHz pass band, N-type, 630 g.",
+ "meta_desc": "AFL0003 (ATL0003) band pass filter for 865 MHz India-region ISM applications: 865-867 MHz pass band, 2 W, IP67, N-type male to female, -30 to +70 C, 630 g.",
+ "desc": "AFL0003 (part number ATL0003) is a band pass filter for 865 MHz applications that supports Indian-region ISM radio. It offers low insertion loss, low pass-band ripple and high ultimate attenuation in an IP67-rated housing with N-type connectors.",
+ "cert_badges": [
+  "IP67",
+  "50 Ω",
+  "N-Type"
+ ],
+ "gallery": [
+  {
+   "file": "afl0003-filter.jpg",
+   "alt": "AFL0003 Avartanam band pass filter with N-type connectors",
+   "label": "Filter view"
+  },
+  {
+   "file": "afl0003-response.png",
+   "alt": "AFL0003 pass band response showing insertion loss and return loss markers around 865 to 867 MHz",
+   "label": "Pass band response"
+  },
+  {
+   "file": "afl0003-drawing.png",
+   "alt": "AFL0003 mechanical drawing with overall dimensions",
+   "label": "Mechanical drawing"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Pass Band",
+   "value": "865 – 867 MHz"
+  },
+  {
+   "icon": "gauge",
+   "label": "Insertion Loss",
+   "value": "2.5 dB typ. · 3.0 dB max"
+  },
+  {
+   "icon": "shield",
+   "label": "Rejection",
+   "value": "35 dB @ 862 MHz · 28 dB @ 869 MHz"
+  },
+  {
+   "icon": "bolt",
+   "label": "Power Handling",
+   "value": "2 W"
+  },
+  {
+   "icon": "plug",
+   "label": "Connectors",
+   "value": "N-type male to N-type female"
+  },
+  {
+   "icon": "thermo",
+   "label": "Temperature",
+   "value": "−30 °C to +70 °C"
+  }
+ ],
+ "stats": [
+  {
+   "num": "865–867 MHz",
+   "label": "Pass band"
+  },
+  {
+   "num": "3.0 dB",
+   "label": "Maximum insertion loss"
+  },
+  {
+   "num": "2 W",
+   "label": "Power"
+  },
+  {
+   "num": "IP67",
+   "label": "Ingress protection"
+  }
+ ],
+ "overview": [
+  "AFL0003 (ATL0003) is a band pass filter for 865 MHz applications. It supports Indian-region ISM radio applications and is designed for low insertion loss, low pass-band ripple and high ultimate attenuation.",
+  "The filter passes 865–867 MHz with a 50 Ω impedance, a VSWR of 1.25 and a ripple of 0.2 dB. Insertion loss is 2.5 dB typical (3.0 dB maximum), and it rejects 35 dB at 862 MHz and 28 dB at 869 MHz. Power rating is 2 W.",
+  "It is housed in an IP67-rated enclosure with N-type male to N-type female connectors, weighs 630 g and operates from −30 °C to +70 °C."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Tuned to the IN865 band",
+   "d": "865–867 MHz pass band for Indian-region ISM radios."
+  },
+  {
+   "t": "Defined stop-band",
+   "d": "35 dB rejection at 862 MHz and 28 dB at 869 MHz."
+  },
+  {
+   "t": "Rugged housing",
+   "d": "IP67 enclosure rated −30 °C to +70 °C."
+  },
+  {
+   "t": "Low ripple",
+   "d": "Ripple of 0.2 dB."
+  },
+  {
+   "t": "Easy to install",
+   "d": "N-type male to N-type female in-line connectors."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "RF Characteristics",
+   "rows": [
+    [
+     "Part Number",
+     "ATL0003"
+    ],
+    [
+     "Description",
+     "Band Pass Filter for 865 MHz applications"
+    ],
+    [
+     "Pass Band",
+     "865 – 867 MHz"
+    ],
+    [
+     "Impedance",
+     "50 Ω"
+    ],
+    [
+     "Insertion Loss",
+     "2.5 dB typical · 3.0 dB maximum"
+    ],
+    [
+     "Max VSWR",
+     "1.25"
+    ],
+    [
+     "Max Ripple",
+     "0.2 dB"
+    ],
+    [
+     "Power",
+     "2 W"
+    ],
+    [
+     "Rejections",
+     "35 dB @ 862 MHz · 28 dB @ 869 MHz"
+    ]
+   ]
+  },
+  {
+   "group": "Mechanical & Environmental",
+   "rows": [
+    [
+     "IP Grade",
+     "IP67"
+    ],
+    [
+     "Connector Type",
+     "N-type male to N-type female"
+    ],
+    [
+     "Temperature",
+     "−30 °C to +70 °C"
+    ],
+    [
+     "Weight",
+     "630 g"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the AFL0003 technical datasheet (version 1.0, Avartanam Test Labs LLP).",
+ "features": [
+  {
+   "icon": "wifi",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "865 MHz IN ISM",
+   "d": "Supports Indian-region ISM radio applications."
+  },
+  {
+   "icon": "gauge",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Low Insertion Loss",
+   "d": "2.5 dB typical across the pass band."
+  },
+  {
+   "icon": "check",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Low Pass-Band Ripple",
+   "d": "Ripple of 0.2 dB."
+  },
+  {
+   "icon": "shield",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "High Ultimate Attenuation",
+   "d": "35 dB at 862 MHz and 28 dB at 869 MHz."
+  },
+  {
+   "icon": "drop",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "IP67 Housing",
+   "d": "Protected against dust and water immersion."
+  },
+  {
+   "icon": "plug",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "N-Type Connectors",
+   "d": "N-type male to N-type female."
+  },
+  {
+   "icon": "thermo",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "−30 °C to +70 °C",
+   "d": "Operating temperature range."
+  },
+  {
+   "icon": "box",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "630 g",
+   "d": "Weight as stated in the datasheet."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "range",
+   "t": "865 MHz IN ISM Radio Applications",
+   "d": "Indian-region ISM radios."
+  },
+  {
+   "icon": "server",
+   "t": "Gateway & Base-Station Front Ends",
+   "d": "Filtering ahead of sub-GHz gateway radios."
+  },
+  {
+   "icon": "network",
+   "t": "LoRa & Other Sub-GHz Networks",
+   "d": "Reducing out-of-band interference in sub-GHz networks."
+  }
+ ],
+ "part_rows": [
+  [
+   "ATL0003 (AFL0003)",
+   "Band Pass Filter, 865–867 MHz, 50 Ω, IP67, N-type male to N-type female"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "AFL0003 Datasheet",
+   "path": "./assets/docs/AFL0003_Datasheet.pdf",
+   "sub": "PDF · Technical datasheet v1.0"
+  }
+ ],
+ "maker": {
+  "name": "Avartanam Test Labs LLP",
+  "logo": "avartanam-logo.png",
+  "line": "Designed & supplied by Avartanam Test Labs LLP",
+  "sub": "Product testing the right way",
+  "url": "https://www.avartanamtests.com",
+  "url_label": "www.avartanamtests.com",
+  "contact_note": "Sales enquiries via sales@nebulae.io"
+ },
+ "related": [
+  "afl0001",
+  "nm0821i"
+ ],
+ "primary_doc": "./assets/docs/AFL0003_Datasheet.pdf"
+}

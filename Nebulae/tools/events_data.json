@@ -1,0 +1,174 @@
+[
+ {
+  "slug": "efy-expo-gujarat-2026",
+  "name": "EFY Expo Gujarat 2026",
+  "day": "3–5",
+  "month": "Dec",
+  "year": "2026",
+  "iso": "2026-12-03",
+  "endIso": "2026-12-05",
+  "date": "3–5 December 2026",
+  "location": "HEC, Gandhinagar",
+  "tag": "Exhibitor",
+  "boothNumber": "i44",
+  "brochure": "",
+  "venue": "Helipad Exhibition Centre (HEC), Gandhinagar",
+  "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4511.5069034522785!2d72.6511281!3d23.2250859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2ba4be18e22f%3A0xaff4f38552dc6e53!2sHEC%20Exhibition%20Centre!5e1!3m2!1sen!2sin!4v1790832175681!5m2!1sen!2sin",
+  "about": "EFY Expo Gujarat 2026 is an electronics industry exhibition showcasing innovations across electronic components, product design, testing, semiconductor technologies, and manufacturing. It brings together industry leaders, technology providers, and R&D professionals to explore emerging technologies and business opportunities.",
+  "showcase": [
+   "Smart Metering",
+   "EV Chargers",
+   "Data Loggers",
+   "IoT"
+  ],
+  "gallery": [],
+  "team": [],
+  "schedule": [
+   {
+    "day": "Day 1",
+    "items": [
+     {
+      "time": "09:00 AM",
+      "activity": "Exhibition opens"
+     },
+     {
+      "time": "06:00 PM",
+      "activity": "Exhibition closes"
+     }
+    ]
+   },
+   {
+    "day": "Day 2",
+    "items": [
+     {
+      "time": "09:00 AM",
+      "activity": "Exhibition opens"
+     },
+     {
+      "time": "06:00 PM",
+      "activity": "Exhibition closes"
+     }
+    ]
+   },
+   {
+    "day": "Day 3",
+    "items": [
+     {
+      "time": "09:00 AM",
+      "activity": "Exhibition opens"
+     },
+     {
+      "time": "06:00 PM",
+      "activity": "Exhibition closes"
+     }
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Do I need to register to visit the booth?",
+    "a": "Visitor registration for the expo is handled by the organisers, so please check the official EFY Expo Gujarat 2026 website for entry details. Once inside, just stop by booth i44 during exhibition hours — no separate registration is needed to meet our team."
+   },
+   {
+    "q": "Can I book a meeting slot in advance?",
+    "a": "Yes — reach out through our Contact page and mention EFY Expo Gujarat 2026, and we'll set up a time to meet you at the venue."
+   },
+   {
+    "q": "Where can I find SLS Corp at the expo?",
+    "a": "You can find us at booth i44 at the Helipad Exhibition Centre (HEC), Gandhinagar, from 3–5 December 2026."
+   }
+  ],
+  "isPast": false,
+  "image": "assets/images/events/efy-expo-gujarat-2026.webp",
+  "banner": "assets/images/events/efy-expo-gujarat-2026-banner.webp",
+  "type": "Event"
+ },
+ {
+  "slug": "smart-meter-summit",
+  "name": "Smart Meter Summit",
+  "day": "29–30",
+  "month": "Sep",
+  "year": "2026",
+  "iso": "2026-09-29",
+  "endIso": "2026-09-30",
+  "date": "29-30 September 2026",
+  "location": "New Delhi, India",
+  "tag": "Conference",
+  "venue": "The Suryaa Hotel, New Delhi",
+  "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4311.892062051405!2d77.2695916!3d28.561719000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce393644a78b9%3A0x69580a0401ffa859!2sThe%20Suryaa%20New%20Delhi!5e1!3m2!1sen!2sin!4v1791439882438!5m2!1sen!2sin",
+  "about": "Smart Meter Summit 2026 is a leading industry conference focused on smart metering, digital utilities, and the future of power distribution. It brings together utilities, policymakers, technology providers, and industry leaders to discuss emerging technologies, AMI, data, and smarter grid solutions.",
+  "showcase": [
+   "Smart Energy Meter",
+   "Smart Water Meter",
+   "Smart Gas Meter",
+   "HES"
+  ],
+  "gallery": [
+   {
+    "src": "assets/images/events/sms/sms-1.webp",
+    "alt": "Smart Meter Summit 2026"
+   },
+   {
+    "src": "assets/images/events/sms/sms-2.webp",
+    "alt": "Smart Meter Summit 2026"
+   },
+   {
+    "src": "assets/images/events/sms/sms-3.webp",
+    "alt": "Smart Meter Summit 2026"
+   },
+   {
+    "src": "assets/images/events/sms/sms-4.webp",
+    "alt": "Smart Meter Summit 2026"
+   },
+   {
+    "src": "assets/images/events/sms/sms-5.webp",
+    "alt": "Smart Meter Summit 2026"
+   },
+   {
+    "src": "assets/images/events/sms/sms-6.webp",
+    "alt": "Smart Meter Summit 2026"
+   },
+   {
+    "src": "assets/images/events/sms/sms-7.webp",
+    "alt": "Smart Meter Summit 2026"
+   },
+   {
+    "src": "assets/images/events/sms/sms-8.webp",
+    "alt": "Smart Meter Summit 2026"
+   },
+   {
+    "src": "assets/images/events/sms/sms-9.webp",
+    "alt": "Smart Meter Summit 2026"
+   },
+   {
+    "src": "assets/images/events/sms/sms-10.webp",
+    "alt": "Smart Meter Summit 2026"
+   }
+  ],
+  "team": [],
+  "schedule": [
+   {
+    "day": "Day 1",
+    "items": [
+     {
+      "time": "09:00 AM - 05:30 PM",
+      "activity": "Conference hours"
+     }
+    ]
+   },
+   {
+    "day": "Day 2",
+    "items": [
+     {
+      "time": "09:00 AM - 05:00 PM",
+      "activity": "Conference hours"
+     }
+    ]
+   }
+  ],
+  "isPast": true,
+  "image": "assets/images/events/smart-meter-summit.webp",
+  "banner": "assets/images/events/smart-meter-summit-banner.webp",
+  "type": "Event"
+ }
+]

@@ -1,0 +1,73 @@
+/* solutions-extra.css — extra blocks for data-driven solution / service pages (loaded after solutions.css) */
+.slx-fig{margin:0;background:#fff;border:1.5px solid #e5e7eb;border-radius:16px;overflow:hidden;height:100%;display:flex;flex-direction:column}
+.slx-fig__img{display:flex;align-items:center;justify-content:center;background:#f8f9ff;padding:.75rem;flex:1}
+.slx-fig img{width:100%;height:auto;max-height:340px;object-fit:contain;display:block}
+.slx-fig figcaption{padding:.7rem 1rem;font-size:.8rem;font-weight:600;color:#374151;border-top:1px solid #eef0f6;background:#fff}
+.slx-hero-img{background:#f8f9ff;border:1.5px solid #e5e7eb;border-radius:20px;padding:1rem;box-shadow:0 20px 60px rgba(17,24,39,.08)}
+.slx-hero-img img{width:100%;height:auto;display:block;border-radius:12px;max-height:420px;object-fit:contain}
+.slx-hero-img .sl-img-card__stat{position:static;margin-top:1rem;background:linear-gradient(135deg,#313185,#4f46e5);border-radius:14px;padding:.9rem .5rem}
+.slx-cards .slx-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:16px;padding:1.4rem;height:100%;transition:all .25s}
+.slx-cards .slx-card:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(79,70,229,.1);border-color:rgba(79,70,229,.25)}
+.slx-card__n{display:inline-flex;width:30px;height:30px;border-radius:9px;background:rgba(79,70,229,.1);color:#4f46e5;font:800 .8rem 'Outfit',sans-serif;align-items:center;justify-content:center;margin-bottom:.8rem}
+.slx-card h3{font:700 1rem 'Outfit',sans-serif;color:#111827;margin:0 0 .4rem}
+.slx-card p{font-size:.85rem;color:#4b5563;line-height:1.65;margin:0}
+.slx-stat{background:linear-gradient(135deg,#313185,#4f46e5);border-radius:16px;padding:1.4rem;color:#fff;text-align:center;height:100%}
+.slx-stat b{display:block;font:800 1.9rem 'Outfit',sans-serif;line-height:1.1}
+.slx-stat span{font-size:.78rem;opacity:.8;letter-spacing:.04em}
+.slx-note{font-size:.76rem;color:#6b7280;margin-top:.75rem;line-height:1.55}
+.slx-pills{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.1rem 0 1.2rem;border:0}
+.slx-pills .nav-link{border-radius:100px;font:600 .8rem 'Outfit',sans-serif;color:#4b5563;background:#fff;border:1.5px solid #e5e7eb;padding:.45rem 1rem}
+.slx-pills .nav-link.active{background:#4f46e5;border-color:#4f46e5;color:#fff}
+.slx-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px}
+.slx-table-wrap .sl-compare-table{min-width:420px;width:100%}
+.slx-table-wrap .sl-compare-table td:first-child{font-weight:600;color:#111827;white-space:nowrap}
+.slx-table-wrap .sl-compare-table td:last-child{word-break:break-word}
+.slx-sub{font:700 .95rem 'Outfit',sans-serif;color:#111827;margin:1.5rem 0 .25rem}
+.slx-arch-img{background:#fff;border:1.5px solid #e5e7eb;border-radius:16px;padding:.75rem;margin-bottom:1.25rem}
+.slx-arch-img img{width:100%;height:auto;display:block}
+@media (max-width:575.98px){.slx-table-wrap .sl-compare-table td:first-child{white-space:normal}.slx-stat b{font-size:1.5rem}}
+.slx-hero-img .sl-img-card__stat-num{color:#fff}
+.slx-hero-img .sl-img-card__stat-label{color:rgba(255,255,255,.75)}
+.slx-table-wrap .sl-compare-table th,.slx-table-wrap .sl-compare-table td{text-align:left}
+
+/* industries: product cards */
+.slx-prod{display:flex;flex-direction:column;height:100%;background:#fff;border:1px solid #e5e7eb;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;transition:box-shadow .2s,transform .2s}
+.slx-prod:hover{box-shadow:0 10px 28px rgba(15,23,42,.12);transform:translateY(-2px)}
+.slx-prod__img{aspect-ratio:4/3;background:#f4f6fb;display:flex;align-items:center;justify-content:center;padding:1rem}
+.slx-prod__img img{max-width:100%;max-height:100%;object-fit:contain}
+.slx-prod__b{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.slx-prod__t{font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#4f46e5}
+.slx-prod__b h3{font-size:1.05rem;font-weight:700;margin:0;color:#0f172a}
+.slx-prod__b p{font-size:.88rem;color:#475569;margin:0;line-height:1.5}
+.slx-prod__a{margin-top:auto;padding-top:.5rem;font-size:.85rem;font-weight:600;color:#4f46e5}
+.slx-prod__img{position:relative;padding:0}
+.slx-prod__img img{position:absolute;inset:1rem;width:calc(100% - 2rem);height:calc(100% - 2rem);max-width:none;max-height:none;object-fit:contain}
+
+/* industries: challenges, detailed use cases, FAQ, proposal form */
+.slx-ch{height:100%;background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:1.25rem 1.3rem}
+.slx-ch__q{display:flex;gap:.75rem;align-items:flex-start;margin-bottom:.7rem}
+.slx-ch__n{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:#eef2ff;color:#4f46e5;font-weight:700;font-size:.82rem;display:flex;align-items:center;justify-content:center}
+.slx-ch__q h3{font-size:1.02rem;font-weight:700;margin:0;color:#0f172a;line-height:1.35}
+.slx-ch__a{font-size:.9rem;color:#475569;margin:0;line-height:1.6}
+.slx-ch__a strong{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#059669;margin-bottom:.2rem}
+.slx-uc{height:100%;background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:1.2rem 1.3rem}
+.slx-uc h3{font-size:1.02rem;font-weight:700;color:#0f172a;margin:0 0 .6rem}
+.slx-uc dl{margin:0}.slx-uc dt{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:#4f46e5;margin-top:.55rem}
+.slx-uc dd{margin:.1rem 0 0;font-size:.88rem;color:#475569;line-height:1.55}
+.slx-faq details{background:#fff;border:1px solid #e5e7eb;border-radius:12px;margin-bottom:.6rem;overflow:hidden}
+.slx-faq summary{cursor:pointer;list-style:none;padding:1rem 3rem 1rem 1.1rem;font-weight:600;font-size:.95rem;color:#0f172a;position:relative}
+.slx-faq summary::-webkit-details-marker{display:none}
+.slx-faq summary::after{content:"+";position:absolute;right:1.1rem;top:50%;transform:translateY(-50%);font-size:1.3rem;color:#4f46e5;font-weight:500}
+.slx-faq details[open] summary::after{content:"–"}
+.slx-faq details p{margin:0;padding:0 1.1rem 1.1rem;font-size:.9rem;color:#475569;line-height:1.65}
+.slx-faq summary:focus-visible{outline:2px solid #4f46e5;outline-offset:-2px}
+.slx-form{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:1.4rem}
+.slx-form label{display:block;font-size:.8rem;font-weight:600;color:#334155;margin-bottom:.3rem}
+.slx-form input,.slx-form textarea{width:100%;border:1.5px solid #e5e7eb;border-radius:8px;padding:.65rem .85rem;font:inherit;font-size:.9rem;color:#0f172a;outline:none}
+.slx-form input:focus,.slx-form textarea:focus{border-color:#4f46e5;box-shadow:0 0 0 3px rgba(79,70,229,.12)}
+.slx-form button{border:0;cursor:pointer}.slx-form button[disabled]{opacity:.7;cursor:wait}
+/* industry scene photo + product inset */
+.slx-hero-img{position:relative}
+.slx-hero-img img.slx-scene{width:100%;height:340px;max-height:none;object-fit:cover;border-radius:12px}
+.slx-hero-img img.slx-scene-prod{position:absolute;right:1.6rem;top:calc(1rem + 340px - 86px);width:150px;height:96px;max-height:none;object-fit:contain;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:.35rem;box-shadow:0 10px 24px rgba(17,24,39,.18)}
+@media(max-width:575.98px){.slx-hero-img img.slx-scene{height:240px}.slx-hero-img img.slx-scene-prod{top:calc(1rem + 240px - 86px);width:110px;height:70px}}

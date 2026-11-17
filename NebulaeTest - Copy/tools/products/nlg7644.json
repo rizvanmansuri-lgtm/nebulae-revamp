@@ -1,0 +1,435 @@
+{
+ "slug": "nlg7644",
+ "model": "NLG7644",
+ "full": "NebuLink LoRaWAN 4G Gateway NLG7644",
+ "title_name": "LoRaWAN 4G Gateway",
+ "type_key": "gateway",
+ "type_label": "Gateway",
+ "proto_key": "lora",
+ "proto_crumb": "LoRa",
+ "proto_label": "LoRa / LoRaWAN · 4G",
+ "badge": "LoRaWAN 4G Gateway",
+ "category": "LoRaWAN Gateway",
+ "tagline": "8-channel LoRaWAN gateway with 4G LTE backhaul, GPS and a 1.2 GHz Cortex-A7 — 15 km line of sight.",
+ "meta_desc": "Nebulae NLG7644 LoRaWAN 4G gateway — SX1301 8-channel, EU868/IN865, +27 dBm, -137 dBm, Cortex-A7 1.2 GHz, 4G LTE, GPS, Ethernet, RS485, -40 to +85 C, pole or wall mount, 15 km LoS.",
+ "desc": "NLG7644 is a pre-programmed, full-featured LoRaWAN network base station that connects LoRa devices to the cloud over 4G. Powered by a 1.2 GHz ARM Cortex-A7 with large storage and industrial interfaces, it gives developers the flexibility to build enterprise-grade solutions faster, with a range of over 15 km line of sight and over 2 km in dense urban environments.",
+ "cert_badges": [
+  "LoRaWAN 1.0.x",
+  "4G LTE",
+  "GPS"
+ ],
+ "gallery": [
+  {
+   "file": "nlg7644-gateway.jpg",
+   "alt": "NLG7644 NebuLink LoRaWAN gateway enclosure with three N-type antenna connectors",
+   "label": "Gateway view"
+  },
+  {
+   "file": "nlg7644-accessories.jpg",
+   "alt": "NLG7644 gateway with power adapter and LoRa, GPS and LTE antennas",
+   "label": "With accessories"
+  },
+  {
+   "file": "nlg7644-interfaces.jpg",
+   "alt": "NLG7644 hardware interface showing power supply, SIM slot and Ethernet port and LoRa, GPS and GSM antenna connectors",
+   "label": "Hardware interfaces"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "LoRa Concentrator",
+   "value": "SX1301 · 8 channels · EU868 / IN865"
+  },
+  {
+   "icon": "range",
+   "label": "TX / RX",
+   "value": "+5 to +27 dBm configurable · −137 dBm"
+  },
+  {
+   "icon": "network",
+   "label": "Backhaul",
+   "value": "4G LTE · Ethernet 10/100/1000 · RS485"
+  },
+  {
+   "icon": "cpu",
+   "label": "Processor & Memory",
+   "value": "Cortex-A7 1.2 GHz · 256 MB RAM / 512 MB flash"
+  },
+  {
+   "icon": "bolt",
+   "label": "Power",
+   "value": "12 – 24 VDC @ 2 A"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size",
+   "value": "208.17 × 190 × 60.20 mm"
+  }
+ ],
+ "stats": [
+  {
+   "num": "15 km",
+   "label": "Range, line of sight"
+  },
+  {
+   "num": "8",
+   "label": "LoRa channels (SX1301)"
+  },
+  {
+   "num": "5000",
+   "label": "Offline LoRa packets stored"
+  },
+  {
+   "num": "−40 to +85 °C",
+   "label": "Operating temperature"
+  }
+ ],
+ "overview": [
+  "Gateways are key components for commercial IoT deployment, helping to remotely manage and control solutions. NLG7644 is a LoRaWAN gateway that is pre-programmed with a full-featured LoRaWAN network base station and helps LoRa devices connect to the cloud over 4G. It has a range of over 15 km line of sight and over 2 km in dense urban environments.",
+  "It is powered by an ARM Cortex-A7 processor running at 1.2 GHz, with 256 MB RAM, 512 MB flash and up to 32 GB microSD storage. Industrial interfaces include 1 × RS485, 1 × 10/100/1000 Ethernet, isolated digital inputs and outputs, a relay output, built-in GPS for location and timing, and a cellular modem covering LTE FDD/TDD, HSPA/UMTS and GSM/GPRS/EDGE bands.",
+  "The software stack is a QuecOpen Linux OS running the NebuLink Gateway SDK, with validated Modbus RTU, Modbus TCP and DLMS stacks. The gateway supports LoRaWAN Class A and C, gateway bridge with TLS encryption, node whitelisting, secure firmware update and buffering of up to 5000 uplink LoRa packets during network-server outages. It ships in a polycarbonate pole- or wall-mount enclosure with a 5 dBi fibre-glass LoRa antenna."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Ready-to-run LoRaWAN",
+   "d": "Pre-programmed with a full-featured LoRaWAN network base station."
+  },
+  {
+   "t": "Resilient data path",
+   "d": "Buffers up to 5000 LoRa frames if the network server is unreachable, and supports uplink backup."
+  },
+  {
+   "t": "Industrial interfaces",
+   "d": "RS485, Ethernet, isolated digital I/O and relay output, GPS and 4G."
+  },
+  {
+   "t": "Secure",
+   "d": "Gateway bridge with TLS encryption, node whitelisting and secure firmware update."
+  },
+  {
+   "t": "Rugged",
+   "d": "-40 to +85 °C operation in a UL94 5VA polycarbonate enclosure."
+  }
+ ],
+ "showcase": {
+  "title": "Block Diagram, Wiring & Mounting",
+  "intro": "Reference drawings from the NLG7644 brochure and datasheet (version 2.0).",
+  "items": [
+   {
+    "file": "nlg7644-block-diagram.png",
+    "alt": "NLG7644 block diagram showing the Cortex-A7 processor and its memory and interfaces",
+    "cap": "Block diagram"
+   },
+   {
+    "file": "nlg7644-wiring.png",
+    "alt": "NLG7644 external wiring diagram with power, SIM, antenna connectors and status LEDs",
+    "cap": "External wiring diagram"
+   },
+   {
+    "file": "nlg7644-pole-mount.png",
+    "alt": "NLG7644 pole mounting steps using a pole clamp and hose clamp",
+    "cap": "Pole mounting"
+   },
+   {
+    "file": "nlg7644-wall-mount.png",
+    "alt": "NLG7644 wall mounting steps using self-tapping screws",
+    "cap": "Wall mounting"
+   }
+  ]
+ },
+ "specs": [
+  {
+   "group": "Processor & Storage",
+   "rows": [
+    [
+     "Processor",
+     "ARM Cortex-A7, 1.2 GHz"
+    ],
+    [
+     "Internal RAM",
+     "256 MB (40 MB for end application)"
+    ],
+    [
+     "Internal Flash",
+     "512 MB (20 MB for end application)"
+    ],
+    [
+     "Additional Storage",
+     "Up to 32 GB microSD card"
+    ]
+   ]
+  },
+  {
+   "group": "LoRa",
+   "rows": [
+    [
+     "LoRa Module",
+     "SX1301 based, 8 channels supported"
+    ],
+    [
+     "Operating Frequency",
+     "EU868, IN865"
+    ],
+    [
+     "Transmit Power",
+     "+5 to +27 dBm (configurable)"
+    ],
+    [
+     "Receiver Sensitivity",
+     "−137 dBm"
+    ],
+    [
+     "Antenna",
+     "1 × LoRa (fibre glass, 5 dBi gain)"
+    ],
+    [
+     "Range",
+     "Over 15 km (line of sight); over 2 km in dense urban environments"
+    ]
+   ]
+  },
+  {
+   "group": "Communication Interfaces",
+   "rows": [
+    [
+     "Cellular",
+     "FDD-LTE: B1/B2/B3/B5/B7/B8/B20 · TDD-LTE: B38/B40 · HSPA/UMTS: 900/850/1800/1900/2100 MHz · GSM/GPRS/EDGE: 850/900/1800/1900 MHz"
+    ],
+    [
+     "Ethernet",
+     "1 × IEEE 802.3 10/100M/1G bps"
+    ],
+    [
+     "Serial",
+     "1 × RS485"
+    ],
+    [
+     "GPS",
+     "Built-in (antenna: 1 × GPS)"
+    ]
+   ]
+  },
+  {
+   "group": "I/O Interface",
+   "rows": [
+    [
+     "Digital Input / Counter",
+     "Isolated 2 channels, 16 bits, input frequency 50 Hz (max), pulse width 10 ms (min)"
+    ],
+    [
+     "Digital Relay Output",
+     "Isolated 1 channel"
+    ],
+    [
+     "Digital Output",
+     "Isolated 2 channels"
+    ]
+   ]
+  },
+  {
+   "group": "Software",
+   "rows": [
+    [
+     "Stack",
+     "QuecOpen Linux OS running NebuLink Gateway SDK with validated Modbus RTU, Modbus TCP and DLMS stacks"
+    ],
+    [
+     "LoRa",
+     "Class A and C; LoRaWAN 1.0.1 and 1.0.2; data logger; location setup; server address & port setup; gateway bridge with TLS encryption; configurable state packet; node whitelisting; buffering of up to 5000 LoRa frames"
+    ],
+    [
+     "Network",
+     "Uplink backup; DHCP client"
+    ],
+    [
+     "Management",
+     "Secure firmware update; NTP"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical & Environmental",
+   "rows": [
+    [
+     "Power Supply",
+     "12 – 24 VDC @ 2 A"
+    ],
+    [
+     "Supported Battery Supply",
+     "3.7 / 4.2 V, 2000 mAh (optional external)"
+    ],
+    [
+     "Operating Temperature",
+     "−40 to +85 °C"
+    ],
+    [
+     "Humidity",
+     "Relative humidity 15% to 93% non-condensing"
+    ],
+    [
+     "Safety",
+     "EMS protection; ESD (IEC 61000-4-2) 4 kV contact for each terminal; EFT (IEC 61000-4-4) ±2 kV for power"
+    ]
+   ]
+  },
+  {
+   "group": "Mechanical",
+   "rows": [
+    [
+     "Ingress Protection",
+     "IP67 (datasheet spec table)"
+    ],
+    [
+     "Enclosure",
+     "Polycarbonate, UL94 5VA flame rated"
+    ],
+    [
+     "Dimensions",
+     "208.17 × 190 × 60.20 mm"
+    ],
+    [
+     "Weight",
+     "800 g"
+    ],
+    [
+     "Installation",
+     "Pole or wall mounting"
+    ],
+    [
+     "Indicators",
+     "3 × status LEDs"
+    ],
+    [
+     "Antennas",
+     "1 × cellular, 1 × GPS, 1 × LoRa (fibre glass, 5 dBi)"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Brochure and datasheet v2.0 combined. Where the two differ (transmit power, IP rating) see the product notes in the brochure; this page uses the brochure power figure and the datasheet IP figure.",
+ "features": [
+  {
+   "icon": "wifi",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "LoRaWAN Network Base Station",
+   "d": "Pre-programmed, full-featured LoRaWAN base station with web UI for management."
+  },
+  {
+   "icon": "range",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Long Range",
+   "d": "Over 15 km line of sight and over 2 km in dense urban environments."
+  },
+  {
+   "icon": "network",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "4G + Ethernet + RS485",
+   "d": "Cellular, 10/100/1000 Ethernet and RS485 communication interfaces."
+  },
+  {
+   "icon": "server",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Offline Packet Storage",
+   "d": "Stores up to 5000 uplink LoRa packets during network-server outages."
+  },
+  {
+   "icon": "lock",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "TLS Gateway Bridge",
+   "d": "Gateway bridge with TLS encryption and LoRa frame filtering (node whitelisting)."
+  },
+  {
+   "icon": "eye",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "Built-in GPS",
+   "d": "GPS for location and timing."
+  },
+  {
+   "icon": "cpu",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "Open-Source Embedded Linux",
+   "d": "Cortex-A7 at 1.2 GHz with QuecOpen Linux and the NebuLink Gateway SDK."
+  },
+  {
+   "icon": "shield",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Rugged Enclosure",
+   "d": "UL94 5VA flame-rated polycarbonate case; 5 dBi fibre-glass antenna."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "shield",
+   "t": "Industry, Defence & Military",
+   "d": "Rugged LoRaWAN coverage for demanding sites."
+  },
+  {
+   "icon": "meter",
+   "t": "Smart Metering",
+   "d": "LoRaWAN backhaul for metering networks."
+  },
+  {
+   "icon": "bulb",
+   "t": "Street Lighting",
+   "d": "Gateway for street-lighting controllers."
+  },
+  {
+   "icon": "building",
+   "t": "Smart Buildings & Home Automation",
+   "d": "Connectivity for building systems."
+  },
+  {
+   "icon": "truck",
+   "t": "Logistics & Supply Chain",
+   "d": "Tracking and monitoring along supply chains."
+  },
+  {
+   "icon": "city",
+   "t": "Smart Cities",
+   "d": "City-wide LoRaWAN coverage."
+  },
+  {
+   "icon": "factory",
+   "t": "Smart Factory",
+   "d": "Factory-floor sensor connectivity."
+  },
+  {
+   "icon": "server",
+   "t": "Data Centers / Server Rooms",
+   "d": "Environmental and asset monitoring."
+  }
+ ],
+ "part_rows": [
+  [
+   "NLG7644",
+   "NebuLink LoRaWAN 4G Gateway — 8-channel SX1301, EU868 / IN865, 4G LTE, GPS"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLG7644 Brochure",
+   "path": "./assets/docs/NLG7644_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  },
+  {
+   "name": "NLG7644 Datasheet v2.0",
+   "path": "./assets/docs/NLG7644_Datasheet_v2.0.pdf",
+   "sub": "PDF · Technical datasheet, June 2021"
+  }
+ ],
+ "related": [
+  "nlg6x40g-in",
+  "p2p-gateway"
+ ],
+ "primary_doc": "./assets/docs/NLG7644_Brochure.pdf"
+}

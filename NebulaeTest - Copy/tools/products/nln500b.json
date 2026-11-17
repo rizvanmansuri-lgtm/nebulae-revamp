@@ -1,0 +1,343 @@
+{
+ "slug": "nln500b",
+ "model": "NLN500b",
+ "full": "NebuLink Module NLN500b",
+ "title_name": "NebuLink Module",
+ "type_key": "module",
+ "type_label": "Module",
+ "proto_key": "lora",
+ "proto_crumb": "LoRa",
+ "proto_label": "LoRa · Sigfox",
+ "badge": "LoRaWAN + Sigfox Module",
+ "category": "LoRaWAN and Sigfox IoT Module",
+ "meta_desc": "NebuLink Module NLN500b — the smallest STM32WL based LoRa module (26.68 x 16 x 3.6 mm). LoRaWAN and Sigfox, -136 dBm sensitivity, +21 dBm TX, 9-ch ADC, OTA updates, AES-256.",
+ "desc": "The NebuLink Module NLN500b is the smallest STM32WL based LoRa module. Built on the STM32WL SoC with an embedded LoRaWAN transceiver, it operates in the 865/868 MHz band and uses the LoRa (Long-Range) and Sigfox protocols for long range, low power and secure data transmission in M2M and IoT applications.",
+ "cert_badges": [
+  "LoRaWAN",
+  "Sigfox",
+  "AES-256"
+ ],
+ "tagline": "Smallest STM32WL based LoRa module — LoRaWAN and Sigfox, −136 dBm sensitivity, +21 dBm TX, 26.68 × 16 mm.",
+ "gallery": [
+  {
+   "file": "nln500b-coin-scale.png",
+   "alt": "NLN500b NebuLink Module shown next to an Indian coin for scale, 26.68 mm long",
+   "label": "Coin scale"
+  },
+  {
+   "file": "nln500b-vs-sim.png",
+   "alt": "NebuLink Module NLN500b shown next to a standard SIM card for size comparison",
+   "label": "vs SIM card"
+  },
+  {
+   "file": "nln500b-sim-detail.png",
+   "alt": "Detailed size comparison of the module, 26.69 mm by 16 mm, against a 25 mm by 15 mm SIM card",
+   "label": "Size detail"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Protocols",
+   "value": "LoRaWAN® and Sigfox™"
+  },
+  {
+   "icon": "range",
+   "label": "RX Sensitivity",
+   "value": "−136 dBm (DR0 / SF12)"
+  },
+  {
+   "icon": "grid",
+   "label": "Digital I/O",
+   "value": "Up to 21 pins, 5 V tolerant"
+  },
+  {
+   "icon": "chip",
+   "label": "Analog Input",
+   "value": "9 × 12-bit ADC, 2.5 Msps"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size (L × W × H)",
+   "value": "26.68 × 16.0 × 3.6 mm"
+  },
+  {
+   "icon": "download",
+   "label": "Update & Debug",
+   "value": "OTA firmware update · SWD, JTAG"
+  }
+ ],
+ "stats": [
+  {
+   "num": "> 10 km",
+   "label": "RF range, line of sight"
+  },
+  {
+   "num": "−136 dBm",
+   "label": "RX sensitivity (DR0 / SF12)"
+  },
+  {
+   "num": "+21 dBm",
+   "label": "TX power"
+  },
+  {
+   "num": "8 mA",
+   "label": "RX current consumption"
+  }
+ ],
+ "overview": [
+  "The NebuLink Module NLN500b is the smallest STM32WL based LoRa module. It is built on the STM32WL SoC, which has an embedded LoRaWAN transceiver, for a wide range of smart applications where long range is required.",
+  "It operates in the 865/868 MHz band and uses the LoRa (Long-Range) and Sigfox protocols for communication, offering long range, low power and secure data transmission for M2M and IoT applications.",
+  "The module is designed to be extremely low-power and is based on the high-performance Arm® Cortex®-M4 32-bit RISC core operating at a frequency of up to 48 MHz. It is solder-ready on a 1.27 mm pitch SMD footprint with an RF shield, supports over-the-air firmware updates and offers u.FL, spring antenna and feedline antenna options."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Smallest STM32WL module",
+   "d": "26.68 × 16.0 × 3.6 mm — roughly the footprint of a SIM card."
+  },
+  {
+   "t": "Two protocols",
+   "d": "LoRaWAN® and Sigfox™ on one hardware platform."
+  },
+  {
+   "t": "Extremely low power",
+   "d": "8 mA in RX mode; 146 mA TX at +21 dBm, 106 mA TX at +13 dBm."
+  },
+  {
+   "t": "Secure & updatable",
+   "d": "AES-256 hardware encryption and OTA firmware update capable."
+  },
+  {
+   "t": "Easy to integrate",
+   "d": "Directly soldered on any device board with an RF shield on the module."
+  }
+ ],
+ "showcase": {
+  "title": "Size & Form Factor",
+  "intro": "At 26.68 × 16.0 × 3.6 mm the NLN500b is a compact fit for space-constrained designs. The comparison views below come straight from the product brochure.",
+  "items": [
+   {
+    "file": "nln500b-coin-scale.png",
+    "alt": "NLN500b module next to an Indian coin for scale",
+    "cap": "Module shown against a coin for scale"
+   },
+   {
+    "file": "nln500b-vs-sim.png",
+    "alt": "NebuLink Module NLN500b next to a standard SIM card",
+    "cap": "NebuLink Module NLN500b vs. a standard SIM card"
+   },
+   {
+    "file": "nln500b-sim-detail.png",
+    "alt": "Detailed size comparison of the module against a SIM card",
+    "cap": "Detail view — module (about 26.7 × 16 mm) beside a 25 × 15 mm SIM card"
+   }
+  ]
+ },
+ "specs": [
+  {
+   "group": "Performance",
+   "rows": [
+    [
+     "TX Power",
+     "+21 dBm"
+    ],
+    [
+     "RX Sensitivity (865 MHz, BW = 125 kHz)",
+     "DR0 / SF12: −136 dBm"
+    ],
+    [
+     "RX Sensitivity (865 MHz, BW = 125 kHz)",
+     "DR5 / SF7: −123 dBm"
+    ],
+    [
+     "RF Range (Line of Sight)",
+     "More than 10 km"
+    ],
+    [
+     "RF Data Rate",
+     "DR0 – DR5"
+    ]
+   ]
+  },
+  {
+   "group": "Processor Specifications",
+   "rows": [
+    [
+     "Processor",
+     "32-bit Arm® Cortex®-M4 CPU, frequency up to 48 MHz"
+    ],
+    [
+     "Memory",
+     "Up to 256 KB flash, 64 KB SRAM"
+    ],
+    [
+     "Frequency Band",
+     "EU 863-870, US 902-928, IN865"
+    ],
+    [
+     "Mounting Type",
+     "1.27 mm pitch SMD"
+    ],
+    [
+     "Antenna Option",
+     "u.FL, Spring Antenna, Feedline"
+    ],
+    [
+     "Size (L × W × H)",
+     "26.68 × 16.0 × 3.6 mm"
+    ]
+   ]
+  },
+  {
+   "group": "I/O Specifications",
+   "rows": [
+    [
+     "Serial Interface",
+     "2 × U(S)ART, 1 × LPUART"
+    ],
+    [
+     "Analog Input",
+     "9 × 12-bit ADC, 2.5 Msps"
+    ],
+    [
+     "Digital IO",
+     "Up to 21 pins"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical Specifications",
+   "rows": [
+    [
+     "Supply Voltage (VDD)",
+     "1.8 V ~ 3.6 V, 3.3 V"
+    ],
+    [
+     "Current @ 865-867 MHz (PA = +21 dBm)",
+     "TX mode: 146 mA · RX mode: 8 mA"
+    ],
+    [
+     "Current @ 865-867 MHz (PA = +13 dBm)",
+     "TX mode: 106 mA · RX mode: 8 mA"
+    ],
+    [
+     "Operating Temperature",
+     "−30 °C to 85 °C"
+    ]
+   ]
+  },
+  {
+   "group": "Networking",
+   "rows": [
+    [
+     "Protocol",
+     "LoRaWAN® and Sigfox™"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NLN500b product brochure.",
+ "features": [
+  {
+   "icon": "ruler",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Smallest STM32WL Module",
+   "d": "Just 26.68 × 16.0 × 3.6 mm — a footprint comparable to a standard SIM card."
+  },
+  {
+   "icon": "wifi",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "LoRaWAN® + Sigfox™",
+   "d": "Supports both the LoRaWAN® and Sigfox™ protocols in the 865/868 MHz band."
+  },
+  {
+   "icon": "range",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Long Range, High Sensitivity",
+   "d": "−136 dBm sensitivity (DR0 / SF12) and more than 10 km line-of-sight range."
+  },
+  {
+   "icon": "bolt",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Extremely Low Power",
+   "d": "8 mA in RX mode; 146 mA TX at +21 dBm and 106 mA TX at +13 dBm; 1.8 V to 3.6 V supply."
+  },
+  {
+   "icon": "grid",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Analog & Digital I/O",
+   "d": "9 × 12-bit ADC channels at 2.5 Msps and up to 21 digital I/O pins, 5 V tolerant."
+  },
+  {
+   "icon": "lock",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "AES-256 Encryption",
+   "d": "Hardware encryption for secure data transmission in M2M and IoT applications."
+  },
+  {
+   "icon": "download",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "OTA Update & Debug",
+   "d": "Over-the-air firmware update capable, with serial-wire debug (SWD) and JTAG programming."
+  },
+  {
+   "icon": "plug",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Solder-ready & Shielded",
+   "d": "1.27 mm pitch SMD, directly soldered on any device board, with an RF shield on the module."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "meter",
+   "t": "Smart Metering",
+   "d": "Long-range, low-power connectivity for utility and consumption metering."
+  },
+  {
+   "icon": "sprout",
+   "t": "Smart Agriculture",
+   "d": "Field and crop monitoring where cellular coverage is limited."
+  },
+  {
+   "icon": "factory",
+   "t": "Industrial Automation",
+   "d": "Compact wireless connectivity for industrial monitoring and control."
+  },
+  {
+   "icon": "chip",
+   "t": "M2M & IoT",
+   "d": "Secure machine-to-machine data links for a wide range of IoT products."
+  }
+ ],
+ "part_rows": [
+  [
+   "NLN500b",
+   "NebuLink Module NLN500b — LoRaWAN® and Sigfox™, 1.27 mm pitch SMD"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLN500b Brochure",
+   "path": "./assets/docs/NLN500b_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  },
+  {
+   "name": "NLN500b Module Datasheet v2.0",
+   "path": "./assets/docs/NLN500b_LoRa_Module_Datasheet_2.0.pdf",
+   "sub": "PDF · Technical datasheet, Nov 2023"
+  }
+ ],
+ "related": [
+  "nln500a"
+ ],
+ "primary_doc": "./assets/docs/NLN500b_Brochure.pdf"
+}

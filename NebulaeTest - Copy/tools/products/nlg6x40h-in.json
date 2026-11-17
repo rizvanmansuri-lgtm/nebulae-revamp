@@ -1,0 +1,364 @@
+{
+ "slug": "nlg6x40h-in",
+ "model": "NLG6X40H-IN",
+ "full": "Multi Channel LoRaWAN Gateway NLG6X40H-IN (IP67)",
+ "title_name": "Multi Channel LoRaWAN Gateway (IP67)",
+ "type_key": "gateway",
+ "type_label": "Gateway",
+ "proto_key": "lora",
+ "proto_crumb": "LoRa",
+ "proto_label": "LoRa / LoRaWAN · IP67",
+ "badge": "IP67 LoRaWAN Gateway",
+ "category": "8-Channel LoRaWAN Gateway",
+ "tagline": "High-performance 8-channel industrial LoRaWAN gateway on NXP i.MX6 — IP67 certified, 85–528 VAC, 5 W.",
+ "meta_desc": "Nebulae NLG6X40H-IN IP67 8-channel LoRaWAN gateway — NXP i.MX6 Cortex-A7, IN865, +27 dBm, -137 dBm, LTE, Wi-Fi/Bluetooth 5 optional, 85-528 VAC, 10 kV surge, FCC and WPC certified module.",
+ "desc": "The NLG6X40H-IN is a high-performance, industrial-grade gateway designed to anchor large-scale IoT networks. It combines a robust 8-channel LoRaWAN concentrator with the proven reliability of the NXP i.MX6 processor, and is housed in an IP67-certified, UV-stabilised polycarbonate enclosure for demanding outdoor environments.",
+ "cert_badges": [
+  "IP67",
+  "FCC & WPC LoRa Module",
+  "10 kV Surge"
+ ],
+ "gallery": [
+  {
+   "file": "nlg6x40h-in.jpg",
+   "alt": "NLG6X40H-IN IP67 8-channel LoRaWAN gateway with external antenna",
+   "label": "Gateway view"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "LoRaWAN",
+   "value": "IN865 · 8 uplink channels · other regions on request"
+  },
+  {
+   "icon": "range",
+   "label": "TX / RX",
+   "value": "+5 to +27 dBm configurable · −137 dBm @ SF12"
+  },
+  {
+   "icon": "network",
+   "label": "Backhaul",
+   "value": "LTE · Ethernet 10/100 (optional) · Wi-Fi optional"
+  },
+  {
+   "icon": "cpu",
+   "label": "Processor",
+   "value": "NXP i.MX6 Cortex-A7 792 MHz"
+  },
+  {
+   "icon": "bolt",
+   "label": "Power",
+   "value": "85 – 528 VAC · average 5 W · 4 h backup"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size",
+   "value": "250 × 210 × 92 mm · pole / wall mount"
+  }
+ ],
+ "stats": [
+  {
+   "num": "15 km",
+   "label": "Range, line of sight"
+  },
+  {
+   "num": "IP67",
+   "label": "Certified enclosure"
+  },
+  {
+   "num": "8",
+   "label": "LoRaWAN uplink channels"
+  },
+  {
+   "num": "10 kV",
+   "label": "Surge protection"
+  }
+ ],
+ "overview": [
+  "The NLG6X40H-IN is a high-performance, industrial-grade gateway designed to anchor large-scale IoT networks. By integrating a robust 8-channel LoRaWAN concentrator with the proven reliability of the NXP i.MX6 processor, it serves as a sophisticated communication hub that maintains secure and seamless data flow, even in the most demanding environments.",
+  "Engineered for superior scalability, it ensures consistent performance as network density increases, and delivers the stable, long-range connectivity needed for smart cities and Industrial IoT ecosystems. Range is up to 15 km line of sight and over 2 km in dense urban environments, with an external fibre-glass antenna of 5 dBi gain.",
+  "LTE is standard; Ethernet, Wi-Fi (with Bluetooth 5.0) and GPS are optional. The gateway runs an open-source embedded Linux system, offers a wide input supply range with integrated over-voltage protection, 10 kV surge protection, tamper detection and 4 hours of battery backup, and uses an FCC and WPC certified LoRa concentrator module."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "IP67 certified",
+   "d": "UV-stabilised, UL94 V0 polycarbonate IP67 enclosure."
+  },
+  {
+   "t": "Low power draw",
+   "d": "Average 5 W consumption (approx.)."
+  },
+  {
+   "t": "Wide power input",
+   "d": "85 – 528 VAC with integrated over-voltage and 10 kV surge protection."
+  },
+  {
+   "t": "Resilient",
+   "d": "4 hours of battery backup and tamper detection."
+  },
+  {
+   "t": "Certified radio",
+   "d": "FCC and WPC certified LoRa concentrator module."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Processor & Storage",
+   "rows": [
+    [
+     "Processor",
+     "ARM Cortex-A7 microprocessor IC i.MX6, 1 core, 32-bit, 792 MHz, 289-MAPBGA"
+    ],
+    [
+     "Storage",
+     "256 MB NAND flash, 512 MB DDR3L RAM, 32 GB SD card"
+    ]
+   ]
+  },
+  {
+   "group": "LoRaWAN",
+   "rows": [
+    [
+     "Frequency",
+     "IN865 (other country options available — see product selector list)"
+    ],
+    [
+     "Conducted Power",
+     "+5 to +27 dBm (configurable)"
+    ],
+    [
+     "Receiver Sensitivity",
+     "Down to −137 dBm @ SF12, BW 125 kHz"
+    ],
+    [
+     "Uplink Channels",
+     "8"
+    ],
+    [
+     "Antenna",
+     "5 dBi fibre glass antenna"
+    ],
+    [
+     "Range",
+     "Up to 15 km (line of sight); over 2 km in dense urban environments"
+    ]
+   ]
+  },
+  {
+   "group": "Cellular",
+   "rows": [
+    [
+     "Cellular Bands",
+     "LTE FDD – B1/B3/B5#/B7/B8/B20/B28# · GSM/GPRS/EDGE 900/1800 MHz"
+    ],
+    [
+     "SIM Card",
+     "Nano SIM tray"
+    ],
+    [
+     "Antenna",
+     "Inbuilt inside enclosure"
+    ]
+   ]
+  },
+  {
+   "group": "Wi-Fi & Bluetooth (optional — see product selector guide)",
+   "rows": [
+    [
+     "Band",
+     "Single spatial stream in 2.4 GHz ISM band"
+    ],
+    [
+     "Standards",
+     "802.11 b/g/n, 802.3, 802.3u, 802.11e-compatible bursting; Wi-Fi Direct and Soft-AP support"
+    ],
+    [
+     "Bluetooth",
+     "Bluetooth 5.0 (Basic Rate, Enhanced Data Rate and Bluetooth Low Energy), frequency hopping"
+    ],
+    [
+     "Certification",
+     "Wi-Fi Alliance certified; Bluetooth SIG 5.0 certification"
+    ],
+    [
+     "Antenna",
+     "Inbuilt inside enclosure"
+    ]
+   ]
+  },
+  {
+   "group": "Interfaces",
+   "rows": [
+    [
+     "Ethernet",
+     "1 × IEEE 802.3 10/100M"
+    ],
+    [
+     "USB",
+     "Type-C for serial debug communication"
+    ]
+   ]
+  },
+  {
+   "group": "Power",
+   "rows": [
+    [
+     "Power Supply",
+     "85 ~ 528 VAC"
+    ],
+    [
+     "Power Backup",
+     "4 hours battery backup after power failure"
+    ],
+    [
+     "Power Consumption",
+     "Average 5 W (approx.)"
+    ]
+   ]
+  },
+  {
+   "group": "Mechanical & Environmental",
+   "rows": [
+    [
+     "Size",
+     "210 × 250 × 92 mm"
+    ],
+    [
+     "Mounting Type",
+     "Pole mount and wall mount both"
+    ],
+    [
+     "Enclosure",
+     "Polycarbonate — UV stabilised, UL94 V0 rated, IP67 certified"
+    ],
+    [
+     "Operating Temperature",
+     "−10 °C to 60 °C"
+    ],
+    [
+     "Humidity",
+     "Relative humidity 15% to 93% non-condensing"
+    ]
+   ]
+  },
+  {
+   "group": "Certifications",
+   "rows": [
+    [
+     "EMS & Safety",
+     "ESD (IEC 61000-4-2) · EFT (IEC 61000-4-4) · Surge (IEC 61000-4-5) · Radiated emission (CISPR22) · Immunity to electromagnetic HF field (IEC 61000-4-3) · Fire retardant"
+    ],
+    [
+     "Radio",
+     "FCC certified LoRa concentrator module · WPC"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NLG6X40H-IN brochure (version 1.0). “#” marks are reproduced from the brochure’s cellular band list.",
+ "features": [
+  {
+   "icon": "drop",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "IP67 Certified Enclosure",
+   "d": "UV-stabilised, UL94 V0 rated polycarbonate case."
+  },
+  {
+   "icon": "range",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Long-Range LoRaWAN",
+   "d": "Up to 15 km line of sight and over 2 km in dense urban environments."
+  },
+  {
+   "icon": "cpu",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Open-Source Embedded Linux",
+   "d": "NXP i.MX6 Cortex-A7 at 792 MHz."
+  },
+  {
+   "icon": "wifi",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "LTE, Ethernet, Wi-Fi & GPS",
+   "d": "LTE standard; Ethernet, Wi-Fi/Bluetooth 5 and GPS optional."
+  },
+  {
+   "icon": "bolt",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Wide Input Supply",
+   "d": "85 – 528 VAC with integrated over-voltage protection."
+  },
+  {
+   "icon": "shield",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "10 kV Surge Protection",
+   "d": "Plus tamper detection."
+  },
+  {
+   "icon": "battery",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "4 h Battery Backup",
+   "d": "Keeps the gateway running after power failure."
+  },
+  {
+   "icon": "plug",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "External 5 dBi Antenna",
+   "d": "External fibre-glass antenna for long range."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "meter",
+   "t": "Smart Utility Metering",
+   "d": "Electricity, gas and water metering."
+  },
+  {
+   "icon": "factory",
+   "t": "Industrial Automation & Predictive Maintenance",
+   "d": "Condition monitoring across plants."
+  },
+  {
+   "icon": "sprout",
+   "t": "Agriculture & Environmental Monitoring",
+   "d": "Field and environmental sensing."
+  },
+  {
+   "icon": "city",
+   "t": "Smart Cities",
+   "d": "City-scale IoT networks."
+  }
+ ],
+ "part_rows": [
+  [
+   "NLG6X40H-IN",
+   "Multi Channel LoRaWAN Gateway, IP67, IN865"
+  ],
+  [
+   "NLG6 X 40 H - IN (model structure)",
+   "X = cloud-connection selector (1 Wi-Fi · 2 Ethernet · 3 Wi-Fi + Ethernet · 4 GSM · 5 Wi-Fi + GSM · 6 Ethernet + GSM · 7 GSM + Wi-Fi + Ethernet); 40 = LoRaWAN; H = IP67; region IN / US / EU / AU / RU"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLG6X40H-IN Brochure",
+   "path": "./assets/docs/NLG6X40H-IN_Brochure.pdf",
+   "sub": "PDF · Product brochure v1.0"
+  }
+ ],
+ "related": [
+  "nlg6x40g-in",
+  "nlg7644"
+ ],
+ "primary_doc": "./assets/docs/NLG6X40H-IN_Brochure.pdf"
+}

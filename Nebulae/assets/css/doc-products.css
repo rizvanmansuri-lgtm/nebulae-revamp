@@ -1,0 +1,70 @@
+/* =====================================================
+   doc-products.css
+   Supplemental styles for the document product listing page.
+   Load AFTER products.css
+===================================================== */
+
+/* Doc card thumb area — replaces product image with PDF icon */
+.doc-card .pr-card__img-wrap.doc-card__thumb {
+  background: #f9fafb;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.doc-card__icon-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: .5rem;
+}
+
+/* Doc type badge with inline icon */
+.doc-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+
+/* Make doc cards taller to accommodate cta at bottom */
+.doc-card .pr-card__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+}
+
+.doc-card .pr-card__cta {
+  margin-top: auto;
+}
+
+/* Protocol badge colour overrides for new cats */
+.badge--ssl {
+  background: rgba(245,158,11,.15);
+  color: #b45309;
+}
+.badge--general {
+  background: rgba(107,114,128,.15);
+  color: #4b5563;
+}
+
+/* Doc grid — slightly wider cards vs products */
+.doc-grid.pr-grid {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+@media (max-width: 576px) {
+  .doc-grid.pr-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 380px) {
+  .doc-grid.pr-grid {
+    grid-template-columns: 1fr;
+  }
+}

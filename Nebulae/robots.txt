@@ -1,0 +1,25 @@
+# robots.txt — Nebulae IoT (https://www.nebulae.io)
+# Generated: 2026-06-15
+
+User-agent: *
+Allow: /
+
+# Block admin / internal paths (update if you add these later)
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /cdn-cgi/
+
+# Block specific bots known for aggressive crawling
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://www.nebulae.io/sitemap.xml
+Sitemap: https://www.nebulae.io/sitemap-products.xml

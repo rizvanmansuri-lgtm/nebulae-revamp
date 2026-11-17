@@ -1,0 +1,313 @@
+{
+ "slug": "nm0221i",
+ "model": "NM0221-I",
+ "full": "NebuLink Module NM0221-I — Wi-SUN",
+ "title_name": "NebuLink Wi-SUN Module",
+ "type_key": "module",
+ "type_label": "Module",
+ "proto_key": "wisun",
+ "proto_crumb": "Wi-SUN",
+ "proto_label": "Wi-SUN",
+ "badge": "Wi-SUN Module",
+ "category": "Wi-SUN IoT Module",
+ "tagline": "WPC certified SoC-based Wi-SUN / IEEE 802.15.4 module for self-forming, self-healing mesh networks.",
+ "meta_desc": "Nebulae NM0221-I — SoC-based low-power Wi-SUN / IEEE 802.15.4 module, WPC certified for IS16444 smart metering: +19.8 dBm TX, -105 dBm sensitivity, 1 km range, FOTA.",
+ "desc": "NM0221-I is a SoC-based low-power wireless module by Nebulae that provides long-range connectivity for IoT devices. It is engineered to support Wi-SUN and IEEE 802.15.4 PHY networks and is ideal for applications that need self-forming and self-healing mesh networks. It is equipped with sufficient memory for IS16444 smart metering applications and is WPC certified.",
+ "cert_badges": [
+  "WPC Certified",
+  "Wi-SUN",
+  "IEEE 802.15.4"
+ ],
+ "gallery": [
+  {
+   "file": "nm0221i-module.jpg",
+   "alt": "NM0221-I Wi-SUN module shown next to an Indian coin, 34.2 mm long",
+   "label": "Module with coin scale"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Protocols",
+   "value": "Wi-SUN · Zigbee · Thread · Proprietary Mesh"
+  },
+  {
+   "icon": "range",
+   "label": "TX / RX",
+   "value": "+19.8 dBm · −105 dBm @ 38.4 kbps"
+  },
+  {
+   "icon": "grid",
+   "label": "Frequency Band",
+   "value": "863 ~ 876 MHz"
+  },
+  {
+   "icon": "chip",
+   "label": "Core & Memory",
+   "value": "Cortex-M4 @ 40 MHz · 1024 kB flash / 128 kB RAM"
+  },
+  {
+   "icon": "bolt",
+   "label": "Supply Voltage",
+   "value": "1.62 V ~ 3.8 V DC"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size (L × W × H)",
+   "value": "34.2 × 25 × 4.6 mm"
+  }
+ ],
+ "stats": [
+  {
+   "num": "+19.8 dBm",
+   "label": "TX power"
+  },
+  {
+   "num": "−105 dBm",
+   "label": "Sensitivity @ 38.4 kbps, 1% PER"
+  },
+  {
+   "num": "1000 m",
+   "label": "Range @ 38.4 kbps, line of sight"
+  },
+  {
+   "num": "38.4–100 kbps",
+   "label": "RF data rate"
+  }
+ ],
+ "overview": [
+  "NM0221-I is a SoC-based low-power wireless module by Nebulae that provides long-range connectivity for IoT devices. It is engineered to support Wi-SUN and IEEE 802.15.4 PHY networks.",
+  "The module is ideal for applications which need self-forming and self-healing mesh networks. It is well suited to IS16444 smart metering applications because it is equipped with sufficient memory and is WPC certified.",
+  "NM0221-I's FOTA capability makes it suitable for remote security updates. It is a 1.27 mm pitch SMD module with a U.FL connector for an external antenna."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Wi-SUN & 802.15.4",
+   "d": "Supports 802.15.4 PHY/MAC with Zigbee, Thread, proprietary mesh and Wi-SUN."
+  },
+  {
+   "t": "Self-healing mesh",
+   "d": "Designed for self-forming, self-healing mesh networks."
+  },
+  {
+   "t": "Smart-metering ready",
+   "d": "WPC certified, with enough memory for IS16444 smart metering."
+  },
+  {
+   "t": "Remote updates",
+   "d": "OTA firmware update mechanism for remote security updates."
+  },
+  {
+   "t": "Wide supply range",
+   "d": "Runs from 1.62 V to 3.8 V DC."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Performance",
+   "rows": [
+    [
+     "TX Power",
+     "+19.8 dBm"
+    ],
+    [
+     "RX Sensitivity (@ 1% PER)",
+     "38.4 kbps: −105 dBm · 100 kbps: −101 dBm"
+    ],
+    [
+     "RF Range (Line of Sight)",
+     "1000 meters @ 38.4 kbps data rate"
+    ],
+    [
+     "RF Data Rate",
+     "38.4 ~ 100 kbps"
+    ]
+   ]
+  },
+  {
+   "group": "Processor Specifications",
+   "rows": [
+    [
+     "Processor",
+     "32-bit ARM Cortex-M4 core with DSP instruction and floating point unit operating @ 40 MHz"
+    ],
+    [
+     "Memory",
+     "1024 kB Flash Program, 128 kB RAM Data"
+    ],
+    [
+     "Frequency Band",
+     "863 ~ 876 MHz"
+    ],
+    [
+     "Mounting Type",
+     "1.27 mm pitch SMD"
+    ],
+    [
+     "Antenna Options",
+     "U.FL"
+    ],
+    [
+     "Size (L × W × H)",
+     "34.2 × 25 × 4.6 mm"
+    ]
+   ]
+  },
+  {
+   "group": "I/O Specifications",
+   "rows": [
+    [
+     "Serial Interface",
+     "1 × UART"
+    ],
+    [
+     "Analog Input",
+     "2 × 12-bit 1 MSPS SAR ADC"
+    ],
+    [
+     "Digital IO",
+     "25 ~ 27"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical Specifications",
+   "rows": [
+    [
+     "Supply Voltage",
+     "1.62 V ~ 3.8 V DC, 3.3 V"
+    ],
+    [
+     "Current — TX (868 MHz, CW, 20 dBm match, +3.3 V external PA supply)",
+     "79.7 ~ 106.7 mA"
+    ],
+    [
+     "Current — TX (868 MHz, CW, 14 dBm match, external PA supply on DCDC output)",
+     "35.3 ~ 41 mA"
+    ],
+    [
+     "Current — RX (38.4 kbit/s, 2GFSK, 868 MHz, radio clock prescaled by 4)",
+     "8.6 ~ 10.2 mA"
+    ],
+    [
+     "Operating Temperature",
+     "−20 °C to 85 °C"
+    ],
+    [
+     "Storage Temperature",
+     "−30 °C to 125 °C"
+    ]
+   ]
+  },
+  {
+   "group": "Networking",
+   "rows": [
+    [
+     "Protocol",
+     "802.15.4 PHY/MAC — Zigbee, Thread, Proprietary Mesh, Wi-SUN"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NM0221-I product brochure.",
+ "features": [
+  {
+   "icon": "network",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Self-Healing Mesh",
+   "d": "Built for self-forming, self-healing mesh networks over 802.15.4."
+  },
+  {
+   "icon": "range",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Long-Range Connectivity",
+   "d": "Up to 1000 m line of sight at 38.4 kbps."
+  },
+  {
+   "icon": "chip",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Cortex-M4 with FPU",
+   "d": "32-bit ARM Cortex-M4 with DSP instructions at 40 MHz."
+  },
+  {
+   "icon": "grid",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Generous Memory",
+   "d": "1024 kB flash and 128 kB RAM."
+  },
+  {
+   "icon": "wifi",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "BPSK / DBPSK TX",
+   "d": "Supports BPSK / DBPSK TX modulation formats."
+  },
+  {
+   "icon": "gauge",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "RTC, Watchdog & ADC",
+   "d": "32-bit RTC and calendar, 2 × watchdog timers, 12-bit 1 MSPS SAR ADC."
+  },
+  {
+   "icon": "download",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "OTA Firmware Update",
+   "d": "Over-the-air firmware update mechanism (FOTA)."
+  },
+  {
+   "icon": "plug",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "U.FL Antenna Connector",
+   "d": "Connect an external antenna via the U.FL connector."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "meter",
+   "t": "Smart Grid Meter",
+   "d": "Connectivity for smart-grid metering devices."
+  },
+  {
+   "icon": "bolt",
+   "t": "Smart Energy",
+   "d": "Energy-usage monitoring and reporting."
+  },
+  {
+   "icon": "leaf",
+   "t": "Environmental Monitoring",
+   "d": "Distributed environmental sensing."
+  },
+  {
+   "icon": "bulb",
+   "t": "Smart Street Lighting",
+   "d": "Mesh connectivity for street lighting."
+  }
+ ],
+ "part_rows": [
+  [
+   "NM0221-I",
+   "NebuLink Module NM0221-I — Wi-SUN / IEEE 802.15.4, U.FL antenna"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NM0221-I Brochure",
+   "path": "./assets/docs/NM0221-I_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  }
+ ],
+ "related": [
+  "nm0221i-nic",
+  "nln0721"
+ ],
+ "primary_doc": "./assets/docs/NM0221-I_Brochure.pdf"
+}

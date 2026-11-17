@@ -1,0 +1,416 @@
+{
+ "slug": "nln0721",
+ "model": "NLN0721",
+ "full": "NebuLink Module NLN0721 — Wi-SUN",
+ "title_name": "NebuLink Wi-SUN Module",
+ "type_key": "module",
+ "type_label": "Module",
+ "proto_key": "wisun",
+ "proto_crumb": "Wi-SUN",
+ "proto_label": "Wi-SUN",
+ "badge": "Wi-SUN Module",
+ "category": "Wi-SUN Sub-GHz IoT Module",
+ "tagline": "Sub-GHz Wi-SUN module based on the EFR32FG28 — +20 dBm, WPC certified, 26.68 × 16 mm.",
+ "meta_desc": "NebuLink NLN0721 — EFR32FG28 based sub-GHz Wi-SUN module: +20 dBm TX, -108 dBm sensitivity, Wi-SUN / Amazon Sidewalk / WM-BUS, WPC certified, 26.68 x 16 x 3.6 mm.",
+ "desc": "The NLN0721 is an ideal sub-GHz solution for Internet of Things applications such as smart metering, smart lighting, building automation and smart homes. Based on the EFR32FG28, this single-die, multi-core module offers long-range and mesh connectivity for multi-hop connections, with industry-leading security, low power consumption and fast wake-up times.",
+ "cert_badges": [
+  "WPC Certified",
+  "Wi-SUN",
+  "AES-256"
+ ],
+ "gallery": [
+  {
+   "file": "nln0721-vs-sim.png",
+   "alt": "NebuLink Module NLN0721 shown beside a standard SIM card for size comparison",
+   "label": "vs SIM card"
+  },
+  {
+   "file": "nln0721-module-photo.png",
+   "alt": "NLN0721 Wi-SUN module, 26.69 mm long, beside a 25 mm SIM card",
+   "label": "Module view"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Protocols",
+   "value": "Wi-SUN · Amazon Sidewalk · WM-BUS"
+  },
+  {
+   "icon": "range",
+   "label": "TX / RX",
+   "value": "+20 dBm · −108 dBm @ 100 kbps"
+  },
+  {
+   "icon": "grid",
+   "label": "Frequency Band",
+   "value": "EU 863-870 · US 902-928 · IN865"
+  },
+  {
+   "icon": "chip",
+   "label": "Core & Memory",
+   "value": "78 MHz Cortex-M33 · 1024 KB flash / 256 KB SRAM"
+  },
+  {
+   "icon": "plug",
+   "label": "I/O",
+   "value": "Up to 21 pins · U(S)ART · LPUART"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size (L × W × H)",
+   "value": "26.68 × 16.0 × 3.6 mm"
+  }
+ ],
+ "stats": [
+  {
+   "num": "+20 dBm",
+   "label": "Maximum TX power"
+  },
+  {
+   "num": "−109.5 dBm",
+   "label": "Sensitivity @ 50 kbps, no FEC"
+  },
+  {
+   "num": "1 km",
+   "label": "RF range, line of sight"
+  },
+  {
+   "num": "10 years",
+   "label": "Module lifespan & support"
+  }
+ ],
+ "overview": [
+  "The NLN0721 is an ideal sub-GHz solution for Internet of Things applications such as smart metering, smart lighting, building automation and smart homes. The module is based on the EFR32FG28 and offers long-range and mesh connectivity for multi-hop connections.",
+  "This single-die, multi-core solution provides industry-leading security features, low power consumption with fast wake-up times, and integrated power amplifiers to enable the next level of secure connectivity for IoT devices. A large memory footprint enables flexible solutions for dynamic protocol support.",
+  "The compact size of the module makes it an ideal choice for any IoT device. With a lifespan and support of 10 years, the module suits IoT end devices that must stay in the field for a long time. It is WPC certified and is available with a u.FL connector or a feed line for the antenna."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Wi-SUN, Sidewalk & WM-BUS",
+   "d": "Three sub-GHz protocols supported on one hardware platform."
+  },
+  {
+   "t": "Mesh, long range",
+   "d": "Multi-hop mesh connectivity with an estimated 1 km line-of-sight range."
+  },
+  {
+   "t": "Secure",
+   "d": "Hardware cryptographic acceleration for AES-128/192/256."
+  },
+  {
+   "t": "WPC certified",
+   "d": "The module is WPC certified (regulatory approval per the datasheet)."
+  },
+  {
+   "t": "10-year support",
+   "d": "A lifespan and support commitment of 10 years."
+  }
+ ],
+ "showcase": {
+  "title": "Pinout, Block Diagram & Mechanical Drawings",
+  "intro": "Reference drawings taken from the NLN0721 datasheet (version 3.0).",
+  "items": [
+   {
+    "file": "nln0721-pinout.png",
+    "alt": "NLN0721 module pinout diagram",
+    "cap": "Module pinout"
+   },
+   {
+    "file": "nln0721-block-diagram.png",
+    "alt": "NLN0721 block diagram based on the EFR32FG28",
+    "cap": "Block diagram — EFR32FG28"
+   },
+   {
+    "file": "nln0721-package-outline.png",
+    "alt": "NLN0721 package outline drawing with front, side and bottom views",
+    "cap": "Package outline (all dimensions in mm)"
+   },
+   {
+    "file": "nln0721-footprint.png",
+    "alt": "NLN0721 recommended PCB footprint",
+    "cap": "Recommended footprint"
+   }
+  ]
+ },
+ "specs": [
+  {
+   "group": "Performance",
+   "rows": [
+    [
+     "TX Power",
+     "+20 dBm"
+    ],
+    [
+     "RX Sensitivity — IN865 MHz",
+     "100 kbps, no FEC, PER < 10%: −108 dBm"
+    ],
+    [
+     "RX Sensitivity — IN865 MHz",
+     "50 kbps, no FEC, PER < 10%: −109.5 dBm"
+    ],
+    [
+     "RX Sensitivity — EU 863-870 MHz",
+     "50 kbps, no FEC, PER < 10%: −109.5 dBm"
+    ],
+    [
+     "Tolerance",
+     "± 2 dBm variation in test results"
+    ],
+    [
+     "RF Range (Line of Sight)",
+     "1 km"
+    ],
+    [
+     "RF Data Rate",
+     "50 kbps, 100 kbps"
+    ]
+   ]
+  },
+  {
+   "group": "Processor Specifications",
+   "rows": [
+    [
+     "Processor",
+     "32-bit 78 MHz ARM Cortex-M33 with DSP instruction and floating-point unit"
+    ],
+    [
+     "Memory",
+     "Up to 1024 KB flash, 256 KB SRAM"
+    ],
+    [
+     "Frequency Band",
+     "EU 863-870, US 902-928, IN865"
+    ],
+    [
+     "Mounting Type",
+     "1.27 mm pitch SMD"
+    ],
+    [
+     "Antenna Option",
+     "u.FL, Feedline"
+    ],
+    [
+     "Size (L × W × H)",
+     "26.68 × 16.0 × 3.6 mm"
+    ]
+   ]
+  },
+  {
+   "group": "I/O Specifications",
+   "rows": [
+    [
+     "Serial Interface",
+     "1 × U(S)ART, 1 × LPUART"
+    ],
+    [
+     "Other Peripherals",
+     "1 × I2C, 1 × SPI"
+    ],
+    [
+     "Analog Input",
+     "2 × 12-bit ADC, 2.5 Msps"
+    ],
+    [
+     "Digital IO",
+     "Up to 21 pins"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical Specifications",
+   "rows": [
+    [
+     "Supply Voltage (VDD)",
+     "1.8 V ~ 3.6 V, 3.3 V"
+    ],
+    [
+     "Current — Standby Mode",
+     "6.95 mA"
+    ],
+    [
+     "Current — TX Mode",
+     "98.5 mA"
+    ],
+    [
+     "Current — RX Mode",
+     "6.21 mA"
+    ],
+    [
+     "Operating Temperature",
+     "−30 °C to 85 °C"
+    ]
+   ]
+  },
+  {
+   "group": "Networking & Compliance",
+   "rows": [
+    [
+     "Protocol",
+     "Amazon Sidewalk, WM-BUS, Wi-SUN"
+    ],
+    [
+     "Security",
+     "Hardware cryptographic acceleration: AES-128/192/256"
+    ],
+    [
+     "Firmware Update",
+     "Over-the-air (FUOTA); programming via SWD"
+    ],
+    [
+     "Regulatory",
+     "WPC certified"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NLN0721 product brochure; the datasheet (v3.0) adds the peripheral counts.",
+ "features": [
+  {
+   "icon": "network",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Sub-GHz Mesh Connectivity",
+   "d": "Long-range and mesh connectivity for multi-hop connections."
+  },
+  {
+   "icon": "bolt",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Integrated Power Amplifier",
+   "d": "Up to +20 dBm TX power with an integrated PA; 98.5 mA in TX mode."
+  },
+  {
+   "icon": "wifi",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Multi-Protocol",
+   "d": "Amazon Sidewalk, WM-BUS and Wi-SUN on one module."
+  },
+  {
+   "icon": "chip",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Cortex-M33 Processing",
+   "d": "78 MHz ARM Cortex-M33 with DSP instructions and FPU; 1024 KB flash, 256 KB SRAM."
+  },
+  {
+   "icon": "lock",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Hardware Security",
+   "d": "Cryptographic acceleration for AES-128/192/256."
+  },
+  {
+   "icon": "download",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "FUOTA & SWD",
+   "d": "Firmware update over the air, with serial-wire debugging."
+  },
+  {
+   "icon": "shield",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "RF Shield",
+   "d": "Shield protects the radio from external electromagnetic interference."
+  },
+  {
+   "icon": "plug",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Solderable, 21 I/O",
+   "d": "Up to 21 I/Os on edge plated holes; solder directly to any device board."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "meter",
+   "t": "Smart Metering",
+   "d": "Sub-GHz Wi-SUN connectivity for utility metering."
+  },
+  {
+   "icon": "bulb",
+   "t": "Smart Street Lighting",
+   "d": "Mesh networking for street lighting nodes."
+  },
+  {
+   "icon": "trash",
+   "t": "Smart Waste Management",
+   "d": "Long-range links for waste-bin monitoring."
+  },
+  {
+   "icon": "city",
+   "t": "Smart City Network",
+   "d": "Sub-GHz mesh for city infrastructure."
+  },
+  {
+   "icon": "city",
+   "t": "Smart City Traffic Control",
+   "d": "Connected control for traffic infrastructure."
+  },
+  {
+   "icon": "sprout",
+   "t": "Smart Agriculture",
+   "d": "Field sensing over long-range links."
+  },
+  {
+   "icon": "building",
+   "t": "Building Automation & Monitoring",
+   "d": "Wireless connectivity for building systems."
+  },
+  {
+   "icon": "bulb",
+   "t": "Lighting Controls",
+   "d": "Wireless control of lighting networks."
+  },
+  {
+   "icon": "box",
+   "t": "Inventory Management",
+   "d": "Tracking and status reporting for stock."
+  },
+  {
+   "icon": "leaf",
+   "t": "Environmental Monitoring",
+   "d": "Distributed environmental sensing."
+  },
+  {
+   "icon": "factory",
+   "t": "Industrial Monitoring",
+   "d": "Remote monitoring across industrial sites."
+  },
+  {
+   "icon": "gauge",
+   "t": "Machinery Condition Monitoring",
+   "d": "Condition and performance monitoring of machinery."
+  }
+ ],
+ "part_rows": [
+  [
+   "PL0NL0721I100",
+   "NLN0721 — u.FL RF output"
+  ],
+  [
+   "PL0NL0721S100",
+   "NLN0721 — feed line RF output"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLN0721 Brochure",
+   "path": "./assets/docs/NLN0721_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  },
+  {
+   "name": "NLN0721 Datasheet v3.0",
+   "path": "./assets/docs/NLN0721_Datasheet_v3.0.pdf",
+   "sub": "PDF · Technical datasheet, May 2024"
+  }
+ ],
+ "related": [
+  "nln0725is",
+  "nm0221i"
+ ],
+ "primary_doc": "./assets/docs/NLN0721_Brochure.pdf"
+}

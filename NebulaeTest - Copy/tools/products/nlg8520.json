@@ -1,0 +1,326 @@
+{
+ "slug": "nlg8520",
+ "model": "NLG8520",
+ "full": "Wi-SUN Gateway / DCU NLG8520",
+ "title_name": "Wi-SUN Gateway (DCU)",
+ "type_key": "gateway",
+ "type_label": "Gateway",
+ "proto_key": "wisun",
+ "proto_crumb": "Wi-SUN",
+ "proto_label": "Wi-SUN FAN 1.0",
+ "badge": "Wi-SUN Gateway",
+ "category": "Wi-SUN Data Concentrator Unit",
+ "tagline": "Wi-SUN FAN 1.0 gateway (DCU) for up to 250 nodes — IN865, IP65, 4G LTE, battery backup.",
+ "meta_desc": "Nebulae NLG8520 Wi-SUN gateway (DCU) — Wi-SUN FAN 1.0, IN 865-867 MHz, 20 dBm, -101 dBm, up to 250 nodes, 4G LTE, Ethernet, RS485, IP65, 85-264 VAC with 4 h battery backup.",
+ "desc": "The NLG8520 by Nebulae is a cutting-edge Wi-SUN gateway that provides secured interconnection of Wi-SUN field devices with WAN communication networks. Its capabilities include Wi-SUN FAN 1.0 support, remote device management, communication management, data storage and interface abstraction. It suits small to medium mesh networks of up to 250 nodes.",
+ "cert_badges": [
+  "Wi-SUN FAN 1.0",
+  "IP65",
+  "250 Nodes"
+ ],
+ "gallery": [
+  {
+   "file": "nlg8520.jpg",
+   "alt": "NLG8520 Wi-SUN gateway enclosure with external antenna",
+   "label": "Gateway view"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Wi-SUN",
+   "value": "FAN 1.0 · IEEE 802.15.4 · mesh topology"
+  },
+  {
+   "icon": "range",
+   "label": "RF",
+   "value": "IN 865–867 MHz · 20 dBm · −101 dBm @ 100 kbps"
+  },
+  {
+   "icon": "network",
+   "label": "WAN",
+   "value": "4G LTE · Ethernet · RS485"
+  },
+  {
+   "icon": "cpu",
+   "label": "Processor",
+   "value": "A5D2X Cortex-A5 @ 500 MHz · Yocto Linux"
+  },
+  {
+   "icon": "bolt",
+   "label": "Power",
+   "value": "85 – 264 VAC · 4 h battery backup"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size",
+   "value": "250 × 210 × 105 mm · IP65"
+  }
+ ],
+ "stats": [
+  {
+   "num": "250",
+   "label": "Nodes on one network"
+  },
+  {
+   "num": "IP65",
+   "label": "Fire-retardant case"
+  },
+  {
+   "num": "4 h",
+   "label": "Battery backup"
+  },
+  {
+   "num": "5 dBi",
+   "label": "External antenna"
+  }
+ ],
+ "overview": [
+  "The NLG8520 by Nebulae is a cutting-edge Wi-SUN gateway that provides secured interconnection of Wi-SUN field devices with WAN communication networks. Its capabilities include Wi-SUN FAN 1.0 support, remote device management, communication management, data storage and interface abstraction.",
+  "A choice of multiple WAN interfaces (LTE cellular, Ethernet, RS485) and mounting options makes it suitable for different deployment strategies and locations. It is ideal for small to medium mesh networks supporting up to 250 nodes on a single network for various IoT applications.",
+  "It runs an open-source embedded Linux system (Yocto Linux sumo) on an A5D2X Cortex-A5 at 500 MHz, supports RF self-healing and self-forming networks, secure firmware update and NTP, and is housed in an IP65 fire-retardant case with tamper protection and an external 5 dBi fibre-glass antenna."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Wi-SUN FAN 1.0",
+   "d": "Secured interconnection of Wi-SUN field devices with WAN networks."
+  },
+  {
+   "t": "Self-forming, self-healing",
+   "d": "RF self-healing and self-forming network support."
+  },
+  {
+   "t": "Flexible WAN",
+   "d": "Cellular, Ethernet and RS485 interfaces."
+  },
+  {
+   "t": "Resilient",
+   "d": "4 hours of battery backup after power failure and tamper protection."
+  },
+  {
+   "t": "Deployment options",
+   "d": "Wall mount and pole mount."
+  }
+ ],
+ "showcase": null,
+ "specs": [
+  {
+   "group": "Processor Specification",
+   "rows": [
+    [
+     "Processor",
+     "A5D2X @ 500 MHz Cortex-A5"
+    ],
+    [
+     "Storage",
+     "64 MB internal RAM, 32 MB internal flash, up to 32 GB microSD card"
+    ]
+   ]
+  },
+  {
+   "group": "Communication Interface",
+   "rows": [
+    [
+     "Serial",
+     "1 × RS485"
+    ],
+    [
+     "Ethernet",
+     "1 × IEEE 802.3 10/100M/1Gbps (key-features list: up to 100 Mbps)"
+    ],
+    [
+     "Cellular",
+     "FDD-LTE: B1/B2/B3/B4/B5/B7/B8/B12/B13/B18/B19/B20/B25/B26/B28/B66 · LTE-TDD: B34/B38/B39/B40/B41 · GSM/GPRS/EDGE: 850/900/1800/1900 MHz"
+    ]
+   ]
+  },
+  {
+   "group": "RF",
+   "rows": [
+    [
+     "Operating Frequency",
+     "IN 865 – 867 MHz"
+    ],
+    [
+     "Conductive Power",
+     "20 dBm"
+    ],
+    [
+     "Receiver Sensitivity",
+     "−101 dBm @ 100 kbps, 2GFSK"
+    ],
+    [
+     "RF",
+     "IEEE 802.15.4 support; mesh topology support"
+    ],
+    [
+     "Capacity",
+     "Up to 250 nodes on a single network"
+    ]
+   ]
+  },
+  {
+   "group": "Software",
+   "rows": [
+    [
+     "Stack",
+     "Yocto Linux (sumo)"
+    ],
+    [
+     "Management",
+     "RF self-healing & self-forming network; secure firmware update; NTP"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical & Environmental",
+   "rows": [
+    [
+     "Power Supply",
+     "85 ~ 264 V AC"
+    ],
+    [
+     "Battery",
+     "4 h battery backup after power failure"
+    ],
+    [
+     "Operating Temperature",
+     "−10 °C to 60 °C"
+    ],
+    [
+     "Humidity",
+     "Relative humidity 15% to 93% non-condensing"
+    ],
+    [
+     "Safety",
+     "EMS protection, ESD (IEC 61000-4-2), EFT (IEC 61000-4-4), fire retardant, surge (IEC 61000-4-5), radiated emission (CISPR22), IP65, immunity to electromagnetic HF field (IEC 61000-4-3)"
+    ]
+   ]
+  },
+  {
+   "group": "Hardware",
+   "rows": [
+    [
+     "Anti-Tamper Feature",
+     "Yes"
+    ],
+    [
+     "LEDs",
+     "3 × status LEDs"
+    ],
+    [
+     "Dimensions",
+     "250 × 210 × 105 mm"
+    ],
+    [
+     "Antennas",
+     "1 × cellular, 1 × RF (fibre glass, 5 dBi gain)"
+    ],
+    [
+     "Mounting Style",
+     "Wall mount and pole mount"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NLG8520 brochure. The brochure lists Ethernet as 10/100/1000 Mbps in the table and “up to 100 Mbps” in the key features.",
+ "features": [
+  {
+   "icon": "wifi",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "Wi-SUN FAN 1.0",
+   "d": "Wi-SUN FAN 1.0 support for field-area networks."
+  },
+  {
+   "icon": "network",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "250 Nodes in One DCU",
+   "d": "Mesh networks of up to 250 nodes on a single network."
+  },
+  {
+   "icon": "cpu",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Open-Source Embedded Linux",
+   "d": "Yocto Linux (sumo) on a Cortex-A5."
+  },
+  {
+   "icon": "shield",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "IP65, Fire-Retardant Case",
+   "d": "Rated for outdoor installation."
+  },
+  {
+   "icon": "lock",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Tamper Protection",
+   "d": "Anti-tamper feature in the enclosure."
+  },
+  {
+   "icon": "range",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "Long Range",
+   "d": "External fibre-glass antenna with 5 dBi gain."
+  },
+  {
+   "icon": "battery",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "DCU Battery Backup",
+   "d": "4 hours of backup after power failure."
+  },
+  {
+   "icon": "plug",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Multiple WAN Interfaces",
+   "d": "Cellular, Ethernet and RS485."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "meter",
+   "t": "Smart Metering",
+   "d": "Wi-SUN data concentrator for metering networks."
+  },
+  {
+   "icon": "city",
+   "t": "Smart Cities",
+   "d": "Mesh networks for city infrastructure."
+  },
+  {
+   "icon": "factory",
+   "t": "Smart Factory",
+   "d": "Industrial mesh connectivity."
+  },
+  {
+   "icon": "server",
+   "t": "Data Centers / Server Rooms",
+   "d": "Wireless monitoring for server rooms."
+  }
+ ],
+ "part_rows": [
+  [
+   "NLG8520",
+   "Wi-SUN Gateway / DCU — IN 865–867 MHz, 4G LTE, Ethernet, RS485, IP65"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLG8520 Brochure",
+   "path": "./assets/docs/NLG8520_Wi-SUN_DCU_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  }
+ ],
+ "related": [
+  "nlg6770in",
+  "nln0721"
+ ],
+ "primary_doc": "./assets/docs/NLG8520_Wi-SUN_DCU_Brochure.pdf"
+}

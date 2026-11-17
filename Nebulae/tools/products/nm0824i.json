@@ -1,0 +1,355 @@
+{
+ "slug": "nm0824i",
+ "model": "NM0824-I",
+ "full": "Mini PCIe LoRa Concentrator Board NM0824-I",
+ "title_name": "Mini PCIe LoRa Concentrator",
+ "type_key": "concentrator",
+ "type_label": "Concentrator",
+ "proto_key": "lora",
+ "proto_crumb": "LoRa",
+ "proto_label": "LoRa / LoRaWAN",
+ "badge": "Mini PCIe Concentrator",
+ "category": "Mini PCIe LoRa Concentrator Card",
+ "tagline": "SX1302 based mini PCIe LoRa concentrator card — 2 × SX1250 + SX1261, 915 MHz, FCC ID 2A093-NM0824-I.",
+ "meta_desc": "Nebulae NM0824-I mini PCIe LoRa concentrator — SX1302 baseband, 2 x SX1250 + 1 x SX1261, 915 MHz, SPI and USB, -139 dBm sensitivity, +27 dBm output, 50.95 x 30 mm, FCC ID 2A093-NM0824-I.",
+ "desc": "NM0824-I is an SX1302 based, compact, low-power LoRa concentrator card in a mini PCIe 52-pin form factor, with 2 × SX1250 and 1 × SX1261 radios and an onboard I2C temperature sensor. Compared with the SX1301 LoRa chip, it offers higher sensitivity, lower power consumption and a lower operating temperature. It supports SPI and USB interfaces to the host.",
+ "cert_badges": [
+  "FCC ID 2A093-NM0824-I",
+  "SX1302",
+  "LoRaWAN"
+ ],
+ "gallery": [
+  {
+   "file": "nm0824i-card.jpg",
+   "alt": "NM0824-I mini PCIe LoRa concentrator card showing the FCC certified mark and U.FL connectors",
+   "label": "Card view"
+  },
+  {
+   "file": "nm0824i-annotated.jpg",
+   "alt": "NM0824-I card with SX1302, SX1250 radios, SX1261, STM32 MCU, temperature sensor and connectors labelled",
+   "label": "Labelled card"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Baseband",
+   "value": "SX1302 · 2 × SX1250 · 1 × SX1261"
+  },
+  {
+   "icon": "range",
+   "label": "Sensitivity",
+   "value": "−125 dBm @ SF7 · −139 dBm @ SF12 (125 kHz)"
+  },
+  {
+   "icon": "bolt",
+   "label": "Output Power",
+   "value": "Up to +27 dBm"
+  },
+  {
+   "icon": "grid",
+   "label": "Frequency Band",
+   "value": "915 MHz (902–928 MHz)"
+  },
+  {
+   "icon": "plug",
+   "label": "Interfaces",
+   "value": "SPI · USB · Mini PCIe 52-pin"
+  },
+  {
+   "icon": "ruler",
+   "label": "Size",
+   "value": "50.95 × 30.00 mm"
+  }
+ ],
+ "stats": [
+  {
+   "num": "15 km",
+   "label": "Range, line of sight"
+  },
+  {
+   "num": "−139 dBm",
+   "label": "Sensitivity @ SF12"
+  },
+  {
+   "num": "+27 dBm",
+   "label": "Maximum output power"
+  },
+  {
+   "num": "50.95 × 30 mm",
+   "label": "Card size"
+  }
+ ],
+ "overview": [
+  "NM0824-I is an SX1302 based, compact and low-power LoRa concentrator card with 2 × SX1250 and 1 × SX1261 radios and an onboard I2C based temperature sensor. Compared with the SX1301 LoRa chip, it offers higher sensitivity, less power consumption and a lower operating temperature.",
+  "It supports SPI based communication with the host, and an advanced fine time-stamp feature helps to identify the estimated geo-location. The card is designed for M2M and IoT applications and can be widely applied in LoRaWAN gateways, reducing technical difficulties and development time when building LoRa gateway devices.",
+  "In the mini PCIe 52-pin form factor, the card fits standard mini PCIe slots. A Cortex-M4 microcontroller provides the USB interface, and status LEDs and a U.FL antenna connector are provided on the card. Range is up to 15 km line of sight and several km in urban environments."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Mini PCIe form factor",
+   "d": "52-pin card at 50.95 × 30.00 mm for compact gateway designs."
+  },
+  {
+   "t": "SPI or USB host",
+   "d": "SPI interface plus a USB interface through the onboard MCU."
+  },
+  {
+   "t": "Listen-before-talk ready",
+   "d": "Includes an SX1261 receive front-end alongside two SX1250 radios."
+  },
+  {
+   "t": "FCC ID",
+   "d": "FCC ID 2A093-NM0824-I."
+  },
+  {
+   "t": "High sensitivity",
+   "d": "−139 dBm at SF12 with up to +27 dBm output."
+  }
+ ],
+ "showcase": {
+  "title": "Block Diagram, Pin-Out & Mechanical Drawing",
+  "intro": "Reference drawings taken from the NM0824-I documentation.",
+  "items": [
+   {
+    "file": "nm0824i-block-diagram.png",
+    "alt": "NM0824-I reference block diagram",
+    "cap": "Reference block diagram"
+   },
+   {
+    "file": "nm0824i-pinout.png",
+    "alt": "NM0824-I mini PCIe pin-out, top and bottom views",
+    "cap": "Mini PCIe pin-out (top and bottom view)"
+   },
+   {
+    "file": "nm0824i-dimensions.png",
+    "alt": "NM0824-I mechanical dimensions drawing, 50.9 mm by 29.85 mm",
+    "cap": "Mechanical dimensions"
+   }
+  ]
+ },
+ "specs": [
+  {
+   "group": "Radio",
+   "rows": [
+    [
+     "Baseband Processor",
+     "SX1302"
+    ],
+    [
+     "Radio Front-Ends",
+     "2 × SX1250 Tx/Rx, 1 × SX1261 Rx"
+    ],
+    [
+     "Frequency Band",
+     "915 MHz (902–928 MHz)"
+    ],
+    [
+     "Demodulators",
+     "High-speed 125/250/500 kHz LoRa; 1 (G)FSK"
+    ],
+    [
+     "Spreading Factors",
+     "Multi-SF (SF5, SF6, SF7 to SF12) 125 kHz LoRa reception"
+    ],
+    [
+     "Receiver Sensitivity",
+     "−125 dBm @ 125 kHz / SF7 · −139 dBm @ 125 kHz / SF12"
+    ],
+    [
+     "Output Power",
+     "Up to +27 dBm"
+    ],
+    [
+     "Range",
+     "Up to 15 km (Line of Sight); several km in urban environments"
+    ],
+    [
+     "Fine Time Stamp",
+     "Supported"
+    ],
+    [
+     "LoRaWAN Classes",
+     "Class A, B and C supported"
+    ]
+   ]
+  },
+  {
+   "group": "Interfaces & Connectors",
+   "rows": [
+    [
+     "Form Factor",
+     "Mini PCIe 52-pin card"
+    ],
+    [
+     "Host Interfaces",
+     "SPI, USB"
+    ],
+    [
+     "Microcontroller",
+     "ARM Cortex-M4"
+    ],
+    [
+     "Antenna Connector",
+     "U.FL"
+    ],
+    [
+     "Sensors",
+     "I2C on-board temperature sensor"
+    ],
+    [
+     "Indicators",
+     "Status LEDs"
+    ]
+   ]
+  },
+  {
+   "group": "Electrical & Environmental",
+   "rows": [
+    [
+     "Operating Voltage",
+     "+3.3 V and/or +5 V"
+    ],
+    [
+     "Current — Standby",
+     "7.5 mA"
+    ],
+    [
+     "Current — RX",
+     "40 mA"
+    ],
+    [
+     "Current — TX (maximum power level)",
+     "425 mA"
+    ],
+    [
+     "Operating Temperature",
+     "−40 °C to +85 °C"
+    ]
+   ]
+  },
+  {
+   "group": "Physical & Compliance",
+   "rows": [
+    [
+     "Size",
+     "50.95 × 30.00 mm"
+    ],
+    [
+     "FCC ID",
+     "2A093-NM0824-I"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NM0824-I brochure (br_pnm0824i_1.0); current figures are from the NM0824-I datasheet v1.0.",
+ "features": [
+  {
+   "icon": "chip",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "SX1302 Baseband",
+   "d": "Next-generation LoRa baseband with 2 × SX1250 and 1 × SX1261 radios."
+  },
+  {
+   "icon": "grid",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "Mini PCIe 52-Pin Card",
+   "d": "Standard mini PCIe form factor for compact gateways."
+  },
+  {
+   "icon": "plug",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "SPI and USB Interfaces",
+   "d": "SPI directly to the host, or USB through the onboard Cortex-M4 MCU."
+  },
+  {
+   "icon": "range",
+   "color": "#4f46e5",
+   "bg": "rgba(79,70,229,.1)",
+   "t": "Long Range",
+   "d": "Up to 15 km line of sight with up to +27 dBm output power."
+  },
+  {
+   "icon": "eye",
+   "color": "#ea580c",
+   "bg": "rgba(234,88,12,.1)",
+   "t": "Multi-SF Reception",
+   "d": "SF5, SF6 and SF7 to SF12 at 125 kHz, plus 250/500 kHz LoRa and (G)FSK demodulation."
+  },
+  {
+   "icon": "thermo",
+   "color": "#7c3aed",
+   "bg": "rgba(124,58,237,.1)",
+   "t": "Onboard Temperature Sensor",
+   "d": "I2C based temperature sensing on the card."
+  },
+  {
+   "icon": "shield",
+   "color": "#0d9488",
+   "bg": "rgba(13,148,136,.1)",
+   "t": "FCC ID 2A093-NM0824-I",
+   "d": "FCC certified card."
+  },
+  {
+   "icon": "bolt",
+   "color": "#dc2626",
+   "bg": "rgba(220,38,38,.1)",
+   "t": "Flexible Power",
+   "d": "Runs from +3.3 V and/or +5 V; −40 °C to +85 °C operation."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "meter",
+   "t": "Smart Metering",
+   "d": "LoRaWAN gateways for metering networks."
+  },
+  {
+   "icon": "building",
+   "t": "Home, Building & Industrial Automation",
+   "d": "Gateway front end for automation systems."
+  },
+  {
+   "icon": "eye",
+   "t": "Wireless Sensors",
+   "d": "Collect data from wireless sensor networks."
+  },
+  {
+   "icon": "chip",
+   "t": "M2M & IoT",
+   "d": "Gateway hardware for M2M and IoT."
+  },
+  {
+   "icon": "sprout",
+   "t": "Smart Agriculture",
+   "d": "Long-range coverage for agricultural sensing."
+  },
+  {
+   "icon": "truck",
+   "t": "Logistic Tracking",
+   "d": "Gateways for tracking applications."
+  }
+ ],
+ "part_rows": [
+  [
+   "NM0824-I",
+   "Mini PCIe LoRa Concentrator Board — SX1302, 915 MHz, SPI / USB, FCC ID 2A093-NM0824-I"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NM0824-I Brochure",
+   "path": "./assets/docs/NM0824-I_mPCIe_LoRa_Concentrator_Brochure.pdf",
+   "sub": "PDF · Product brochure"
+  }
+ ],
+ "related": [
+  "nm0821i",
+  "nln500a"
+ ],
+ "primary_doc": "./assets/docs/NM0824-I_mPCIe_LoRa_Concentrator_Brochure.pdf"
+}
