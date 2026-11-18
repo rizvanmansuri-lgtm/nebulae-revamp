@@ -150,7 +150,7 @@ img{max-width:100%;}
   color:#374151;background:#f5f7ff;border:1.5px solid #e5e7eb;
   cursor:pointer;transition:all .2s;text-decoration:none;}
 .pd-action-btn:hover{border-color:#4f46e5;color:#4f46e5;background:#f0f3ff;}
-
+.pd-action-btn {display: none;}
 /* ══ TABS ══ */
 .pd-tabs-section{background:#fff;border-top:2px solid #f0f0f8;margin-top:2rem;}
 .pd-tabs-bar{display:flex;border-bottom:2px solid #e5e7eb;overflow-x:auto;scrollbar-width:none;}
