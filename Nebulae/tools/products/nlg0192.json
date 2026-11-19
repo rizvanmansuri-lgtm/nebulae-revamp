@@ -1,0 +1,327 @@
+{
+ "slug": "nlg0192",
+ "model": "NLG0192",
+ "full": "RS485 Modbus to 4G IoT Gateway NLG0192",
+ "title_name": "RS485 Modbus to 4G IoT Gateway",
+ "type_key": "concentrator",
+ "type_label": "Concentrator",
+ "proto_key": "gsm",
+ "proto_crumb": "GSM / Cellular",
+ "proto_label": "4G LTE · RS485 Modbus",
+ "badge": "RS485 Modbus to LTE Gateway",
+ "category": "RS485 Modbus RTU to 4G LTE IoT Gateway",
+ "meta_desc": "NLG0192 RS485 Modbus to 4G IoT Gateway — LTE Cat 1, Modbus RTU master, configurable MQTT client, FOTA, DIN rail or wall mount, 5–12 V DC.",
+ "desc": "The NLG0192 is a compact, industrial-grade gateway that connects legacy RS485 Modbus RTU systems to modern cloud platforms over 4G LTE. It talks to multiple Modbus slave devices at once and lets you configure your own MQTT client.",
+ "cert_badges": [
+  "LTE Cat 1",
+  "Modbus RTU",
+  "MQTT"
+ ],
+ "tagline": "Compact RS485 Modbus RTU to 4G LTE gateway — multi-slave polling, configurable MQTT client and FOTA.",
+ "gallery": [
+  {
+   "file": "nlg0192-1.webp",
+   "alt": "NLG0192 RS485 Modbus to 4G IoT Gateway with antenna",
+   "label": "Gateway"
+  }
+ ],
+ "quick": [
+  {
+   "icon": "wifi",
+   "label": "Cellular",
+   "value": "LTE Cat 1 · 10 Mbps DL / 5 Mbps UL"
+  },
+  {
+   "icon": "network",
+   "label": "Serial",
+   "value": "RS485 Modbus RTU · 1200–115200 bps"
+  },
+  {
+   "icon": "server",
+   "label": "Cloud",
+   "value": "MQTT (AWS, Azure IoT, ThingsBoard, custom) · REST"
+  },
+  {
+   "icon": "plug",
+   "label": "Power",
+   "value": "5–12 V DC · < 2 W average"
+  },
+  {
+   "icon": "download",
+   "label": "Updates",
+   "value": "FOTA over 4G"
+  },
+  {
+   "icon": "box",
+   "label": "Mounting",
+   "value": "DIN rail / wall mount"
+  }
+ ],
+ "stats": [
+  {
+   "num": "LTE Cat 1",
+   "label": "10 Mbps DL / 5 Mbps UL"
+  },
+  {
+   "num": "1200–115200",
+   "label": "RS485 baud rate (bps)"
+  },
+  {
+   "num": "< 2 W",
+   "label": "Average power consumption"
+  },
+  {
+   "num": "−20 to +70 °C",
+   "label": "Operating temperature"
+  }
+ ],
+ "overview": [
+  "Nebulae introduces the NLG0192 RS485 Modbus Gateway — a compact, industrial-grade IoT device built to connect legacy Modbus systems to modern cloud platforms. Supporting RS485 Modbus RTU, it communicates with multiple Modbus slave devices at the same time.",
+  "It offers secure wireless connectivity, effortless FOTA upgrades and LTE performance, with remote device management, scalable integration and robust data handling for industrial automation, energy monitoring and smart infrastructure.",
+  "The gateway allows customers to configure their own MQTT client for flexible and secure cloud communication, and can be configured from a host, web page or serial interface."
+ ],
+ "overview_note": "",
+ "why": [
+  {
+   "t": "Bring legacy Modbus online",
+   "d": "Connect existing RS485 Modbus RTU devices to the cloud without replacing them."
+  },
+  {
+   "t": "Multiple slaves",
+   "d": "Simultaneous communication with multiple Modbus slave devices."
+  },
+  {
+   "t": "Your own MQTT client",
+   "d": "Configurable MQTT client for AWS, Azure IoT, ThingsBoard or custom brokers."
+  },
+  {
+   "t": "Remote management",
+   "d": "Remote device management and FOTA firmware upgrades over 4G."
+  },
+  {
+   "t": "Easy configuration",
+   "d": "Configure from a host, web page or serial interface."
+  }
+ ],
+ "specs": [
+  {
+   "group": "Connectivity",
+   "rows": [
+    [
+     "Cellular",
+     "LTE Cat 1 (10 Mbps DL / 5 Mbps UL). Bands: B1/B3/B5/B8/B34/B38/B39/B40/B41"
+    ],
+    [
+     "Serial Communication",
+     "RS485 (Modbus RTU supported), configurable baud rate 1200–115200 bps, 1 × terminal block"
+    ],
+    [
+     "Antenna Interfaces",
+     "LTE: external (U.FL) | internal (optional)"
+    ],
+    [
+     "SIM Card",
+     "Nano SIM (4FF)"
+    ]
+   ]
+  },
+  {
+   "group": "Protocols & Cloud",
+   "rows": [
+    [
+     "Protocols Supported",
+     "Modbus RTU (Master) | MQTT over 4G"
+    ],
+    [
+     "Cloud Support",
+     "MQTT (AWS, Azure IoT, ThingsBoard, custom brokers) | REST APIs"
+    ],
+    [
+     "Offline Data Storage",
+     "500 KB"
+    ]
+   ]
+  },
+  {
+   "group": "Interfaces & Indicators",
+   "rows": [
+    [
+     "I/O Interfaces",
+     "1 × RS485 (terminal block)"
+    ],
+    [
+     "LED Status",
+     "Network searching – solid on | Network registered – blink every 200 ms | SIM card not available – solid off"
+    ]
+   ]
+  },
+  {
+   "group": "Power & Environment",
+   "rows": [
+    [
+     "Operating Voltage",
+     "5 V – 12 V DC"
+    ],
+    [
+     "Power Consumption",
+     "< 2 W average"
+    ],
+    [
+     "Operating Temperature",
+     "−20 °C to +70 °C"
+    ],
+    [
+     "Humidity Range",
+     "10 % to 90 % RH (non-condensing)"
+    ]
+   ]
+  },
+  {
+   "group": "Physical Attributes",
+   "rows": [
+    [
+     "Enclosure",
+     "ABS plastic"
+    ],
+    [
+     "Dimensions",
+     "Approx. L 85 mm × W 60 mm × H 35 mm"
+    ],
+    [
+     "Mounting Options",
+     "DIN rail / wall mount"
+    ],
+    [
+     "Package Contents",
+     "1 × 4G gateway, 1 × 4G GSM antenna, 1 × power supply AC (100–240 V) to DC (12 V, 2 A), 1 × 2-pin mating screw connector for RS485, 2 × wall mount screws"
+    ]
+   ]
+  },
+  {
+   "group": "Security, Certification & Customization",
+   "rows": [
+    [
+     "Firmware Update",
+     "FOTA (firmware over-the-air) via 4G"
+    ],
+    [
+     "Security Features",
+     "TLS/SSL encryption | Secure boot"
+    ],
+    [
+     "Certifications",
+     "CE, RoHS (optional on request)"
+    ],
+    [
+     "Customization Options",
+     "Logo, UI, protocol extensions, cloud platform mapping"
+    ]
+   ]
+  }
+ ],
+ "spec_note": "Specification values as published in the NLG0192 product brochure (version 3.0).",
+ "features": [
+  {
+   "icon": "network",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "RS485 Modbus RTU master",
+   "d": "Polls multiple Modbus slave devices simultaneously."
+  },
+  {
+   "icon": "wifi",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "4G LTE Cat 1",
+   "d": "Reliable cellular backhaul with wide band support."
+  },
+  {
+   "icon": "server",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "Configurable MQTT client",
+   "d": "Works with AWS, Azure IoT, ThingsBoard and custom brokers."
+  },
+  {
+   "icon": "download",
+   "color": "#2563eb",
+   "bg": "rgba(37,99,235,.1)",
+   "t": "FOTA upgrades",
+   "d": "Update firmware over the air through 4G."
+  },
+  {
+   "icon": "lock",
+   "color": "#059669",
+   "bg": "rgba(16,185,129,.1)",
+   "t": "TLS/SSL & secure boot",
+   "d": "Encrypted communication and secure boot."
+  },
+  {
+   "icon": "box",
+   "color": "#d97706",
+   "bg": "rgba(251,191,36,.12)",
+   "t": "DIN rail / wall mount",
+   "d": "Compact 85 × 60 × 35 mm ABS enclosure."
+  }
+ ],
+ "apps": [
+  {
+   "icon": "meter",
+   "t": "Energy Meters",
+   "d": "Read Modbus energy meters and send data to the cloud."
+  },
+  {
+   "icon": "factory",
+   "t": "Industrial Automation",
+   "d": "Connect PLCs and field devices to cloud platforms."
+  },
+  {
+   "icon": "sun",
+   "t": "Solar Monitoring",
+   "d": "Monitor inverters and solar plant data remotely."
+  },
+  {
+   "icon": "thermo",
+   "t": "Temperature Alerts",
+   "d": "Remote temperature monitoring and alerting."
+  },
+  {
+   "icon": "bolt",
+   "t": "Generator Control",
+   "d": "Monitor and control generator sets."
+  },
+  {
+   "icon": "drop",
+   "t": "Water Level Control",
+   "d": "Remote water level monitoring."
+  },
+  {
+   "icon": "eye",
+   "t": "Windmill & SCADA",
+   "d": "Bring wind and SCADA data to the cloud."
+  },
+  {
+   "icon": "gauge",
+   "t": "Pump & Flow Control",
+   "d": "Monitor pumps and flow in real time."
+  }
+ ],
+ "part_rows": [
+  [
+   "NLG0192",
+   "RS485 Modbus to 4G IoT Gateway — LTE Cat 1, Modbus RTU master, MQTT"
+  ]
+ ],
+ "docs": [
+  {
+   "name": "NLG0192 Brochure & Datasheet v3.0",
+   "path": "./assets/docs/NLG0192_Brochure.pdf",
+   "sub": "PDF · Product brochure and datasheet"
+  }
+ ],
+ "related": [
+  "nlg8400"
+ ],
+ "primary_doc": "./assets/docs/NLG0192_Brochure.pdf",
+ "showcase": null
+}

@@ -101,3 +101,32 @@
     }
   });
 })();
+
+/* ── Share button (navigator.share) for solution / service / industry / case-study / blog / event detail pages ── */
+(function () {
+  function copyFallback(url, btn) {
+    function done() { var l = btn.querySelector('span'); if (!l) return; var t = l.textContent; l.textContent = 'Link copied'; setTimeout(function () { l.textContent = t; }, 1800); }
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(url).then(done, function () { window.prompt('Copy this link', url); }); }
+    else { window.prompt('Copy this link', url); }
+  }
+  window.nblShare = function (btn) {
+    var url = location.href.split('#')[0], title = document.title;
+    var d = document.querySelector('meta[name="description"]');
+    if (navigator.share) {
+      navigator.share({ title: title, text: d ? d.content : '', url: url }).catch(function (e) { if (e && e.name !== 'AbortError') copyFallback(url, btn); });
+    } else { copyFallback(url, btn); }
+  };
+  document.addEventListener('DOMContentLoaded', function () {
+    var p = location.pathname;
+    if (!/\/(solutions|services|industries)\/[^/]+\.html$|\/(blog-|event-|case-)[^/]*\.html$/.test(p)) return;
+    if (document.querySelector('[data-nbl-share]')) return;
+    var host = document.querySelector('.sl-jump-pills') || document.querySelector('.sl-hero__inner, .pg-hero .container');
+    if (!host) return;
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = (host.classList.contains('sl-jump-pills') ? 'sl-jump-pill ' : '') + 'nbl-share-btn';
+    b.setAttribute('data-nbl-share', ''); b.setAttribute('aria-label', 'Share this page');
+    b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg><span>Share</span>';
+    b.addEventListener('click', function () { window.nblShare(b); });
+    host.appendChild(b);
+  });
+})();

@@ -295,4 +295,13 @@ Merged the user's doc-products.html, doc-detail.html, doc-products.css, doc-prod
 - Product detail: no qty, no datasheet button, no cert badges, Share button uses navigator.share(). Listing: no specs. NLN500a=Module; NLN500b "<= 10 km".
 - Service pages: sv-tech-strip + cert timeline column removed.
 - Home hero: tools/apply_hero_logos.py (logo cards link to products.html?proto=..., stats single row, CSS appended to nebulae-page.css).
-- PENDING: RS485->LTE PDF page (menu link temporarily points to products listing).
+
+## Nov 19 batch 2
+- NEW product NLG0192 (RS485 Modbus to 4G gateway) from PDF: tools/products/nlg0192.json, image assets/images/products/nlg0192-1.webp (from PDF), PDF at assets/docs/NLG0192_Brochure.pdf. type_key=concentrator (listed under Concentrator filter). Menu "RS485 To LTE" -> products/nlg0192.html.
+- Home: industries section = all 13 (tools/apply_home_industries.py, copies icon+title+desc from industries.html), 6 per row, no Explore/View-all; hero tech cards = clickable icon cards (tools/apply_hero_logos.py then tools/apply_hero_icons.py; icons = Products-menu protocol icons).
+- Icons: tools/apply_industry_icons.py gives each industry one unique icon on industries.html; tools/apply_menu_icons.py aligns menu column icons with the same concepts elsewhere.
+- Menu: prod rail 185px; CLOSE_GRACE 180ms + longer easing (nebulae-nav.js/css). Blog card image is a link (build_blog.py).
+- Mobile CTA fix (nebulae-page.css end). Share button (navigator.share) on solutions/services/industries/blog/event/case pages: appended to nebulae-float.js (window.nblShare).
+- tools/apply_solution_hardware.py: "Nebulae Hardware for This Solution" photo strip on 5 solution pages (run after build_pages).
+- Laptop-scaling stylesheet assets/css/nebulae-scale.css (media 992-1500px wide AND <=820px tall). Linked on every page by apply_shared_assets.py (USE_SCALE_CSS). To drop: set False and remove the <link> lines.
+- Pipeline order: apply_menu_icons, apply_index_header, build_nms, build_pages, build_blog, apply_footer, build_case_studies, build_index_new, apply_hero_logos, apply_hero_icons, apply_home_industries, apply_solution_hardware, apply_shared_assets.

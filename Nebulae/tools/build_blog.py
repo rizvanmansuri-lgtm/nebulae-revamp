@@ -44,7 +44,7 @@ CAL = '<svg width="20" height="20" fill="none" stroke="currentColor" stroke-widt
 ARR = '<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>'
 def card(p, col='col-md-6 col-lg-4'):
     return f'''<div class="{col}"><div class="pg-card">
-<img src="{p["img"]}" alt="{esc(p["title"])}" class="pg-card__img" loading="lazy" width="840" height="320"/>
+<a href="{p["file"]}" class="pg-card__imglink" tabindex="-1" aria-hidden="true" style="display:block;"><img src="{p["img"]}" alt="{esc(p["title"])}" class="pg-card__img" loading="lazy" width="840" height="320"/></a>
 <div class="pg-card__body">{tag(p)}
 <h3 class="pg-card__title"><a href="{p["file"]}" style="color:inherit;text-decoration:none;">{esc(p["title"])}</a></h3>
 <p class="pg-card__desc">{esc(p["desc"])}</p>

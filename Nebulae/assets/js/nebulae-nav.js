@@ -141,7 +141,7 @@
        before the menu closes. 180ms feels natural — not snappy,
        not laggy. Matches the CSS close transition (0.18s).
     ────────────────────────────────────────────────────────────── */
-    var CLOSE_GRACE = 0;
+    var CLOSE_GRACE = 180;
 
     /* Helper: is point (x,y) inside an element's bounding box? */
     function inRect(el, x, y) {

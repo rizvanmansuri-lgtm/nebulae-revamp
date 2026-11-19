@@ -4,6 +4,7 @@ and trims the Google-Fonts link to Poppins only. Run after any builder:  python3
 import os, re, glob
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..')) + os.sep
 n = 0
+USE_SCALE_CSS = True   # laptop-scaling stylesheet (150% display scaling); set False and delete the <link> lines to drop it
 _tf = ROOT + 'tools/theme.txt'
 EXTERNAL = [('/* ── Hero ── */\n.pg-hero', 'pg-pages.css'), ('/* sub-page extras */', 'sv-extra.css'), ('.sl-hero{padding:5rem 0 4rem}', 'sl-inline.css'), ('/* ── Shared page styles ── */\n    .lg-hero', 'lg-pages.css')]
 THEME = open(_tf).read().strip() if os.path.exists(_tf) else 'dark'
@@ -18,6 +19,8 @@ for f in sorted(glob.glob(ROOT + '*.html') + glob.glob(ROOT + '*/*.html')):
     s = re.sub(r'<h6( class="atl-footer__heading[^"]*"[^>]*)>(.*?)</h6>', r'<p\1>\2</p>', s, flags=re.S)
     if 'nebulae-fixes.css' not in s:
         s = s.replace('</head>', f'  <link rel="stylesheet" href="{base}assets/css/nebulae-fixes.css">\n</head>', 1)
+    if USE_SCALE_CSS and 'nebulae-scale.css' not in s:
+        s = s.replace('</head>', f'  <link rel="stylesheet" href="{base}assets/css/nebulae-scale.css" media="(min-width:992px) and (max-width:1500px) and (max-height:820px)">\n</head>', 1)
     if DRAWER in s: s = s.replace(DRAWER + '\n', '').replace(DRAWER, '')   # strip first; re-placed below BEFORE the scripts that wire it
     HAS_FORMS = re.search(r'<script[^>]*nebulae-forms\.js', s); HAS_FLOAT = re.search(r'<script[^>]*nebulae-float\.js', s)
     if not HAS_FORMS:

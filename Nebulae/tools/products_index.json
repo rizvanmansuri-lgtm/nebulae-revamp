@@ -60,6 +60,18 @@
   "tagline": "Battery-powered water-meter AMR for magnetic, inductive and RS485 meters — LoRaWAN / Sigfox, 5+ year battery."
  },
  {
+  "slug": "nlg0192",
+  "file": "products/nlg0192.html",
+  "model": "NLG0192",
+  "name": "RS485 Modbus to 4G IoT Gateway NLG0192",
+  "type_key": "concentrator",
+  "type_label": "Concentrator",
+  "proto_key": "gsm",
+  "proto_label": "4G LTE · RS485 Modbus",
+  "image": "assets/images/products/nlg0192-1.webp",
+  "tagline": "Compact RS485 Modbus RTU to 4G LTE gateway — multi-slave polling, configurable MQTT client and FOTA."
+ },
+ {
   "slug": "nlg6770in",
   "file": "products/nlg6770in.html",
   "model": "NLG6770-IN",

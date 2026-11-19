@@ -720,3 +720,20 @@ a.nbl-mini-card:hover{transform:translateY(-2px)}
 .nbl-mini-card__logo{height:60px;padding:.15rem .4rem}
 .nbl-mini-card__logo img{height:100%;width:100%;transform:scale(1.35)}
 .nbl-mini-card__logo{overflow:hidden}
+
+/* Home industries: 6 per row, compact cards */
+.nbl-ind-grid .nbl-ind-card{padding:1.25rem 1rem;gap:.45rem}
+.nbl-ind-grid .nbl-ind-card__title{font-size:.9rem;line-height:1.3}
+.nbl-ind-grid .nbl-ind-card__desc{font-size:.74rem;line-height:1.5}
+
+/* Mobile CTA fit ("Ready to Build Your IoT Solution?") */
+.nbl-cta-btn-primary,.nbl-cta-btn-outline,.nbl-cta-subscribe-pill{box-sizing:border-box;max-width:100%}
+@media(max-width:767.98px){
+  .nbl-cta-wrap{padding:2.5rem 1.25rem}
+  .nbl-cta-btns{align-items:stretch;width:100%}
+  .nbl-cta-btns>.nbl-cta-btn-primary{width:100%;justify-content:center}
+  .nbl-cta-subscribe-pill{display:flex;width:100%}
+  .nbl-cta-subscribe-pill input{flex:1 1 auto;min-width:0;width:auto}
+  .nbl-cta-subscribe-pill button{flex:0 0 auto;padding:0 1.1rem;width:auto !important}
+  .nbl-cta-contact-strip{gap:1rem;flex-direction:column}
+}

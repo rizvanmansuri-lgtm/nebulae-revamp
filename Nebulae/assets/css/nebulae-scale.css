@@ -1,0 +1,45 @@
+/* ═══════════════════════════════════════════════════════════════════
+   nebulae-scale.css — OPTIONAL compact layout for laptops running at 125–150% display scaling
+   (a 1920×1080 screen at 150% gives a ~1280×640 CSS-pixel viewport).
+   Only applies when the viewport is 992–1500px wide AND at most 820px tall; desktops and phones are untouched.
+   To remove: delete the <link ... nebulae-scale.css> line (tools/apply_shared_assets.py adds it; set USE_SCALE_CSS=False there to stop re-adding).
+   ═══════════════════════════════════════════════════════════════════ */
+@media (min-width:992px) and (max-width:1500px) and (max-height:820px){
+  html{scroll-padding-top:90px}
+  .container{max-width:1140px}
+
+  /* header + menus: fit inside the short viewport */
+  .atl-topbar{font-size:.78rem}
+  .atl-mega__panel{max-height:calc(100vh - 120px);overflow-y:auto;overscroll-behavior:contain}
+  .atl-mega__col-title{font-size:.86rem}
+  .atl-mega__list a{padding:.28rem .5rem;font-size:.84rem}
+  .atl-prod-rail__item{padding:.5rem 1rem}
+  .atl-prod-card{padding:.55rem .7rem}
+
+  /* home hero: fit headline + buttons + stats on one screen */
+  .nbl-hero{min-height:auto;padding:2.25rem 0 2rem}
+  .nbl-hero__title{font-size:clamp(2.1rem,3.9vw,3rem);margin-bottom:.9rem}
+  .nbl-hero__desc{font-size:.95rem;line-height:1.6;margin-bottom:1.25rem;max-width:480px}
+  .nbl-hero__stats{margin-top:1.5rem}
+  .nbl-hero__visual{margin-top:0}
+  .nbl-hero__tech-card{padding:1.25rem}
+  .nbl-mini-card{padding:.7rem}
+  .nbl-mini-card__icon{width:32px;height:32px}
+
+  /* sub-page heroes */
+  .pg-hero{padding:3.25rem 0 2.75rem}
+  .pg-hero__title{font-size:clamp(2rem,3.8vw,2.8rem)}
+  .sl-hero{padding:3.25rem 0 2.75rem}
+  .sl-hero__title{font-size:clamp(1.9rem,3.6vw,2.7rem)}
+
+  /* section rhythm */
+  .nbl-tech-section,.nbl-products-section,.nbl-updates-section,.nbl-why-section,.nbl-cta-section,.nbl-compare-section,
+  .nbl-usecase-section,.nbl-industries-section,.nbl-testi-section,.nbl-cases-section,.nbl-certs-section,.nbl-map-section,
+  .nbl-press-section,.nbl-exp-section{padding-top:3.5rem;padding-bottom:3.5rem}
+  .nbl-section-title{font-size:clamp(1.5rem,2.8vw,2.1rem)}
+  .pg-section,.sl-section{padding-top:3.25rem;padding-bottom:3.25rem}
+
+  /* product pages / listing */
+  .pd-info__title{font-size:clamp(1.6rem,2.6vw,2.2rem)}
+  .pd-gallery__main{max-height:56vh}
+}
