@@ -57,28 +57,12 @@
     if (ev.key === 'Escape' && lightbox && lightbox.classList.contains('open')) closeLightbox();
   });
 
-  /* ---------- Quantity stepper ---------- */
-  var qty = $('#pdQty');
-  $$('[data-pd-qty]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      if (!qty) return;
-      var step = parseInt(btn.getAttribute('data-pd-qty'), 10) || 0;
-      var cur = parseInt(qty.value, 10) || 1;
-      qty.value = Math.max(1, cur + step);
-    });
-  });
-  if (qty) qty.addEventListener('change', function () {
-    var v = parseInt(qty.value, 10);
-    qty.value = isNaN(v) || v < 1 ? 1 : v;
-  });
-
   /* ---------- Request quote -> contact page with product prefilled ---------- */
   var nameEl = $('.pd-info__name');
   $$('[data-pd-quote]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var name = nameEl ? nameEl.textContent.trim() : 'product';
-      var q = qty ? (parseInt(qty.value, 10) || 1) : 1;
-      window.location.href = (document.body.getAttribute('data-pd-base') || './') + 'contact.html?product=' + encodeURIComponent(name) + '&qty=' + encodeURIComponent(q);
+      window.location.href = (document.body.getAttribute('data-pd-base') || './') + 'contact.html?product=' + encodeURIComponent(name);
     });
   });
 
@@ -103,7 +87,15 @@
   }
   if (copyBtn) copyBtn.addEventListener('click', function () {
     var url = window.location.href.split('#')[0];
-    if (navigator.clipboard && navigator.clipboard.writeText) {
+    var title = (nameEl ? nameEl.textContent.trim() + ' | ' : '') + 'Nebulae';
+    /* Web Share API where available (phones, some desktop browsers); otherwise copy the link */
+    if (navigator.share) {
+      navigator.share({ title: title, url: url }).catch(function (err) {
+        if (err && err.name === 'AbortError') return;          /* user closed the share sheet */
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(flashCopied, function () { fallbackCopy(url); });
+        else fallbackCopy(url);
+      });
+    } else if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(url).then(flashCopied, function () { fallbackCopy(url); });
     } else { fallbackCopy(url); }
   });

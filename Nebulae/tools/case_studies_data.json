@@ -1,0 +1,82 @@
+[
+ {
+  "slug": "esp32-wireless-temperature-probe",
+  "title": "ESP32 based wireless temperature probe for Industrial use case",
+  "tag": "Industrial IoT",
+  "image": "assets/images/case-studies/esp32-wireless-temperature-probe.webp",
+  "pdf": "assets/docs/case-studies/esp32-wireless-temperature-probe.pdf",
+  "original_pdf": "ESP32 based wireless temperature probe for Industrial use case .pdf"
+ },
+ {
+  "slug": "automated-waste-collection-system",
+  "title": "Scalable and automated waste collection system",
+  "tag": "Smart City",
+  "image": "assets/images/case-studies/automated-waste-collection-system.webp",
+  "pdf": "assets/docs/case-studies/automated-waste-collection-system.pdf",
+  "original_pdf": "Waste Management.pdf"
+ },
+ {
+  "slug": "esp32-advanced-data-acquisition-system",
+  "title": "ESP32 based advanced data acquisition system",
+  "tag": "Industrial IoT",
+  "image": "assets/images/case-studies/esp32-advanced-data-acquisition-system.webp",
+  "pdf": "assets/docs/case-studies/esp32-advanced-data-acquisition-system.pdf",
+  "original_pdf": "ESP32 based advanced data acquisition system.pdf"
+ },
+ {
+  "slug": "railways-data-acquisition-remote-monitoring",
+  "title": "Data acquisition and remote monitoring for Railways",
+  "tag": "Railways",
+  "image": "assets/images/case-studies/railways-data-acquisition-remote-monitoring.webp",
+  "pdf": "assets/docs/case-studies/railways-data-acquisition-remote-monitoring.pdf",
+  "original_pdf": "Data acquisition and remote monitoring for Railways.pdf"
+ },
+ {
+  "slug": "esp32-remote-power-status-controller",
+  "title": "ESP32 based controller for remote reading of power status",
+  "tag": "Energy",
+  "image": "assets/images/case-studies/esp32-remote-power-status-controller.webp",
+  "pdf": "assets/docs/case-studies/esp32-remote-power-status-controller.pdf",
+  "original_pdf": "_ESP32 based controller for remote reading of power status.pdf"
+ },
+ {
+  "slug": "indigenous-industrial-gateway",
+  "title": "Indigenous industrial Gateway to enhance performance",
+  "tag": "Gateways",
+  "image": "assets/images/case-studies/indigenous-industrial-gateway.webp",
+  "pdf": "assets/docs/case-studies/indigenous-industrial-gateway.pdf",
+  "original_pdf": "Ciaz Tech.pdf"
+ },
+ {
+  "slug": "wireless-smart-targeting-system",
+  "title": "App controlled wireless smart targeting system",
+  "tag": "Smart Devices",
+  "image": "assets/images/case-studies/wireless-smart-targeting-system.webp",
+  "pdf": "assets/docs/case-studies/wireless-smart-targeting-system.pdf",
+  "original_pdf": "IoTargeting.pdf"
+ },
+ {
+  "slug": "smart-street-light-control",
+  "title": "Lighting control and monitoring of smart street light",
+  "tag": "Smart City",
+  "image": "assets/images/case-studies/smart-street-light-control.webp",
+  "pdf": "assets/docs/case-studies/smart-street-light-control.pdf",
+  "original_pdf": "Lighting Control.pdf"
+ },
+ {
+  "slug": "data-communication-and-networking",
+  "title": "Data Communication & Networking",
+  "tag": "Networking",
+  "image": "assets/images/case-studies/data-communication-and-networking.webp",
+  "pdf": "assets/docs/case-studies/data-communication-and-networking.pdf",
+  "original_pdf": "Data Communication and Networking.pdf"
+ },
+ {
+  "slug": "gaming-arcade-application",
+  "title": "A robust application for Gamings and Arcade industry",
+  "tag": "Gaming & Arcade",
+  "image": "assets/images/case-studies/gaming-arcade-application.webp",
+  "pdf": "assets/docs/case-studies/gaming-arcade-application.pdf",
+  "original_pdf": "Kwikpay.pdf"
+ }
+]

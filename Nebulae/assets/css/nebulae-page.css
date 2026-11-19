@@ -705,3 +705,18 @@ img:not([loading=lazy]){opacity:1;}
   .nbl-exp-row:has(.nbl-exp-card:hover) .nbl-exp-card:hover .nbl-exp-img img{opacity:1!important;transform:scale(1)!important;}
   .nbl-exp-card:not(.nbl-exp-active) .nbl-exp-img img{opacity:0!important;transform:scale(1.06)!important;}
 }
+
+/* Home hero: logo cards + single-row stats */
+a.nbl-mini-card{text-decoration:none;cursor:pointer}
+a.nbl-mini-card:hover{transform:translateY(-2px)}
+.nbl-mini-card__logo{display:flex;align-items:center;justify-content:center;height:44px;background:#fff;border-radius:8px;padding:.35rem .6rem;margin-bottom:.35rem}
+.nbl-mini-card__logo img{max-height:100%;max-width:100%;width:auto;height:auto;object-fit:contain}
+.nbl-hero__stats{flex-wrap:nowrap;gap:1.5rem;justify-content:space-between}
+.nbl-hero__stat-item{min-width:0}
+.nbl-hero__stats .nbl-hero__stat-num{font-size:clamp(1.25rem,2.2vw,2.1rem);white-space:nowrap}
+.nbl-hero__stats .nbl-hero__stat-label{font-size:.7rem;white-space:nowrap}
+@media(max-width:991.98px){.nbl-hero__stats{gap:.75rem;justify-content:space-between}}
+@media(max-width:575.98px){.nbl-hero__stats{gap:.5rem}.nbl-hero__stats .nbl-hero__stat-num{font-size:1.1rem}.nbl-hero__stats .nbl-hero__stat-label{font-size:.58rem;letter-spacing:.02em}}
+.nbl-mini-card__logo{height:60px;padding:.15rem .4rem}
+.nbl-mini-card__logo img{height:100%;width:100%;transform:scale(1.35)}
+.nbl-mini-card__logo{overflow:hidden}

@@ -197,7 +197,6 @@ def build(p, ALL):
           <div class="pd-info__eyebrow"><span class="pd-info__proto">{e(p["proto_label"])}</span><span class="pd-info__type">{e(p["type_label"])}</span></div>
           <h1 class="pd-info__name">{e(M)}</h1>
           <div class="pd-info__full">{e(p["full"])}</div>
-          <div class="pd-info__meta"><div class="pd-info__certbadges">{badges}</div></div>
           <p class="pd-info__desc">{e(p["desc"])}</p>
           <div class="pd-quick-specs">{qs}</div>
           <div class="pd-cta-box">
@@ -205,23 +204,14 @@ def build(p, ALL):
               <div class="pd-cta-box__avail"><span class="pd-avail-dot"></span>Samples &amp; volume orders — contact sales</div>
               <div class="pd-cta-box__lead"><strong>Enquiries</strong>sales@nebulae.io</div>
             </div>
-            <div class="pd-qty-row">
-              <span class="pd-qty-label">Quantity:</span>
-              <div class="pd-qty-ctrl">
-                <button type="button" class="pd-qty-btn" data-pd-qty="-1" aria-label="Decrease quantity">−</button>
-                <input id="pdQty" class="pd-qty-input" type="number" value="1" min="1" inputmode="numeric" aria-label="Quantity">
-                <button type="button" class="pd-qty-btn" data-pd-qty="1" aria-label="Increase quantity">+</button>
-              </div>
-            </div>
             <div class="pd-cta-btns">
               <button type="button" class="pd-cta-btn pd-cta-btn--primary" data-pd-quote>{svg("send",16)} Request Quote</button>
               <a href="../contact.html?product={e(M)}&amp;type=sample" class="pd-cta-btn pd-cta-btn--outline">{svg("phone",16)} Request Sample</a>
             </div>
           </div>
           <div class="pd-action-row">
-            {act_dl}
             <a href="mailto:sales@nebulae.io?subject=Enquiry%20-%20{e(M)}" class="pd-action-btn">{svg("mail",14)} Email Sales</a>
-            <button type="button" class="pd-action-btn" data-pd-copy>{svg("link",14)} <span>Copy Link</span></button>
+            <button type="button" class="pd-action-btn" data-pd-copy>{svg("link",14)} <span>Share</span></button>
           </div>
         </div>
       </div>
@@ -432,7 +422,7 @@ def build_listing(ALL):
           <h3 class="pl-card__name"><a href="{href}">{e(p["model"])}</a></h3>
           <div class="pl-card__sub">{e(p["full"])}</div>
           <p class="pl-card__desc">{e(p.get("tagline") or p["desc"])}</p>
-          <ul class="pl-card__specs">{specs}</ul>
+          
           <a class="pl-card__cta" href="{href}" aria-label="View details of {e(p["model"], quote=True)}">View details {arrow}</a>
         </div>
       </article>''')

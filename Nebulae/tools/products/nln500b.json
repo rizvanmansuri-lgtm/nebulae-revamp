@@ -64,7 +64,7 @@
  ],
  "stats": [
   {
-   "num": "> 10 km",
+   "num": "≤ 10 km",
    "label": "RF range, line of sight"
   },
   {
@@ -147,7 +147,7 @@
     ],
     [
      "RF Range (Line of Sight)",
-     "More than 10 km"
+     "Up to 10 km"
     ],
     [
      "RF Data Rate",
@@ -253,7 +253,7 @@
    "color": "#d97706",
    "bg": "rgba(251,191,36,.12)",
    "t": "Long Range, High Sensitivity",
-   "d": "−136 dBm sensitivity (DR0 / SF12) and more than 10 km line-of-sight range."
+   "d": "−136 dBm sensitivity (DR0 / SF12) and up to 10 km line-of-sight range."
   },
   {
    "icon": "bolt",

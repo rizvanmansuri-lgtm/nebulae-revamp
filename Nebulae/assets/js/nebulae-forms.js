@@ -20,7 +20,8 @@
     TEMPLATES: {                                // EmailJS → Email Templates. Leave '' to reuse the "contact" template.
       contact:    'template_tdcdtb8',           // full contact form
       quote:      '',                           // floating quick-quote + Sample/EVK request
-      newsletter: ''                            // newsletter sign-ups
+      newsletter: '',                           // newsletter sign-ups
+      autoreply:  ''                            // customer confirmation e-mail (To = {{from_email}}). Paste the template ID to enable; '' = off
     },
     TO_EMAIL: 'sales@nebulae.io',               // sent as {{to_email}} (use it in the template's "To" field if you like)
     COOLDOWN_SEC: 20,                           // minimum seconds between two sends of the same form by the same email (anti-spam)
@@ -79,7 +80,7 @@
       form_type: p.form_type || kind, subject: p.subject || p.form_type || kind,
       from_name: p.from_name || '', from_email: p.from_email || '', reply_to: p.from_email || '',
       phone: p.phone || '', company: p.company || '', quantity: p.quantity || '', protocols: p.protocols || '',
-      product: p.product || '', message: p.message || '',
+      product: p.product || '', timeline: p.timeline || '', solution: p.solution || '', details: p.details || '', message: p.message || '',
       page_url: location.href, page_title: document.title, submitted_at: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }) + ' IST',
       to_email: CONFIG.TO_EMAIL
     };
@@ -92,6 +93,11 @@
       clearTimeout(timer);
       if (!r.ok) return r.text().then(function (t) { throw new Error('emailjs ' + r.status + ' ' + t); });
       lsSet(ck, String(Date.now()));
+      /* customer confirmation (best effort: never blocks or fails the main send) */
+      if ((kind === 'contact' || kind === 'quote') && CONFIG.TEMPLATES.autoreply && EMAIL_RE.test(params.from_email)) {
+        fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ service_id: CONFIG.SERVICE_ID, template_id: CONFIG.TEMPLATES.autoreply, user_id: CONFIG.PUBLIC_KEY, template_params: params }) }).catch(function () {});
+      }
     }, function (e) { clearTimeout(timer); throw new Error(e && e.name === 'AbortError' ? 'timeout' : (e && e.message) || 'network'); });
   }
 
@@ -108,13 +114,15 @@
       var q = new URLSearchParams(location.search), prod = q.get('product'), qty = parseInt(q.get('qty'), 10), type = q.get('type');
       var msg = $('ctMessage'), sub = $('ctSubject'), qsel = $('ctQty');
       if (prod && msg && !msg.value) {
-        msg.value = (type === 'sample' ? 'I would like to request a sample / evaluation unit of ' : 'I would like a quote for ') + prod + (qty > 0 ? ' — quantity: ' + qty : '') + '.\n\nProject details: ';
+        msg.value = (type === 'sample' || q.get('inquiry') === 'sample' ? 'I would like to request a sample / evaluation unit of ' : 'I would like a quote for ') + prod + (qty > 0 ? ' — quantity: ' + qty : '') + '.\n\nProject details: ';
         msg.dispatchEvent(new Event('input'));
       }
       if (type === 'sample') { window.__ctInq = window.__ctInq || 'sample'; }
       if (prod) window.__ctTopic = window.__ctTopic || prod;
       if (q.get('inquiry')) window.__ctInq = q.get('inquiry');
       if (q.get('topic')) window.__ctTopic = q.get('topic');
+      if (prod && $('ctProduct')) $('ctProduct').value = prod.slice(0, 80);
+      if ($('ctSampleQty') && qty > 0) $('ctSampleQty').value = String(Math.min(qty, 5));
       if (qsel && qty > 0) { var idx = qty <= 10 ? 1 : qty <= 100 ? 2 : qty <= 1000 ? 3 : qty <= 10000 ? 4 : 5; if (qsel.options[idx]) qsel.selectedIndex = idx; }
     } catch (e) {}
 
@@ -126,26 +134,36 @@
       { key: 'custom', subject: 'Custom IoT Product Development' }, { key: 'meeting', subject: 'Meeting Request' },
       { key: 'support', subject: 'Technical Support' }, { key: 'partner', subject: 'Partnership / Reseller Program' }
     ];
+    /* subject-specific detail fields (#ctDetails): which groups show for which subject */
+    var KEYS = [['Product Inquiry','quote'],['Product Sample','sample'],['Solution','solution'],['Custom','custom'],['Meeting','meeting'],['Technical','support'],['Partnership','partner']];
+    var curKey = 'other';   /* set by the active "I'm interested in" button */
+    function syncDetails() {
+      var box = $('ctDetails'); if (!box) return;
+      var key = curKey, any = false;
+      [].forEach.call(box.querySelectorAll('[data-show]'), function (el) {
+        var on = el.getAttribute('data-show').split(' ').indexOf(key) > -1; el.hidden = !on; if (on) any = true;
+      });
+      [].forEach.call(box.querySelectorAll('[data-req]'), function (el) { el.hidden = el.getAttribute('data-req') !== key; });
+      box.hidden = !any;
+    }
     var autoSubject = false, topic = (window.__ctTopic || '').slice(0, 80);
     /* subject follows the inquiry type (+ the product / solution / event name when we arrive from one) */
     var setSubject = function (text) {
       var sub = $('ctSubject'); if (!sub) return;
-      var opt = [].filter.call(sub.options, function (o) { return o.text === text; })[0];
-      var prev = sub.querySelector('option[data-auto]'); if (prev && prev !== opt) prev.parentNode.removeChild(prev);
-      if (!opt) { opt = document.createElement('option'); opt.textContent = text; opt.setAttribute('data-auto', '1'); sub.appendChild(opt); }
-      sub.value = opt.value || opt.text; autoSubject = true; setErr('ctSubject', '');
+      sub.value = text; autoSubject = true; setErr('ctSubject', '');
     };
     if (inqBtns.length) {
       var row = inqBtns[0].parentNode; row.setAttribute('role', 'radiogroup'); row.setAttribute('aria-label', 'I am interested in');
-      var pick = function (i, focus) {
+      var pick = function (i, focus, clicked) {
         inqBtns.forEach(function (b, k) { var on = k === i; b.classList.toggle('active', on); b.setAttribute('aria-checked', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; });
-        var sub = $('ctSubject'), item = INQ[i];
-        if (sub && item && (!sub.value || autoSubject) && (i > 0 || topic)) setSubject(item.subject + (topic ? ' — ' + topic : ''));
+        var sub = $('ctSubject'), item = INQ[i]; curKey = item ? item.key : 'other';
+        if (sub && item && (!sub.value || autoSubject)) setSubject(item.subject + (topic ? ' — ' + topic : ''));
+        syncDetails();
         if (focus) inqBtns[i].focus();
       };
       inqBtns.forEach(function (b, i) {
         b.setAttribute('role', 'radio');
-        b.addEventListener('click', function () { pick(i); });
+        b.addEventListener('click', function () { pick(i, false, true); });
         b.addEventListener('keydown', function (e) {
           var k = e.key, n = inqBtns.length;
           if (k === 'ArrowRight' || k === 'ArrowDown') { e.preventDefault(); pick((i + 1) % n, true); }
@@ -156,8 +174,9 @@
       var want = INQ.map(function (x) { return x.key; }).indexOf(String(window.__ctInq || '').toLowerCase());
       if (!topic || want < 0) { if (want < 0 && topic) want = 0; }
       pick(want >= 0 ? want : (cur < 0 ? 0 : cur));
-      var subSel = $('ctSubject'); if (subSel) subSel.addEventListener('change', function () { autoSubject = false; });
+      var subSel = $('ctSubject'); if (subSel) subSel.addEventListener('input', function () { autoSubject = false; });
     }
+    syncDetails();
     [].forEach.call(document.querySelectorAll('.ct-proto-chip'), function (c) {
       c.setAttribute('role', 'checkbox'); c.setAttribute('tabindex', '0'); c.setAttribute('aria-checked', c.classList.contains('selected') ? 'true' : 'false');
       function tog() { var on = c.classList.toggle('selected'); c.setAttribute('aria-checked', on ? 'true' : 'false'); }
@@ -182,20 +201,39 @@
       chk('ctEmail', !EMAIL_RE.test(val('ctEmail')), 'Please enter a valid email address');
       chk('ctPhone', digits.length < 8 || digits.length > 15, 'Please enter a valid phone number');
       chk('ctCompany', !val('ctCompany'), 'Please enter your company name');
-      chk('ctSubject', !val('ctSubject'), 'Please select a subject');
+      chk('ctSubject', !val('ctSubject'), 'Please enter a subject');
       chk('ctMessage', val('ctMessage').length < 20, 'Please describe your requirements (min 20 chars)');
+      var key = curKey;
+      chk('ctProduct', key === 'sample' && !val('ctProduct'), 'Please tell us which product you want a sample of');
+      chk('ctSampleQty', key === 'sample' && !val('ctSampleQty'), 'Please select a sample quantity');
+      chk('ctQty', key === 'quote' && !val('ctQty'), 'Please select an estimated quantity');
+      chk('ctSolution', key === 'solution' && !val('ctSolution'), 'Please select a solution');
+      chk('ctMeetDate', key === 'meeting' && !val('ctMeetDate'), 'Please choose a preferred date');
       var consent = $('ctConsent');
       if (consent && !consent.checked) { ok = false; alertEl.textContent = 'Please tick the consent box so we can contact you about your inquiry.'; alertEl.classList.add('show'); }
       if (!ok) { var first = form.querySelector('.has-error input,.has-error select,.has-error textarea'); if (first) first.focus(); return; }
       if (trapped(form)) { showSuccess(); return; }
 
+      function details(k, pr) {
+        var L = [];
+        function add(label, v) { if (v) L.push(label + ': ' + v); }
+        if (k === 'quote') { add('Product / Model', val('ctProduct')); add('Estimated quantity', val('ctQty')); add('Needed by', val('ctTimeline')); add('Protocols', pr); }
+        if (k === 'sample') { add('Product / Model', val('ctProduct')); add('Sample quantity', val('ctSampleQty')); add('Protocols', pr); }
+        if (k === 'solution') { add('Solution', val('ctSolution')); add('Project scale', val('ctScale')); add('Protocols', pr); }
+        if (k === 'custom') { add('Expected volume', val('ctVolume')); add('Needed by', val('ctTimeline')); add('Protocols', pr); }
+        if (k === 'meeting') { add('Preferred date', val('ctMeetDate')); add('Preferred time (IST)', val('ctMeetTime')); add('Meeting mode', val('ctMeetMode')); }
+        if (k === 'support') { add('Product / Model', val('ctProduct')); add('Issue type', val('ctIssue')); }
+        if (k === 'partner') { add('Partnership type', val('ctPartnerType')); add('Region', val('ctRegion')); }
+        return L.join('\n') || '(none)';
+      }
       var inq = document.querySelector('.ct-inq-btn.active'), inqType = inq ? inq.textContent.trim() : 'General';
       var protos = [].map.call(document.querySelectorAll('.ct-proto-chip.selected'), function (c) { return c.textContent.trim(); }).join(', ');
       btn.disabled = true; btn.textContent = 'Sending…';
       send('contact', {
         form_type: 'Contact form — ' + inqType, subject: val('ctSubject') + ' — ' + val('ctCompany'),
         from_name: val('ctName'), from_email: val('ctEmail'), phone: val('ctPhone'), company: val('ctCompany'),
-        quantity: val('ctQty'), protocols: protos, message: val('ctMessage')
+        product: val('ctProduct'), quantity: key === 'sample' ? val('ctSampleQty') : (key === 'custom' ? val('ctVolume') : val('ctQty')),
+        timeline: val('ctTimeline'), solution: val('ctSolution'), protocols: protos, details: details(key, protos), message: val('ctMessage')
       }).then(function () { showSuccess(inqType); }, function (e) {
         if (!e || e.message !== 'cooldown') console.error('[nebulae-forms]', e);
         alertEl.textContent = friendly(e); alertEl.classList.add('show');

@@ -30,6 +30,7 @@ def footer(p):
           <li><a href="{p}about.html">About Us</a></li>
           <li><a href="{p}news-events.html">News &amp; Events</a></li>
           <li><a href="{p}blog.html">Blogs</a></li>
+          <li><a href="{p}case-studies.html">Case Studies</a></li>
           <li><a href="{p}faq.html">FAQ</a></li>
           <li><a href="{p}contact.html">Contact Us</a></li>
         </ul>
