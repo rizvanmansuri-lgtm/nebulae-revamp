@@ -10,8 +10,6 @@ This folder was emptied to keep the zip small. Paste your PDFs here with EXACTLY
 | NLG6770-IN_Wi-SUN_DCU_Brochure.pdf | products/nlg6770in.html | yes |
 | NLG6X40G-IN_Brochure.pdf | products/nlg6x40g-in.html | yes |
 | NLG6X40H-IN_Brochure.pdf | products/nlg6x40h-in.html | yes |
-| NLG7644_Brochure.pdf | products/nlg7644.html | yes |
-| NLG7644_Datasheet_v2.0.pdf | products/nlg7644.html | yes |
 | NLG8140_Brochure.pdf | products/nlg8140.html | yes |
 | NLG8400_Brochure.pdf | products/nlg8400.html | yes |
 | NLG8520_Wi-SUN_DCU_Brochure.pdf | products/nlg8520.html | yes |

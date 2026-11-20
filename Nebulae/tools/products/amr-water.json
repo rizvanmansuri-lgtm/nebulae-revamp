@@ -20,19 +20,14 @@
  ],
  "gallery": [
   {
-   "file": "amr-water-device.jpg",
-   "alt": "Nebulae Water Meter AMR device in a grey enclosure with a sensor connector",
-   "label": "AMR device"
+   "file": "amr-water-1.webp",
+   "alt": "Nebulae Water Meter AMR on a water meter",
+   "label": "Water meter"
   },
   {
-   "file": "amr-water-meter.jpg",
-   "alt": "Water meter fitted with the AMR pulse sensor",
-   "label": "On a water meter"
-  },
-  {
-   "file": "amr-water-sensor.jpg",
-   "alt": "WAMR sensor used with the water meter AMR",
-   "label": "WAMR sensor"
+   "file": "amr-water-2.webp",
+   "alt": "Water meter with the register cover open",
+   "label": "Meter detail"
   }
  ],
  "quick": [

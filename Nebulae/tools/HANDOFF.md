@@ -305,3 +305,11 @@ Merged the user's doc-products.html, doc-detail.html, doc-products.css, doc-prod
 - tools/apply_solution_hardware.py: "Nebulae Hardware for This Solution" photo strip on 5 solution pages (run after build_pages).
 - Laptop-scaling stylesheet assets/css/nebulae-scale.css (media 992-1500px wide AND <=820px tall). Linked on every page by apply_shared_assets.py (USE_SCALE_CSS). To drop: set False and remove the <link> lines.
 - Pipeline order: apply_menu_icons, apply_index_header, build_nms, build_pages, build_blog, apply_footer, build_case_studies, build_index_new, apply_hero_logos, apply_hero_icons, apply_home_industries, apply_solution_hardware, apply_shared_assets.
+
+## Nov 20
+- solutions/energy-management.html from SunSights PDF via tools/build_energy_management.py (no logo/contact used; images em-*.webp from PDF). Listing card/pill + sitemap: tools/apply_solutions_listing_em.py. Menu items now link to it. Run build_energy_management.py before apply_footer.py.
+- pl-card__tags removed from listing (build_pages.py). NLN500b: badge "LoRaWAN Module", proto_label "LoRa" (Sigfox still mentioned in specs/overview text).
+- Share pill colour fix (nebulae-fixes.css).
+- NLG7644 removed (Nov 20): product json/html/images/docs deleted, removed from related lists, industries data/extra text (now point to NLG8600 / NLN500a), home announcement -> NLG0192. tools/build_solutions.py accepts ONLY_DIR=industries to rebuild just the industry pages.
+- amr-water new images: WAITING for the files "Water Meter.webp" and "Water Meter (1).webp" (only a screenshot was received).
+- amr-water gallery = amr-water-1/2.webp (team files Nov 20); old amr-water-*.jpg still on disk (used by solutions pages).

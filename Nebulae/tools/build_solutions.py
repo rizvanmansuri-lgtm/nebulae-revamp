@@ -290,6 +290,7 @@ def build(p):
     return h
 
 for p in PAGES:
+    if os.environ.get('ONLY_DIR') and p['dir'] != os.environ['ONLY_DIR']: continue
     out = ROOT + p['dir'] + '/' + p['slug'] + '.html'
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, 'w', encoding='utf-8').write(build(p))

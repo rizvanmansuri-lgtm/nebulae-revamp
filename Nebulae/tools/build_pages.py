@@ -418,7 +418,6 @@ def build_listing(ALL):
       <article class="pl-card" data-proto="{p["proto_key"]}" data-type="{p["type_key"]}" data-search="{e(search, quote=True)}">
         <a class="pl-card__media" href="{href}" tabindex="-1" aria-hidden="true"><img src="assets/images/products/{p["gallery"][0]["file"]}" alt="" loading="lazy" width="400" height="300"/></a>
         <div class="pl-card__body">
-          <div class="pl-card__tags"><span class="pl-tag">{e(p["proto_label"])}</span><span class="pl-tag pl-tag--type">{e(p["type_label"])}</span></div>
           <h3 class="pl-card__name"><a href="{href}">{e(p["model"])}</a></h3>
           <div class="pl-card__sub">{e(p["full"])}</div>
           <p class="pl-card__desc">{e(p.get("tagline") or p["desc"])}</p>

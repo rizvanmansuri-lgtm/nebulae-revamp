@@ -85,18 +85,18 @@ EXTRA['building-management-system'] = dict(
 
 # ═════════ 5. TELEMATICS & FLEET (real data) ═════════
 EXTRA['telematics-fleet'] = dict(
- ch=[('Vehicles move across areas without Wi-Fi', 'The NLG7644 and NLG8600 combine 4G LTE with GPS for mobile and remote installations.'),
+ ch=[('Vehicles move across areas without Wi-Fi', 'The NLG8600 combines 4G LTE with optional GPS for mobile and remote installations.'),
      ('Trailers and equipment have no power', 'Low-power LoRaWAN nodes, 434 MHz modules and LoRa point-to-point links keep battery tags running for long periods.'),
      ('Yards and depots need local coverage', 'A LoRaWAN gateway collects tag and sensor data across the site and passes it on over 4G.'),
      ('OEMs need their own branded tracker', 'The i.MX6ULL system on module and modules like the NLN500b are building blocks for your own device and software.')],
- uc=[('Vehicle tracking', 'Position and vehicle status', 'NLG7644 (4G + GPS) or NLG8600 RTU', 'Live location and status in your fleet platform.'),
+ uc=[('Vehicle tracking', 'Position and vehicle status', 'NLG8600 RTU (4G, optional GPS)', 'Live location and status in your fleet platform.'),
      ('Trailer and equipment tags', 'Presence and location in a yard', 'LoRaWAN nodes (NLN500a / NLN500b) or OTAG-433 to a yard gateway', 'Know which asset is where, without driver check-ins.'),
      ('Depot coverage', 'Tag and sensor readings across a depot', 'LoRaWAN gateway with 4G backhaul', 'One network for the whole site.'),
      ('Onboard equipment data', 'Data from onboard instruments', 'RS232 / RS485 on the RTU', 'Vehicle and equipment data beside GPS.'),
      ('OEM tracker design', 'Your own functions', 'SLS-SoM-MX6 plus Nebulae hardware and firmware services', 'A branded tracker built on proven modules.')],
  flow=[('Vehicles and assets', 'Trucks, trailers, containers, equipment'), ('Tracking hardware', 'GPS + 4G gateway, LoRa tags, 434 MHz modules'), ('Site gateway', 'LoRaWAN or P2P gateway at yards and depots'), ('Backhaul', '4G LTE / Ethernet'), ('Fleet platform', 'Maps, alerts and reports (yours or custom-built)')],
  faq=[('Do you provide a fleet software platform?', 'Nebulae supplies the tracking hardware and can design the firmware and application with you. Tell us whether you have a platform or need one built.'),
-      ('Does the gateway have GPS?', 'The NLG7644 includes GPS together with 4G LTE. The NLG8600 offers optional GPS.'),
+      ('Does the gateway have GPS?', 'The NLG8600 offers optional GPS together with 4G LTE.'),
       ('What are the options for battery-powered trackers?', 'The NLN500a and NLN500b LoRaWAN modules and the OTAG-433 434 MHz module are low-power radio options.'),
       ('Is any specific vehicle-tracking standard supported?', 'Standards differ by country and device class. Please contact us with the standard you need, and we will confirm what is achievable.')])
 
@@ -104,11 +104,11 @@ EXTRA['telematics-fleet'] = dict(
 EXTRA['iot-logistics'] = dict(
  ch=[('Assets go missing inside large sites', 'Low-power LoRa tags (NLN500a / NLN500b / OTAG-433) report to a gateway covering the whole warehouse or yard.'),
      ('Tags must last without maintenance', 'LoRa radios are designed for low power, so battery-powered tags are practical for long deployments.'),
-     ('Handover points lack visibility', 'Cellular gateways with GPS (NLG7644) report position at transit points and vehicles.'),
+     ('Handover points lack visibility', 'Cellular RTUs with optional GPS (NLG8600) report position at transit points and vehicles.'),
      ('Planning gateway placement', 'The portable NLG8140 lets you test LoRaWAN coverage on site before installation.')],
  uc=[('Warehouse asset tracking', 'Location of pallets, roll cages and equipment', 'LoRa tags to a LoRaWAN gateway', 'Fewer lost assets and faster searches.'),
      ('Yard management', 'Which trailer or container is in which bay', 'Tags and a yard gateway with 4G backhaul', 'A clearer yard picture for dispatch.'),
-     ('Vehicle visibility', 'Vehicle position', 'NLG7644 with GPS and 4G LTE', 'Live position through the shipment.'),
+     ('Vehicle visibility', 'Vehicle position', 'NLG8600 with optional GPS and 4G LTE', 'Live position through the shipment.'),
      ('Condition monitoring', 'Temperature or shock values from attached sensors', 'LoRa nodes with your sensors', 'Alerts when conditions go out of range.'),
      ('Point-to-point links', 'Data between two fixed locations', 'Single-channel P2P gateway', 'A low-cost link where no network exists.')],
  flow=[('Assets and vehicles', 'Pallets, containers, trailers, vehicles'), ('Tags and trackers', 'LoRa nodes, 434 MHz tags, GPS + 4G gateway'), ('Site gateways', 'LoRaWAN gateway at warehouse or yard'), ('Network server', 'LoRaWAN Network Server (LoRa Management System)'), ('Logistics software', 'WMS / TMS or a dashboard')],
@@ -182,7 +182,7 @@ EXTRA['iot-in-defence'] = dict(
      ('Custom embedded systems', 'Your requirements', 'SLS-SoM-MX6 and Nebulae hardware / firmware design', 'A system tailored to the mission.')],
  flow=[('Field sensors and equipment', 'Perimeter sensors, remote installations'), ('LoRa / cellular radios', 'LoRa nodes, P2P links, 4G LTE'), ('Rugged gateways', 'IP65 / IP67 LoRaWAN gateways, RTUs'), ('Secure backhaul', '4G LTE / Ethernet; your own security layer'), ('Control room', 'Your monitoring system')],
  faq=[('Do you claim defence certifications?', 'No. The pages describe general-purpose industrial products. If your programme needs specific approvals, please contact us to discuss what is possible.'),
-      ('What kind of range can I expect?', 'The NLG7644 gateway is specified for 15 km line of sight and the NLN500a for up to 10 km line of sight. Real range depends on terrain and installation.'),
+      ('What kind of range can I expect?', 'The NLN500a is specified for up to 10 km line of sight. Real range depends on terrain and installation.'),
       ('Can the hardware be customised?', 'Yes. Nebulae offers custom embedded hardware and firmware design.'),
       ('Can data be encrypted?', 'The NLG8600 supports SSL/TLS, and LoRaWAN includes its own encryption. Additional security depends on your design, so please discuss your requirements.')])
 
@@ -196,10 +196,10 @@ EXTRA['sos-devices'] = dict(
      ('Lone-worker devices', 'Worker alert or check-in', 'LoRa module, or BLE to a phone app', 'A way to raise help for people working alone.'),
      ('Campus and site alerts', 'Alerts across a large site', 'LoRaWAN gateway coverage', 'Coverage in buildings and open areas.'),
      ('Elderly care pendants', 'Button press or fall sensor you add', 'BLE or LoRa module', 'Family or carers get alerts.'),
-     ('Vehicle alerts', 'Alert button in a vehicle', 'NLG7644 with 4G and GPS', 'Location sent with the alert.')],
+     ('Vehicle alerts', 'Alert button in a vehicle', 'NLG8600 with 4G and optional GPS', 'Location sent with the alert.')],
  flow=[('SOS device', 'Button, pendant or wearable'), ('Radio module', 'LoRa NLN500b, 434 MHz OTAG-433, BLE 5 NLN811P'), ('Gateway', 'LoRaWAN or P2P gateway; phone for BLE devices'), ('Backhaul', '4G LTE / Ethernet'), ('Alert system', 'Control room, SMS or app')],
  faq=[('Do you sell finished SOS devices?', 'Nebulae supplies the modules, gateways and design services. Finished device design can be done with you.'),
-      ('Can the device send location?', 'GPS can be added in your design, and the NLG7644 gateway includes GPS for vehicle-mounted use.'),
+      ('Can the device send location?', 'GPS can be added in your design, and the NLG8600 offers optional GPS for vehicle-mounted use.'),
       ('How far does the alert reach?', 'The NLN500a is rated up to 10 km line of sight, but buildings reduce range. A site survey helps place gateways.'),
       ('How long will the battery last?', 'It depends on the design and how often the device checks in. We can advise on low-power design.')])
 

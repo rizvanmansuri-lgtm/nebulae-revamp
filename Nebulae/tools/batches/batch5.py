@@ -31,7 +31,7 @@ J(dict(slug='nlg8600',model='NLG8600',full='NebuLink SCADA RTU Gateway NLG8600',
  apps=[A('city','Infrastructure','ITS, utility, AMR and lighting.'),A('eye','Security','Surveillance, environment and disaster monitoring.'),A('factory','Industry','Livestock, agriculture, heavy industry and factory.'),A('gauge','Device SCADA','PLC, IED, generator and sensor monitoring.'),A('building','Building','Security, energy, waste management, facility and lighting.')],
  part_rows=[['NLG8600','NebuLink SCADA RTU Gateway — Cortex-A7, 4G LTE, Ethernet, RS232 / RS485, analog & digital I/O']],
  docs=[DOC('NLG8600 Brochure','NLG8600_Brochure.pdf','PDF · Product brochure'),DOC('NLG8600 Datasheet v1.0','NLG8600_Datasheet_v1.0.pdf','PDF · Technical datasheet, January 2024')],
- related=['nlg8400','nlg7644'],primary_doc='./assets/docs/NLG8600_Brochure.pdf'))
+ related=['nlg8400'],primary_doc='./assets/docs/NLG8600_Brochure.pdf'))
 
 # ---------------- NLG8520 Wi-SUN DCU ----------------
 J(dict(slug='nlg8520',model='NLG8520',full='Wi-SUN Gateway / DCU NLG8520',title_name='Wi-SUN Gateway (DCU)',

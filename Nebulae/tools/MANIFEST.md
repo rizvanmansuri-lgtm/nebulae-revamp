@@ -24,7 +24,6 @@ Do NOT offer Confidential/Internal PDFs as public downloads without the owner's 
 | 3 | afl0001 | AFL0001 (ATLFIL0001) 863-870 MHz band-pass filter, IP67 | filter | other (crumb "RF Filter") | AFL0001_Datasheet | ✅ |
 | 3 | afl0003 | AFL0003 (ATL0003) 865-867 MHz band-pass filter | filter | other (crumb "RF Filter") | AFL0003_Datasheet 2 | ✅ |
 | 3 | p2p-gateway | P2P Single Channel LoRa Gateway | gateway | lora | P2P Single Channel LoRa Gateway_V1 | ✅ |
-| 4 | nlg7644 | NLG7644 LoRaWAN gateway (also 4G variant) | gateway | lora | LoRa Gateway Brochure · LoRaWAN Gateway Data Sheet = LoRaWAN_4G_Gateway 1 1 | ✅ |
 | 4 | nlg6x40g-in | NLG6X40G-IN multi-channel LoRaWAN gateway IP65 | gateway | lora | MultiChannel_LoRaWAN_Gateway_IP65_V3 | ✅ |
 | 4 | nlg6x40h-in | NLG6X40H-IN multi-channel LoRaWAN gateway IP67 | gateway | lora | MultiChannel_LoRaWAN_Gateway_IP67_V1 | ✅ |
 | 4 | nlg8140 | NLG8140 handheld LoRaWAN gateway | gateway | lora | HHU_Brochure_V2 | ✅ |

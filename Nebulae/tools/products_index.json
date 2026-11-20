@@ -56,7 +56,7 @@
   "type_label": "AMR Node",
   "proto_key": "lora",
   "proto_label": "LoRaWAN · Sigfox",
-  "image": "assets/images/products/amr-water-device.jpg",
+  "image": "assets/images/products/amr-water-1.webp",
   "tagline": "Battery-powered water-meter AMR for magnetic, inductive and RS485 meters — LoRaWAN / Sigfox, 5+ year battery."
  },
  {
@@ -106,18 +106,6 @@
   "proto_label": "LoRa / LoRaWAN · IP67",
   "image": "assets/images/products/nlg6x40h-in-1.webp",
   "tagline": "High-performance 8-channel industrial LoRaWAN gateway on NXP i.MX6 — IP67 certified, 85–528 VAC, 5 W."
- },
- {
-  "slug": "nlg7644",
-  "file": "products/nlg7644.html",
-  "model": "NLG7644",
-  "name": "NebuLink LoRaWAN 4G Gateway NLG7644",
-  "type_key": "gateway",
-  "type_label": "Gateway",
-  "proto_key": "lora",
-  "proto_label": "LoRa / LoRaWAN · 4G",
-  "image": "assets/images/products/nlg7644-gateway.jpg",
-  "tagline": "8-channel LoRaWAN gateway with 4G LTE backhaul, GPS and a 1.2 GHz Cortex-A7 — 15 km line of sight."
  },
  {
   "slug": "nlg8140",
@@ -235,7 +223,7 @@
   "type_key": "module",
   "type_label": "Module",
   "proto_key": "lora",
-  "proto_label": "LoRa · Sigfox",
+  "proto_label": "LoRa",
   "image": "assets/images/products/nln500b-1.webp",
   "tagline": "Smallest STM32WL based LoRa module — LoRaWAN and Sigfox, −136 dBm sensitivity, +21 dBm TX, 26.68 × 16 mm."
  },

@@ -58,7 +58,7 @@
     'nm0221i-nic': ['meters', 'mid', 'mains'], 'nln0721': ['meters,city', 'mid', 'mains'], 'nln0725is': ['meters,city', 'mid', 'mains'], 'nm0221i': ['meters,city', 'mid', 'mains'],
     'nlg6770in': ['meters,city', 'mid', 'mains'], 'nlg8520': ['meters,city', 'mid', 'mains'],
     'nlg6x40g-in': ['meters,city,farm,assets', 'long', 'any'], 'nlg6x40h-in': ['meters,city,farm,assets', 'long', 'any'],
-    'nlg7644': ['farm,assets,city,industrial', 'long', 'any'], 'nlg8140': ['farm,industrial', 'long', 'battery'],
+    'nlg8140': ['farm,industrial', 'long', 'battery'],
     'nlg8400': ['industrial,city', 'long', 'mains'], 'nlg8600': ['industrial,city', 'long', 'mains'],
     'nln500a': ['farm,meters,assets,industrial', 'long', 'battery'], 'nln500b': ['farm,city,assets,industrial', 'long', 'battery'],
     'nm0821i': ['city,farm,industrial', 'long', 'mains'], 'nm0824i': ['city,farm,industrial', 'long', 'mains'],

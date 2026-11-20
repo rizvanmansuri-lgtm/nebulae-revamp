@@ -4,38 +4,6 @@ import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from mkjson import *
 
-# ---------------- NLG7644 ----------------
-J(dict(slug='nlg7644',model='NLG7644',full='NebuLink LoRaWAN 4G Gateway NLG7644',title_name='LoRaWAN 4G Gateway',
- type_key='gateway',type_label='Gateway',proto_key='lora',proto_crumb='LoRa',proto_label='LoRa / LoRaWAN · 4G',badge='LoRaWAN 4G Gateway',category='LoRaWAN Gateway',
- tagline='8-channel LoRaWAN gateway with 4G LTE backhaul, GPS and a 1.2 GHz Cortex-A7 — 15 km line of sight.',
- meta_desc='Nebulae NLG7644 LoRaWAN 4G gateway — SX1301 8-channel, EU868/IN865, +27 dBm, -137 dBm, Cortex-A7 1.2 GHz, 4G LTE, GPS, Ethernet, RS485, -40 to +85 C, pole or wall mount, 15 km LoS.',
- desc='NLG7644 is a pre-programmed, full-featured LoRaWAN network base station that connects LoRa devices to the cloud over 4G. Powered by a 1.2 GHz ARM Cortex-A7 with large storage and industrial interfaces, it gives developers the flexibility to build enterprise-grade solutions faster, with a range of over 15 km line of sight and over 2 km in dense urban environments.',
- cert_badges=['LoRaWAN 1.0.x','4G LTE','GPS'],
- gallery=[G('nlg7644-gateway.jpg','NLG7644 NebuLink LoRaWAN gateway enclosure with three N-type antenna connectors','Gateway view'),G('nlg7644-accessories.jpg','NLG7644 gateway with power adapter and LoRa, GPS and LTE antennas','With accessories'),G('nlg7644-interfaces.jpg','NLG7644 hardware interface showing power supply, SIM slot and Ethernet port and LoRa, GPS and GSM antenna connectors','Hardware interfaces')],
- quick=[Q('wifi','LoRa Concentrator','SX1301 · 8 channels · EU868 / IN865'),Q('range','TX / RX','+5 to +27 dBm configurable · −137 dBm'),Q('network','Backhaul','4G LTE · Ethernet 10/100/1000 · RS485'),Q('cpu','Processor & Memory','Cortex-A7 1.2 GHz · 256 MB RAM / 512 MB flash'),Q('bolt','Power','12 – 24 VDC @ 2 A'),Q('ruler','Size','208.17 × 190 × 60.20 mm')],
- stats=[ST('15 km','Range, line of sight'),ST('8','LoRa channels (SX1301)'),ST('5000','Offline LoRa packets stored'),ST('−40 to +85 °C','Operating temperature')],
- overview=['Gateways are key components for commercial IoT deployment, helping to remotely manage and control solutions. NLG7644 is a LoRaWAN gateway that is pre-programmed with a full-featured LoRaWAN network base station and helps LoRa devices connect to the cloud over 4G. It has a range of over 15 km line of sight and over 2 km in dense urban environments.',
-  'It is powered by an ARM Cortex-A7 processor running at 1.2 GHz, with 256 MB RAM, 512 MB flash and up to 32 GB microSD storage. Industrial interfaces include 1 × RS485, 1 × 10/100/1000 Ethernet, isolated digital inputs and outputs, a relay output, built-in GPS for location and timing, and a cellular modem covering LTE FDD/TDD, HSPA/UMTS and GSM/GPRS/EDGE bands.',
-  'The software stack is a QuecOpen Linux OS running the NebuLink Gateway SDK, with validated Modbus RTU, Modbus TCP and DLMS stacks. The gateway supports LoRaWAN Class A and C, gateway bridge with TLS encryption, node whitelisting, secure firmware update and buffering of up to 5000 uplink LoRa packets during network-server outages. It ships in a polycarbonate pole- or wall-mount enclosure with a 5 dBi fibre-glass LoRa antenna.'],
- overview_note='',
- why=[W('Ready-to-run LoRaWAN','Pre-programmed with a full-featured LoRaWAN network base station.'),W('Resilient data path','Buffers up to 5000 LoRa frames if the network server is unreachable, and supports uplink backup.'),W('Industrial interfaces','RS485, Ethernet, isolated digital I/O and relay output, GPS and 4G.'),W('Secure','Gateway bridge with TLS encryption, node whitelisting and secure firmware update.'),W('Rugged','-40 to +85 °C operation in a UL94 5VA polycarbonate enclosure.')],
- showcase=dict(title='Block Diagram, Wiring & Mounting',intro='Reference drawings from the NLG7644 brochure and datasheet (version 2.0).',items=[
-  SC('nlg7644-block-diagram.png','NLG7644 block diagram showing the Cortex-A7 processor and its memory and interfaces','Block diagram'),SC('nlg7644-wiring.png','NLG7644 external wiring diagram with power, SIM, antenna connectors and status LEDs','External wiring diagram'),
-  SC('nlg7644-pole-mount.png','NLG7644 pole mounting steps using a pole clamp and hose clamp','Pole mounting'),SC('nlg7644-wall-mount.png','NLG7644 wall mounting steps using self-tapping screws','Wall mounting')]),
- specs=[SP('Processor & Storage',[('Processor','ARM Cortex-A7, 1.2 GHz'),('Internal RAM','256 MB (40 MB for end application)'),('Internal Flash','512 MB (20 MB for end application)'),('Additional Storage','Up to 32 GB microSD card')]),
-  SP('LoRa',[('LoRa Module','SX1301 based, 8 channels supported'),('Operating Frequency','EU868, IN865'),('Transmit Power','+5 to +27 dBm (configurable)'),('Receiver Sensitivity','−137 dBm'),('Antenna','1 × LoRa (fibre glass, 5 dBi gain)'),('Range','Over 15 km (line of sight); over 2 km in dense urban environments')]),
-  SP('Communication Interfaces',[('Cellular','FDD-LTE: B1/B2/B3/B5/B7/B8/B20 · TDD-LTE: B38/B40 · HSPA/UMTS: 900/850/1800/1900/2100 MHz · GSM/GPRS/EDGE: 850/900/1800/1900 MHz'),('Ethernet','1 × IEEE 802.3 10/100M/1G bps'),('Serial','1 × RS485'),('GPS','Built-in (antenna: 1 × GPS)')]),
-  SP('I/O Interface',[('Digital Input / Counter','Isolated 2 channels, 16 bits, input frequency 50 Hz (max), pulse width 10 ms (min)'),('Digital Relay Output','Isolated 1 channel'),('Digital Output','Isolated 2 channels')]),
-  SP('Software',[('Stack','QuecOpen Linux OS running NebuLink Gateway SDK with validated Modbus RTU, Modbus TCP and DLMS stacks'),('LoRa','Class A and C; LoRaWAN 1.0.1 and 1.0.2; data logger; location setup; server address & port setup; gateway bridge with TLS encryption; configurable state packet; node whitelisting; buffering of up to 5000 LoRa frames'),('Network','Uplink backup; DHCP client'),('Management','Secure firmware update; NTP')]),
-  SP('Electrical & Environmental',[('Power Supply','12 – 24 VDC @ 2 A'),('Supported Battery Supply','3.7 / 4.2 V, 2000 mAh (optional external)'),('Operating Temperature','−40 to +85 °C'),('Humidity','Relative humidity 15% to 93% non-condensing'),('Safety','EMS protection; ESD (IEC 61000-4-2) 4 kV contact for each terminal; EFT (IEC 61000-4-4) ±2 kV for power')]),
-  SP('Mechanical',[('Ingress Protection','IP67 (datasheet spec table)'),('Enclosure','Polycarbonate, UL94 5VA flame rated'),('Dimensions','208.17 × 190 × 60.20 mm'),('Weight','800 g'),('Installation','Pole or wall mounting'),('Indicators','3 × status LEDs'),('Antennas','1 × cellular, 1 × GPS, 1 × LoRa (fibre glass, 5 dBi)')])],
- spec_note='Brochure and datasheet v2.0 combined. Where the two differ (transmit power, IP rating) see the product notes in the brochure; this page uses the brochure power figure and the datasheet IP figure.',
- features=FS([('wifi','LoRaWAN Network Base Station','Pre-programmed, full-featured LoRaWAN base station with web UI for management.'),('range','Long Range','Over 15 km line of sight and over 2 km in dense urban environments.'),('network','4G + Ethernet + RS485','Cellular, 10/100/1000 Ethernet and RS485 communication interfaces.'),('server','Offline Packet Storage','Stores up to 5000 uplink LoRa packets during network-server outages.'),('lock','TLS Gateway Bridge','Gateway bridge with TLS encryption and LoRa frame filtering (node whitelisting).'),('eye','Built-in GPS','GPS for location and timing.'),('cpu','Open-Source Embedded Linux','Cortex-A7 at 1.2 GHz with QuecOpen Linux and the NebuLink Gateway SDK.'),('shield','Rugged Enclosure','UL94 5VA flame-rated polycarbonate case; 5 dBi fibre-glass antenna.')]),
- apps=[A('shield','Industry, Defence & Military','Rugged LoRaWAN coverage for demanding sites.'),A('meter','Smart Metering','LoRaWAN backhaul for metering networks.'),A('bulb','Street Lighting','Gateway for street-lighting controllers.'),A('building','Smart Buildings & Home Automation','Connectivity for building systems.'),A('truck','Logistics & Supply Chain','Tracking and monitoring along supply chains.'),A('city','Smart Cities','City-wide LoRaWAN coverage.'),A('factory','Smart Factory','Factory-floor sensor connectivity.'),A('server','Data Centers / Server Rooms','Environmental and asset monitoring.')],
- part_rows=[['NLG7644','NebuLink LoRaWAN 4G Gateway — 8-channel SX1301, EU868 / IN865, 4G LTE, GPS']],
- docs=[DOC('NLG7644 Brochure','NLG7644_Brochure.pdf','PDF · Product brochure'),DOC('NLG7644 Datasheet v2.0','NLG7644_Datasheet_v2.0.pdf','PDF · Technical datasheet, June 2021')],
- related=['nlg6x40g-in','p2p-gateway'],primary_doc='./assets/docs/NLG7644_Brochure.pdf'))
-
 # ---------------- NLG6X40G-IN (IP65) ----------------
 J(dict(slug='nlg6x40g-in',model='NLG6X40G-IN',full='Multi Channel LoRaWAN Gateway NLG6X40G-IN (IP65)',title_name='Multi Channel LoRaWAN Gateway (IP65)',
  type_key='gateway',type_label='Gateway',proto_key='lora',proto_crumb='LoRa',proto_label='LoRa / LoRaWAN · IP65',badge='IP65 LoRaWAN Gateway',category='8-Channel LoRaWAN Gateway',
@@ -65,7 +33,7 @@ J(dict(slug='nlg6x40g-in',model='NLG6X40G-IN',full='Multi Channel LoRaWAN Gatewa
  apps=[A('meter','Smart Utility Metering','Electricity, gas and water metering.'),A('factory','Industrial Automation & Predictive Maintenance','Condition monitoring across plants.'),A('sprout','Agriculture & Environmental Monitoring','Field and environmental sensing.'),A('bulb','Smart Street Lighting','Street-lighting control networks.'),A('shield','Defence & Military Applications','Rugged, secure LoRaWAN coverage.'),A('city','Smart Cities','City-scale IoT networks.')],
  part_rows=[['NLG6X40G-IN','Multi Channel LoRaWAN Gateway, IP65, IN865'],['NLG6 X 40 G - IN (model structure)','X = cloud-connection selector (1 Wi-Fi · 2 Ethernet · 3 Wi-Fi + Ethernet · 4 GSM · 5 Wi-Fi + GSM · 6 Ethernet + GSM · 7 GSM + Wi-Fi + Ethernet); 40 = LoRaWAN; G = IP65; region IN / US / EU / AU / RU']],
  docs=[DOC('NLG6X40G-IN Brochure','NLG6X40G-IN_Brochure.pdf','PDF · Product brochure v3.0')],
- related=['nlg6x40h-in','nlg7644'],primary_doc='./assets/docs/NLG6X40G-IN_Brochure.pdf'))
+ related=['nlg6x40h-in'],primary_doc='./assets/docs/NLG6X40G-IN_Brochure.pdf'))
 
 # ---------------- NLG6X40H-IN (IP67) ----------------
 J(dict(slug='nlg6x40h-in',model='NLG6X40H-IN',full='Multi Channel LoRaWAN Gateway NLG6X40H-IN (IP67)',title_name='Multi Channel LoRaWAN Gateway (IP67)',
@@ -96,7 +64,7 @@ J(dict(slug='nlg6x40h-in',model='NLG6X40H-IN',full='Multi Channel LoRaWAN Gatewa
  apps=[A('meter','Smart Utility Metering','Electricity, gas and water metering.'),A('factory','Industrial Automation & Predictive Maintenance','Condition monitoring across plants.'),A('sprout','Agriculture & Environmental Monitoring','Field and environmental sensing.'),A('city','Smart Cities','City-scale IoT networks.')],
  part_rows=[['NLG6X40H-IN','Multi Channel LoRaWAN Gateway, IP67, IN865'],['NLG6 X 40 H - IN (model structure)','X = cloud-connection selector (1 Wi-Fi · 2 Ethernet · 3 Wi-Fi + Ethernet · 4 GSM · 5 Wi-Fi + GSM · 6 Ethernet + GSM · 7 GSM + Wi-Fi + Ethernet); 40 = LoRaWAN; H = IP67; region IN / US / EU / AU / RU']],
  docs=[DOC('NLG6X40H-IN Brochure','NLG6X40H-IN_Brochure.pdf','PDF · Product brochure v1.0')],
- related=['nlg6x40g-in','nlg7644'],primary_doc='./assets/docs/NLG6X40H-IN_Brochure.pdf'))
+ related=['nlg6x40g-in'],primary_doc='./assets/docs/NLG6X40H-IN_Brochure.pdf'))
 
 # ---------------- NLG8140 handheld ----------------
 J(dict(slug='nlg8140',model='NLG8140',full='Handheld LoRaWAN Gateway NLG8140',title_name='Handheld LoRaWAN Gateway',
@@ -123,7 +91,7 @@ J(dict(slug='nlg8140',model='NLG8140',full='Handheld LoRaWAN Gateway NLG8140',ti
  apps=[A('eye','Field Testing','Precision LoRaWAN field testing and site surveys.'),A('factory','Industrial IoT','Portable gateway for industrial IoT deployment.'),A('leaf','Agriculture & Environmental Monitoring','Field monitoring deployments.'),A('sprout','Smart Agriculture','Agricultural sensing.'),A('truck','Asset Tracking','Asset tracking trials and deployments.')],
  part_rows=[['NLG8140','Handheld LoRaWAN Gateway — SX1303, IN865, Raspberry Pi 4, Wi-Fi']],
  docs=[DOC('NLG8140 Brochure','NLG8140_Brochure.pdf','PDF · Product brochure v2.0')],
- related=['nlg7644','nm0821i'],primary_doc='./assets/docs/NLG8140_Brochure.pdf'))
+ related=['nm0821i'],primary_doc='./assets/docs/NLG8140_Brochure.pdf'))
 
 # ---------------- NLG8400 SCADA RTU ----------------
 J(dict(slug='nlg8400',model='NLG8400',full='NebuLink SCADA RTU Gateway NLG8400',title_name='SCADA RTU Gateway',
@@ -151,5 +119,5 @@ J(dict(slug='nlg8400',model='NLG8400',full='NebuLink SCADA RTU Gateway NLG8400',
  apps=[A('city','Infrastructure','ITS, utility, AMR and lighting.'),A('eye','Security','Surveillance, environment and disaster monitoring.'),A('factory','Industry','Livestock, agriculture and heavy industry.'),A('gauge','Device SCADA','PLC, IED, generator and sensor monitoring.'),A('building','Building','Security, energy, management, facility and lighting.')],
  part_rows=[['NLG8400','NebuLink SCADA RTU Gateway — Cortex-A7, 4G LTE, RS232 / RS485, analog & digital I/O']],
  docs=[DOC('NLG8400 Brochure','NLG8400_Brochure.pdf','PDF · Product brochure')],
- related=['nlg7644','nlg8140'],primary_doc='./assets/docs/NLG8400_Brochure.pdf'))
+ related=['nlg8140'],primary_doc='./assets/docs/NLG8400_Brochure.pdf'))
 print('batch 4 json written')

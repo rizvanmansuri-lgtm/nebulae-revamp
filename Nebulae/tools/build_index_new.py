@@ -60,7 +60,7 @@ stats = f'''<div class="nbl-hero__stats">
           <div class="nbl-hero__stat-item"><span class="nbl-hero__stat-num">Pan-India</span><span class="nbl-hero__stat-label">Deployments</span></div>
         </div>'''
 hero = re.sub(r'<div class="nbl-hero__stats">.*?</div>\s*</div>\s*(?=<div class="col-lg-6" data-anim="slide-right">)', stats + '\n      </div>\n      ', hero, count=1, flags=re.S)
-hero = hero.replace('<div class="nbl-hero__eyebrow">', '<a class="nin-announce" href="products/nlg7644.html"><span class="nin-announce__tag">New</span> LoRaWAN gateway with 4G + GPS — NLG7644 <span aria-hidden="true">→</span></a>\n        <div class="nbl-hero__eyebrow">', 1)
+hero = hero.replace('<div class="nbl-hero__eyebrow">', '<a class="nin-announce" href="products/nlg0192.html"><span class="nin-announce__tag">New</span> RS485 Modbus to 4G LTE gateway — NLG0192 <span aria-hidden="true">→</span></a>\n        <div class="nbl-hero__eyebrow">', 1)
 hero = re.sub(r'</section>\s*$', '<div class="nin-wave nin-wave--white" aria-hidden="true"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0,50 C220,100 460,0 720,46 C980,92 1210,10 1440,52 L1440,90 L0,90 Z"/></svg></div>\n</section>\n', hero, count=1)
 hero = hero.replace('<section class="nbl-hero" id="nbl-hero">', '<section class="nbl-hero" id="nbl-hero" aria-label="Nebulae — IoT modules, gateways and solutions">', 1)
 
@@ -88,7 +88,7 @@ PROD = json.load(open('tools/products_index.json', encoding='utf-8'))
 cnt = lambda t: sum(1 for p in PROD if p['type_key'] == t)
 cats = [
   ('module', 'Wireless Hardware', 'IoT Modules', 'Certified LoRa, Wi-SUN, Zigbee, Wi-Fi and BLE modules in compact SMD and card formats.', 'assets/images/products/nln811p-1.webp', 'Browse modules'),
-  ('gateway', 'Network Hardware', 'Gateways & Concentrators', 'Industrial LoRaWAN, Wi-SUN and SCADA gateways — outdoor-rated, cloud-ready, multi-channel.', 'assets/images/products/nlg7644-gateway.jpg', 'Browse gateways'),
+  ('gateway', 'Network Hardware', 'Gateways & Concentrators', 'Industrial LoRaWAN, Wi-SUN and SCADA gateways — outdoor-rated, cloud-ready, multi-channel.', 'assets/images/products/nlg6x40h-in-1.webp', 'Browse gateways'),
   ('evk', 'Development Tools', 'Evaluation Kits', 'Ready-to-use kits to prototype and prove a concept before you commit to a design.', 'assets/images/products/nln0651i-1.webp', 'Browse EVKs'),
   ('node', 'Endpoint Devices', 'Nodes & Sensors', 'Stand-alone LoRaWAN end-nodes and AMR devices for metering, agriculture and monitoring.', 'assets/images/products/nln500a-1.webp', 'Browse nodes'),
 ]
